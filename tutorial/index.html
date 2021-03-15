@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Orbiter Space Flight Simulatorで、宇宙船を操縦する方法について解説しています。">
+  <link rel="stylesheet" href="../styles/orbiterjp.css">
+  <script src="../scripts/template.js" charset="utf-8" defer></script>
+  <title>Orbiterチュートリアル</title>
+</head>
+
+<body class="body_tutorial">
+
+  <h1>Orbiterチュートリアル</h1>
+
+
+  <p>打ち上げ、ランデブー、惑星間航行の操作・手順について解説します。</p>
+
+  <nav>
+    <ul>
+      <li><a href="#requirements">必要なもの</a></li>
+      <li><a href="#tutorial">チュートリアルの一覧</a>
+        <ol>
+          <li><a href="#dg_to_iss">地上からISSまで</a></li>
+          <li><a href="#earth_to_moon">地球から月まで</a></li>
+          <li><a href="#earth_to_venus">地球から金星まで</a></li>
+        </ol>
+      </li>
+      <li><a href="#tips">チュートリアルの進めかた（ヒント）</a></li>
+      <li><a href="#fromauthor">筆者からのお願い</a></li>
+    </ul>
+  </nav>
+
+
+  <h2 id="requirements">必要なもの</h2>
+
+
+  <ul>
+    <li><a href="../basic/orbiter2010.html" target="_blank">Orbiter2010</a>&nbsp;or&nbsp;<a
+        href="../basic/orbiter2016.html" target="_blank">Orbiter2016</a></li>
+    <li>テンキー</li>
+    <li><a href="../transximfd/transxinstall.html" target="_blank">最新版のTransX</a>（Part9以降）</li>
+    <li><a href="../misc/sceditor1-date.html" target="_blank">シナリオエディタ</a>（Part16以降）</li>
+  </ul>
+
+  <p>Orbiterを起動して、<kbd>Parameters</kbd>をクリック。<br>
+    以下の設定を<strong>無効</strong>にする。</p>
+
+  <ul>
+    <li><a href="../basic/realismperturbations.html#perturbations_nonspherical" target="_blank">Nonspherical gravity
+        sources</a></li>
+    <li><a href="../basic/realismperturbations.html#perturbations_wind" target="_blank">Atmospheric wind effects
+        (2016)</a></li>
+  </ul>
+
+
+  <h2 id="tutorial">チュートリアルの一覧</h2>
+
+
+  <p>練習機<strong>Delta Glider</strong>（デルタグライダー）を使用する。<br>
+    これらの方法は、実在する宇宙機を再現したMODでも応用できる。</p>
+
+
+  <h3 id="dg_to_iss">地上からISSまで</h3>
+
+
+  <ol start="0">
+    <li><a href="part0.html">マウス+キーボードでの操縦</a></li>
+    <li><a href="part1.html">打ち上げから軌道投入まで</a></li>
+    <li><a href="part2.html">Align Planes MFD</a></li>
+    <li><a href="part3.html">ランデブーのための軌道力学</a></li>
+    <li><a href="part4.html">ランデブーの準備</a></li>
+    <li><a href="part5.html">ISSとのランデブー</a></li>
+    <li><a href="part6.html">ドッキング</a></li>
+    <li><a href="part7.html">軌道離脱と再突入の準備</a>※</li>
+    <li><a href="part8.html">再突入と着陸</a>※</li>
+  </ol>
+
+  <ul>
+    <li>番外：<a href="align-planes-mfd.html">Align planes MFD</a></li>
+    <li>番外：<a href="sync-orbit-mfd.html">Sync Orbit MFD</a></li>
+  </ul>
+
+  <p>※フライトスティックがない場合、Part7・8は飛ばして先に進むか、以下の記事を参照すること。</p>
+
+  <ul>
+    <li><a href="../ucgo/xr2-ravenstar.html" target="_blank">XR2 Ravenstarのインストール</a></li>
+    <li><a href="../ucgo/xr2-aerobrakemfd.html" target="_blank">XR2とAeroBrake MFDでの着陸</a></li>
+  </ul>
+
+
+  <h3 id="earth_to_moon">地球から月まで</h3>
+
+
+  <p><a href="../transximfd/transxinstall.html" target="_blank">TransXを最新版に更新</a>しておくこと。</p>
+
+  <ol start="9">
+    <li><a href="part9.html">月への打ち上げ</a></li>
+    <li><a href="part10.html">地球軌道から月へ</a></li>
+    <li><a href="part11.html">TransXのマニューバ</a></li>
+    <li><a href="part12.html">月基地への軌道修正 1回目</a></li>
+    <li><a href="part13.html">月基地への軌道修正 2回目</a></li>
+    <li><a href="part14.html">月周回軌道に入る</a></li>
+    <li><a href="part15.html">月面基地への着陸</a></li>
+    <li><a href="part16.html">月から地球へ - Planを作成する</a></li>
+    <li><a href="part17.html">月から地球へ - Planからマニューバを作る</a></li>
+  </ol>
+
+  <ul>
+    <li>番外：<a href="../transximfd/transxbasics.html" target="_blank">TransXの基本</a></li>
+    <li>番外：<a href="moon-mcc-notransx.html" target="_blank">月基地への軌道修正 別の方法</a></li>
+  </ul>
+
+
+  <h3 id="earth_to_venus">地球から金星まで</h3>
+
+
+  <ol start="18">
+    <li><a href="part18.html">金星へのPlanを作る</a></li>
+    <li><a href="part19.html">金星への打ち上げ日時を探す</a></li>
+    <li><a href="part20.html">金星への打ち上げ・パーキング軌道へ</a></li>
+    <li><a href="part21.html">マニューバを作成・実行して金星へ</a></li>
+    <li><a href="part22.html">地球―金星間の軌道修正</a></li>
+  </ol>
+
+  <ul>
+    <li>番外：<a href="transx-plan-explained.html" target="_blank">打ち上げ前にPlan（計画）を作るのはなぜ？</a></li>
+    <li>番外：<a href="launch-interplanetary.html" target="_blank">惑星間遷移軌道への打ち上げ</a></li>
+  </ul>
+
+
+  <h2 id="tips">チュートリアルの進めかた（ヒント）</h2>
+
+
+  <ol>
+    <li>細かい数字にこだわりすぎない</li>
+    <li>1ページごとにセーブする</li>
+    <li>0.1倍速と一時停止を使う</li>
+  </ol>
+
+  <p>打ち上げ方位や軌道高度などが、予定した数字にならないかもしれない。<br>
+    大雑把でもいいので、「軌道に乗せる」などの目標を優先すること。<br>
+    デルタグライダーは強力な機体だ。20km程度の誤差なら復帰できる。</p>
+
+  <p>1ページをクリアしたら、必ずセーブすること。<br>
+    失敗したら、前のページに戻ってやり直す。<br>
+    うまくいかない場合は、どの段階で詰まったか報告してほしい。</p>
+
+  <ul>
+    <li><a href="../basic/orbiter2010.html#save" target="_blank">セーブ+ロード (2010)</a></li>
+    <li><a href="../basic/orbiter2016.html#save" target="_blank">セーブ+ロード (2016)</a></li>
+  </ul>
+
+  <p><kbd>R</kbd>キーで時間の進みを遅くする。<br>
+    <kbd>Ctrl</kbd>&nbsp;+&nbsp;<kbd>P</kbd>で一時停止する。<br>
+    0.1倍速でも、宇宙船の操作はできる。
+  </p>
+
+
+  <h2 id="fromauthor">筆者からのお願い</h2>
+
+
+  <p>筆者の思い込みやうっかりミスなどで、<strong>間違った記述になってしまう</strong>ことがあります。</p>
+
+  <p>チュートリアルと同じように操作したのに失敗する場合、報告していただけると助かります。</p>
+
+  <p><a href="../basic/comment.html">コメントページ</a>では質問を受け付けています。<br>
+    アカウント不要、匿名で書き込みできます。</p>
+
+  <p>不具合に関する報告はこちらへお願いします。<br>
+    <a href="../basic/troubleshooting.html" target="_blank">バグ・トラブルを報告する</a>
+  </p>
+
+</body>
+
+</html>

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../styles/orbiterjp.css">
+  <script src="../scripts/template.js" charset="utf-8" defer></script>
+  <title>XR2 Ravenstarのダウンロード+インストール</title>
+</head>
+
+<body>
+
+  <h1>XR2 Ravenstarのダウンロード+インストール</h1>
+
+
+<p>XR2は、初期機体のDelta Gliderと比べて非常に壊れやすく、航続距離が短い機体です。<br>
+それだけに、<strong>パイロットにはより高い技量が求められます。</strong><br>
+DeltaGliderに飽きて、より難しい機体に挑戦したいプレイヤーにおすすめです。</p>
+<p><a href="xr2control.html">XR2 操作ガイド </a></p>
+
+<ul>
+<li><a href="#download">ダウンロード</a></li>
+<li><a href="#install">インストール</a></li>
+<ul>
+<li><a href="#requirement">必要なファイル</a></li>
+</ul>
+<li><a href="#skin">見た目（スキン）の変更</a></li>
+<li><a href="#normalmap">ノーマルマップの追加</a></li>
+</ul>
+
+<h2 id="download">ダウンロード</h2>
+
+<del>
+  <p>Orbiter<strong>2010</strong>対応版<br>
+  <a href="http://omp.ddns.net/software/" target="_blank">Software ? Orbiter Multiplayer Project</a></p>
+  <p><img loading="lazy" src="../images/ucgo/xr2-ravenstar/001.png" width="472" height="300"></p>
+</del>
+
+<p>Orbiter<strong>2016</strong>対応版<br>
+<a href="http://www.alteaaerospace.com/index-3.html" target="_blank">Altea Aerospace - Downloads</a></p>
+<p><img loading="lazy" src="../images/ucgo/xr2-ravenstar/002.png" width="287" height="162"></p>
+
+<h2 id="install">インストール</h2>
+
+<p>ダウンロードしたXR2のファイルを解凍して、Orbiterのインストールフォルダに上書きするだけ。</p>
+
+<h3 id="requirement">必要なファイル</h3>
+
+<h4>Orbiter2010</h4>
+
+<p>Orbiter2010でXR2を利用する場合、<strong>UMMU</strong>というMODが必要です。<br>
+まだUMMUを導入していない場合は、あらかじめインストールしてください。<br>
+<a href="ummu-ucgo-download.html" target="_blank">UMMU+UCGOのダウンロード・インストール</a></p>
+
+<h4>Orbiter2016</h4>
+
+<p>Orbiter2016では、UMMUは必要ありません。</p>
+
+<h2 id="skin">見た目（スキン）の変更</h2>
+
+<p>ユーザーの作成したMODを導入して、XR2の見た目を変えることができます。<br>
+ただし、ゲーム内のシナリオエディタでは変更できません。
+</p>
+<p><img loading="lazy" src="../images/ucgo/xr2-ravenstar/XR2ANA.png" width="768" height="431"><br>
+（画像はRiver Crabさんの<a href="http://www.orbithangar.com/searchid.php?ID=5365" target="_blank">XR2J ANA skin v1.1</a>をお借りしました。）
+</p>
+<p>XR2のスキンを変更するには、まずセーブして<strong>シナリオファイル</strong>※を作成する。</p>
+<p class="note">※<strong>Scenarios</strong>フォルダ内に作成される、拡張子が<strong>.scn</strong>のファイルのこと。<a href="../misc/scenarioedit.html" target="_blank">シナリオエディタ 番外編 （シナリオファイルの直接編集）</a></p>
+<p>これをメモ帳などの適当なテキストエディタで開く。<br>
+<strong>BEGIN_SHIPS</strong>の下にある、<strong>XR2Ravenstar</strong>の項目に<strong>SKIN</strong> （使いたいスキンの名前）の行を追加・変更する。</p>
+
+<p>
+<img loading="lazy" src="../images/ucgo/xr2-ravenstar/XR2_004.png" width="395" height="553">
+</p>
+
+<h2 id="normalmap">ノーマルマップの追加
+</h2>
+
+<p>ノーマルマップを追加すると、船体表面の凹凸が再現されます。
+</p>
+
+<h3>ダウンロード
+</h3>
+
+<p><a href="https://www.orbithangar.com/searchid.php?ID=5997">Normal Maps Pack for XR-2 Ravenstar</a>
+</p>
+
+<h3>インストール
+</h3>
+
+<p>ダウンロードしたファイルを解凍して、中に入っているファイルをすべてコピーする。<br>
+<strong>Textures\XR2Ravenstar</strong>フォルダを開いて、コピーしたファイルを貼り付ける。
+</p>
+
+<h3>スキンと併用する
+</h3>
+
+<p>以下の2つのファイルをコピーする。
+</p>
+
+<ul>
+<li><strong>top_hull_colour_XR2_paint_norm.dds</strong></li>
+<li><strong>bottom_hull_norm.dds</strong></li>
+</ul>
+
+<p><strong>Textures\XR2Ravenstar\Skins\（スキンの名前）</strong>フォルダを開いて、コピーしたファイルを貼り付ける。
+</p>
+
+<p>
+</p>
+
+</body>
+</html>

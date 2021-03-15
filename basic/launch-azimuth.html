@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../styles/orbiterjp.css">
+  <script src="../scripts/template.js" charset="utf-8" defer></script>
+  <script src="../scripts/launchazimuth.js" defer></script>
+  <title>打ち上げ方位を計算する</title>
+
+  <script>
+window.MathJax = {
+  tex: {
+    tags: 'ams'
+  }
+}
+  </script>
+
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+</head>
+
+<body>
+
+  <h1>打ち上げ方位を計算する</h1>
+
+
+  <p>打ち上げの前に、「どの方向に打ち上げるか」を計算します。</p>
+
+  <ul>
+    <li><a href="#launchmfd">Launch MFD</a></li>
+    <li><a href="#calculator">簡易計算機</a>
+      <ul>
+        <li><a href="#calculator_data">必要な数字</a></li>
+      </ul>
+    </li>
+    <li><a href="#formula">計算式</a>
+      <ol>
+        <li><a href="#formula_inertial">球面三角法</a></li>
+        <li><a href="#formula_rotational">自転速度を考慮する</a></li>
+      </ol>
+    </li>
+    <li><a href="#scientific">関数電卓を使う</a>
+      <ol>
+        <li><a href="#scientific_inertial">計算式(1)</a></li>
+        <li><a href="#scientific_rotational">計算式(2)</a></li>
+      </ol>
+    </li>
+    <li><a href="#interplanetary">他の惑星への打ち上げ</a></li>
+  </ul>
+
+
+  <h2 id="launchmfd">Launch MFD</h2>
+
+
+  <p><strong>Launch MFD</strong>は、打ち上げ方位を自動で計算するMOD。<br>
+    オートパイロットでの打ち上げにも対応している。</p>
+
+  <p><a href="../mods/launch-mfd.html" target="_blank">Launch MFDのインストールと操作</a></p>
+
+
+  <h2 id="calculator">簡易計算機</h2>
+
+
+  <table>
+    <tr>
+      <td><label for="inc">軌道傾斜角 (Inc)</label></td>
+      <td><input type="number" step="0.01" id="inc" value="51.58" min="0" max="180" style="width: 10em;"></td>
+    </tr>
+    <tr>
+      <td><label for="lat">打ち上げ地点の緯度</label></td>
+      <td><input type="number" step="0.01" id="lat" value="28.60" min="-90" max="90" style="width: 10em;"></td>
+    </tr>
+    <tr>
+      <td><label for="vel_ground">自転による速度 (Vel)</label></td>
+      <td><input type="number" step="0.01" id="vel_ground" value="407.9" style="width: 10em;"></td>
+    </tr>
+    <tr>
+      <td><label for="vel_target">目標軌道速度 (Vel)</label></td>
+      <td><input type="number" step="0.01" id="vel_target" value="7700" min="0" style="width: 10em;"></td>
+    </tr>
+  </table>
+
+  <p><button id="button1">計算</button></p>
+
+  <table>
+    <tr>
+      <td></td>
+      <th>計算式 (1)</th>
+      <th>計算式 (2)</th>
+    </tr>
+    <tr>
+      <td>北向き</td>
+      <td id="inertial_north"></td>
+      <td id="rotational_north"></td>
+    </tr>
+    <tr>
+      <td>南向き</td>
+      <td id="inertial_south"></td>
+      <td id="rotational_south"></td>
+    </tr>
+  </table>
+
+
+  <h3 id="calculator_data">必要な数字</h3>
+
+
+  <p><strong>Orbit MFD</strong>を開く。</p>
+
+
+  <p><kbd>TGT</kbd>をクリックして、ターゲットの名前を入力。<br>
+    <kbd>FRM</kbd>をクリックして、<strong>Frm EQU</strong>にする。
+  </p>
+
+  <p>以下の数字を確認する。</p>
+
+  <table>
+    <tr>
+      <th colspan="2">左側（宇宙船）</th>
+      <th colspan="2">右側（ターゲット）</th>
+    </tr>
+    <tr>
+      <td><strong>Vel</strong></td>
+      <td>自転による速度</td>
+      <td><strong>Vel</strong></td>
+      <td>目標軌道速度</td>
+    </tr>
+    <tr>
+      <td><strong>Inc</strong></td>
+      <td>打ち上げ地点の緯度※</td>
+      <td><strong>Inc</strong></td>
+      <td>軌道傾斜角</td>
+    </tr>
+  </table>
+
+  <p class="note">※<strong>Inc</strong>は軌道傾斜角を意味するが、地上では現在地の緯度と同じになる。</p>
+
+  <figure>
+    <img loading="lazy" src="../images/basic/launch-azimuth/000.png" width="524" height="425">
+  </figure>
+
+
+  <h2 id="formula">計算式</h2>
+
+
+  <h3 id="formula_inertial">球面三角法</h3>
+
+
+  <p>球面三角法の公式を使って、打ち上げ方位を計算できる。</p>
+
+  <blockquote>
+  \begin{equation}
+  打ち上げ方位① = \arcsin \left( \frac {\cos (ターゲットの軌道傾斜角)}{\cos (打ち上げ地点の緯度)}\right) \notag
+  \end{equation}
+  </blockquote>
+
+  <p>導出手順は以下の記事を参照すること。</p>
+
+  <p><a href="../misc/spherical-trigonometry.html">球面三角と打ち上げ方位</a></p>
+
+
+  <h3 id="formula_rotational">自転速度を考慮する</h3>
+
+
+  <p>地球は自転しているので、地上にある物体も西から東に移動している。<br>
+    より正確な計算のためには、この速度も考慮する必要がある。</p>
+
+  <ol>
+    <li>球面三角法の公式を使って、打ち上げ方位を計算する。</li>
+    <li>(1)の方位角と目標軌道速度のベクトルを考える。</li>
+    <li>(2)のベクトルから、自転速度による東向きのベクトルを引く。</li>
+  </ol>
+
+  <figure>
+    <img loading="lazy" src="../images/basic/launch-azimuth/azimuth001.png">
+  </figure>
+
+  <p>計算式は以下の通り。</p>
+
+  <blockquote>
+  \begin{equation}
+  打ち上げ方位② = \arctan \left( \dfrac {目標軌道速度 \times \sin (打ち上げ方位①) -地上での速度}{目標軌道速度 \times \cos (打ち上げ方位①)}\right) \notag
+  \end{equation}
+  </blockquote>
+
+
+  <h2 id="scientific">関数電卓を使う</h2>
+
+
+  <p>Windowsには標準で関数電卓が付属している。<br>
+    これを使って打ち上げ方位を計算できる。</p>
+
+  <p>スタートメニューから電卓アプリを開く。<br>
+    左上の<kbd>≡</kbd>をクリック。<br>
+    <strong>関数電卓</strong>を選択する。
+  </p>
+
+  <figure>
+    <img loading="lazy" src="../images/basic/launch-azimuth/001.png">
+  </figure>
+
+
+  <h3 id="scientific_inertial">計算式(1)</h3>
+
+
+  <p>打ち上げ地点の緯度（この例では<strong>28.6</strong>）を入力する。<br>
+    <strong>三角関数</strong>メニューから<kbd>cos</kbd>をクリック。<br>
+    <kbd>M+</kbd>をクリック。
+  </p>
+
+  <figure>
+    <img loading="lazy" src="../images/basic/launch-azimuth/002.png">
+  </figure>
+
+  <p>ターゲットの軌道傾斜角（この例では<strong>51.58</strong>）を入力する。<br>
+    <kbd>cos</kbd>をクリック。
+  </p>
+
+  <p><kbd>÷</kbd>をクリック。<br>
+    <kbd>MR</kbd>をクリックして、<kbd>=</kbd>をクリック。
+  </p>
+
+  <figure>
+    <img loading="lazy" src="../images/basic/launch-azimuth/003.png">
+  </figure>
+
+  <p><strong>三角関数</strong>メニューで<kbd>2nd</kbd>をクリック。<br>
+    <kbd>sin<sup>-1</sup></kbd>をクリック。
+  </p>
+
+  <figure>
+    <img loading="lazy" src="../images/basic/launch-azimuth/004.png">
+  </figure>
+
+  <p>自転速度を考慮しない場合、これが打ち上げ方位になる。<br>
+    南向きに打ち上げるときは、180からこの数字を引く。</p>
+
+
+  <h3 id="scientific_rotational">計算式(2)</h3>
+
+
+  <p><kbd>MC</kbd>をクリックして、メモリを消去する。</p>
+
+  <p>(1)で計算した打ち上げ方位を入力する。<br>
+    <kbd>cos</kbd>をクリック。<br>
+    <kbd>×</kbd>をクリック。
+  </p>
+
+  <p>目標軌道速度（この例では<strong>7700</strong>）を入力。<br>
+    <kbd>=</kbd>をクリックして、<kbd>M+</kbd>をクリック。
+  </p>
+
+  <figure>
+    <img loading="lazy" src="../images/basic/launch-azimuth/005.png">
+  </figure>
+
+  <p>(1)で計算した打ち上げ方位を入力する。<br>
+    <kbd>sin</kbd>をクリック。<br>
+    <kbd>×</kbd>をクリック。
+  </p>
+
+  <p>目標軌道速度（この例では<strong>7700</strong>）を入力。<br>
+    <kbd>-</kbd>をクリック。
+  </p>
+
+  <p>自転による速度（この例では<strong>407.9</strong>）を入力。<br>
+    <kbd>=</kbd>をクリック。
+  </p>
+
+  <figure>
+    <img loading="lazy" src="../images/basic/launch-azimuth/006.png">
+  </figure>
+
+  <p><kbd>÷</kbd>をクリック。<br>
+    <kbd>MR</kbd>をクリックして、<kbd>=</kbd>をクリック。
+  </p>
+
+  <p><strong>三角関数</strong>メニューから、<kbd>2nd</kbd>をクリック。<br>
+    <kbd>tan<sup>-1</sup></kbd>をクリック。
+  </p>
+
+  <figure>
+    <img loading="lazy" src="../images/basic/launch-azimuth/007.png">
+  </figure>
+
+
+  <h2 id="interplanetary">他の惑星への打ち上げ</h2>
+
+
+  <p>他の惑星への打ち上げについては、チュートリアルを参照すること。<br>
+    <a href="../tutorial/part18.html" target="_blank">Part18 金星へのPlanを作る</a>
+  </p>
+
+</body>
+
+</html>

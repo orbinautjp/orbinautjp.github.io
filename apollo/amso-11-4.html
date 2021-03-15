@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../styles/orbiterjp.css">
+  <script src="../scripts/template.js" charset="utf-8" defer></script>
+  <script src="../scripts/prevnext_apollo11.js" charset="utf-8" defer></script>
+  <title>AMSO アポロ11号チュートリアル Part4 （EVAと月面からの離陸）</title>
+</head>
+
+<body>
+
+  <h1>AMSO アポロ11号チュートリアル Part4 （EVAと月面からの離陸）</h1>
+
+
+  <h2>EVA</h2>
+
+  <p>キーボード<kbd>K</kbd>でEVAを開始する。<br>
+  テンキー<kbd>1</kbd>～<kbd>9</kbd>で移動する。※<br>
+  テンキー<kbd>Enter</kbd>との同時押しで、自動で歩き続ける。<br>
+  宇宙飛行士には体力が設定されているので、一人だけを酷使しないようにする。</p>
+  <p class="note">※<kbd>0</kbd>もしくは <kbd>.</kbd> （ピリオド）を押すと…</p>
+  <p><kbd>Ctrl</kbd> + <kbd>J</kbd>で、左上にキー操作を表示する。</p>
+
+<p>
+<img loading="lazy" src="../images/apollo/amso-11-4/001.png" width="331" height="129">
+  </p>
+  <p>宇宙飛行士をLMに近づけると、<strong>”J” ACTION KEY</strong>の表示が切り替わる。<br>
+  <strong>Grab the next item</strong>と表示されたら、<kbd>J</kbd>を押す。</p>
+
+<p>
+<img loading="lazy" src="../images/apollo/amso-11-4/002.png" width="425" height="55">
+  </p>
+  <p>これで星条旗などのアイテムを取り出すことができる。</p>
+  <p>アイテムを降ろすときは、<strong>Drop the item</strong>の表示が出るまでLMから離れる。</p>
+  <p>その他の操作については、以下の記事を参照してください。<br>
+  <a href="amso-keymap.html">AMSO キー操作一覧</a></p>
+  
+  <h2>月面を離れる</h2>
+  
+  <p>打ち上げ時刻（史実では<strong>GET 124:22:00</strong>）が近づくまでタイムワープで早送りする。<br>
+  今回の例では<strong>GET 124:00:00</strong>まで待つ。<br>
+  <kbd>J</kbd>を押して打ち上げ準備モードにする。</p>
+  <p><kbd>K</kbd>を押してオートパイロットを呼び出す。<br>
+  <strong>矢印キー</strong><kbd>←</kbd> or <kbd>→</kbd>で<strong>Engage ASCENT countdown</strong>を選択。</p>
+
+<p>
+<img loading="lazy" src="../images/apollo/amso-11-4/003.png" width="254" height="21">
+  </p>
+  <p><strong>矢印キー</strong><kbd>↑</kbd>で実行する。</p>
+
+<p>
+<img loading="lazy" src="../images/apollo/amso-11-4/004.png" width="276" height="20">
+  </p>
+  <p>打ち上げからランデブーまでが全自動で実行される。<br>
+  ランデブーに成功したら、ふたたびCSMとLMをドッキングさせる。</p>
+  
+  <h3>打ち上げオートパイロットが実行できないとき</h3>
+  
+  <p>CSMの軌道によっては、打ち上げオートパイロットを実行できないことがあります。</p>
+
+<p>
+<img loading="lazy" src="../images/apollo/amso-11-4/005.png" width="237" height="21">
+  </p>
+  <p><kbd>M</kbd>を押して、CSMに切り替える。<br>
+  オートパイロットの中から<strong>Engage orbit&gt;base alignment</strong>を選択して実行する。<br>
+  CSMがオートパイロットで軌道を修正するのを待つ。<br>
+  終わったら、LMに戻ってASCENTオートパイロットを実行する。</p>
+  <p><strong>P12&gt;RUN – computing</strong>の表示のまま変化がないときは、いったんオートパイロットを解除する。<br>
+  <kbd>K</kbd>を押してから<strong>矢印キー</strong><kbd>↑</kbd>を押す。</p>
+
+<p>
+<img loading="lazy" src="../images/apollo/amso-11-4/006.png" width="213" height="19">
+  </p>
+  <p>しばらく時間経過させてから、もう一度オートパイロットを実行する。</p>
+
+</body>
+</html>

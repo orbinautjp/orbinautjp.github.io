@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../styles/orbiterjp.css">
+  <script src="../scripts/template.js" charset="utf-8" defer></script>
+  <title>TransX 静止軌道へ行く方法</title>
+</head>
+
+<body>
+
+  <h1>TransX 静止軌道へ行く方法</h1>
+
+
+  <ul>
+    <li><a href="#about">静止軌道とは何か</a></li>
+    <li><a href="#dummy">静止軌道にダミーを置く</a></li>
+    <ul><li><a href="#dummy_add">ダミー衛星の追加</a></li>
+    <li><a href="#dummy_place">ダミーを静止軌道に置く</a></li>
+    <li><a href="#dummy_position">軌道上の位置を変える</a></li></ul>
+    <li><a href="#manoeuvre">静止軌道へ飛ぶ</a></li>
+    <ul><li><a href="#manoeuvre_create">マニューバの作成</a></li>
+    <li><a href="#manoeuvre_rendezvous">ダミー衛星とのランデブー</a></li></ul>
+    </ul>
+    
+    <h2 id="about">静止軌道とは何か</h2>
+    
+    <ul><li>軌道半径がおよそ42,164km（地球の赤道での半径が6,378km+高度35,786km）</li>
+    <li>赤道を基準とした軌道傾斜角がゼロ（赤道の真上を通る＝赤道と同じ角度の軌道）</li>
+    </ul>
+    <p>このふたつの条件を満たす軌道が、静止軌道ということになります。<br>
+    地上から見た位置が変わらないため、通信や気象観測などの衛星に用いられます。</p>
+    
+    <h2 id="dummy">静止軌道にダミーを置く</h2>
+    
+    <p>今回は、<strong>Checklists</strong>フォルダの<strong>Mission 3 - Deorbit</strong>のシナリオを使用します。<br>
+      <img loading="lazy" src="../images/transximfd/transx-geostationary/GEO000.png" width="166" height="86" />
+    </p>
+    <p>この記事では、「あらかじめダミーを目標軌道に置いて、そこへ向かって飛ぶ」という方法を紹介します。</p>
+    <p>シナリオエディタとTransXの基本操作については、以下の記事を参照してください。</p>
+    <p><a href="../misc/index.html#sceditor" target="_blank">シナリオエディタ</a></p>
+    <p><a href="transxbasics.html" target="_blank">TransXの基本</a></p>
+    
+    <h3 id="dummy_add">ダミー衛星の追加</h3>
+    
+    <p>シナリオエディタを起動する。<br>
+    <kbd>New</kbd>ボタンをクリック。<br>
+    <strong>Carina</strong>を選択して、適当な名前をつける。<br>
+    <kbd>Create</kbd>をクリック。<br>
+    <img loading="lazy" src="../images/transximfd/transx-geostationary/GEO002.png" width="405" height="413" />
+    </p>
+    
+    <h3 id="dummy_place">ダミーを静止軌道に置く</h3>
+    
+    <p>作成したダミー衛星を選択した状態で、<kbd>Edit</kbd>をクリック。<br>
+    <kbd>Orbital elements</kbd>をクリック。</p>
+    <p>まず最初に、<strong>Frame</strong>と書かれた下のリストをクリックして、<strong>ref. equator</strong>を選択。</p>
+    <p><strong>Semi-major axis</strong>（軌道長半径）を<strong>42164</strong>(km)にする。</p>
+    <p><strong>Ecc</strong>と<strong>Inc</strong>の両方をゼロにする。</p>
+    <p><kbd>Apply</kbd>をクリック。<br>
+      <img loading="lazy" src="../images/transximfd/transx-geostationary/GEO003.png" width="406" height="413" />
+    </p>
+    
+    <h3 id="dummy_position">軌道上の位置を変える</h3>
+    
+    <p><strong>Mean longitude at epoch</strong>の数値を変えることで、位置を移動させることができます。<br>
+    例えば、「ひまわり」のように日本を観測できる位置に設定することも可能です。<br>
+    <img loading="lazy" src="../images/transximfd/transx-geostationary/GEO005.png" width="576" height="324" />
+    </p>
+    
+    <h2 id="manoeuvre">静止軌道へ飛ぶ</h2>
+    
+    <p>TransXを使って、静止軌道にいるダミー衛星とランデブーします。</p>
+    
+    <h3 id="manoeuvre_create">マニューバの作成</h3>
+    
+    <p>ミール(Mir)にドッキングしているデルタグライダー(<strong>GL-01</strong>)を選択。</p>
+    <p>TransXを開く。<br>
+    <strong>Select Target</strong>で<kbd>ADJ</kbd>をクリックして<strong>Ships</strong>にする。<br>
+    <kbd>++</kbd>をクリックして、作成しておいた衛星の名前を入力して<kbd>Enter</kbd>。<br>
+    <img loading="lazy" src="../images/transximfd/transx-geostationary/GEO006.png" width="631" height="397" />
+    </p>
+    <p><strong>View:Manoeuvre</strong>で<strong>Prograde vel.</strong>を選択。<br>
+    <kbd>ENT</kbd>をクリックして<strong>2427</strong>と入力。※<br>
+    <img loading="lazy" src="../images/transximfd/transx-geostationary/GEO007.png" width="453" height="428" />
+    </p>
+    <p class="note">※<strong>Hohmann dv</strong>と同じ数字</p>
+    <p><strong>Man. date</strong>を操作して、できるだけ<strong>Cl. App.</strong>を小さくする。<br>
+      <img loading="lazy" src="../images/transximfd/transx-geostationary/GEO009.png" width="452" height="445" />
+    </p>
+    <p><strong>Man. date</strong>の時刻が近づいてきたら、ミールとのドッキングを解除。<br>
+    このマニューバを実行して静止軌道へと向かいます。</p>
+    
+    <h3 id="manoeuvre_rendezvous">ダミー衛星とのランデブー</h3>
+    
+    <p><a href="../mods/burn-time-calculator.html" target="_blank">Burn time calculator</a>を使って、相対速度を合わせるのに必要な距離を計算できます。<br>
+      <img loading="lazy" src="../images/transximfd/transx-geostationary/GEO010.png" width="399" height="177" />
+    </p>
+    <p><strong>Docking MFD</strong>を開いて<kbd>TGT</kbd>をクリック。<br>
+    作成したダミーの衛星を選択。</p>
+    <p>HUDをクリックすると、HUD上に距離が表示される。<br>
+    さきほど計算した距離になったら機首をマーカーに向けて加速する。※<br>
+    <img loading="lazy" src="../images/transximfd/transx-geostationary/GEO011.png" width="283" height="261" />
+    </p>
+    <p class="note">※この作業によって、軌道傾斜角と軌道速度を同時に一致させることができます。</p>
+    <p>ランデブーしたら、ドッキングの要領でターゲットに接近。<br>
+    ダミーの衛星と同じ位置に宇宙船を置いて、相対速度をゼロにする。<br>
+    <img loading="lazy" src="../images/transximfd/transx-geostationary/GEO012.png" width="524" height="396" />
+    </p>
+    <p>これで静止軌道に乗れたことになる。<br>
+    シナリオエディタを開いて、ダミーの衛星を削除する。</p>
+
+</body>
+</html>

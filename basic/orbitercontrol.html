@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../styles/orbiterjp.css">
+  <script src="../scripts/template.js" charset="utf-8" defer></script>
+  <title>Orbiterの基本操作</title>
+</head>
+
+<body>
+
+  <h1>Orbiterの基本操作</h1>
+
+
+<p>コクピット上のボタンをクリックするか、キーボードを使って宇宙船を操作します。</p>
+
+<ul>
+<li><a href="#interface">必要なインターフェイス</a></li>
+<li><a href="#cockpit">コクピットの選択</a></li>
+<li><a href="#timewarp">タイムワープ</a></li>
+<li><a href="#info">情報メニュー</a></li>
+  <ul>
+  <li><a href="#info_2010">Orbiter2010</a></li>
+  <li><a href="#info_2016">Orbiter2016</a></li>
+  </ul>
+<li><a href="#panel">2Dパネル</a>
+  <ul>
+  <li><a href="#rcs">RCSと動翼</a></li>
+  <li><a href="#autopilot">オートパイロット</a></li>
+  <li><a href="#engine_main">メインエンジン</a></li>
+  <li><a href="#engine_hover">ホバーエンジン</a></li>
+  <li><a href="#misc">その他の操作</a></li>
+  </ul>
+</li>
+<li><a href="#mfd">MFDの基本操作</a>
+  <ul>
+  <li><a href="#mfd_target">ターゲットの指定</a></li>
+  </ul>
+</li>
+<li><a href="#hud">HUDの切り替え</a></li>
+<li><a href="#desktop">デスクトップに戻る</a></li>
+</ul>
+
+<p>キーボードでの操作については、以下のファイルを参照してください。<br>
+<a href="orbiterhelp.html" target="_blank">Orbiterキー操作一覧 日本語ファイル</a></p>
+
+
+<h2 id="interface">必要なインターフェイス</h2>
+
+
+<table>
+ <tr>
+  <td>キーボード</td>
+  <td><strong>必須</strong></td>
+  <td></td>
+ </tr>
+ <tr>
+  <td>テンキー</td>
+  <td><strong>必須</strong></td>
+  <td>ドッキングなどの操作で必要。<br>ホームセンター等で1000円くらいで買える</td>
+ </tr>
+ <tr>
+  <td>マウス</td>
+  <td><strong>必須</strong></td>
+  <td></td>
+ </tr>
+ <tr>
+  <td>フライトスティック</td>
+  <td>オプション</td>
+  <td>ほとんどの機体で不要※</td>
+ </tr>
+</table>
+
+<p class="note">※宇宙ではほとんど使わないが、有翼機で大気圏内を飛ぶなら一本持っておきたい。</p>
+
+<p>フライトスティックを使用する場合は、<strong>Launchpad</strong>の<kbd>Joystick</kbd>タブをクリックして開く。<br>
+ドロップダウンリストから使用するスティックを選択する。</p>
+
+<p>
+<img loading="lazy" src="../images/basic/orbitercontrol/orbiter_ui017.png" width="400" height="225">
+</p>
+
+
+<h2 id="cockpit">コクピットの選択</h2>
+
+
+<p>キーボードで<kbd>F1</kbd>を押すと、機内視点と機外視点を切り替えられる。</p>
+
+<p>機内視点で<kbd>F8</kbd>を押すと、3つのコクピット画面を切り替えられる。</p>
+
+<p>3Dコクピット</p>
+
+<p>
+<img loading="lazy" src="../images/basic/orbitercontrol/orbiter_ui001.png" width="959" height="539">
+</p>
+
+<p>コクピットなし（UIのみ）</p>
+
+<p>
+<img loading="lazy" src="../images/basic/orbitercontrol/orbiter_ui002.png" width="960" height="540">
+</p>
+
+<p>2Dコクピット</p>
+
+<p>
+<img loading="lazy" src="../images/basic/orbitercontrol/orbiter_ui003.png" width="961" height="539">
+</p>
+
+<p>2Dコクピットでないと出てこないボタンもある。MODによって選べるコクピットが変わる。<br>
+探査機などのMODでは、2Dコクピットも3Dコクピットもないものが多い。</p>
+
+<p><strong>Orbiter2016</strong>では、一部のボタンの配置が変更されている。</p>
+
+
+<h2 id="timewarp">タイムワープ</h2>
+
+
+<p>時間の進みを早くする・遅くすることができる。<br>
+コクピット上のボタンでは操作できない。</p>
+
+<table>
+ <tr>
+  <td>キーボード<kbd>T</kbd></td>
+  <td>時間の進みを早くする</td>
+ </tr>
+ <tr>
+  <td>キーボード<kbd>R</kbd></td>
+  <td>時間の進みを遅くする</td>
+ </tr>
+</table>
+
+<p>画面右上には、現在時刻とタイムワープの倍率が表示されている。</p>
+
+<p>
+<img loading="lazy" src="../images/basic/orbitercontrol/orbiter_ui007.png" width="456" height="114">
+</p>
+
+
+<h2 id="info">情報メニュー</h2>
+
+
+<h3 id="info_2010">Orbiter2010</h3>
+
+
+<p>キーボード<kbd>I</kbd>で画面上の右端に日付時刻などの情報を表示する・消すことができる。<br>
+<kbd>F</kbd>でフレームレートを表示することもできる。</p>
+
+
+<h3 id="info_2016">Orbiter2016</h3>
+
+
+<p>画面上の中央で右クリックすると、情報メニューの設定ダイアログが開く。</p>
+
+<p>
+<img loading="lazy" src="../images/basic/orbitercontrol/orbiter_ui018.png" width="251" height="510">
+</p>
+
+<table>
+ <tr>
+  <td><strong>Show</strong></td>
+  <td>常に表示</td>
+ </tr>
+ <tr>
+  <td><strong>Hide</strong></td>
+  <td>常に非表示</td>
+ </tr>
+ <tr>
+  <td><strong>Auto-hide</strong></td>
+  <td>マウスオーバーで表示</td>
+ </tr>
+</table>
+
+
+<h2 id="panel">2Dパネル</h2>
+
+
+<p><kbd>↑</kbd> or <kbd>↓</kbd>（矢印キー上下）で2Dコクピットのパネルをスクロールする。</p>
+
+<p>
+<img loading="lazy" src="../images/basic/orbitercontrol/orbiter_ui005.png" width="959" height="539">
+</p>
+
+<p><kbd>Ctrl</kbd>キーと<kbd>↑</kbd> or <kbd>↓</kbd>同時押しで、上下に隠れているパネルにアクセスできる。</p>
+
+<p>
+<img loading="lazy" src="../images/basic/orbitercontrol/orbiter_ui006.png" width="960" height="539">
+</p>
+
+
+<h3 id="rcs">RCSと動翼</h3>
+
+
+<p><strong>RCS</strong>および大気圏内での動翼の操作は、テンキーかフライトスティックを使う。</p>
+
+<p><a href="../tutorial/part0.html" target="_blank">マウス+キーボードでの操縦の基本</a></p>
+
+<p>2Dコクピット右端には、<strong>RCS</strong>と<strong>AF CTRL</strong>の2つのスイッチがある。<br>
+右クリックで右に、左クリックで左に回る。<br>
+いずれも<strong>OFF</strong>に設定すると無効になる。</p>
+
+<p><strong>Orbiter2016</strong>では、ボタンの位置が左端に移動している。<br>
+また、左クリックのみで操作するようになっている。</p>
+
+<table>
+ <tr>
+  <td><strong>RCS</strong></td>
+  <td>Reaction control system</td>
+  <td>姿勢制御エンジン</td>
+ </tr>
+ <tr>
+  <td><strong>AF CTRL</strong></td>
+  <td>Airfoil control</td>
+  <td>大気圏内で使う尾翼などの操作</td>
+ </tr>
+</table>
+
+<p>
+<img loading="lazy" src="../images/basic/orbitercontrol/orbiter_ui008.png" width="248" height="358">
+</p>
+
+<table>
+ <tbody>
+  <tr>
+   <td><strong>RCS ROT</strong></td>
+   <td>RCS Rotational</td>
+   <td>機体を回転させる。<br>高度が上がって大気が薄くなったら使用する</td>
+  </tr>
+  <tr>
+   <td><strong>RCS LIN</strong></td>
+   <td>RCS Linear</td>
+   <td>平行移動。<br>ドッキングのほか、細かい速度調整に使う</td>
+  </tr>
+ </tbody>
+</table>
+
+<p>RCSはテンキーの<kbd>/</kbd>（スラッシュ）でも切り替え可能。<br>
+<kbd>Ctrl</kbd>+<kbd>/</kbd>の同時押しでRCSのオン・オフを切り替える。</p>
+
+<table>
+ <tbody>
+  <tr>
+   <td><strong>AF PITCH</strong></td>
+   <td>昇降舵「だけ」を操作する</td>
+  </tr>
+  <tr>
+   <td><strong>AF ON</strong></td>
+   <td>すべての動翼を操作できる</td>
+  </tr>
+ </tbody>
+</table>
+
+
+<h3 id="autopilot">オートパイロット</h3>
+
+
+<p><strong>RCS MODE</strong>の下のボタンはオートパイロット。<br>
+（Orbiter2016では2Dパネルの右端）</p>
+
+<table>
+ <tr>
+  <td><kbd>Kill Rotation</kbd><br><kbd>KILL-R</kbd></td>
+  <td><kbd>KILL ROT</kbd></td>
+  <td>回転を止める。<br>テンキー<kbd>5</kbd>でも操作可能</td>
+ </tr>
+ <tr>
+  <td><kbd>Pro Grade</kbd><br><kbd>PRO-G</kbd></td>
+  <td><kbd>PRO GRD</kbd></td>
+  <td>機首を前方（速度ベクトルの向き）に向ける</td>
+ </tr>
+ <tr>
+  <td><kbd>Retro Grade</kbd><br><kbd>RET-G</kbd></td>
+  <td><kbd>RETR GRD</kbd></td>
+  <td>機首を後ろ（速度ベクトルの逆）に向ける</td>
+ </tr>
+ <tr>
+  <td><kbd>Orbit Normal(+)</kbd><br><kbd>NML +</kbd></td>
+  <td><kbd>NML +</kbd></td>
+  <td>機首を軌道面に対し垂直にする。<br>軌道半径×速度ベクトルの外積※</td>
+ </tr>
+ <tr>
+  <td><kbd>Orbit Normal(-)</kbd><br><kbd>NML -</kbd></td>
+  <td><kbd>NML -</kbd></td>
+  <td>Orbit Normal(+)の逆向き</td>
+ </tr>
+ <tr>
+  <td><kbd>Level Horizon</kbd><br><kbd>HRLVL</kbd></td>
+  <td><kbd>HORZ LVL</kbd></td>
+  <td>地面に対して機体を水平にする</td>
+ </tr>
+ <tr>
+  <td><kbd>Hover Hold Alt</kbd></td>
+  <td><kbd>HOLD ALT</kbd></td>
+  <td>ホバーエンジンで高度(Altitude)を維持する</td>
+ </tr>
+</table>
+
+<p>
+※右手の人差し指を軌道半径、中指を速度ベクトルとしたとき、親指の方向
+</p>
+
+<p>
+<img loading="lazy" src="../images/basic/orbitercontrol/orbiter_ui016.png" width="400" height="400">
+</p>
+
+
+<h3 id="engine_main">メインエンジン</h3>
+
+
+<p>2Dコクピット上のレバーをマウスドラッグするか、フライトスティックに付属するレバーで操作できる。<br>
+また、テンキーから操作することもできる。</p>
+
+<p>Orbiterでは、正確なタイミングでエンジンを完全に停止しなければならないことが多い。<br>
+スロットルレバーではなく、キーボードでの操作がおすすめ。</p>
+
+<p>
+<img loading="lazy" src="../images/basic/orbitercontrol/orbiter_ui010.png" width="250" height="505">
+</p>
+
+<table>
+ <tbody>
+  <tr>
+   <td>テンキー<kbd>+</kbd>（プラス）</td>
+   <td>メインエンジン全開</td>
+  </tr>
+  <tr>
+   <td>テンキー<kbd>-</kbd>（マイナス）</td>
+   <td>エンジン出力を絞る or 逆噴射</td>
+  </tr>
+  <tr>
+   <td>テンキー<kbd>*</kbd>（アスタリスク）</td>
+   <td>エンジン停止</td>
+  </tr>
+ </tbody>
+</table>
+
+<p><kbd>Ctrl</kbd>キーとの同時押しで出力を固定する。<br>
+<kbd>Ctrl</kbd>を押したまま<kbd>+</kbd> or <kbd>-</kbd>を押して調節する。</p>
+
+
+<h3 id="engine_hover">ホバーエンジン</h3>
+
+
+<table>
+ <tbody>
+  <tr>
+   <td>テンキー<kbd>0</kbd></td>
+   <td>ホバーエンジンの出力を上げる</td>
+  </tr>
+  <tr>
+   <td>テンキー<kbd>.</kbd></td>
+   <td>ホバーエンジンの出力を下げる</td>
+  </tr>
+ </tbody>
+</table>
+
+
+<h3 id="misc">その他の操作</h3>
+
+
+<p>以下はコクピット上のボタンでも操作できるが、キーボードを使うことが多い。</p>
+
+<p>
+<img loading="lazy" src="../images/basic/orbitercontrol/orbiter_ui009.png" width="248" height="448">
+</p>
+
+<table>
+ <tbody>
+  <tr>
+   <td><kbd>Delete</kbd> or <kbd>Insert</kbd></td>
+   <td><strong>ELEVATOR TRIM</strong></td>
+   <td>トリムアップ・ダウン</td>
+  </tr>
+  <tr>
+   <td><kbd>Ctrl</kbd>+<kbd>B</kbd> (2010)</td>
+   <td rowspan="2"><strong>AIRBRAKE</strong></td>
+   <td rowspan="2">エアブレーキ</td>
+  </tr>
+  <tr>
+  <td><kbd>B</kbd>で展開<br><kbd>Alt</kbd>+<kbd>B</kbd>で閉じる (2016)</td>
+  </tr>
+  <tr>
+   <td><kbd>G</kbd></td>
+   <td><strong>GEAR</strong></td>
+   <td>ランディングギア（着陸用の車輪）の展開・収納</td>
+  </tr>
+  <tr>
+   <td><kbd>K</kbd></td>
+   <td><strong>NOSECONE</strong></td>
+   <td>ノーズコーンの開閉</td>
+  </tr>
+  <tr>
+   <td><kbd>Ctrl</kbd>+<kbd>D</kbd></td>
+   <td><strong>DOCK RELEASE</strong></td>
+   <td>ドッキングを解除</td>
+  </tr>
+  <tr>
+   <td><kbd>,</kbd>（コンマ） or <kbd>.</kbd>（ピリオド）</td>
+   <td><strong>WHEEL BRK</strong></td>
+   <td>ホイールブレーキ（左右）</td>
+  </tr>
+ </tbody>
+</table>
+
+
+<h2 id="mfd">MFDの基本操作</h2>
+
+
+<p>2Dパネルの中央には、2つの<strong>MFD</strong>がある。<br>
+MFDでは、現在の軌道や地図などを表示したり、マニューバを作成したりすることができる。</p>
+
+<p>
+<img loading="lazy" src="../images/basic/orbitercontrol/orbiter_ui011.png" width="579" height="498">
+</p>
+
+<p>一番下の<kbd>PWR</kbd>ボタンでMFDのオン・オフ。</p>
+
+<p><kbd>SEL</kbd>ボタンで使いたいMFDを選択する。<br>
+<kbd>SEL</kbd>をクリックしてから、両サイドの<kbd>&gt;</kbd>ボタンで選択。<br>
+使いたいMFDが出てこない場合は、もう一度<kbd>SEL</kbd>をクリックすると2ページ目に移動する。</p>
+
+<p><kbd>MNU</kbd>をクリックすると、各MFDにおけるボタンの機能について説明文が表示される。</p>
+
+<table>
+ <tr>
+  <td><strong>MFD</strong></td>
+  <td>Multi Function Display</td>
+  <td>多機能ディスプレイ</td>
+ </tr>
+ <tr>
+  <td><kbd>PWR</kbd></td>
+  <td>Power</td>
+  <td>電源</td>
+ </tr>
+ <tr>
+  <td><kbd>SEL</kbd></td>
+  <td>Select</td>
+  <td>選択</td>
+ </tr>
+ <tr>
+  <td><kbd>MNU</kbd></td>
+  <td>Menu</td>
+  <td>メニュー</td>
+ </tr>
+</table>
+
+
+<h3 id="mfd_target">ターゲットの指定</h3>
+
+
+<p><strong>Orbit MFD</strong>や<strong>Map MFD</strong>などでターゲットを指定する場合は、以下のような流れになる。</p>
+
+<p>
+<img loading="lazy" src="../images/basic/orbitercontrol/orbiter_ui012.png" width="542" height="497">
+</p>
+
+<ol>
+<li>MFDの隣にある<kbd>TGT</kbd>ボタンをクリック（キーボードなら<kbd>Shift</kbd>+<kbd>T</kbd>）</li>
+<li>矢印キーで選択するか、キーボードで<kbd>Enter</kbd>を押してから文字入力する</li>
+<li>もう一度<kbd>Enter</kbd>を押して確定</li>
+</ol>
+
+
+<h2 id="hud">HUDの切り替え</h2>
+
+
+<p><kbd>H</kbd>キーを押すと、状況に合わせてHUDの表示を切り替えることができる。</p>
+<p><strong>Surface</strong>（地上）</p>
+
+<p>
+<img loading="lazy" src="../images/basic/orbitercontrol/orbiter_ui013.png" width="960" height="540">
+</p>
+
+<p><strong>Orbit</strong>（軌道）</p>
+
+<p>
+<img loading="lazy" src="../images/basic/orbitercontrol/orbiter_ui015.png" width="960" height="540">
+</p>
+
+<p><strong>Docking</strong>（ドッキング）</p>
+
+<p>
+<img loading="lazy" src="../images/basic/orbitercontrol/orbiter_ui014.png" width="960" height="540">
+</p>
+
+<p>また、MFDの<kbd>HUD</kbd>ボタンをクリックすると、対応するHUDに切り替えることができる。<br>
+HUDの表示が見づらいときは、<kbd>Alt</kbd>+<kbd>H</kbd>でHUDの色を変えることができる。</p>
+
+
+<h2 id="desktop">デスクトップに戻る</h2>
+
+
+<p><kbd>Alt</kbd>キーを押しながら<kbd>Tab</kbd>キーを押せば、ほかのゲームと同様にデスクトップに復帰できる。<br>
+ただし、<strong>D3D9Client</strong>で<strong>True Full Screen</strong>を選択すると無効になる。</p>
+
+</body>
+</html>

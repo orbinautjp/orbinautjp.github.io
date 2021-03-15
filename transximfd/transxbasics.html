@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../styles/orbiterjp.css">
+  <script src="../scripts/template.js" charset="utf-8" defer></script>
+  <title>TransXの基本</title>
+</head>
+
+<body>
+
+  <h1>TransXの基本</h1>
+
+
+<p>TransXは<strong>マニューバ</strong>※を作成するためのMFDです。<br>
+「いつ、どの方向を向いて」「どれだけエンジンを噴射するか（=<strong>Delta V</strong>）」を決定することができます。</p>
+
+<p class="note">※マニューバ(Manoeuvre)：宇宙船のエンジンを噴射して軌道を変更すること</p>
+
+<ul>
+<li><a href="#flow">TransXの流れ</a>
+  <ul>
+  <li><a href="#flow_view">Viewの選択</a></li>
+  <li><a href="#flow_var">VARの選択</a></li>
+  <li><a href="#flow_stage">Stageの選択</a></li>
+  </ul>
+</li>
+<li><a href="#view">各Viewの解説</a>
+  <ul>
+  <li><a href="#view_setup">View:Setup</a></li>
+  <li><a href="#view_eject">View:Eject Plan</a></li>
+  <li><a href="#view_escape">View:Escape Plan</a></li>
+  <li><a href="#view_manoeuvre">View:Manoeuvre</a></li>
+  <li><a href="#view_target">View:Target</a></li>
+  <li><a href="#view_encounter">View:Encounter</a></li>
+  </ul>
+</li>
+</ul>
+
+<p><a href="transxinstall.html" target="_blank">TransXの更新と設定</a>（最新版のダウンロード）<br>
+<a href="index.html#transx" target="_blank">TransXの解説一覧</a></p>
+
+
+<h2 id="flow">TransXの流れ</h2>
+
+
+<p>TransXを使用するときの大まかな流れについて説明する。<br>
+惑星間飛行でも、スイングバイであっても、基本的には同じ作業の繰り返しとなる。</p>
+
+
+<h3 id="flow_view">Viewの選択</h3>
+
+
+<p>マニューバ作成の各段階に応じて、Viewを切り替えながら作業する。<br>
+<strong>View</strong>はMFD左側の<kbd>VW</kbd>ボタンをクリックすることで変更できる。</p>
+
+<p>
+<img loading="lazy" src="../images/transximfd/transxbasics/TransXViewChart002.png" width="643" height="221">
+</p>
+
+<table>
+ <tr>
+  <td><strong>View:Setup</strong></td>
+  <td>目的地を選択する。<br>軌道を表すグラフの表示方法などの設定を変える。</td>
+ </tr>
+ <tr>
+  <td><strong>View:Eject / Escape Plan</strong></td>
+  <td>他の惑星まで飛んだり、スイングバイしたりといったマニューバの計画を立てる。<br>地球上から月へと飛ぶ場合などでは必要ない。</td>
+ </tr>
+ <tr>
+  <td><strong>View:Manoeuvre</strong></td>
+  <td>他の惑星に出発したり、軌道修正をしたりするためのマニューバを作成する。</td>
+ </tr>
+ <tr>
+  <td><strong>View:Target</strong></td>
+  <td>エンジンを噴射し、マニューバを実行するときに使用する。<br>白い十字線の中央に目印（緑色の×）を合わせることで、機体の向きを決められる。</td>
+ </tr>
+ <tr>
+  <td colspan="2">&nbsp;</td>
+ </tr>
+ <tr>
+  <td><strong>View:Encounter</strong></td>
+  <td>目標の惑星に最接近したときの高度などが表示される。<br>これを見ながら、マニューバやプランを微調整する。</td>
+ </tr>
+</table>
+
+<p>これらの順番は絶対ではなく、前後することもある。<br>
+例えば、地球から月へのフライトは以下のような流れになる。</p>
+
+<ol start="0">
+<li>地球周回軌道上に出て、月と軌道面を一致させる（<strong>Align MFD</strong>で<strong>RInc</strong>をゼロにする）</li>
+<li><strong>View:Setup</strong>で<strong>Moon</strong>をターゲットに選択</li>
+<li>地球→月のフライトでは、View:Planは使用しない（表示されない）</li>
+<li><strong>View:Manoeuvre</strong>で月に向かうマニューバを作成<br>
+（同時に、<strong>View:Encounter</strong>で結果を確認する）</li>
+<li><strong>View:Target</strong>にしてマニューバを実行する</li>
+</ol>
+
+
+<h3 id="flow_var">VARの選択</h3>
+
+
+<p class="note"><kbd>VAR</kbd> = Variable = 変数。</p>
+
+<p>それぞれの<strong>View</strong>で<kbd>VAR</kbd> or <kbd>-VR</kbd>をクリックして、必要な機能にアクセスする。<br>
+機能を選択したら、<kbd>++</kbd> or <kbd>--</kbd>のどちらかをクリックして実行 or 数値を入力する。</p>
+
+<ol>
+<li><kbd>VW</kbd>をクリックして<strong>View</strong>を選択</li>
+<li><kbd>VAR</kbd>（もしくは<kbd>-VR</kbd>）をクリックして機能を選択</li>
+<li><kbd>++</kbd> or <kbd>--</kbd>（もしくは<kbd>ENT</kbd>）をクリックして入力／実行</li>
+<li>必要に応じて<kbd>ADJ</kbd>(Adjust)か<kbd>-AJ</kbd>をクリックして、一度に変化する量を変える</li>
+<li>同じViewの別の機能を使うなら<kbd>VAR</kbd>（②に戻る）<br>
+Viewを切り替えるなら<kbd>VW</kbd>をクリック（①に戻る）</li>
+</ol>
+
+<p>
+<img loading="lazy" src="../images/transximfd/transxbasics/002.png" width="527" height="331">
+</p>
+
+
+<h3 id="flow_stage">Stageの選択</h3>
+
+
+<p><kbd>FWD</kbd>をクリックすると、次の<strong>Stage</strong>（ステージ）が現れる。<br>
+<kbd>BCK</kbd>をクリックすると、一つ前のステージに戻る。</p>
+
+<p class="note"><kbd>FWD</kbd> = Forward = 次に進む。<kbd>BCK</kbd> = Back = 前に戻る。</p>
+
+<p>惑星間飛行においては、<kbd>FWD</kbd>をクリックして複数のステージを作る必要がある。</p>
+
+<p><strong>Stage 1</strong>では地球を周るパーキング軌道。<br>
+<strong>Stage 2</strong>では地球を出発点とし、目的地の惑星に至る遷移軌道。<br>
+<strong>Stage 3</strong>は目的地の惑星の拡大図、というように使い分ける。</p>
+
+
+<h2 id="view">Viewの解説</h2>
+
+
+<p>各Viewで使える機能のうち、主要なものについて解説する。<br>
+<kbd>VAR</kbd>をクリックすると、それぞれの機能を呼び出すことができる。</p>
+
+
+<h3 id="view_setup">View:Setup</h3>
+
+
+<p>マニューバを作成するための準備として、さまざまな設定を変更する。</p>
+
+<ul>
+<li><a href="#view_setup_target">Select Target</a></li>
+<li><a href="#view_setup_graph">Graph Projection / Scale to View</a></li>
+</ul>
+
+<p>
+<img loading="lazy" src="../images/transximfd/transxbasics/orbiterblogtxguide.png" width="574" height="482">
+</p>
+
+
+<h4 id="view_setup_target">Select Target</h4>
+
+
+<p>ターゲット（目的地）を選択する。</p>
+
+<p>月に向かうのか、今いる惑星の周回軌道上に出るのか、あるいは他の惑星に向かうのか選択する。</p>
+<p>地上から他の惑星に向かう場合は、まず<kbd>++</kbd>をクリックして<strong>Escape</strong>を選択。<br>
+そこから<kbd>FWD</kbd>をクリックして次のステージを作成することで、他の惑星をターゲットとして選べるようになる。</p>
+
+
+<h4 id="view_setup_graph">Graph Projection / Scale to View</h4>
+
+
+<p>軌道予測のグラフと、目標となる天体の表示方法を変更する。</p>
+<p><strong class="caution">重要</strong>：計算結果や実際のマニューバには一切影響しない。<br>
+角度の問題でグラフが見づらいとき、目標の惑星を拡大して見るときに使用する。</p>
+
+
+<h3 id="view_eject">View:Eject Plan</h3>
+
+
+<p>遷移軌道の計画（プラン）を作成する。<br>
+惑星間飛行や、月から地球に帰ってくるときなどに使用する。</p>
+<p>ここで実際のマニューバを作成するわけではなく、「マニューバを作るために参考にする」ための計画を作る。</p>
+
+<p>
+<img loading="lazy" src="../images/transximfd/transxbasics/orbiterblogtxguide001.png" width="560" height="490">
+</p>
+
+<p>基本的な操作は<a href="#view_manoeuvre">View:Manoeuvre</a>とまったく同じ。</p>
+<p><kbd>ADJ</kbd> or <kbd>-AJ</kbd>をクリックして<strong>Auto-min</strong>を選択すると、自動で<strong>Delta V</strong>（ターゲットに向かうために必要な加速）を計算する。<br>
+<br>
+マニューバの要素すべてを<strong>Auto-min</strong>にして、<strong>Eject. date</strong>（他の惑星に出発する日付時刻）だけを操作すると、自動的に最小限の<strong>Delta V</strong>を決めてくれる。</p>
+
+
+<h3 id="view_escape">View:Escape Plan</h3>
+
+
+<p>打ち上げの計画（プラン）を作成する。</p>
+
+<ul>
+<li><a href="#view_escape_ped">Pe Distance</a></li>
+<li><a href="#view_escape_orientation">Ej Orientation</a></li>
+</ul>
+
+<p>惑星間飛行においては、あらかじめ作成しておいた遷移軌道に接続できるように打ち上げる。<br>
+したがって、<strong>Eject Plan</strong>→<strong>Escape Plan</strong>の順番で作業することになる。</p>
+
+<p>
+<img loading="lazy" src="../images/transximfd/transxbasics/orbiterblogtxguide007.png" width="546" height="473">
+</p>
+
+
+<h4 id="view_escape_ped">Pe Distance</h4>
+
+
+<p class="note">Pe Distance = Periapsis Distance</p>
+
+<p>他の惑星に向かう前のパーキング軌道の高度を決める。</p>
+<p>Alt（地上からの高度=Altitude）ではなく、Rad（惑星の中心からの半径＝Radius）を指定する。<br>
+地球の場合、半径は6.371M（6.371Mm（メガメートル）=6371km）なので、6.571Mなら高度200kmになる。</p>
+
+
+<h4 id="view_escape_orientation">Ej Orientation</h4>
+
+
+<p class="note">Ej Orientation = Eject Orientation</p>
+
+<p>「打ち上げ時にどの方角に向かって飛ぶか」を決める。</p>
+
+<p><kbd>++</kbd> or <kbd>--</kbd>をクリックして、白い線と緑の線が重なるようにすると、<strong>Heading</strong>（打ち上げ方位）が決まる。<br>
+その方角に向かって打ち上げることになる。</p>
+<p>エンジンを噴射すると<strong>Heading</strong>の数字は消えるので、暗記するかメモを取っておく。</p>
+
+
+<h3 id="view_manoeuvre">View:Manoeuvre</h3>
+
+
+<p>マニューバの解説については以下の記事を参照。<br>
+<a href="../tutorial/part11.html" target="_blank">Part11 TransXのマニューバ(Manoeuvre)</a></p>
+
+<p>
+<img loading="lazy" src="../images/transximfd/transxbasics/orbiterblogtxguide002.png" width="576" height="482">
+</p>
+
+<p>必ず最初に、<kbd>++</kbd>をクリックして<strong>Manoeuvre mode</strong>を<strong>on</strong>にする。<br>
+マニューバを実行し終わったら、必ず<strong>off</strong>にする。</p>
+
+<p><a href="#view_escape">View:Escape Plan</a>を参考にしながらマニューバを作る場合は、<kbd>ENT</kbd>をクリックしてDelta Vなどの数字を直接入力することもできる。</p>
+
+
+<h3 id="view_target">View:Target</h3>
+
+
+<p>エンジンを噴射し、マニューバを実行するために使用する。</p>
+
+<p>
+<img loading="lazy" src="../images/transximfd/transxbasics/orbiterblogtxguide003.png" width="568" height="487">
+</p>
+
+<p><strong>Auto-center</strong>を選んで<strong>on</strong>にすると、自動で機体の向きを合わせてくれる。※</p>
+
+<p class="note">※<strong>Auto-center</strong>が安定しない場合は、いったん<strong>Auto-center</strong>を<strong>off</strong>にする。<br>
+手動で宇宙船を回転させ、白い十字の中央に緑の<strong>×</strong>が来るようにする。<br>
+ある程度向きを合わせたら、もう一度<strong>Auto-center</strong>を<strong>on</strong>にする。</p>
+
+<p><strong>Begin Burn</strong>（エンジン噴射開始）の数字が<strong>ゼロ</strong>になったらエンジンを噴射する。</p>
+<p>マニューバが終わったら、必ず<strong>Auto-center</strong>を<strong>off</strong>にする。</p>
+<p><strong>Delta V</strong>の数字が<strong>ゼロ</strong>になるまでエンジンを噴射するのが基本だが、少し残しておいて、<strong>Manoeuvre mode</strong>を<strong>off</strong>にしてから微調整したほうがよい。</p>
+
+
+<h3 id="view_encounter">View:Encounter</h3>
+
+
+<p>目標の天体にもっとも接近したときの高度や、予想落下地点などの情報を表示する。<br>
+これを見ながらマニューバを作成したり、軌道を修正したりする。</p>
+
+<p>
+<img loading="lazy" src="../images/transximfd/transxbasics/orbiterblogtxguide006.png" width="545" height="480">
+</p>
+
+<table>
+ <tr>
+  <td><strong>Focus PeD</strong></td>
+  <td>Focus Periapsis Distance</td>
+  <td>現在の軌道から予測されるPeの高さ。<br>惑星の中心からの半径で表示される。</td>
+ </tr>
+ <tr>
+  <td><strong>Hyp PeD</strong></td>
+  <td>Hypothetical Periapsis Distance</td>
+  <td>現在作成中のマニューバから予測される、仮定の(Hypothetical)Peの高さ。</td>
+ </tr>
+ <tr>
+  <td><strong>Min Alt</strong></td>
+  <td>Minimum Altitude</td>
+  <td>最接近時の地表からの高度。</td>
+ </tr>
+ <tr>
+  <td><strong>Offplane Dist</strong></td>
+  <td>Off plane Distance</td>
+  <td>地上基地などの目標地点から自分の軌道までの距離。</td>
+ </tr>
+</table>
+
+</body>
+</html>

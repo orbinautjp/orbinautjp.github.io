@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../styles/orbiterjp.css">
+  <script src="../scripts/template.js" charset="utf-8" defer></script>
+  <script src="../scripts/prevnext_tutorial.js" charset="utf-8" defer></script>
+
+<script>
+    window.MathJax = {
+      tex: {
+        tags: 'ams'
+      }
+    };
+  </script>
+
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+  <title>Part15 月面基地への着陸</title>
+</head>
+
+<body>
+
+  <h1>Part15 月面基地への着陸</h1>
+
+
+  <p>周回軌道を離脱し、月面基地に着陸します。</p>
+
+  <ol>
+    <li><a href="#geardown">着陸前の準備</a>
+      <ul>
+        <li><a href="#vor">VOR・ILS周波数を入力する</a></li>
+      </ul>
+    </li>
+    <li><a href="#deorbit">周回軌道を離脱する</a>
+      <ul>
+        <li><a href="#closing">基地上空に移動する</a></li>
+        <li><a href="#retrograde">逆噴射姿勢に入る</a></li>
+        <li><a href="#hover">基地上空で静止する</a></li>
+      </ul>
+    </li>
+    <li><a href="#pad">着陸パッドへ移動する</a></li>
+    <li><a href="#descent">降下する</a>
+      <ul>
+        <li><a href="#descent_auto">ホバーエンジンの自動制御 (2016)</a></li>
+      </ul>
+    </li>
+    <li><a href="#landing">着陸する</a></li>
+  </ol>
+
+  <ul>
+    <li><a href="#reference">関連項目</a>
+      <ul>
+        <li><a href="#reference_btc">Burn time calculator</a></li>
+        <li><a href="#reference_pursuit">PursuitMFD</a></li>
+      </ul>
+    </li>
+    <li><a href="#form">アンケート</a></li>
+    <li><a href="#videos">動画</a></li>
+  </ul>
+
+
+  <h2 id="geardown">着陸前の準備</h2>
+
+
+  <p>ランディングギアを降ろしておく。<br>
+    キーボード<kbd>G</kbd>を押す。</p>
+
+  <p><a href="../basic/orbitercontrol.html#cockpit" target="_blank">2Dコクピット</a>で、矢印キー<kbd>↓</kbd>を押す。<br>
+    パネルを下にスクロールする。</p>
+
+  <p><strong>RETRO DOORS</strong>のボタンをクリック。<br>
+    <strong>OPEN</strong>にする。
+  </p>
+
+  <p>
+    <img loading="lazy" class="small" src="../images/tutorial/part15/001.png" width="200" height="200">
+    <img loading="lazy" class="small" src="../images/tutorial/part15/002.png" width="200" height="200">
+    <br>
+    1枚目がOrbiter2010、2枚目が2016
+  </p>
+
+  <p>逆噴射エンジンが使用可能になる。</p>
+
+
+  <h3 id="vor">VOR・ILS周波数を入力する</h3>
+
+
+  <p><kbd>Ctrl</kbd>を押しながら<kbd>I</kbd>を押す。<br>
+    <strong>Object info</strong>のダイアログを開く。
+  </p>
+
+  <p>上のドロップダウンメニューをクリック。<br>
+    <strong>Brighton Beach</strong>基地を選択する。
+  </p>
+
+  <table>
+    <tr>
+      <td><strong>Orbiter2010</strong></td>
+      <td><strong>Spaceport</strong>→<strong>Brighton Beach</strong></td>
+    </tr>
+    <tr>
+      <td><strong>Orbiter2016</strong></td>
+      <td><strong>Base</strong>→<strong>Brighton Beach</strong></td>
+    </tr>
+  </table>
+
+  <p>
+    <img loading="lazy" class="small" src="../images/tutorial/part15/003.png" width="330" height="350">
+    <img loading="lazy" class="small" src="../images/tutorial/part15/004.png" width="330" height="350">
+    <br>
+    1枚目が2010、2枚目が2016
+  </p>
+
+  <p><strong>COM/NAV MFD</strong>を開く。</p>
+  <p><strong>NAV1</strong>に<strong>VOR</strong>の周波数を入力。<br>
+    <strong>NAV2</strong>に空いている<strong>ILS</strong>の周波数を入力。※
+  </p>
+
+  <p class="note">※使用中のパッドには宇宙船の名前が表示されている。<br>
+    空いているパッドは<strong>free</strong>と表示される</p>
+
+  <p>
+    <img loading="lazy" src="../images/tutorial/part15/005.png" width="425" height="425">
+  </p>
+
+  <p><kbd>SEL</kbd>をクリック。<br>
+    <strong>VOR/VTOL MFD</strong>を開く。
+  </p>
+
+  <p><strong>NAV1</strong>にしておく。</p>
+
+  <p>
+    <img loading="lazy" src="../images/tutorial/part15/006.png" width="425" height="425">
+  </p>
+
+
+  <h2 id="deorbit">周回軌道を離脱する</h2>
+
+
+  <p>基地上空でエンジンを噴射して減速し、軌道速度をゼロにする。</p>
+
+
+  <h3 id="closing">基地上空に移動する</h3>
+
+
+  <p><strong>Map MFD</strong>を開く。<br>
+    <strong>Dst</strong>（目的地までの距離）を確認する。
+  </p>
+
+  <p>タイムワープ<strong>1000倍</strong>で時間経過させる。</p>
+
+  <p><strong>Dst</strong>が<strong>1M</strong>(1000km)を切るのを待つ。<br>
+    タイムワープを解除する。</p>
+
+  <p>
+    <img loading="lazy" src="../images/tutorial/part15/007.png" width="425" height="425">
+  </p>
+
+
+  <h3 id="retrograde">逆噴射姿勢に入る</h3>
+
+
+  <p>機首を進行方向の逆に向ける。<br>
+    <kbd>RetroGrade</kbd>&nbsp;or&nbsp;<kbd>RET-G</kbd>をクリック。
+  </p>
+
+  <p>後ろを向いたらオートパイロットを解除する。</p>
+
+  <p><kbd>Level Horizon</kbd>&nbsp;or&nbsp;<kbd>HRLVL</kbd>をクリック。<br>
+    オートパイロットが機体を地面と平行にする。</p>
+
+  <p><strong>RCS ROT</strong>で機体を回転させる。<br>
+    \( \bigodot \) のマーカーに機首を向ける。</p>
+
+  <p>
+    <img loading="lazy" src="../images/tutorial/part15/008.png" width="426" height="426">
+  </p>
+
+
+  <h3 id="hover">基地上空で静止する</h3>
+
+
+  <p><strong>500km</strong>程度まで接近すると、VORの信号が受信できるようになる。<br>
+    信号を受信すると、<strong>VOR/VTOL MFD</strong>に各種データが表示される。</p>
+
+  <p>
+    <img loading="lazy" src="../images/tutorial/part15/009.png" width="425" height="425">
+  </p>
+
+  <p><strong>VOR/VTOL</strong>の左上、<strong>DIST</strong>を確認する。</p>
+
+  <p><strong>DIST</strong>が<strong>75k</strong>になるのを待つ。<br>
+    メインエンジンを全開にする。</p>
+
+  <p><kbd>Hover Hold Alt</kbd>&nbsp;or&nbsp;<kbd>HOLD ALT</kbd>をクリック。</p>
+
+  <p>オートパイロットがホバーエンジンを自動で噴射して、高度を維持してくれる。</p>
+
+  <p><kbd>HOLD ALT</kbd>が見つからないときは、<kbd>F8</kbd>キーを押す。<br>
+    コクピットを切り替える。</p>
+
+  <p>
+    <img loading="lazy" src="../images/tutorial/part15/015.png" width="1596" height="898">
+  </p>
+
+  <p><strong>VOR/VTOL MFD</strong>で<strong>HSPD</strong>を確認する。<br>
+    <strong>HSPD</strong>が下がらなくなったらエンジンを切る。
+  </p>
+
+
+  <h2 id="pad">着陸パッドへ移動する</h2>
+
+
+  <p>宇宙船を基地の真上へ移動させる。<br>
+    <strong>VOR/VTOL MFD</strong>で方位と速度を確認する。
+  </p>
+
+  <p>
+    <img loading="lazy" src="../images/tutorial/part15/010.png" width="425" height="425">
+  </p>
+
+  <table>
+    <tbody>
+      <tr>
+        <td colspan="2">黄色い矢印</td>
+        <td>自分の進行方向</td>
+      </tr>
+      <tr>
+        <td colspan="2">緑の線</td>
+        <td>目的地の位置と方向</td>
+      </tr>
+      <tr>
+        <td><strong>DIST</strong></td>
+        <td>Distance</td>
+        <td>目的地までの距離</td>
+      </tr>
+      <tr>
+        <td><strong>HSPD</strong></td>
+        <td>Horizontal Speed</td>
+        <td>水平方向の速度</td>
+      </tr>
+      <tr>
+        <td><strong>ALT</strong></td>
+        <td>Altitude</td>
+        <td>地表からの高度</td>
+      </tr>
+      <tr>
+        <td><strong>VSPD</strong></td>
+        <td>Vertical Speed</td>
+        <td>垂直（上下）方向の速度</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <p>黄色い矢印を緑の線に重ねる。<br>
+    <strong>RCS LIN</strong>、メインエンジンを噴射する。
+  </p>
+
+  <p>
+    <img loading="lazy" src="../images/tutorial/part15/011.png" width="425" height="425">
+  </p>
+
+  <p><strong>10km</strong>以内に近づいたら、<kbd>NAV</kbd>をクリック。<br>
+    <strong>NAV2</strong>に切り替える。
+  </p>
+
+  <p>着陸パッドの真上に移動する。<br>
+    緑の十字が中央に来ていればよい。</p>
+
+  <p>
+    <img loading="lazy" src="../images/tutorial/part15/012.png" width="425" height="425">
+  </p>
+
+  <p>減速して、<strong>HSPD</strong>をゼロにする。</p>
+
+  <p><strong>RETRO DOORS</strong>が開いていれば、テンキー<kbd>-</kbd>（マイナス）で逆噴射できる。</p>
+
+
+  <h2 id="descent">降下する</h2>
+
+
+  <p><strong>Map MFD</strong>を<strong>Surface MFD</strong>に切り替える。</p>
+  <p><kbd>Hover Hold Alt</kbd>&nbsp;or&nbsp;<kbd>HOLD ALT</kbd>を解除する。</p>
+
+  <p>ホバーエンジンを切って降下する。<br>
+    テンキー<kbd>.</kbd>（ピリオド）を長押しする。</p>
+
+  <p>テンキー<kbd>0</kbd>&nbsp;or&nbsp;<kbd>.</kbd>で速度をコントロールする。<br>
+    <strong>Surface MFD</strong>で情報を確認する。
+  </p>
+
+  <p>
+    <img loading="lazy" src="../images/tutorial/part15/013.png" width="425" height="425">
+  </p>
+
+  <table>
+    <tr>
+      <td><strong>VS</strong></td>
+      <td>Vertical Speed</td>
+      <td>垂直（上下）方向の速度</td>
+    </tr>
+    <tr>
+      <td><strong>VACC</strong></td>
+      <td>Vertical Acceleration</td>
+      <td>垂直方向の加速度</td>
+    </tr>
+  </table>
+
+  <p><strong>VS</strong>が大きくなりすぎないようにする。<br>
+    <strong>RCS LIN</strong>で着陸パッドの真上を維持する。
+  </p>
+
+  <table>
+    <tr>
+      <td><kbd>0</kbd>を押す</td>
+      <td><strong>VACC</strong>がプラスに変化する</td>
+    </tr>
+    <tr>
+      <td><kbd>.</kbd>を押す</td>
+      <td><strong>VACC</strong>がマイナスに変化する</td>
+    </tr>
+    <tr>
+      <td colspan="2">&nbsp;</td>
+    </tr>
+    <tr>
+      <td><strong>VACC</strong>がプラス</td>
+      <td><strong>VS</strong>がプラスに変化する</td>
+    </tr>
+    <tr>
+      <td><strong>VACC</strong>がマイナス</td>
+      <td><strong>VS</strong>がマイナスに変化する</td>
+    </tr>
+    <tr>
+      <td><strong>VACC</strong>がゼロ</td>
+      <td>現在の<strong>VS</strong>を維持する</td>
+    </tr>
+  </table>
+
+
+  <h3 id="descent_auto">ホバーエンジンの自動制御 (2016)</h3>
+
+
+  <p><strong>Orbiter2016</strong>では、2Dパネルの下部にホバーエンジンのオートパイロットがある。</p>
+
+  <p>
+    <img loading="lazy" src="../images/tutorial/part15/014.png" width="200" height="200">
+  </p>
+
+  <ol>
+    <li><kbd>ALT</kbd>&nbsp;or&nbsp;<kbd>VS</kbd>をクリック。</li>
+    <li><kbd>SET</kbd>で任意の数字を入力する。</li>
+    <li><kbd>HOLD</kbd>をクリック。</li>
+  </ol>
+
+  <p>オートパイロットを終了する場合は、もう一度<kbd>HOLD</kbd>をクリック。</p>
+
+  <p><kbd>RST</kbd>をクリックすると、<kbd>0</kbd>に戻る。</p>
+
+  <p>ここで設定できる<strong>ALT</strong>は、<strong>標高0m</strong>を基準としている。<br>
+    実際の地表からの距離とは一致しないので注意すること。</p>
+
+
+  <h2 id="landing">着陸する</h2>
+
+
+  <p>着陸したら、ホバーエンジンを完全に切る。<br>
+    テンキー<kbd>.</kbd>を押し続ける。</p>
+
+  <p><kbd>Level Horizon</kbd>&nbsp;or&nbsp;<kbd>HRLVL</kbd>も解除する。</p>
+
+  <p>機体が完全に静止するまで、ホイールブレーキをかける。<br>
+    キーボード<kbd>,</kbd>と<kbd>.</kbd>（カンマとピリオド）を押し続ける。</p>
+
+
+  <h2 id="reference">関連項目</h2>
+
+
+  <h3 id="reference_btc">Burn time calculator</h3>
+
+
+  <p><a href="../mods/burn-time-calculator-install.html" target="_blank">Burn time calculator</a>を使うと、減速に必要な距離を計算することができる。</p>
+
+  <p><a href="../mods/burn-time-calculator.html" target="_blank">Burn time calculatorの操作</a></p>
+
+
+  <h3 id="reference_pursuit">PursuitMFD</h3>
+
+
+  <p><a href="../mods/../mods/pursuitmfd-install.html" target="_blank">PursuitMFD</a>を導入すれば、全自動で月面基地に着陸することができる。</p>
+
+  <p><a href="../mods/pursuitmfd-landing.html" target="_blank">PursuitMFD 月面基地への自動着陸</a></p>
+
+
+  <h2 id="form">アンケート</h2>
+
+
+  <form action="https://docs.google.com/forms/d/e/1FAIpQLSeoBbyp7DHgJ4g10N_BADojzh911DjF6JYY1Ue_BBeJxdjvPQ/formResponse" target="_self" method="POST" id="mG61Hd">
+
+    <p>この記事の内容は理解できましたか？</p>
+
+    <ul>
+      <li><label><input type="radio" name="entry.1914587356" value="できなかった、全然理解できない" />できなかった、全然理解できない</label></li>
+      <li><label><input type="radio" name="entry.1914587356" value="できなかった、途中から理解できない" />できなかった、途中から理解できない</label></li>
+      <li><label><input type="radio" name="entry.1914587356" value="できた、難しかった" />できた、難しかった</label></li>
+      <li><label><input type="radio" name="entry.1914587356" value="できた、簡単だった" />できた、簡単だった</label></li>
+    </ul>
+
+    <p><label for="question">わからなかった・難しかったところを教えてください（任意）</label><br>
+      <input id="question" type="text" name="entry.1857549962">
+    </p>
+
+    <p>公開されますので個人情報を記入しないでください。<br>
+      <button type="submit" name="button" value="送信">送信</button>
+    </p>
+
+  </form>
+
+
+  <h2 id="videos">動画</h2>
+
+
+  <p><a href="https://youtu.be/8U4Xc58T2xY" target="_blank">YouTube</a></p>
+
+  <p><a href="https://www.nicovideo.jp/watch/sm25622140" target="_blank">ニコニコ動画</a></p>
+
+</body>
+
+</html>

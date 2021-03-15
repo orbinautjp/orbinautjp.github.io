@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../styles/orbiterjp.css">
+  <script src="../scripts/template.js" charset="utf-8" defer></script>
+  <title>R-9 MODのダウンロード・インストール</title>
+</head>
+
+<body>
+
+  <h1>R-9 MODのダウンロード・インストール</h1>
+
+
+  <p><strong>R-9 v1.1</strong>は、Orbiter2010でR-9 ICBMを再現したMODです。<br>
+    Orbiter2016には対応していません。</p>
+    <p>こちらの文章もあわせてお読みください。<br>
+    <a href="../misc/r-9-icbm.html">R-9 ICBMの歴史（翻訳）</a></p>
+    
+    <h2>ダウンロード</h2>
+    
+    <p><a href="https://www.orbithangar.com/searchid.php?ID=6765">R-9 v1.1</a></p>
+    <p>以下のファイルもダウンロードしてください。</p>
+    <p><a href="https://www.orbithangar.com/searchid.php?ID=4885">Baikonur 2010: Surface Tiles v1.0</a></p>
+    <p><a href="https://www.orbithangar.com/searchid.php?ID=6764">Spaceports v1.1</a></p>
+    <p><a href="../basic/../basic/d3d9client.html">D3D9Client</a></p>
+    
+    <h2>インストール</h2>
+    
+    <p>ダウンロードしたファイルを解凍して、中身をOrbiterフォルダに上書きするだけ。</p>
+    
+    <p>Baikonur 2010: Surface Tiles v1.0については以下のページを参照してください。<br>
+    <a href="../iss/baikonur-2010-surface-tiles-v10.html">Baikonur 2010: Surface Tiles v1.0のインストール</a></p>
+    
+    <h3>シャットダウン方法の設定</h3>
+    
+    <p>このMODを使うと、ゲームが正常に終了しないことがあります。<br>
+    シャットダウンの設定を変えることである程度改善できます。</p>
+    <p><strong>Launchpad</strong>→<kbd>Extra</kbd>→<strong>Debugging options</strong>→<strong>Orbiter shutdown options</strong>を選択。<br>
+    下の<kbd>Edit</kbd>ボタンをクリックする。<br>
+    <img loading="lazy" src="../images/mods/r-9-install/001.png" width="299" height="309">
+    </p>
+    <p><strong>Respawn Orbiter process</strong>をチェックして<kbd>OK</kbd>をクリック。<br>
+        <img loading="lazy" src="../images/mods/r-9-install/002.png" width="342" height="185">
+    </p>
+    <p>この方法でも完全に終了できないことがあります。<br>
+    そういう場合は、タスクマネージャから<strong>orbiter.exe</strong>を強制終了させてください。</p>
+    
+    <h2>シナリオ</h2>
+    
+    <p>
+        <img loading="lazy" src="../images/mods/r-9-install/003.png" width="281" height="353">
+    </p>
+    
+    <h3>R-9 Demos</h3>
+    
+    <p>地上やサイロからの発射、ステージの分離など、R-9の特徴を紹介するシナリオ。</p>
+    
+    <h3>R-9 Historical Tests</h3>
+    
+    <p>史実のテストフライト（失敗に終わったものも含めて）を再現したシナリオ。</p>
+    
+    <h3>R-9 War Strikes</h3>
+    
+    <p>史実では実現しなかった、R-9を使った核攻撃を再現したシナリオ。<br>
+    KMLファイルをGoogle Earthで開くと、詳しい着弾地点がわかる。</p>
+    
+    <h2>操作方法</h2>
+    
+    <p>一部のシナリオを除いて、全自動で発射・分離・着弾します。</p>
+    
+    <h3>キー操作一覧</h3>
+    
+    <h4>ロケットなどの操作</h4>
+    
+    <table>
+     <tr>
+      <td><kbd>C</kbd></td>
+      <td>船内視点（<kbd>F1</kbd>キーで船外・船内を切り替え）でのカメラの切り替え</td>
+     </tr>
+     <tr>
+      <td><kbd>J</kbd></td>
+      <td>ステージやフェアリングの分離</td>
+     </tr>
+     <tr>
+      <td><kbd>Ctrl</kbd>+<kbd>J</kbd></td>
+      <td>ステージの自動選択を無効にして分離</td>
+     </tr>
+     <tr>
+      <td><kbd>Ctrl</kbd>+<kbd>F</kbd></td>
+      <td>フェアリングなどの部品を選択可能にする</td>
+     </tr>
+     <tr>
+      <td><kbd>Tab</kbd></td>
+      <td>ステージ・宇宙船などを順に選択</td>
+     </tr>
+     <tr>
+      <td><kbd>M</kbd></td>
+      <td>オートパイロットを解除して、手動操作にする</td>
+     </tr>
+     <tr>
+      <td><kbd>Ctrl</kbd>+<kbd>D</kbd></td>
+      <td>自爆させる</td>
+     </tr>
+    </table>
+    
+    <p>ここでいう「選択」とは、<kbd>F3</kbd>キーでの乗り換えのことを指します。<br>
+    このMODでは、1段目を切り離すと自動的に2段目が選択されます。<br>
+    <kbd>Ctrl</kbd>+<kbd>J</kbd>でこれを無効にできます。</p>
+    
+    <h4>Desna-N（地上発射用のテーブル）</h4>
+    
+    <table>
+     <tr>
+      <td>矢印キー<kbd>←</kbd><kbd>→</kbd></td>
+      <td>テーブルを左右に回転させる</td>
+     </tr>
+     <tr>
+      <td><kbd>Ctrl</kbd>+<kbd>K</kbd></td>
+      <td>ケーブル支柱の分離</td>
+     </tr>
+     <tr>
+      <td><kbd>L</kbd></td>
+      <td>設置されているロケットを打ち上げる</td>
+     </tr>
+    </table>
+    
+    <h4>Desna-V（地下サイロ）</h4>
+    
+    <table>
+     <tr>
+      <td>テンキー<kbd>4</kbd>・<kbd>6</kbd></td>
+      <td>サイロの蓋を左右に動かす（NumLockを解除すること）</td>
+     </tr>
+     <tr>
+      <td>矢印キー<kbd>←</kbd><kbd>→</kbd></td>
+      <td>テーブルを左右に回転させる</td>
+     </tr>
+     <tr>
+      <td><kbd>Ctrl</kbd>+<kbd>K</kbd></td>
+      <td>ケーブル支柱の分離</td>
+     </tr>
+     <tr>
+      <td><kbd>L</kbd></td>
+      <td>設置されているロケットを打ち上げる</td>
+     </tr>
+    </table>
+
+</body>
+</html>

@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../styles/orbiterjp.css">
+  <script src="../scripts/template.js" charset="utf-8" defer></script>
+  <title>Falcon9 + Dragon宇宙船のインストール (2016)</title>
+
+<script>
+window.MathJax = {
+  tex: {
+    tags: 'ams'
+  }
+};
+</script>
+
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+</head>
+<body>
+
+  <h1>Falcon9 + Dragon宇宙船のインストール (2016)</h1>
+
+
+<p>
+<strong>Orbiter2016</strong>に<strong>SpaceX Falcon9</strong>と<strong>Dragon</strong>宇宙船をインストールする手順について解説します。
+</p>
+
+<ul>
+<li><a href="#download">ダウンロード</a></li>
+<li><a href="#install">インストール</a></li>
+<li><a href="#mods">使用可能なMOD</a>
+<ul>
+<li><a href="#mods_canadarm">カナダアーム</a></li>
+<li><a href="#mods_lc39">LC39A発射台</a></li>
+</ul>
+</li>
+<li><a href="#control">操作方法</a></li>
+</ul>
+
+
+<h2 id="download">ダウンロード</h2>
+
+
+<p>
+<a href="https://www.orbithangar.com/showAddon.php?id=cb663521-39c2-4684-a87c-71b25cdd7c67" target="_blank">Falcon9 for Orbiter2016</a>
+</p>
+
+<p>
+<a href="https://www.orbithangar.com/showAddon.php?id=f90f5854-3971-4140-8893-ae9d88331f4a" target="_blank">Cargo Dragon for Orbiter2016</a>
+</p>
+
+
+<h2 id="install">インストール</h2>
+
+
+<p>
+ダウンロードしたファイルを解凍して、中身をOrbiterフォルダに上書き。
+</p>
+
+
+<h2 id="mods">使用可能なMOD</h2>
+
+
+<h3 id="mods_canadarm">カナダアーム</h3>
+
+
+<p>
+Cargo DragonでCRS（商業補給サービス）ミッションを行う場合は、カナダアームMODが必要です。
+</p>
+
+<p>
+<a href="index.html#canadarm" target="_blank">Canadarm2</a>
+</p>
+
+
+<h3 id="mods_lc39">LC39A発射台</h3>
+
+
+<p>
+必須ではありませんが、LC39A発射台のMODを導入できます。
+</p>
+
+<p>
+<a href="https://www.orbithangar.com/showAddon.php?id=7c96c4fc-0e23-42ee-9479-8a12c520d172" target="_blank">LC39A SpaceX</a>
+</p>
+
+<p>
+ダウンロードしたファイルを解凍して、中身をOrbiterフォルダに上書き。
+</p>
+
+<p>
+<strong>Orbiter2016\Config</strong>フォルダを開く。<br>
+<strong>Earth.cfg</strong>をメモ帳などのテキストエディタで開く。
+</p>
+
+<p>
+<strong>BEGIN_SURFBASE</strong>の下に、以下の行を追加する。
+</p>
+
+<p>
+<pre><code>DIR Earth\BaseSpaceX CONTEXT SpaceX</code></pre>
+</p>
+
+<p>
+<img loading="lazy" src="../images/iss/falcon9-dragon-2016/001.png" width="350" height="169">
+</p>
+
+<p>
+上書き保存してゲームを開始する。
+</p>
+
+
+<h2 id="control">操作方法</h2>
+
+
+<p>
+<a href="falcon9-control-2016.html" target="_blank">Falcon9 for Orbiter2016の操作</a>
+</p>
+
+<p>
+<a href="dragon-control.html" target="_blank">Dragon宇宙船の操作</a>
+</p>
+
+</body>
+</html>

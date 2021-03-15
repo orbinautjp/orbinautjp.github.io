@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../styles/orbiterjp.css">
+  <script src="../scripts/template.js" charset="utf-8" defer></script>
+  <script src="../scripts/prevnext_imfd.js" charset="utf-8" defer></script>
+  <title>IMFD Part4 Target Interceptによる軌道修正</title>
+</head>
+
+<body>
+
+  <h1>IMFD Part4 Target Interceptによる軌道修正</h1>
+
+
+<ul>
+<li><a href="#src">Src(Source)を変更する</a></li>
+<li><a href="#mcc">噴射のタイミングを待つ</a></li>
+<li><a href="#rendezvous">ランデブー軌道を作成する</a></li>
+</ul>
+
+
+<h2 id="src">Src(Source)を変更する</h2>
+
+
+<p>地球の重力圏を離れたら、<strong>Target Intercept</strong>に戻る。<br>
+<kbd>PG</kbd>をクリックして、<kbd>Src</kbd>ボタンを表示する。</p>
+
+<p>
+<img loading="lazy" src="../images/transximfd/imfd-tutorial-4/001.png" width="660" height="342">
+</p>
+
+<p><kbd>Src</kbd>をクリックして、<strong>x</strong>と入力して<kbd>Enter</kbd>を押す。</p>
+
+<p>
+<img loading="lazy" src="../images/transximfd/imfd-tutorial-4/002.png" width="255" height="93">
+</p>
+
+<p>この作業によって、作成する軌道の出発地点(Source)を自機にすることができる。</p>
+
+<p>
+<img loading="lazy" src="../images/transximfd/imfd-tutorial-4/003.png" width="162" height="91">
+</p>
+
+
+<h2 id="mcc">噴射のタイミングを待つ</h2>
+
+
+<p>タイムワープで時間を経過させて、噴射に必要なDelta Vが小さくなるか確認する。<br>
+マニューバに必要なDelta Vは、<strong>Enroute:</strong>の下に<strong>dV</strong>として表示されている。</p>
+
+<p>
+<img loading="lazy" src="../images/transximfd/imfd-tutorial-4/004.png" width="168" height="109">
+</p>
+
+<p>時間経過とともに小さくなる場合は、数字がそれ以上下がらなくなるのを待つ。<br>
+<kbd>AB</kbd>をクリックすると自動でマニューバが実行される。</p>
+
+<p>
+<img loading="lazy" src="../images/transximfd/imfd-tutorial-4/005.png" width="181" height="118">
+</p>
+
+<p>ここから先の軌道修正は、<kbd>AB</kbd>をクリックするだけで実行できる。<br>
+軌道のずれが大きくなると、dVの数字が大きくなるので、これを確認しつつ航行する。</p>
+
+
+<h2 id="rendezvous">ランデブー軌道を作成する</h2>
+
+
+<p><strong>Target Intercept</strong>を使って、宇宙ステーションや月とのランデブー軌道を作成することもできる。</p>
+
+<p>あらかじめ宇宙船を低軌道に打ち上げておいて、そこで<strong>Target Intercept</strong>を開く。<br>
+<kbd>Src</kbd>をクリックしてSourceを自機に設定しておく。</p>
+
+<p>基本的な操作は<a href="imfd-tutorial-1.html">Part1</a>の内容とほぼ同じ。<br>
+移動時間を指定して、軌道を作成したら、<kbd>AB</kbd>をクリックして実行する。</p>
+
+</body>
+</html>

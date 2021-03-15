@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../styles/orbiterjp.css">
+  <script src="../scripts/template.js" charset="utf-8" defer></script>
+  <title>LC39A+B for ShuttleFleet HDのダウンロード・インストール</title>
+</head>
+
+<body>
+
+  <h1>LC39A+B for ShuttleFleet HDのダウンロード・インストール</h1>
+
+
+<ul>
+<li><a href="#download">ダウンロード+インストール</a></li>
+<li><a href="#controls">キー操作一覧</a></li>
+<li><a href="#scenario">シナリオに追加する</a></li>
+<li><a href="#disable">使わないほうの発射台を設定する</a></li>
+<li><a href="#align">シャトルの位置と向きを合わせる</a></li>
+<li><a href="#history">LC39の年代を設定する</a></li>
+</ul>
+
+<p><strong>Shuttle Fleet</strong>+<strong>ISS v3.2</strong>で使える、LC39のディテールアップMODについて解説します。</p>
+<h2 id="download">ダウンロード+インストール</h2>
+<p>ダウンロードは以下のリンクから。<br>
+<a href="https://www.orbithangar.com/searchid.php?ID=7036" target="_blank">LC39A+B for ShuttleFleet HD</a></p>
+<h3>インストール</h3>
+<p>まず最初に、<strong>ISS v3.2</strong>というMODを導入してください。<br>
+<a href="issv32-install.html" target="_blank">International Space Station v3.2のダウンロード+インストール</a></p>
+<p><strong>-LC39A-B_HD_ShuttleFleet-26-12-16.zip</strong>を解凍して、中に入っているファイル・フォルダをOrbiterのフォルダに上書き。</p>
+<p>ISS v3.2のスペースシャトルが出てくるシナリオを開いて、LC39発射台の見た目が変更されていればインストールは成功です。</p>
+<h3>Ares I-X</h3>
+<p><strong>Ares I-X</strong>が登場するシナリオを使う場合は、以下のMODも導入してください。<br>
+インストールは、ファイルを解凍して中身をOrbiterフォルダに上書きするだけ。</p>
+<p><a href="https://www.orbithangar.com/searchid.php?ID=4290" target="_blank">Ares I-X Ultra 1.00</a></p>
+<p>ゲームを開始して、<kbd>Enter</kbd>キーを押すと打ち上がります。</p>
+<h2>使い方</h2>
+<p>アームの操作などはカウントダウンと連動して全自動で実行されます。<br>
+ほとんどの場合、プレイヤーが操作する必要はありません。</p>
+<h3 id="controls">キー操作一覧</h3>
+
+<table>
+  <tr>
+    <td><kbd>Ctrl</kbd> + <kbd>L</kbd>
+</td>
+    <td>ライトを点灯</td>
+  </tr>
+  <tr>
+    <td><kbd>V</kbd>
+</td>
+    <td>ガスを放出する／放出を止める</td>
+  </tr>
+  <tr>
+    <td><kbd>S</kbd>
+</td>
+    <td>RSS（回転式整備構造物）を回転させる</td>
+  </tr>
+  <tr>
+    <td><kbd>K</kbd>
+</td>
+    <td>クルーアクセスアームの展開／収納</td>
+  </tr>
+  <tr>
+    <td><kbd>G</kbd>
+</td>
+    <td>GOX（気化酸素排出）アームの展開／収納</td>
+  </tr>
+</table>
+
+<p>ウォーターカーテン（白い煙）はタイマーと連動しており、手動操作はできません。</p>
+<h2 id="scenario">シナリオに追加する</h2>
+<p>このLC39発射台MODを、任意のシナリオに追加する方法を解説します。<br>
+今回は例題として、<strong>Scenarios\Shuttle Fleet V4.8\Atlantis Scenarios</strong>にある<strong>Atlantis Launch.scn</strong>を使います。</p>
+
+<p>
+<img loading="lazy" src="../images/iss/lc39ab-for-shuttlefleet/001.png" width="336" height="220">
+</p>
+<h3>LC39を追加する</h3>
+<p><strong>Atlantis Launch.scn</strong>を開いて、以下の行を追加する。</p>
+<pre><code>LC39A:ISSR\LC39A
+  STATUS Landed Earth
+  POS -80.6041380 28.6082950
+  RSS 0 1.0000 -1
+  WR 0 0.0000 1
+  VA 0 0.0000 1
+  TC 0 0.0000 1
+  PS_LVL 1.0000 0.0000 0.0000
+  LIGHT 0
+END
+LC39B:ISSR\LC39B
+  STATUS Landed Earth
+  POS -80.6208780 28.6271250
+  RSS 0 1.0000 -1
+  WR 0 0.0000 1
+  VA 0 0.0000 1
+  TC 0 0.0000 1
+  PS_LVL 0.0000 0.0000 0.0000
+  LIGHT 0
+END</code></pre>
+<h3 id="disable">使わないほうの発射台を設定する</h3>
+<p>MLP※を消したり、アームを格納したりして、不使用状態の発射台を再現できます。</p>
+<p class="note">※Mobile Launcher Platform（移動式発射プラットフォーム）</p>
+<p>発射台を指定する行の最後に<strong>-NLP</strong>を追加すると、MLPが消える。</p>
+<pre><code>LC39B:ISSR\LC39B-NLP</code></pre>
+<p>各種アームを格納状態にする。関連する行をいくつか書き換える。</p>
+<pre><code>  WR 1 1.0000 -1
+  VA 0 1.0000 1
+  TC 0 1.0000 -1
+</code></pre>
+<p>以下の行を追加して、カウントダウンを止める。※</p>
+<pre><code>  TIMER 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 -5.7863</code></pre>
+<p class="note">※これをやっておかないと、空の発射台から盛大に白煙が上がります</p>
+<p>LC39Aだけを使用する場合は、以下の画像のようになります。</p>
+
+  <p>
+    <img loading="lazy" src="../images/iss/lc39ab-for-shuttlefleet/002.png" width="541" height="398">
+</p>
+<h3 id="align">シャトルの位置と向きを合わせる</h3>
+<p>そのままだとシャトルの位置と向きが微妙にずれてしまうので、これを修正します。<br>
+LC39と同じように、スペースシャトルの項目に以下の行を追加・変更してください。</p>
+<p><strong>LC39A</strong>の場合</p>
+<pre><code>  POS -80.6041340 28.6083120</code></pre>
+<p><strong>LC39B</strong>の場合</p>
+<pre><code>  POS -80.6207780 28.6271900</code></pre>
+<p>向き（Heading）はどちらも同じ。以下のように変更する。</p>
+<pre><code>  HEADING 0.00</code></pre>
+<p>
+  <img loading="lazy" src="../images/iss/lc39ab-for-shuttlefleet/003.png" width="305" height="149"></p>
+<h3 id="history">LC39の年代を設定する</h3>
+<p>このMODでは、年代によるLC39の違いを再現しています。<br>
+操作方法や機能は変わりません。</p>
+<p>LC39A・LC39Bを以下のように書き換える。</p>
+<p><strong>1981-1986</strong></p>
+<pre><code>LC39A:ISSR\LC39A-1981
+LC39B:ISSR\LC39B-1981
+</code></pre>
+<p><strong>1988-1995</strong></p>
+<pre><code>LC39A:ISSR\LC39A-1988
+LC39B:ISSR\LC39B-1988
+</code></pre>
+<p><strong>1995-2006</strong>（デフォルト。変更の必要なし）</p>
+<pre><code>LC39A:ISSR\LC39A
+LC39B:ISSR\LC39B
+</code></pre>
+<p><strong>2006-2012</strong></p>
+<pre><code>LC39A:ISSR\LC39A-2006
+LC39B:ISSR\LC39B-2006
+</code></pre>
+<p>
+  <img loading="lazy" src="../images/iss/lc39ab-for-shuttlefleet/004.png" width="247" height="186"></p>
+
+</body>
+</html>

@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../styles/orbiterjp.css">
+  <script src="../scripts/template.js" charset="utf-8" defer></script>
+  <title>UCGO操作ガイド（貨物コンテナ）</title>
+</head>
+
+<body>
+
+  <h1>UCGO操作ガイド（貨物コンテナ）</h1>
+
+
+  <p>UCGOには様々な種類の貨物コンテナ(<strong>cargo</strong>)が存在し、これらを基地・宇宙船の補給や建設などに使うことができます。</p>
+  <p>大気のある惑星で空中投下すると、パラシュートで降下する機能がついています。</p>
+
+  <p>
+    <img loading="lazy" src="../images/ucgo/ucgo-cargo/UCGO_Cargo001.png" width="320" height="182">
+  </p>
+
+  <h2>UMMUでの操作</h2>
+
+  <table>
+   <tr>
+  <td><kbd>G</kbd> 
+  </td>
+  <td>コンテナを持つ
+  </td>
+   </tr>
+   <tr>
+  <td><kbd>U</kbd>
+  </td>
+  <td>コンテナを開梱する
+  </td>
+   </tr>
+   <tr>
+  <td><kbd>Enter</kbd>
+  </td>
+  <td>スイッチを押す
+  </td>
+   </tr>
+  </table>
+  
+  <h2>補給物資</h2>
+
+  <p><strong class="caution">重要</strong>：UCGOに対応している宇宙船しか補給できません。</p>
+  <h3>燃料(fuel)</h3>
+  <p>以下の2種類があります。<br>
+  どちらも宇宙船などの補給に使うことができます。</p>
+  <p><strong>CargoBarrelFuel</strong></p>
+
+  <p>
+    <img loading="lazy" src="../images/ucgo/ucgo-cargo/UCGO_Cargo002.png" width="294" height="224">
+  </p>
+  <p><strong>CargoSpaceFuel</strong></p>
+
+  <p>
+    <img loading="lazy" src="../images/ucgo/ucgo-cargo/UCGO_Cargo003.png" width="338" height="240">
+  </p>
+  <h3>酸素タンク</h3>
+  <p><strong>CargoOxygen</strong></p>
+
+  <p>
+    <img loading="lazy" src="../images/ucgo/ucgo-cargo/UCGO_Cargo004.png" width="305" height="249">
+  </p>
+  <h3>水・食料</h3>
+  <p><strong>CargoSpaceFood</strong></p>
+
+  <p>
+    <img loading="lazy" src="../images/ucgo/ucgo-cargo/UCGO_Cargo005.png" width="319" height="251">
+  </p>
+  <p><strong>CargoWater</strong></p>
+
+  <p>
+    <img loading="lazy" src="../images/ucgo/ucgo-cargo/UCGO_Cargo006.png" width="322" height="252">
+  </p>
+  <p>ほとんどの場合、UMMUは食料も水も必要ありませんが、一部のMODではこれらを補給しないとUMMUが死ぬことがあります。</p>
+
+  <h2>基地建設資材</h2>
+
+  <p><strong>InflatBase</strong>で始まるコンテナを開梱すると、基地を建設することができます。<br>
+  いくつか種類がありますが、コンテナ表面のイラストを見れば中身がわかるようになっています。</p>
+
+  <p>
+    <img loading="lazy" src="../images/ucgo/ucgo-cargo/UCGO_Cargo007.png" width="251" height="201">
+  </p>
+  <p>基地の中には酸素が充填されており、宇宙服を脱ぐことができます。<br>
+  また、UMMUの酸素残量も回復されます。</p>
+  <p>ユニット同士を結合する機能はないので、近くに置いて、それらしく見えるように並べることになります。</p>
+
+  <p>
+    <img loading="lazy" src="../images/ucgo/ucgo-cargo/UCGO_Cargo009.png" width="573" height="276">
+  </p>
+  <p><strong>Light</strong>（照明）、<strong>Solar</strong>（太陽電池）、<strong>Tank</strong>などのユニットは飾りです。<br>
+  また、<strong>InflatBase</strong>には光源が設定されていないので、夜は真っ暗になります。<br>
+  どうしても夜使いたい場合は、自動車などの照明で外から照らしてください。</p>
+  <h2>ISRU（宇宙救命ボート）</h2>
+  <p>ISRUを開梱すると、自動で膨張して救命ボートになります。※</p>
+
+  <p>
+    <img loading="lazy" src="../images/ucgo/ucgo-cargo/UCGO_Cargo010.png" width="317" height="199">
+  </p>
+  <p class="note">※使用前に手から離してください。</p>
+  
+  <table>
+   <tr>
+  <td><kbd>E</kbd>
+  </td>
+  <td>中に入る・出る
+  </td>
+   </tr>
+   <tr>
+  <td><kbd>5</kbd>
+  </td>
+  <td>冷凍睡眠モードを起動
+  </td>
+   </tr>
+  </table>
+  
+  <p>冷凍睡眠モードでは、1人なら1年半、3人なら半年生存できます。</p>
+  <p>冷凍睡眠に入ったISRUは、宇宙船で直接ドッキングするか、ほかのUMMUがISRU後部のスイッチを押す(<kbd>Enter</kbd>)ことで通常モードに戻すことができます。</p>
+
+  <p>
+    <img loading="lazy" src="../images/ucgo/ucgo-cargo/UCGO_Cargo011.png" width="480" height="270">
+  </p>
+
+  <h2>その他</h2>
+
+  <p>上記のコンテナに加えて、<strong>Flag</strong>（国旗）、<strong>Rover</strong>（無人探査車）、<strong>Probe</strong>（探査機）などのコンテナを利用できます。<br>
+  Probeは放出されると自動で軌道を離脱して惑星に着陸します。</p>
+
+  <p>
+    <img loading="lazy" src="../images/ucgo/ucgo-cargo/UCGO_Cargo012.png" width="441" height="264">
+  </p>
+  <p>日本の国旗を利用する場合は、以下のMODを導入してください。<br>
+  <a href="http://www.orbithangar.com/searchid.php?ID=6859" target="_blank">UCGO Cargo Flags Pack1</a></p>
+
+</body>
+</html>

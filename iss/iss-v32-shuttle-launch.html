@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../styles/orbiterjp.css">
+  <script src="../scripts/template.js" charset="utf-8" defer></script>
+  <title>ISS v3.2 スペースシャトルの打ち上げ</title>
+</head>
+
+<body>
+
+  <h1>ISS v3.2 スペースシャトルの打ち上げ</h1>
+
+
+<p>ISS v3.2のスペースシャトルミッションでは、9分後に自動で打ち上げが開始されます。</p>
+<p>このタイマーを解除する方法はないのですが、打ち上げのタイミングと方位が微妙にずれています。<br>
+効率のよい打ち上げのためには、シナリオに少し手を加える必要があります。</p>
+<p>今回は、<strong>STS-88</strong>（ユニティモジュールの打ち上げ）を例に、具体的な手順を解説します。</p>
+
+<p>
+  <img loading="lazy" src="../images/iss/iss-v32-shuttle-launch/SFlaunch006.png" width="281" height="97">
+</p>
+
+
+<h2>方位の変更</h2>
+
+
+<p>まず、以下のフォルダを開いてください。</p>
+
+<blockquote>Orbiter\Scenarios\International Space Station\1998\002. STS-88 (Unity)\for Shuttle Fleet</blockquote>
+
+<p><strong>001. STS-88 Launch (Endeavour).scn</strong><br>
+このファイルをメモ帳などのテキストエディタで開く。</p>
+<pre><code>TGT_HEADING 42.407 310</code></pre>
+<p>という行があるはずなので、</p>
+<pre><code>TGT_HEADING 40.8 310</code></pre>
+<p>に書き換える。（右側の数字はそのまま）</p>
+<p>そのまま上書きするか、適当な名前をつけて保存してください。<br>
+STS-88以外のシナリオでも、同じ数字で問題ありません。</p>
+
+
+<h2>打ち上げ時間の調整</h2>
+
+
+<p>ゲームを起動する前に、シナリオエディタの使い方を確認してください。<br>
+<a href="../misc/sceditor1-date.html">シナリオエディタ 基本操作と日時の変更</a></p>
+<p>さきほど保存したシナリオでゲーム開始。</p>
+<p><strong>Align Planes MFD</strong>を起動する。</p>
+<p><strong>ISS</strong>をターゲットする。<br>
+<kbd>TGT</kbd>をクリックして、<kbd>Enter</kbd>キーを押して<strong>ISS</strong>と入力。<kbd>Enter</kbd>を押す。</p>
+<p><kbd>Ctrl</kbd>キーを押しながら<kbd>F4</kbd>キーを押して、シナリオエディタ（<strong>Scenario Editor</strong>）を選択。<kbd>OK</kbd>をクリック。</p>
+<p>シナリオエディタ右下の<kbd>Date</kbd>をクリックして、日時の変更画面にしておく。</p>
+<p>画面左下に表示されている残り時間を確認して、<strong>T-01:00</strong>になるまで待つ。</p>
+<p><strong>T-01:00</strong>になったら、<kbd>R</kbd>キーを押して0.1倍速にする。</p>
+<p><strong class="caution">重要</strong>：シナリオエディタの<kbd>Refresh</kbd>ボタンをクリック。</p>
+
+  <p>
+    <img loading="lazy" src="../images/iss/iss-v32-shuttle-launch/SFlaunch007.png" width="263" height="184"></p>
+<p><strong>m</strong>（分）の<kbd>△</kbd>ボタンを何度かクリックする。</p>
+
+  <p>
+    <img loading="lazy" src="../images/iss/iss-v32-shuttle-launch/ISSfix005.png" width="429" height="107"></p>
+<p>Align MFDの<strong>Tn</strong>（ノードまでの時間）が<strong>240</strong>～<strong>300</strong>秒の範囲になるまで時間を進める。</p>
+
+  <p>
+    <img loading="lazy" src="../images/iss/iss-v32-shuttle-launch/SFlaunch008.png" width="458" height="219"></p>
+<p><kbd>T</kbd>キーを押して、時間の進み方をもとに戻す。</p>
+<p>自動で打ち上げが開始されるので待つ。</p>
+
+
+<h2>解説</h2>
+
+
+<p>計算上はおよそ<strong>42°</strong>の打ち上げ方位で問題ないのですが、<br>
+<a href="../basic/launch-azimuth.html">打ち上げ方位（Launch Azimuth）を求める方法</a></p>
+<p>スペースシャトルは打ち上げ途中でロールを挟むので、どうしても最終的にずれが生じてしまいます。<br>
+これを修正するために、打ち上げ方位を<strong>40.8°</strong>に設定しておきます。</p>
+<p>また、一部のシナリオで自動打ち上げのタイミングが早すぎるため※、シナリオエディタの時間移動機能を使って打ち上げを遅らせる必要があります。</p>
+<p class="note">※おそらく史実通りの時間なのだろうと思いますが、Orbiterではうまくいかないようです…</p>
+<p>何も対策をしない状態で打ち上げると、一部のシナリオでは、RInc（ターゲットとの軌道傾斜角のずれ）が3.0を超えることもあります。<br>
+Delta Gliderなら簡単に修正できる程度の誤差ではありますが、非力なスペースシャトルにとっては無視できない数字です。<br>
+打ち上げの段階で微調整しておくことで、ランデブーの難易度を大幅に下げることができます。</p>
+
+</body>
+</html>

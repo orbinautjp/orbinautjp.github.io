@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../styles/orbiterjp.css">
+  <script src="../scripts/template.js" charset="utf-8" defer></script>
+  <title>Shuttle Fleet AutoFCSによる再突入</title>
+</head>
+
+<body>
+
+  <h1>Shuttle Fleet AutoFCSによる再突入</h1>
+
+
+<p>Shuttle Fleetでは、AutoFCSを使用して再突入から着陸までを自動で実行できます。</p>
+
+
+<h2>選択可能な基地</h2>
+
+<table>
+    <tr>
+        <td><strong>EDW</strong></td>
+        <td>エドワーズ空軍基地</td>
+    </tr>
+    <tr>
+        <td><strong>KSC</strong></td>
+        <td>ケネディ宇宙センター（ケープ・カナヴェラル）</td>
+    </tr>
+    <tr>
+        <td><strong>VBG</strong></td>
+        <td>ヴァンデンバーグ空軍基地</td>
+    </tr>
+    <tr>
+        <td><strong>ZZA</strong></td>
+        <td>サラゴサ空軍基地</td>
+    </tr>
+</table>
+
+<p>以上の4つから着陸地点を選ぶことができます。</p>
+
+
+<h2>準備</h2>
+
+
+<p>以下の記事を参考に、Shuttle Fleetと必要なMODをインストールしてください。<br>
+<a href="shuttlefleet-v48autofcs-install.html" target="_blank">Shuttle Fleet v4.8とAutoFCSのインストール</a></p>
+<p>AutoFCSの機能に影響はありませんが、Map MFDにおけるサラゴサ基地（ZZA）の位置が誤って表示されるバグがあります。</p>
+<p><strong>Orbiter\Config\Earth\Base</strong>フォルダにある<strong>ZZA.cfg</strong>を削除すれば正しく表示されます。</p>
+
+
+<h2>再突入の手順</h2>
+
+
+<p>基本的な考え方はチュートリアルの内容とほぼ同じです。<br>
+<a href="../tutorial/part7.html" target="_blank">チュートリアルPart7 軌道離脱と再突入の準備</a></p>
+<p><strong>Map MFD</strong>を起動する。</p>
+<p><kbd>TGT</kbd>をクリック。<br>
+矢印キーで<strong>Spaceports</strong>（宇宙港）の一覧の中から、上記4つのどれかを選んで<kbd>Enter</kbd>を押す。</p>
+
+<p>
+<img loading="lazy" src="../images/iss/shuttle-fleet-autofcs/SFreentry002.png" width="259" height="213"></p>
+<p><kbd>DSP</kbd>をクリックしてから、<kbd>MOD</kbd>をクリック。<br>
+<strong>Groundtrack</strong>を選んで<kbd>OK</kbd>をクリック。</p>
+
+<p>
+<img loading="lazy" src="../images/iss/shuttle-fleet-autofcs/SFreentry001.png" width="501" height="289"></p>
+<p>あと1周で最接近するタイミングを待つ。※<br>
+    <img loading="lazy" src="../images/iss/shuttle-fleet-autofcs/SFreentry005.png" width="357" height="206"></p>
+<p class="note">※ある程度ずれていても、AutoFCSがコースを修正してくれるので問題ありません。</p>
+<p><strong>Map MFD</strong>右下の<strong>Dst</strong>（目標地点までの距離）が一番遠くなる（数字が減りはじめる）のを待つ。※<br>
+    <img loading="lazy" src="../images/iss/shuttle-fleet-autofcs/SFreentry004.png" width="561" height="113"></p>
+<p class="note">※ほとんどの場合、インド洋の上空になるはずです。</p>
+<p><kbd>Retrograde</kbd>オートパイロットを使ってうしろを向く。</p>
+<p>エンジンを噴射して、<strong>Pe</strong>を<strong>60km</strong>程度まで下げる。<br>
+    <img loading="lazy" src="../images/iss/shuttle-fleet-autofcs/SFreentry006.png" width="207" height="67"></p>
+<p><kbd>Ctrl</kbd>+<kbd>F4</kbd>を押して<strong>AutoFCS</strong>を開く。<br>
+<strong>Map MFD</strong>で指定したのと同じ基地を選択する。</p>
+<p>着陸前に<kbd>Ctrl</kbd>+<kbd>G</kbd>を押して、ランディングギアを待機状態にしておく。</p>
+<p>手動で着陸したい場合は、最後のターンの手前で<kbd>U</kbd>を押してAutoFCSを解除してください。</p>
+
+</body>
+</html>

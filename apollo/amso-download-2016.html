@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../styles/orbiterjp.css">
+  <script src="../scripts/template.js" charset="utf-8" defer></script>
+  <title>AMSOのダウンロード+インストール (2016)</title>
+
+<script>
+window.MathJax = {
+  tex: {
+    tags: 'ams'
+  }
+};
+</script>
+
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+</head>
+<body>
+
+  <h1>AMSOのダウンロード+インストール (2016)</h1>
+
+
+<p>
+<strong>Orbiter2016</strong>にAMSOをインストールする手順について解説します。
+</p>
+
+
+<ul>
+<li><a href="#download">ダウンロード</a>
+<ul>
+<li><a href="#download_hires">高解像度テクスチャのダウンロード</a></li>
+</ul>
+</li>
+<li><a href="#install">インストール</a></li>
+<li><a href="#config">初期設定</a>
+<ul>
+<li><a href="#config_parameters">Parameters</a></li>
+<li><a href="#config_visualeffects">Visual effects</a></li>
+</ul>
+</li>
+<li><a href="#mods">必要なMODの一覧</a>
+<ul>
+<li><a href="#mods_d3d9">D3D9Clientの設定</a></li>
+</ul>
+</li>
+<li><a href="#imfd">IMFDの設定</a></li>
+<li><a href="#visualmod">グラフィックMOD</a></li>
+<li><a href="#caution">注意点</a>
+<ul>
+<li><a href="#caution_damage">Damage and failure simulation</a></li>
+<li><a href="#caution_camshake">CamShake</a></li>
+<li><a href="#caution_soundpack">音声の自動再生</a></li>
+</ul>
+</li>
+<li><a href="#document">資料</a></li>
+</ul>
+
+
+<h2 id="download">ダウンロード</h2>
+
+
+<p>
+<a href="https://www.acsoft.ch/AMSO/2016/2016.html" target="_blank">AMSO for Orbiter 2016</a>
+</p>
+
+<p>
+<img loading="lazy" src="../images/apollo/amso-download-2016/001.png" width="744" height="336">
+</p>
+
+<h3 id="download_hires">高解像度テクスチャのダウンロード</h3>
+
+
+<p>
+<strong>AMSO for Orbiter 2016</strong>では月面の高解像度テクスチャが<strong>必須</strong>です。<br>
+高解像度テクスチャの導入は以下のページを参照してください。
+</p>
+
+<p>
+<a href="../basic/orbiter2016.html#hirestextures" target="_blank">Orbiter2016のダウンロード+インストール</a>
+</p>
+
+
+<h2 id="install">インストール</h2>
+
+
+<p>
+ダウンロードしたファイルを解凍して、中身をOrbiterのインストールフォルダに上書き。
+</p>
+
+<ul>
+<li><a href="../basic/orbitermod.html" target="_blank">OrbiterにMODを導入する</a></li>
+<li><a href="../misc/jsgme.html" target="_blank">JSGMEを使ったMODのインストール</a></li>
+</ul>
+
+<p>
+旧バージョンからアップデートする場合は、あらかじめ関連するファイルをすべて削除してください。
+</p>
+
+
+<h2 id="config">初期設定</h2>
+
+
+<h3 id="config_parameters">Parameters</h3>
+
+
+<p><strong>Launchpad</strong>の<kbd>Parameters</kbd>タブを開いて、以下の設定を確認・変更してください。※</p>
+
+<p class="note">※オートパイロットの挙動に影響します。</p>
+
+<p>以下の設定は必ず有効にしてください。（チェックを入れる）</p>
+
+<ul>
+<li><strong>Complex flight model</strong></li>
+<li><strong>Limited fuel</strong></li>
+</ul>
+
+<p>以下の設定は無効にしてください。（チェックを外す）</p>
+
+<ul>
+<li><strong>Gravity-gradient torque</strong></li>
+<li><strong>Damage and failure simulation</strong>※</li>
+</ul>
+
+<p class="note">※必ずしも無効にする必要はありません。詳しい解説は<a href="#caution">下記</a>を参照</p>
+
+<p>設定項目の意味については、以下のページを参照してください。<br>
+<a href="../basic/realismperturbations.html" target="_blank">Realism（リアリズム）とPerturbations（摂動）の設定</a></p>
+
+<p>
+<img loading="lazy" src="../images/apollo/amso-download-2016/002.png" width="322" height="201">
+</p>
+
+
+<h3 id="config_visualeffects">Visual effects</h3>
+
+
+<p><strong>Launchpad</strong>の<kbd>Visual effects</kbd>タブを開いて、以下の設定を確認・変更してください。</p>
+
+<ol>
+<li><strong>Surface elevation</strong>のドロップダウンリストから<strong>linear interpolation</strong>を選択する。</li>
+<li><strong>Max. resolution level</strong>を<strong>19</strong>にする。</li>
+<li><strong>Particle streams</strong>にチェックを入れる。</li>
+<li><strong>Ambient light level</strong>を15から30までの値に設定する。※</li>
+</ol>
+
+<p class="note">※暗く感じる場合は値を大きくしてください。</p>
+
+<p>
+<img loading="lazy" src="../images/apollo/amso-download-2016/003.png" width="504" height="260">
+</p>
+
+
+<h2 id="mods">必要なMODの一覧</h2>
+
+
+<p>
+以下のMODはすべて<strong>_ADDONS</strong>フォルダに同梱されています。<br>
+<strong>D3D9Client</strong>は<strong>必須</strong>、<strong>LTMFD</strong>と<strong>IMFD</strong>は月往復ミッションの再現で必要になります。
+</p>
+
+<p>
+インストール手順については以下のページを参照してください。
+</p>
+
+
+<ul>
+<li><a href="../basic/../basic/d3d9client.html" target="_blank">D3D9Clientを導入する</a>※</li>
+<li><a href="../transximfd/imfd-download.html" target="_blank">IMFDのインストールと設定</a></li>
+<li><a href="../mods/lunartransfermfd.html" target="_blank">LunarTransferMFDのダウンロード+インストール</a></li>
+</ul>
+
+
+<p>
+※<strong>D3D9Client R3.13</strong>以降のバージョンが必要
+</p>
+
+
+<h3 id="mods_d3d9">D3D9Clientの設定</h3>
+
+
+<p>
+<strong>Launchpad</strong>で<kbd>Video</kbd>タブを開く。<br>
+<kbd>Advanced</kbd>をクリックして<strong>Advanced Setup</strong>ダイアログを開く。
+</p>
+
+<p>
+<strong>Experimental Lunar Terrain Interpolation</strong>にチェックを入れる。<br>
+（ダイアログボックスの左下）
+</p>
+
+<p>
+<strong>Reflection Mode</strong>のドロップダウンリストから<strong>Full Scene</strong>を選択。<br>
+（ダイアログボックスの右上）
+</p>
+
+<p>
+<img loading="lazy" src="../images/apollo/amso-download-2016/004.png" width="820" height="628">
+</p>
+
+
+<h3 id="imfd">IMFDの設定</h3>
+
+
+<p>時刻表示の設定は、かならず<strong>GET</strong>にしてください。<br>
+参照：<a href="../transximfd/imfd-download.html" target="_blank">IMFDのインストールと設定</a></p>
+
+
+<h4>LambertAP Mode</h4>
+
+
+<p>IMFDのオートパイロットの設定を変更すると、マニューバ実行中の姿勢制御を実際のアポロ宇宙船に近づけることができます。※</p>
+<p class="note">※この設定をしなくても、ミッションの遂行にはほとんど影響しません</p>
+<p><strong>Program Menu</strong>から<strong>Configuration</strong>を選択（<kbd>MNU</kbd>→<kbd>MOD</kbd>の順番でクリック）。<br>
+<kbd>Nxt</kbd>を何度かクリックして<strong>LambertAP Mode</strong>を選択。<br>
+<kbd>+</kbd>をクリックして<strong>ApolloP30</strong>に切り替える。</p>
+
+<p>
+<img loading="lazy" src="../images/apollo/amso-download-2016/AMSO014.png" width="435" height="216">
+</p>
+
+
+<h2 id="visualmod">グラフィックMOD</h2>
+
+
+<p>サターンロケットの見た目が良くなるMODです。</p>
+<p><a href="http://www.orbithangar.com/searchid.php?ID=6825" target="_blank">Saturn rocket repaint</a></p>
+<p>インストールは、ファイルを解凍して中身をOrbiterのフォルダに上書きするだけ。</p>
+
+
+<h2 id="caution">注意点</h2>
+
+
+<h3 id="caution_damage">Damage and failure simulation</h3>
+
+
+<p>この設定が有効になっていると、低い確率でランダムに故障が発生します。<br>
+実際のミッションに忠実にプレイしたい場合は、無効にしておくことをおすすめします。<br>
+ただし、13号のミッションを史実通り進めたい場合は有効にしてください。</p>
+<p>故障の種類によってはミッションを続行可能なこともあります。<br>
+<kbd>J</kbd>か<kbd>K</kbd>を押すことによってアラームを停止できます。</p>
+
+
+<h3 id="caution_camshake">CamShake</h3>
+
+
+<p><a href="../mods/camshake-mod.html" target="_blank">CamShake</a>（ゲーム内でカメラを振動させるMOD）を導入している場合は外してください。</p>
+
+
+<h3 id="caution_soundpack">音声の自動再生</h3>
+
+
+<p>11号ミッションでは、音声の自動再生のタイミングでタイムワープが解除されます。<br>
+手動で操作したい場合には、<kbd>Ctrl</kbd> + <kbd>K</kbd>の同時押しで自動再生を停止できます。※</p>
+
+<p class="note">※PDIなどの一部の音声は無効にできません。</p>
+
+
+<h2 id="document">資料</h2>
+
+
+<p>NASAの公式サイトにて<i>Apollo by the Numbers</i>のウェブ版が無料公開されています。<br>
+これを読めば、各ミッションにおけるエンジンの噴射時間などのスケジュールを確認できます。</p>
+<p><a href="https://history.nasa.gov/SP-4029/SP-4029.htm" target="_blank">SP-4029 Apollo by the Numbers: A Statistical Reference</a></p>
+<p>PDF版には画像も収録されています。<br>
+<a href="https://history.nasa.gov/SP-4029.pdf" target="_blank">Apollo by the Numbers ? SP-4029.pdf</a></p>
+
+
+</body>
+</html>

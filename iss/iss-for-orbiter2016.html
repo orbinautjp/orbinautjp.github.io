@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../styles/orbiterjp.css">
+  <script src="../scripts/template.js" charset="utf-8" defer></script>
+  <title>ISS for Orbiter 2016のダウンロード+インストール</title>
+
+<script>
+window.MathJax = {
+  tex: {
+    tags: 'ams'
+  }
+};
+</script>
+
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+</head>
+<body>
+
+  <h1>ISS for Orbiter 2016のダウンロード+インストール</h1>
+
+
+<p>
+<strong>ISS for Orbiter 2016</strong>は、これまでに公開されたISS及び関連するモジュールを統合したMODです。
+</p>
+
+
+<ul>
+<li><a href="#caution">警告</a></li>
+<li><a href="#download">ダウンロード</a></li>
+<li><a href="#install">インストール</a></li>
+<li><a href="#requirement">必要なファイル</a>
+<ul>
+<li><a href="#requirement_sc3">Spacecraft3.dll</a></li>
+<li><a href="#requirement_gv">GenericVessel</a></li>
+</ul>
+</li>
+<li><a href="#uninstall">アンインストール</a></li>
+<li><a href="#control">操作方法</a>
+<ul>
+<li><a href="#control_docking">ドッキング</a></li>
+</ul>
+</li>
+<li><a href="#error">強制終了するとき</a></li>
+</ul>
+
+
+<h2 id="caution">警告</h2>
+
+
+<p>3Dグラフィック性能の低いPCの場合、正常に動作しなかったり、動作が非常に重くなる可能性があります。</p>
+
+
+<h2 id="download">ダウンロード</h2>
+
+
+<p>
+<a href="https://www.orbithangar.com/showAddon.php?id=9b4f963b-3f1b-4080-b6bf-a73bcf29bbc9" target="_blank">Donamy and Thorton's ISS for Orbiter 2016</a>
+</p>
+
+
+<h2 id="install">インストール</h2>
+
+
+<p>
+ダウンロードした実行ファイル(<strong>ISS for Orbiter 2016.exe</strong>)をダブルクリック。
+</p>
+
+<p>
+Windows10の場合、いくつか警告が表示されることがあるが、無視して続行する（許可する）。
+</p>
+
+<p>
+インストーラの画面が表示されたら、<kbd>Next</kbd>をクリックして続行する。
+</p>
+
+<p>
+<img loading="lazy" src="../images/iss/iss-for-orbiter2016/001.png" width="499" height="388">
+</p>
+
+<p>
+<kbd>Browse</kbd>をクリックして、Orbiterがインストールされているフォルダを指定する。
+</p>
+
+<p>
+<kbd>Install</kbd>をクリックすると自動的にインストールされる。
+</p>
+
+<p>
+<img loading="lazy" src="../images/iss/iss-for-orbiter2016/002.png" width="499" height="388">
+</p>
+
+
+<h2 id="requirement">必要なファイル</h2>
+
+
+<p>以下のMODを導入していない環境では動作しない。</p>
+
+
+<h3 id="requirement_sc3">Spacecraft3.dll</h3>
+
+
+<p>
+<a href="../mods/spacecraft3download.html" target="_blank">Spacecraft.dll+Multistage.dll+Stage.dllのダウンロード</a>
+</p>
+
+
+<h3 id="requirement_gv">GenericVessel</h3>
+
+
+<p>
+<a href="https://www.orbiter-forum.com/showthread.php?t=33130" target="_blank">GenericVessel 140205, the SC3 open-source replacement</a>
+</p>
+
+<p>
+<strong>Distribution version:</strong>の下のリンクをクリックしてダウンロードする。
+</p>
+
+<p>
+<img loading="lazy" src="../images/iss/iss-for-orbiter2016/003.png" width="652" height="354">
+</p>
+
+<p>
+ダウンロードしたzipファイルを解凍して、中身をOrbiterフォルダに上書き。
+</p>
+
+
+<h2 id="uninstall">アンインストール</h2>
+
+
+<p>
+<strong>uninst.exe</strong>をダブルクリック。
+</p>
+
+<p>
+アンインストーラが起動したら、<kbd>はい</kbd>をクリック。
+</p>
+
+
+<h2 id="control">操作方法</h2>
+
+
+<p>
+<a href="index.html#iss_atoz" target="_blank">ISS A to Z</a>(Orbiter2010)とほぼ同じ手順で操作できる。
+</p>
+
+<p>
+<a href="iss-atoz-keymap.html" target="_blank">ISS A to Zの操作</a>
+</p>
+
+<p>
+また、<strong>ISS for Orbiter 2016</strong>には<a href="index.html#canadarm" target="_blank">Canadarm2MOD</a>が付属している。
+</p>
+
+<p>
+<a href="canadarm2-control.html" target="_blank">Canadarm2MODの操作・移動方法</a>
+</p>
+
+
+<h3 id="control_docking">ドッキング</h3>
+
+
+<p>ドッキングアダプター(<strong>IDA-2</strong>)とドッキングするときは、相対速度を<strong>0.05[m/s]</strong>までに抑える。<br>
+速度が大きすぎると接続できない。</p>
+
+<p>
+<img loading="lazy" src="../images/iss/iss-for-orbiter2016/004.png" width="742" height="525">
+</p>
+
+
+<h2 id="error">強制終了するとき</h2>
+
+
+<p>
+<strong>D3D9Client</strong>を使用する場合は、必ずシンボリックリンクを作成しておくこと。<br>
+<a href="../basic/../basic/d3d9client.html#install" target="_blank">D3D9Clientを導入する</a>
+</p>
+
+<p>
+<strong>Windows10</strong>環境において、<strong>Canadarm2MOD</strong>が原因で強制終了することがある。<br>
+このような場合は、<strong>SSRMSD.dll</strong>を差し替える。<br>
+<a href="canadarm2mod-install.html#win10" target="_blank">Canadarm2MODのダウンロード+インストール</a>
+</p>
+
+<p>
+<strong>Modules</strong>フォルダを開いて、<strong>SSRMSD.dll</strong>を新しいものに上書きする。
+</p>
+
+</body>
+</html>

@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../styles/orbiterjp.css">
+  <script src="../scripts/template.js" charset="utf-8" defer></script>
+  <script src="../scripts/prevnext_imfd.js" charset="utf-8" defer></script>
+  <title>IMFD Part6 BaseApproachとOrbit Insertで基地上空へ</title>
+</head>
+
+<body>
+
+  <h1>IMFD Part6 BaseApproachとOrbit Insertで基地上空へ</h1>
+
+
+<p>IMFDの<strong>BaseApproach</strong>を使えば、簡単に目標地点の上空を通る軌道を作成できます。<br>
+また、<strong>Orbit Insert</strong>を使えば全自動で目標の星の周回軌道に入ることができます。</p>
+
+<ul>
+<li><a href="#baseapproach">BaseApproachで基地上空へ</a>
+  <ul>
+  <li><a href="#baseapproach_orbit">軌道投入モードにする</a></li>
+  <li><a href="#baseapproach_parking">パーキング軌道を設定する</a></li>
+  <li><a href="#baseapproach_target">目的地を設定する</a></li>
+  <li><a href="#baseapproach_mcc">軌道修正を実行する</a></li>
+  </ul>
+</li>
+<li><a href="#orbitinsert">Orbit Insertによる軌道投入</a>
+  <ul>
+  <li><a href="#orbitinsert_insert">周回軌道に投入する</a></li>
+  <li><a href="#orbitinsert_error">軌道投入に失敗するとき</a></li>
+  </ul>
+</li>
+</ul>
+
+
+<h2 id="baseapproach">BaseApproachで基地上空へ</h2>
+
+
+<p><strong>Program Menu</strong>から<kbd>BaseApproach</kbd>をクリック。</p>
+<p><strong>Ref Mars</strong>になっていることを確認する。<br>
+必要であれば<kbd>REF</kbd>をクリックして、<strong>Mars</strong>と入力する。</p>
+
+<p>
+<img loading="lazy" src="../images/transximfd/imfd-tutorial-6/001.png" width="194" height="113">
+</p>
+
+
+<h3 id="baseapproach_orbit">軌道投入モードにする</h3>
+
+
+<p><kbd>Nxt</kbd>を何度かクリックして、<strong>Re-Entry</strong>を選択。</p>
+
+<p>
+<img loading="lazy" src="../images/transximfd/imfd-tutorial-6/002.png" width="307" height="294">
+</p>
+
+<p><kbd>+</kbd>を何度かクリックして<strong>Orbit-Insert</strong>にする。</p>
+
+<p>
+<img loading="lazy" src="../images/transximfd/imfd-tutorial-6/003.png" width="274" height="87">
+</p>
+
+<p>遷移軌道から直接再突入するならRe-Entry、いったんパーキング軌道に乗るならOrbit-Insertにする。</p>
+
+
+<h3 id="baseapproach_parking">パーキング軌道を設定する</h3>
+
+
+<p>ふたたび<kbd>Nxt</kbd>を何度かクリックして、<strong>Alt</strong>を選択。<br>
+MFD右側の<kbd>Set</kbd>をクリックして、任意の高度（今回の例では<strong>200k</strong>）を入力する。</p>
+
+<p>
+<img loading="lazy" src="../images/transximfd/imfd-tutorial-6/004.png" width="209" height="231">
+</p>
+
+<p>ふたたび<kbd>Nxt</kbd>を何度かクリックして、<strong>Num</strong>(Number)を選択。<br>
+ここで「軌道を何周してから目標地点の上空を通るか」を決定する。<br>
+<kbd>+</kbd>か<kbd>Set</kbd>をクリックして任意の数字（今回は<strong>1</strong>）を入力する。</p>
+
+<p>
+<img loading="lazy" src="../images/transximfd/imfd-tutorial-6/005.png" width="195" height="179">
+</p>
+
+
+<h3 id="baseapproach_target">目的地を設定する</h3>
+
+
+<p><kbd>TGT</kbd>をクリックして、地上基地の名前（今回は<strong>Olympus</strong>）を入力する。</p>
+
+<p>
+<img loading="lazy" src="../images/transximfd/imfd-tutorial-6/006.png" width="376" height="254">
+</p>
+
+<p>緯度経度を直接指定する場合は、<strong>Target:</strong>の下の2行に数字を入力する。</p>
+
+
+<h3 id="baseapproach_mcc">軌道修正を実行する</h3>
+
+
+<p>必要な情報をすべて入力したら、<strong>Enroute:</strong>の下の<strong>dV</strong>の数字を確認しつつ時間を進める。<br>
+<strong>dV</strong>が減っていくようならしばらく待つ。逆に増えるようなら噴射を開始する。</p>
+
+<p>
+<img loading="lazy" src="../images/transximfd/imfd-tutorial-6/008.png" width="189" height="103">
+</p>
+
+<p><kbd>AB</kbd>をクリックすると自動でエンジンを噴射するので待つ。</p>
+<p>適当なタイミングで再び<kbd>AB</kbd>をクリック。何度か軌道修正を繰り返しつつ惑星に接近する。</p>
+
+
+<h2 id="orbitinsert">Orbit Insertによる軌道投入</h2>
+
+
+<p><strong>BaseApproach</strong>による軌道修正が終わったら、<strong>Program Menu</strong>から<strong>Course</strong>を開く。<br>
+黄色いメッセージが表示されていたら、右上の<kbd>Menu</kbd>をクリック。※</p>
+
+<p>
+<img loading="lazy" src="../images/transximfd/imfd-tutorial-6/010.png" width="413" height="336">
+</p>
+
+<p class="note">※メッセージが表示されていない場合は、<strong>Target Intercept</strong>などを選択して<kbd>+</kbd>をクリック。</p>
+<p><strong>Orbit Insert</strong>を選択して<kbd>Set</kbd>をクリック。</p>
+
+<p>
+<img loading="lazy" src="../images/transximfd/imfd-tutorial-6/011.png" width="418" height="263">
+</p>
+
+
+<h3 id="orbitinsert_insert">周回軌道に投入する</h3>
+
+
+<p><strong>Ecc 0.000</strong>になっていることを確認して、<kbd>AB</kbd>をクリックする。※<br>
+タイムワープで放置しておくと、自動で周回軌道に乗せてくれる。</p>
+
+<p>
+<img loading="lazy" src="../images/transximfd/imfd-tutorial-6/012.png" width="327" height="314">
+</p>
+
+<p class="note">※<strong>Apoapsis</strong>などを選択して任意の数字を入力することで、遠地点高度などを指定した軌道も作成できます。</p>
+
+<p>今回の手順がすべて成功すれば、次の周回で基地の真上を通る軌道になっているはずです。</p>
+
+<p>
+<img loading="lazy" src="../images/transximfd/imfd-tutorial-6/013.png" width="396" height="398">
+</p>
+
+
+<h3 id="orbitinsert_error">軌道投入に失敗するとき</h3>
+
+
+<p><strong>Orbit Insert</strong>が正常に動作しない場合は、<strong>Ref Mars</strong>、<strong>Src</strong>は自機になっているか確認する。<br>
+それでもうまくいかない場合は、いったん<strong>Target Intercept</strong>など別のプログラムを選択。<br>
+そこからもう一度<strong>Orbit Intercept</strong>に戻る。</p>
+
+</body>
+</html>

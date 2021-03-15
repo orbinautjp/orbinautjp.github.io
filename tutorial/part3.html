@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../styles/orbiterjp.css">
+  <script src="../scripts/template.js" charset="utf-8" defer></script>
+  <script src="../scripts/prevnext_tutorial.js" charset="utf-8" defer></script>
+  <title>Part3 ランデブーのための軌道力学</title>
+</head>
+
+<body>
+
+  <h1>Part3 ランデブーのための軌道力学</h1>
+
+
+  <p>ランデブーのために学んでおきたい、軌道力学の基本的な知識について説明します。</p>
+
+  <p>ここで書かれているのと<strong>同じ操作をする必要はありません。</strong><br>
+    一度だけざっくり読んでいただければ十分です。</p>
+
+  <ol>
+    <li><a href="#time">軌道高度と周期</a></li>
+    <li><a href="#periapsis">近地点と遠地点</a>
+      <ul>
+        <li><a href="#altitude">高度を変える</a></li>
+        <li><a href="#make_periapsis">近地点・遠地点を作る</a></li>
+      </ul>
+    </li>
+  </ol>
+
+  <ul>
+    <li><a href="#related">関連項目</a></li>
+    <li><a href="#form">アンケート</a></li>
+    <li><a href="#videos">動画</a></li>
+  </ul>
+
+
+  <h2 id="time">軌道高度と周期</h2>
+
+
+  <p>軌道を1周するのに必要な時間のことを、公転周期という。<br>
+    周期は軌道の高度によって変化する。</p>
+
+  <table>
+    <tr>
+      <td>円軌道の高度</td>
+      <td>周期（1周するのに必要な時間）</td>
+    </tr>
+    <tr>
+      <td><strong>300km</strong></td>
+      <td><strong>5422秒</strong>（約90分）</td>
+    </tr>
+    <tr>
+      <td><strong>10000km</strong></td>
+      <td><strong>20850秒</strong>（約6時間）</td>
+    </tr>
+  </table>
+
+  <p>
+    <img loading="lazy" src="../images/tutorial/part3/001.png" width="425" height="425">
+  </p>
+
+  <table>
+    <tr>
+      <td><strong>Alt</strong></td>
+      <td>Altitude</td>
+      <td>地表からの高度</td>
+    </tr>
+    <tr>
+      <td><strong>T</strong></td>
+      <td>Period</td>
+      <td>周期</td>
+    </tr>
+  </table>
+
+  <p>つまり、高い軌道に移ると、1周するのに必要な時間が長くなる。<br>
+    低い軌道であれば、1周するのに必要な時間は短くなる。</p>
+
+
+  <h2 id="periapsis">近地点と遠地点</h2>
+
+
+  <p>宇宙船の軌道には、天体に一番近い点と遠い点がそれぞれ存在する。<br>
+    これらを<strong>Pe</strong>と<strong>Ap</strong>と呼ぶ。</p>
+
+  <table>
+    <tr>
+      <td><strong>Pe</strong></td>
+      <td>Periapsis</td>
+      <td>近点（地球なら近地点）</td>
+    </tr>
+    <tr>
+      <td><strong>Ap</strong></td>
+      <td>Apoapsis</td>
+      <td>遠点（地球なら遠地点）</td>
+    </tr>
+    <tr>
+      <td><strong>PeA</strong></td>
+      <td>Pe Altitude</td>
+      <td>Peの高度</td>
+    </tr>
+    <tr>
+      <td><strong>ApA</strong></td>
+      <td>Ap Altitude</td>
+      <td>Apの高度</td>
+    </tr>
+    <tr>
+      <td><strong>PeT</strong></td>
+      <td>Time to Periapsis</td>
+      <td>Peまでの残り時間</td>
+    </tr>
+    <tr>
+      <td><strong>ApT</strong></td>
+      <td>Time to Apoapsis</td>
+      <td>Apまでの残り時間</td>
+    </tr>
+  </table>
+
+  <p><strong>Pe</strong>と<strong>Ap</strong>の高度が近ければ近いほど、軌道は完全な円に近づく。<br>
+    <strong>Pe</strong>と<strong>Ap</strong>の高度が一致しないとき、軌道は楕円になる。
+  </p>
+
+  <p><strong>PeA</strong>が<strong>300km</strong>、<strong>ApA</strong>が<strong>800km</strong>の楕円軌道を周回している宇宙船について考えてみよう。</p>
+
+  <p>
+    <img loading="lazy" src="../images/tutorial/part3/002.png" width="425" height="425">
+  </p>
+
+  <p>この宇宙船を放置しておくと、<strong>Pe</strong>では高度<strong>300km</strong>まで下降する。<br>
+    逆に<strong>Ap</strong>では高度<strong>800km</strong>まで上昇する。</p>
+
+  <p><strong>PeT</strong>・<strong>ApT</strong>は、Pe・Apまでの残り時間を表している。<br>
+    これによって、Pe・Apからどれくらい離れているか確認できる。</p>
+
+  <p>
+    <img loading="lazy" src="../images/tutorial/part3/003.png" width="425" height="425">
+  </p>
+
+  <p>
+    <img loading="lazy" src="../images/tutorial/part3/004.png" width="425" height="425">
+  </p>
+
+
+  <h3 id="altitude">高度を変える</h3>
+
+
+  <p>宇宙船が加速・減速すると、軌道の高度と周期が変化する。</p>
+
+  <table>
+    <tr>
+      <td><strong>加速</strong></td>
+      <td><kbd>ProGrade</kbd>でエンジン噴射</td>
+    </tr>
+    <tr>
+      <td><strong>減速</strong></td>
+      <td><kbd>RetroGrade</kbd>でエンジン噴射</td>
+    </tr>
+  </table>
+
+  <p><strong>PeA</strong>・<strong>ApA</strong>と<strong>T</strong>に注目する。<br>
+    （近地点・遠地点高度と周期）</p>
+
+  <p><strong>Pe</strong>で<strong>減速</strong>すると、<strong>Ap</strong>の高度が<strong>下がる</strong>。<br>
+    <strong>Pe</strong>の高度は変わらない。
+  </p>
+
+  <p>軌道を1周するのに必要な時間は<strong>短く</strong>なる。</p>
+
+  <p>
+    <img loading="lazy" class="small" src="../images/tutorial/part3/005.png" width="120" height="100">
+    <img loading="lazy" class="small" src="../images/tutorial/part3/006.png" width="120" height="100">
+    <br>
+    1枚目が減速前、2枚目が減速後
+  </p>
+
+  <p><strong>Pe</strong>で<strong>加速</strong>すると、<strong>Ap</strong>の高度が<strong>上がる</strong>。<br>
+    <strong>Pe</strong>の高度は変わらない。
+  </p>
+
+  <p>軌道を1周するのに必要な時間は<strong>長く</strong>なる。</p>
+
+  <p>
+    <img loading="lazy" class="small" src="../images/tutorial/part3/005.png" width="120" height="100">
+    <img loading="lazy" class="small" src="../images/tutorial/part3/007.png" width="120" height="100">
+    <br>
+    1枚目が加速前、2枚目が加速後
+  </p>
+
+  <p><strong>Ap</strong>の場合は、<strong>Pe</strong>の高度が変化する。</p>
+
+  <p><strong>Pe</strong>・<strong>Ap</strong>どちらの場合も、エンジンを噴射した位置から見て、ちょうど反対側の高度が変化する。<br>
+    一方で、自分が今いる位置の高度はほとんど変わらない。</p>
+
+  <p>周期は、<strong>Pe</strong>・<strong>Ap</strong>も同じように変化する。<br>
+    加速すれば長くなり、減速すれば短くなる。</p>
+
+  <table>
+    <tr>
+      <td><strong>Pe</strong>で<strong>減速</strong></td>
+      <td><strong>Ap</strong>の高度が<strong>下がる</strong></td>
+      <td>1周する時間が<strong>短く</strong>なる</td>
+    </tr>
+    <tr>
+      <td><strong>Pe</strong>で<strong>加速</strong></td>
+      <td><strong>Ap</strong>の高度が<strong>上がる</strong></td>
+      <td>1周する時間が<strong>長く</strong>なる</td>
+    </tr>
+    <tr>
+      <td><strong>Ap</strong>で<strong>減速</strong></td>
+      <td><strong>Pe</strong>の高度が<strong>下がる</strong></td>
+      <td>1周する時間が<strong>短く</strong>なる</td>
+    </tr>
+    <tr>
+      <td><strong>Ap</strong>で<strong>加速</strong></td>
+      <td><strong>Pe</strong>の高度が<strong>上がる</strong></td>
+      <td>1周する時間が<strong>長く</strong>なる</td>
+    </tr>
+  </table>
+
+
+  <h3 id="make_periapsis">近地点・遠地点を作る</h3>
+
+
+  <p><strong>Ecc</strong>（軌道離心率）の小さいほぼ完全な円軌道で、加速・減速した場合について確認しておこう。</p>
+
+  <p>加速すると、現在地点のちょうど反対側に<strong>Ap</strong>ができる。</p>
+
+  <p>
+    <img loading="lazy" src="../images/tutorial/part3/008.png" width="425" height="425">
+  </p>
+
+  <p>減速すると、現在地点のちょうど反対側に<strong>Pe</strong>ができる。</p>
+
+  <p>
+    <img loading="lazy" src="../images/tutorial/part3/009.png" width="425" height="425">
+  </p>
+
+  <table>
+    <tr>
+      <td style="background-color:black; color:#00ff00; font-size:x-large;">○</td>
+      <td><strong>Ap</strong></td>
+      <td>遠地点</td>
+    </tr>
+    <tr>
+      <td style="background-color:black; color:#00ff00; font-size:x-large;">●</td>
+      <td><strong>Pe</strong></td>
+      <td>近地点</td>
+    </tr>
+  </table>
+
+
+  <h2 id="related">関連項目</h2>
+
+
+  <ul>
+    <li><a href="../misc/orbitalelements.html" target="_blank">軌道要素と時刻系</a></li>
+    <li><a href="../misc/rendezvous-explained.html#sync" target="_blank">ランデブーの原理 - Sync Orbit MFD</a></li>
+    <li><a href="https://www.nicovideo.jp/watch/sm27438804" target="_blank">ランデブーのしくみ</a>（動画）</li>
+  </ul>
+
+
+  <h2 id="form">アンケート</h2>
+
+
+  <form action="https://docs.google.com/forms/d/e/1FAIpQLSdrnlGDdnwKz2tvb4N0PL1hSkpzuWuS-lmjOWJHcAC20ds0Dw/formResponse" target="_self" method="POST" id="mG61Hd">
+
+    <p>この記事の内容は理解できましたか？</p>
+
+    <ul>
+      <li><label><input type="radio" name="entry.1914587356" value="できなかった、全然理解できない" />できなかった、全然理解できない</label></li>
+      <li><label><input type="radio" name="entry.1914587356" value="できなかった、途中から理解できない" />できなかった、途中から理解できない</label></li>
+      <li><label><input type="radio" name="entry.1914587356" value="できた、難しかった" />できた、難しかった</label></li>
+      <li><label><input type="radio" name="entry.1914587356" value="できた、簡単だった" />できた、簡単だった</label></li>
+    </ul>
+
+    <p><label for="question">わからなかった・難しかったところを教えてください（任意）</label><br>
+      <input id="question" type="text" name="entry.1857549962">
+    </p>
+
+    <p>公開されますので個人情報を記入しないでください。<br>
+      <button type="submit" name="button" value="送信">送信</button>
+    </p>
+
+  </form>
+
+
+  <h2 id="videos">動画</h2>
+
+
+  <p><a href="https://youtu.be/1dMWArDnQYE" target="_blank">YouTube</a></p>
+
+  <p><a href="https://www.nicovideo.jp/watch/sm25466785" target="_blank">ニコニコ動画</a></p>
+
+</body>
+
+</html>

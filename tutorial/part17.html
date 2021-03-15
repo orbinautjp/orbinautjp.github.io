@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../styles/orbiterjp.css">
+  <script src="../scripts/template.js" charset="utf-8" defer></script>
+  <script src="../scripts/prevnext_tutorial.js" charset="utf-8" defer></script>
+  <title>Part17 月から地球へ（Planからマニューバを作る）</title>
+</head>
+
+<body>
+
+  <h1>Part17 月から地球へ（Planからマニューバを作る）</h1>
+
+
+  <p>前回の<strong>Plan</strong>をもとに、マニューバを作成して地球に降下します。</p>
+
+  <ol>
+    <li><a href="#parkingorbit">パーキング軌道に投入する</a>
+      <ul>
+        <li><a href="#parkingorbit_launch">打ち上げ</a></li>
+        <li><a href="#parkingorbit_inc">針路を修正する</a></li>
+        <li><a href="#parkingorbit_insertion">軌道投入</a></li>
+      </ul>
+    </li>
+    <li><a href="#manoeuvre">マニューバを作成する</a>
+      <ul>
+        <li><a href="#manoeuvre_deltav">Delta Vを入力する</a></li>
+        <li><a href="#manoeuvre_mandate">Man. dateを入力する</a></li>
+      </ul>
+    </li>
+    <li><a href="#resetplan">Planを消去する</a></li>
+    <li><a href="#refine">マニューバの修正</a></li>
+    <li><a href="#viewtarget">マニューバの実行</a></li>
+    <li><a href="#correction">軌道修正</a></li>
+  </ol>
+
+  <ul>
+    <li><a href="#form">アンケート</a></li>
+    <li><a href="#videos">動画</a></li>
+  </ul>
+
+
+  <h2 id="parkingorbit">パーキング軌道に投入する</h2>
+
+
+  <p><strong>Stage 1</strong>の<strong>View:Escape Plan</strong>を開いておく。<br>
+    <strong>Orbit MFD</strong>を開く。
+  </p>
+
+  <p><strong>RCS ROT</strong>にしておく。<br>
+    <strong>Surface HUD</strong>に切り替えておく。
+  </p>
+
+  <p>離陸すると<strong>Heading</strong>は表示されなくなる。<br>
+    暗記するかメモを取っておくこと。</p>
+
+  <p>
+    <img loading="lazy" src="../images/tutorial/part17/001.png" width="1920" height="1080">
+  </p>
+
+
+  <h3 id="parkingorbit_launch">打ち上げ</h3>
+
+
+  <p>ホバーエンジンで浮上する。<br>
+    テンキー<kbd>0</kbd>を押す。</p>
+
+  <p><kbd>Level Horizon</kbd>&nbsp;or&nbsp;<kbd>HRLVL</kbd>をクリック。</p>
+
+  <p>テンキー<kbd>1</kbd>&nbsp;or&nbsp;<kbd>3</kbd>を押す。<br>
+    機首を<strong>Heading</strong>の数字と同じ方位に向ける。</p>
+
+  <p>メインエンジン全開で固定する。</p>
+
+  <p>
+    <img loading="lazy" src="../images/tutorial/part17/002.png" width="450" height="120">
+  </p>
+
+  <p>ホバーエンジンを完全に停止する。<br>
+    テンキー<kbd>.</kbd>を押し続ける。</p>
+
+  <p><kbd>Level Horizon</kbd>&nbsp;or&nbsp;<kbd>HRLVL</kbd>を解除する。</p>
+
+  <p>機首を水平より少し上に向ける。<br>
+    テンキー<kbd>2</kbd>を押す。</p>
+
+  <p>月面に落下しないようにしつつ加速を続ける。</p>
+
+
+  <h3 id="parkingorbit_inc">針路を修正する</h3>
+
+
+  <p><strong>View:Escape Plan</strong>で<strong>Rel Inc</strong>を確認する。<br>
+    針路を修正して、<strong>Rel Inc</strong>を小さくする。</p>
+
+  <p>左右に進行方向を微調整する。<br>
+    <strong>RCS LIN</strong>で機体を左右に押してもよい。
+  </p>
+
+  <p>
+    <img loading="lazy" src="../images/tutorial/part17/003.png" width="425" height="425">
+  </p>
+
+
+  <h3 id="parkingorbit_insertion">軌道投入</h3>
+
+
+  <p><strong>Orbit MFD</strong>で<strong>ApA</strong>を確認する。<br>
+    高度<strong>20km</strong>の周回軌道に投入する。</p>
+
+  <p>
+    <img loading="lazy" src="../images/tutorial/part17/004.png" width="425" height="425">
+  </p>
+
+
+  <h2 id="manoeuvre">マニューバを作成する</h2>
+
+
+  <p><strong>Begin Burn</strong>を確認する。<br>
+    <strong>2000</strong>になるまでタイムワープ。
+  </p>
+
+  <p>
+    <img loading="lazy" src="../images/tutorial/part17/005.png" width="425" height="425">
+  </p>
+
+  <p>左右両方のMFDで<strong>TransX</strong>を開く。</p>
+
+  <p>両方とも<strong>Stage 1</strong>にしておく。<br>
+    <strong>Stage 2</strong>になっていたら、<kbd>BCK</kbd>をクリック。
+  </p>
+
+
+  <h3 id="manoeuvre_deltav">Delta Vを入力する</h3>
+
+
+  <p><strong>View:Escape Plan</strong>に移動する。<br>
+    <strong>Delta V</strong>の数字を確認する。
+  </p>
+
+  <p>
+    <img loading="lazy" src="../images/tutorial/part17/006.png" width="425" height="425">
+  </p>
+
+  <p>反対側で<strong>View:Manoeuvre</strong>を開く。<br>
+    <strong>Manoeuvre mode</strong>を<strong>On</strong>にする。
+  </p>
+
+  <p><strong>Prograde vel.</strong>を選択する。<br>
+    <kbd>ENT</kbd>をクリック。
+  </p>
+
+  <p><strong>Escape Plan</strong>の<strong>Delta V</strong>の数字を入力する。</p>
+
+  <p>
+    <img loading="lazy" src="../images/tutorial/part17/007.png" width="425" height="425">
+  </p>
+
+
+  <h3 id="manoeuvre_mandate">Man. dateを入力する</h3>
+
+
+  <p><strong>Man. date</strong>を選択する。</p>
+
+  <p><kbd>-AJ</kbd>を何度かクリック。<br>
+    感度を<strong>Hyper</strong>にする。</p>
+
+  <p><kbd>++</kbd>を何度かクリック。<br>
+    ふたつの黄色い点線が重なるようにする。</p>
+
+  <p>
+    <img loading="lazy" src="../images/tutorial/part17/008.png" width="425" height="425">
+  </p>
+
+
+  <h2 id="resetplan">Planを消去する</h2>
+
+
+  <p><strong>View:Escape Plan</strong>で、<kbd>FWD</kbd>をクリック。<br>
+    <strong>Stage 2</strong>にする。
+  </p>
+
+  <p><strong>View:Eject Plan</strong>を表示しておく。<br>
+    必要なら<kbd>VW</kbd>をクリックして切り替える。</p>
+
+  <p>
+    <img loading="lazy" src="../images/tutorial/part17/009.png" width="425" height="425">
+  </p>
+
+  <p><strong>Prograde vel.</strong>を選択する。</p>
+
+  <p><kbd>-AJ</kbd>を何度かクリックして、<strong>Reset</strong>を選択。<br>
+    <kbd>++</kbd>をクリックして<strong>0</strong>にする。
+  </p>
+
+  <p>
+    <img loading="lazy" src="../images/tutorial/part17/010.png" width="425" height="425">
+  </p>
+
+  <p>前回作成した<strong>Plan</strong>が消えて、今作成したマニューバが優先される。</p>
+
+
+  <h2 id="refine">マニューバの修正</h2>
+
+
+  <p><strong>View:Eject Plan</strong>で<strong>Focus PeD</strong>を確認する。<br>
+    これは、天体中心から<strong>Pe</strong>までの距離を表す。</p>
+
+  <p>
+    <img loading="lazy" src="../images/tutorial/part17/015.png" width="425" height="425">
+  </p>
+
+  <p>反対側のMFDに移動する。<br>
+    <strong>Stage 1</strong>の<strong>View:Manoeuvre</strong>を開いておく。
+  </p>
+
+  <p><strong>Prograde vel.</strong>を操作する。<br>
+    <strong>Focus PeD</strong>を<strong>6.571M</strong>にする。
+  </p>
+
+  <p>
+    <img loading="lazy" src="../images/tutorial/part17/011.png" width="425" height="425">
+  </p>
+
+  <p>
+    <img loading="lazy" src="../images/tutorial/part17/012.png" width="425" height="425">
+  </p>
+
+  <p>地球の半径は6.371Mm（メガメートル） = 6,371kmである。<br>
+    地表からの高度200kmを足せば、6.571Mmになる。</p>
+
+
+  <h2 id="viewtarget">マニューバの実行</h2>
+
+
+  <p><strong>View:Manoeuvre</strong>で、<kbd>VW</kbd>をクリック。<br>
+    <strong>View:Target</strong>に切り替える。
+  </p>
+
+  <p><strong>Begin Burn</strong>が<strong>300</strong>になるまでタイムワープ。<br>
+    <strong>Auto-Center</strong>を<strong>On</strong>にする。
+  </p>
+
+  <p><strong>Begin Burn</strong>が<strong>0</strong>になるのを待つ。<br>
+    メインエンジンを噴射する。</p>
+
+  <p><strong>Delta V</strong>が<strong>5</strong>になったらエンジンを切る。</p>
+
+  <p><strong>Auto-Center</strong>を<strong>Off</strong>にする。<br>
+    <strong>Manoeuvre mode</strong>を<strong>Off</strong>にする。
+  </p>
+
+  <p><strong>View:Eject Plan</strong>に移動する。<br>
+    <strong>Focus PeD</strong>を確認する。
+  </p>
+
+  <p><strong>RCS LIN</strong>を噴射する。<br>
+    <strong>Focus PeD</strong>を<strong>6.571M</strong>にする。
+  </p>
+
+
+  <h2 id="correction">軌道修正</h2>
+
+
+  <p><strong>Orbit MFD</strong>を開いておく。<br>
+    <kbd>REF</kbd>をクリックして、<strong>Earth</strong>を選択。
+  </p>
+
+  <p>地球の重力圏に入ったら、軌道修正する。<br>
+    <strong>View:Manoeuvre</strong>を開く。
+  </p>
+
+  <p><strong>View:Encounter</strong>は利用できない。<br>
+    <strong>Hyp PeD</strong>で高度を確認する。
+  </p>
+
+  <table>
+    <tr>
+      <td><strong>Focus PeD</strong></td>
+      <td>現在の軌道をこのまま進んだ場合の、<strong>Pe</strong>の天体中心からの距離</td>
+    </tr>
+    <tr>
+      <td><strong>Hyp PeD</strong></td>
+      <td>作成中のマニューバから予測される、仮定の(Hypothetical)<strong>Pe</strong>の距離</td>
+    </tr>
+  </table>
+
+  <p>
+    <img loading="lazy" src="../images/tutorial/part17/013.png" width="425" height="425">
+  </p>
+
+  <p>基地上空を通る軌道にする必要はない。<br>
+    <strong>Offplane Dist</strong>は表示されない。
+  </p>
+
+  <p>これまでと同じ手順で、マニューバを実行。<br>
+    終了したら、<strong>Focus PeD</strong>を確認する。<br>
+    必要があれば<strong>RCS LIN</strong>を使って微調整する。</p>
+
+  <p>軌道修正を繰り返しつつ接近する。<br>
+    地球の周回軌道に投入する。</p>
+
+  <p><a href="part7.html" target="_blank">Part7</a>と同じ手順で、基地に降下する。</p>
+
+
+  <h2 id="form">アンケート</h2>
+
+
+  <form action="https://docs.google.com/forms/d/e/1FAIpQLScOoku2oJW-3iUShMvDLt1ulrNVQNawCDG-kJef9xzYEg536g/formResponse" target="_self" method="POST" id="mG61Hd">
+
+    <p>この記事の内容は理解できましたか？</p>
+
+    <ul>
+      <li><label><input type="radio" name="entry.1914587356" value="できなかった、全然理解できない" />できなかった、全然理解できない</label></li>
+      <li><label><input type="radio" name="entry.1914587356" value="できなかった、途中から理解できない" />できなかった、途中から理解できない</label></li>
+      <li><label><input type="radio" name="entry.1914587356" value="できた、難しかった" />できた、難しかった</label></li>
+      <li><label><input type="radio" name="entry.1914587356" value="できた、簡単だった" />できた、簡単だった</label></li>
+    </ul>
+
+    <p><label for="question">わからなかった・難しかったところを教えてください（任意）</label><br>
+      <input id="question" type="text" name="entry.1857549962">
+    </p>
+
+    <p>公開されますので個人情報を記入しないでください。<br>
+      <button type="submit" name="button" value="送信">送信</button>
+    </p>
+
+  </form>
+
+
+  <h2 id="videos">動画</h2>
+
+
+  <p><a href="https://youtu.be/TXRJdphP0kk" target="_blank">YouTube</a></p>
+
+  <p><a href="https://www.nicovideo.jp/watch/sm25639566" target="_blank">ニコニコ動画</a></p>
+
+</body>
+
+</html>

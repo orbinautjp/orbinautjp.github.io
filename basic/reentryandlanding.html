@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../styles/orbiterjp.css">
+  <script src="../scripts/template.js" charset="utf-8" defer></script>
+  <title>再突入・着陸の方法</title>
+</head>
+
+<body>
+
+  <h1>再突入・着陸の方法</h1>
+
+
+<p>再突入および着陸の方法について、いくつか簡単に紹介します。</p>
+
+<ul>
+<li><a href="#splashdown">落下する</a></li>
+<li><a href="#hover">目標地点の上空で静止する</a></li>
+<li><a href="#pdi">動力降下</a></li>
+<li><a href="#o-turn">大きく旋回して減速する</a></li>
+<li><a href="#s-turn">S字旋回して減速する</a></li>
+<li><a href="#aerobrake">AeroBrake MFD</a></li>
+<li><a href="#glider">有翼機での着陸</a></li>
+</ul>
+
+
+<h2 id="splashdown">落下する</h2>
+
+
+<p>アポロやソユーズ宇宙船のような、カプセル型の宇宙船で使われる方法です。<br>
+Peを目標地点付近に設定して落下し、再突入を終えたらパラシュートでゆっくり降下します。<br>
+カプセルの姿勢を変更することで、ある程度針路を変更できることもあります。</p>
+
+<p><a href="../iss/iss-v32-progress-soyuz.html" target="_blank">ISS v3.2 プログレス&amp;ソユーズの操作</a><br>
+<a href="../iss/dragon-control.html" target="_blank">Dragon1の操作</a></p>
+
+
+<h2 id="hover">目標地点の上空で静止する</h2>
+
+
+<p>軌道上で減速して、目標地点の真上で静止。<br>
+ホバーエンジンなどで垂直に降下するという方法です。<br>
+推進剤に十分な余裕がある機体であれば、ほとんどの惑星で使えます。</p>
+
+<p><a href="../tutorial/part15.html" target="_blank">Orbiterチュートリアル Part15 月面基地への着陸</a><br>
+<a href="../mods/burn-time-calculator-install.html" target="_blank">Burn time calculatorのダウンロード+インストール</a></p>
+
+
+<h2 id="pdi">動力降下</h2>
+
+
+<p>機体下部のエンジンを噴射し、減速しながら降下を続けてそのまま着陸します。<br>
+アポロ月着陸船で使用された着陸方法です。</p>
+
+<p><a href="../apollo/amso-11-3.html" target="_blank">AMSO アポロ11号チュートリアル Part3 （DOIとPDI）</a><br>
+<a href="../mods/pursuitmfd-landing.html" target="_blank">PursuitMFD 月面基地への自動着陸</a></p>
+
+
+<h2 id="o-turn">大きく旋回して減速する</h2>
+
+
+<p>有翼機でのみ使える方法です。</p>
+
+<p>目標地点上空に差しかかったら、大きく旋回して速度を落とす。<br>
+一周したところで目標に向かって滑空する。<br>
+初期機体の<strong>Delta Glider</strong>で有効な方法ですが、大きな負荷がかかるため、<a href="../ucgo/xr2-ravenstar.html" target="_blank">XR2</a>のようなダメージ判定のある機体には不向きです。
+</p>
+<p><a href="../tutorial/part7.html">Orbiterチュートリアル Part7 軌道離脱と再突入の準備</a><br>
+<a href="../tutorial/part8.html">Orbiterチュートリアル Part8 再突入と着陸</a></p>
+
+
+<h2 id="s-turn">S字旋回して減速する</h2>
+
+
+<p>有翼機でのみ使える方法です。</p>
+
+<p>減速のために機体の迎え角を大きくすると、上向きの力が発生して大気圏外に押し戻されてしまいます。<br>
+ここで機体を右か左に傾けると、上向きの力を左右に逃がせるので、左右に機体を傾けることで針路を維持しつつ減速できます。</p>
+<p>スペースシャトルはこの方法で再突入しており、<a href="../iss/index.html#shuttle_fleet" target="_blank">Shuttle Fleet</a>というMODでも再現されています。<br>
+<a href="../iss/shuttle-fleet-autofcs.html" target="_blank">Shuttle Fleet AutoFCSによる再突入</a></p>
+<p>ただし、機体のコントロールが難しく、手動で実行するのはほぼ不可能です。<br>
+Orbiterのマニュアルに記載されているのはこの方法ですが、<strong class="caution">おすすめしません。</strong></p>
+
+
+<h2 id="aerobrake">AeroBrake MFD</h2>
+
+
+<p>有翼機でのみ使える方法です。</p>
+
+<p>再突入時に迎え角を変更することで、速度と高度をコントロールし、目的地に降下します。<br>
+大気に押し戻されたり、降下したりを繰り返しつつゆるやかに高度を下げる、水切り石のような飛行になります。</p>
+<p><strong>AeroBrake MFD</strong>は、再突入時の予測針路を表示するツールです。<br>
+オートパイロットで迎え角を維持できる機体（例：<a href="../ucgo/xr2-ravenstar.html" target="_blank">XR2</a>）とAeroBrake MFDを組み合わせれば、目的地に正確に降下できます。</p>
+
+<p>詳しい手順については下記を参照してください。<br>
+<a href="../ucgo/xr2-aerobrakemfd.html" target="_blank">XR2とAeroBrake MFDでの着陸</a></p>
+
+
+<h2 id="glider">有翼機での着陸</h2>
+
+
+<p>「有翼機を滑走路に着陸させる」プロセスについては、ほかのフライトシムと大差ありません。<br>
+ただし、スペースシャトルのように、着陸時にはエンジンを使用できない機体も存在します。</p>
+
+<p>Orbiterには仮想ジョイスティックが存在しないため、マウス+キーボードで有翼機を着陸させるのは難しい作業です。※<br>
+ただしOrbiterの場合「有翼機で滑走路に降りる」ことは楽しみ方のひとつにすぎないので、あまりこだわる必要はないでしょう。</p>
+
+<p class="note">※ホバーエンジンや逆噴射エンジンを使って強引に着陸させることもできます。</p>
+
+<p>Orbiterは無料ですが、Falcon4.0のような本格的なフライトシムや、FreeSpace2などのスペースコンバットシムも最近では安くなっています。<br>
+「PCゲームはキーボード+マウスかパッドで十分」と言わず、フライトスティックを持っておくと遊びの幅が広がります。<br>
+色々遊んでみて、気が向いたらフライトスティックを買ってみてはいかがでしょうか。</p>
+
+</body>
+</html>

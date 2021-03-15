@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../styles/orbiterjp.css">
+  <script src="../scripts/template.js" charset="utf-8" defer></script>
+  <script src="../scripts/prevnext_tutorial.js" charset="utf-8" defer></script>
+  <title>Part2 Align Planes MFD</title>
+</head>
+
+<body>
+
+  <h1>Part2 Align Planes MFD</h1>
+
+
+  <p>宇宙船とISSの軌道面のずれを修正します。</p>
+
+  <ol>
+    <li><a href="#alignmfd">Align Planes MFDを開く</a></li>
+    <li><a href="#target">ターゲットを指定する</a></li>
+    <li><a href="#display">数字の意味</a></li>
+    <li><a href="#autopilot">機体の向きを変える</a></li>
+    <li><a href="#burn">軌道面を一致させる</a>
+      <ul>
+        <li><a href="#burn_main">メインエンジンを噴射する</a></li>
+        <li><a href="#burn_rcs">RCSを噴射する</a></li>
+      </ul>
+    </li>
+    <li><a href="#disableauto">オートパイロットを解除する</a></li>
+    <li><a href="#failure">失敗したとき</a></li>
+  </ol>
+
+  <ul>
+    <li><a href="#caution">解説</a></li>
+    <li><a href="#form">アンケート</a></li>
+    <li><a href="#video">動画</a></li>
+  </ul>
+
+  <p>打ち上げ後の宇宙船の軌道は、ISSの軌道から若干ずれている。<br>
+    このずれを解消することで、ランデブーできるようになる。</p>
+
+  <p>
+    <img loading="lazy" src="../images/tutorial/part2/001.png" width="425" height="425">
+  </p>
+
+
+  <h2 id="alignmfd">Align Planes MFDを開く</h2>
+
+
+  <p><strong>Surface MFD</strong>下の、<kbd>SEL</kbd>をクリック。<br>
+    （左側のMFD）</p>
+
+  <p><strong>Align Planes</strong>を選択して切り替える。</p>
+
+  <p><strong>Orbit MFD</strong>は開いたままにしておく。</p>
+
+  <p>
+    <img loading="lazy" src="../images/tutorial/part2/002.png" width="1594" height="871">
+  </p>
+
+
+  <h2 id="target">ターゲットを指定する</h2>
+
+
+  <p><strong>Align MFD</strong>で、<strong>ISS</strong>をターゲットする。</p>
+
+  <p><kbd>TGT</kbd>をクリックして、<kbd>Enter</kbd>キーを押す。<br>
+    <strong>ISS</strong>と入力して<kbd>Enter</kbd>。
+  </p>
+
+
+  <h2 id="display">数字の意味</h2>
+
+
+  <p><strong>Align MFD</strong>で重要な数字は以下の4つ。</p>
+
+  <table>
+    <tr>
+      <td><strong>RInc</strong></td>
+      <td>Relative Inclination</td>
+      <td>軌道のずれの大きさ</td>
+    </tr>
+    <tr>
+      <td><strong>Rate</strong></td>
+      <td>Rate of change</td>
+      <td>軌道のずれが変化する割合</td>
+    </tr>
+    <tr>
+      <td><strong>Tn</strong></td>
+      <td>Time to node</td>
+      <td>次の交点までの残り時間</td>
+    </tr>
+    <tr>
+      <td><strong>TthA</strong><br><strong>TthD</strong></td>
+      <td>Estimated thrust Time</td>
+      <td>エンジン噴射時間の長さ</td>
+    </tr>
+  </table>
+
+  <p>
+    <img loading="lazy" src="../images/tutorial/part2/003.png" width="425" height="425">
+  </p>
+
+  <p>緑色の円は宇宙船の軌道。<br>
+    先端に<strong>P</strong>と書かれた緑色の直線が宇宙船の位置を示す。</p>
+
+  <p>宇宙船の軌道とISSの軌道は2ヶ所で交差している。<br>
+    これらの交点(Node)を、<strong>AN</strong>&nbsp;or&nbsp;<strong>DN</strong>と呼ぶ。</p>
+
+  <table>
+    <tr>
+      <td><strong>AN</strong></td>
+      <td>Ascending Node</td>
+      <td>昇交点</td>
+    </tr>
+    <tr>
+      <td><strong>DN</strong></td>
+      <td>Descending Node</td>
+      <td>降交点</td>
+    </tr>
+  </table>
+
+
+  <h2 id="autopilot">機体の向きを変える</h2>
+
+
+  <p><strong>Tn</strong>が<strong>300</strong>になるまで待つ。<br>
+    タイムワープを使って時間経過させる。<br>
+    （<kbd>T</kbd>&nbsp;or&nbsp;<kbd>R</kbd>キー）</p>
+
+  <p>2Dコクピット右側のボタンをクリック。<br>
+    <strong>Orbit Normal</strong>オートパイロットを実行する。
+  </p>
+
+  <table>
+    <tbody>
+      <tr>
+        <td><strong>AN</strong>に近づいているとき</td>
+        <td><kbd>Orbit Normal (-)</kbd><br>
+          <kbd>NML -</kbd>
+        </td>
+      </tr>
+      <tr>
+        <td><strong>DN</strong>に近づいているとき</td>
+        <td><kbd>Orbit Normal (+)</kbd><br>
+          <kbd>NML +</kbd>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <p>
+    <img loading="lazy" class="small" src="../images/tutorial/part2/008.png" width="110" height="200">
+    <img loading="lazy" class="small" src="../images/tutorial/part2/009.png" width="200" height="90">
+    <br>
+    1枚目はOrbiter2010、2枚目は2016
+  </p>
+
+  <p>オートパイロットが機体を回転させるのを待つ。<br>
+    機首がHUD上の十字線と重なっていればよい。</p>
+
+  <p>
+    <img loading="lazy" src="../images/tutorial/part2/004.png" width="500" height="500">
+  </p>
+
+
+  <h2 id="burn">軌道面を一致させる</h2>
+
+
+  <p>交点に到達したら、<strong>Orbit Normal</strong>姿勢のままエンジンを点火。<br>
+    この噴射で、<strong>RInc</strong>をゼロにする。</p>
+
+
+  <h3 id="burn_main">メインエンジンを噴射する</h3>
+
+
+  <p><strong>Tn</strong>が<strong>TthA</strong>&nbsp;or&nbsp;<strong>TthD</strong>と同じ数字になったら、エンジンに点火する。</p>
+
+  <p><kbd>Ctrl</kbd>を押したままにする。<br>
+    その状態で、テンキー<kbd>+</kbd>を押し続ける。</p>
+
+  <p>半分を少し超える程度まで出力を上げる。</p>
+
+  <p>
+    <img loading="lazy" src="../images/tutorial/part2/010.png" width="110" height="200">
+  </p>
+
+  <p>噴射中は<strong>Rate</strong>の数字の変化に注意する。</p>
+
+  <p><strong>Rate</strong>が<strong>+</strong>になったら噴射を止める。<br>
+    テンキー<kbd>*</kbd>を押す。</p>
+
+  <p>
+    <img loading="lazy" src="../images/tutorial/part2/005.png" width="425" height="425">
+  </p>
+
+
+  <h3 id="burn_rcs">RCSを噴射する</h3>
+
+
+  <p>RCSを噴射して、さらに<strong>RInc</strong>を小さくする。</p>
+
+  <p><strong>RCS MODE</strong>を<strong>LIN</strong>にしておく。<br>
+    テンキー<kbd>/</kbd>で<strong>RCS MODE</strong>を切り替える。</p>
+
+  <p>テンキーの<kbd>6</kbd>&nbsp;or&nbsp;<kbd>9</kbd>のどちらかを押してみる。<br>
+    <strong>Rate</strong>がマイナスになるほうのキーを押し続ける。
+  </p>
+
+  <p><strong>RInc</strong>を完全にゼロにする必要はないが、できるだけ小さくしておく。</p>
+
+  <p>
+    <img loading="lazy" src="../images/tutorial/part2/006.png" width="425" height="425">
+  </p>
+
+
+  <h2 id="disableauto">オートパイロットを解除する</h2>
+
+
+  <p>テンキー<kbd>5</kbd>を押す。<br>
+    オートパイロットが解除される。</p>
+
+  <p>Map MFDで確認すると、両者の軌道が重なっているのがわかる。</p>
+
+  <p>
+    <img loading="lazy" src="../images/tutorial/part2/007.png" width="425" height="425">
+  </p>
+
+
+  <h2 id="failure">失敗したとき</h2>
+
+
+  <p>軌道のずれが小さくならなかった場合は、次のAN or DNでもう一度軌道修正する。<br>
+    このとき、ANとDNでそれぞれ必要な向きが異なるので注意すること。</p>
+
+
+  <h2 id="caution">解説</h2>
+
+
+  <p><strong>Delta Glider</strong>でエンジン全開にすると、<strong>Orbit Normal</strong>姿勢を維持できない。<br>
+    本チュートリアルでは、エンジン出力を半分程度に抑え、その代わり噴射時間を2倍に伸ばしている。</p>
+
+  <p>このため、一番下の<strong>KILL THRUST</strong>&nbsp;or&nbsp;<strong>ENGAGE THRUST</strong>の表示は無視すること。</p>
+
+  <p>より詳しい情報を知りたい場合は、以下の記事を参照してください。<br>
+    <a href="align-planes-mfd.html" target="_blank">Align Planes MFD</a>
+  </p>
+
+
+  <h2 id="form">アンケート</h2>
+
+
+  <form action="https://docs.google.com/forms/d/e/1FAIpQLScecuagTknnyoedsCqdlQEX1T9zYanc7b11IUe07819IOYu3w/formResponse" target="_self" method="POST" id="mG61Hd">
+
+    <p>この記事の内容は理解できましたか？</p>
+
+    <ul>
+      <li><label><input type="radio" name="entry.1914587356" value="できなかった、全然理解できない" />できなかった、全然理解できない</label></li>
+      <li><label><input type="radio" name="entry.1914587356" value="できなかった、途中から理解できない" />できなかった、途中から理解できない</label></li>
+      <li><label><input type="radio" name="entry.1914587356" value="できた、難しかった" />できた、難しかった</label></li>
+      <li><label><input type="radio" name="entry.1914587356" value="できた、簡単だった" />できた、簡単だった</label></li>
+    </ul>
+
+    <p><label for="question">わからなかった・難しかったところを教えてください（任意）</label><br>
+      <input id="question" type="text" name="entry.1857549962">
+    </p>
+
+    <p>公開されますので個人情報を記入しないでください。<br>
+      <button type="submit" name="button" value="送信">送信</button>
+    </p>
+
+  </form>
+
+
+  <h2 id="video">動画</h2>
+
+
+  <p><a href="https://youtu.be/hhGHWAqltbI" target="_blank">YouTube</a></p>
+
+  <p><a href="https://www.nicovideo.jp/watch/sm25459809" target="_blank">ニコニコ動画</a></p>
+
+</body>
+
+</html>

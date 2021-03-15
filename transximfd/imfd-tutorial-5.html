@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../styles/orbiterjp.css">
+  <script src="../scripts/template.js" charset="utf-8" defer></script>
+  <script src="../scripts/prevnext_imfd.js" charset="utf-8" defer></script>
+  <title>IMFD Part5 Map Programの基本操作</title>
+</head>
+
+<body>
+
+  <h1>IMFD Part5 Map Programの基本操作</h1>
+
+
+<p>IMFDの<strong>Map Program</strong>は、惑星や宇宙船の位置と軌道を表示できるツールです。<br>
+OrbiterのMODのなかで、もっとも軌道予測の精度が高いことで知られています。</p>
+
+<ul>
+<li><a href="#map">Map Programを開く</a></li>
+<li><a href="#control">Map Programの操作</a>
+  <ul>
+  <li><a href="#control_dsp">天体の軌道を表示する</a></li>
+  <li><a href="#control_zoom">拡大・縮小する</a></li>
+  <li><a href="#control_cnt">表示の中心を切り替える</a></li>
+  <li><a href="#control_pe">Pe / Apの表示を切り替える</a></li>
+  <li><a href="#control_page">ページを切り替える</a></li>
+  <li><a href="#control_orbit">宇宙船の軌道を表示する</a></li>
+  <li><a href="#control_soi">重力圏を表示する</a></li>
+  <li><a href="#control_tgt">ターゲットを指定する</a></li>
+  <li><a href="#control_int">インターセプト・モード</a></li>
+  <li><a href="#control_ref">表示の基準を変更する</a></li>
+  </ul>
+</li>
+<li><a href="#mcc">手動で軌道修正する</a></li>
+<li><a href="#caution">注意点</a></li>
+</ul>
+
+
+<h2 id="map">Map Programを開く</h2>
+
+
+<p><strong>Program Menu</strong>から<kbd>Map</kbd>をクリック。</p>
+
+
+<h2 id="control">Map Programの操作</h2>
+
+
+<p>Map Programの主要な機能について解説する。</p>
+
+
+<h3 id="control_dsp">天体の軌道を表示する</h3>
+
+
+<p>MFD右側の<kbd>Dsp</kbd>(Display)をクリックすると、すべての惑星の軌道が表示される。</p>
+
+<p>
+<img loading="lazy" src="../images/transximfd/imfd-tutorial-5/002.png" width="413" height="406">
+</p>
+
+
+<h3 id="control_zoom">拡大・縮小する</h3>
+
+
+<p><kbd>Z+</kbd> or <kbd>Z-</kbd>で拡大・縮小する。<br>
+<kbd>Azo</kbd>(Auto zoom)で自機を中心とした一定範囲を表示する。</p>
+
+
+<h3 id="control_cnt">表示の中心を切り替える</h3>
+
+
+<p><kbd>Cnt</kbd>(Center)をクリックして宇宙船や星の名前を入力すると、それらを中心にして表示する。<br>
+<strong>x</strong>と入力すると自機が中心になる。</p>
+
+<p>
+<img loading="lazy" src="../images/transximfd/imfd-tutorial-5/003.png" width="510" height="221">
+</p>
+
+<p>目標の天体に最接近したときの近点(Pe)を中心にすることもできる。<br>
+例えば地球から月に移動中なら、<strong>p-moon</strong>と入力する。</p>
+
+
+<h3 id="control_pe">Pe / Apの表示を切り替える</h3>
+
+
+<p><kbd>Sel</kbd>をクリックすると、左側に表示される<strong>Pe</strong> / <strong>Ap</strong>を切り替える。<br>
+地球→月のフライトだと、近地点、近月点などを切り替える。</p>
+
+
+<h3 id="control_page">ページを切り替える</h3>
+
+
+<p>MFD左側の<kbd>PG</kbd>をクリックすると、2ページ目に移る。<br>
+1ページと2ページで使用できる機能が異なる。</p>
+
+<p>
+<img loading="lazy" src="../images/transximfd/imfd-tutorial-5/004.png" width="454" height="379">
+</p>
+
+
+<h3 id="control_orbit">宇宙船の軌道を表示する</h3>
+
+
+<p><kbd>Slf</kbd>(Self)で自機の軌道を表示する・非表示にする。<br>
+<kbd>Plan</kbd>でTarget Interceptなどのフライトプランを表示する。</p>
+
+
+<h3 id="control_soi">重力圏を表示する</h3>
+
+
+<p><kbd>Soi</kbd>(Sphere of Influence)をクリックすると、惑星・衛星の重力圏（影響圏）が点線で表示される。</p>
+
+<p>
+<img loading="lazy" src="../images/transximfd/imfd-tutorial-5/005.png" width="365" height="307">
+</p>
+
+
+<h3 id="control_tgt">ターゲットを指定する</h3>
+
+
+<p>MFD左側の<kbd>TGT</kbd>をクリックして、惑星・宇宙船の名前を入力するとターゲットを指定する。<br>
+右側の<kbd>Find</kbd>で選択可能なターゲットを順に切り替える。</p>
+
+<p>
+<img loading="lazy" src="../images/transximfd/imfd-tutorial-5/006.png" width="404" height="387">
+</p>
+
+
+<h3 id="control_int">インターセプト・モード</h3>
+
+
+<p><kbd>Int</kbd>をクリックすると、Intercept Mode（インターセプト・モード）になる。<br>
+インターセプトする時点での自機とターゲットの位置を点線で表示する。</p>
+
+
+<h3 id="control_ref">表示の基準を変更する</h3>
+
+
+<p>MFD左側の<kbd>REF</kbd>をクリックして惑星・宇宙船の名前を入力すると、軌道表示の基準が変わる。<br>
+例えば、Marsと入力すると、火星から見た自機の軌道を表示する。</p>
+
+<p>
+<img loading="lazy" src="../images/transximfd/imfd-tutorial-5/007.png" width="456" height="416">
+</p>
+
+
+<h2 id="mcc">手動で軌道修正する</h2>
+
+
+<p><kbd>Ref</kbd>と<kbd>Cnt</kbd>を目標の惑星にすると、TransXの<a href="transxbasics.html#view_encounter" target="_blank">View:Encounter</a>と同じように使うことができる。<br>
+明るい緑の線で表示されている自機の軌道を見ながら、手動で軌道を調整する。</p>
+
+
+<h2 id="caution">注意点</h2>
+
+
+<p>IMFDのほかの機能（<strong>Target Intercept</strong>など）は別の計算方法を用いているため、精度があまり高くない。<br>
+<strong>Target Intercept</strong>で作成した軌道を<strong>Map Program</strong>で検証することで、正確に目的地に到達することができる。</p>
+
+</body>
+</html>

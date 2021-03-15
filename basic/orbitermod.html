@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../styles/orbiterjp.css">
+  <script src="../scripts/template.js" charset="utf-8" defer></script>
+  <title>OrbiterにMODを導入する</title>
+
+<script>
+window.MathJax = {
+  tex: {
+    tags: 'ams'
+  }
+};
+</script>
+
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+</head>
+<body>
+
+  <h1>OrbiterにMODを導入する</h1>
+
+
+<ul>
+<li><a href="#aboutmods">MODとは何か？</a></li>
+<li><a href="#download">MODの入手方法</a></li>
+<li><a href="#install">MODのインストール</a>
+  <ul>
+  <li><a href="#install_exe">インストーラ形式</a></li>
+  <li><a href="#install_zip">Zipファイル</a></li>
+  <li><a href="#enablemods">MODの有効化</a></li>
+  <li><a href="#others">その他のケース</a></li>
+  <li><a href="#jsgme">JSGMEを使う</a></li>
+  </ul>
+</li>
+<li><a href="#compatibility">MODの互換性</a></li>
+</ul>
+
+
+<h2 id="aboutmods">MODとは何か？</h2>
+
+
+<p><strong>MOD</strong>（モッド）というのは「ユーザーが作ったゲームのための追加ファイル」のことです。<br>
+<strong>ADDON</strong>（アドオン）と呼ばれることもありますが、これらはまったく同じものです。<br>
+また、MODを入れていない環境のことを「<strong>バニラ</strong>」と呼びます。</p>
+
+<h2 id="download">MODの入手方法</h2>
+
+<p>OrbiterのMODのほとんどが、<a href="http://www.orbithangar.com/index.php" target="_blank">Orbit Hangar Mods</a>にて公開されています。<br>
+左上の<kbd>Browse</kbd>と書かれたリンクをクリックすると、カテゴリー別にMODを閲覧することができます。</p>
+
+<p><strong>Download</strong>と書かれたボタンをクリック。</p>
+
+<p>
+<img loading="lazy" src="../images/basic/orbitermod/005.png" width="384" height="119">
+</p>
+
+<p>青字のリンクをクリックすると、ダウンロードが開始される。</p>
+
+<p>
+<img loading="lazy" src="../images/basic/orbitermod/006.png" width="646" height="116">
+</p>
+
+
+<h2 id="install">MODのインストール</h2>
+
+
+<p>MODによって、インストールの手順は異なります。</p>
+
+
+<h3 id="install_exe">インストーラ形式</h3>
+
+
+<p><strong>.exe</strong>ファイルで配布されているMODの場合は、ダブルクリックしてインストーラの指示に従うだけです。<br>
+たいていの場合、以下のような手順になっています。</p>
+
+<p>
+<img loading="lazy" src="../images/basic/orbitermod/004.png" width="631" height="205">
+</p>
+
+<p><kbd>Browse</kbd>と書かれたボタンをクリックして、Orbiterがインストールされているフォルダを指定する。<br>
+<kbd>Install</kbd>と書かれたボタンをクリックすると、中のファイルが自動的にインストールされる。</p>
+
+
+<h3 id="install_zip">Zipファイル</h3>
+
+
+<p>Zipファイルなどの圧縮ファイルを自分で解凍して、インストールする必要があるMODも多く存在します。</p>
+<p>解凍ソフトについてですが、筆者は<a href="http://sevenzip.osdn.jp/" target="_blank">7-Zip</a>を使っています。<br>
+もちろんこれ以外の解凍ソフトでも問題ありません。<br>
+解凍ソフトの使い方については、それぞれのマニュアルを参照してください。</p>
+<p>解凍されたMODフォルダの中には、様々なフォルダが入っているはずです。<br>
+これをOrbiterのインストールフォルダと比較すると、同名のフォルダが並んでいることがわかります。</p>
+<p>
+<img loading="lazy" src="../images/basic/orbitermod/modsinstall.png" width="533" height="384"><br>
+（左がOrbiterのフォルダ、右がMODフォルダ）</p>
+<p>MODフォルダの中にあるフォルダをすべてコピーして、Orbiterのフォルダにペーストして上書きします。</p>
+
+
+<h3 id="enablemods">MODの有効化</h3>
+
+
+<p>一部のMODでは、Orbiterの側で有効化しないと使えないことがあります。</p>
+<p><strong>Launchpad</strong>の<kbd>Modules</kbd>ボタンをクリック。<br>
+該当するMODにチェックを入れてください。</p>
+
+<p>
+<img loading="lazy" src="../images/basic/orbitermod/001.png" width="286" height="367">
+</p>
+
+<h3 id="others">その他のケース</h3>
+
+<p><strong class="caution">重要</strong>：MODによってはConfigファイルの編集などが必要なものもあります。※<br>
+readmeファイルやマニュアルをよく確認してください。</p>
+<p>どうしてもわかりにくい場合は、こちらで質問していただければ可能なかぎり回答します。</p>
+<p>※Configファイルの編集が必要なMODの例：<br>
+<a href="orbiter2010visualmods.html" target="_blank">Orbiter2010のグラフィックMOD</a><br>
+<a href="../mods/space-elevator-mod.html" target="_blank">Space Elevator MODのダウンロード+インストール</a></p>
+
+
+<h3 id="jsgme">JSGMEを使う</h3>
+
+
+<p>ここまでの内容を踏まえたうえで、以下の記事を参照してください。<br>
+<a href="../misc/jsgme.html" target="_blank">JSGMEを使ったMODのインストール</a></p>
+
+
+<h2 id="compatibility">MODの互換性</h2>
+
+
+<p>ダウンロードリンクの右に、対応バージョンが記載されています。</p>
+
+<p>
+<img loading="lazy" src="../images/basic/orbitermod/007.png" width="646" height="116">
+</p>
+
+<p>Orbiter2016では、Orbiter2006・2010向けMODの大半が正常に動作しません。</p>
+<p>Orbiter2010では、Orbiter2006・2010向けMODの両方が使えます。<br>
+当然ながら、2010で2016向けのMODを動かすことはできません。</p>
+<p>ごくわずかな例外を除いて、2006のMODは2010で正常に動作します。※<br>
+Orbiter2006を導入する必要はありません。</p>
+<p class="note">※シナリオファイルの書き換えが必要な場合もあります</p>
+
+</body>
+</html>

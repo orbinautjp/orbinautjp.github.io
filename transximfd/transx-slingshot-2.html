@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../styles/orbiterjp.css">
+  <script src="../scripts/template.js" charset="utf-8" defer></script>
+  <script src="../scripts/prevnext_slingshot.js" charset="utf-8" defer></script>
+  <title>スイングバイの基本 プランの作成 (2)</title>
+</head>
+
+<body>
+
+  <h1>スイングバイの基本 プランの作成 (2)</h1>
+
+
+<ol>
+<li><a href="#slingshot">木星から土星へ</a></li>
+<li><a href="#correction">プランの修正</a>
+  <ul>
+  <li><a href="#correction_tji">木星までの軌道を修正する</a></li>
+  <li><a href="#correction_trajectories">2つの軌道を一致させる</a></li>
+  </ul>
+</li>
+</ol>
+
+<ul>
+<li><a href="#explanation">解説</a></li>
+</ul>
+
+
+<h2 id="slingshot">木星から土星へ</h2>
+
+
+<p><strong>Stage4</strong>に進むと、<strong>View:Sling Direct</strong>の画面が表示されるようになる。</p>
+
+<p>
+<img loading="lazy" src="../images/transximfd/transx-slingshot-2/grandtour011.png" width="573" height="575">
+</p>
+
+<p><kbd>VAR</kbd>を何度かクリックして、<strong>Outward angle</strong>を選択。<br>
+<kbd>++</kbd> or <kbd>--</kbd>をクリックして（<kbd>ADJ</kbd> or <kbd>-AJ</kbd>で微調整）、<strong>Cl. App</strong>をできるだけ小さくする。</p>
+<p><kbd>VAR</kbd>をクリックして、<strong>Inc. angle</strong>を選択。<br>
+同様に<strong>Cl. App</strong>をできるだけ小さくする。</p>
+<p>ある程度小さくなったら、反対側のMFDで<strong>Stage5</strong>の<strong>View:Encounter</strong>を表示する。</p>
+
+<p>
+<img loading="lazy" src="../images/transximfd/transx-slingshot-2/grandtour012.png" width="573" height="572">
+</p>
+
+<p><strong>Stage5</strong>を見ながら、<strong>Outward angle</strong>と<strong>Inc. angle</strong>を交互に操作して、土星に衝突するような軌道にする。※</p>
+<p class="note">※誤差が大きいので、実際には衝突しません</p>
+
+
+<h2 id="correction">プランの修正</h2>
+
+
+<p>前回作成した木星までの遷移軌道と、木星でのスリングショット軌道を一致させる。</p>
+
+
+<h3 id="correction_tji">木星までの軌道を修正する</h3>
+
+
+<p><strong>Stage3</strong>に戻ると、緑と黄色の線が表示されている。<br>
+黄色の線がスリングショットに必要な軌道、緑の線が<strong>Stage2</strong>で作成した軌道。<br>
+両方の線を一致させることで、スリングショットが可能な軌道になる。</p>
+
+<p>片方のMFDは<strong>Stage3</strong>の<strong>View:Slingshot</strong>を表示しておく。<br>
+別のMFDで<strong>Stage2</strong>の<strong>View:Eject Plan</strong>を表示する。</p>
+
+<p><strong>Stage2</strong>の</p>
+
+<ul>
+<li><strong>Outward vel.</strong></li>
+<li><strong>Ch. plane vel.</strong></li>
+</ul>
+
+<p>を操作して、<strong>Stage3</strong>で黄色と緑の線が重なるようにする。</p>
+
+<p><strong>Stage3</strong>の左下に表示されている、<br>
+<strong>R. Inc</strong>を<strong>0</strong>に<br>
+<strong>Pe Ratio</strong>をできるだけ<strong>1</strong>に近づける。</p>
+<p>TransXの計算には多少の誤差があるので、桁の小さい数字は無視してもよい。</p>
+
+<p>
+<img loading="lazy" src="../images/transximfd/transx-slingshot-2/grandtour014.png" width="570" height="570">
+</p>
+
+
+<h3 id="correction_trajectories">2つの軌道を一致させる</h3>
+
+
+<p>片方のMFDを<strong>Stage4</strong>、反対側を<strong>Stage5</strong>に戻す。</p>
+<p><strong>Stage2</strong>の操作によって、多少のずれが生じている。<br>
+<strong>Outward angle</strong>と<strong>Inc. angle</strong>を交互に操作して、土星に衝突するような軌道にする。</p>
+<p>終わったら、また<strong>Stage2</strong>と<strong>Stage3</strong>に戻る。<br>
+また黄色と緑の線が重なるように微調整する。</p>
+<p><strong>Stage5</strong>に戻る。<br>
+今度は、土星に衝突する軌道のままになっている。</p>
+
+<p>
+<img loading="lazy" src="../images/transximfd/transx-slingshot-2/grandtour017.png" width="960" height="540">
+</p>
+
+<p>次回はこのプランを実行し、木星と土星を目指して出発する。</p>
+
+
+<h2 id="explanation">解説</h2>
+
+
+<p>
+まず、スイングバイを実行する天体までの遷移軌道を作成する。<br>
+この作業によって、どのような速度で最初の天体を通過するかが決定される。
+</p>
+
+<p>
+次に、天体のどのあたりを通過するかを選択する。<br>
+<strong>Outward vel.</strong>が天体の進行方向に対しての前後。<br>
+<strong>Ch. plane vel.</strong>が天体の公転面に対しての上下。<br>
+これによって、スイングバイのあとで軌道がどのように変化するかが決定される。
+</p>
+
+<p>
+遷移軌道を修正して、先に決めたとおりに天体のそばを通過するようにする。<br>
+しかし、遷移軌道を変化させると、天体を通過するときの速度も変化してしまう。<br>
+このため、スイングバイ後の軌道をもう一度修正する必要がある。
+</p>
+
+<p>
+「スイングバイ前の遷移軌道」と「スイングバイ後の軌道」をすり合わせることによって、無駄のないスイングバイ軌道を作成することができる。
+</p>
+
+</body>
+</html>

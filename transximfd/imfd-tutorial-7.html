@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../styles/orbiterjp.css">
+  <script src="../scripts/template.js" charset="utf-8" defer></script>
+  <script src="../scripts/prevnext_imfd.js" charset="utf-8" defer></script>
+  <title>IMFD Part7 効率のよい軌道を探す</title>
+</head>
+
+<body>
+
+  <h1>IMFD Part7 効率のよい軌道を探す</h1>
+
+
+<p><strong>Target Intercept</strong>を使ってプランやマニューバを作成するときに、できるだけDelta Vを小さくする方法について説明します。</p>
+
+<ul>
+<li><a href="#tof">TEj・TInを探す</a>
+  <ul>
+  <li><a href="#tof_locked">TOF-Lockedで探す</a></li>
+  <li><a href="#tof_unlock">TOF-UnLockで探す</a></li>
+  </ul>
+</li>
+</ul>
+
+
+<h2 id="tof">TEj・TInを探す</h2>
+
+
+<p><strong>TOF-Locked</strong>で大まかな日時を決めてから、<strong>TOF-UnLock</strong>にして微調整します。</p>
+
+
+<h3 id="tof_locked">TOF-Lockedで探す</h3>
+
+
+<p><strong>Target Intercept</strong>を起動して、ターゲットを指定する。（今回の例では火星）<br>
+この段階では<strong>TEj</strong>と<strong>TIn</strong>の日時を変更せずそのままにしておく。</p>
+<p>まず最初に<strong>TOF-Locked</strong>にする。</p>
+
+<p>
+<img loading="lazy" src="../images/transximfd/imfd-tutorial-7/001.png" width="224" height="152">
+</p>
+
+<p><strong>TEj</strong>の下の<strong>MJD</strong>に移動して、<strong>Adj-10x</strong>で日時を進める（<kbd>+</kbd>を長押しクリックする）。<br>
+<strong>Escape Vector</strong>の<strong>Tot</strong>が最小になるまで時間を進める。</p>
+
+<p>
+<img loading="lazy" src="../images/transximfd/imfd-tutorial-7/002.png" width="309" height="309">
+</p>
+
+
+<h3 id="tof_unlock">TOF-UnLockで探す</h3>
+
+
+<p><strong>TOF-UnLock</strong>にする。</p>
+<p>ふたたび<strong>TEj</strong>の下の<strong>MJD</strong>に戻って、<strong>Tot</strong>が小さくなるように日時を進めたり戻したりする。<br>
+必要に応じて<strong>Adj</strong>の倍率を変更する。</p>
+
+<p>
+<img loading="lazy" src="../images/transximfd/imfd-tutorial-7/003.png" width="220" height="182">
+</p>
+
+<p><strong>Tot</strong>の値が下がらなくなったら、<strong>TIn</strong>の下の<strong>MJD</strong>に移動する。<br>
+<strong>TEj</strong>と同じように、<strong>Tot</strong>ができるだけ小さくなるように<strong>TIn</strong>の日時を変更する。</p>
+
+<p>
+<img loading="lazy" src="../images/transximfd/imfd-tutorial-7/004.png" width="226" height="177">
+</p>
+
+<p>ふたたび<strong>TEj</strong>に戻って、同じ手順を繰り返す。<br>
+また<strong>TIn</strong>に戻って、同じ手順を繰り返す。<br>
+これを<strong>Tot</strong>がそれ以上下がらなくなるまで続ける。</p>
+<p>今回の例では、火星までおよそ307日かかることになる。</p>
+
+<p>
+<img loading="lazy" src="../images/transximfd/imfd-tutorial-7/005.png" width="390" height="303">
+</p>
+
+<p>このようにして日時を細かく調整することで、より効率のよい軌道を探すことができます。</p>
+
+</body>
+</html>

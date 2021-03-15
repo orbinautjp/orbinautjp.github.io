@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../styles/orbiterjp.css">
+  <script src="../scripts/template.js" charset="utf-8" defer></script>
+  <title>Realism（リアリズム）とPerturbations（摂動）</title>
+</head>
+
+<body>
+
+  <h1>Realism（リアリズム）とPerturbations（摂動）</h1>
+
+
+<p><strong>Realism</strong>と<strong>Perturbations</strong>の設定について説明します。</p>
+
+<ul>
+<li><a href="#realism">Realism</a>
+  <ul>
+  <li><a href="#realism_flightmodel">Complex flight model</a></li>
+  <li><a href="#realism_damage">Damage and failure simulation</a></li>
+  <li><a href="#realism_fuel">Limited fuel</a></li>
+  <li><a href="#realism_autorefuel">Auto-refuel on pad</a></li>
+  </ul>
+</li>
+<li><a href="#perturbations">Perturbations</a>
+  <ul>
+  <li><a href="#perturbations_nonspherical">Nonspherical gravity sources</a></li>
+  <li><a href="#perturbations_radiation">Radiation pressure</a></li>
+  <li><a href="#perturbations_gradient">Gravity-gradient torque</a></li>
+  <li><a href="#perturbations_wind">Atmospheric wind effects (2016)</a></li>
+  </ul>
+</li>
+</ul>
+
+<p><strong>Launchpad</strong>の<kbd>Parameters</kbd>をクリック。<br>
+チェックを入れると有効、外すと無効になる。</p>
+
+<p>
+<img loading="lazy" src="../images/basic/realismperturbations/launchpad.png" width="300" height="300">
+</p>
+
+
+<h2 id="realism">Realism（リアリズム）</h2>
+
+
+<h3 id="realism_flightmodel">Complex flight model（複雑なフライトモデル）</h3>
+
+
+<p>大気圏内での挙動に影響する。<br>
+これが有効になっていると、金星に降りたときに大気圧の関係でエンジンを点火しても推力が得られず、宇宙に戻れなくなる。</p>
+
+
+<h3 id="realism_damage">Damage and failure simulation（ダメージ・故障のシミュレーション）</h3>
+
+
+<p>再突入などにおいて、機体が壊れて操縦不能になることがある。</p>
+
+
+<h3 id="realism_fuel">Limited fuel（有限の燃料）</h3>
+
+
+<p>燃料が減らなくなる。<br>
+機体が軽くならないということでもあるので、かえって難しくなることも。</p>
+
+
+<h3 id="realism_autorefuel">Auto-refuel on pad（パッドでの自動燃料補給）</h3>
+
+
+<p>パッド（円形の着陸場）に降りると、自動的に燃料が満タンになる。<br>
+無補給で月まで往復したい場合などでは切っておこう。</p>
+
+
+<h2 id="perturbations">Perturbations（摂動）</h2>
+
+
+<h3 id="perturbations_nonspherical">Nonspherical gravity sources（非球対称な重力源）</h3>
+
+
+<p>惑星の重力が非球対称になる。</p>
+
+<p>具体的には、一部MFDの表示が不正確になる。<br>
+現実の地球は単純な球体ではない（赤道付近が膨らんでいる）ので、重力にもごくわずかながらばらつきがある。<br>
+MFDは現時点のデータをもとに、地球が完全な球体であると仮定して計算するので、結果に誤差が生じる。</p>
+
+<p>ちなみに、このオプションを有効にすると、太陽同期軌道を再現することもできる。</p>
+
+
+<h3 id="perturbations_radiation">Radiation pressure（輻射圧）</h3>
+
+
+<p>太陽の輻射圧の影響を再現する。<br>
+太陽帆船が動いたりする。</p>
+
+
+<h3 id="perturbations_gradient">Gravity-gradient torque（重力勾配トルク）</h3>
+
+
+<p>周回軌道上の物体に、回転させるような力が働く。<br>
+これを応用して、宇宙船の姿勢・軌道を変化させることもできる。</p>
+
+<p><a href="https://www.orbithangar.com/showAddon.php?id=99369836-e909-4516-874a-3760c957981c" target="_blank">TetherMFD v1.0</a></p>
+
+
+<h3 id="perturbations_wind">Atmospheric wind effects（大気圏内での風）</h3>
+
+
+<p>地球などの大気圏内で風が吹くようになる。<br>
+打ち上げや大気圏内での飛行中に、機体が風に流されることがある。<br>
+<strong>Orbiter2016</strong>で実装された。</p>
+
+</body>
+</html>

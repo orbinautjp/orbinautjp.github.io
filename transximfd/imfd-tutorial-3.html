@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../styles/orbiterjp.css">
+  <script src="../scripts/template.js" charset="utf-8" defer></script>
+  <script src="../scripts/prevnext_imfd.js" charset="utf-8" defer></script>
+  <title>IMFD Part3 Orbit Ejectを使って地球を離れる</title>
+</head>
+
+<body>
+
+  <h1>IMFD Part3 Orbit Ejectを使って地球を離れる</h1>
+
+
+<ul>
+<li><a href="#preburn">噴射前の準備</a>
+  <ul>
+  <li><a href="#preburn_eject">Orbit Ejectを開く</a></li>
+  <li><a href="#preburn_tej">TEjを一致させる</a></li>
+  <li><a href="#preburn_align">軌道のずれを修正する</a></li>
+  <li><a href="#preburn_retry">噴射のタイミングを逃したとき</a></li>
+  </ul>
+</li>
+<li><a href="#burn">エンジンを噴射する</a></li>
+</ul>
+
+
+<h2 id="preburn">噴射前の準備</h2>
+
+
+<h3 id="preburn_eject">Orbit Ejectを開く</h3>
+
+
+<p>左のIMFDは<strong>Target Intercept</strong>を開いたままにしておく。<br>
+右のIMFDで<strong>Program Menu</strong>から<strong>Orbit Eject</strong>を選択する。</p>
+
+<p>
+<img loading="lazy" src="../images/transximfd/imfd-tutorial-3/001.png" width="831" height="416">
+</p>
+
+<p><strong>Orbit Eject</strong>で<kbd>+</kbd>をクリックして、<strong>Higher Orbit</strong>から<strong>Course</strong>に切り替える。<br>
+<kbd>PRJ</kbd>をクリックして、グラフの表示を<strong>Self</strong>にする。</p>
+
+<p>
+<img loading="lazy" src="../images/transximfd/imfd-tutorial-3/002.png" width="334" height="365">
+</p>
+
+
+<h3 id="preburn_tej">TEjを一致させる</h3>
+
+
+<p><strong>Orbit Eject</strong>に表示されている<strong>TEj</strong>の下の<strong>MJD</strong>を確認する。<br>
+<strong>Target Intercept</strong>の<strong>TEj</strong>の下の<strong>MJD</strong>を同じ数字にする。</p>
+
+<p>
+<img loading="lazy" src="../images/transximfd/imfd-tutorial-3/003.png" width="241" height="283">
+</p>
+
+
+<h3 id="preburn_align">軌道のずれを修正する</h3>
+
+
+<p><strong>Orbit Eject</strong>に戻る。<br>
+点線で結ばれた2つの四角はそれぞれ<kbd>AN</kbd> or <kbd>DN</kbd>を指している。<br>
+この近くで<kbd>NML+</kbd> or <kbd>NML-</kbd>を使ってエンジンを噴射すると、<strong>EIn</strong>をゼロにすることができる。※</p>
+
+<p>
+<img loading="lazy" src="../images/transximfd/imfd-tutorial-3/004.png" width="451" height="282">
+</p>
+
+<p class="note">※IMFDは自動でEInを考慮して噴射してくれるので、あまり神経質にならなくてもよい</p>
+<p>緑の円（現在の軌道）と青い曲線（予定される火星行き軌道）の交点でエンジンを噴射する。</p>
+
+
+<h3 id="preburn_retry">噴射のタイミングを逃したとき</h3>
+
+
+<p>エンジンを噴射しないまま交点を通り過ぎてしまった場合は、<kbd>+</kbd>か<kbd>-</kbd>をクリック。</p>
+
+<p>
+<img loading="lazy" src="../images/transximfd/imfd-tutorial-3/005.png" width="228" height="181">
+</p>
+
+<p>いったん<strong>Course以外</strong>（<strong>Sling-Shot</strong>など）を選択して、また<strong>Course</strong>に戻す。</p>
+
+<p>
+<img loading="lazy" src="../images/transximfd/imfd-tutorial-3/006.png" width="526" height="190">
+</p>
+
+<p><strong>TEj</strong>が変更されるので、新しい値を<strong>Target Intercept</strong>に入力する。</p>
+
+
+<h2 id="burn">エンジンを噴射する</h2>
+
+
+<p>準備ができたら、<strong>Orbit Eject</strong>で<kbd>PG</kbd>（Page=ページ変更）をクリック。<br>
+<kbd>BV</kbd>(Burn Vector)をクリックしてから※、<kbd>AB</kbd>(Auto Burn)をクリック。</p>
+
+<p>
+<img loading="lazy" src="../images/transximfd/imfd-tutorial-3/007.png" width="421" height="390">
+</p>
+
+<p class="note">※BV画面を開かなくても噴射は可能</p>
+<p>カウントダウンが開始されたら、タイムワープで放置する。<br>
+IMFDが自動でタイムワープを解除して噴射を実行するので、何もせず待つ。</p>
+<p>噴射が終わったら、<kbd>BV</kbd>をクリックして元の画面に戻る。<br>
+タイムワープを使って、地球の重力圏を離れるのを待つ。</p>
+<p>地球の重力圏を離れたら、<strong>Orbit Eject</strong>に<strong>Have a nice voyage!</strong>のメッセージが表示される。</p>
+
+</body>
+</html>

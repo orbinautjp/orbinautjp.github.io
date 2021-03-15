@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../styles/orbiterjp.css">
+  <script src="../scripts/template.js" charset="utf-8" defer></script>
+  <title>AMSO ドッキングとTLI</title>
+</head>
+
+<body>
+
+  <h1>AMSO ドッキングとTLI</h1>
+
+
+  <h2>ドッキング</h2>
+
+  <p>ここでは<strong>Apollo 11 step 06</strong>のシナリオを使用します。<br>
+    <img loading="lazy" src="../images/apollo/amso-docking-tli/AMSO004.png" width="160" height="152">
+  </p>
+  <p><kbd>J</kbd>を押して、CSM（司令･機械船）をロケットから分離する。</p>
+  <p><kbd>F1</kbd>を押して船内視点に、<kbd>F8</kbd>を押してコクピット視点にする。<br>
+  <kbd>Ctrl</kbd> + <kbd>Alt</kbd> + <strong>矢印キー</strong>の同時押しでカメラを左上に移動させる。<br>
+  <kbd>Ctrl</kbd> + <kbd>Z</kbd>の同時押しでFOVを変更する。（<kbd>Ctrl</kbd> + <kbd>X</kbd>で戻す）</p>
+
+  <p>
+    <img loading="lazy" src="../images/apollo/amso-docking-tli/AMSO005.png" width="576" height="324">
+  </p>
+  <p><strong>RCS ROT</strong>で真後ろを向く。（<kbd>TAB</kbd>キーで左上にRCSの表示が出るので確認する）<br>
+    
+  <strong>LM</strong>（月着陸船）が見えたら回転を止める。<br>
+  船体をロールさせて（テンキーの<kbd>6</kbd>）、ドッキング用の目印に十字線を合わせる。</p>
+
+  <p>
+    <img loading="lazy" src="../images/apollo/amso-docking-tli/AMSO006.png" width="510" height="339">
+  </p>
+  <p><strong>RCS LIN</strong>を使って<strong>LM</strong>に接近する。<br>
+  上下左右に移動して、ドッキング用の目印の赤い部分が見えないようにする。</p>
+
+  <p>
+    <img loading="lazy" src="../images/apollo/amso-docking-tli/AMSO007.png" width="489" height="360">
+  </p>
+  <p>そのまま前進すれば、自動的にドッキングされる。<br>
+  ドッキングが完了したら、<kbd>J</kbd>を押してLMを分離する。</p>
+
+  <p>
+    <img loading="lazy" src="../images/apollo/amso-docking-tli/AMSO008.png" width="442" height="259">
+  </p>
+  
+  <h2>TLI</h2>
+  
+  <p>TLI（Trans-lunar injection）とは、地球軌道から月へ向けてエンジンを噴射することです。<br>
+  この噴射にはIMFDというMODを使用します。※</p>
+  <p class="note">※IMFDではなく<a href="../mods/lunartransfermfd.html">LTMFD</a>を使用することもできます。<br>
+  LTMFDを使用する場合、自分で到着時刻などを入力する必要があります。</p>
+  
+  <h3>IMFDのダウンロード+インストール</h3>
+  
+  <p>以下の記事を参照してください。<br>
+  <a href="../transximfd/imfd-download.html">IMFDのインストールと設定</a></p>
+  
+  <h3>TLIの実行</h3>
+  
+  <p>ここでは、<strong>Apollo 11 step 05</strong>というシナリオを使用します。<br>
+    <img loading="lazy" src="../images/apollo/amso-docking-tli/AMSO011.png" width="156" height="135">
+  </p>
+  <p>ゲームを開始したら、左MFDで<kbd>PG</kbd>をクリック。<br>
+  <kbd>BV</kbd>をクリック。</p>
+
+  <p>
+    <img loading="lazy" src="../images/apollo/amso-docking-tli/AMSO012.png" width="506" height="172">
+  </p>
+  <p><kbd>AB</kbd>をクリックすると、噴射へのカウントダウンが開始する。<br>
+  IMFDが自動で宇宙船の向きを変えて、エンジンを噴射するので待つ。</p>
+
+  <p>
+    <img loading="lazy" src="../images/apollo/amso-docking-tli/AMSO013.png" width="264" height="345">
+  </p>
+
+</body>
+</html>

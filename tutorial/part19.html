@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../styles/orbiterjp.css">
+  <script src="../scripts/template.js" charset="utf-8" defer></script>
+  <script src="../scripts/prevnext_tutorial.js" charset="utf-8" defer></script>
+  <title>Part19 金星への打ち上げ</title>
+</head>
+
+<body>
+
+  <h1>Part19 金星への打ち上げ</h1>
+
+
+  <p><strong>Plan</strong>を参考に、打ち上げ日時を決定します。</p>
+
+  <ol>
+    <li><a href="#launchdate">打ち上げ日まで移動する</a>
+      <ul>
+        <li><a href="#launchdate_scneditor">シナリオエディタを開く</a></li>
+        <li><a href="#launchdate_date">日時を入力する</a></li>
+      </ul>
+    </li>
+    <li><a href="#escapeplan">Escape Planを設定する</a>
+      <ul>
+        <li><a href="#escapeplan_parking">パーキング軌道の高度</a></li>
+        <li><a href="#escapeplan_orientation">打ち上げ方位を決定する</a></li>
+      </ul>
+    </li>
+    <li><a href="#launchtime">打ち上げ時刻を決定する</a>
+      <ul>
+        <li><a href="#launchtime_east">真東への打ち上げ</a></li>
+      </ul>
+    </li>
+  </ol>
+
+  <ul>
+    <li><a href="#related">関連項目</a></li>
+    <li><a href="#form">アンケート</a></li>
+    <li><a href="#videos">動画</a></li>
+  </ul>
+
+
+  <h2 id="launchdate">打ち上げ日まで移動する</h2>
+
+
+  <p><strong>Eject date</strong>の<strong>1日前</strong>に時間移動する。<br>
+    <a href="../misc/index.html#sceditor" target="_blank">シナリオエディタ</a>を使う。
+  </p>
+
+  <p>
+    <img loading="lazy" src="../images/tutorial/part19/001.png" width="425" height="425">
+  </p>
+
+
+  <h3 id="launchdate_scneditor">シナリオエディタを開く</h3>
+
+
+  <p>キーボードで<kbd>Ctrl</kbd>&nbsp;+&nbsp;<kbd>F4</kbd>を同時押しする。<br>
+    <strong>Custom functions</strong>の選択画面を開く。
+  </p>
+
+  <p><strong>Scenario Editor</strong>を選択する。<br>
+    <kbd>OK</kbd>をクリック。
+  </p>
+
+  <p>
+    <img loading="lazy" src="../images/tutorial/part19/002.png" width="254" height="276">
+  </p>
+
+  <p>見つからない場合は以下を参照すること。</p>
+
+  <ul>
+    <li><a href="../basic/orbiter2010.html#modules" target="_blank">モジュールの有効化 (2010)</a></li>
+    <li><a href="../basic/orbiter2016.html#activatemods">モジュールの有効化 (2016)</a></li>
+  </ul>
+
+
+  <h3 id="launchdate_date">日時を入力する</h3>
+
+
+  <p><kbd>Date</kbd>をクリック。</p>
+
+  <p>
+    <img loading="lazy" src="../images/tutorial/part19/003.png" width="401" height="414">
+  </p>
+
+  <p><strong>Modified Julian Date (MJD)</strong>を探す。</p>
+
+  <p><strong>Eject date</strong>の<strong>1日前</strong>の日時を入力する。※</p>
+
+  <p class="note">※例えば予定が<strong>55407.5</strong>なら、<strong>55406.5</strong>にする。</p>
+
+  <p><kbd>Apply</kbd>をクリック。</p>
+
+  <p>
+    <img loading="lazy" src="../images/tutorial/part19/004.png" width="401" height="414">
+  </p>
+
+
+  <h2 id="ejectdate">Eject dateを確認する</h2>
+
+
+  <p><strong>Eject date</strong>を選択しておく。</p>
+
+  <p><kbd>ADJ</kbd>を何度かクリック。<br>
+    感度を<strong>Micro</strong>にする。</p>
+
+  <p><kbd>++</kbd>を一回だけクリック。</p>
+
+  <p>
+    <img loading="lazy" src="../images/tutorial/part19/005.png" width="425" height="425">
+  </p>
+
+  <p>時間経過で計算結果が変化することがあるが、以上の手順で修正できる。<br>
+    失敗する場合は、<strong>Auto-Min</strong>が有効になっているか確認する。</p>
+
+
+  <h2 id="escapeplan">Escape Planを設定する</h2>
+
+
+  <p><strong>Stage 1</strong>の<strong>View:Setup</strong>に移動する。</p>
+
+  <p><kbd>VAR</kbd>を何度かクリック。<br>
+    <strong>Scale to view</strong>を<strong>Target</strong>にする。
+  </p>
+
+  <p><strong>Graph projection</strong>を<strong>Plan</strong>にする。</p>
+
+  <p>
+    <img loading="lazy" src="../images/tutorial/part19/006.png" width="425" height="425">
+  </p>
+
+  <p><kbd>VW</kbd>をクリック。<br>
+    <strong>View:Escape Plan</strong>にする。
+  </p>
+
+  <p>
+    <img loading="lazy" src="../images/tutorial/part19/007.png" width="425" height="425">
+  </p>
+
+
+  <h3 id="escapeplan_parking">パーキング軌道の高度</h3>
+
+
+  <p><strong>Pe Distance</strong>を入力する。</p>
+
+  <p><kbd>ENT</kbd>をクリック。<br>
+    <strong>6571000</strong>と入力する。
+  </p>
+
+  <p>
+    <img loading="lazy" src="../images/tutorial/part19/008.png" width="425" height="425">
+  </p>
+
+  <p>地球の半径は6,371km = 6371000mなので、これで高度200kmになる。</p>
+
+
+  <h3 id="escapeplan_orientation">打ち上げ方位を決定する</h3>
+
+
+  <p><kbd>VAR</kbd>をクリック。<br>
+    <strong>Ej Orientation</strong>を選択。
+  </p>
+
+  <p><kbd>++</kbd>をクリック。<br>
+    白い線と緑の線が重なるようにする。</p>
+
+  <p><strong>Heading</strong>（打ち上げ方位）が決まる。</p>
+
+  <p>
+    <img loading="lazy" src="../images/tutorial/part19/009.png" width="425" height="425">
+  </p>
+
+  <p>このとき、<strong>Heading</strong>が<strong>0°</strong>から<strong>180°</strong>までの範囲になるようにする。</p>
+
+  <p><strong>Heading</strong>が<strong>180°</strong>を超えるときは、いったん感度を<strong>Rough</strong>にする。<br>
+    <strong>Ej Orientation</strong>を操作して、もう一つの<strong>Heading</strong>を探す。
+  </p>
+
+  <p>このまま打ち上げる場合は、<a href="part20.html">Part20</a>に進む。</p>
+
+
+  <h2 id="launchtime">打ち上げ時刻を決定する</h2>
+
+
+  <p>このまま打ち上げることもできるが、より効率のよい打ち上げ時刻を決定する方法がある。</p>
+
+
+  <h3 id="launchtime_east">真東への打ち上げ</h3>
+
+
+  <p>タイムワープ<strong>100</strong>倍にする。</p>
+
+  <p>緑の線の先端が宇宙船の位置を示す。<br>
+    地球の自転によって緑の線が移動する。</p>
+
+  <p>
+    <img loading="lazy" src="../images/tutorial/part19/010.png" width="425" height="425">
+  </p>
+
+  <p><kbd>++</kbd>&nbsp;or&nbsp;<kbd>--</kbd>をクリック。<br>
+    白い線と緑の線が重なるようにする。</p>
+
+  <p>
+    <img loading="lazy" src="../images/tutorial/part19/011.png" width="425" height="425">
+  </p>
+
+  <p>繰り返しこの作業をすると、時間とともに<strong>Heading</strong>の数字が変化する。</p>
+
+  <p><strong>Heading</strong>が<strong>90°</strong>に近づくまで繰り返す。</p>
+
+  <p><strong>90°</strong>（真東）に打ち上げると、地球の自転による速度が利用できる。</p>
+
+  <p>
+    <img loading="lazy" src="../images/tutorial/part19/012.png" width="425" height="425">
+  </p>
+
+  <p>白い線が回転してしまうときは、<kbd>ADJ</kbd>をクリックして感度を小さくする。</p>
+
+  <p>条件によっては<strong>Heading</strong>が<strong>90°</strong>にならないこともある。<br>
+    その場合は、もっとも<strong>90°</strong>に近づいたときの<strong>Heading</strong>に打ち上げる。</p>
+
+
+  <h2 id="related">関連項目</h2>
+
+
+  <p>遷移軌道への打ち上げ日時を決定する方法について、その仕組みを解説している。</p>
+
+  <p><a href="launch-interplanetary.html" target="_blank">惑星間遷移軌道への打ち上げ</a></p>
+
+
+  <h2 id="form">アンケート</h2>
+
+
+  <form action="https://docs.google.com/forms/d/e/1FAIpQLSfPcYnFbTS4LAqvfrmEx-BxfDZ4qZUvvkMbpmzE4aSyIOM_fA/formResponse" target="_self" method="POST" id="mG61Hd">
+
+    <p>この記事の内容は理解できましたか？</p>
+
+    <ul>
+      <li><label><input type="radio" name="entry.1914587356" value="できなかった、全然理解できない" />できなかった、全然理解できない</label></li>
+      <li><label><input type="radio" name="entry.1914587356" value="できなかった、途中から理解できない" />できなかった、途中から理解できない</label></li>
+      <li><label><input type="radio" name="entry.1914587356" value="できた、難しかった" />できた、難しかった</label></li>
+      <li><label><input type="radio" name="entry.1914587356" value="できた、簡単だった" />できた、簡単だった</label></li>
+    </ul>
+
+    <p><label for="question">わからなかった・難しかったところを教えてください（任意）</label><br>
+      <input id="question" type="text" name="entry.1857549962">
+    </p>
+
+    <p>公開されますので個人情報を記入しないでください。<br>
+      <button type="submit" name="button" value="送信">送信</button>
+    </p>
+
+  </form>
+
+
+  <h2 id="videos">動画</h2>
+
+
+  <p><a href="https://youtu.be/v6qZi3gGk7M" target="_blank">YouTube</a></p>
+
+  <p><a href="https://www.nicovideo.jp/watch/sm25705169" target="_blank">ニコニコ動画</a></p>
+
+</body>
+
+</html>

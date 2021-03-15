@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../styles/orbiterjp.css">
+  <script src="../scripts/template.js" charset="utf-8" defer></script>
+  <title>Camera MFDのインストールと操作</title>
+</head>
+
+<body>
+
+  <h1>Camera MFDのインストールと操作</h1>
+
+
+  <p>
+    <strong>Camera MFD</strong>は、<a href="../basic/orbiter2016.html" target="_blank">Orbiter2016</a>でMFDに外部の映像を表示するMODです。
+    </p>
+    
+    <ul>
+    <li><a href="#download">ダウンロード</a>
+      <ul>
+      <li><a href="#download_requirement">必要なファイル</a></li>
+      </ul>
+    </li>
+    <li><a href="#install">インストール</a>
+      <ul>
+      <li><a href="#install_settings">初期設定</a></li>
+      </ul>
+    </li>
+    <li><a href="#control">操作</a>
+      <ul>
+      <li><a href="#control_fov">FOVの変更</a></li>
+      <li><a href="#control_mode">モードの切り替え</a></li>
+      <li><a href="#control_camera">カメラの操作</a></li>
+      <li><a href="#control_behind">カメラを後方に向ける</a></li>
+      <li><a href="#control_flip">上下を反転する</a></li>
+      <li><a href="#control_add">カメラを追加する</a></li>
+      </ul>
+    </li>
+    </ul>
+    
+    
+    <h2 id="download">ダウンロード</h2>
+    
+    
+    <p>
+    <a href="https://www.orbithangar.com/showAddon.php?id=205c96ba-c00e-4d28-af4f-908589979fa9" target="_blank">Camera MFD</a>
+    </p>
+    
+    
+    <h3 id="download_requirement">必要なファイル</h3>
+    
+    
+    <p>
+    あらかじめ<strong>D3D9Client</strong>の最新版をインストールしてください。<br>
+    <strong>D3D9Client</strong>を導入していない環境では動作しません。
+    </p>
+    
+    <p>
+    <a href="../basic/d3d9client.html" target="_blank">D3D9Clientを導入する</a>
+    </p>
+    
+    
+    <h2 id="install">インストール</h2>
+    
+    
+    <p>
+    ダウンロードしたファイルを解凍して、中にあるファイル・フォルダをすべてコピーする。<br>
+    コピーしたファイル・フォルダをOrbiterフォルダに上書き。
+    </p>
+    
+    
+    <h3 id="install_settings">初期設定</h3>
+    
+    
+    <p>
+    Launchpadの<kbd>Video</kbd>タブを開いて、<kbd>Advanced</kbd>をクリック。
+    </p>
+    
+    <p>
+    <img loading="lazy" src="../images/mods/cameramfd/001.png" width="477" height="261">
+    </p>
+    
+    <p>
+    ウィンドウ右側中央の<strong>Custom Cameras</strong>のオプションを<kbd>Enabled</kbd>にする。<br>
+    ウィンドウ右下の<kbd>OK</kbd>をクリック。
+    </p>
+    
+    <p>
+    <img loading="lazy" src="../images/mods/cameramfd/002.png" width="265" height="348">
+    </p>
+    
+    <p>
+    Launchpadの<kbd>Modules</kbd>タブを開いて、<strong>CameraMFD</strong>にチェックを入れる。
+    </p>
+    
+    <p>
+    <img loading="lazy" src="../images/mods/cameramfd/003.png" width="223" height="58">
+    </p>
+    
+    
+    <h2 id="control">操作</h2>
+    
+    
+    <p>
+    いずれかのMFDで<strong>Camera MFD</strong>を選択する。
+    </p>
+    
+    
+    <h3 id="control_fov">FOVの変更</h3>
+    
+    
+    <p>
+    MFD右側の<kbd>FOV</kbd>ボタンをクリックして、FOVを変更する。
+    </p>
+    
+    
+    <h3 id="control_mode">モードの切り替え</h3>
+    
+    
+    <p>
+    MFD右側の<kbd>ADJ</kbd>ボタンをクリックして3つのモードを切り替える。
+    </p>
+    
+    <table>
+     <tr>
+      <td><strong>Position</strong></td>
+      <td>カメラの位置を移動させる。</td>
+     </tr>
+     <tr>
+      <td><strong>Direction</strong></td>
+      <td>カメラの傾きを変える。</td>
+     </tr>
+     <tr>
+      <td><strong>Rotation</strong></td>
+      <td>カメラの向きを変える。</td>
+     </tr>
+    </table>
+    
+    
+    <h3 id="control_camera">カメラの操作</h3>
+    
+    
+    <p>
+    MFD左側のボタンでカメラを操作する。<br>
+    MFD右側の<kbd>RST</kbd>ボタンで変更がリセットされる。
+    </p>
+    
+    <table>
+     <tr>
+      <td><kbd>RHT</kbd> / <kbd>LFT</kbd></td>
+      <td>カメラを左右に移動させる。</td>
+     </tr>
+     <tr>
+      <td><kbd>FWD</kbd> / <kbd>BCK</kbd></td>
+      <td>カメラを前後に移動させる。</td>
+     </tr>
+     <tr>
+      <td><kbd>UP</kbd> / <kbd>DWN</kbd></td>
+      <td>カメラを上下に移動させる。</td>
+     </tr>
+    </table>
+    
+    <p>
+    エンジンがあるのが下、機体の先端を上として考える。<br>
+    デルタグライダーのような機体の場合は、<kbd>UP</kbd>ボタンをクリックするとカメラが前方に移動する。
+    </p>
+    
+    
+    <h3 id="control_behind">カメラを後方に向ける</h3>
+    
+    
+    <p>
+    <kbd>ADJ</kbd>をクリックして、モードを<strong>Direction</strong>にする。<br>
+    <kbd>DWN</kbd>を何度かクリックすると、カメラが後ろを向く。
+    </p>
+    
+    
+    <h3 id="control_flip">上下を反転する</h3>
+    
+    
+    <p>
+    <kbd>ADJ</kbd>をクリックして、モードを<strong>Rotation</strong>にする。<br>
+    <kbd>BCK</kbd>を何度かクリックすると、カメラの上下が反転する。
+    </p>
+    
+    
+    <h3 id="control_add">カメラを追加する</h3>
+    
+    
+    <p>
+    MFD右側の<kbd>ADD</kbd>をクリックすると、カメラを追加できる。<br>
+    <kbd>CAM</kbd>をクリックするとカメラを切り替える。<br>
+    <kbd>REM</kbd>をクリックすると追加したカメラを削除する。
+    </p>
+
+</body>
+</html>

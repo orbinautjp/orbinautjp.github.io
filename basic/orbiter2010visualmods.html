@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../styles/orbiterjp.css">
+  <script src="../scripts/template.js" charset="utf-8" defer></script>
+  <title>Orbiter2010のグラフィックMOD</title>
+</head>
+
+<body>
+
+  <h1>Orbiter2010のグラフィックMOD</h1>
+
+
+  <p><strong>Orbiter2010</strong>で使える、惑星などの見た目を綺麗にするMODのまとめです。</p>
+
+  <ul>
+  <li><a href="#earth">地球</a></li>
+  <li><a href="#moon">月</a></li>
+  <li><a href="#mars">火星</a></li>
+  <li><a href="#venus">金星</a></li>
+  <li><a href="#mercury">水星</a></li>
+  <li><a href="#jupiter">木星</a></li>
+  <li><a href="#saturn">土星</a></li>
+  <li><a href="#uranus">天王星</a></li>
+  <li><a href="#neptune">海王星</a></li>
+  <li><a href="#pluto">冥王星</a></li>
+  </ul>
+  
+  <h2 id="earth">地球</h2>
+  <h3>雲</h3>
+  <p><a href="https://www.orbithangar.com/searchid.php?ID=5856" target="_blank">Earth High-Resolution Clouds</a></p>
+  <p><strong>Earth_cloud.tex</strong>を<strong>Textures2</strong>フォルダにコピーして上書き。</p>
+  <h3>KSC（ケネディ宇宙センター）</h3>
+  <p><a href="https://www.orbithangar.com/searchid.php?ID=5583" target="_blank">KSC hires tiles</a></p>
+  <p>中に入っているフォルダ・ファイルを全部コピーする。<br>
+  Orbiterフォルダに貼り付けて、既存のフォルダ(<strong>Textures</strong>と<strong>Doc</strong>)を上書きする。</p>
+  <p><strong>ksc_setres.bat</strong>をダブルクリック。</p>
+
+  <p>
+    <img loading="lazy" src="../images/basic/orbiter2010visualmods/001.png" width="241" height="167"></p>
+  <p>キーボードで<kbd>H</kbd>を押してから<kbd>Enter</kbd>を押すとインストールされる。</p>
+
+  <p>
+    <img loading="lazy" src="../images/basic/orbiter2010visualmods/002.png" width="507" height="138"></p>
+  <h3>滑走路・着陸パッド</h3>
+  <ul><li><a href="https://www.orbithangar.com/searchid.php?ID=801" target="_blank">Enhanced Runway Textures</a></li>
+  <li><a href="https://www.orbithangar.com/searchid.php?ID=4993" target="_blank">New Runway Texture - Updated</a></li>
+  </ul>
+  <p><strong class="caution">重要</strong>：必ず<strong>Enhanced Runway Textures</strong>を先にインストールしてください！</p>
+  <p>中に入っているテクスチャ（<strong>.dds</strong>のファイル）をコピーする。<br>
+  それらを<strong>Textures</strong>フォルダに上書きする。</p>
+  <h3>バイコヌール</h3>
+  <p><a href="../iss/baikonur-2010-surface-tiles-v10.html" target="_blank">Baikonur 2010: Surface Tiles v1.0のインストール</a></p>
+  <h2 id="moon">月</h2>
+  <p><a href="https://www.orbithangar.com/searchid.php?ID=2437" target="_blank">Brighton beach surface tiles v2 for orbiter 060504</a></p>
+  <p>Brighton Beach周辺の地面にテクスチャを追加するMOD。※</p>
+  <p class="note">※若干ずれるのは仕様です</p>
+  <p>中に入っているフォルダ・ファイルをそのままOrbiterフォルダにコピー。<br>
+  <strong>Config\Moon\Base</strong>フォルダの中にある、<strong>Brighton.cfg</strong>をメモ帳などで開く。<br>
+  以下の行を追加して上書き保存する。</p>
+  <p><pre><code>BEGIN_SURFTILELIST
+  0 -48 58 3
+  0 -49 58 3
+  3 -380 467 3
+  3 -381 467 3
+  END_SURFTILELIST</code></pre></p>
+  <p><img loading="lazy" class="small" src="../images/basic/orbiter2010visualmods/003.png" width="162" height="166"></p>
+  <h2 id="mars">火星</h2>
+  <p><a href="https://www.orbithangar.com/searchid.php?ID=5995" target="_blank">Mars Olympus Base Hi-Res Surface Tiles, Ultra Blended and Stacked</a></p>
+  <p>Olympus Base周辺の地面にテクスチャを追加するMOD。</p>
+  <p>中に入っているテクスチャ（<strong>.dds</strong>のファイル）を<strong>Textures</strong>フォルダに上書き。</p>
+  <p><strong>Config\Mars\Base</strong>フォルダの中にある、<strong>Olympus.cfg</strong>をメモ帳などで開く。<br>
+  以下の行を追加して上書き保存する。</p>
+  <p><pre><code>BEGIN_SURFTILELIST
+  0 -192 17 1
+  0 -192 18 1
+  0 -192 19 1
+  0 -193 17 1
+  0 -193 18 1
+  0 -193 19 1
+  0 -194 17 1
+  0 -194 18 1
+  0 -194 19 1
+  2 -770 71 1
+  2 -770 72 1
+  2 -770 73 1
+  2 -771 71 1
+  2 -771 72 1
+  2 -771 73 1
+  2 -772 71 1
+  2 -772 72 1
+  2 -772 73 1
+  4 -3081 288 1
+  4 -3081 289 1
+  4 -3081 290 1
+  4 -3082 288 1
+  4 -3082 289 1
+  4 -3082 290 1
+  4 -3083 288 1
+  4 -3083 289 1
+  4 -3083 290 1
+  END_SURFTILELIST</code></pre></p>
+  <h2 id="venus">金星</h2>
+  <p><a href="https://www.orbithangar.com/searchid.php?ID=5133" target="_blank">Venus 8 level texture</a></p>
+  <p>金星の雲と地表を高解像度化するMOD。</p>
+  <p>中に入っているフォルダ・ファイルをそのままOrbiterフォルダにコピー。<br>
+  <strong>Config</strong>フォルダの中にある、<strong>Venus.cfg</strong>をメモ帳などで開く。<br>
+  <strong>MaxCloudResolution = 8</strong>に書き換えて上書き保存する。</p>
+
+  <p>
+    <img loading="lazy" src="../images/basic/orbiter2010visualmods/004.png" width="516" height="84"></p>
+  <h2 id="mercury">水星</h2>
+  <p><a href="https://www.orbithangar.com/searchid.php?ID=5570" target="_blank">Mercury Level 9 Textures</a></p>
+  <p>水星の地表を高解像度化するMOD。※</p>
+  <p class="note">※このMODでは水星が白黒になりますが、現実の水星の色とは少し異なります</p>
+  <p>中に入っているテクスチャ（<strong>.dds</strong>のファイル）を<strong>Textures2</strong>フォルダに上書き。<br>
+  <strong>Config</strong>フォルダの中にある、<strong>Mercury.cfg</strong>をメモ帳などで開く。<br>
+  <strong>MaxPatchResolution = 14</strong>に書き換えて上書き保存する。</p>
+
+  <p>
+    <img loading="lazy" src="../images/basic/orbiter2010visualmods/005.png" width="495" height="87"></p>
+  <h2>MaxPatchResolution</h2>
+  <p><strong>Mercury Level 9 Textures</strong>のような惑星・衛星を高解像度化するMODでは、<strong>cfg</strong>ファイルを開いて<strong>MaxPatchResolution = 14</strong>に書き換える必要があります。<br>
+  該当する天体の<strong>cfg</strong>ファイルを探して、同じ作業をしてください。</p>
+  <h2 id="jupiter">木星</h2>
+  <p><a href="https://www.orbithangar.com/searchid.php?ID=4666" target="_blank">Level 8 Jupiter</a></p>
+  <p>木星の見た目を高解像度化するMOD。<br>
+  中に入っているフォルダをそのままOrbiterフォルダにコピーして上書き。<br>
+  <strong>Jupiter.cfg</strong>を開いて<strong>MaxPatchResolution = 14</strong>に書き換える。</p>
+  <h3>イオ・エウロパ・ガニメデ・カリスト</h3>
+  <ul><li><a href="https://www.orbithangar.com/searchid.php?ID=3107" target="_blank">Level 8 Io texture with night lights</a></li>
+  <li><a href="https://www.orbithangar.com/searchid.php?ID=3110" target="_blank">Europa level 8</a></li>
+  <li><a href="https://www.orbithangar.com/searchid.php?ID=3319" target="_blank">Ganymede lvl8</a></li>
+  <li><a href="https://www.orbithangar.com/searchid.php?ID=3322" target="_blank">Callisto lvl8</a></li>
+  </ul>
+  <p>中に入っているフォルダをそのままOrbiterフォルダにコピーして上書き。<br>
+  それぞれの<strong>cfg</strong>ファイルを開いて<strong>MaxPatchResolution = 14</strong>に書き換える。</p>
+  <h2 id="saturn">土星</h2>
+  <h3>ディオネ・レア・タイタン</h3>
+  <ul><li><a href="https://www.orbithangar.com/searchid.php?ID=5930" target="_blank">Dione Level 9</a></li>
+  <li><a href="https://www.orbithangar.com/searchid.php?ID=4827" target="_blank">Level 8 Titan</a></li>
+  </ul>
+  <p>解凍して、中に入っている<strong>Textures</strong>などのフォルダを全部コピーしてOrbiterのフォルダに上書きするだけ。</p>
+  <p><a href="https://www.orbithangar.com/searchid.php?ID=5022" target="_blank">Level 8 Saturn's Rhea - Rhea L8 Textures v1.0</a></p>
+  <p>中に入っているフォルダをそのままOrbiterフォルダにコピーして上書き。<br>
+  <strong>Rhea.cfg</strong>を開いて<strong>MaxPatchResolution = 14</strong>に書き換える。</p>
+  <h2>天王星と海王星のテクスチャMOD</h2>
+  <p>天王星と海王星については、利用できる高解像度な画像が存在しないため、MODの製作者が推測で補完してテクスチャを作成しています。<br>
+  このため、現実の惑星の姿とは異なる場合もあることをご理解ください。</p>
+  <h2 id="uranus">天王星</h2>
+  <p><a href="https://www.orbithangar.com/searchid.php?ID=5235" target="_blank">Level 8 Uranus UPDATE</a></p>
+  <p>天王星を高解像度化して、雲を追加するMOD。</p>
+  <p>中に入っているフォルダをそのままOrbiterフォルダにコピーして上書き。<br>
+  <strong>Uranus.cfg</strong>を開いて、<strong>Data for the Visual</strong>以下の2行を削除する。</p>
+
+  <p>
+    <img loading="lazy" src="../images/basic/orbiter2010visualmods/006.png" width="330" height="148"></p>
+  <p>以下の行を追加して上書き保存する。</p>
+  <p><pre><code>; === Cloud parameters ===
+  CloudAlt = 98e3 ; altitude of cloud layer
+  CloudRotPeriod = 100e3
+  CloudMicrotextureAlt = 14.496e3 3650e3
+  
+  ; === Data for the Visual ===
+  MaxPatchResolution = 8 ; highest sphere patch level
+  MinCloudResolution = 1 ; cloud layer from this resolution
+  MaxCloudResolution = 8 ; highest cloud resolution level</code></pre></p>
+  <p><img loading="lazy" src="../images/basic/orbiter2010visualmods/007.png" width="559" height="164"></p>
+  <h2 id="neptune">海王星</h2>
+  <p><a href="https://www.orbithangar.com/searchid.php?ID=5234" target="_blank">Level 8 Neptune</a></p>
+  <p>中に入っているフォルダをそのままOrbiterフォルダにコピーして上書き。<br>
+  <strong>Neptune.cfg</strong>を開いて<strong>MaxPatchResolution = 14</strong>に書き換える。</p>
+  <h3>トリトン・ネレイド</h3>
+  <ul><li><a href="https://www.orbithangar.com/searchid.php?ID=5876" target="_blank">Level 8 Triton and clouds</a></li>
+  <li><a href="https://www.orbithangar.com/searchid.php?ID=5869" target="_blank">Nereid mesh</a></li>
+  </ul>
+  <p>解凍して、中に入っている<strong>Textures</strong>などのフォルダを全部コピーしてOrbiterのフォルダに上書きするだけ。</p>
+  <h2 id="pluto">冥王星・カロン</h2>
+  <p>バニラのOrbiter2010には、冥王星とその衛星は存在しません。<br>
+  以下のMODを導入してください。</p>
+  <ul><li><a href="https://www.orbithangar.com/searchid.php?ID=4595" target="_blank">Pluto and Moons</a></li>
+  <li><a href="https://www.orbithangar.com/searchid.php?ID=6812" target="_blank">Pluto Level 8 global map</a></li>
+  <li><a href="https://www.orbithangar.com/searchid.php?ID=6815" target="_blank">Charon Level 8 global map</a></li>
+  </ul>
+  <p>中に入っているフォルダをそのままOrbiterフォルダにコピーして上書き。</p>
+  <p><strong>Sol.cfg</strong>を開いて、以下の行を追加して上書きする。</p>
+  <p><pre><code>Planet9 = Pluto
+  Pluto:Moon1 = Charon
+  Pluto:Moon2 = Nix
+  Pluto:Moon3 = Hydra</code></pre></p>
+  <p><img loading="lazy" class="small" src="../images/basic/orbiter2010visualmods/008.png" width="202" height="148"></p>
+
+</body>
+</html>

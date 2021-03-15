@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../styles/orbiterjp.css">
+  <script src="../scripts/template.js" charset="utf-8" defer></script>
+  <script src="../scripts/prevnext_tutorial.js" charset="utf-8" defer></script>
+  <title>Part9 月への打ち上げ</title>
+</head>
+
+<body>
+
+  <h1>Part9 月への打ち上げ</h1>
+
+
+  <p>タイミングを待って、パーキング軌道へと打ち上げます。</p>
+
+  <ul>
+    <li><a href="#transx">TransXの更新</a></li>
+    <li><a href="#scenario">使用するシナリオ</a></li>
+  </ul>
+
+  <ol>
+    <li><a href="#mapmfd">Map MFD</a>
+      <ul>
+        <li><a href="#mapmfd_target">目的地を指定する</a></li>
+        <li><a href="#mapmfd_dayandnight">月面の昼と夜</a></li>
+      </ul>
+    </li>
+    <li><a href="#alignmfd">Align Planes MFD</a>
+      <ul>
+        <li><a href="#alignmfd_planes">軌道面を近づける</a></li>
+      </ul>
+    </li>
+    <li><a href="#parkingorbit">パーキング軌道へ</a>
+      <ul>
+        <li><a href="#parkingorbit_launch">打ち上げ</a></li>
+        <li><a href="#parkingorbit_course">針路を修正する</a></li>
+        <li><a href="#parkingorbit_insertion">軌道投入</a></li>
+        <li><a href="#parkingorbit_rinc">軌道面を一致させる</a></li>
+      </ul>
+    </li>
+  </ol>
+
+  <ul>
+    <li><a href="#explanation">解説</a></li>
+    <li><a href="#reference">関連項目</a></li>
+    <li><a href="#form">アンケート</a></li>
+    <li><a href="#videos">動画</a></li>
+  </ul>
+
+
+  <h2 id="transx">TransXの更新</h2>
+
+
+  <p>今回の内容に進む前に、TransXを最新版に更新してください。<br>
+    <a href="../transximfd/transxinstall.html" target="_blank">TransXの更新と設定</a>
+  </p>
+
+
+  <h2 id="scenario">使用するシナリオ</h2>
+
+
+  <p><strong>Checklists</strong>フォルダの<strong>Quickstart</strong>を選択。</p>
+
+  <p>
+    <img loading="lazy" src="../images/tutorial/part9/quickstart.png" width="250" height="125">
+  </p>
+
+  <p>ダブルクリックでゲームを開始する。</p>
+
+
+  <h2 id="mapmfd">Map MFD</h2>
+
+
+  <p>月面基地が昼側に出てくるのを待つ。<br>
+    <strong>Map MFD</strong>を使用する。
+  </p>
+
+
+  <h3 id="mapmfd_target">目的地を指定する</h3>
+
+
+  <p><kbd>REF</kbd>をクリック。</p>
+
+  <p><strong>矢印キー</strong>で項目を移動する。<br>
+    <strong>Earth</strong>→<strong>Moon</strong>を選択。
+  </p>
+
+  <p><kbd>Enter</kbd>を押して決定する。</p>
+
+  <p>
+    <img loading="lazy" class="small" src="../images/tutorial/part9/001.png" width="200" height="200">
+    <img loading="lazy" class="small" src="../images/tutorial/part9/002.png" width="200" height="200">
+  </p>
+
+  <p><kbd>TGT</kbd>をクリック。<br>
+    <strong>Space ports</strong>→<strong>Brighton Beach</strong>を選択。
+  </p>
+
+  <p>目標地点に目印が表示される。</p>
+
+
+  <h3 id="mapmfd_dayandnight">月面の昼と夜</h3>
+
+
+  <p>目的地が夜側にあるか昼側にあるか確認する。<br>
+    白っぽく表示されているのが昼側。</p>
+
+  <p>
+    <img loading="lazy" src="../images/tutorial/part9/005.png" width="425" height="425">
+  </p>
+
+  <p>基地が昼側に出てくるまで時間経過させる。<br>
+    タイムワープ最大（100000倍速）にする。</p>
+
+  <p>
+    <img loading="lazy" src="../images/tutorial/part9/006.png" width="425" height="425">
+  </p>
+
+  <p>月の自転は遅いので、数日～数週間かかる。</p>
+
+
+  <h2 id="alignmfd">Align Planes MFD</h2>
+
+
+  <p><strong>Align Planes MFD</strong>を開く。</p>
+
+  <p><kbd>TGT</kbd>をクリック。<br>
+    <strong>Celestial bodies</strong>→<strong>Moon</strong>を選択。
+  </p>
+
+  <p>
+    <img loading="lazy" src="../images/tutorial/part9/007.png" width="425" height="425">
+  </p>
+
+
+  <h3 id="alignmfd_planes">軌道面を近づける</h3>
+
+
+  <p>タイムワープ<strong>1000倍</strong>で時間経過させる。<br>
+    ひとりでに<strong>RInc</strong>が小さくなる。</p>
+
+  <p><strong>RInc</strong>が下がらなくなるまで待つ。<br>
+    このとき、<strong>Rate</strong>は<strong>0.000</strong>になる。</p>
+
+  <p>
+    <img loading="lazy" src="../images/tutorial/part9/008.png" width="425" height="425">
+  </p>
+
+  <p>この解説は<a href="#explanation">下記</a>を参照すること。</p>
+
+
+  <h2 id="parkingorbit">パーキング軌道へ</h2>
+
+
+  <p>月遷移軌道に乗るまでの待機軌道のことを、パーキング軌道と呼ぶ。</p>
+
+  <p>宇宙船を打ち上げて、パーキング軌道に投入する。</p>
+
+
+  <h3 id="parkingorbit_launch">打ち上げ</h3>
+
+
+  <p>エンジンに点火して離陸する。</p>
+
+  <p>方位<strong>090</strong>（真東）に向けて旋回する。</p>
+
+  <p>
+    <img loading="lazy" src="../images/tutorial/part9/009.png" width="450" height="120">
+  </p>
+
+  <p>機首を上げて上昇する。<br>
+    高度<strong>20km</strong>で機首を下げる。</p>
+
+
+  <h3 id="parkingorbit_course">針路を修正する</h3>
+
+
+  <p>加速しつつ、<strong>Align MFD</strong>を確認する。</p>
+
+  <p>左右に針路を変更する。<br>
+    <strong>Rate</strong>を<strong>0.000</strong>かマイナスにする。
+  </p>
+
+  <p>機体を左右に傾けるか、機首を左右に向ける。</p>
+
+  <p>
+    <img loading="lazy" src="../images/tutorial/part9/010.png" width="425" height="425">
+  </p>
+
+  <p><kbd>Delete</kbd>を押し続ける。<br>
+    エレベータートリムを最大まで上げる。</p>
+
+  <table>
+    <tr>
+      <td><kbd>Delete</kbd></td>
+      <td><strong>UP</strong></td>
+      <td>機首を上げる</td>
+    </tr>
+    <tr>
+      <td><kbd>Insert</kbd></td>
+      <td><strong>DN</strong></td>
+      <td>機首を下げる</td>
+    </tr>
+  </table>
+
+  <p>
+    <img loading="lazy" src="../images/tutorial/part9/011.png" width="200" height="100">
+  </p>
+
+  <p>機首上げをトリムに任せておけば、針路修正に専念できる。</p>
+
+
+  <h3 id="parkingorbit_insertion">軌道投入</h3>
+
+
+  <p>高度<strong>200km</strong>の円軌道に投入する。</p>
+
+  <p>
+    <img loading="lazy" src="../images/tutorial/part9/012.png" width="425" height="425">
+  </p>
+
+
+  <h3 id="parkingorbit_rinc">軌道面を一致させる</h3>
+
+
+  <p><strong>Align MFD</strong>を使って、<strong>RInc</strong>をゼロにする。<br>
+    手順は<a href="part2.html" target="_blank">Part2</a>と同じ。</p>
+
+  <p>
+    <img loading="lazy" src="../images/tutorial/part9/013.png" width="425" height="425">
+  </p>
+
+
+  <h2 id="explanation">解説</h2>
+
+
+  <p>地球は自転しているので、同じ方角に打ち上げたとしても、打ち上げ時刻によって軌道要素が変化する。<br>
+    これを利用して、宇宙船の軌道面と月の公転軌道面のずれを小さくすることができる。</p>
+
+  <p>宇宙船が地上にいるとき、<strong>Map MFD</strong>には、真東に打ち上げたと仮定したときの軌道面が緑で表示される。<br>
+    <strong>Moon</strong>をターゲットして時間経過させると、両者の軌道面が近づく様子を観測できる。
+  </p>
+
+  <p>
+    <img loading="lazy" src="../images/tutorial/part9/014.png" width="425" height="425">
+  </p>
+
+
+  <h2 id="reference">関連項目</h2>
+
+
+  <p>軌道面を一致させない（<a href="align-planes-mfd.html" target="_blank">Align MFD</a>を使わない）方法について紹介しています。</p>
+
+  <p><a href="../transximfd/off-plane-transfer.html" target="_blank">地球―月のOff-plane transfer</a></p>
+
+
+  <h2 id="form">アンケート</h2>
+
+
+  <form action="https://docs.google.com/forms/d/e/1FAIpQLSdnzppqLoEb4eOMSojGjoJizX36qH8eum3g3eXC1MF2T7L1QQ/formResponse" target="_self" method="POST" id="mG61Hd">
+
+    <p>この記事の内容は理解できましたか？</p>
+
+    <ul>
+      <li><label><input type="radio" name="entry.1914587356" value="できなかった、全然理解できない" />できなかった、全然理解できない</label></li>
+      <li><label><input type="radio" name="entry.1914587356" value="できなかった、途中から理解できない" />できなかった、途中から理解できない</label></li>
+      <li><label><input type="radio" name="entry.1914587356" value="できた、難しかった" />できた、難しかった</label></li>
+      <li><label><input type="radio" name="entry.1914587356" value="できた、簡単だった" />できた、簡単だった</label></li>
+    </ul>
+
+    <p><label for="question">わからなかった・難しかったところを教えてください（任意）</label><br>
+      <input id="question" type="text" name="entry.1857549962">
+    </p>
+
+    <p>公開されますので個人情報を記入しないでください。<br>
+      <button type="submit" name="button" value="送信">送信</button>
+    </p>
+
+  </form>
+
+
+  <h2 id="videos">動画</h2>
+
+
+  <p><a href="https://youtu.be/lNPbRJX3iFI" target="_blank">YouTube</a></p>
+
+  <p><a href="https://www.nicovideo.jp/watch/sm25568194" target="_blank">ニコニコ動画</a></p>
+
+</body>
+
+</html>

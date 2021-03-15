@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../styles/orbiterjp.css">
+  <script src="../scripts/template.js" charset="utf-8" defer></script>
+  <title>シナリオファイルの直接編集</title>
+</head>
+
+<body>
+
+  <h1>シナリオファイルの直接編集</h1>
+
+
+<p>Orbiterのシナリオファイル（拡張子が<strong>.scn</strong>のファイル）は、メモ帳などのテキストエディタで直接編集できます。</p>
+
+<p>今回は例題として、<strong>DG to ISS</strong>シナリオのISSを<a href="../iss/iss-atoz-install.html" target="_blank">ISS A to Z</a>に入れ替える方法を解説します。</p>
+
+<ul>
+<li><a href="#modules">モジュールをコピーする</a></li>
+<li><a href="#elements">軌道要素をコピーする</a></li>
+</ul>
+
+<h2 id="modules">モジュールをコピーする</h2>
+
+<p><strong>orbiter\Scenarios\Checklists</strong>フォルダにある、<strong>Mission 1 - DG to ISS.scn</strong>をメモ帳で開く。</p>
+
+<p>同時に、<strong>ISS AtoZ.scn</strong>をメモ帳で開く。</p>
+
+<p><strong>BEGIN_SHIPS</strong>から<strong>END_SHIPS</strong>のあいだに、シナリオに登場する宇宙船が記述されている。</p>
+
+<p><strong>ISS AtoZ.scn</strong>を見て、<br>
+<strong>BEGIN_SHIPS</strong>の次の行（<strong>Zarya:ISSR\Zarya</strong>）から<br>
+<strong>END_SHIPS</strong>の手前（<strong>END</strong>）までのすべての行を選択してコピーする。</p>
+
+<p><img loading="lazy" src="../images/misc/scenarioedit/SCE013.png" width="272" height="187"></p>
+
+<p><strong>DG to ISS.scn</strong>を見て、以下の2行のあいだに改行を入れる。</p>
+
+<pre><code>END
+Mir</code></pre>
+
+<p><img loading="lazy" src="../images/misc/scenarioedit/SCE011.png" width="136" height="157"></p>
+
+<p>コピーした行を、この空行に貼り付ける。</p>
+
+<p><strong>宇宙船の名前</strong>から<strong>END</strong>までがひとまとまりになっているので、このあいだに割りこまなければどこでもかまいません。</p>
+
+<h2 id="elements">軌道要素をコピーする</h2>
+
+<p><strong>ISS:ProjectAlpha_ISS</strong>の下にある、以下の2行をコピーする。</p>
+
+<pre><code>  RPOS 4915269.75 4084559.88 -2105227.01
+  RVEL 5064.033 -5764.583 645.739</code></pre>
+
+<p><img loading="lazy" src="../images/misc/scenarioedit/SCE015.png" width="370" height="148"></p>
+
+<p><strong>Zarya:ISSR\Zarya</strong>以下の該当する行を削除して上書き。</p>
+
+<p>ほかのモジュールについてはそのままで問題ありません。<br>
+<strong>RPOS</strong>が宇宙船の位置、<strong>RVEL</strong>が軌道を決定します。</p>
+
+<p>この状態で、いったん適当な名前をつけて（拡張子は<strong>.scn</strong>）、<strong>Scenarios</strong>フォルダに保存する。</p>
+
+<p>
+<img loading="lazy" src="../images/misc/scenarioedit/SCE014.png" width="214" height="70"></p>
+
+<p>このシナリオをプレイして、<kbd>F3</kbd>キーを押してISSの状態を確認します。<br>
+両者が以下の画像のように、重ね合わせの状態になっていれば成功です。</p>
+
+<p><img loading="lazy" src="../images/misc/scenarioedit/SCE016.png" width="960" height="540"></p>
+
+<p>もとのISSを削除すれば、入れ替えは完了です。</p>
+
+</body>
+</html>

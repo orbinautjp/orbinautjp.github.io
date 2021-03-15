@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../styles/orbiterjp.css">
+  <script src="../scripts/template.js" charset="utf-8" defer></script>
+  <script src="../scripts/prevnext_tutorial.js" charset="utf-8" defer></script>
+  <title>Part21 マニューバを作成・実行して金星へ</title>
+</head>
+
+<body>
+
+  <h1>Part21 マニューバを作成・実行して金星へ</h1>
+
+
+  <p>マニューバを作成・実行して、地球軌道を離脱します。</p>
+
+  <ol>
+    <li><a href="#manoeuvre1">マニューバの作成</a>
+      <ul>
+        <li><a href="#manoeuvre1_deltav">Delta Vを入力する</a></li>
+        <li><a href="#manoeuvre1_mandate">Man. dateを入力する</a></li>
+      </ul>
+    </li>
+    <li><a href="#deleteplan">Planを消去する</a></li>
+    <li><a href="#manoeuvre2">マニューバの修正</a>
+      <ul>
+        <li><a href="#manoeuvre2_mandate">Man. dateを操作する</a></li>
+        <li><a href="#manoeuvre2_vel">マニューバを組み合わせる</a></li>
+        <li><a href="#manoeuvre2_viewencounter">View:Encounterを表示する</a></li>
+      </ul>
+    </li>
+    <li><a href="#viewtarget">マニューバの実行</a>
+      <ul>
+        <li><a href="#viewtarget_correction">手動で微調整する</a></li>
+      </ul>
+    </li>
+  </ol>
+
+  <ul>
+    <li><a href="#alternative">マニューバの作成が難しいとき</a></li>
+    <li><a href="#form">アンケート</a></li>
+    <li><a href="#videos">動画</a></li>
+  </ul>
+
+
+  <h2 id="manoeuvre1">マニューバの作成</h2>
+
+
+  <p>左右のMFDで<strong>TransX</strong>を開く。</p>
+
+  <p>両方とも<strong>Stage 1</strong>にしておく。<br>
+    <strong>Stage 2</strong>になっていたら、<kbd>BCK</kbd>をクリック。
+  </p>
+
+  <p><strong>View:Escape Plan</strong>を表示しておく。<br>
+    もう1つは<strong>View:Manoeuvre</strong>を開く。</p>
+
+  <p><strong>Begin Burn</strong>が<strong>2000</strong>(2k)を切るまで待つ。</p>
+
+  <p><strong>Manoeuvre mode</strong>を<strong>On</strong>にする。</p>
+
+  <p>
+    <img loading="lazy" src="../images/tutorial/part21/001.png" width="1596" height="898">
+  </p>
+
+
+  <h3 id="manoeuvre1_deltav">Delta Vを入力する</h3>
+
+
+  <p><strong>View:Escape Plan</strong>に移動する。<br>
+    <strong>Delta V</strong>の数字を確認する。
+  </p>
+
+  <p>
+    <img loading="lazy" src="../images/tutorial/part21/002.png" width="425" height="425">
+  </p>
+
+  <p><strong>View:Manoeuvre</strong>に移動する。</p>
+
+  <p><strong>Prograde vel.</strong>を選択する。<br>
+    <kbd>ENT</kbd>をクリック。
+  </p>
+
+  <p><strong>Escape Plan</strong>の<strong>Delta V</strong>の数字を入力する。</p>
+
+  <p>
+    <img loading="lazy" src="../images/tutorial/part21/003.png" width="425" height="425">
+  </p>
+
+  <p>TransXでは、接頭辞をつけて入力することはできない。</p>
+
+  <p>例えば<strong>3.571k</strong>と表示されていたら、<strong>3571</strong>に直して入力する。</p>
+
+
+  <h3 id="manoeuvre1_mandate">Man. dateを入力する</h3>
+
+
+  <p><strong>View:Manoeuvre</strong>に移動する。<br>
+    <strong>Man. date</strong>を選択する。
+  </p>
+
+  <p><kbd>-AJ</kbd>を何度かクリック。<br>
+    感度を<strong>Hyper</strong>にしておく。</p>
+
+  <p><kbd>++</kbd>をクリック。<br>
+    ふたつの黄色い点線を重ねる。</p>
+
+  <p>
+    <img loading="lazy" src="../images/tutorial/part21/004.png" width="425" height="425">
+  </p>
+
+
+  <h2 id="deleteplan">Planを消去する</h2>
+
+
+  <p><strong>View:Escape Plan</strong>に移動する。</p>
+
+  <p><kbd>FWD</kbd>をクリック。<br>
+    <strong>Stage 2</strong>にする。
+  </p>
+
+  <p><strong>View:Eject Plan</strong>を表示する。</p>
+
+  <p>
+    <img loading="lazy" src="../images/tutorial/part21/005.png" width="425" height="425">
+  </p>
+
+  <p><strong>Prograde vel.</strong>を<strong>0</strong>にする。</p>
+
+  <p><kbd>ADJ</kbd>をクリックして、<strong>Reset</strong>を選択。<br>
+    <kbd>++</kbd>をクリックする。
+  </p>
+
+  <p>同様に、<strong>Outward</strong>、<strong>Ch. plane</strong>も<strong>0</strong>にする。</p>
+
+  <p>
+    <img loading="lazy" src="../images/tutorial/part21/006.png" width="425" height="425">
+  </p>
+
+  <p><strong>Plan</strong>が消えて、作成中のマニューバが優先される。</p>
+
+
+  <h2 id="manoeuvre2">マニューバの修正</h2>
+
+
+  <p><strong>Stage 1</strong>の<strong>View:Manoeuvre</strong>を開いておく。<br>
+    <strong>Stage 2</strong>の<strong>View:Eject Plan</strong>を開いておく。
+  </p>
+
+  <p>マニューバを修正する。<br>
+    <strong>Cl. App.</strong>を小さくする。
+  </p>
+
+  <p>
+    <img loading="lazy" src="../images/tutorial/part21/007.png" width="1596" height="898">
+  </p>
+
+
+  <h3 id="manoeuvre2_mandate">Man. dateを操作する</h3>
+
+
+  <p><strong>View:Manoeuvre</strong>に移動する。<br>
+    <strong>Man. date</strong>を選択する。
+  </p>
+
+  <p><kbd>ADJ</kbd>をクリック。<br>
+    感度を<strong>Micro</strong>にする。</p>
+
+  <p><strong>View:Eject Plan</strong>で結果を確認する。</p>
+
+  <p><strong>Man. date</strong>を操作する。<br>
+    <strong>Cl. App.</strong>をできるだけ小さくする。
+  </p>
+
+  <p>
+    <img loading="lazy" src="../images/tutorial/part21/008.png" width="425" height="425">
+  </p>
+
+  <p>
+    <img loading="lazy" src="../images/tutorial/part21/009.png" width="425" height="425">
+  </p>
+
+
+  <h3 id="manoeuvre2_vel">マニューバを組み合わせる</h3>
+
+
+  <p><strong>Prograde vel.</strong>を操作する。<br>
+    <strong>Cl. App</strong>を小さくする。
+  </p>
+
+  <p>同様に、<strong>Outward</strong>、<strong>Ch. plane</strong>を操作する。<br>
+    できるだけ<strong>Cl. App</strong>を小さくする。</p>
+
+  <p>
+    <img loading="lazy" src="../images/tutorial/part21/010.png" width="425" height="425">
+  </p>
+
+  <p>
+    <img loading="lazy" src="../images/tutorial/part21/011.png" width="425" height="425">
+  </p>
+
+  <p>色々な組み合わせを試して、必要な<strong>Delta V</strong>をできるだけ小さくする。</p>
+
+  <p>この作業が難しく感じられるときは、<a href="#alternative">下記</a>を参照すること。</p>
+
+
+  <h3 id="manoeuvre2_viewencounter">View:Encounterを表示する</h3>
+
+
+  <p><strong>View:Eject Plan</strong>で、<kbd>FWD</kbd>をクリック。<br>
+    <strong>Stage 3</strong>にする。
+  </p>
+
+  <p><strong>View:Encounter</strong>に切り換える。</p>
+
+  <p>
+    <img loading="lazy" src="../images/tutorial/part21/012.png" width="425" height="425">
+  </p>
+
+  <p>惑星に衝突する軌道になっていると、<strong>Land Site</strong>（予想着陸地点）が表示される。</p>
+
+  <p>この時点では、目標の惑星に衝突するような軌道にしておく。※<br>
+    軌道の高さなどは考えなくてよい。</p>
+
+  <p class="note">※TransXの軌道予測は誤差が大きいため、実際に衝突することはない。</p>
+
+
+  <h2 id="viewtarget">マニューバの実行</h2>
+
+
+  <p><strong>View:Manoeuvre</strong>に移動する。<br>
+    <strong>View:Target</strong>に切り替える。
+  </p>
+
+  <p><strong>Begin Burn</strong>が<strong>300</strong>になるまで待つ。</p>
+
+  <p><strong>++Updates</strong>を実行する。<br>
+    必要があれば、マニューバを修正する。</p>
+
+  <p><strong>Auto-Center</strong>を実行する。<br>
+    <strong>Begin Burn</strong>が<strong>0</strong>になったらエンジン噴射。
+  </p>
+
+  <p>この噴射には時間がかかるので、10倍までのタイムワープを使う。</p>
+
+  <p><strong>Delta V</strong>が<strong>5</strong>になったら噴射を止める。</p>
+
+  <p><strong>Auto-Center</strong>を<strong>Off</strong>にする。<br>
+    <strong>Manoeuvre mode</strong>を<strong>Off</strong>にする。
+  </p>
+
+
+  <h3 id="viewtarget_correction">手動で微調整する</h3>
+
+
+  <p>目標惑星に衝突するように軌道を修正する。<br>
+    <strong>View:Encounter</strong>で結果を確認する。
+  </p>
+
+  <p><strong>RCS LIN</strong>にする。<br>
+    上下・左右・前後に噴射して、軌道修正する。</p>
+
+  <p>
+    <img loading="lazy" src="../images/tutorial/part21/013.png" width="425" height="425">
+  </p>
+
+  <p>TransXの軌道予測は正確ではないので、数字は激しく変化する。<br>
+    一度目標惑星に衝突する軌道になったら、次の軌道修正まで気にしなくてよい。</p>
+
+
+  <h2 id="alternative">マニューバの作成が難しいとき</h2>
+
+
+  <p>地球の重力圏を脱出してからのほうが、マニューバを作成しやすい。</p>
+
+  <p><strong>View:Encounter</strong>で軌道が確認できる程度まで寄せたら、そのままマニューバを実行、地球を離れてもよい。</p>
+
+  <p>
+    <img loading="lazy" src="../images/tutorial/part21/014.png" width="425" height="425">
+  </p>
+
+
+  <h2 id="form">アンケート</h2>
+
+
+  <form action="https://docs.google.com/forms/d/e/1FAIpQLSczkNBMzoEje-ffrlHVViGGDDvdL-Z2GfhRH5qqcxDMjLYlNQ/formResponse" target="_self" method="POST" id="mG61Hd">
+
+    <p>この記事の内容は理解できましたか？</p>
+
+    <ul>
+      <li><label><input type="radio" name="entry.1914587356" value="できなかった、全然理解できない" />できなかった、全然理解できない</label></li>
+      <li><label><input type="radio" name="entry.1914587356" value="できなかった、途中から理解できない" />できなかった、途中から理解できない</label></li>
+      <li><label><input type="radio" name="entry.1914587356" value="できた、難しかった" />できた、難しかった</label></li>
+      <li><label><input type="radio" name="entry.1914587356" value="できた、簡単だった" />できた、簡単だった</label></li>
+    </ul>
+
+    <p><label for="question">わからなかった・難しかったところを教えてください（任意）</label><br>
+      <input id="question" type="text" name="entry.1857549962">
+    </p>
+
+    <p>公開されますので個人情報を記入しないでください。<br>
+      <button type="submit" name="button" value="送信">送信</button>
+    </p>
+
+  </form>
+
+
+  <h2 id="videos">動画</h2>
+
+
+  <p><a href="https://youtu.be/gjRVLJO_Pqs" target="_blank">YouTube</a></p>
+
+  <p><a href="https://www.nicovideo.jp/watch/sm25727372" target="_blank">ニコニコ動画</a></p>
+
+</body>
+
+</html>

@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../styles/orbiterjp.css">
+  <script src="../scripts/template.js" charset="utf-8" defer></script>
+  <script src="../scripts/prevnext_tutorial.js" charset="utf-8" defer></script>
+  <title>Part10 TransXで地球軌道から月へ</title>
+</head>
+
+<body>
+
+  <h1>Part10 TransXで地球軌道から月へ</h1>
+
+
+  <p><strong>TransX</strong>で月遷移軌道のマニューバを作成します。</p>
+
+  <ul>
+    <li><a href="#caution">注意</a></li>
+  </ul>
+
+  <ol>
+    <li><a href="#viewmanoeuvre">マニューバを作る</a>
+      <ul>
+        <li><a href="#selecttarget">ターゲットを指定する</a></li>
+        <li><a href="#manoeuvremode">マニューバ作成を開始する</a></li>
+        <li><a href="#progradevel">ホーマン軌道を作る</a></li>
+        <li><a href="#mandate">マニューバの日時を決定する</a></li>
+        <li><a href="#tuning">マニューバを修正する</a></li>
+        <li><a href="#viewmanoeuvre_caution">注意点</a></li>
+      </ul>
+    </li>
+    <li><a href="#viewtarget">マニューバを実行する</a>
+      <ul>
+        <li><a href="#++updates">++ Updatesを実行する</a></li>
+        <li><a href="#autocenter">Auto-Centerを実行する</a></li>
+        <li><a href="#tliburn">メインエンジンを噴射する</a></li>
+        <li><a href="#reset">Auto-CenterとManoeuvre modeの解除</a></li>
+        <li><a href="#correction">マニューバを手動で完了させる</a></li>
+      </ul>
+    </li>
+  </ol>
+
+  <ul>
+    <li><a href="#abouttansx">TransXについて</a></li>
+    <li><a href="#form">アンケート</a></li>
+    <li><a href="#videos">動画</a></li>
+  </ul>
+
+
+  <h2 id="caution">注意</h2>
+
+
+  <ol>
+    <li><a href="../transximfd/transxinstall.html" target="_blank">TransXを最新版に更新</a>しておく。</li>
+    <li>両方とも<strong>TransX</strong>を開く。<br>（TransX2は使わない）</li>
+    <li><strong>左・右</strong>のMFDを使い分けている。※<br>どちらを操作するのか確認する。</li>
+  </ol>
+
+  <p class="note">※左右どちらでも同じように操作できるが、説明のために区別している。</p>
+
+
+  <h2 id="viewmanoeuvre">マニューバを作る</h2>
+
+
+  <p>左右両方のMFDで、<kbd>SEL</kbd>をクリック。<br>
+    <strong>TransX</strong>を2つ開く。
+  </p>
+
+  <p>
+    <img loading="lazy" src="../images/tutorial/part10/000.png" width="1594" height="871">
+  </p>
+
+
+  <h3 id="selecttarget">ターゲットを指定する</h3>
+
+
+  <p><strong>View:Setup</strong>の<strong>Select Target</strong>を開いておく。<br>
+    <strong>TransX</strong>を起動すると、最初はこの画面になる。
+  </p>
+
+  <p><strong>左</strong>MFDで<kbd>++</kbd>をクリック。<br>
+    <strong>Moon</strong>を選択する。
+  </p>
+
+  <p>
+    <img loading="lazy" src="../images/tutorial/part10/001.png" width="425" height="425">
+  </p>
+
+  <p><strong>右</strong>MFDで<kbd>FWD</kbd>をクリック。<br>
+    <strong>Stage2</strong>にする。
+  </p>
+
+  <p><kbd>VW</kbd>をクリック。<br>
+    <strong>View:Encounter</strong>にする。
+  </p>
+
+  <p><strong>View:Encounter</strong>では、月を基準に軌道を表示する。</p>
+
+  <p>
+    <img loading="lazy" src="../images/tutorial/part10/002.png" width="425" height="425">
+  </p>
+
+
+  <h3 id="manoeuvremode">マニューバ作成を開始する</h3>
+
+
+  <p><strong>左</strong>MFDで<kbd>VW</kbd>をクリック。<br>
+    <strong>View:Manoeuvre</strong>にする。
+  </p>
+
+  <p><kbd>++</kbd>をクリック。<br>
+    <strong>Manoeuvre mode</strong>を<strong>On</strong>にする。
+  </p>
+
+  <p>
+    <img loading="lazy" src="../images/tutorial/part10/003.png" width="425" height="425">
+  </p>
+
+
+  <h3 id="progradevel">ホーマン軌道を作る</h3>
+
+
+  <p><kbd>VAR</kbd>を<strong>3回</strong>クリック。<br>
+    <strong>Prograde vel.</strong>を選択する。
+  </p>
+
+  <p><kbd>++</kbd>を長押しクリックする。<br>
+    黄色い点線が伸びる。</p>
+
+  <p>下の<kbd>--</kbd>をクリックすると短くなる。</p>
+
+  <p><kbd>ADJ</kbd>を<strong>2回</strong>クリック。<br>
+    感度を<strong>Fine</strong>にする。</p>
+
+  <p><kbd>++</kbd>をクリックしたときの変化が小さくなる。<br>
+    <kbd>-AJ</kbd>だと感度が大きくなる。
+  </p>
+
+  <p>黄色い楕円が宇宙船、青い円が月の軌道。<br>
+    宇宙船の軌道が月軌道に届くようにする。</p>
+
+  <p>
+    <img loading="lazy" src="../images/tutorial/part10/004.png" width="425" height="425">
+  </p>
+
+  <p><strong>Hohmann dv:</strong>の行には、ホーマン軌道で必要なDelta Vの目安が表示されている。</p>
+
+  <table>
+    <tr>
+      <td><strong>Prograde vel.</strong></td>
+      <td>Prograde velocity</td>
+      <td>Prograde方向の速度増分</td>
+    </tr>
+    <tr>
+      <td><strong>Delta V</strong>, <strong>dv</strong></td>
+      <td>change in velocity</td>
+      <td>速度増分の合計</td>
+    </tr>
+  </table>
+
+
+  <h3 id="mandate">マニューバの日時を決定する</h3>
+
+
+  <p><a href="../misc/orbitalelements.html#mjd" target="_blank">MJD</a>でマニューバ開始の日時を指定する。</p>
+
+  <p><kbd>VAR</kbd>をクリック。<br>
+    <strong>Man. date</strong>を選択する。
+  </p>
+
+  <p><kbd>ADJ</kbd>を4回クリック。<br>
+    感度を<strong>Ultra</strong>にする。</p>
+
+  <p><kbd>++</kbd>を何度かクリック。<br>
+    ふたつの黄色い点線（直線）を重ねる。</p>
+
+  <p>行き過ぎたら<kbd>--</kbd>をクリックして戻る。</p>
+
+  <p><strong>Cl. App.</strong>は、最接近時の月からの距離を表す。<br>
+    <strong>M</strong>はメガメートル、<strong>k</strong>はキロメートルになる。
+  </p>
+
+  <p>
+    <img loading="lazy" src="../images/tutorial/part10/005.png" width="425" height="425">
+  </p>
+
+  <p><strong>右</strong>MFDの<strong>View:Encounter</strong>を確認する。</p>
+
+  <p><strong>左</strong>MFDで<strong>Man. date</strong>を操作する。<br>
+    <strong>右</strong>MFDに表示される軌道を月に近づける。
+  </p>
+
+  <p><kbd>ADJ</kbd>を2回クリック。<br>
+    感度を<strong>Micro</strong>にする。</p>
+
+  <p><strong>Man. date</strong>を細かく修正する。</p>
+
+  <p>
+    <img loading="lazy" src="../images/tutorial/part10/006.png" width="425" height="425">
+  </p>
+
+  <p><strong>Min Alt</strong>は、地表からの高度を表す。<br>
+    <strong>20k</strong>程度を目安にする。
+  </p>
+
+  <p>
+    <img loading="lazy" src="../images/tutorial/part10/007.png" width="425" height="425">
+  </p>
+
+  <p>月に衝突する軌道にすると、<strong>Min Alt</strong>は表示されなくなる。</p>
+
+  <table>
+    <tr>
+      <td><strong>Man. date</strong></td>
+      <td>Manoeuvre date</td>
+      <td>マニューバ実行の日時</td>
+    </tr>
+    <tr>
+      <td><strong>Cl. App.</strong></td>
+      <td>Closest Approach</td>
+      <td>最接近時の天体中心からの距離</td>
+    </tr>
+    <tr>
+      <td><strong>Min Alt</strong></td>
+      <td>Minimum Altitude</td>
+      <td>最接近時の地表からの高度</td>
+    </tr>
+  </table>
+
+
+  <h3 id="tuning">マニューバを修正する</h3>
+
+
+  <p><strong>Min Alt</strong>が小さくならないときは、<strong>Prograde vel.</strong>をもう一度調整する。<br>
+    <kbd>-VR</kbd>をクリックして切り替える。
+  </p>
+
+
+  <h3 id="viewmanoeuvre_caution">注意点</h3>
+
+
+  <p><strong>Man. date</strong>を操作するとき、過去の日時を指定しないよう注意する。</p>
+
+  <p>以下の手順で、<strong>Man. date</strong>をリセットできる。</p>
+
+  <p><kbd>ADJ</kbd>を何度かクリックして、<strong>Reset</strong>を選択。<br>
+    <kbd>++</kbd>をクリックすると、現在時刻に戻る。
+  </p>
+
+
+  <h2 id="viewtarget">マニューバを実行する</h2>
+
+
+  <p><strong>左</strong>MFDで<kbd>VW</kbd>をクリック。<br>
+    <strong>View:Target</strong>に切り替える。
+  </p>
+
+  <p>
+    <img loading="lazy" src="../images/tutorial/part10/008.png" width="425" height="425">
+  </p>
+
+  <p>左下の<strong>Begin Burn</strong>が、エンジン噴射までの残り時間を表す。</p>
+
+  <p><strong>Begin Burn</strong>が<strong>300</strong>になるまで早送りする。</p>
+
+
+  <h3 id="++updates">++ Updatesを実行する</h3>
+
+
+  <p><kbd>VW</kbd>を2回クリック。<br>
+    <strong>View:Manoeuvre</strong>に戻す。
+  </p>
+
+  <p><kbd>VAR</kbd>を何度かクリック。<br>
+    <strong>++ Updates</strong>を選択する。
+  </p>
+
+  <p><kbd>++</kbd>をクリック。<br>
+    TransXが情報を更新して再計算する。</p>
+
+  <p>
+    <img loading="lazy" src="../images/tutorial/part10/009.png" width="425" height="425">
+  </p>
+
+  <p>時間経過で誤差が生じることがあるので、マニューバの実行直前に再計算する。<br>
+    必要があれば、<strong>Prograde vel.</strong>を再調整する。</p>
+
+
+  <h3 id="autocenter">Auto-Centerを実行する</h3>
+
+
+  <p><kbd>VW</kbd>をクリック。<br>
+    <strong>View:Target</strong>に戻る。
+  </p>
+
+  <p><kbd>-VR</kbd>を何度かクリック。<br>
+    <strong>Auto-Center</strong>を選択する。
+  </p>
+
+  <p><kbd>++</kbd>をクリック。<br>
+    <strong>Auto-Center</strong>を<strong>On</strong>にする。
+  </p>
+
+  <p>
+    <img loading="lazy" src="../images/tutorial/part10/010.png" width="425" height="425">
+  </p>
+
+  <p>オートパイロットが宇宙船の姿勢を変更する。<br>
+    緑の<strong>×</strong>が十字線の中央に来ていればよい。</p>
+
+
+  <h3 id="tliburn">メインエンジンを噴射する</h3>
+
+
+  <p><strong>Begin Burn</strong>が<strong>0</strong>になるのを待つ。<br>
+    メインエンジンを噴射する。</p>
+
+  <p>エンジン全開で固定する。<br>
+    <kbd>+</kbd>を押しながら<kbd>Ctrl</kbd>を押す。
+  </p>
+
+  <p><strong>Delta V</strong>が少なくなるまで噴射を続ける。<br>
+    10倍速までのタイムワープを使ってもよい。</p>
+
+  <p><strong>Delta V</strong>が<strong>5</strong>になったらエンジンを切る。<br>
+    テンキー<kbd>*</kbd>を押す。</p>
+
+  <p>
+    <img loading="lazy" src="../images/tutorial/part10/011.png" width="425" height="425">
+  </p>
+
+
+  <h3 id="reset">Auto-CenterとManoeuvre modeの解除</h3>
+
+
+  <p><kbd>++</kbd>をクリック。<br>
+    <strong>Auto-Center</strong>を<strong>Off</strong>にする。
+  </p>
+
+  <p><kbd>VW</kbd>を2回クリック。<br>
+    <strong>View:Manoeuvre</strong>に切り替える。
+  </p>
+
+  <p><kbd>VAR</kbd>を何度かクリック。<br>
+    <strong>Manoeuvre mode</strong>を選択。
+  </p>
+
+  <p><kbd>++</kbd>をクリック。<br>
+    <strong>Manoeuvre mode</strong>を<strong>Off</strong>にする。
+  </p>
+
+  <p>
+    <img loading="lazy" src="../images/tutorial/part10/012.png" width="425" height="425">
+  </p>
+
+
+  <h3 id="correction">マニューバを手動で完了させる</h3>
+
+
+  <p><strong>RCS LIN</strong>にする。<br>
+    テンキー<kbd>6</kbd>を押す。</p>
+
+  <p><strong>View:Encounter</strong>で結果を確認する。<br>
+    <strong>Min Alt</strong>を<strong>20k</strong>にする。
+  </p>
+
+  <p>この時点でのTransXの予測は正確ではない。<br>
+    数km程度の誤差は気にしなくてよい。</p>
+
+  <p>
+    <img loading="lazy" src="../images/tutorial/part10/013.png" width="425" height="425">
+  </p>
+
+
+  <h2 id="abouttansx">TransXについて</h2>
+
+
+  <p>TransXの機能と基本的な考え方について、以下の記事で詳しく解説している。</p>
+
+  <p><a href="../transximfd/transxbasics.html" target="_blank">TransXの基本</a></p>
+
+
+  <h2 id="form">アンケート</h2>
+
+
+  <form action="https://docs.google.com/forms/d/e/1FAIpQLSckBH6zuaFVTsZvu4ZwxaYM1b-7sY-zG4EeL3dMHpuwXZTBRg/formResponse" target="_self" method="POST" id="mG61Hd">
+
+    <p>この記事の内容は理解できましたか？</p>
+
+    <ul>
+      <li><label><input type="radio" name="entry.1914587356" value="できなかった、全然理解できない" />できなかった、全然理解できない</label></li>
+      <li><label><input type="radio" name="entry.1914587356" value="できなかった、途中から理解できない" />できなかった、途中から理解できない</label></li>
+      <li><label><input type="radio" name="entry.1914587356" value="できた、難しかった" />できた、難しかった</label></li>
+      <li><label><input type="radio" name="entry.1914587356" value="できた、簡単だった" />できた、簡単だった</label></li>
+    </ul>
+
+    <p><label for="question">わからなかった・難しかったところを教えてください（任意）</label><br>
+      <input id="question" type="text" name="entry.1857549962">
+    </p>
+
+    <p>公開されますので個人情報を記入しないでください。<br>
+      <button type="submit" name="button" value="送信">送信</button>
+    </p>
+
+  </form>
+
+
+  <h2 id="videos">動画</h2>
+
+
+  <p><a href="https://youtu.be/lNPbRJX3iFI" target="_blank">YouTube</a></p>
+
+  <p><a href="https://www.nicovideo.jp/watch/sm25568194" target="_blank">ニコニコ動画</a></p>
+
+</body>
+
+</html>

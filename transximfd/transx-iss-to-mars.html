@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../styles/orbiterjp.css">
+  <script src="../scripts/template.js" charset="utf-8" defer></script>
+  <title>TransX ISSから火星まで</title>
+</head>
+
+<body>
+
+  <h1>TransX ISSから火星まで</h1>
+
+
+  <ul>
+    <li><a href="#plan_setup">フライトプランの作成</a></li>
+    <li><a href="#plan_execute">フライトプランの実行</a></li>
+    <li><a href="#planechange">長楕円軌道を利用した軌道面変更</a></li>
+    <ul><li><a href="#planechange_nodes+periapsis">交点（AN・DN）と近地点・遠地点（Pe・Ap）を一致させる</a></li>
+    <li><a href="#planechange_elliptic_orbit">楕円軌道に乗せる</a></li>
+    <li><a href="#planechange_manoeuvre">軌道面を変更する</a></li>
+    <li><a href="#planechange_transfer">遷移軌道に移る</a></li>
+    </ul>
+    <li><a href="#review">解説</a></li>
+    </ul>
+    
+    <p>
+    TransXを使って、ISSから直接火星まで飛ぶ方法について解説します。
+    </p>
+    <p>
+    今回使用するシナリオは、<strong>Checklists</strong>フォルダの<strong>Mission 2 - ISS to Mir</strong>です。
+    </p>
+    <p>
+      <img loading="lazy" src="../images/transximfd/transx-iss-to-mars/ISStoMars005.png" width="266" height="130">
+    </p>
+    <h2 id="plan_setup">フライトプランの作成
+    </h2>
+    <p>
+    地上から出発する場合と同じように、Stage 2のEject Planで火星までのフライトプランを作成する。
+    </p>
+    <p>
+      <img loading="lazy" src="../images/transximfd/transx-iss-to-mars/ISStoMars001.png" width="427" height="429">
+    </p>
+    <p>
+    <strong>Stage 1</strong>の<strong>View:Setup</strong>を開いて、<strong>Scale to View</strong>を<strong>Target</strong>に、<strong>Graph projection</strong>を<strong>Plan</strong>にする。
+    </p>
+    <p>
+    <strong>View:Escape Plan</strong>を開いて、<strong>Pe Distance</strong>を<strong>Focus ApD</strong>と同じ値にする。
+    </p>
+    <p>
+      <img loading="lazy" src="../images/transximfd/transx-iss-to-mars/ISStoMars002.png" width="503" height="184">
+    </p>
+    <p>
+    次に、<strong>Ej Orientation</strong>を操作して、<strong>Rel Inc</strong>（Relative Inclination＝軌道傾斜角のずれ）をゼロに近づける。
+    </p>
+    <p>
+      <img loading="lazy" src="../images/transximfd/transx-iss-to-mars/ISStoMars003.png" width="429" height="427">
+    </p>
+    <p>
+    Rel Incが小さくならない場合は下記を参照。<br>
+    <a href="#planechange">長楕円軌道を利用した軌道面変更</a>
+    </p>
+    
+    <h2 id="plan_execute">フライトプランの実行
+    </h2>
+    <p>
+    ここまでの作業が終わったら、シナリオエディタを使って<strong>Eject date</strong>の日時へと移動する。
+    </p>
+    <p>
+    ドッキングを解除したら、地上からの場合と同じようにマニューバを作成して、火星に向かう。
+    </p>
+    
+    <h2 id="planechange">長楕円軌道を利用した軌道面変更
+    </h2>
+    <p>
+    Eject dateの日時によっては、Rel Incが小さくならないことがあります。<br>
+    このような状況で使えるテクニックについて紹介します。
+    </p>
+    
+    <h3 id="planechange_nodes+periapsis">交点（AN・DN）と近地点・遠地点（Pe・Ap）を一致させる
+    </h3>
+    <p>
+    <strong>Ej Orientation</strong>を操作して、白い線と黄色い点線を重ねる。
+    </p>
+    <p>
+      <img loading="lazy" src="../images/transximfd/transx-iss-to-mars/001.png" width="379" height="379">
+    </p>
+    <p>
+    白い線はAN・DNを結ぶ線であり、これとマニューバの開始地点を重ねることで、Pe・ApとAN・DNが重なることになる。
+    </p>
+    <p>
+    <strong class="caution">重要</strong>：Rel Incが小さくならず、また白い線と黄色い線が重ならないこともあります。<br>
+    そういう場合は、Eject dateを新しく探しなおすか、（余裕があれば）エンジンを噴射してRel Incを小さくしてください。
+    </p>
+    
+    <h3 id="planechange_elliptic_orbit">楕円軌道に乗せる
+    </h3>
+    <p>
+    シナリオエディタを使ってEject dateの<strong>3日前</strong>へと移動する。
+    </p>
+    <p>
+      <img loading="lazy" src="../images/transximfd/transx-iss-to-mars/002.png" width="388" height="202">
+    </p>
+    <p>
+    <strong>Stage 1</strong>で<strong>View: Manoeuvre</strong>にして、<strong>Prograde vel.</strong>を選択。<br>
+    <strong>3000</strong>(3k)と入力する。
+    </p>
+    <p>
+      <img loading="lazy" src="../images/transximfd/transx-iss-to-mars/003.png" width="174" height="154">
+    </p>
+    <p>
+    <strong>Man. date</strong>を選択して、ふたつの黄色い点線を重ねる。
+    </p>
+    <p>
+    このとき、<strong>View: Escape Plan</strong>で黄色と白の3つの線がすべて重なっていることを確認する。
+    </p>
+    <p>
+      <img loading="lazy" src="../images/transximfd/transx-iss-to-mars/004.png" width="759" height="381">
+    </p>
+    <p>
+    このマニューバを実行すると、宇宙船は細長い楕円軌道に乗る。
+    </p>
+    <p>
+      <img loading="lazy" src="../images/transximfd/transx-iss-to-mars/005.png" width="382" height="380">
+    </p>
+    
+    <h3 id="planechange_manoeuvre">軌道面を変更する
+    </h3>
+    <p>
+    楕円軌道に乗ったら、<strong>Align MFD</strong>を開く。<br>
+    <strong>ELS</strong>ボタンをクリック。<br>
+    <a href="transx-functions.html">TransXの機能（中級者向け）</a>
+    </p>
+    <p>
+    TransXの<strong>View: Escape Plan</strong>を見て、<strong>Incl.</strong>と<strong>LAN</strong>の数字を<strong>Align MFD</strong>に入力する。
+    </p>
+    <p>
+      <img loading="lazy" src="../images/transximfd/transx-iss-to-mars/006.png" width="779" height="340">
+    </p>
+    <p>
+    AN・DNのうち、遠地点に近く、Est thrust T（予測噴射時間）の数字が小さいほうで軌道修正する。<br>
+    Align MFDを使って、<strong>RInc</strong>をゼロにする。
+    </p>
+    <p>
+      <img loading="lazy" src="../images/transximfd/transx-iss-to-mars/007.png" width="379" height="358">
+    </p>
+    
+    <h3 id="planechange_transfer">遷移軌道に移る
+    </h3>
+    <p>
+    RIncをゼロにしたら、Align MFDを閉じて、<strong>TransX</strong>を開く。
+    </p>
+    <p>
+    <strong>Stage 2</strong>で<strong>Escape Plan</strong>をすべて消去(<strong>Reset</strong>)する。
+    </p>
+    <p>
+    <strong>Stage 1</strong>で<strong>View: Manoeuvre</strong>を開く。<br>
+    <strong>Man. date</strong>と<strong>Pe MJD</strong>の数字を同じにする。
+    </p>
+    <p>
+      <img loading="lazy" src="../images/transximfd/transx-iss-to-mars/008.png" width="380" height="207">
+    </p>
+    <p>
+    <strong>Prograde vel.</strong>を選択。<br>
+    <strong>Stage 2</strong>を見ながら、火星に到達する軌道にする。
+    </p>
+    <p>
+      <img loading="lazy" src="../images/transximfd/transx-iss-to-mars/009.png" width="761" height="382">
+    </p>
+    <p>
+    マニューバを微調整して、火星に衝突するような軌道にする。
+    </p>
+    <p>
+    マニューバを作成したら、通常の手順で実行して火星に向かう。
+    </p>
+    
+    <h2 id="review">解説
+    </h2>
+    <p>
+    一般的には、地上からの打ち上げに比べて、軌道上から出発したほうが必要な燃料は少なくなります。
+    </p>
+    <p>
+    ただし、地上からの打ち上げであれば、打ち上げの時刻や方角によって、パーキング軌道の軌道面※を自由に選ぶことができます。<br>
+    これに対して、既存の軌道から直接出発する場合、タイミングによっては軌道面が遷移軌道を大きく外れてしまうことがあります。
+    </p>
+    <p class="note">
+    ※軌道面＝軌道傾斜角(Inc)と軌道昇交点(LAN)で定義される平面
+    </p>
+    <p>
+    いったん遠地点を高くすることによって、このような軌道面のずれを小さなDelta Vで修正することができます。<br>
+    現実の宇宙開発では、高緯度地域から静止衛星を打ち上げるような場合に、似たようなテクニック※が用いられています。
+    </p>
+    <p class="note">
+    ※スーパーシンクロナス・トランスファ軌道
+    </p>
+
+</body>
+</html>

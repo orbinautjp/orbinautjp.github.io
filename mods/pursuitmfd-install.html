@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../styles/orbiterjp.css">
+  <script src="../scripts/template.js" charset="utf-8" defer></script>
+  <title>PursuitMFDのダウンロード+インストール</title>
+</head>
+
+<body>
+
+  <h1>PursuitMFDのダウンロード+インストール</h1>
+
+
+<p>
+<strong>PursuitMFD</strong>は、宇宙船の姿勢制御、ドッキング、着陸を自動化・補助するMODです。<br>
+<strong>Orbiter2016</strong>と<strong>Orbiter2010</strong>の両方で使用できます。
+</p>
+
+<ul>
+<li><a href="#download">ダウンロード</a></li>
+<li><a href="#install">インストール</a>
+  <ul>
+  <li><a href="#2010">Orbiter2010</a></li>
+  <li><a href="#refresh">MFD refresh rate</a></li>
+  <li><a href="#runtime">ランタイム</a></li>
+  </ul>
+</li>
+<li><a href="#caution">注意</a></li>
+<li><a href="#tutorial">操作方法</a></li>
+</ul>
+
+
+<h2 id="download">ダウンロード</h2>
+
+
+<p>
+<a href="https://www.orbithangar.com/showAddon.php?id=24eaf9c5-5ca8-4ddf-9b73-ccc136caefc2" target="_blank">PursuitMFD 2016</a>
+</p>
+
+
+<h2 id="install">インストール</h2>
+
+
+<p>
+ダウンロードしたファイルを解凍して、中身をOrbiterフォルダに上書き。
+</p>
+
+<p>
+<strong>Launchpad</strong>の<kbd>Modules</kbd>タブをクリックして、<strong>PursuitMFD</strong>にチェックを入れる。※
+</p>
+
+<p>
+<img loading="lazy" src="../images/mods/pursuitmfd-install/001.png" width="243" height="133">
+</p>
+
+<p class="note">
+※<strong>Orbiter2016</strong>なら<strong>PursuitMFD_2016</strong>、 <strong>Orbiter2010</strong>なら<strong>PursuitMFD_2010</strong>
+</p>
+
+
+<h3 id="2010">Orbiter2010</h3>
+
+
+<p>
+<strong>Orbiter2010</strong>の場合は、解凍したフォルダの中の<strong>(orb2010)</strong>フォルダを開く。<br>
+中に入っている<strong>Modules</strong>フォルダをコピーして、Orbiterフォルダに上書きする。
+</p>
+
+
+<h3 id="refresh">MFD refresh rate</h3>
+
+
+<p>
+<strong>Launchpad</strong>の<kbd>Parameters</kbd>タブをクリック。<br>
+<strong>MFD refresh [sec]</strong>を<strong>0.1</strong>に設定する。※
+</p>
+
+<p>
+<img loading="lazy" src="../images/mods/pursuitmfd-install/003.png" width="515" height="170">
+</p>
+
+<p class="note">
+※姿勢制御プログラムの挙動に影響する
+</p>
+
+
+<h3 id="runtime">ランタイム</h3>
+
+
+<p>
+起動しない場合は、<strong>Visual C++</strong>のランタイムを導入してください。
+</p>
+
+<p>
+<a href="https://www.microsoft.com/ja-JP/download/details.aspx?id=26999" target="_blank">Microsoft Visual C++ 2010 Service Pack 1 再頒布可能パッケージ MFC のセキュリティ更新プログラム</a>
+</p>
+
+<p>
+このランタイムのインストール方法については、リンク先のページを参照してください。
+</p>
+
+
+<h2 id="caution">注意</h2>
+
+
+<p>
+PursuitMFD使用中にタイムワープ（<kbd>T</kbd> / <kbd>R</kbd>キー）を使うと、挙動が不安定になることがある。<br>
+オートパイロット使用中はタイムワープ<strong>100倍</strong>、エンジン噴射中はタイムワープ<strong>10倍</strong>に制限すること。
+</p>
+
+
+<h2 id="tutorial">操作方法</h2>
+
+
+<ul>
+<li><a href="pursuitmfd-landing.html" target="_blank">月面基地への自動着陸</a></li>
+<li><a href="pursuitmfd-velocity.html" target="_blank">姿勢制御と遠隔操作</a></li>
+<li><a href="pursuitmfd-docking.html" target="_blank">ドッキングを自動化・補助する</a></li>
+<li><a href="pursuitmfd-capture.html" target="_blank">こうのとり・ドラゴン宇宙船のキャプチャー</a></li>
+</ul>
+
+</body>
+</html>

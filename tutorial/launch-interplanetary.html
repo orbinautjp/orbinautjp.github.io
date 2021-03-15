@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../styles/orbiterjp.css">
+  <script src="../scripts/template.js" charset="utf-8" defer></script>
+  <title>惑星間遷移軌道への打ち上げ</title>
+</head>
+
+<body>
+
+  <h1>惑星間遷移軌道への打ち上げ</h1>
+
+
+  <p>
+    惑星間遷移軌道（ほかの惑星へと飛行するための軌道）への打ち上げについて詳しく解説します。<br>
+    <a href="part19.html" target="_blank">TransXのEscape Plan</a>、<a href="../transximfd/imfd-tutorial-2.html" target="_blank">IMFDのSurface Launch</a>に関係する内容です。
+    </p>
+    
+    <h2>惑星間遷移軌道を作る</h2>
+    
+    <p>
+    打ち上げ作業に取りかかる前に、あらかじめ惑星間遷移軌道を作成しておきます。
+    </p>
+    
+    <p>
+    <img loading="lazy" src="../images/tutorial/launch-interplanetary/ISStoMars001.png" width="427" height="429">
+    </p>
+    
+    <p><a href="part18.html" target="_blank">Orbiterチュートリアル Part18</a><br>
+    <a href="../transximfd/imfd-tutorial-1.html" target="_blank">IMFD Part1 Target Interceptとフライトプランの作成</a></p>
+    
+    <p>
+    地上にある打ち上げ地点は、自転によって回転しつつ、地球とともに公転軌道を移動しています。<br>
+    打ち上げ地点はこのように複雑な運動をしているので、いったんその存在を忘れて、地球を出発点として軌道を作成します。<br>
+    「地球を宇宙船に見立てて考える」という人もいます。
+    </p>
+    <p>
+    地球と目的地の惑星の位置関係から、条件に合う遷移軌道を決定します。<br>
+    この作業は、地球低軌道から月へと飛行する場合と基本的な考え方は同じです。<br>
+    出発点を宇宙船にするか、地球そのものにするかという違いだけです。
+    </p>
+    
+    <h2>遷移軌道に接続する</h2>
+    
+    <p>
+    円軌道のある一点で加速すると、円軌道→楕円軌道→放物線軌道→双曲線軌道へと変化します。<br>
+    Orbiterでは、軌道上で実際にエンジンを噴射することで、軌道が変化する様子を確認できます。
+    </p>
+    
+    <p><img loading="lazy" src="../images/tutorial/launch-interplanetary/conics001.png" width="1492" height="926">
+    </p>
+    
+    <p>
+    以下の図において、赤い線はあらかじめ作成しておいた惑星間遷移軌道への方向を示しています。<br>
+    緑の円は地球上を周回するパーキング軌道です。<br>
+    パーキング軌道のある一点で加速すると、青で表示した双曲線へと変化します。
+    </p>
+    
+    <p><img loading="lazy" src="../images/tutorial/launch-interplanetary/EscapeTrajectory_004.png" width="1517" height="911">
+    </p>
+    
+    <p>
+    この双曲線軌道の片方の端は、赤い線と並行に伸びています。<br>
+    このような双曲線軌道に乗ることができれば、そのまま遷移軌道に接続できます。<br>
+    赤い線と青い双曲線はまったく同じではありませんが、惑星間航行の長大な距離に比べればこの違いはごく小さなものです。
+    </p>
+    
+    <p>
+    パーキング軌道を逆回りに周回する場合を考慮に入れると、反対側にもうひとつ双曲線軌道を作成できます。
+    </p>
+    
+    <p><img loading="lazy" src="../images/tutorial/launch-interplanetary/EscapeTrajectory_008.png" width="1566" height="965">
+    </p>
+    
+    <p>
+    また、この宇宙は3次元空間なので、赤い線を軸に双曲線軌道を回転させることができます。<br>
+    惑星の横からでも、上・下からでも、同じ方向へと飛んでいくことができます。
+    </p>
+    
+    <p><img loading="lazy" src="../images/tutorial/launch-interplanetary/EscapeTrajectory_005.png" width="1517" height="911">
+    </p>
+    
+    <p>
+    このように軌道を回転させることで、無限にたくさんの双曲線軌道を考えることができます。
+    </p>
+    
+    <p>
+    <img loading="lazy" src="../images/tutorial/launch-interplanetary/EscapeTrajectory_006.png" width="1517" height="911">
+    </p>
+    
+    <p>
+    <img loading="lazy" src="../images/tutorial/launch-interplanetary/ej_animation.gif" width="320" height="268">
+    </p>
+    
+    <p>
+    これが意味するのは、<strong>地球上のどの地点であっても、その上空を通り、遷移軌道に接続できる双曲線軌道が必ず2つ<a href="#note1">※</a>存在する</strong>ということです。<br>
+    <strong>TransX</strong>を使用する場合、<strong>Escape Plan</strong>の<strong>Ej Orientation</strong>機能を使うことで、この軌道を目指して打ち上げることができます。
+    </p>
+    <p id="note1" class="note">
+    ※パーキング軌道を逆回りに周回する場合を考えてください
+    </p>
+    
+    <h2>自転速度の利用</h2>
+    
+    <p>
+    真東に打ち上げた場合、地球の自転による速度をそのまま利用できます。
+    </p>
+    <p>
+    また、同じ方向への打ち上げであっても、時刻によって軌道の傾きと向きが変化します。<br>
+    これは地球が自転しており、またその自転軸が傾いているからです。
+    </p>
+    
+    <iframe src="https://www.youtube.com/embed/b6muY8mdips?autoplay=0&loop=1&playlist=b6muY8mdips" frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    
+    <p>
+    これを応用して、真東に打ち上げたときの軌道が、ちょうど双曲線軌道のどれか1つと重なるようなタイミングを待って打ち上げると、もっとも効率がよくなります。
+    </p>
+    <p>
+    惑星間ミッションでは、このようにして打ち上げ時刻を決定します。
+    </p>
+
+</body>
+</html>

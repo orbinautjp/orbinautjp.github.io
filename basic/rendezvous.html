@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../styles/orbiterjp.css">
+  <script src="../scripts/template.js" charset="utf-8" defer></script>
+  <title>ランデブーの方法</title>
+</head>
+
+<body>
+
+  <h1>ランデブーの方法</h1>
+
+
+<p>ほかの宇宙船と軌道上で合流する「ランデブー」の方法について紹介します。</p>
+
+<ul>
+<li><a href="#syncorbit">Sync Orbit MFD</a></li>
+<li><a href="#transx">TransX MFD</a></li>
+<li><a href="#imfd">Interplanetary MFD</a></li>
+<li><a href="#reference">参考文献</a></li>
+</ul>
+
+
+<h2 id="syncorbit">Sync Orbit MFD</h2>
+
+
+<ul>
+<li><a href="../tutorial/index.html#dg_to_iss" target="_blank">Orbiterチュートリアル - 地上からISSまで</a></li>
+<li><a href="../tutorial/sync-orbit-mfd.html" target="_blank">Sync Orbit MFD</a></li>
+<li><a href="../misc/rendezvous-explained.html#sync" target="_blank">ランデブーの原理 - Sync Orbit MFD</a></li>
+</ul>
+
+
+<h3>特徴</h3>
+
+
+<p>周回を繰り返しながら、軌道周期を変更することでターゲットに接近する。</p>
+
+<p>両者の高度が近い場合に適している。<br>
+両者の高度が大きく離れている(地球低軌道→静止軌道など)場合には不向き。</p>
+
+
+<h3>Stable Orbit</h3>
+
+
+<p>このようなランデブー軌道のことを、<strong>Stable Orbit</strong>（安定軌道）という。<br>
+ランデブー時刻を調整しやすいことから、スケジュールが過密なスペースシャトルミッションにおいて使用された。</p>
+
+
+<h2 id="transx">TransX MFD</h2>
+
+
+<ul>
+<li><a href="../tutorial/index.html#earth_to_moon" target="_blank">Orbiterチュートリアル - 地球から月まで</a></li>
+<li><a href="../transximfd/transx-rendezvous.html" target="_blank">TransX 宇宙船とのランデブー</a></li>
+<li><a href="../misc/rendezvous-explained.html#transx" target="_blank">ランデブーの原理 - TransX</a></li>
+</ul>
+
+
+<h3>特徴</h3>
+
+
+<p>ホーマン軌道を作成して、直接ターゲットに向かう。</p>
+
+<p>両者の軌道高度が離れていてもランデブーできる。<br>
+操作・修正が簡単。</p>
+
+
+<h3>Coelliptic Orbit</h3>
+
+
+<p>このような軌道のことを、<strong>Coelliptic Orbit</strong>（共楕円軌道）という。<br>
+アポロ計画や、ドラゴン宇宙船などで使用されている。</p>
+
+
+<h2 id="imfd">Interplanetary MFD</h2>
+
+
+<ul>
+<li><a href="../transximfd/imfd-tutorial-4.html" target="_blank">IMFD Part4 Target Interceptによる軌道修正</a></li>
+<li><a href="../misc/rendezvous-explained.html#imfd" target="_blank">ランデブーの原理 - IMFD</a></li>
+</ul>
+
+
+<h3>特徴</h3>
+
+
+<p>IMFDの<strong>Target Intercept</strong>機能を使用する。</p>
+
+<p>ほとんど自動でマニューバを作成・実行してくれる。<br>
+ランデブーまでの移動時間を指定することができる。</p>
+
+<p>条件によっては、実行不可能なマニューバを作成してしまうことがある。<br>
+また、単純なホーマン軌道を作ろうとすると、かえって時間がかかってしまう。</p>
+
+
+<h3>Lambert Problem</h3>
+
+
+<p>このような方法のことを、<strong>Lambert Problem</strong>（ランベルト問題）という。<br>
+使用する軌道、エンジン噴射のタイミングは<strong>TransX</strong>と同じだが、計算方法が違う。</p>
+
+
+<h2 id="reference">参考文献</h2>
+
+
+<ul>
+<li>Goodman, John L, 2011, “<a href="https://ntrs.nasa.gov/citations/20110023479" target="_blank">History of space shuttle rendezvous</a>,” JSC-63400, Revision 3, Johnson Space Centre, National Aeronautics and Space Administration.</li>
+<li>吉河 章二, 蒲原 信治, 2011, 「<a href="https://www.jstage.jst.go.jp/article/isciesci/55/3/55_KJ00007112470/_article/-char/ja/" target="_blank">宇宙機の相対運動と制御</a>」『システム／制御／情報』55(3): 94-99.</li>
+</ul>
+
+</body>
+</html>

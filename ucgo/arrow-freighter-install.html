@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../styles/orbiterjp.css">
+  <script src="../scripts/template.js" charset="utf-8" defer></script>
+  <title>Arrow Freighterのダウンロードと設定</title>
+</head>
+
+<body>
+
+  <h1>Arrow Freighterのダウンロードと設定</h1>
+
+
+  <p>Arrow Freighterは、地球から木星・土星までの長距離航行が可能な星間貨物船です。<br>
+    UCGO+UMMUの車両・人員・貨物を搭載することができます。</p>
+    
+    <h2>ダウンロード・インストール</h2>
+    
+    <p>ダウンロード<br>
+    <a href="http://orbiter.dansteph.com/forum/index.php?page=download" target="_blank">UCGO 3.0 + UMmu 3.0 - 2014 edition</a><br>
+    Arrow FreighterはUCGO+UMMU MODに付属しています。</p>
+    <p>インストールについては以下のページを参照してください。<br>
+    <a href="ummu-ucgo-download.html" target="_blank">UMMU+UCGOのダウンロード・インストール</a></p>
+    <p>インストールが終わったら、<strong><q>Arrow - Arrow Freighter presentation</q></strong>シナリオを実行して、正常に表示されるか確認してください。<br>
+      <img loading="lazy" src="../images/ucgo/arrow-freighter-install/ArrowDownload002.png" width="252" height="129">
+    </p>
+    <h2>設定の変更</h2>
+    <p>以下のcfgファイルをメモ帳などのテキストエディタで開くと、Arrow Freighterの設定を変更できます。</p>
+    <blockquote>Config\Vessels\UCGO\Vessels\UCGOArrowFreighter.cfg</blockquote>
+    <p>
+      <img loading="lazy" src="../images/ucgo/arrow-freighter-install/ArrowDownload001.png" width="521" height="190"></p>
+    <p>初期設定だと月などの重力の弱い星からしか離陸できないので、必要に応じてホバーエンジンの設定を変更します。</p>
+    
+    <ul>
+    <li>初期設定<br>
+    <pre><code>HOVER_THRUST_POWER =10e6</code></pre></li>
+    <li>火星から離陸可能<br>
+    <pre><code>HOVER_THRUST_POWER =30e6</code></pre></li>
+    <li>地球から離陸可能<br>
+    <pre><code>HOVER_THRUST_POWER =60e6</code></pre></li>
+    </ul>
+    
+    <h2>ブリッジと船室</h2>
+    
+    <p>3Dコクピットで<kbd>Ctrl</kbd> + <strong>矢印キー</strong>を押すと、ブリッジと船室を移動できます。</p>
+    <p><kbd>Ctrl</kbd> + <kbd>Alt</kbd> + <strong>矢印キー</strong>で、ブリッジ・船室の窓の近くへ移動します。</p>
+
+</body>
+</html>

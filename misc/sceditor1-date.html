@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../styles/orbiterjp.css">
+  <script src="../scripts/template.js" charset="utf-8" defer></script>
+  <title>シナリオエディタ 基本操作と日時の変更</title>
+</head>
+
+<body>
+
+  <h1>シナリオエディタ 基本操作と日時の変更</h1>
+
+
+<p>Orbiterでは現実の太陽系が再現されており、惑星や宇宙船の移動には長い時間を必要とします。<br>
+シナリオエディタを使えば、プレイ時間を大幅に短縮できます。</p>
+
+<ul>
+<li><a href="#launch">シナリオエディタを開く</a></li>
+<li><a href="#save">シナリオを保存する</a></li>
+<li><a href="#date">日時の変更</a>
+  <ul>
+  <li><a href="#date_time">Date and time</a></li>
+  <li><a href="#date_mjd">Modified Julian Date [MJD]</a></li>
+  <li><a href="#date_propagation">Vessel state propagation</a></li>
+  </ul>
+</li>
+<li><a href="#timejump">シナリオエディタを使ったタイムワープ</a></li>
+<li><a href="#caution">注意点</a></li>
+</ul>
+
+
+<h2 id="launch">シナリオエディタを開く</h2>
+
+
+<p>Launchpadの<strong>Modules</strong>タブをクリックして、<strong>ScnEditor</strong>にチェックを入れる。</p>
+
+<p><img loading="lazy" src="../images/misc/sceditor1-date/SCE003.png" width="587" height="584"></p>
+
+<p>ゲーム内で<kbd>Ctrl</kbd>キーを押しながら<kbd>F4</kbd>キーを押す。<br>
+出てきたウィンドウで<strong>Scenario Editor</strong>を選んで<kbd>OK</kbd>をクリック。</p>
+
+<p><img loading="lazy" src="../images/misc/sceditor1-date/orbiterdl007.png" width="509" height="597"></p>
+
+
+<h2 id="save">シナリオを保存する</h2>
+
+
+<p>左下の<kbd>Save</kbd>をクリックすると、現在のシナリオに名前をつけて保存できる。</p>
+
+<p><img loading="lazy" src="../images/misc/sceditor1-date/SCE001.png" width="419" height="429"></p>
+
+
+<h2 id="date">日時の変更</h2>
+
+
+<p>シナリオエディタを開いて、右下の<kbd>Date</kbd>をクリック。<br>
+（上の画像を参照）</p>
+
+<p><kbd>▲</kbd>ボタンをクリックするか、キーボードで直接日時を入力。<br>
+右下の<kbd>Apply</kbd>と書かれたボタンをクリックすると、指定した日時に移動する。</p>
+
+<p><img loading="lazy" src="../images/misc/sceditor1-date/SCE002.png" width="419" height="427"></p>
+
+<p>時刻系についての詳しい解説はこちらを参照してください。<br>
+<a href="orbitalelements.html#time" target="_blank">軌道要素と時刻系</a></p>
+
+
+<h3 id="date_time">Date and time</h3>
+
+
+<p>日時を指定する。<br>
+<strong>UT</strong>（世界時）が使われている。特定地域の標準時を表示することはできない。<br>
+左から、<strong>日・月・年</strong>、<strong>時・分・秒</strong>を指定する。</p>
+
+
+<h3 id="date_mjd">Modified Julian Date [MJD]</h3>
+
+
+<p>Modified Julian Date = 修正ユリウス日。<br>
+MJDはTransXやIMFDなどの軌道計算ツールでよく用いられる。<br>
+100日後に移動したいなら、この数字に100を足す。</p>
+
+<p>小数点以下は時・分・秒に相当するが、<strong>12進法ではなく10進法を使うので注意。</strong><br>
+(例えば、0.1は10分の1日なので2.4時間になる)</p>
+
+<p>西暦とMJDの変換方法については以下の記事を参照すること。<br>
+<a href="orbitalelements.html#time_tool" target="_blank">Orbiter Date Converter</a><br>
+<a href="orbitalelements.html#mjd" target="_blank">Modified Julian Date [MJD]</a></p>
+
+
+<h3 id="date_propagation">Vessel state propagation</h3>
+
+
+<p>シナリオエディタを使ったタイムワープが宇宙船の挙動にどう影響するかを決定する。</p>
+
+<p>通常は、以下の設定のままにしておく。</p>
+
+<table>
+ <tr>
+  <td><strong>Orbital</strong><br>
+        軌道上</td>
+  <td><strong>Propagate along osculating elements</strong></td>
+ </tr>
+ <tr>
+  <td><strong>Suborbital</strong><br>
+        地上・大気圏内</td>
+  <td><strong>Maintain fixed surface position</strong></td>
+ </tr>
+</table>
+
+<p>それぞれの設定の意味は以下の通り。</p>
+
+<table>
+ <tr>
+  <td>Maintain fixed state vectors</td>
+  <td>基準となる座標系に対して、現在の位置・速度を保存する。<br>
+        中心天体の自転の影響を受けない。</td>
+ </tr>
+ <tr>
+  <td>Maintain fixed surface position</td>
+  <td>地表における位置を保存する。<br>
+        惑星の自転に合わせて移動する。</td>
+ </tr>
+ <tr>
+  <td>Propagate along osculating elements</td>
+  <td>現在の軌道にしたがって移動する。<br>
+        中心天体以外の重力の影響は計算されない。</td>
+ </tr>
+</table>
+
+
+<h2 id="timejump">シナリオエディタを使ったタイムワープ</h2>
+
+
+<p>シナリオエディタを使って、長距離移動でのプレイ時間を短縮できる。</p>
+
+<p>宇宙船の飛行中にシナリオエディタを使って時間を操作すると、宇宙船は予測された軌道に従って、その時点のあるべき位置に移動する。</p>
+
+<p>例えば、宇宙船を「半年後に火星に到着する軌道」に乗せておいてから、シナリオエディタで半年後に時間移動すると、一瞬で火星に到着することになる。</p>
+
+<p>通常の<kbd>T</kbd>キーおよび<kbd>R</kbd>キーでのタイムワープと比べると多少の誤差はあるが、<strong>惑星の重力圏からある程度離れた位置</strong>で使うのであれば大きな問題はない。</p>
+
+
+<h2 id="caution">注意点</h2>
+
+
+<p>Orbiterでは、惑星の動きが現実のそれとほぼ同じになるようにシミュレートされている。<br>
+<strong class="caution">重要</strong>：ただし、指定された日時によっては、挙動がやや不安定になることがある。</p>
+
+<p>具体的には、<a href="../ucgo/ummu-ucgo-download.html">UMMU</a>（宇宙飛行士を再現したMOD）がまともに歩けなくなる。<br>
+21世紀前半であれば問題ないが、20世紀や21世紀後半になると不安定になる。</p>
+
+<p>惑星表面に着陸しないのであれば、宇宙船の航行にはほとんど影響しない。</p>
+
+</body>
+</html>

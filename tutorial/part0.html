@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../styles/orbiterjp.css">
+  <script src="../scripts/template.js" charset="utf-8" defer></script>
+  <script src="../scripts/prevnext_tutorial.js" charset="utf-8" defer></script>
+  <title>Part0 マウス+キーボードでの操縦の基本</title>
+</head>
+
+<body>
+
+  <h1>Part0 マウス+キーボードでの操縦の基本</h1>
+
+
+  <p>マウス+キーボードでの操縦について解説します。</p>
+
+  <ul>
+    <li><a href="#numpad">必要なもの</a></li>
+    <li><a href="#scenario">シナリオファイル</a></li>
+  </ul>
+
+  <ol>
+    <li><a href="#liftoff">離陸</a>
+      <ul>
+        <li><a href="#mfd">MFDを開く</a></li>
+        <li><a href="#ignition">エンジン点火</a></li>
+        <li><a href="#ascent">上昇</a></li>
+      </ul>
+    </li>
+    <li><a href="#pilot">空中での操作</a>
+      <ul>
+        <li><a href="#thrustcontrol">エンジン出力を変更する</a></li>
+        <li><a href="#wings">動翼の操作</a></li>
+        <li><a href="#heading">針路を変更する</a></li>
+      </ul>
+    </li>
+    <li><a href="#climb">高度を上げる</a></li>
+    <li><a href="#rcs">RCSを起動する</a></li>
+  </ol>
+
+  <ul>
+    <li><a href="#reference">関連項目</a></li>
+    <li><a href="#form">アンケート</a></li>
+    <li><a href="#video">動画</a></li>
+  </ul>
+
+
+  <h2 id="numpad">必要なもの</h2>
+
+
+  <ul>
+    <li><strong>テンキー</strong></li>
+  </ul>
+
+  <p>ノートPCなどでは、テンキーが付属していないことがある。<br>
+    家電量販店、ホームセンターなどで購入できる。</p>
+
+
+  <h2 id="scenario">シナリオファイル</h2>
+
+
+  <p><strong>Orbiter_ng.exe</strong>をダブルクリック。<br>
+    <strong>Launchpad</strong>を起動する。
+  </p>
+
+  <p><kbd>Scenarios</kbd>をクリック。<br>
+    シナリオファイルの一覧を開く。</p>
+
+  <p><strong>Checklists</strong>フォルダの<strong>Quickstart</strong>を選択。</p>
+
+  <p>
+    <img loading="lazy" src="../images/tutorial/part0/quickstart.png" width="250" height="125">
+  </p>
+
+  <p>ダブルクリックでゲームを開始する。</p>
+
+
+  <h2 id="liftoff">離陸</h2>
+
+
+  <h3 id="mfd">MFDを開く</h3>
+
+
+  <p>キーボードの<kbd>F8</kbd>を何度か押す。<br>
+    2Dコクピットに切り替える。</p>
+
+  <p>
+    <img loading="lazy" src="../images/tutorial/part0/001.png" width="1920" height="1080">
+  </p>
+
+  <p>周りにボタンが並んだ小さい画面のことを、<strong>MFD</strong>と呼ぶ。</p>
+
+  <p>左<strong>MFD</strong>の下の、<kbd>SEL</kbd>ボタンをクリック。</p>
+
+  <p><strong>Surface</strong>の左にある、<kbd>&gt;</kbd>ボタンをクリック。<br>
+    <strong>Surface MFD</strong>に切り替わる。
+  </p>
+
+  <p>
+    <img loading="lazy" src="../images/tutorial/part0/002.png" width="470" height="400">
+  </p>
+
+  <p>
+    <img loading="lazy" src="../images/tutorial/part0/020.png" width="1920" height="1080">
+  </p>
+
+
+  <h3 id="ignition">エンジン点火</h3>
+
+
+  <p>テンキー<kbd>+</kbd>（プラス）を押し続ける。<br>
+    そのままキーボードの<kbd>Ctrl</kbd>を一回押す。</p>
+
+  <p>これで、エンジン全開で固定される。</p>
+
+  <p>
+    <img loading="lazy" src="../images/tutorial/part0/003.png" width="950" height="551">
+  </p>
+
+
+  <h3 id="ascent">上昇</h3>
+
+
+  <p>HUDの左上に速度が表示されている。※<br>
+    <strong>160</strong>（秒速160m）になるまで加速する。
+  </p>
+
+  <p>
+    <img loading="lazy" src="../images/tutorial/part0/004.png" width="240" height="80">
+  </p>
+
+  <p class="note">※見づらいときは、<kbd>Alt</kbd>+<kbd>H</kbd>でHUDの色を変えられる。</p>
+
+  <p>テンキー<kbd>2</kbd>を押し続けると、機首が上がる。<br>
+    離陸するまで機首を上げ続ける。</p>
+
+  <p>
+    <img loading="lazy" src="../images/tutorial/part0/018.png" width="455" height="551">
+  </p>
+
+  <p>機体が宙に浮いたら、キーボードの<kbd>G</kbd>を押す。<br>
+    ランディングギア（着陸用の車輪）が収納される。</p>
+
+
+  <h2 id="pilot">空中での操作</h2>
+
+
+  <h3 id="thrustcontrol">エンジン出力を変更する</h3>
+
+
+  <p><kbd>Ctrl</kbd>を押しながら、テンキー<kbd>-</kbd>を押す。<br>
+    少しずつエンジン出力が下がる。</p>
+
+  <p><kbd>Ctrl</kbd>を押しながら、<kbd>+</kbd>を押す。<br>
+    少しずつエンジン出力が上がる。</p>
+
+  <p>
+    <img loading="lazy" src="../images/tutorial/part0/005.png" width="950" height="551">
+    <img loading="lazy" src="../images/tutorial/part0/006.png" width="170" height="530">
+  </p>
+
+  <p>テンキー<kbd>*</kbd>（アスタリスク）を押す。<br>
+    メインエンジンが完全に停止する。</p>
+
+  <p>
+    <img loading="lazy" src="../images/tutorial/part0/007.png" width="455" height="551">
+  </p>
+
+
+  <h3 id="wings">動翼の操作</h3>
+
+
+  <p>テンキー<kbd>2</kbd>&nbsp;or&nbsp;<kbd>8</kbd>を押す。<br>
+    機首を上下に動かす。</p>
+
+  <p>
+    <img loading="lazy" src="../images/tutorial/part0/008.png" width="455" height="551">
+  </p>
+
+  <p>テンキー<kbd>4</kbd>&nbsp;or&nbsp;<kbd>6</kbd>を押す。<br>
+    左右に機体を傾ける。</p>
+
+  <p>
+    <img loading="lazy" src="../images/tutorial/part0/009.png" width="455" height="551">
+  </p>
+
+  <p>テンキー<kbd>1</kbd>&nbsp;or&nbsp;<kbd>3</kbd>を押す。<br>
+    機首を左右に向ける。</p>
+
+  <p>
+    <img loading="lazy" src="../images/tutorial/part0/010.png" width="455" height="551">
+  </p>
+
+  <p>テンキー<kbd>5</kbd>を押すと、機体の回転が止まる。<br>
+    もう一度<kbd>5</kbd>を押すと解除される。</p>
+
+  <p>
+    <img loading="lazy" src="../images/tutorial/part0/011.png" width="455" height="551">
+  </p>
+
+  <table>
+    <tr>
+      <td><kbd>2</kbd>&nbsp;or&nbsp;<kbd>8</kbd></td>
+      <td>ピッチ<br>エレベータ</td>
+      <td>機首を上下に動かす</td>
+    </tr>
+    <tr>
+      <td><kbd>4</kbd>&nbsp;or&nbsp;<kbd>6</kbd></td>
+      <td>ロール<br>エルロン</td>
+      <td>機体を左右に傾ける</td>
+    </tr>
+    <tr>
+      <td><kbd>1</kbd>&nbsp;or&nbsp;<kbd>3</kbd></td>
+      <td>ヨー<br>ラダー</td>
+      <td>機首を左右に向ける</td>
+    </tr>
+    <tr>
+      <td style="text-align:center;"><kbd>5</kbd></td>
+      <td><kbd>KILL ROT</kbd>オートパイロット</td>
+      <td>機体の回転を止める<br>2度押すと解除</td>
+    </tr>
+  </table>
+
+
+  <h3 id="heading">針路を変更する</h3>
+
+
+  <p>機体を傾けると、少しずつその方向に針路が変わる。<br>
+    <strong>Surface MFD</strong>では、機体の傾きを確認できる。
+  </p>
+
+  <p><strong>BNK</strong>は左右への傾き（バンク角）を表す。<br>
+    <strong>L</strong>なら左に、<strong>R</strong>なら右に傾いていることを意味する。
+  </p>
+
+  <p>
+    <img loading="lazy" src="../images/tutorial/part0/012.png" width="470" height="400">
+  </p>
+
+  <p>テンキー<kbd>4</kbd>&nbsp;or&nbsp;<kbd>6</kbd>を押す。<br>
+    機体を左右どちらかに大きく傾ける。</p>
+
+  <p>この状態で、テンキー<kbd>2</kbd>で機首を上げる。<br>
+    これで、大きく針路を変えることができる。</p>
+
+  <p>HUDの一番上には方位角が表示されている。<br>
+    今回は機首を方位<strong>090</strong> = 真東に向けてみよう。</p>
+
+  <p>
+    <img loading="lazy" src="../images/tutorial/part0/013.png" width="440" height="80">
+  </p>
+
+  <p>機首が<strong>090</strong>を向いたら、機体の傾きを戻す。</p>
+
+  <p>一度で狙った方向に機首を向けるのは難しい。<br>
+    何度か機体の回転を止めて（テンキー<kbd>5</kbd>）、少しずつ修正する。</p>
+
+
+  <h2 id="climb">高度を上げる</h2>
+
+
+  <p>テンキー<kbd>2</kbd>を押して機首を上げる。<br>
+    迎え角を<strong>60°</strong>まで上げる。</p>
+
+  <p>迎え角はHUDに表示される線を見ればわかる。</p>
+
+  <p>
+    <img loading="lazy" src="../images/tutorial/part0/014.png" width="300" height="100">
+  </p>
+
+  <p>できるだけ針路を維持しつつ上昇する。</p>
+
+  <p>HUDの右上に高度が表示されている。<br>
+    これが<strong>20k</strong>(20km)になるまで待つ。</p>
+
+  <p>
+    <img loading="lazy" src="../images/tutorial/part0/015.png" width="240" height="80">
+  </p>
+
+  <p>20kmを超えたら、テンキー<kbd>8</kbd>を押す。<br>
+    ゆっくりと機首を下げる。</p>
+
+  <p>
+    <img loading="lazy" src="../images/tutorial/part0/016.png" alt="" width="600" height="201">
+  </p>
+
+  <p>強引な機首下げをすると、動翼が壊れることがある。</p>
+
+
+  <h2 id="rcs">RCSを起動する</h2>
+
+
+  <p>高度が<strong>30km</strong>を超えたら、<strong>RCS</strong>を起動する。<br>
+    <kbd>Ctrl</kbd>を押しながら、テンキー<kbd>/</kbd>を押す。
+  </p>
+
+  <p><strong>RCS ROT</strong>にする。</p>
+
+  <p>
+    <img loading="lazy" src="../images/tutorial/part0/019.png" width="950" height="551">
+  </p>
+
+  <p><strong>RCS MODE</strong>のボタンでも同じ操作ができる。</p>
+
+  <table>
+    <tr>
+      <th>バージョン</th>
+      <th>ボタンの位置</th>
+      <th>操作</th>
+    </tr>
+    <tr>
+      <td><strong>Orbiter2010</strong></td>
+      <td>右端</td>
+      <td>右クリック</td>
+    </tr>
+    <tr>
+      <td><strong>Orbiter2016</strong></td>
+      <td>左端</td>
+      <td>左クリック</td>
+    </tr>
+  </table>
+
+  <p>
+    <img loading="lazy" src="../images/tutorial/part0/017.png" width="270" height="90">
+  </p>
+
+  <p>これで、姿勢制御用の小型エンジン(RCS)が使えるようになる。<br>
+    空気の薄い高高度・宇宙では、RCSを使って宇宙船を操縦する。</p>
+
+  <p>この記事の一番下に、<strong>次の投稿</strong>のリンクがある。</p>
+
+
+  <h2 id="reference">関連項目</h2>
+
+
+  <p><a href="../basic/orbitercontrol.html" target="_blank">Orbiterの基本操作</a></p>
+
+
+  <h2 id="form">アンケート</h2>
+
+
+  <form action="https://docs.google.com/forms/d/e/1FAIpQLScuHrNEXBb97XdX6suFZhZDxHLSRYt0DJvQGDU8M-jZhtjAKQ/formResponse" target="_self" method="POST" id="mG61Hd">
+
+    <p>この記事の内容は理解できましたか？</p>
+
+    <ul>
+      <li><label><input type="radio" name="entry.1914587356" value="できなかった、全然理解できない" />できなかった、全然理解できない</label></li>
+      <li><label><input type="radio" name="entry.1914587356" value="できなかった、途中から理解できない" />できなかった、途中から理解できない</label></li>
+      <li><label><input type="radio" name="entry.1914587356" value="できた、難しかった" />できた、難しかった</label></li>
+      <li><label><input type="radio" name="entry.1914587356" value="できた、簡単だった" />できた、簡単だった</label></li>
+    </ul>
+
+    <p><label for="question">わからなかった・難しかったところを教えてください（任意）</label><br>
+      <input id="question" type="text" name="entry.1857549962">
+    </p>
+
+    <p>公開されますので個人情報を記入しないでください。<br>
+      <button type="submit" name="button" value="送信">送信</button>
+    </p>
+
+  </form>
+
+
+  <h2 id="video">動画</h2>
+
+
+  <p><a href="https://youtu.be/sQzZ4-NKf5I" target="_blank">YouTube</a></p>
+
+  <p><a href="https://www.nicovideo.jp/watch/sm26042740" target="_blank">ニコニコ動画</a></p>
+
+</body>
+
+</html>

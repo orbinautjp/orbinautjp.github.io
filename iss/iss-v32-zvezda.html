@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../styles/orbiterjp.css">
+  <script src="../scripts/template.js" charset="utf-8" defer></script>
+  <title>ISS v3.2 ズヴェズダの打ち上げとドッキング</title>
+</head>
+
+<body>
+
+  <h1>ISS v3.2 ズヴェズダの打ち上げとドッキング</h1>
+
+
+  <h2>打ち上げシナリオのバグ回避</h2>
+  <p>プロトンロケットによるズヴェズダの打ち上げシナリオにはバグがあるため、そのままプレイするとエラーのためゲームが止まってしまいます。</p>
+  <p>以下のリンクから<strong>ZVG.txt</strong>をダウンロード。<br>
+  <a href="http://www.orbiter-forum.com/showthread.php?p=205804&amp;postcount=52" target="_blank">OHM International Space Station v.3.2 - Page 4 - Orbiter-Forum</a></p>
+  <p>このファイルを<strong>Config\Vessels\ISSR</strong>フォルダに置いてください。<br>
+    <img loading="lazy" class="small" src="../images/iss/iss-v32-zvezda/Zvezda002.png" width="147" height="85" />
+  </p>
+  <h2>打ち上げに関する注意点</h2>
+  <p>ズヴェズダを打ち上げてISSとランデブーする、というシンプルな内容ですが、ズヴェズダの宇宙船としての能力がかなり低いため、<strong>きわめて難しいミッションです。</strong><br>
+  おそらくスペースシャトルミッションのほうが難易度が低いので、詰まったら飛ばして先に進んでください。</p>
+  <p>まず、<strong>Perturbations</strong>（摂動）のオプションを無効にしてください。<br>
+  <a href="../basic/realismperturbations.html" target="_blank">Realism（リアリズム）とPerturbations（摂動）</a></p>
+  <p>摂動のオプションがオンになっていると誤差が生じますが、ズヴェズダにはこれを修正する余力がないので無効にしておきます。</p>
+  <p>以下の記事を参考に、打ち上げのタイミングを調整してください。<br>
+  <a href="iss-v32-shuttle-launch.html" target="_blank">ISS v3.2 スペースシャトルの打ち上げ</a><br>
+  ズヴェズダの打ち上げの場合、Tnは500秒前後が目安です。</p>
+  <p>軌道に上がったら、キーボードで<kbd>Ctrl</kbd>+<kbd>1</kbd>、<kbd>Ctrl</kbd>+<kbd>2</kbd>、<kbd>E</kbd>をそれぞれ押して、太陽電池パネルやエンジンカバーを展開してください。</p>
+  <h2>ISSとのドッキング</h2>
+  <p>ズヴェズダは<strong>RCS LIN</strong>が使えないため、ズヴェズダを動かしてISSとドッキングするのはほぼ不可能です。<br>
+  したがって、「ISSを動かしてズヴェズダとドッキングする」ことになります。</p>
+  <p>ズヴェズダでISSとのランデブーに成功したら、<kbd>F3</kbd>キーを押してISSに乗り換えます。</p>
+  <p><kbd>C</kbd>キーを押して、<strong>ZVEZDA DOCKING CAM</strong>に切り換えてください。<br>
+    <img loading="lazy" src="../images/iss/iss-v32-zvezda/Zvezda003.png" width="608" height="348" />
+  </p>
+  <p>カメラが後ろ向きに、かつ斜めに取り付けられているので、Docking MFDは使えません。<br>
+  RCSも前後が逆で軸が傾いた状態になっています。</p>
+  <p>ズヴェズダに取り付けられたドッキング用の目印を目視で確認して、これが正面に来るようにしてドッキングしてください。<br>
+    <img loading="lazy" src="../images/iss/iss-v32-zvezda/Zvezda001.png" width="398" height="250" />
+  </p>
+
+</body>
+</html>

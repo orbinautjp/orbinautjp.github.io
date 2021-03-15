@@ -1,0 +1,581 @@
+<!DOCTYPE html>
+
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../styles/orbiterjp.css">
+  <script src="../scripts/template.js" charset="utf-8" defer></script>
+  <script src="../scripts/prevnext_tutorial.js" charset="utf-8" defer></script>
+
+<script>
+window.MathJax = {
+  tex: {
+    tags: 'ams'
+  }
+}
+  </script>
+
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+  <title>Part1 打ち上げから軌道投入まで</title>
+</head>
+
+<body>
+
+  <h1>Part1 打ち上げから軌道投入まで</h1>
+
+
+  <p>
+    宇宙船を打ち上げて、周回軌道に投入します。
+  </p>
+
+  <ul>
+    <li><a href="#scenario">シナリオファイル</a></li>
+  </ul>
+
+  <ol>
+    <li><a href="#mapmfd">Map MFD</a>
+      <ul>
+        <li><a href="#mapmfd_plane">表示を切り替える</a></li>
+        <li><a href="#mapmfd_window">打ち上げのタイミング</a></li>
+      </ul>
+    </li>
+    <li><a href="#orbitmfd">Orbit MFD</a>
+      <ul>
+        <li><a href="#orbitmfd_target">ターゲットを指定する</a></li>
+        <li><a href="#orbitmfd_prj">表示を切り替える</a></li>
+      </ul>
+    </li>
+    <li><a href="#launch">打ち上げ</a>
+      <ul>
+        <li><a href="#launch_liftoff">離陸する</a></li>
+        <li><a href="#climb">旋回・上昇する</a></li>
+        <li><a href="#pitchdown">機首を下げる</a></li>
+        <li><a href="#rcs">RCSを起動する</a></li>
+        <li><a href="#ascent">ApAを200kmにする</a></li>
+      </ul>
+    </li>
+    <li><a href="#insertion">軌道投入</a>
+      <ul>
+        <li><a href="#apoapsis">遠地点に移動する</a></li>
+        <li><a href="#autopilot">オートパイロットを実行する</a></li>
+        <li><a href="#apogeekick">軌道投入噴射</a></li>
+        <li><a href="#disautopilot">オートパイロットを解除する</a></li>
+      </ul>
+    </li>
+  </ol>
+
+  <ul>
+    <li><a href="#reference">関連項目</a></li>
+    <li><a href="#form">アンケート</a></li>
+    <li><a href="#video">動画</a></li>
+  </ul>
+
+
+  <h2 id="scenario">シナリオファイル</h2>
+
+
+  <p><strong>Orbiter_ng.exe</strong>をダブルクリック。<br>
+    <strong>Launchpad</strong>を起動する。
+  </p>
+
+  <p><kbd>Scenarios</kbd>をクリック。<br>
+    シナリオファイルの一覧を開く。</p>
+
+  <p><strong>Checklists</strong>フォルダの<strong>DG to ISS</strong>を選択。</p>
+
+  <p>
+    <img loading="lazy" src="../images/tutorial/part1/dg_to_iss.png" width="250" height="125">
+  </p>
+
+  <p>ダブルクリックでゲームを開始する。</p>
+
+
+  <h2 id="mapmfd">Map MFD</h2>
+
+
+  <p><strong>Map MFD</strong>は、地図上に軌道を表示する。<br>
+    これを使って打ち上げのタイミングを待つ。</p>
+
+
+  <h3 id="mapmfd_plane">表示を切り替える</h3>
+
+
+  <p><kbd>DSP</kbd>をクリック。</p>
+
+  <p>
+    <img loading="lazy" src="../images/tutorial/part1/001.png" width="470" height="370">
+  </p>
+
+  <p><kbd>MOD</kbd>をクリック。</p>
+
+  <p><strong>Orbit lines</strong>を<strong>Orbit plane</strong>に切り替える。<br>
+    軌道の表示方法が変更される。</p>
+
+  <p>
+    <img loading="lazy" src="../images/tutorial/part1/002.png" width="470" height="370">
+  </p>
+
+  <p><kbd>OK</kbd>をクリックして元の画面に戻る。</p>
+
+
+  <h3 id="mapmfd_window">打ち上げのタイミング</h3>
+
+
+  <p>黄色い線が、緑の十字と重なるのを待つ。<br>
+    <kbd>ZM+</kbd>をクリックして拡大する。
+  </p>
+
+  <p>
+    <img loading="lazy" src="../images/tutorial/part1/003.png" width="470" height="370">
+  </p>
+
+  <p>黄色い線はISSの軌道を表す。<br>
+    緑の十字は宇宙船の位置を表す。</p>
+
+  <p>キーボード<kbd>T</kbd>で時間を進める。<br>
+    <kbd>R</kbd>で時間の進みを遅くする。
+  </p>
+
+  <p>キーを押した回数に応じて、タイムワープの倍率が変化する。</p>
+
+  <p>タイムワープの倍率は画面右上に表示されている。<br>
+    10xなら10倍、100xなら100倍になる。</p>
+
+  <table>
+    <tr>
+      <td><kbd>TGT</kbd></td>
+      <td>target</td>
+      <td>ターゲットを指定する</td>
+    </tr>
+    <tr>
+      <td><kbd>ZM-</kbd>&nbsp;or&nbsp;<kbd>ZM+</kbd></td>
+      <td>zoom</td>
+      <td>縮小・拡大</td>
+    </tr>
+    <tr>
+      <td><kbd>TRK</kbd></td>
+      <td>track</td>
+      <td>自機を中心に表示</td>
+    </tr>
+    <tr>
+      <td><kbd>DSP</kbd></td>
+      <td>display</td>
+      <td>画面を切り替える</td>
+    </tr>
+    <tr>
+      <td><kbd>MOD</kbd></td>
+      <td>modify</td>
+      <td>設定を変更する</td>
+    </tr>
+    <tr>
+      <td><kbd>UP</kbd>&nbsp;or&nbsp;<kbd>DN</kbd></td>
+      <td>up, down</td>
+      <td>上下にスクロール</td>
+    </tr>
+    <tr>
+      <td><kbd>&lt;</kbd>&nbsp;or&nbsp;<kbd>&gt;</kbd></td>
+      <td></td>
+      <td>左右にスクロール</td>
+    </tr>
+  </table>
+
+
+  <h2 id="orbitmfd">Orbit MFD</h2>
+
+
+  <p>黄色い線が緑の十字と重なったら、タイムワープを解除する。</p>
+
+  <p><strong>Map MFD</strong>の下にある、<kbd>SEL</kbd>をクリック。</p>
+
+  <p><strong>Orbit</strong>の左にある、<kbd>&gt;</kbd>をクリック。<br>
+    <strong>Orbit MFD</strong>に切り替える。
+  </p>
+
+  <p>
+    <img loading="lazy" src="../images/tutorial/part1/right_sel_orbit.png" width="470" height="400">
+  </p>
+
+
+  <h3 id="orbitmfd_target">ターゲットを指定する</h3>
+
+
+  <p><kbd>TGT</kbd>をクリック。<br>
+    <kbd>Enter</kbd>キーを押す。
+  </p>
+
+  <p>キーボードで<strong>ISS</strong>と入力する。<br>
+    <kbd>Enter</kbd>を押して確定する。
+  </p>
+
+  <p><strong>ISS</strong>がターゲットに指定される。</p>
+
+  <p>
+    <img loading="lazy" src="../images/tutorial/part1/004_1.png" width="470" height="370">
+  </p>
+
+
+  <h3 id="orbitmfd_prj">表示を切り替える</h3>
+
+
+  <p><kbd>PRJ</kbd>をクリック。<br>
+    <strong>Prj SHP</strong>にする。
+  </p>
+
+  <p><kbd>DST</kbd>をクリック。<br>
+    <strong>Rad</strong>を<strong>Alt</strong>に切り替える。
+  </p>
+
+  <p>
+    <img loading="lazy" src="../images/tutorial/part1/004_2.png" width="470" height="370">
+  </p>
+
+  <p>
+  <table>
+    <tr>
+      <td><kbd>SEL</kbd></td>
+      <td>select</td>
+      <td>使用するMFDを選択する</td>
+    </tr>
+    <tr>
+      <td><kbd>PRJ</kbd></td>
+      <td>projection</td>
+      <td>投影。何を基準に軌道を描画するか選択する<br><strong>SHP</strong>&nbsp;=&nbsp;Ship&nbsp;=&nbsp;宇宙船</td>
+    </tr>
+    <tr>
+      <td><kbd>DST</kbd></td>
+      <td>distance</td>
+      <td>天体から宇宙船までの距離</td>
+    </tr>
+    <tr>
+      <td><strong>Rad</strong></td>
+      <td>radius</td>
+      <td>軌道半径。天体の中心からの距離</td>
+    </tr>
+    <tr>
+      <td><strong>Alt</strong></td>
+      <td>altitude</td>
+      <td>地表からの高度</td>
+    </tr>
+  </table>
+  </p>
+
+
+  <h2 id="launch">打ち上げ</h2>
+
+
+  <p>離陸して、打ち上げ方位へと旋回する。<br>
+    旋回を終えたら上昇する。</p>
+
+
+  <h3 id="launch_liftoff">離陸する</h3>
+
+
+  <p>エンジン全開で固定する。<br>
+    テンキー<kbd>+</kbd>を押しながら、<kbd>Ctrl</kbd>を押す。</p>
+
+  <p>HUDの左上に速度が表示されている。※<br>
+    <strong>160</strong>（秒速160m）になるまで加速する。
+  </p>
+
+  <p>
+    <img loading="lazy" src="../images/tutorial/part1/speed.png" width="180" height="60">
+  </p>
+
+  <p class="note">※見づらいときは、<kbd>Alt</kbd>+<kbd>H</kbd>でHUDの色を変更できる。</p>
+
+  <p>機首を上げて上昇する。<br>
+    テンキー<kbd>2</kbd>を押すか、スティックを手前に引く。</p>
+
+  <p>地面を離れたら、キーボード<kbd>G</kbd>を押す。<br>
+    ランディングギアが収納される。</p>
+
+
+  <h3 id="climb">旋回・上昇する</h3>
+
+
+  <p>右旋回して、方位<strong>137</strong>に機首を向ける。</p>
+
+  <p>旋回を終えたら、機体を水平にする。</p>
+
+  <p>
+    <img loading="lazy" src="../images/tutorial/part1/azimuth.png" width="420" height="130">
+  </p>
+
+  <p>機首を上げて上昇する。<br>
+    できるだけ方位<strong>137</strong>を維持する。</p>
+
+  <p>迎え角を<strong>60°</strong>にする。</p>
+
+  <p>
+    <img loading="lazy" src="../images/tutorial/part1/014.png" width="300" height="100">
+  </p>
+
+  <p>テンキー<kbd>5</kbd>を押すと、機体の回転が止まる。<br>
+    もう一度押すと解除される。</p>
+
+  <p>一度で機体の向きを合わせるのは難しい。<br>
+    何度か回転を止めて微調整する。</p>
+
+
+  <h3 id="pitchdown">機首を下げる</h3>
+
+
+  <p>HUDの右上に高度が表示されている。<br>
+    高度<strong>20km</strong>で機首を下げる。</p>
+
+  <p>
+    <img loading="lazy" src="../images/tutorial/part1/015.png" width="240" height="80">
+  </p>
+
+  <p>迎え角を<strong>20°</strong>にする。</p>
+
+  <p>
+    <img loading="lazy" src="../images/tutorial/part1/004_3.png" width="330" height="110">
+  </p>
+
+  <p>テンキー<kbd>5</kbd>を押して、迎え角を維持する。<br>
+    下がってきたら機首を上げる。</p>
+
+  <p>加速を続けるにつれて、方位が<strong>137</strong>からずれてくるが、これは気にしなくてよい。</p>
+
+
+  <h3 id="rcs">RCSを起動する</h3>
+
+
+  <p>高度<strong>30km</strong>で、<strong>RCS MODE</strong>を<strong>ROT</strong>にする。<br>
+    <kbd>Ctrl</kbd>を押しながら、テンキー<kbd>/</kbd>を押す。
+  </p>
+
+  <p>大気が薄くなるので、<strong>RCS</strong>を起動しておく。</p>
+
+  <p>
+    <img loading="lazy" src="../images/tutorial/part1/017.png" width="270" height="90">
+  </p>
+
+  <p>
+  <table>
+    <tr>
+      <td><strong>RCS</strong></td>
+      <td>Reaction Control System</td>
+      <td>姿勢制御装置</td>
+    </tr>
+    <tr>
+      <td><strong>ROT</strong></td>
+      <td>rotation</td>
+      <td>回転</td>
+    </tr>
+    <tr>
+      <td><strong>LIN</strong></td>
+      <td>linear (translation)</td>
+      <td>直線移動（平行移動）</td>
+    </tr>
+  </table>
+  </p>
+
+  <p>迎え角<strong>20°</strong>を維持して加速を続ける。</p>
+
+
+  <h3 id="ascent">ApAを200kmにする</h3>
+
+
+  <p>秒速<strong>6km</strong>に到達したら、機首を下げる。<br>
+    機体を水平にする。</p>
+
+  <p>
+    <img loading="lazy" src="../images/tutorial/part1/004_4.png" width="180" height="60">
+  </p>
+
+  <p> \( \bigoplus \) のマーカーは、進行方向を表している。</p>
+
+  <p> \( \bigoplus \) が迎え角<strong>0°</strong>より下がらないようにする。<br>
+    マーカーが下がってきたら機首を上げる。</p>
+
+  <p>
+    <img loading="lazy" src="../images/tutorial/part1/004_5.png" width="540" height="180">
+  </p>
+
+  <p><strong>Orbit MFD</strong>で<strong>ApA</strong>の数字を確認する。</p>
+
+  <p><strong>ApA</strong>が<strong>200k</strong>を超えたら、エンジンを切る。<br>
+    テンキー<kbd>*</kbd>（アスタリスク）を押す。</p>
+
+  <p>
+    <img loading="lazy" src="../images/tutorial/part1/005.png" width="425" height="425">
+  </p>
+
+  <p>仮の軌道なので、正確に200kmにする必要はない。</p>
+
+
+  <h2 id="insertion">軌道投入</h2>
+
+
+  <p><kbd>H</kbd>キーを2回押す。<br>
+    HUDを<a href="../basic/orbitercontrol.html#hud" target="_blank">Orbit HUD</a>に切り替える。</p>
+
+  <p>
+    <img loading="lazy" src="../images/tutorial/part1/008.png" width="500" height="500">
+  </p>
+
+
+  <h3 id="apoapsis">遠地点に移動する</h3>
+
+
+  <p><strong>Ap</strong>で再加速して、宇宙船を軌道に乗せる。</p>
+
+  <p><strong>Orbit MFD</strong>で<strong>ApT</strong>の数字を確認する。<br>
+    残り<strong>300</strong>まで早送りする。※</p>
+
+  <p class="note">※ApTが300 = 300秒後にApに到達するということ。</p>
+
+  <p>
+    <img loading="lazy" src="../images/tutorial/part1/006.png" width="425" height="425">
+  </p>
+
+  <p>
+  <table>
+    <tr>
+      <td><strong>Ap</strong></td>
+      <td>Apoapsis</td>
+      <td>遠地点。軌道上で、地球から一番遠い点</td>
+    </tr>
+    <tr>
+      <td><strong>ApT</strong></td>
+      <td>Time to Apoapsis</td>
+      <td>遠地点までの時間</td>
+    </tr>
+    <tr>
+      <td><strong>ApA</strong></td>
+      <td>Apoapsis altitude</td>
+      <td>遠地点高度</td>
+    </tr>
+    <tr>
+      <td><strong>Ecc</strong></td>
+      <td>Eccentricity</td>
+      <td>離心率。軌道がどれだけ円に近いか表す。0なら完全な円になる</td>
+    </tr>
+  </table>
+  </p>
+
+
+  <h3 id="autopilot">オートパイロットを実行する</h3>
+
+
+  <p><kbd>ProGrade</kbd>ボタンをクリック。<br>
+    オートパイロットが機首を進行方向に向ける。</p>
+
+  <table>
+    <tr>
+      <td><strong>Orbiter2010</strong></td>
+      <td><kbd>ProGrade</kbd></td>
+    </tr>
+    <tr>
+      <td><strong>Orbiter2016</strong></td>
+      <td><kbd>PRO-G</kbd></td>
+    </tr>
+  </table>
+
+  <p>
+    <img loading="lazy" class="small" src="../images/tutorial/part1/DGtoISS014.png" width="133" height="253">
+    <img loading="lazy" class="small" src="../images/tutorial/part1/DGtoISS017.png" width="244" height="101">
+    <br>
+    1枚目がOrbiter2010、2枚目が2016
+  </p>
+
+  <p>オートパイロットの実行中は、タイムワープを<strong>10倍</strong>までに制限すること。</p>
+
+
+  <h3 id="apogeekick">軌道投入噴射</h3>
+
+
+  <p><strong>ApT</strong>が<strong>0</strong>になったら、エンジンに点火する。<br>
+    テンキー<kbd>+</kbd>を押す。</p>
+
+  <p><strong>Orbit MFD</strong>で<strong>Ecc</strong>の数字を確認する。<br>
+    <strong>Ecc</strong>が<strong>0</strong>に近づくまで噴射を続ける。
+  </p>
+
+  <p>数字が小さくなったら、エンジンを切る。</p>
+
+  <p>
+    <img loading="lazy" src="../images/tutorial/part1/007.png" width="425" height="425">
+  </p>
+
+  <p><strong>RCS MODE</strong>を<strong>LIN</strong>にする。<br>
+    テンキー<kbd>/</kbd>を押す。</p>
+
+  <p>テンキー<kbd>6</kbd>&nbsp;or&nbsp;<kbd>9</kbd>のどちらかを押す。<br>
+    さらに<strong>Ecc</strong>を小さくする。</p>
+
+  <p><strong>Ecc</strong>を完全にゼロにする必要はないが、できるだけ小さくしておく。</p>
+
+
+  <h3 id="disautopilot">オートパイロットを解除する</h3>
+
+
+  <p><kbd>ProGrade</kbd>&nbsp;or&nbsp;<kbd>PRO-G</kbd>をクリック。<br>
+    オートパイロットを解除する。</p>
+
+  <p>オートパイロットを解除しないままにしていると、操縦不能になることがある。<br>
+    テンキー<kbd>5</kbd>でも<kbd>ProGrade</kbd>を解除できる。</p>
+
+
+  <h2 id="reference">関連項目</h2>
+
+
+  <ul>
+    <li><a href="../basic/launch-azimuth.html" target="_blank">打ち上げ方位（Launch Azimuth）を求める方法</a></li>
+    <li><a href="../mods/launch-mfd.html" target="_blank">Launch MFDのインストールと操作</a>
+      <ul>
+        <li><a href="../mods/launch-mfd.html#azimuth" target="_blank">打ち上げ方位を計算する</a></li>
+        <li><a href="../mods/launch-mfd.html#autopilot" target="_blank">自動打ち上げ</a></li>
+      </ul>
+    </li>
+    <li><a href="../misc/orbitalelements.html" target="_blank">軌道要素と時刻系</a></li>
+    <li>打ち上げのタイミングと方向（動画）
+      <ul>
+        <li><a href="https://youtu.be/38rObJF3EVg" target="_blank">YouTube</a></li>
+        <li><a href="https://www.nicovideo.jp/watch/sm27274749" target="_blank">ニコニコ動画</a></li>
+      </ul>
+    </li>
+  </ul>
+
+
+  <h2 id="form">アンケート</h2>
+
+
+  <form action="https://docs.google.com/forms/d/e/1FAIpQLSfXCX5agJGwpkMkAUV5SasZI1fzGawxhqcQQSbT-Uk6TVpDoA/formResponse" target="_self" method="POST" id="mG61Hd">
+
+    <p>この記事の内容は理解できましたか？</p>
+
+    <ul>
+      <li><label><input type="radio" name="entry.1914587356" value="できなかった、全然理解できない" />できなかった、全然理解できない</label></li>
+      <li><label><input type="radio" name="entry.1914587356" value="できなかった、途中から理解できない" />できなかった、途中から理解できない</label></li>
+      <li><label><input type="radio" name="entry.1914587356" value="できた、難しかった" />できた、難しかった</label></li>
+      <li><label><input type="radio" name="entry.1914587356" value="できた、簡単だった" />できた、簡単だった</label></li>
+    </ul>
+
+    <p><label for="question">わからなかった・難しかったところを教えてください（任意）</label><br>
+      <input id="question" type="text" name="entry.1857549962">
+    </p>
+
+    <p>公開されますので個人情報を記入しないでください。<br>
+      <button type="submit" name="button" value="送信">送信</button>
+    </p>
+
+  </form>
+
+
+  <h2 id="video">動画</h2>
+
+
+  <p><a href="https://youtu.be/foMz667gY20" target="_blank">YouTube</a></p>
+
+  <p><a href="https://www.nicovideo.jp/watch/sm25451720" target="_blank">ニコニコ動画</a></p>
+
+</body>
+
+</html>

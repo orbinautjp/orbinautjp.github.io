@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../styles/orbiterjp.css">
+  <script src="../scripts/template.js" charset="utf-8" defer></script>
+  <title>TransX 地球―月の自由帰還軌道を作る</title>
+</head>
+
+<body>
+
+  <h1>TransX 地球―月の自由帰還軌道を作る</h1>
+
+
+<p>TransXを使って、地球―月の自由帰還軌道を作る方法について解説します。</p>
+<p>今回解説する自由帰還軌道とは、このような軌道です。</p>
+<ol><li>地球を離れて月に向かう。</li>
+<li>月で減速スイングバイをして、地球に落ちる軌道にする。</li>
+<li>地球に戻る。</li>
+</ol><p>TransXを使えば、このような軌道も手軽に作成できます。</p>
+
+<h2>打ち上げ・軌道投入</h2>
+
+<p>今回使用するシナリオは、<strong>Checklists</strong>フォルダの<strong>Quickstart</strong>です。</p>
+<p>以下の記事を参考に、月と軌道面が一致するように軌道投入してください。<br>
+<a href="../tutorial/part9.html" target="_blank">チュートリアル Part9 月への打ち上げ</a></p>
+<p>ただし、今回は月面基地に降りるわけではないので、月の裏側が明るくなるタイミングで出発してください。</p>
+
+  <p>
+    <img loading="lazy" src="../images/transximfd/transx-freereturn/001.png" width="724" height="351" ></p>
+
+<h2>マニューバを作成する</h2>
+
+<p>まず最初に、普通に月に行くときと同じようにマニューバを作成してください。<br>
+基地には降りないので、月を直撃するコースで問題ありません。<br>
+<a href="../tutorial/part10.html" target="_blank">Part10 TransXで地球軌道から月へ(TLI)</a></p>
+
+<p>
+<img loading="lazy" src="../images/transximfd/transx-freereturn/002.png" width="716" height="352" ></p>
+
+<h3>減速スイングバイ</h3>
+
+<p>今回は、月で減速スイングバイを実行します。<br>
+スイングバイをおこなう天体の進行方向から見て、<strong>後ろ</strong>を通過すると<strong>加速</strong>。<br>
+<strong>前</strong>を通過すると<strong>減速</strong>します。</p>
+<p>軌道傾斜角が<strong>0°</strong>（ゼロ）に近ければ、宇宙船は半時計まわりに軌道を周回します。<br>
+スイングバイのため天体の近くを通過する場合は、後ろを通ることになります。</p>
+<p>軌道傾斜角が<strong>180°</strong>に近ければ、天体の前を通過します。</p>
+<p>したがって、今回のフライトでは「軌道傾斜角が<strong>180°</strong>に近くなるように、月の近くを通る」ということになります。</p>
+
+<h3>自由帰還軌道を作る</h3>
+
+<p><strong>Man. date</strong>を操作して、<strong>Inc</strong>（軌道傾斜角）が<strong>180</strong>に近く、月のそばを通るような軌道にする。</p>
+
+  <p>
+    <img loading="lazy" src="../images/transximfd/transx-freereturn/004.png" width="660" height="348" ></p>
+<p><strong>Stage2</strong>で<strong>View:Setup</strong>に切り替える。<br>
+<strong>Select Target</strong>で<strong>Escape</strong>を選択。</p>
+<p><kbd>FWD</kbd>をクリックして、<strong>Stage3</strong>にする。</p>
+
+  <p>
+    <img loading="lazy" src="../images/transximfd/transx-freereturn/005.png" width="438" height="347" ></p>
+<p><strong>Focus PeD</strong>の数字が、地球に戻ってきたときの地球の中心からの距離になる。<br>
+地球の半径は<strong>6.371M</strong>メートル（6,371km）なので、例えば高度400kmなら<strong>6.771M</strong>になる。</p>
+<p><strong>Stage1</strong>の<strong>View:Manoeuvre</strong>で<strong>Man. date</strong>と<strong>Prograde vel.</strong>を操作して、高度を変える。<br>
+何度か<strong>Stage2</strong>に戻って、月面からの距離を確認する。</p>
+
+<p>
+<img loading="lazy" src="../images/transximfd/transx-freereturn/006.png" width="687" height="350" ></p>
+<p>マニューバが作成できたら、通常通り実行します。<br>
+<strong>Stage3</strong>を見て確認しながら、手動で微調整します。</p>
+<p>成功すれば、月の前方を通って、地球に自動的に戻ってくる軌道になるはずです。</p>
+
+</body>
+</html>

@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../styles/orbiterjp.css">
+  <script src="../scripts/template.js" charset="utf-8" defer></script>
+  <title>Scenario Editor TLEのインストールと操作</title>
+</head>
+
+<body>
+
+  <h1>Scenario Editor TLEのインストールと操作</h1>
+
+
+<p><strong>Scenario Editor TLE</strong>は、TLE形式の軌道データをOrbiterにインポートできるMODです。<br>
+実際の軌道データをOrbiterに読み込ませることで、人工衛星などの軌道も簡単に再現できます。</p>
+
+<p>今回の内容に進む前に、シナリオエディタの基本操作を確認してください。<br>
+<a href="index.html#sceditor">シナリオエディタの記事一覧</a></p>
+
+<ul>
+<li><a href="#install">ダウンロード+インストール</a>
+<ul>
+<li><a href="#install_caution">注意点 (Orbiter2016)</a></li>
+</ul>
+</li>
+<li><a href="#tle">ISSの軌道データをインポートする</a>
+<ul>
+<li><a href="#tle_download">TLEを取得する</a></li>
+<li><a href="#tle_import">OrbiterにTLEを読み込ませる</a></li>
+</ul>
+</li>
+<li><a href="#reference">資料</a></li>
+</ul>
+
+<h2 id="install">ダウンロード+インストール</h2>
+
+<p><a href="http://www.orbithangar.com/searchid.php?ID=2617">Scenario Editor TLE</a>※</p>
+<p class="note">※Orbiter2010でも2016でも使えます。</p>
+<p>ダウンロードしたファイルを解凍して、Orbiterのインストールフォルダに上書き。</p>
+<p><strong>Launchpad</strong>の<strong>Modules</strong>タブを開く。</p>
+<p><strong>ScnEditorTLE</strong>にチェックを入れる。</p>
+
+<p>
+
+</p>
+
+<h3 id="install_caution">注意点 (Orbiter2016)</h3>
+
+<p><strong>Orbiter2016</strong>において、宇宙船を地表に配置する場合は、通常の<strong>ScnEditor</strong>を使用してください。</p>
+
+<h2 id="tle">ISSの軌道データをインポートする</h2>
+
+<p>現実のISSは定期的に軌道を変更しているため、OrbiterにおけるISSの軌道とは異なる軌道を周回しています。</p>
+<p>TLE形式で表される軌道データを使って、ISSの軌道を現実のそれに近づける方法について説明します。</p>
+
+<h3 id="tle_download">TLEを取得する</h3>
+
+<p>今回は、<strong>CelesTrak</strong>さんで公開されている<strong>TLE</strong>を利用します。</p>
+<p><a href="http://celestrak.com/">CelesTrak</a></p>
+<p>以下のページにある、<strong>Space Stations</strong>のリンクをクリック。</p>
+<p><a href="http://celestrak.com/NORAD/elements/">CelesTrak: Current NORAD Two-Line Element Sets</a></p>
+<p>メモ帳などのテキストエディタを開いて、<strong>ISS (ZARYA)</strong> 以下の3行をコピーする。</p>
+
+<p>
+<img loading="lazy" src="../images/misc/scenario-editor-tle/002.png" width="609" height="131">
+</p>
+<p>適当な名前をつけて、<strong>.txt</strong>形式で保存する。</p>
+
+<p>
+<img loading="lazy" src="../images/misc/scenario-editor-tle/003.png" width="404" height="118">
+</p>
+
+<h3 id="tle_import">OrbiterにTLEを読み込ませる</h3>
+
+<p>ISSが登場する適当なシナリオでゲームを開始する。<br>
+（例：<strong>Checklists</strong>フォルダの<strong>DG to ISS</strong>）</p>
+
+<p><kbd>Ctrl</kbd>キーを押しながら<kbd>F4</kbd>キーを押す。<br>
+<strong>Scenario Editor TLE</strong>を選択して<kbd>OK</kbd>をクリック。</p>
+
+<p>最初に<kbd>Date</kbd>をクリックして、<kbd>Now</kbd>をクリック。※</p>
+
+<p class="note">※今回は現在の時刻を使用しますが、過去のミッションなどを参照する場合は過去の日付に設定してください。<br>
+※Nowボタンで現在時刻を取得すると、1分程度のずれが生じるため、気になる場合は手動で合わせてください。</p>
+
+<p>一覧から<strong>ISS</strong>をクリックして、<kbd>Edit</kbd>をクリック。</p>
+
+<p>
+<img loading="lazy" src="../images/misc/scenario-editor-tle/005.png" width="416" height="422">
+</p>
+<p><kbd>State vectors</kbd>をクリック。</p>
+<p><strong>Frame</strong>を<strong>ref. equator (fixed)</strong>にする。<br>
+<strong>Coordinates</strong>を<strong>cartesian</strong>にする。</p>
+
+<p>
+<img loading="lazy" src="../images/misc/scenario-editor-tle/006.png" width="413" height="420">
+</p>
+<p>下の<kbd>Load TLE</kbd>をクリック。<br>
+保存しておいたTLEのテキストファイルを選択して、<kbd>開く</kbd>をクリック。</p>
+<p>TLEが読み込まれたら<kbd>OK</kbd>をクリック。</p>
+
+<p>
+<img loading="lazy" src="../images/misc/scenario-editor-tle/007.png" width="476" height="311">
+</p>
+<p><kbd>Apply</kbd>をクリックすると、ISSが現実のそれとほぼ同じ位置に移動する。</p>
+<p>以下のページにて、現実のISSの現在位置を確認できます。<br>
+<a href="http://www.esa.int/Our_Activities/Human_Spaceflight/International_Space_Station/Where_is_the_International_Space_Station">Where is the International Space Station? - ESA</a></p>
+
+<h2 id="reference">資料</h2>
+
+<p>TLEにおける数字の読み方については、以下のページに詳しく解説されているので参考にしてください。<br>
+<a href="http://www.lizard-tail.com/isana/tle/misc/what_is_tle.html">きどうようそのひみつ</a>(Author: KASHIWAI, Isana)</p>
+<p>月日/日数の早見表<br>
+<a href="https://www.esrl.noaa.gov/gmd/grad/neubrew/Calendar.jsp">DOY Calendar - NOAA Earth System Research Laboratory</a></p>
+
+</body>
+</html>

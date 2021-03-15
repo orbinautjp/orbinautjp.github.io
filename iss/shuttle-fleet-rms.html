@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../styles/orbiterjp.css">
+  <script src="../scripts/template.js" charset="utf-8" defer></script>
+  <title>Shuttle Fleet ロボットアームの操作</title>
+</head>
+
+<body>
+
+  <h1>Shuttle Fleet ロボットアームの操作</h1>
+
+
+<table>
+    <tr>
+        <td><kbd>CTRL</kbd> + <kbd>SPACE</kbd></td>
+        <td>RMSの操作ダイアログを開く</td>
+    </tr>
+    <tr>
+        <td><kbd>SHIFT</kbd> + <kbd>S</kbd></td>
+        <td>アームの移動速度を上げる（1倍・2倍・5倍・10倍の順番）</td>
+    </tr>
+    <tr>
+        <td><kbd>CTRL</kbd> + <kbd>8</kbd></td>
+        <td>アームの移動を止める</td>
+    </tr>
+</table>
+
+
+<h2>RMSの操作ダイアログ</h2>
+
+
+<p>
+  <img loading="lazy" src="../images/iss/shuttle-fleet-rms/RMS001.png" width="337" height="655">
+</p>
+<p>まず最初に、右上の<strong>ARM STATUS</strong>の下のボタンをクリックして<kbd>ARM DPLYD</kbd>にする。
+</p>
+<p>左下の<strong>Show grapple points</strong>にチェックを入れると、ロボットアームを接続できる部分に矢印が表示される。
+</p>
+
+
+<h3>アームを曲げる</h3>
+
+
+<p>ロボットアームは主に3つの関節で構成されており、それぞれ以下のように区別されている。</p>
+
+<table>
+    <tr>
+        <td><strong>Wrist</strong></td>
+        <td>アームの先端</td>
+    </tr>
+    <tr>
+        <td><strong>Elbow</strong></td>
+        <td>アームの中間点</td>
+    </tr>
+    <tr>
+        <td><strong>Shoulder</strong></td>
+        <td>アームの根元</td>
+    </tr>
+</table>
+
+<p>以上3つの項目にあるボタンを操作することで、ロボットアームを曲げる、先端を回転させることができる。
+</p>
+
+
+<h3>アームの先端を移動させる</h3>
+
+
+<p><strong>Translation</strong>のボタンを使うと、アームの先端を平行移動させることができる。
+</p>
+
+<table>
+    <tr>
+        <td><kbd>Z+</kbd> or <kbd>Z-</kbd></td>
+        <td>シャトルの上下</td>
+    </tr>
+    <tr>
+        <td><kbd>X+</kbd> or <kbd>X-</kbd></td>
+        <td>シャトルの前後</td>
+    </tr>
+    <tr>
+        <td><kbd>Y+</kbd> or <kbd>Y-</kbd></td>
+        <td>シャトルの左右</td>
+    </tr>
+</table>
+
+
+<h3>ペイロードに接続する</h3>
+
+
+<p>アームの先端が接続可能なポイントに接触すると、<kbd>Grapple</kbd>ボタンをクリックできるようになる。
+</p>
+<p><kbd>Grapple</kbd>ボタンをクリックするとアームに接続される。<br>
+<kbd>Release</kbd>をクリックするとアームから離れる。
+</p>
+<p>アームに接続されたペイロードを、ドッキングポートに接触させてから<kbd>Release</kbd>すると、自動的にドッキングされる。
+</p>
+<p>作業が終わったら、<kbd>Stow</kbd>ボタンをクリックすると自動的にアームが元の位置に戻る。
+</p>
+<p>ペイロードベイを閉鎖する前に、必ず<strong>ARM STATUS</strong>の下のボタンを押しておくこと。
+</p>
+
+</body>
+</html>

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../styles/orbiterjp.css">
+  <script src="../scripts/template.js" charset="utf-8" defer></script>
+  <title>LunarTransferMFDのダウンロード+インストール</title>
+</head>
+
+<body>
+
+  <h1>LunarTransferMFDのダウンロード+インストール</h1>
+
+
+  <p>LunarTransferMFDは、地球から月へのフライトのためのMODです。<br>
+    地球→月における軌道予測の精度が高く、AMSOのアポロ宇宙船など、Delta Vの制限が厳しいミッションで活躍します。※</p>
+    <p class="note">※地球とその月でしか使えません。<br>
+    ※イオンエンジンなどはサポートしていません。<br>
+    ※作成できる軌道には制限があります。TransXやIMFDのような自由度はありません。</p>
+    
+    <h2>ダウンロード</h2>
+    
+    <p>ダウンロードは以下のリンクから。</p>
+    <p><a href="http://users.kymp.net/p501474a/Orbiter/Orbiter.html" target="_blank">Interplanetary MFD - Orbiter addon</a></p>
+    <p>Orbiter<strong>2010</strong>なら<strong>1.4</strong><br>
+    Orbiter<strong>2016</strong>なら<strong>1.5</strong></p>
+    <p>対応バージョンを選んでダウンロード。<br>
+        <img loading="lazy" src="../images/mods/lunartransfermfd/001.png" width="703" height="142">
+    </p>
+    
+    <h2>インストール</h2>
+    
+    <p>ダウンロードしたファイルを解凍して中身をOrbiterフォルダに上書き。</p>
+    <p>Launchpadの<strong>Modules</strong>タブで、<strong>LunarTransferMFD</strong>にチェックを入れる。<br>
+        <img loading="lazy" src="../images/mods/lunartransfermfd/002.png" width="197" height="116">
+    </p>
+    
+    <h2>操作方法</h2>
+    
+    <p>基本的な操作は、IMFDとほぼ同じです。<br>
+    <a href="../transximfd/imfd-tutorial-1.html" target="_blank">IMFD Part1 Target Interceptとフライトプランの作成</a></p>
+    
+    <table>
+     <tr>
+      <td><kbd>PRG</kbd></td>
+      <td>Program menuを開く</td>
+     </tr>
+     <tr>
+      <td><kbd>PRV</kbd> or <kbd>NXT</kbd></td>
+      <td>ほかの項目へ移動</td>
+     </tr>
+     <tr>
+      <td><kbd>+</kbd> or <kbd>-</kbd> or <kbd>SET</kbd></td>
+      <td>入力・選択</td>
+     </tr>
+     <tr>
+      <td><kbd>ADJ</kbd></td>
+      <td>倍率の変更</td>
+     </tr>
+     <tr>
+      <td><kbd>EXE</kbd></td>
+      <td>設定項目の決定・実行</td>
+     </tr>
+     <tr>
+      <td><kbd>DV</kbd></td>
+      <td>エンジン噴射のための画面を開く</td>
+     </tr>
+     <tr>
+      <td><kbd>VM</kbd></td>
+      <td>画面の変更（月通過・地球最接近などを切り替えられる）</td>
+     </tr>
+    </table>
+    
+    <p>地球軌道上から月へ向かう場合は、以下のような手順になります。</p>
+    <p><kbd>PRG</kbd>をクリックしてProgram menuを開く。</p>
+    <p><strong>Program TLI</strong>を選択。<br>
+    Program TLIにて、出発時刻(<strong>TIg</strong>)、到着時刻(<strong>PeT</strong>)などを入力する。</p>
+    <p><kbd>EXE</kbd>をクリック。<br>
+    <kbd>DV</kbd>をクリックしてDelta Velocity画面を開いてから、もう一度<kbd>EXE</kbd>をクリックする。<br>
+    自動噴射のカウントダウンが開始される。<br>
+    <img loading="lazy" src="../images/mods/lunartransfermfd/003.png" width="477" height="388">
+    </p>
+
+</body>
+</html>

@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../styles/orbiterjp.css">
+  <script src="../scripts/template.js" charset="utf-8" defer></script>
+  <title>UCGO操作ガイド（ISSとPrelude Ⅲ）</title>
+</head>
+
+<body>
+
+  <h1>UCGO操作ガイド（ISSとPrelude Ⅲ）</h1>
+
+
+  <ul>
+    <li><a href="#iss">ISS</a></li>
+    
+    <ul>
+    <li><a href="#iss_eva">EVA</a></li>
+    <li><a href="#iss_supply">補給物資</a></li>
+    <li><a href="#iss_config">ISSの設定</a></li>
+    </ul>
+    
+    <li><a href="#prelude3">Prelude III</a></li>
+    
+    <ul>
+    <li><a href="#prelude3_menu">Prelude III基地メニュー</a></li>
+    
+    <ul>
+    <li><a href="#prelude3_airlock">エアロックの開放・閉鎖</a></li>
+    <li><a href="#prelude3_eva">EVAクルーの選択</a></li>
+    <li><a href="#prelude3_o2">食料・酸素の消費設定</a></li>
+    <li><a href="#prelude3_pad">着陸パッドの変更</a></li>
+    <li><a href="#prelude3_skin">スキンの変更</a></li>
+    </ul>
+    
+    </ul>
+    
+    </ul>
+    
+    <h2 id="iss">UCGO仕様のISS</h2>
+    <p>UCGOにはUCGO・UMMUに対応したISSが付属しています。<br>
+    見た目はバニラのISSと同じです。</p>
+    <p><a href="../misc/sceditor1-date.html" target="_blank">シナリオエディタ</a>を使う場合、<strong>UCGO\Stations\StationISS</strong>を選択すると、現在のシナリオに追加できます。<br>
+        <img loading="lazy" src="../images/ucgo/ucgo-iss-prelude3/ucgo-issbase-001.png" width="423" height="434">
+    </p>
+    <h3 id="iss_eva">EVA（<kbd>F6</kbd>キー）</h3>
+    <p><kbd>F6</kbd>キーを押すとEVAメニューが表示されます。</p>
+    <p>テンキーで<kbd>+</kbd> or <kbd>-</kbd>キーを押してドッキングポートを選択。</p>
+    
+    <table>
+     <tr>
+      <td><kbd>1</kbd> or <kbd>2</kbd>
+    </td>
+      <td>使用するUMMUを選択
+    </td>
+     </tr>
+     <tr>
+      <td><kbd>E</kbd>
+    </td>
+      <td>EVAを開始
+    </td>
+     </tr>
+     <tr>
+      <td><kbd>M</kbd>
+    </td>
+      <td>UMMUを追加
+    </td>
+     </tr>
+     <tr>
+      <td><kbd>S</kbd>
+    </td>
+      <td>情報を表示
+    </td>
+     </tr>
+    </table>
+    
+    <h3 id="iss_supply">補給物資（<kbd>F7</kbd>キー）</h3>
+    <p>UMMUが誰も乗っていない状態では、物資は消費されません。</p>
+    
+    <table>
+     <tr>
+      <td><strong>矢印キー</strong>
+    </td>
+      <td>使用するスロットを選択
+    </td>
+     </tr>
+     <tr>
+      <td><kbd>9</kbd>
+    </td>
+      <td>使用可能なcargo（貨物コンテナ）を選択
+    </td>
+     </tr>
+     <tr>
+      <td><kbd>Shift</kbd> + <kbd>9</kbd>
+    </td>
+      <td>選択したcargoを追加
+    </td>
+     </tr>
+     <tr>
+      <td><kbd>C</kbd>
+    </td>
+      <td>近くにあるcargoを搭載する
+    </td>
+     </tr>
+     <tr>
+      <td><kbd>Shift</kbd> + <kbd>C</kbd>
+    </td>
+      <td>搭載しているcargoを放出する
+    </td>
+     </tr>
+     <tr>
+      <td><kbd>Ctrl</kbd> + <kbd>O</kbd>
+    </td>
+      <td>cargoから酸素を補給する
+    </td>
+     </tr>
+     <tr>
+      <td><kbd>Ctrl</kbd> + <kbd>F</kbd>
+    </td>
+      <td>cargoから食料を補給する
+    </td>
+     </tr>
+     <tr>
+      <td><kbd>Ctrl</kbd> + <kbd>S</kbd>
+    </td>
+      <td>cargoからRCSの燃料を補給する
+    </td>
+     </tr>
+    </table>
+    
+    <h3 id="iss_config">ISSの設定（<kbd>F8</kbd>キー）</h3>
+    
+    <p>一月あたりの酸素・食料の消費量を設定する。<br>
+    <strong>0</strong>（ゼロ）にすると消費されなくなる。</p>
+    
+    <table>
+     <tr>
+      <td><kbd>Shift</kbd> + <kbd>O</kbd>
+    </td>
+      <td>酸素の消費量を変更
+    </td>
+     </tr>
+     <tr>
+      <td><kbd>Shift</kbd> + <kbd>F</kbd>
+    </td>
+      <td>食料の消費量を変更
+    </td>
+     </tr>
+    </table>
+    
+    <h2 id="prelude3">Prelude III</h2>
+    
+    <p><strong>Prelude III</strong>は、惑星上に設置可能な宇宙基地です。<br>
+    シナリオエディタで<strong>PreludeIII</strong>を選択することで使用できます。<br>
+    <img loading="lazy" src="../images/ucgo/ucgo-iss-prelude3/ucgo-issbase-002.png" width="409" height="416">
+    </p>
+    
+    <table>
+     <tr>
+      <td><kbd>Insert</kbd> or <kbd>Delete</kbd>
+    </td>
+      <td>カメラの切り替え
+    </td>
+     </tr>
+     <tr>
+      <td><kbd>Enter</kbd>
+    </td>
+      <td>基地メニューの選択
+    </td>
+     </tr>
+    </table>
+    
+    <h3 id="prelude3_menu">Prelude III基地メニュー</h3>
+    
+    <p><kbd>Enter</kbd>キーを押して基地メニューを選択してから、<strong>矢印キー</strong>でそれぞれの機能にアクセスする。<br>
+    <strong>EXIT MENU</strong>でメインメニューに戻る。</p>
+    
+    <h3 id="prelude3_airlock">CHANGE AIRLOCK STATE（エアロックの開放・閉鎖）</h3>
+    
+    <p><kbd>Enter</kbd>キーを押してエアロック外側の扉を開け閉めする。<br>
+    扉が開いた状態で<kbd>E</kbd>を押すと、UMMUが中に入ることができる。</p>
+    
+    <h3 id="prelude3_eva">CREW EVA MANAGEMENT（EVAクルーの選択）</h3>
+    
+    <h4>EVA LAST UMMU ENTERED</h4>
+    
+    <p>最後に基地に入ったUMMUを外に出す。</p>
+    
+    <h4>EVA CREW MEMBER - CREW LIST</h4>
+    
+    <p><strong>矢印キー</strong>で選択、<kbd>Enter</kbd>でEVAを開始。</p>
+    
+    <h3>BASE CONFIGURATION（設定の変更）</h3>
+    
+    <h4 id="prelude3_o2">ENABLE/DISABLE O2/FOOD CONSUMPTION（食料・酸素の消費設定）</h4>
+    
+    <p>enabledにすると、酸素と食料が消費されるようになる。<br>
+    基地メニューを出てから補給する。</p>
+    
+    <table>
+     <tr>
+      <td><kbd>Ctrl</kbd> + <kbd>O</kbd>
+    </td>
+      <td>cargoから酸素を補給する
+    </td>
+     </tr>
+     <tr>
+      <td><kbd>Ctrl</kbd> + <kbd>F</kbd>
+    </td>
+      <td>cargoから食料を補給する
+    </td>
+     </tr>
+    </table>
+    
+    <h3 id="prelude3_pad">CHANGE PAD STYLE（着陸パッドの変更）</h3>
+    
+    <p>着陸パッドの見た目を変更する。</p>
+    
+    <h3 id="prelude3_skin">SELECT NEXT SKIN（スキンの変更）</h3>
+    
+    <p>基地の見た目を変更する。</p>
+
+</body>
+</html>

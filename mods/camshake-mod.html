@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../styles/orbiterjp.css">
+  <script src="../scripts/template.js" charset="utf-8" defer></script>
+  <title>CamShake MODのインストールと設定</title>
+</head>
+
+<body>
+
+  <h1>CamShake MODのインストールと設定</h1>
+
+
+<p>
+<strong>CamShake</strong>は、エンジン噴射や着陸時の衝撃によってコクピットを振動させるMODです。<br>
+機体の挙動が変化するわけではありませんが、コクピット視点での臨場感を高めてくれます。
+</p>
+
+<h2>ダウンロード</h2>
+
+<p>
+<a href="https://www.orbithangar.com/searchid.php?ID=4775" target="_blank">CamShake v1.1 for Orbiter 2010</a>
+</p>
+<p>
+<q>for Orbiter 2010</q>と書かれていますが、<strong>2010</strong>と<strong>2016</strong>のどちらでも利用できます。
+</p>
+
+<h2>インストール</h2>
+
+<p>
+ダウンロードしたファイルを解凍して、中身をOrbiterフォルダに上書き。
+</p>
+<p>
+ゲームを起動して、<strong>Launchpad</strong>の<kbd>Modules</kbd>タブを開く。<br>
+<strong>Miscellaneous</strong>の項にある<strong>CamShake</strong>にチェックを入れる。
+</p>
+
+<p><img loading="lazy" src="../images/mods/camshake-mod/001.png" width="232" height="114">
+</p>
+
+<h2>CamShakeを設定する</h2>
+
+<p>
+適当なシナリオでゲームを開始して、<kbd>F8</kbd>を押して<a href="../basic/orbitercontrol.html#cockpit" target="_blank">3Dコクピット</a>視点にする。
+</p>
+<p>
+<kbd>Ctrl</kbd> + <kbd>F4</kbd>を押して、<strong>Custom functions</strong>を開く。<br>
+<strong>Camera Shake</strong>をクリックしてから<kbd>OK</kbd>をクリック。
+</p>
+
+<h3>設定項目</h3>
+
+<p><img loading="lazy" src="../images/mods/camshake-mod/002.png" width="410" height="399">
+</p>
+
+<h4>no staging detection for this vessel（ステージ分離を検知しない）</h4>
+
+<p>
+多段式ロケット以外の機体なら、<strong>no staging detection</strong>にチェックを入れておく。
+</p>
+
+<h4>エフェクトの設定</h4>
+
+<p>
+以下の項目について、左端の<strong>enabled</strong>にチェックを入れると有効になる。<br>
+（エンジン噴射などの強さに応じて、コクピットが震える）
+</p>
+
+<table>
+ <tr>
+  <td>Thrust effects</td>
+  <td>エンジン噴射</td>
+ </tr>
+ <tr>
+  <td>Atmospheric effects</td>
+  <td>大気（高速飛行や再突入など）</td>
+ </tr>
+ <tr>
+  <td>Ground effect</td>
+  <td>地表走行（滑走路を走行時）</td>
+ </tr>
+</table>
+
+<p>
+振動の細かさや大きさについては、以下の項目のボックスに数字を入力する。
+</p>
+
+<table>
+ <tr>
+  <td>frequency</td>
+  <td>周波数</td>
+ </tr>
+ <tr>
+  <td>amplitude</td>
+  <td>振幅</td>
+ </tr>
+</table>
+
+<p>
+右端の<kbd>Test</kbd>ボタンをクリックすると、揺れ具合を確認することができる。<br>
+<kbd>OK</kbd>をクリックして設定を終了する。
+</p>
+<p>
+機体ごとに設定が保存されて、ゲームを起動すると自動的に読み込まれるようになる。
+</p>
+
+</body>
+</html>

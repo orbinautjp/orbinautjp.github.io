@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../styles/orbiterjp.css">
+  <script src="../scripts/template.js" charset="utf-8" defer></script>
+  <title>HTV（こうのとり）MODのダウンロード・インストール</title>
+</head>
+
+<body>
+
+  <h1>HTV（こうのとり）MODのダウンロード・インストール</h1>
+
+
+<p>H-IIB HTV MODは、Orbiter2010にH-IIBロケットとHTV（こうのとり）を追加するMODです。<br>
+ISS A to ZなどのMODを導入すれば、ISSとのランデブー・ドッキングも再現できます。</p>
+
+<ul>
+<li><a href="#download">ダウンロード</a></li>
+<ul>
+<li><a href="#requirements">必要なファイル</a></li>
+</ul>
+<li><a href="#install">インストール</a></li>
+<ul>
+<li><a href="#patch">パッチファイル</a></li>
+<li><a href="#textures">テクスチャMOD</a></li>
+</ul>
+<li><a href="#scenario">使用可能なシナリオ</a></li>
+<li><a href="#launch">打ち上げ</a></li>
+</ul>
+
+<h2 id="download">ダウンロード</h2>
+
+<p>Author: Donamy<br>
+<a href="http://www.orbithangar.com/searchid.php?ID=4197" target="_blank">H-IIB HTV</a></p>
+
+<h3 id="requirements">必要なファイル</h3>
+
+<p><strong>Spacecraft3.dll</strong>および<strong>Multistage2015.dll</strong><br>
+<a href="../mods/spacecraft3download.html" target="_blank">Spacecraft.dll+Multistage.dll+Stage.dllのダウンロード</a></p>
+
+<h2 id="install">インストール</h2>
+
+<p>ダウンロードしたファイルを解凍して、中身をOrbiterのインストールフォルダに上書き。<br>
+<a href="../basic/orbitermod.html" target="_blank">OrbiterにMODを導入する</a></p>
+
+<h3 id="patch">パッチファイル</h3>
+
+<p><strong>Multistage2015</strong>のオートパイロットを利用するためのパッチファイルを作ってみました。<br>
+機体の重量やエンジン出力などが現実のそれに近くなるように、一部の設定を変更しています。<br>
+<a href="https://www.dropbox.com/s/nwppxt0gnynrjxa/H2BHTVpatch.zip?dl=1">H2BHTVpatch.zip</a></p>
+
+<p>ダウンロードしたファイルを解凍して、中身をOrbiterフォルダに上書き。</p>
+
+<p><strong class="caution">注意</strong>：HTV3、HTV4などのMODは別機体扱いなので対応していません。</p>
+
+<h3 id="textures">テクスチャMOD</h3>
+
+<p><a href="../basic/orbiter2010.html" target="_blank">Orbiter2010</a>+<a href="../basic/../basic/d3d9client.html" target="_blank">D3D9Client</a>専用のテクスチャMODです。<br>
+必須ではありませんが、HTVの見た目が華やかになります。</p>
+<p>Author: felix24<br>
+<a href="http://www.orbithangar.com/searchid.php?ID=6250" target="_blank">HTV Textures</a></p>
+<p>ダウンロードしたファイルを解凍する。</p>
+<ul><li><strong>H2B.dds</strong></li>
+<li><strong>H2B_norm.dds</strong></li>
+<li><strong>H2B_refl.dds</strong></li>
+<li><strong>H2B_spec.dds</strong></li>
+</ul>
+<p>以上の4つのファイルを<strong>Textures</strong>フォルダに入れて、既存のファイルを上書きする。</p>
+
+<p>左がMODなし、右がMODあり</p>
+
+  <p>
+    <img loading="lazy" src="../images/iss/htvmod-install/HTVinstall005.png" width="782" height="317"></p>
+
+<h2 id="scenario">使用可能なシナリオ</h2>
+
+<p><strong class="caution">注意</strong>：同梱されているシナリオのうち、以下の2つは必要なMODが公開停止になっているので使えません。</p>
+<blockquote>HTV attatched to Harmony for FLEET<br>
+HTV attatched to JEMEF for FLEET</blockquote>
+
+<h2 id="launch">打ち上げ</h2>
+
+<p><strong>JAXA launch</strong>（打ち上げシナリオ）をダブルクリックしてゲームを開始します。<br>
+キーボードで<kbd>P</kbd>を押すと10秒後に打ち上げが実行されます。<br>
+打ち上げが終了したら、<kbd>J</kbd>を押してHTVをロケットから分離します。</p>
+<p>HTV3、HTV4、HTV5などのMODも公開されており、それぞれの打ち上げシナリオを追加できます。<br>
+<a href="http://www.orbithangar.com/search_quick.php?text=HTV" target="_blank">http://www.orbithangar.com/search_quick.php?text=HTV</a></p>
+<p>基本的にはH-IIB HTVに上書きするだけですが、シナリオによっては他のMODを導入する必要があります。<br>
+readmeファイルを参照してください。</p>
+
+</body>
+</html>

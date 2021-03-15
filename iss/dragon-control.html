@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../styles/orbiterjp.css">
+  <script src="../scripts/template.js" charset="utf-8" defer></script>
+  <title>Dragon宇宙船の操作</title>
+</head>
+
+<body>
+
+  <h1>Dragon宇宙船の操作</h1>
+
+
+<p>Dragon1のダウンロード： <a href="falcon9-dragon-2010.html" target="_blank">2010</a> / <a href="falcon9-dragon-2016.html" target="_blank">2016</a></p>
+
+<ul>
+<li><a href="#key">キー操作一覧</a>
+  <ul>
+  <li><a href="#key_main">Main（ランデブー・ドッキング）</a></li>
+  <li><a href="#key_reentry">Re-entry（再突入）</a></li>
+  <li><a href="#key_rcv">回収船</a></li>
+  </ul>
+</li>
+<li><a href="#launch">打ち上げ・ランデブー</a></li>
+<li><a href="#docking">ドッキング</a></li>
+<li><a href="#deorbit">軌道離脱</a></li>
+<li><a href="#reentry">再突入</a></li>
+<li><a href="#recovery">回収</a></li>
+</ul>
+
+<p>Dragon1宇宙船の操作は、Orbiter<strong>2010</strong>/<strong>2016</strong>で共通です。</p>
+
+
+<h2 id="key">キー操作一覧</h2>
+
+
+<table>
+ <tr>
+  <td><kbd>N</kbd></td>
+  <td>コクピット視点を船内／船外に切り替え</td>
+ </tr>
+ <tr>
+  <td><kbd>C</kbd></td>
+  <td>HUDの表示を<strong>Main</strong>/<strong>Re-entry</strong>に切り替え</td>
+ </tr>
+</table>
+
+
+<h3 id="key_main">Main（ランデブー・ドッキング）</h3>
+
+
+<table>
+ <tr>
+  <td><kbd>W</kbd></td>
+  <td>積み荷の重量を設定（設定した分だけ船体重量が増加する）</td>
+ </tr>
+ <tr>
+  <td><kbd>P</kbd></td>
+  <td>非与圧トランクにペイロードを搭載する</td>
+ </tr>
+ <tr>
+  <td><kbd>K</kbd></td>
+  <td>グラプルフィクスチャ（ロボットアームでの取り付け位置）を展開／格納</td>
+ </tr>
+ <tr>
+  <td><kbd>G</kbd></td>
+  <td>船体前部のハッチを開く</td>
+ </tr>
+ <tr>
+  <td><kbd>J</kbd></td>
+  <td>非与圧トランクのペイロードを放出する</td>
+ </tr>
+ <tr>
+  <td><kbd>M</kbd></td>
+  <td>非与圧トランクを分離する</td>
+ </tr>
+ <tr>
+  <td><kbd>V</kbd></td>
+  <td>フェアリングを分離し、太陽電池パネルを展開する</td>
+ </tr>
+ <tr>
+  <td><kbd>B</kbd></td>
+  <td>太陽電池パネルを太陽追跡モードにする／固定する</td>
+ </tr>
+</table>
+
+
+<h3 id="key_reentry">Re-entry（再突入）</h3>
+
+
+<table>
+ <tr>
+  <td><kbd>Y</kbd></td>
+  <td>軌道離脱オートパイロットを実行／解除</td>
+ </tr>
+ <tr>
+  <td><kbd>E</kbd></td>
+  <td>再突入オートパイロットを実行／解除</td>
+ </tr>
+ <tr>
+  <td><kbd>D</kbd></td>
+  <td>RCSを通常モード／再突入モードに切り替え</td>
+ </tr>
+ <tr>
+  <td><kbd>S</kbd></td>
+  <td>着陸目標を設定</td>
+ </tr>
+</table>
+
+
+<h3 id="key_rcv">回収船</h3>
+
+
+<table>
+ <tr>
+  <td><kbd>G</kbd></td>
+  <td>クレーンを上下させる</td>
+ </tr>
+ <tr>
+  <td><kbd>K</kbd></td>
+  <td>クレーンに宇宙船を固定する</td>
+ </tr>
+</table>
+
+
+<h2 id="launch">打ち上げ・ランデブー</h2>
+
+
+<p>
+CRSミッションのうち、<strong>Launch</strong>と書かれたものを選択すれば、打ち上げから通してプレイすることができる。
+</p>
+
+<p>
+<img loading="lazy" src="../images/iss/dragon-control/001.png" width="316" height="139">
+</p>
+
+<p>
+Falcon9で<kbd>V</kbd>を押すと、10秒後に全自動で打ち上げ・軌道投入される。（<kbd>F2</kbd>で機外視点の切り替え）<br>
+先端のフェアリングも自動で分離される。
+</p>
+
+<p>
+<a href="falcon9-control-2010.html" target="_blank">FALCON9R v1.2の操作</a><br>
+<a href="falcon9-control-2016.html" target="_blank">FALCON9 for Orbiter2016の操作</a>
+</p>
+
+<p>
+軌道に乗ったら、<kbd>J</kbd>を押してDragonを分離する。<br>
+<kbd>F3</kbd>キーを押して、<strong>Dragon</strong>を選択して<kbd>OK</kbd> or <kbd>Apply</kbd>をクリック。<br>
+<kbd>V</kbd>を押して太陽電池パネルを展開する。
+</p>
+
+<p>
+打ち上げのタイミングとランデブーの操作については、Orbiterチュートリアルを参照すること。<br>
+<a href="../tutorial/index.html#dg_to_iss" target="_blank">Orbiterチュートリアル 地上からISSまで</a>
+</p>
+
+
+<h2 id="docking">ドッキング</h2>
+
+
+<p>
+ISSに接近できたら、ドッキングポートの真下に移動する。<br>
+<kbd>K</kbd>を押してグラプルフィクスチャを展開する。
+</p>
+
+<p>
+<kbd>F3</kbd>キーを押して、<strong>SSRMSD</strong>を選択して<kbd>OK</kbd> or <kbd>Apply</kbd>をクリック。<br>
+<strong>SSRMSD</strong>を操作して、Dragon宇宙船をドッキングさせる。
+</p>
+
+<p>
+<a href="canadarm2-control.html" target="_blank">Canadarm2MODの操作・移動方法</a>
+</p>
+
+<p>
+<a href="../mods/../mods/pursuitmfd-install.html" target="_blank">PursuitMFD</a>を利用すると、宇宙船を係留位置に待機させることができる。<br>
+<a href="../mods/pursuitmfd-capture.html" target="_blank">PursuitMFD こうのとり・ドラゴン宇宙船のキャプチャー</a>
+</p>
+
+
+<h2 id="deorbit">軌道離脱</h2>
+
+
+<p>
+<kbd>C</kbd>を押して、HUDを<strong>Reentry</strong>に切り替える。<br>
+<kbd>S</kbd>を押して、<strong>RecoveryVessel</strong>と入力して<kbd>Enter</kbd>を押す。
+</p>
+
+<p>
+<strong>Map MFD</strong>を開いて、あと1周で<strong>RecoveryVessel</strong>に最接近するタイミングを待つ。※
+</p>
+
+<p>
+※<strong>Map MFD</strong>に表示されていない場合は、<kbd>TGT</kbd>をクリックしてターゲットする
+</p>
+
+<p>
+HUD上の<strong>Cross Range Error</strong>（黄色）が<strong>125km</strong>以下になっていることを確認する。
+</p>
+
+<p>
+<img loading="lazy" src="../images/iss/dragon-control/002.png" width="469" height="207">
+</p>
+
+<p>
+<kbd>Y</kbd>を押すと、全自動で軌道離脱噴射が実行される。
+</p>
+
+
+<h2 id="reentry">再突入</h2>
+
+
+<p>
+<kbd>M</kbd>を押してトランクを切り離す。
+</p>
+
+<p>
+<kbd>E</kbd>を押すと、全自動で再突入を実行する。<br>
+パラシュートも自動で展開される。
+</p>
+
+
+<h2 id="recovery">回収</h2>
+
+
+<p>
+着水したら、<kbd>F3</kbd>を押して<strong>RecoveryVessel</strong>に乗り換える。<br>
+回収船は普通の宇宙船と同じように操作できる。
+</p>
+
+<p>
+回収船の後部をDragonに向けて、<kbd>G</kbd>を押してクレーンを下げる。<br>
+<kbd>K</kbd>を押してDragonを固定する。<br>
+もう一度<kbd>G</kbd>を押して、Dragonを回収すればミッション終了となる。
+</p>
+
+</body>
+</html>

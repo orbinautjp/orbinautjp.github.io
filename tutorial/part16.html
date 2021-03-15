@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../styles/orbiterjp.css">
+  <script src="../scripts/template.js" charset="utf-8" defer></script>
+  <script src="../scripts/prevnext_tutorial.js" charset="utf-8" defer></script>
+  <title>Part16 TransXで月から地球へ</title>
+</head>
+
+<body>
+
+  <h1>Part16 TransXで月から地球へ</h1>
+
+
+  <p>月から地球に降下するため、<strong>Plan</strong>（軌道の計画）を作成します。</p>
+
+  <ul>
+    <li><a href="#objective">今回の目的</a></li>
+  </ul>
+
+  <ol>
+    <li><a href="#flightplan">Planの作成を開始する</a></li>
+    <li><a href="#escape">月の重力圏を出る</a></li>
+    <li><a href="#ejectplan">Eject Plan</a>
+      <ul>
+        <li><a href="#ejectplan_tei">地球降下軌道</a></li>
+      </ul>
+    </li>
+    <li><a href="#escapeplan">Escape Plan</a>
+      <ul>
+        <li><a href="#parkingorbit">パーキング軌道の高度</a></li>
+        <li><a href="#azimuth">打ち上げ方位を決定する</a></li>
+      </ul>
+    </li>
+  </ol>
+
+  <ul>
+    <li><a href="#form">アンケート</a></li>
+    <li><a href="#videos">動画</a></li>
+  </ul>
+
+
+  <h2 id="objective">今回の目的</h2>
+
+
+  <p>月面上の宇宙船は、月と一緒に、地球を中心とした楕円軌道に乗っている。<br>
+    したがって、地球の重力に引かれて「月軌道から地球に落ちる」必要がある。<br>
+    地球に対して減速する（月の進行方向の逆に加速する）ことで、月から地球に降下できる。</p>
+
+  <p>
+    <img loading="lazy" src="../images/tutorial/part16/001.png" width="1280" height="720">
+    <br>
+    緑の矢印の方向に加速すると、減速して黄色の楕円軌道に乗る。
+  </p>
+
+  <p>打ち上げ前に、地球降下軌道を計画しておく。<br>
+    次に、この地球降下軌道に接続できるような月周回軌道を考える。<br>
+    設定した月周回軌道にもとづいて、打ち上げ方位が決定される。</p>
+
+  <p>「あらかじめ軌道を計画する」ことを、このチュートリアルでは<strong>Planの作成</strong>と呼ぶ。</p>
+
+
+  <h2 id="flightplan">Planの作成を開始する</h2>
+
+
+  <p>左右のMFDで<strong>TransX</strong>を開く。</p>
+
+  <p>月面から地球までの<strong>Plan</strong>を作成する。</p>
+
+  <p>打ち上げ・パーキング軌道は<strong>Escape Plan</strong>。<br>
+    地球降下軌道は<strong>Eject Plan</strong>で設定する。</p>
+
+
+  <h2 id="escape">月の重力圏を出る</h2>
+
+
+  <p><strong>左</strong>MFDで<strong>View:Setup</strong>を表示する。</p>
+
+  <p><strong>Select Target</strong>で<kbd>++</kbd>をクリック。<br>
+    <strong>Escape</strong>を選択する。
+  </p>
+
+  <p>
+    <img loading="lazy" src="../images/tutorial/part16/002.png" width="425" height="425">
+  </p>
+
+  <p>月の重力圏を脱出するため、<strong>Escape</strong>をターゲットに設定する。</p>
+
+
+  <h2 id="ejectplan">Eject Plan</h2>
+
+
+  <p><strong>右</strong>MFDで<kbd>FWD</kbd>をクリック。<br>
+    <strong>Stage 2</strong>にする。
+  </p>
+
+  <p><kbd>VW</kbd>を何度かクリック。<br>
+    <strong>View:Eject Plan</strong>に切り替える。
+  </p>
+
+  <p>
+    <img loading="lazy" src="../images/tutorial/part16/010.png" width="425" height="425">
+  </p>
+
+  <p><strong>Eject Plan</strong>で、「地球に落ちる」軌道を計画する。</p>
+
+
+  <h3 id="ejectplan_tei">地球降下軌道</h3>
+
+
+  <p><strong>Prograde vel.</strong>を選択しておく。<br>
+    見つからない場合は、<kbd>VAR</kbd>をクリック。</p>
+
+  <p><kbd>--</kbd>を何回かクリックする。<br>
+    黄色の点線を細長い楕円軌道にする。</p>
+
+  <p>
+    <img loading="lazy" src="../images/tutorial/part16/003.png" width="425" height="425">
+  </p>
+
+  <p><kbd>VW</kbd>をクリック。<br>
+    <strong>View:Setup</strong>に切り替える。
+  </p>
+
+  <p><kbd>VAR</kbd>を何度かクリック。<br>
+    <strong>Scale to View</strong>を選択する。
+  </p>
+
+  <p><kbd>++</kbd>をクリック。<br>
+    <strong>Target</strong>にする。
+  </p>
+
+  <p>地球周辺が拡大表示される。</p>
+
+  <p>
+    <img loading="lazy" src="../images/tutorial/part16/004.png" width="425" height="425">
+  </p>
+
+  <p><strong>View:Eject Plan</strong>に戻す。<br>
+    また<strong>Prograde vel.</strong>を操作する。</p>
+
+  <p>白い円が地表、青い円が大気を表している。<br>
+    大気圏に入らない程度に、軌道を地球に近づける。</p>
+
+  <p>
+    <img loading="lazy" src="../images/tutorial/part16/005.png" width="425" height="425">
+  </p>
+
+
+  <h2 id="escapeplan">Escape Plan</h2>
+
+
+  <p>降下軌道に接続できる月周回軌道を考える。<br>
+    この軌道のことをパーキング軌道と呼ぶ。</p>
+
+  <p><strong>左</strong>MFDの<strong>Stage 1</strong>に戻る。<br>
+    <strong>View:Setup</strong>を表示しておく。
+  </p>
+
+  <p>
+    <img loading="lazy" src="../images/tutorial/part16/012.png" width="425" height="425">
+  </p>
+
+  <p><kbd>VAR</kbd>を何度かクリック。<br>
+    <strong>Scale to view</strong>を<strong>Target</strong>にする。
+  </p>
+
+  <p><kbd>-VR</kbd>をクリック。<br>
+    <strong>Graph projection</strong>を<strong>Plan</strong>にする。
+  </p>
+
+  <p>
+    <img loading="lazy" src="../images/tutorial/part16/006.png" width="425" height="425">
+  </p>
+
+  <p><kbd>VW</kbd>をクリック。<br>
+    <strong>View:Escape Plan</strong>にする。
+  </p>
+
+  <p>
+    <img loading="lazy" src="../images/tutorial/part16/011.png" width="425" height="425">
+  </p>
+
+
+  <h3 id="parkingorbit">パーキング軌道の高度</h3>
+
+
+  <p><strong>Pe Distance</strong>を選択しておく。</p>
+
+  <p>パーキング軌道の高度を入力する。<br>
+    <strong>Maj. Rad</strong>（月の半径）を基準にする。
+  </p>
+
+  <p><kbd>ENT</kbd>をクリック。<br>
+    <strong>1758000</strong>と入力する。
+  </p>
+
+  <p>数字を入力したら<kbd>Enter</kbd>を押す。</p>
+
+  <p>
+    <img loading="lazy" src="../images/tutorial/part16/007.png" width="425" height="425">
+  </p>
+
+  <table>
+    <tr>
+      <td><strong>Pe Distance</strong></td>
+      <td>Periapsis distance</td>
+      <td>Peの天体中心からの距離</td>
+    </tr>
+    <tr>
+      <td><strong>Maj. Rad</strong></td>
+      <td>Radius of the major body</td>
+      <td>中心天体の半径</td>
+    </tr>
+  </table>
+
+  <p>月の半径は、約1.738Mm（メガメートル） = 1,738km = 1738000mである。<br>
+    これに20km(20000m)を足すと、1.758Mm = 1758000mになる。</p>
+
+
+  <h3 id="azimuth">打ち上げ方位を決定する</h3>
+
+
+  <p><kbd>VAR</kbd>をクリック。<br>
+    <strong>Ej Orientation</strong>を選択する。
+  </p>
+
+  <p>
+    <img loading="lazy" src="../images/tutorial/part16/008.png" width="425" height="425">
+  </p>
+
+  <p><kbd>++</kbd>を長押しクリックする。<br>
+    白い直線と緑の線が重なるようにする。</p>
+
+  <p>これで打ち上げ方位が決定される。<br>
+    <strong>Heading</strong>の方位に向かって打ち上げる。
+  </p>
+
+  <p>
+    <img loading="lazy" src="../images/tutorial/part16/009.png" width="425" height="425">
+  </p>
+
+
+  <h2 id="form">アンケート</h2>
+
+
+  <form action="https://docs.google.com/forms/d/e/1FAIpQLSevSwX9C5MdsD40di1gSnJDLj-lJW9bVrH6ULKIO7U2apEmqA/formResponse" target="_self" method="POST" id="mG61Hd">
+
+    <p>この記事の内容は理解できましたか？</p>
+
+    <ul>
+      <li><label><input type="radio" name="entry.1914587356" value="できなかった、全然理解できない" />できなかった、全然理解できない</label></li>
+      <li><label><input type="radio" name="entry.1914587356" value="できなかった、途中から理解できない" />できなかった、途中から理解できない</label></li>
+      <li><label><input type="radio" name="entry.1914587356" value="できた、難しかった" />できた、難しかった</label></li>
+      <li><label><input type="radio" name="entry.1914587356" value="できた、簡単だった" />できた、簡単だった</label></li>
+    </ul>
+
+    <p><label for="question">わからなかった・難しかったところを教えてください（任意）</label><br>
+      <input id="question" type="text" name="entry.1857549962">
+    </p>
+
+    <p>公開されますので個人情報を記入しないでください。<br>
+      <button type="submit" name="button" value="送信">送信</button>
+    </p>
+
+  </form>
+
+
+  <h2 id="videos">動画</h2>
+
+
+  <p><a href="https://youtu.be/TXRJdphP0kk" target="_blank">YouTube</a></p>
+
+  <p><a href="https://www.nicovideo.jp/watch/sm25639566" target="_blank">ニコニコ動画</a></p>
+
+</body>
+
+</html>

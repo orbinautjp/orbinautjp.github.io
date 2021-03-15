@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../styles/orbiterjp.css">
+  <script src="../scripts/template.js" charset="utf-8" defer></script>
+  <script src="../scripts/prevnext_tutorial.js" charset="utf-8" defer></script>
+  <title>Part8 再突入と着陸</title>
+</head>
+
+<body>
+
+  <h1>Part8 再突入と着陸</h1>
+
+
+  <p>大気圏に再突入し、滑空してKSCに着陸します。</p>
+
+  <ol>
+    <li><a href="#reentry">再突入</a>
+      <ul>
+        <li><a href="#turn">旋回を始める</a></li>
+        <li><a href="#surfacemfd">Surface MFD</a></li>
+        <li><a href="#dnp">降下速度と動圧</a></li>
+        <li><a href="#endturn">旋回を終了する</a></li>
+      </ul>
+    </li>
+    <li><a href="#descent">滑走路に降りる</a>
+      <ul>
+        <li><a href="#glide">滑空する</a></li>
+        <li><a href="#vor">VOR/VTOL MFD</a></li>
+        <li><a href="#approach">降下する</a></li>
+        <li><a href="#hsi">HSI MFD</a></li>
+        <li><a href="#landing">着陸</a></li>
+      </ul>
+    </li>
+  </ol>
+
+  <ul>
+    <li><a href="#explanation">解説</a></li>
+    <li><a href="#form">アンケート</a></li>
+    <li><a href="#videos">動画</a></li>
+  </ul>
+
+
+  <h2 id="reentry">再突入</h2>
+
+
+  <p>左右に機体を傾けて針路を調整しつつ、目的地の真上を通るのを待つ。</p>
+
+  <p>大気圏に再突入し、旋回して速度を落とす。</p>
+
+
+  <h3 id="turn">旋回を始める</h3>
+
+
+  <p>機体を左か右に<strong>90°</strong>倒しておく。</p>
+
+  <p>目的地の真上に到達したら、旋回を始める。<br>
+    フライトスティックを目いっぱい手前に引く。</p>
+
+  <p>
+    <img loading="lazy" src="../images/tutorial/part8/001.png" width="425" height="425">
+  </p>
+
+
+  <h3 id="surfacemfd">Surface MFD</h3>
+
+
+  <p>スティックを引いたまま旋回を続ける。<br>
+    <strong>Surface MFD</strong>でデータを確認する。
+  </p>
+
+  <p>
+    <img loading="lazy" src="../images/tutorial/part8/002.png" width="425" height="425">
+  </p>
+
+  <table>
+    <tr>
+      <td><strong>DNP</strong></td>
+      <td>Dynamic Pressure</td>
+      <td>動圧</td>
+      <td>機体が大気にぶつかって受ける圧力</td>
+    </tr>
+    <tr>
+      <td><strong>VS</strong></td>
+      <td>Vertical Speed</td>
+      <td>垂直速度</td>
+      <td>降下・上昇する速度</td>
+    </tr>
+    <tr>
+      <td><strong>VACC</strong></td>
+      <td>Vertical Acceleration</td>
+      <td>垂直方向の加速度</td>
+      <td></td>
+    </tr>
+  </table>
+
+
+  <h3 id="dnp">降下速度と動圧</h3>
+
+
+  <p>スティックを引いたまま、左右にロールする。<br>
+    <strong>DNP</strong>が<strong>40kPa</strong>を維持するようにする。
+  </p>
+
+  <table>
+    <tr>
+      <td><strong>DNP</strong>が<strong>40kPa</strong>より<strong>大きい</strong></td>
+      <td>上側（宇宙）にロールして降下速度を落とす</td>
+    </tr>
+    <tr>
+      <td><strong>DNP</strong>が<strong>40kPa</strong>より<strong>小さい</strong></td>
+      <td>下側（地球）にロールして降下速度を上げる</td>
+    </tr>
+  </table>
+
+  <p>
+    <img loading="lazy" src="../images/tutorial/part8/003.png" width="1594" height="871">
+  </p>
+
+  <p><strong>VS</strong>は、プラスなら上昇、マイナスなら降下速度を意味する。<br>
+    <strong>VS</strong>と<strong>VACC</strong>には、以下のような関係がある。
+  </p>
+
+  <table>
+    <tr>
+      <td><strong>VACC</strong>がプラス</td>
+      <td><strong>VS</strong>がプラス方向に変化する</td>
+    </tr>
+    <tr>
+      <td><strong>VACC</strong>がマイナス</td>
+      <td><strong>VS</strong>がマイナス方向に変化する</td>
+    </tr>
+    <tr>
+      <td><strong>VACC</strong>がゼロ</td>
+      <td>現在の<strong>VS</strong>を維持する</td>
+    </tr>
+  </table>
+
+  <p><strong>VACC</strong>を小さい値にとどめておくと、安定して降下速度をコントロールできる。</p>
+
+
+  <h3 id="endturn">旋回を終了する</h3>
+
+
+  <p><strong>Surface HUD</strong>には、目的地を示す目印が表示されている。</p>
+
+  <p>
+    <img loading="lazy" src="../images/tutorial/part8/004.png" width="200" height="100">
+  </p>
+
+  <p>目的地の方角を向いたら、旋回を止める。<br>
+    宇宙船の姿勢を水平に戻しておく。</p>
+
+
+  <h2 id="descent">滑走路に降りる</h2>
+
+
+  <p>滑空して、打ち上げに使用したのと同じ滑走路に降りる。</p>
+
+  <p><strong>RCS MODE</strong>を<strong>OFF</strong>に切り替えておく。</p>
+
+  <p>
+    <img loading="lazy" src="../images/tutorial/part8/005.png" width="200" height="100">
+  </p>
+
+
+  <h3 id="glide">滑空する</h3>
+
+
+  <p>トリムを使って高度<strong>30km</strong>付近を維持する。</p>
+
+  <p><kbd>Delete</kbd>を押すと機首を上げる。<br>
+    <kbd>Insert</kbd>を押すと機首を下げる。
+  </p>
+
+
+  <h3 id="vor">VOR/VTOL MFD</h3>
+
+
+  <p><strong>Map MFD</strong>下の<kbd>SEL</kbd>をクリック。<br>
+    <strong>VOR/VTOL</strong>に切り替える。
+  </p>
+
+  <p>緑の線が<strong>VOR</strong>の方位。<br>
+    左上の<strong>DIST</strong>が距離を表す。</p>
+
+  <p>
+    <img loading="lazy" src="../images/tutorial/part8/006.png" width="425" height="425">
+  </p>
+
+  <p><strong>VOR</strong>の位置と滑走路の位置は違うので注意すること。</p>
+
+
+  <h3 id="approach">降下する</h3>
+
+
+  <p>目的地の近く、滑走路を目視できる距離に来たら、トリムを戻す。</p>
+
+  <p><kbd>Insert</kbd>を押して、トリムを中央(0.0)にする。</p>
+
+  <p>
+    <img loading="lazy" src="../images/tutorial/part8/007.png" width="200" height="100">
+  </p>
+
+  <p>高度を下げて、滑走路を目指して滑空する。<br>
+    速すぎる場合は旋回して速度を下げる。</p>
+
+
+  <h3 id="hsi">HSI MFD</h3>
+
+
+  <p><strong>VOR/VTOL MFD</strong>下の<kbd>SEL</kbd>をクリック。<br>
+    <strong>HSI</strong>に切り替える。
+  </p>
+
+  <p><kbd>NAV</kbd>をクリック。<br>
+    左側を<strong>NAV2</strong>(ILS)に切り替える。</p>
+
+  <p>滑走路まで<strong>30km</strong>以内に入ると、ILSの信号が受信できる。</p>
+
+  <p>
+    <img loading="lazy" src="../images/tutorial/part8/008.png" width="425" height="425">
+  </p>
+
+  <p><strong>HSI</strong>には滑走路の方位と、自分の針路のずれが表示される。<br>
+    これを見ながらコースを調整する。</p>
+
+  <p>
+    <img loading="lazy" src="../images/tutorial/part8/009.png" width="425" height="425">
+  </p>
+
+
+  <h3 id="landing">着陸</h3>
+
+
+  <p>エアブレーキを展開して速度を落とす。<br>
+    着陸時の速度は、秒速<strong>150m</strong>を目安にする。</p>
+
+  <table>
+    <tr>
+      <td><strong>Orbiter2010</strong></td>
+      <td><kbd>Ctrl</kbd>+<kbd>B</kbd></td>
+      <td><kbd>Ctrl</kbd>を押しながら<kbd>B</kbd></td>
+    </tr>
+    <tr>
+      <td rowspan="2"><strong>Orbiter2016</strong></td>
+      <td><kbd>B</kbd></td>
+      <td>1回押すと半開。2回押すと全開</td>
+    </tr>
+    <tr>
+      <td><kbd>Alt</kbd>+<kbd>B</kbd></td>
+      <td>1回押すと半閉。2回押すと全閉</td>
+    </tr>
+  </table>
+
+  <p>着陸前に<kbd>G</kbd>を押す。<br>
+    ランディングギアを出しておく。</p>
+
+  <p>接地したら、ホイールブレーキをかける。<br>
+    <kbd>.</kbd>&nbsp;と&nbsp;<kbd>,</kbd>（ピリオドとコンマ）を押し続ける。
+  </p>
+
+
+  <h2 id="explanation">解説</h2>
+
+
+  <p>再突入して宇宙船が大気に接触すると、機体は大きな力を受ける。<br>
+    降下速度が高い、宇宙船の高度が低いとき、より大きな力が働く。</p>
+
+  <p>この<strong>DNP</strong>（動圧）が大きすぎると、機体が損傷して操縦不能になる。<br>
+    しかし、旋回半径が大きすぎると、目的地から遠ざかってしまう。</p>
+
+  <p>このチュートリアルでは、目安として<strong>DNP</strong>を<strong>40kPa</strong>で維持するようにしている。<br>
+    このくらいの数字であれば、機体を損傷することなく、安定して旋回を続けることができる。</p>
+
+
+  <h2 id="form">アンケート</h2>
+
+
+  <form action="https://docs.google.com/forms/d/e/1FAIpQLSdPOQpeu7ojqBR1TTHKHpZ6W_3faCzriJi-ukZ80zqw_6DPWw/formResponse" target="_self" method="POST" id="mG61Hd">
+
+    <p>この記事の内容は理解できましたか？</p>
+
+    <ul>
+      <li><label><input type="radio" name="entry.1914587356" value="できなかった、全然理解できない" />できなかった、全然理解できない</label></li>
+      <li><label><input type="radio" name="entry.1914587356" value="できなかった、途中から理解できない" />できなかった、途中から理解できない</label></li>
+      <li><label><input type="radio" name="entry.1914587356" value="できた、難しかった" />できた、難しかった</label></li>
+      <li><label><input type="radio" name="entry.1914587356" value="できた、簡単だった" />できた、簡単だった</label></li>
+    </ul>
+
+    <p><label for="question">わからなかった・難しかったところを教えてください（任意）</label><br>
+      <input id="question" type="text" name="entry.1857549962">
+    </p>
+
+    <p>公開されますので個人情報を記入しないでください。<br>
+      <button type="submit" name="button" value="送信">送信</button>
+    </p>
+
+  </form>
+
+
+  <h2 id="videos">動画</h2>
+
+
+  <p><a href="https://youtu.be/TEsYAFBeQyw" target="_blank">YouTube</a></p>
+
+  <p><a href="https://www.nicovideo.jp/watch/sm25520075" target="_blank">ニコニコ動画</a></p>
+
+</body>
+
+</html>

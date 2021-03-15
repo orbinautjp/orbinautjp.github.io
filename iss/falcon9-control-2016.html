@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../styles/orbiterjp.css">
+  <script src="../scripts/template.js" charset="utf-8" defer></script>
+  <title>FALCON9 for Orbiter2016の操作</title>
+
+  <script>
+window.MathJax = {
+  tex: {
+    tags: 'ams'
+  }
+};
+</script>
+
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+</head>
+
+<body>
+
+  <h1>FALCON9 for Orbiter2016の操作</h1>
+
+
+  <ul>
+    <li><a href="#panel">Launch Control Panel （打ち上げコントロールパネル）</a>
+      <ul>
+        <li><a href="#panel_launch">Launch Control （打ち上げコントロール）</a></li>
+        <li><a href="#panel_jettison">Manual Jettison （手動で分離する）</a></li>
+        <li><a href="#panel_flyback">1st Stage Flyback-EDL （第一段の自動着陸）</a></li>
+        <li>Estimated ASDS/FRV Position （回収船の予測待機地点）</li>
+        <li><a href="#panel_payload">Payload Management （ペイロードの管理）</a></li>
+        <li><a href="#panel_orbit">Target Orbit Parameters （目標軌道を設定）</a></li>
+        <li>1st Stg. Apogee at MECO （第一段の到達高度）</li>
+      </ul>
+    </li>
+    <li><a href="#key">キー操作一覧</a>
+      <ul>
+        <li><a href="#key_f9">Falcon9（全体）</a></li>
+        <li><a href="#key_stg1">Falcon9（第一段）</a></li>
+        <li><a href="#key_pad">発射台</a></li>
+        <li><a href="#key_fairing">フェアリング</a></li>
+      </ul>
+    </li>
+    <li><a href="#payload">ペイロードを搭載する</a>
+      <ul>
+        <li><a href="#payload_scenario">空のシナリオを用意する</a></li>
+        <li><a href="#payload_attach">ペイロードを追加する</a></li>
+      </ul>
+    </li>
+    <li><a href="#star48">Star48BVキックモーター</a></li>
+  </ul>
+
+
+  <h2 id="panel">Launch Control Panel （打ち上げコントロールパネル）</h2>
+
+
+  <p>
+    キーボードで<kbd>K</kbd>を押すと、<strong>Launch Control Panel</strong>（打ち上げコントロールパネル）のダイアログを開く。
+  </p>
+
+  <p>
+    <img loading="lazy" src="../images/iss/falcon9-control-2016/000.png" width="544" height="504">
+  </p>
+
+
+  <h3 id="panel_launch">Launch Control （打ち上げコントロール）</h3>
+
+
+  <table>
+    <tr>
+      <td>T-10 Launch Autopilot</td>
+      <td><kbd>ON/OFF</kbd>ボタンをクリックすると、10秒後に自動で打ち上げを実行する。</td>
+    </tr>
+    <tr>
+      <td>Launch Time UTC</td>
+      <td><strong>UTC</strong>で打ち上げ時刻を設定する。<br>
+        数字を入力してから<kbd>Set</kbd>をクリック。<br>
+        <kbd>On/Off</kbd>をクリックすると設定した時刻に打ち上げられる。
+      </td>
+    </tr>
+    <tr>
+      <td>Hardback Gantry</td>
+      <td>発射台の整備塔を立ち上げる／倒す。</td>
+    </tr>
+  </table>
+
+
+  <h3 id="panel_jettison">Manual Jettison （手動で分離する）</h3>
+
+
+  <table>
+    <tr>
+      <td>Jettison Fairings</td>
+      <td>フェアリングを分離する。</td>
+    </tr>
+    <tr>
+      <td>Jettison 1st Stg.</td>
+      <td>第一段を分離する。</td>
+    </tr>
+  </table>
+
+
+  <h3 id="panel_flyback">1st Stage Flyback-EDL （第一段の自動着陸）</h3>
+
+
+  <table>
+    <tr>
+      <td>Flyback Autopilot Status</td>
+      <td>第一段の自動着陸を有効／無効にする。</td>
+    </tr>
+    <tr>
+      <td>Flyback Target Name</td>
+      <td>第一段の着陸目標を設定する。</td>
+    </tr>
+    <tr>
+      <td>Flyback Mode</td>
+      <td>逆噴射・弾道飛行・着陸を全自動で実行するか、最初の逆噴射を省略するか選択する。</td>
+    </tr>
+    <tr>
+      <td>Flyback Fuel Reserve</td>
+      <td>自動着陸のために、どれだけ燃料を残しておくか設定する。</td>
+    </tr>
+  </table>
+
+
+  <h3 id="panel_payload">Payload Management （ペイロードの管理）</h3>
+
+
+  <table>
+    <tr>
+      <td>New Payload</td>
+      <td>搭載したいペイロードの名前を入力して、<kbd>Attach</kbd>をクリック。</td>
+    </tr>
+    <tr>
+      <td>Current Payload</td>
+      <td>次に分離されるペイロードを表示する。<br>フェアリングを分離すると、ペイロードを放出できるようになる。</td>
+    </tr>
+  </table>
+
+
+  <h3 id="panel_orbit">Target Orbit Parameters （目標軌道を設定）</h3>
+
+
+  <table>
+    <tr>
+      <td>Inclination</td>
+      <td>軌道傾斜角を設定する。</td>
+    </tr>
+    <tr>
+      <td>Perigee / Apogee</td>
+      <td>近地点・遠地点をそれぞれ設定する。</td>
+    </tr>
+  </table>
+
+
+  <h2 id="key">キー操作一覧</h2>
+
+
+  <h3 id="key_f9">Falcon9（全体）</h3>
+
+
+  <table>
+    <tr>
+      <td><kbd>K</kbd></td>
+      <td>打ち上げコントロールパネルを開く</td>
+    </tr>
+    <tr>
+      <td><kbd>J</kbd></td>
+      <td>フェアリング・ペイロードを分離する※</td>
+    </tr>
+    <tr>
+      <td><kbd>N</kbd></td>
+      <td>第一段を分離する※</td>
+    </tr>
+    <tr>
+      <td><kbd>V</kbd></td>
+      <td>10秒後に打ち上げオートパイロットを実行</td>
+    </tr>
+    <tr>
+      <td><kbd>E</kbd></td>
+      <td>カメラの向きを前後に切り替える</td>
+    </tr>
+    <tr>
+      <td><kbd>B</kbd></td>
+      <td>第二段の燃料を排出する</td>
+    </tr>
+  </table>
+
+  <p class="note">
+    ※オートパイロット実行中は自動で分離される
+  </p>
+
+
+  <h3 id="key_stg1">Falcon9（第一段）</h3>
+
+
+  <p>
+    打ち上げを実行して、第一段を分離したら<kbd>F3</kbd>キーを押す。<br>
+    <strong>Falcon9_Stg1</strong>を選択して<kbd>Apply</kbd>をクリックすると、第一段を操作できる。※
+  </p>
+
+  <p class="note">
+    ※第二段はオートパイロットでそのまま軌道投入される
+  </p>
+
+  <table>
+    <tr>
+      <td><kbd>K</kbd></td>
+      <td>着陸目標を設定</td>
+    </tr>
+    <tr>
+      <td><kbd>M</kbd></td>
+      <td>逆噴射・弾道飛行・着陸を全自動で実行するか、最初の逆噴射を省略するか選択する</td>
+    </tr>
+    <tr>
+      <td><kbd>B</kbd></td>
+      <td>自動着陸を有効／無効にする</td>
+    </tr>
+    <tr>
+      <td><kbd>P</kbd></td>
+      <td>使用するエンジンを選択（9基・3基・1基）</td>
+    </tr>
+    <tr>
+      <td><kbd>J</kbd></td>
+      <td>グリッドフィンを展開</td>
+    </tr>
+    <tr>
+      <td><kbd>G</kbd></td>
+      <td>着陸脚を展開</td>
+    </tr>
+    <tr>
+      <td><kbd>E</kbd></td>
+      <td>カメラの向きを前後に切り替える</td>
+    </tr>
+  </table>
+
+
+  <h3 id="key_pad">発射台</h3>
+
+
+  <table>
+    <tr>
+      <td><kbd>G</kbd></td>
+      <td>整備塔を倒す／立ち上げる</td>
+    </tr>
+    <tr>
+      <td><kbd>K</kbd></td>
+      <td>夜間照明を点灯／消灯</td>
+    </tr>
+    <tr>
+      <td><kbd>M</kbd></td>
+      <td>ウォーターカーテンをオン／オフ</td>
+    </tr>
+    <tr>
+      <td><kbd>V</kbd></td>
+      <td>LOX（液体酸素）の排出による霧を消す／霧を出す</td>
+    </tr>
+    <tr>
+      <td><kbd>B</kbd></td>
+      <td>(LC39A) クルーアクセスアームを展開／格納</td>
+    </tr>
+    <tr>
+      <td><kbd>N</kbd></td>
+      <td>(LC39A) クルーアクセスアームを消す／出現させる</td>
+    </tr>
+    <tr>
+      <td><kbd>P</kbd></td>
+      <td>ロケットを発射台に設置する（発射台が空のとき）</td>
+    </tr>
+  </table>
+
+
+  <h3 id="key_fairing">フェアリング</h3>
+
+
+  <p>
+    分離後、フェアリングは全自動で回収船 (FRV) に向かって飛行する。
+  </p>
+
+  <table>
+    <tr>
+      <td><kbd>P</kbd></td>
+      <td>オートパイロットをオン／オフ</td>
+    </tr>
+  </table>
+
+
+  <h2 id="payload">ペイロードを搭載する</h2>
+
+
+  <p>
+    搭載できるのは、<strong>Attachment point</strong>がある、つまりロボットアームで掴めるものに限られる。
+  </p>
+
+
+  <h3 id="payload_scenario">空のシナリオを用意する</h3>
+
+
+  <p>
+    まず初めに、Falcon9に何も搭載されていない状態のシナリオを用意する。
+  </p>
+
+  <p>
+    <strong>Scenarios\Falcon9 for Orbiter2016</strong>フォルダを開く。<br>
+    <strong>NROL76 launch(LC39A LZ1 flyback).scn</strong>をメモ帳などのテキストエディタで開く。
+  </p>
+
+  <p>
+    以下の行をすべて削除する。
+  </p>
+
+  <p>
+    <img loading="lazy" src="../images/iss/falcon9-control-2016/001.png" width="256" height="326">
+  </p>
+
+  <pre><code>10K_Sat:Falcon9R_V12/10k_sat
+  STATUS Landed Earth
+  POS -80.5771995 28.5619578
+  HEADING 23.64
+  ALT 0.952
+  AROT 57.776 -18.826 8.898
+  ATTACHED 0:0,Falcon9
+  AFCMODE 7
+  NAVFREQ 0 0
+  XPDR 500
+END</code></pre>
+
+  <p>
+    <strong>ATTACHED</strong>という行は、そのペイロードがほかの宇宙船に接続されていることを意味する。<br>
+    数字が取り付け位置を示し、一番右に取り付け先の宇宙船の名前を記述する。
+  </p>
+
+  <p>適当な名前を付けて保存する。※</p>
+
+  <p class="note">
+    ※拡張子は<strong>.scn</strong>
+  </p>
+
+  <p>
+    <img loading="lazy" src="../images/iss/falcon9-control-2016/002.png" width="472" height="102">
+  </p>
+
+
+  <h3 id="payload_attach">ペイロードを追加する</h3>
+
+
+  <p>
+    作成したシナリオでゲームを開始する。
+  </p>
+
+  <p>
+    <a href="../misc/index.html#sceditor" target="_blank">シナリオエディタ</a>を使って、ゲーム内で搭載したいペイロードを追加する。<br>
+    <a href="../misc/sceditor3-addvessel.html" target="_blank">シナリオエディタ 宇宙船の追加</a>
+  </p>
+
+  <p>
+    <kbd>K</kbd>を押して、<strong>Launch Control Panel</strong>を開く。<br>
+    <strong>New Payload</strong>で搭載したいペイロードの名前を入力して、<kbd>Attach</kbd>をクリック。<br>
+    20まで連続して搭載することができる。<br>
+    <kbd>J</kbd>でペイロードを放出する。最後に搭載したペイロードから逆順で放出する。
+  </p>
+
+
+  <h2 id="star48">Star48BVキックモーター</h2>
+
+
+  <p>
+    ペイロードとして<strong>Star48BVキックモーター</strong>を追加できる。<br>
+    また、Star48BVにさらにペイロードを搭載することも可能。
+  </p>
+
+  <p>
+    シナリオエディタを開いて、宇宙船の追加画面にする。<br>
+    <strong>Falcon9R_V12</strong>フォルダを開いて、<strong>star48bv</strong>を選択して追加する。
+  </p>
+
+  <p>
+    <img loading="lazy" src="../images/iss/falcon9-control-2016/003.png" width="233" height="153">
+  </p>
+
+  <p>
+    <kbd>K</kbd>を押して、<strong>Launch Control Panel</strong>を開く。<br>
+    Falcon9に<strong>Star48</strong>を搭載する。
+  </p>
+
+  <p>
+    <kbd>F3</kbd>キーを押して、<strong>Star48</strong>に乗り換える。<br>
+    この状態で<kbd>P</kbd>を押すと、Star48に別のペイロードを搭載することができる。<br>
+    <kbd>J</kbd>を押すと分離される。
+  </p>
+
+  <p>
+    <strong class="caution">注意</strong>：Star48は固体ロケットなので、一度点火すると燃焼終了までエンジンを消せない。
+  </p>
+
+</body>
+
+</html>

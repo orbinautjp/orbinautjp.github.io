@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../styles/orbiterjp.css">
+  <script src="../scripts/template.js" charset="utf-8" defer></script>
+  <script src="../scripts/prevnext_slingshot.js" charset="utf-8" defer></script>
+  <title>スイングバイの基本 マニューバの実行と軌道修正</title>
+</head>
+
+<body>
+
+  <h1>スイングバイの基本 マニューバの実行と軌道修正</h1>
+
+
+<p>前回作成したフライトプランをもとに、木星へと向かうマニューバを作成します。</p>
+
+<ol>
+<li><a href="#launch">打ち上げ</a></li>
+<li><a href="#manoeuvre">マニューバの作成</a>
+  <ul>
+  <li><a href="#manoeuvre_correction">マニューバの修正</a></li>
+  <li><a href="#manoeuvre_exe">マニューバの実行</a></li>
+  </ul>
+</li>
+<li><a href="#mcc">軌道修正とステージの追加</a></li>
+</ol>
+
+
+<h2 id="launch">打ち上げ</h2>
+
+
+<p>打ち上げからパーキング軌道までは、ほかの惑星へ直接向かう場合とまったく同じ。<br>
+<a href="../tutorial/part20.html">Orbiterチュートリアル Part20 金星への打ち上げ・パーキング軌道へ</a></p>
+
+
+<h2 id="manoeuvre">マニューバの作成</h2>
+
+
+<p>パーキング軌道へ到達したら、<strong>Stage1</strong>でマニューバを作成する。</p>
+<p><strong>View:Escape Plan</strong>に表示された<strong>Delta V</strong>の値を、<strong>View:Manoeuvre</strong>の<strong>Prograde</strong>に入力。<br>
+<strong>Man. date</strong>を操作して、ふたつの黄色い曲線が重なるようにする。</p>
+
+<p>
+<img loading="lazy" src="../images/transximfd/transx-slingshot-3/010.png" width="1433" height="781">
+</p>
+
+<p><strong>Stage2</strong>に移動して、<strong>View:Eject Plan</strong>のすべての項目を<strong>Reset</strong>する。</p>
+
+<p>
+<img loading="lazy" src="../images/transximfd/transx-slingshot-3/013.png" width="378" height="378">
+</p>
+
+<p>ここまでの手順は、ほかの惑星へ向かうときとまったく同じ。</p>
+
+
+<h3 id="manoeuvre_correction">マニューバの修正</h3>
+
+
+<p>片方のMFDで<strong>Stage1</strong>の<strong>View:Manoeuvre</strong>を表示する。<br>
+もう片方は<strong>Stage3</strong>の<strong>View:Slingshot</strong>を表示する。</p>
+
+<p>
+<img loading="lazy" src="../images/transximfd/transx-slingshot-3/011.png" width="1434" height="780">
+</p>
+
+<p><strong>Stage1</strong>のマニューバを操作して、<strong>Stage3</strong>で緑と黄色の線が重なるようにする。<br>
+<strong>Prograde</strong>、<strong>Outward</strong>、<strong>Ch. plane</strong>を変更して、緑の線の長さと角度を変える。<br>
+プランの作成と同じように、<strong>R. Inc</strong>を<strong>0</strong>に、<strong>Pe Ratio</strong>を<strong>1</strong>にできるだけ近づける。※</p>
+
+<p class="note">※TransXの計算には誤差があり、かつ手動で微調整できるので、細かい数字にこだわる必要はない</p>
+
+<p><strong>Stage4</strong>と<strong>Stage5</strong>に移動して、土星に衝突する軌道にする。<br>
+<strong>Outward angle</strong>と<strong>Inc. angle</strong>を操作する。</p>
+<p>終わったら<strong>Stage1</strong>と<strong>Stage3</strong>に戻って、マニューバを微調整する。<br>
+何度か<strong>++ Updates</strong>を使って再計算するのを忘れないように。</p>
+
+
+<h3 id="manoeuvre_exe">マニューバの実行</h3>
+
+
+<p>マニューバの調整が終わったら、<strong>View:Target</strong>を使ってエンジンを噴射する。<br>
+噴射が終わったら、<strong>Stage3</strong>を見ながら手動で微調整する。</p>
+
+
+<h2 id="mcc">軌道修正とステージの追加</h2>
+
+
+<p>木星までの移動のあいだに、何度か軌道修正をおこなう必要がある。<br>
+軌道修正のためのマニューバの作り方は、さきに述べた方法とまったく同じ。<br>
+移動するにつれてStageが順番に消去されるので、Stageの番号が変わる。</p>
+<p>今回は木星スリングショット→土星までのプランしか作成しなかったが、木星を離れてから土星から天王星までのStageを追加することができる。<br>
+Stageの追加方法は、地上で木星→土星までのプランを作成したときと同じ。</p>
+<p>これを繰り返すことで、木星・土星・天王星・海王星を一度のフライトで訪れることができる。</p>
+
+</body>
+</html>

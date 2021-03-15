@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../styles/orbiterjp.css">
+  <script src="../scripts/template.js" charset="utf-8" defer></script>
+  <title>IMFD Offset機能と自由帰還軌道 (AMSO)</title>
+</head>
+
+<body>
+
+  <h1>IMFD Offset機能と自由帰還軌道 (AMSO)</h1>
+
+
+<p><a href="../apollo/index.html#amso" target="_blank">AMSO</a>のアポロミッションのために、<a href="imfd-download.html" target="_blank">IMFD</a>を使って自由帰還軌道を作成します。</p>
+
+<ol start="0">
+<li><a href="#prep">準備</a></li>
+<li><a href="#tgicept">Target Interceptを開く</a>
+  <ul>
+  <li><a href="#tgicept_tej">TEj・TInを入力する</a></li>
+  <li><a href="#tgicept_offset">Offsetを有効にする</a></li>
+  </ul>
+</li>
+<li><a href="#map">Map Programを開く</a>
+  <ul>
+  <li><a href="#map_data">データを共有する</a></li>
+  <li><a href="#map_target">ターゲットを指定する</a></li>
+  <li><a href="#map_plan">プランを表示する</a></li>
+  </ul>
+</li>
+</ol>
+
+<ul>
+<li><a href="#explanation">解説</a></li>
+<li><a href="index.html#imfd" target="_blank">IMFDの操作</a></li>
+</ul>
+
+
+<h2 id="prep">準備</h2>
+
+
+<p>今回使用するシナリオは、これら2つのいずれかを選んでください。</p>
+
+<ul>
+<li><strong>Apollo 11 step 01</strong>（地上から打ち上げる場合）</li>
+<li><strong>Apollo 11 step 04</strong>（軌道投入が終わった時点）</li>
+</ul>
+
+<p>
+<img loading="lazy" src="../images/transximfd/imfd-offset-freereturn/001.png" width="226" height="122">
+</p>
+
+<p>打ち上げから軌道投入までは自動で実行されます。<br>
+<a href="../apollo/amso-keymap.html">AMSO キー操作一覧</a></p>
+
+
+<h2 id="tgicept">Target Interceptを開く</h2>
+
+
+<p>軌道に乗ったら、左MFDで<strong>IMFD</strong>を開く。<br>
+<kbd>MNU</kbd>→<strong>Course</strong>→<strong>Target Intercept</strong>を選択。</p>
+<p><kbd>TGT</kbd>をクリックして<strong>Moon</strong>と入力。</p>
+
+
+<h3 id="tgicept_tej">TEj・TInを入力する</h3>
+
+
+<p>まず、<strong>TEj</strong>と<strong>TIn</strong>の<strong>GET</strong>を以下の数字にする。<br>
+<kbd>Adj</kbd>をクリックして倍率を変更すると、時・分・秒のどれを操作するか選択できる。</p>
+<p><strong class="caution">重要</strong>：<strong>TEj</strong>・<strong>TIn</strong>の数字を直接操作しないで、その下の<strong>GET</strong>だけを操作する。</p>
+
+<table>
+ <tr>
+  <td><strong>TEj</strong>のGET</td>
+  <td><strong>2:44:16</strong></td>
+ </tr>
+ <tr>
+  <td><strong>TIn</strong>のGET</td>
+  <td><strong>75:48:37</strong></td>
+ </tr>
+</table>
+
+<p><kbd>Nxt</kbd>を何度かクリックして<strong>Realtime</strong>を選択。<br>
+<kbd>+</kbd>をクリックして<strong>Off-Axis</strong>にする。</p>
+
+<p>
+<img loading="lazy" src="../images/transximfd/imfd-offset-freereturn/002.png" width="479" height="384">
+</p>
+
+
+<h3 id="tgicept_offset">Offsetを有効にする</h3>
+
+
+<p><kbd>MOD</kbd>をクリック。</p>
+<p><kbd>Prv</kbd>を何度かクリックして、<strong>Offset Disabled</strong>を選択。<br>
+<kbd>+</kbd>を何度かクリックして、<strong>Vel. Frame</strong>に切り替える。</p>
+<p>これで、IMFDの<strong>Offset</strong>機能が有効になる。</p>
+<p><kbd>Nxt</kbd>を何度かクリックして、<strong>Lon・Lat・Rad</strong>を選択。<br>
+<kbd>Set</kbd>をクリックして以下の数字を入力する。</p>
+
+<table>
+ <tr>
+  <td><strong>Lon</strong></td>
+  <td><strong>8.000°</strong></td>
+ </tr>
+ <tr>
+  <td><strong>Lat</strong></td>
+  <td><strong>7.000°</strong></td>
+ </tr>
+ <tr>
+  <td><strong>Rad</strong></td>
+  <td><strong>7.836M</strong></td>
+ </tr>
+</table>
+
+<p><kbd>MOD</kbd>を何度かクリックして元の画面に戻る。</p>
+
+<p>
+<img loading="lazy" src="../images/transximfd/imfd-offset-freereturn/003.png" width="475" height="385">
+</p>
+
+<p><kbd>AB</kbd>をクリックすると、エンジン噴射のカウントダウンが開始する。</p>
+
+
+<h2 id="map">Map Programを開く</h2>
+
+
+<p>この作業をしなくても、TLIを実行することはできます。<br>
+お使いのPCのスペックによっては、動作が重くなる場合があるかもしれません。</p>
+<p><a href="imfd-tutorial-5.html">IMFD Part5 Map Programの基本操作</a></p>
+
+
+<h3 id="map_data">データを共有する</h3>
+
+
+<p>右MFDでも<strong>IMFD</strong>を開く。</p>
+<p>左MFDのデータを共有させる。<br>
+<strong>Program Menu</strong>で<kbd>PG</kbd>をクリックして<strong>0</strong>と入力。</p>
+
+
+<h3 id="map_target">ターゲットを指定する</h3>
+
+
+<p><kbd>Map</kbd>をクリック。</p>
+<p><kbd>TGT</kbd>をクリックして<strong>Moon</strong>と入力。</p>
+<p><kbd>PRJ</kbd>をクリックして<strong>Self</strong>にする。</p>
+
+
+<h3 id="map_plan">プランを表示する</h3>
+
+
+<p><kbd>PG</kbd>をクリックして2ページ目に移動する。<br>
+<kbd>Plan</kbd>をクリックして、左MFDで作成したプランを表示する。</p>
+
+<p>
+<img loading="lazy" src="../images/transximfd/imfd-offset-freereturn/004.png" width="474" height="387">
+</p>
+
+<p><kbd>MOD</kbd>を何度かクリックして、<strong>Map-config</strong>を表示する。<br>
+<strong>Time limit</strong>を選択して、<strong>600k</strong>と入力する。</p>
+
+<p>
+<img loading="lazy" src="../images/transximfd/imfd-offset-freereturn/005.png" width="481" height="385">
+</p>
+
+<p><kbd>MOD</kbd>をクリックして元の画面に戻る。<br>
+月の近くを通って地球に戻る、自由帰還軌道になっているのがわかる。</p>
+
+<p>
+<img loading="lazy" src="../images/transximfd/imfd-offset-freereturn/006.png" width="474" height="385">
+</p>
+
+<p><kbd>Cnt</kbd>をクリックして<strong>p-moon</strong>と入力すると、近月点が中心になる。</p>
+
+<p>
+<img loading="lazy" src="../images/transximfd/imfd-offset-freereturn/007.png" width="475" height="385">
+</p>
+
+
+<h2 id="explanation">解説</h2>
+
+
+<p>IMFDの<a href="imfd-tutorial-1.html" target="_blank">Target Intercept</a>を使用すると、通常は惑星の中心を直撃するような軌道を作成します。<br>
+（惑星を点として考えることで、2点間の最適な軌道を設計する）</p>
+<p><strong>Offset</strong>機能を使うと、天体の周囲のある1点を目標として、そこへ向かう軌道を作成することができます。<br>
+例えば、月を直撃するのではなく、月の近くを通る軌道を指定することで、自由帰還軌道も作成できます。</p>
+<p><strong>Lon</strong>（経度）・<strong>Lat</strong>（緯度）のふたつは、天体の公転面が基準となっています。<br>
+惑星の進行方向が経度<strong>0°</strong>、その反対が<strong>180°</strong>です。<br>
+<strong>Rad</strong>（半径）は、惑星の中心からの距離を指しています。</p>
+<p>ただし、Target Interceptは誤差が大きいため、<a href="imfd-tutorial-5.html" target="_blank">Map program</a>で実際の軌道を確認して調整する必要があります。</p>
+<p>IMFDに付属している<strong>Manual53.pdf</strong>の最後に、AMSOで使えるTLIのデータが記載されているので参考にしてください。※</p>
+<p class="note">※データ自体が古いので、現行バージョンでは若干の誤差があります</p>
+<p>自由帰還軌道のイメージがつかめない場合は、以下の記事も参考にしてください。<br>
+<a href="transx-freereturn.html">TransX 地球―月の自由帰還軌道を作る</a></p>
+
+</body>
+</html>

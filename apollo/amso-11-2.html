@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../styles/orbiterjp.css">
+  <script src="../scripts/template.js" charset="utf-8" defer></script>
+  <script src="../scripts/prevnext_apollo11.js" charset="utf-8" defer></script>
+  <title>AMSO アポロ11号チュートリアル Part2 （軌道修正とLOI）</title>
+</head>
+
+<body>
+
+  <h1>AMSO アポロ11号チュートリアル Part2 （軌道修正とLOI）</h1>
+
+
+  <ol>
+    <li><a href="#docking">ドッキング</a></li>
+    <li><a href="#tlcc">軌道修正</a></li>
+    <li><a href="#flightmonitor">Flight monitor</a></li>
+    <li><a href="#loi">LOI（月周回軌道投入）</a>
+    <ul>
+    <li><a href="#loi_program">Program LOI</a></li>
+    <li><a href="#loi_data">データを入力する</a></li>
+    <li><a href="#loi_execute">LOIを実行する</a></li>
+    </ul>
+    </li>
+    <li><a href="#2ndloi">二度目の軌道投入</a></li>
+    </ol>
+
+
+    <h2 id="docking">ドッキング</h2>
+
+    <p><strong>GET 03:15:23</strong>になったら、CSM（司令機械船）をロケットから分離する。<br>
+    CSMをLM（月着陸船）とドッキングして、ロケットから切り離す。</p>
+    <p>この手順については、以下の記事を参照してください。<br>
+    <a href="amso-docking-tli.html">AMSO ドッキングとTLI</a></p>
+
+    <h2 id="tlcc">軌道修正</h2>
+
+    <p>ドッキングと分離が終わったら、<strong>LunarTransferMFD</strong>に戻る。</p>
+    <p><strong>Fst</strong> (Flight stage)を選択して、<kbd>+</kbd>をクリック。<br>
+    TLIから<strong>TLCC</strong>(CC=Course correction)に切り替える。</p>
+
+<p>
+<img loading="lazy" src="../images/apollo/amso-11-2/001.png" width="283" height="154">
+    </p>
+    <p><strong>TIg</strong>を選択して、<strong>26:44:58</strong>と入力する。</p>
+
+<p>
+<img loading="lazy" src="../images/apollo/amso-11-2/002.png" width="210" height="120">
+    </p>
+    <p><kbd>EXE</kbd>をクリック。<br>
+    <kbd>DV</kbd>をクリックしてもう一度<kbd>EXE</kbd>をクリック。<br>
+    自動で噴射が実行されるので、タイムワープで放置する。</p>
+    <p><strong class="caution">重要</strong>：ここから先の操作は、史実通りの時刻に実行できることはほとんどありません。<br>
+    噴射のタイミングを自分で判断する必要があります。</p>
+
+
+    <h2 id="flightmonitor">Flight monitor</h2>
+
+
+    <p>
+    <strong>LunarTransferMFD</strong>で<kbd>PRG</kbd>をクリック。<br>
+    <strong>Program menu</strong>を開く。
+    </p>
+
+    <p>
+    <strong>Flight monitor</strong>を選択して<kbd>SET</kbd>をクリック。
+    </p>
+
+    <p>月に最接近したときの情報が表示される。<br>
+    <kbd>VM</kbd>をクリックすると、月最接近時、月フライバイ、地球最接近時※の予測軌道に表示が切り替わる。</p>
+
+    <p class="note">※月で周回軌道に入らず、そのまま減速スイングバイした時の軌道</p>
+
+    <p>
+    <img loading="lazy" src="../images/apollo/amso-11-2/006.png" width="410" height="338">
+    </p>
+
+    <h2 id="loi">LOI（月周回軌道投入）</h2>
+
+    <p>
+    <strong>PeT</strong>が<strong>1000秒</strong>を切るまで、タイムワープで時間経過させる。
+    </p>
+
+    <p><strong>PeA</strong>が<strong>111km</strong>、<strong>ApA</strong>が<strong>314km</strong>になるように軌道投入する。※</p>
+    <p class="note">※169.7海里≒314km（参照：<a href="https://history.nasa.gov/SP-4029/Apollo_11g_Lunar_Orbit_Phase.htm">Apollo 11 Lunar Orbit Phase</a>）</p>
+
+    <h3 id="loi_program">Program LOI</h3>
+
+
+    <p>
+    <strong>LunarTransferMFD</strong>で<strong>Program menu</strong>を開く。
+    </p>
+
+    <p>
+    <strong>Program LOI</strong>を選択して<kbd>SET</kbd>をクリック。
+    </p>
+
+
+    <h3 id="loi_data">データを入力する</h3>
+
+
+    <p>
+    <kbd>PRV</kbd> or <kbd>NXT</kbd>で項目を選択。<br>
+    <kbd>+</kbd> or <kbd>-</kbd>で変更する。
+    </p>
+
+    <p>
+    <strong>Mod</strong>(Mode)を<strong>Advanved</strong>にする。<br>
+    <strong>Att</strong>(Attitude)を<strong>Star Fixed</strong>にする。
+    </p>
+
+    <p>
+    <strong>ApA</strong>を選択して<kbd>SET</kbd>をクリック。<br>
+    <strong>340k</strong>と入力してキーボードで<kbd>Enter</kbd>を押す。
+    </p>
+
+    <p>
+    <img loading="lazy" src="../images/apollo/amso-11-2/007.png" width="411" height="337">
+    </p>
+
+    <h3 id="loi_execute">LOIを実行する</h3>
+
+
+    <p>
+    データを入力したら、<kbd>EXE</kbd>をクリック。<br>
+    <kbd>DV</kbd>をクリックしてからもう一度<kbd>EXE</kbd>をクリック。
+    </p>
+
+    <p>
+    自動噴射が終了するのを待つ。
+    </p>
+
+
+    <h2 id="2ndloi">二度目の軌道投入</h2>
+
+
+    <p>
+    もう一度エンジンを噴射して、完全な円軌道にする。
+    </p>
+
+    <p>
+    いったん<kbd>PRG</kbd>をクリックして、<strong>Flight monitor</strong>を開く。
+    </p>
+
+    <p>
+    <strong>PeA</strong>・<strong>ApA</strong>を確認する。
+    </p>
+
+    <p>
+    <kbd>PRG</kbd>をクリックして、<strong>Program LOI</strong>に戻る。
+    </p>
+
+    <p>
+    <strong>Mod</strong>を<strong>Advanved</strong>にする。<br>
+    <strong>Att</strong>を<strong>Star Fixed</strong>にする。
+    </p>
+
+    <p>
+    <strong>ApA</strong>を<strong>PeA</strong>と同じ数字にして、もう一度エンジンを噴射する。（史実では<strong>GET 80:11:36</strong>に実行）
+    </p>
+
+    <p>
+    <img loading="lazy" src="../images/apollo/amso-11-2/008.png" width="333" height="141">
+    </p>
+
+</body>
+</html>

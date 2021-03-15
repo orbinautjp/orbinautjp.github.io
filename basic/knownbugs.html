@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../styles/orbiterjp.css">
+  <script src="../scripts/template.js" charset="utf-8" defer></script>
+  <title>既知の不具合</title>
+
+<script>
+window.MathJax = {
+  tex: {
+    tags: 'ams'
+  }
+};
+</script>
+
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+</head>
+<body>
+
+  <h1>既知の不具合</h1>
+
+
+<p>
+Orbiterのバグ・トラブルなどのまとめです。
+</p>
+
+<ul>
+<li><a href="#ctd">読み込み中に強制終了する</a></li>
+<li><a href="#sc3">Spacecraft3.dllで強制終了する</a></li>
+<li><a href="#d3d9">D3D9Clientでゲームを起動できない</a></li>
+<li><a href="#invisible">宇宙船が見えない</a></li>
+<li><a href="#ctd_ingame">ゲーム中に強制終了する</a></li>
+<li><a href="#spin">宇宙船の回転が止まらなくなる</a></li>
+<li><a href="#blur">画面がぼやける</a></li>
+<li><a href="#nosound">音声が再生されない</a></li>
+<li><a href="#font">Windowsのフォントが汚くなる (2016)</a></li>
+<li><a href="#runway">地面を走行できない (2016)</a></li>
+<li><a href="#sinking">機体が地面に沈む (2016)</a></li>
+<li><a href="#slide">機体が横滑りして静止できない (2016)</a></li>
+<li><a href="#planettextures2016">木星・タイタンの表示がおかしい (2016)</a></li>
+<li><a href="#mods">MODの不具合</a></li>
+</ul>
+
+<p>
+該当するものがない場合は、下記ページにて報告してください。<br>
+<a href="troubleshooting.html" target="_blank">バグ・トラブルを報告する</a>
+</p>
+
+
+<h2 id="ctd">読み込み中に強制終了する</h2>
+
+
+<h3>症状</h3>
+
+
+<p>
+ゲーム開始時のロード画面にて強制終了する。
+</p>
+
+<p>
+<img loading="lazy" src="../images/basic/knownbugs/002.png" width="1920" height="1080">
+</p>
+
+
+<h3>原因</h3>
+
+
+<p>
+モジュールの読み込みに失敗している。<br>
+モジュールそのものが壊れているか、必要なファイルをインストールしていない可能性がある。
+</p>
+
+<p>
+<strong>Spacecraft3.dll</strong>を使用するMODの場合は下記を参照。<br>
+<a href="#sc3">Spacecraft3.dllで強制終了する</a>
+</p>
+
+
+<h3>対策</h3>
+
+
+<p>
+Orbiterフォルダにて<strong>Orbiter.log</strong>というファイルを探す。<br>
+<strong>Orbiter.log</strong>をメモ帳などのテキストエディタで開く。
+</p>
+
+<p>
+エラーが発生している場合は、<strong>ERROR</strong>以下の行に原因が表示される。<br>
+トラブルの原因と無関係なものもあるので、内容をよく確認すること。
+</p>
+
+<p>
+<strong>Could not load vessel module</strong>と書かれている場合は、宇宙船のモジュールの読み込みに失敗している。
+</p>
+
+<p>
+<img loading="lazy" src="../images/basic/knownbugs/001.png">
+</p>
+
+<p>
+必要なファイルが揃っているか確認する。<br>
+足りないファイルがある場合は、インストールしてもう一度ゲームを開始する。<br>
+必要なファイルがすべて揃っている場合は、開発者に報告する。※
+</p>
+
+<p>
+※英語でのコメントが難しい場合は、以下のページでもバグ報告を受け付けています。<br>
+<a href="troubleshooting.html" target="_blank">バグ・トラブルを報告する</a>
+</p>
+
+
+<h2 id="sc3">Spacecraft3.dllで強制終了する</h2>
+
+
+<h3>症状</h3>
+
+
+<p>
+<a href="../mods/spacecraft3download.html" target="_blank">Spacecraft3.dll</a>を使用する宇宙船において、読み込み中に強制終了する。
+</p>
+
+
+<h3>原因</h3>
+
+
+<p>
+<a href="d3d9client.html" target="_blank">D3D9Client</a>でシンボリックリンクを作成していない。
+</p>
+
+
+<h3>対策</h3>
+
+
+<p>
+下記のページを参照して、シンボリックリンクを作成する。<br>
+<a href="d3d9client.html#install" target="_blank">D3D9Clientを導入する</a>
+</p>
+
+
+<h2 id="d3d9">D3D9Clientでゲームを起動できない</h2>
+
+
+<h3>症状</h3>
+
+
+<p><a href="d3d9client.html" target="_blank">D3D9Client</a>を使用している環境において、ゲームの起動時に強制終了する。<br>
+以下のようなメッセージが表示される。</p>
+
+<blockquote>The program can't start because d3dx9_42.dll is missing from your computer</blockquote>
+
+
+<h3>原因</h3>
+
+
+<p>PCに<strong>DirectX9.0c</strong>がインストールされていない。</p>
+
+<p>Windows10にはDirectX9.0cは同梱されておらず、別途インストールする必要がある。<br>
+また、DirectX12は9.0cの代わりにはならない。</p>
+
+
+<h3>対策</h3>
+
+
+<p>DirectX9.0cのインストールについては下記を参照。<br>
+<a href="d3d9client.html#directx" target="_blank">D3D9Clientを導入する - DirectXのダウンロード・インストール</a></p>
+
+<p>DirectX9.0cを導入済みの場合は、<kbd>Modules</kbd>タブで<strong>D3D9Client</strong>にチェックが入っているか確認する。</p>
+
+<p>
+<img loading="lazy" src="../images/basic/knownbugs/002.png">
+</p>
+
+
+<h2 id="invisible">宇宙船が見えない</h2>
+
+
+<h3>症状</h3>
+
+
+<p>
+ゲーム内において、存在するはずの宇宙船が見えず、操縦もできない。
+</p>
+
+
+<h3>原因</h3>
+
+
+<p>
+宇宙船の読み込みに失敗している。<br>
+宇宙船のファイルが壊れているか、必要なファイルをインストールしていない可能性がある。
+</p>
+
+
+<h3>対策</h3>
+
+
+<p>
+必要なファイルが揃っているか確認する。<br>
+足りないファイルがある場合は、インストールしてもう一度ゲームを開始する。<br>
+必要なファイルがすべて揃っている場合は、開発者に報告する。※
+</p>
+
+<p>
+※英語でのコメントが難しい場合は、以下のページでもバグ報告を受け付けています。<br>
+<a href="troubleshooting.html" target="_blank">バグ・トラブルを報告する</a>
+</p>
+
+
+<h2 id="ctd_ingame">ゲーム中に強制終了する</h2>
+
+
+<h3>症状</h3>
+
+
+<p>
+ゲームは起動するが、プレイの途中で強制終了する。
+</p>
+
+
+<h3>原因</h3>
+
+
+<p>
+多段式ロケットなどにおいて、分離したモジュールが原因で問題が発生することがある。<br>
+また、MODによっては特定の操作をすると強制終了することがある。
+</p>
+
+
+<h3>対策</h3>
+
+
+<p>
+<a href="../misc/index.html#sceditor" target="_blank">シナリオエディタ</a>を使って、不具合の原因になっている宇宙船を削除する。<br>
+<a href="../misc/sceditor3-addvessel.html" target="_blank">シナリオエディタ 宇宙船の追加・削除</a>
+</p>
+
+<p>
+特定の操作が原因で強制終了する場合は、開発者に報告する。※
+</p>
+
+<p>
+※英語でのコメントが難しい場合は、以下のページでもバグ報告を受け付けています。<br>
+<a href="troubleshooting.html" target="_blank">バグ・トラブルを報告する</a>
+</p>
+
+
+<h2 id="spin">宇宙船の回転が止まらなくなる</h2>
+
+
+<h3>症状</h3>
+
+
+<p>
+宇宙船が高速回転して、<kbd>KILL ROT</kbd>オートパイロットでも止めることができない。
+</p>
+
+
+<h3>原因</h3>
+
+
+<p>
+<kbd>Prograde</kbd>などのオートパイロットを実行中にタイムワープを使うと発生しやすい。
+</p>
+
+
+<h3>対策</h3>
+
+
+<p>
+ゲーム内で<kbd>Ctrl</kbd> + <kbd>F4</kbd>を同時押しして、<strong>Custom Functions</strong>の選択画面を開く。<br>
+<strong>Scenario Editor</strong>を選択して<kbd>OK</kbd>をクリック。
+</p>
+
+<p>
+<kbd>Edit</kbd>→<kbd>Angular Velocity</kbd>と進んで、出てきた画面で<kbd>Kill</kbd>をクリック。
+</p>
+
+
+<h2 id="blur">画面がぼやける</h2>
+
+
+<h3>症状</h3>
+
+
+<p>
+<strong>Intel HD Graphics</strong>を使用しているPCにおいて、ゲーム画面が全体的にぼやけたような感じになる。
+</p>
+
+
+<h3>対策</h3>
+
+
+<p>
+<strong>インテルグラフィック／メディアコントロールパネル</strong>を開く。<br>
+<strong>3D→3D基本設定</strong>のスライダーを<strong>品質</strong>に設定する。
+</p>
+
+
+<h2 id="nosound">音声が再生されない</h2>
+
+
+<h3>症状</h3>
+
+
+<p>ゲーム内でエンジン音など一切の音声が再生されない。</p>
+
+
+<h3>原因</h3>
+
+
+<p>デフォルトの<a href="orbiter2010.html">Orbiter2010</a> / <a href="orbiter2016.html">Orbiter2016</a>には音声を再生する機能が存在しない。<br>
+ユーザーが音声再生MODを導入する必要がある。</p>
+
+
+<h3>対策</h3>
+
+
+<p>Orbiter2010ならOrbiterSound、Orbiter2016ならXRSoundを導入する。</p>
+
+<p><a href="orbiter2010.html#orbitersound">Orbiter2010のダウンロード+インストール - OrbiterSound</a><br>
+<a href="orbiter2016.html#xrsound">Orbiter2016のダウンロード+インストール - XRSound</a></p>
+
+<p><kbd>Modules</kbd>タブで<strong>OrbiterSound</strong>/<strong>XRSound</strong>にチェックを入れる。</p>
+
+<p>
+<img loading="lazy" src="../images/basic/knownbugs/003.png">
+<img loading="lazy" src="../images/basic/knownbugs/004.png">
+</p>
+
+<p>以上のMODを導入しているのに音声が再生されないときは、下記ページにて報告してください。<br>
+<a href="troubleshooting.html" target="_blank">バグ・トラブルを報告する</a></p>
+
+
+<h2 id="font">Windowsのフォントが汚くなる (2016)</h2>
+
+
+<h3>症状</h3>
+
+
+<p>
+<strong>Orbiter2016</strong>において、ゲーム終了後にWindowsのフォントのスムージングが解除される。※
+</p>
+
+<p class="note">
+※文字のふちがギザギザした感じになる。
+</p>
+
+
+<h3>対策</h3>
+
+
+<p>
+<strong>Enforce font smoothing on exit</strong>を有効にする。<br>
+手順は以下のページを参照。
+</p>
+
+<p>
+<a href="orbiter2016.html#fontsmoothing" target="_blank">Orbiter2016のダウンロード+インストール  - 文字のスムージング</a>
+</p>
+
+
+<h2 id="runway">地面を走行できない (2016)</h2>
+
+
+<h3>症状</h3>
+
+
+<p><strong>Orbiter2016</strong>において、滑走路などを走行できない。</p>
+
+
+<h3>原因</h3>
+
+
+<p><strong>Orbiter2010</strong>のMODをOrbiter2016で使用している。</p>
+
+<p>Orbiter2016で着陸関連の仕様が変更されたため、Orbiter2010のMODは地面を走行できないことが多い。</p>
+
+
+<h3>対策</h3>
+
+
+<p>存在しない。</p>
+
+<p>MODそのものを2016に合わせて改変しない限り改善しない。</p>
+
+
+<h2 id="sinking">機体が地面に沈む (2016)</h2>
+
+
+<h3>症状</h3>
+
+
+<p>
+<strong>Orbiter2016</strong>において、機体が斜面などに沈みこんでしまう。
+</p>
+
+
+<h3>原因</h3>
+
+
+<p>
+描画される地面と、実際の当たり判定が一致していない。
+</p>
+
+<p>
+<strong>Orbiter2010</strong>のMODを使用している場合は<a href="#runway">上記</a>を参照。
+</p>
+
+
+<h3>対策</h3>
+
+
+<p>
+<strong>D3D9Client</strong>の最新版をインストールする。
+</p>
+
+<p>
+<a href="d3d9client.html" target="_blank">D3D9Clientを導入する</a>
+</p>
+
+<p>
+<strong>Launchpad</strong>の<kbd>Visual effects</kbd>のタブを開く。<br>
+<strong>Surface elevation, using</strong>の右のドロップボックスで<strong>linear interpolation</strong>を選択する。
+</p>
+
+<p>
+<img loading="lazy" src="../images/basic/knownbugs/005.png">
+</p>
+
+
+<h2 id="slide">機体が横滑りして静止できない (2016)</h2>
+
+
+<h3>症状</h3>
+
+
+<p>
+<strong>Orbiter2016</strong>において、着陸時などに横滑りしてしまい、その場で静止することができない。
+</p>
+
+
+<h3>対策</h3>
+
+
+<p>
+<kbd>Ctrl</kbd> + <kbd>P</kbd>を押して一時停止する。
+</p>
+
+<p>
+<a href="../misc/index.html#sceditor" target="_blank">シナリオエディタ</a>を開く。<br>
+<kbd>Ctrl</kbd> + <kbd>F4</kbd>を押して、<strong>Scenario Editor</strong>を選択して<kbd>OK</kbd>をクリック。
+</p>
+
+<p>
+<kbd>Edit</kbd>→<kbd>Location</kbd>をクリック。<br>
+右下の<kbd>Apply</kbd>をクリックする。
+</p>
+
+<p>
+<kbd>Ctrl</kbd> + <kbd>P</kbd>を押して、一時停止を解除する。
+</p>
+
+
+<h2 id="planettextures2016">木星・タイタンの表示がおかしい (2016)</h2>
+
+
+<h3>症状</h3>
+
+
+<p>
+<strong>Orbiter2016</strong> + <strong>D3D9Client</strong>環境の木星やタイタンなどにおいて、表面が暗くなったり、テクスチャの表示が乱れる。
+</p>
+
+
+<h3>対策</h3>
+
+
+<p>
+<strong>Launchpad</strong>の<kbd>Visual effects</kbd>のタブを開く。<br>
+<strong>Cloud Shadows</strong>のチェックを外す。
+</p>
+
+<p>
+<img loading="lazy" src="../images/basic/knownbugs/006.png">
+</p>
+
+<p>
+この操作をすると雲の影が表示されなくなるので、地球に帰るときには元に戻しておく。
+</p>
+
+
+<h2 id="mods">MODの不具合</h2>
+
+
+<p>
+MODに固有の不具合のうち、確認できているものについてはインストールおよび操作解説の記事に書いてあります。<br>
+紹介されていない不具合に遭遇した場合は、下記ページにて報告してください。<br>
+<a href="troubleshooting.html" target="_blank">バグ・トラブルを報告する</a>
+</p>
+
+</body>
+</html>
