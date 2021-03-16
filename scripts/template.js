@@ -25,14 +25,11 @@
     <a id="menu_misc" href="../misc/index.html">その他</a>
     <button type="button" id="button_menu">メニュー</button>
   </nav>
-
-  o<main></main>o`)
+  `)
 
   // insert footer
 
   pageBody.insertAdjacentHTML('beforeend', `
-  c<main></main>c
-
   <!-- The Modal -->
   <div id="myModal" class="modal">
   <span id="close" class="close">&times; 画像を閉じる</span>
@@ -52,14 +49,6 @@
 
   </footer>
   `)
-
-  // remove redundant opening and closing main tags
-
-  function removeMain (full, half) {
-    document.body.innerHTML = document.body.innerHTML.replace(full, half)
-  }
-  removeMain('o<main></main>o', '<main>')
-  removeMain('c<main></main>c', '</main>')
 
   // modal for images
 
