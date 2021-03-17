@@ -9,7 +9,7 @@ body {
   line-height: 1.5rem;
   }
 
-/* main (template)*/
+/* main */
 
 main {
   background-color: #f2f2f2;
@@ -41,7 +41,7 @@ figure {
   margin-left: 0%;
 }
 
-/* page title (template)*/
+/* page title */
 
 main h1 {
   font-size: 1.6rem;
@@ -52,7 +52,7 @@ main h1 {
   line-height: 1.4rem;
 }
 
-/* in-page navigation (template)*/
+/* in-page navigation */
 
 main nav {
   display: block;
@@ -224,6 +224,8 @@ header h1 {
   overflow: hidden;
   text-align: center;
   z-index: 1;
+  font-size: 0;
+  line-height: 0;
   }
 
 .body_basic #menu_basic,
@@ -243,6 +245,8 @@ header h1 {
   display: inline-block;
   padding: 0.7rem;
   color: #ffffff;
+  font-size: 0.9rem;
+  line-height: 1.5rem;
 }
 
 .menubar a[href]:hover {
@@ -328,8 +332,6 @@ footer ul {
     overflow-x: auto;
   }
 
-  /* responsive template */
-
   main {
     padding: 1rem;
     margin: auto;
@@ -349,6 +351,8 @@ footer ul {
     max-width: inherit;
   }
 
+  /* responsive template */
+
   header {
     background-color: #498c5f;
   }
@@ -367,6 +371,7 @@ footer ul {
     margin: 0%;
     padding: 0.3rem;
     border-radius: 0%;
+    line-height: 1.4rem;
   }
   .menubar.responsive button {
   position: absolute;
