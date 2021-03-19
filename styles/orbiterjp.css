@@ -200,7 +200,11 @@ textarea {
 header {
   margin-top: 0%;
   padding: 0%;
-  background-color: #ffffff;
+  background-color: #000000;
+  background-image: url(../images/background_header.jpg);
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position: center;
   }
 
 header h1 {
@@ -209,9 +213,12 @@ header h1 {
   font-family: Georgia, serif;
   font-size: 1.8rem;
   font-weight: normal;
+  text-shadow:
+  -0.05rem 0 black, 0 0.05rem black, 0.05rem 0 black, 0 -0.05rem black,
+  0 0 0.3rem black;
   }
   header h1 a[href] {
-  color: #585858;
+  color: #ffffff;
   }
 
 /* menu bar (template)*/
@@ -220,7 +227,7 @@ header h1 {
   position: sticky;
   position: -webkit-sticky; /* Safari */
   top: 0;
-  background-color: #585858;
+  background-color: #3d3d3d;
   overflow: hidden;
   text-align: center;
   z-index: 1;
@@ -355,12 +362,14 @@ footer ul {
 
   header {
     background-color: #498c5f;
+    background-image: none;
   }
   header h1 {
     font-size: 1.4rem;
   }
   header h1 a[href] {
     color: #ffffff;
+    text-shadow: none;
   }
 
   .menubar a[href] {
