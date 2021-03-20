@@ -220,6 +220,10 @@ header h1 {
   header h1 a[href] {
   color: #ffffff;
   }
+  header h1 a[href]:hover {
+  text-shadow: none;
+  color: #ffffff;
+  }
 
 /* menu bar (template)*/
 
