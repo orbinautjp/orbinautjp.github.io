@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 
 <html lang="ja">
+
 <head>
   <script src="../scripts/ga.js"></script>
   <meta charset="UTF-8">
@@ -14,144 +15,250 @@
 
   <main>
 
-  <h1>R-9 MODのダウンロード・インストール</h1>
+    <h1>R-9 MODのダウンロード・インストール</h1>
 
 
-  <p><strong>R-9 v1.1</strong>は、Orbiter2010でR-9 ICBMを再現したMODです。<br>
-    Orbiter2016には対応していません。</p>
+    <p><strong>R-9 v1.3</strong>は、<a href="../basic/orbiter2010.html">Orbiter2010</a>でR-9 ICBMを再現したMODです。<br>
+      Orbiter2016には対応していません。</p>
     <p>こちらの文章もあわせてお読みください。<br>
-    <a href="../misc/r-9-icbm.html">R-9 ICBMの歴史（翻訳）</a></p>
-    
-    <h2>ダウンロード</h2>
-    
-    <p><a href="https://www.orbithangar.com/searchid.php?ID=6765">R-9 v1.1</a></p>
-    <p>以下のファイルもダウンロードしてください。</p>
-    <p><a href="https://www.orbithangar.com/searchid.php?ID=4885">Baikonur 2010: Surface Tiles v1.0</a></p>
-    <p><a href="https://www.orbithangar.com/searchid.php?ID=6764">Spaceports v1.1</a></p>
-    <p><a href="../basic/../basic/d3d9client.html">D3D9Client</a></p>
-    
-    <h2>インストール</h2>
-    
-    <p>ダウンロードしたファイルを解凍して、中身をOrbiterフォルダに上書きするだけ。</p>
-    
-    <p>Baikonur 2010: Surface Tiles v1.0については以下のページを参照してください。<br>
-    <a href="../iss/baikonur-2010-surface-tiles-v10.html">Baikonur 2010: Surface Tiles v1.0のインストール</a></p>
-    
-    <h3>シャットダウン方法の設定</h3>
-    
-    <p>このMODを使うと、ゲームが正常に終了しないことがあります。<br>
-    シャットダウンの設定を変えることである程度改善できます。</p>
-    <p><strong>Launchpad</strong>→<kbd>Extra</kbd>→<strong>Debugging options</strong>→<strong>Orbiter shutdown options</strong>を選択。<br>
-    下の<kbd>Edit</kbd>ボタンをクリックする。<br>
-    <img loading="lazy" src="../images/mods/r-9-install/001.png" width="299" height="309">
+      <a href="../misc/r-9-icbm.html">R-9 ICBMの歴史（翻訳）</a>
     </p>
-    <p><strong>Respawn Orbiter process</strong>をチェックして<kbd>OK</kbd>をクリック。<br>
-        <img loading="lazy" src="../images/mods/r-9-install/002.png" width="342" height="185">
-    </p>
-    <p>この方法でも完全に終了できないことがあります。<br>
-    そういう場合は、タスクマネージャから<strong>orbiter.exe</strong>を強制終了させてください。</p>
-    
-    <h2>シナリオ</h2>
-    
+
+    <nav>
+      <ul>
+        <li>
+          <a href="#download">ダウンロード</a>
+        </li>
+        <li>
+          <a href="#install">インストール</a>
+          <ul>
+            <li>
+              <a href="#install_shutdown">シャットダウン方法の設定</a>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <a href="#scenarios">シナリオ</a>
+          <ul>
+            <li>
+              <a href="#scenarios_demo">R-9 Demos</a>
+            </li>
+            <li>
+              <a href="#scenarios_historical">R-9 Historical Tests</a>
+            </li>
+            <li>
+              <a href="#scenarios_warstrikes">R-9 War Strikes</a>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <a href="#key">キー操作一覧</a>
+          <ul>
+            <li>
+              <a href="#key_rocket">ロケットなどの操作</a>
+            </li>
+            <li>
+              <a href="#key_des_n">Desna-N（地上発射用のテーブル）</a>
+            </li>
+            <li>
+              <a href="#key_des_v">Desna-V（地下サイロ）</a>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+
+
+    <h2 id="download">ダウンロード</h2>
+
+
     <p>
-        <img loading="lazy" src="../images/mods/r-9-install/003.png" width="281" height="353">
+      以下のリンクをクリック。
     </p>
-    
-    <h3>R-9 Demos</h3>
-    
+
+    <p>
+      <a href="https://www.orbithangar.com/showAddon.php?id=dcaa4ea8-711a-46c7-a167-49e7254da801"
+        target="_blank">Orb2010 VesselM Pack</a>
+    </p>
+
+    <p>
+      <kbd>Download</kbd>ボタンをクリック。<br>
+      以下の2つのファイルをダウンロードする。
+    </p>
+
+    <ul>
+      <li>Spaceports.v1.4.20210322.dist.Orb2010.zip</li>
+      <li>R-9.v1.3.20201107.dist.Orb2010.zip</li>
+    </ul>
+
+    <figure>
+      <img loading="lazy" src="../images/mods/r-9-install/000.png" alt="ダウンロードリンク" width="400" height="200">
+    </figure>
+
+    <p><strong>Baikonur 2010</strong>を導入すると、基地周辺のテクスチャが向上する。<br>
+      必要がなければ導入しなくてもよい。</p>
+
+    <p>
+      <a href="../iss/baikonur-2010-surface-tiles-v10.html" target="_blank">Baikonur 2010: Surface Tiles v1.0のインストール</a>
+    </p>
+
+
+    <h2 id="install">インストール</h2>
+
+
+    <p>ダウンロードしたファイルを解凍する。</p>
+
+    <p>
+      中のファイル・フォルダをコピー。<br>
+      以下の順番でOrbiterのインストールフォルダに上書きする。
+    </p>
+
+    <ol>
+      <li>Baikonur 2010（オプション）</li>
+      <li>Spaceports.v1.4</li>
+      <li>R-9.v1.3</li>
+    </ol>
+
+
+    <h3 id="install_shutdown">シャットダウン方法の設定</h3>
+
+
+    <p>このMODを使うと、ゲームが正常に終了しないことがある。<br>
+      シャットダウンの設定を変えることで改善できる。</p>
+    <p><strong>Launchpad</strong>→<kbd>Extra</kbd>→<strong>Debugging options</strong>→<strong>Orbiter shutdown
+        options</strong>を選択。</p>
+    <p>下の<kbd>Edit</kbd>ボタンをクリックする。</p>
+
+    <p>
+      <img loading="lazy" src="../images/mods/r-9-install/001.png" width="299" height="309">
+    </p>
+
+    <p><strong>Respawn Orbiter process</strong>をチェックして<kbd>OK</kbd>をクリック。</p>
+
+    <p>
+      <img loading="lazy" src="../images/mods/r-9-install/002.png" width="342" height="185">
+    </p>
+
+    <p>この方法でも完全に終了できないことがある。<br>
+      そういう場合は、タスクマネージャから<strong>orbiter.exe</strong>を強制終了させる。</p>
+
+
+    <h2 id="scenarios">シナリオ</h2>
+
+
+    <p>
+      <img loading="lazy" src="../images/mods/r-9-install/003.png" width="281" height="353">
+    </p>
+
+
+    <h3 id="scenarios_demo">R-9 Demos</h3>
+
+
     <p>地上やサイロからの発射、ステージの分離など、R-9の特徴を紹介するシナリオ。</p>
-    
-    <h3>R-9 Historical Tests</h3>
-    
+
+
+    <h3 id="scenarios_historical">R-9 Historical Tests</h3>
+
+
     <p>史実のテストフライト（失敗に終わったものも含めて）を再現したシナリオ。</p>
-    
-    <h3>R-9 War Strikes</h3>
-    
+
+
+    <h3 id="scenarios_warstrikes">R-9 War Strikes</h3>
+
+
     <p>史実では実現しなかった、R-9を使った核攻撃を再現したシナリオ。<br>
-    KMLファイルをGoogle Earthで開くと、詳しい着弾地点がわかる。</p>
-    
-    <h2>操作方法</h2>
-    
-    <p>一部のシナリオを除いて、全自動で発射・分離・着弾します。</p>
-    
-    <h3>キー操作一覧</h3>
-    
-    <h4>ロケットなどの操作</h4>
-    
+      KMLファイルをGoogle Earthで開くと、詳しい着弾地点がわかる。</p>
+
+
+    <h2 id="key">キー操作一覧</h2>
+
+
+    <p>一部のシナリオを除いて、全自動で発射・分離・着弾する。</p>
+
+
+    <h3 id="key_rocket">ロケットなどの操作</h3>
+
+
     <table>
-     <tr>
-      <td><kbd>C</kbd></td>
-      <td>船内視点（<kbd>F1</kbd>キーで船外・船内を切り替え）でのカメラの切り替え</td>
-     </tr>
-     <tr>
-      <td><kbd>J</kbd></td>
-      <td>ステージやフェアリングの分離</td>
-     </tr>
-     <tr>
-      <td><kbd>Ctrl</kbd>+<kbd>J</kbd></td>
-      <td>ステージの自動選択を無効にして分離</td>
-     </tr>
-     <tr>
-      <td><kbd>Ctrl</kbd>+<kbd>F</kbd></td>
-      <td>フェアリングなどの部品を選択可能にする</td>
-     </tr>
-     <tr>
-      <td><kbd>Tab</kbd></td>
-      <td>ステージ・宇宙船などを順に選択</td>
-     </tr>
-     <tr>
-      <td><kbd>M</kbd></td>
-      <td>オートパイロットを解除して、手動操作にする</td>
-     </tr>
-     <tr>
-      <td><kbd>Ctrl</kbd>+<kbd>D</kbd></td>
-      <td>自爆させる</td>
-     </tr>
+      <tr>
+        <td><kbd>C</kbd></td>
+        <td>船内視点（<kbd>F1</kbd>キーで船外・船内を切り替え）でのカメラの切り替え</td>
+      </tr>
+      <tr>
+        <td><kbd>J</kbd></td>
+        <td>ステージやフェアリングの分離</td>
+      </tr>
+      <tr>
+        <td><kbd>Ctrl</kbd>+<kbd>J</kbd></td>
+        <td>ステージの自動選択を無効にして分離</td>
+      </tr>
+      <tr>
+        <td><kbd>Ctrl</kbd>+<kbd>F</kbd></td>
+        <td>フェアリングなどの部品を選択可能にする</td>
+      </tr>
+      <tr>
+        <td><kbd>Tab</kbd></td>
+        <td>ステージ・宇宙船などを順に選択</td>
+      </tr>
+      <tr>
+        <td><kbd>M</kbd></td>
+        <td>オートパイロットを解除して、手動操作にする</td>
+      </tr>
+      <tr>
+        <td><kbd>Ctrl</kbd>+<kbd>D</kbd></td>
+        <td>自爆させる</td>
+      </tr>
     </table>
-    
-    <p>ここでいう「選択」とは、<kbd>F3</kbd>キーでの乗り換えのことを指します。<br>
-    このMODでは、1段目を切り離すと自動的に2段目が選択されます。<br>
-    <kbd>Ctrl</kbd>+<kbd>J</kbd>でこれを無効にできます。</p>
-    
-    <h4>Desna-N（地上発射用のテーブル）</h4>
-    
+
+    <p>ここでいう「選択」とは、<kbd>F3</kbd>キーでの乗り換えのことを指す。<br>
+      このMODでは、1段目を切り離すと自動的に2段目が選択される。<br>
+      <kbd>Ctrl</kbd>+<kbd>J</kbd>でこれを無効にできる。
+    </p>
+
+
+    <h3 id="key_des_n">Desna-N（地上発射用のテーブル）</h3>
+
+
     <table>
-     <tr>
-      <td>矢印キー<kbd>←</kbd><kbd>→</kbd></td>
-      <td>テーブルを左右に回転させる</td>
-     </tr>
-     <tr>
-      <td><kbd>Ctrl</kbd>+<kbd>K</kbd></td>
-      <td>ケーブル支柱の分離</td>
-     </tr>
-     <tr>
-      <td><kbd>L</kbd></td>
-      <td>設置されているロケットを打ち上げる</td>
-     </tr>
+      <tr>
+        <td>矢印キー<kbd>←</kbd><kbd>→</kbd></td>
+        <td>テーブルを左右に回転させる</td>
+      </tr>
+      <tr>
+        <td><kbd>Ctrl</kbd>+<kbd>K</kbd></td>
+        <td>ケーブル支柱の分離</td>
+      </tr>
+      <tr>
+        <td><kbd>L</kbd></td>
+        <td>設置されているロケットを打ち上げる</td>
+      </tr>
     </table>
-    
-    <h4>Desna-V（地下サイロ）</h4>
-    
+
+
+    <h3 id="key_des_v">Desna-V（地下サイロ）</h3>
+
+
     <table>
-     <tr>
-      <td>テンキー<kbd>4</kbd>・<kbd>6</kbd></td>
-      <td>サイロの蓋を左右に動かす（NumLockを解除すること）</td>
-     </tr>
-     <tr>
-      <td>矢印キー<kbd>←</kbd><kbd>→</kbd></td>
-      <td>テーブルを左右に回転させる</td>
-     </tr>
-     <tr>
-      <td><kbd>Ctrl</kbd>+<kbd>K</kbd></td>
-      <td>ケーブル支柱の分離</td>
-     </tr>
-     <tr>
-      <td><kbd>L</kbd></td>
-      <td>設置されているロケットを打ち上げる</td>
-     </tr>
+      <tr>
+        <td>テンキー<kbd>4</kbd>&nbsp;or&nbsp;<kbd>6</kbd></td>
+        <td>サイロの蓋を左右に動かす（NumLockを解除すること）</td>
+      </tr>
+      <tr>
+        <td>矢印キー<kbd>←</kbd><kbd>→</kbd></td>
+        <td>テーブルを左右に回転させる</td>
+      </tr>
+      <tr>
+        <td><kbd>Ctrl</kbd>+<kbd>K</kbd></td>
+        <td>ケーブル支柱の分離</td>
+      </tr>
+      <tr>
+        <td><kbd>L</kbd></td>
+        <td>設置されているロケットを打ち上げる</td>
+      </tr>
     </table>
 
   </main>
 
 </body>
+
 </html>
