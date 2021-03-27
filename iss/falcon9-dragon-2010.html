@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 
 <html lang="ja">
+
 <head>
   <script src="../scripts/ga.js"></script>
   <meta charset="UTF-8">
@@ -8,131 +9,123 @@
   <link rel="stylesheet" href="../styles/orbiterjp.css">
   <script src="../scripts/template.js" charset="utf-8" defer></script>
   <title>Falcon9 + Dragon宇宙船のインストール (2010)</title>
-
-<script>
-window.MathJax = {
-  tex: {
-    tags: 'ams'
-  }
-};
-</script>
-
-<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-
 </head>
+
 <body>
 
   <main>
 
-  <h1>Falcon9 + Dragon宇宙船のインストール (2010)</h1>
+    <h1>Falcon9 + Dragon宇宙船のインストール (2010)</h1>
 
 
-<p>
-<strong>Orbiter2010</strong>に<strong>SpaceX Falcon9</strong>と<strong>Dragon</strong>宇宙船をインストールする手順について解説します。
-</p>
+    <p>
+      <strong>Orbiter2010</strong>に<strong>SpaceX Falcon9</strong>と<strong>Dragon</strong>宇宙船をインストールする手順について解説します。
+    </p>
 
 
-<ul>
-<li><a href="#download">ダウンロード</a></li>
-<li><a href="#install">インストール</a>
-<ul>
-<li><a href="#install_scenario">シナリオの書き換え</a></li>
-</ul>
-</li>
-<li><a href="#mods">使用可能なMOD</a>
-<ul>
-<li><a href="#mods_canadarm">カナダアーム</a></li>
-</ul>
-</li>
-<li><a href="#control">操作方法</a></li>
-</ul>
+    <ul>
+      <li><a href="#download">ダウンロード</a></li>
+      <li><a href="#install">インストール</a>
+        <ul>
+          <li><a href="#install_scenario">シナリオの書き換え</a></li>
+        </ul>
+      </li>
+      <li><a href="#mods">使用可能なMOD</a>
+        <ul>
+          <li><a href="#mods_canadarm">カナダアーム</a></li>
+        </ul>
+      </li>
+      <li><a href="#control">操作方法</a></li>
+    </ul>
 
 
-<h2 id="download">ダウンロード</h2>
+    <h2 id="download">ダウンロード</h2>
 
 
-<p>
-<a href="https://www.orbithangar.com/showAddon.php?id=7c87c479-7090-4487-a9c9-a2c6d390168b" target="_blank">Falcon9R v1.2</a>
-</p>
+    <p>
+      <a href="https://www.orbithangar.com/showAddon.php?id=7c87c479-7090-4487-a9c9-a2c6d390168b"
+        target="_blank">Falcon9R v1.2</a>
+    </p>
 
-<p>
-<a href="https://www.orbithangar.com/showAddon.php?id=3a6c711f-675c-4a6b-8ade-b169d5e69e92" target="_blank">Dragon DLL</a>
-</p>
-
-
-<h2 id="install">インストール</h2>
-
-
-<p>
-ダウンロードしたファイルを解凍して、中身をOrbiterフォルダに上書き。
-</p>
+    <p>
+      <a href="https://www.orbithangar.com/showAddon.php?id=3a6c711f-675c-4a6b-8ade-b169d5e69e92" target="_blank">Dragon
+        DLL</a>
+    </p>
 
 
-<h3 id="install_scenario">シナリオの書き換え</h3>
+    <h2 id="install">インストール</h2>
 
 
-<p>
-<strong>Falcon9R v1.2</strong>と<strong>Dragon DLL</strong>を組み合わせる場合、打ち上げシナリオを書き換える必要があります。※
-</p>
-
-<p class="note">
-※Dragon DLLはひとつ前の世代のFalcon9 MODに合わせて作られているため
-</p>
-
-<p>
-<strong>Scenarios\Dragon1\CRS6</strong>フォルダを開く。<br>
-<strong>1 CRS6 launch(ASDS flyback).scn</strong>をメモ帳などのテキストエディタで開く。
-</p>
-
-<p>
-<strong>Falcon9R</strong>をすべて<strong>Falcon9R_V12</strong>に書き換える。
-</p>
-
-<p>
-<img loading="lazy" src="../images/iss/falcon9-dragon-2010/001.png" width="494" height="312">
-</p>
-
-<p>
-<strong>f9_drg</strong>を<strong>f9_v12_drg</strong>に書き換える。
-</p>
-
-<p>
-<img loading="lazy" src="../images/iss/falcon9-dragon-2010/002.png" width="318" height="161">
-</p>
-
-<p>
-上書き保存して、テキストエディタを閉じる。
-</p>
+    <p>
+      ダウンロードしたファイルを解凍して、中身をOrbiterフォルダに上書き。
+    </p>
 
 
-<h2 id="mods">使用可能なMOD</h2>
+    <h3 id="install_scenario">シナリオの書き換え</h3>
 
 
-<h3 id="mods_canadarm">カナダアーム</h3>
+    <p>
+      <strong>Falcon9R v1.2</strong>と<strong>Dragon DLL</strong>を組み合わせる場合、打ち上げシナリオを書き換える必要があります。※
+    </p>
+
+    <p class="note">
+      ※Dragon DLLはひとつ前の世代のFalcon9 MODに合わせて作られているため
+    </p>
+
+    <p>
+      <strong>Scenarios\Dragon1\CRS6</strong>フォルダを開く。<br>
+      <strong>1 CRS6 launch(ASDS flyback).scn</strong>をメモ帳などのテキストエディタで開く。
+    </p>
+
+    <p>
+      <strong>Falcon9R</strong>をすべて<strong>Falcon9R_V12</strong>に書き換える。
+    </p>
+
+    <p>
+      <img loading="lazy" src="../images/iss/falcon9-dragon-2010/001.png" width="494" height="312">
+    </p>
+
+    <p>
+      <strong>f9_drg</strong>を<strong>f9_v12_drg</strong>に書き換える。
+    </p>
+
+    <p>
+      <img loading="lazy" src="../images/iss/falcon9-dragon-2010/002.png" width="318" height="161">
+    </p>
+
+    <p>
+      上書き保存して、テキストエディタを閉じる。
+    </p>
 
 
-<p>
-Dragon宇宙船でCRS（商業補給サービス）ミッションを行う場合は、カナダアームMODが必要です。
-</p>
-
-<p>
-<a href="index.html#canadarm" target="_blank">Canadarm2</a>
-</p>
+    <h2 id="mods">使用可能なMOD</h2>
 
 
-<h2 id="control">操作方法</h2>
+    <h3 id="mods_canadarm">カナダアーム</h3>
 
 
-<p>
-<a href="falcon9-control-2010.html" target="_blank">Falcon9R v1.2の操作</a>
-</p>
+    <p>
+      Dragon宇宙船でCRS（商業補給サービス）ミッションを行う場合は、カナダアームMODが必要です。
+    </p>
 
-<p>
-<a href="dragon-control.html" target="_blank">Dragon宇宙船の操作</a>
-</p>
+    <p>
+      <a href="index.html#canadarm" target="_blank">Canadarm2</a>
+    </p>
+
+
+    <h2 id="control">操作方法</h2>
+
+
+    <p>
+      <a href="falcon9-control-2010.html" target="_blank">Falcon9R v1.2の操作</a>
+    </p>
+
+    <p>
+      <a href="dragon-control.html" target="_blank">Dragon宇宙船の操作</a>
+    </p>
 
   </main>
 
 </body>
+
 </html>

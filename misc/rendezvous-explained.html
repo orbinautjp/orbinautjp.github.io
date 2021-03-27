@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 
 <html lang="ja">
+
 <head>
   <script src="../scripts/ga.js"></script>
   <meta charset="UTF-8">
@@ -8,278 +9,273 @@
   <link rel="stylesheet" href="../styles/orbiterjp.css">
   <script src="../scripts/template.js" charset="utf-8" defer></script>
   <title>ランデブーの原理</title>
-
-<script>
-window.MathJax = {
-  tex: {
-    tags: 'ams'
-  }
-};
-</script>
-
-<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 </head>
+
 <body>
 
   <main>
 
-  <h1>ランデブーの原理</h1>
+    <h1>ランデブーの原理</h1>
 
 
-<p>
-宇宙船と別の宇宙船・宇宙ステーションが、軌道上で会合することをランデブー(Rendezvous)と呼びます。<br>
-ランデブーの3つの方法とその原理について解説します。
-</p>
+    <p>
+      宇宙船と別の宇宙船・宇宙ステーションが、軌道上で会合することをランデブー(Rendezvous)と呼びます。<br>
+      ランデブーの3つの方法とその原理について解説します。
+    </p>
 
-<ul>
-<li><a href="#sync">Sync Orbit MFD</a></li>
-<li><a href="#transx">TransX</a></li>
-<li><a href="#imfd">IMFD</a></li>
-</ul>
-
-
-<h2 id="sync">Sync Orbit MFD</h2>
+    <ul>
+      <li><a href="#sync">Sync Orbit MFD</a></li>
+      <li><a href="#transx">TransX</a></li>
+      <li><a href="#imfd">IMFD</a></li>
+    </ul>
 
 
-<p>
-<a href="../tutorial/index.html#dg_to_iss" target="_blank">Sync Orbit MFD</a>では、軌道周期を変化させることによってランデブーする。
-</p>
+    <h2 id="sync">Sync Orbit MFD</h2>
 
 
-<h3>接点をつくる</h3>
+    <p>
+      <a href="../tutorial/index.html#dg_to_iss" target="_blank">Sync Orbit MFD</a>では、軌道周期を変化させることによってランデブーする。
+    </p>
 
 
-<p>
-ランデブーの準備として、まず自機の軌道がランデブー相手の軌道と1点で接するようにする。
-</p>
-
-<p>
-青が宇宙船の軌道、オレンジが宇宙ステーションの軌道。<br>
-加速して緑の軌道にする。
-</p>
-
-<p>
-<img loading="lazy" src="../images/misc/rendezvous-explained/001.png" width="903" height="830">
-</p>
-
-<p>
-ここでは、低い軌道にいる宇宙船が、高い軌道の宇宙ステーションとランデブーする場合を考える。<br>
-相手の軌道より高く飛ぶ必要はないので、遠地点(Ap)※で相手の軌道と接するようにする。
-</p>
-
-<p class="note">
-※中心天体（この場合は地球）からもっとも遠い軌道上の点
-</p>
+    <h3>接点をつくる</h3>
 
 
-<h3>周期を変化させる</h3>
+    <p>
+      ランデブーの準備として、まず自機の軌道がランデブー相手の軌道と1点で接するようにする。
+    </p>
+
+    <p>
+      青が宇宙船の軌道、オレンジが宇宙ステーションの軌道。<br>
+      加速して緑の軌道にする。
+    </p>
+
+    <p>
+      <img loading="lazy" src="../images/misc/rendezvous-explained/001.png" width="903" height="830">
+    </p>
+
+    <p>
+      ここでは、低い軌道にいる宇宙船が、高い軌道の宇宙ステーションとランデブーする場合を考える。<br>
+      相手の軌道より高く飛ぶ必要はないので、遠地点(Ap)※で相手の軌道と接するようにする。
+    </p>
+
+    <p class="note">
+      ※中心天体（この場合は地球）からもっとも遠い軌道上の点
+    </p>
 
 
-<p>
-宇宙ステーションと宇宙船が、Apに同時に到着するようにする。
-</p>
+    <h3>周期を変化させる</h3>
 
-<p>
-Apで加速・減速すると、軌道の反対側、つまり近地点(Pe)の高度が上がる・下がる。<br>
-近地点高度が上がれば軌道周期（軌道を1周するのに必要な時間）が長くなる。<br>
-近地点高度が下がれば軌道周期が短くなる。
-</p>
 
-<p>
-<img loading="lazy" src="../images/misc/rendezvous-explained/002.png" width="919" height="792">
-</p>
+    <p>
+      宇宙ステーションと宇宙船が、Apに同時に到着するようにする。
+    </p>
 
-<p>
-軌道周期を変化させることで、タイミングを調整してランデブーさせる。
-</p>
+    <p>
+      Apで加速・減速すると、軌道の反対側、つまり近地点(Pe)の高度が上がる・下がる。<br>
+      近地点高度が上がれば軌道周期（軌道を1周するのに必要な時間）が長くなる。<br>
+      近地点高度が下がれば軌道周期が短くなる。
+    </p>
 
-<p><blockquote>
+    <p>
+      <img loading="lazy" src="../images/misc/rendezvous-explained/002.png" width="919" height="792">
+    </p>
+
+    <p>
+      軌道周期を変化させることで、タイミングを調整してランデブーさせる。
+    </p>
+
+    <p>
+    <blockquote>
 軌道周期の公式<br>（楕円軌道のとき）<br>
 $$ T = 2 \pi \sqrt{ \frac{a^3}{GM} } \quad [ \mathrm{s} ] $$
-</blockquote></p>
+</blockquote>
+    </p>
 
-<p><blockquote>
+    <p>
+    <blockquote>
 軌道速度の公式<br>（楕円軌道のとき）<br>
 $$ V = \sqrt{ GM \left( \frac{2}{r} - \frac{1}{a} \right) } \quad [ \mathrm{m/s} ] $$
-</blockquote></p>
+</blockquote>
+    </p>
 
-<table>
- <tr>
-  <td> \( T \) </td>
-  <td><a href="orbitalelements.html#period" target="_blank">軌道周期（公転周期）</a></td>
- </tr>
- <tr>
-  <td> \( a \) </td>
-  <td><a href="orbitalelements.html#sma" target="_blank">軌道長半径 (SMa)</a></td>
- </tr>
- <tr>
-  <td> \( r \) </td>
-  <td><a href="orbitalelements.html#rad" target="_blank">軌道半径 (Rad)</a></td>
- </tr>
- <tr>
-  <td> \( G \) </td>
-  <td>万有引力定数<br> \( 6.674 \times 10^{-11} \, [ \mathrm{m}^{3} \, \mathrm{kg}^{-1} \, \mathrm{s}^{-2} ] \) </td>
- </tr>
- <tr>
-  <td> \( M \) </td>
-  <td>中心天体の質量<br>地球の場合は \( 5.972 \times 10^{24} \, [ \mathrm{kg} ] \) </td>
- </tr>
-</table>
-
-
-<h3>ヒント</h3>
+    <table>
+      <tr>
+        <td> \( T \) </td>
+        <td><a href="orbitalelements.html#period" target="_blank">軌道周期（公転周期）</a></td>
+      </tr>
+      <tr>
+        <td> \( a \) </td>
+        <td><a href="orbitalelements.html#sma" target="_blank">軌道長半径 (SMa)</a></td>
+      </tr>
+      <tr>
+        <td> \( r \) </td>
+        <td><a href="orbitalelements.html#rad" target="_blank">軌道半径 (Rad)</a></td>
+      </tr>
+      <tr>
+        <td> \( G \) </td>
+        <td>万有引力定数<br> \( 6.674 \times 10^{-11} \, [ \mathrm{m}^{3} \, \mathrm{kg}^{-1} \, \mathrm{s}^{-2} ] \) </td>
+      </tr>
+      <tr>
+        <td> \( M \) </td>
+        <td>中心天体の質量<br>地球の場合は \( 5.972 \times 10^{24} \, [ \mathrm{kg} ] \) </td>
+      </tr>
+    </table>
 
 
-<p>
-この方法は、以下のような単純な算数の問題に例えることができる。
-</p>
-
-<p>
-<img loading="lazy" src="../images/misc/rendezvous-explained/003.png" width="578" height="362">
-</p>
-
-<p>
-AくんとBくんが運動場でランニングをしている。<br>
-Aくんは1分で運動場を1周するペースで走っている。<br>
-Aくんが先生の前を通過した10秒後に、Bくんが先生の前にやってきた。<br>
-AくんとBくんが同時に先生の前に到着するためには、Bくんは次の1周を何秒で走ればよいか。
-</p>
-
-<p>
-この場合は、60-10＝50なので50秒で1周するように走ればよいということになる。<br>
-Bくんがそれまで1周40秒のペースで走っていたとしたら、10秒遅く走ることになる。<br>
-1周60秒のペースなら、10秒早く走ることになる。
-</p>
-
-<p>
-Sync Orbit MFDでのランデブーも同じで、「1周する時間を調整する」ことで宇宙船とステーションが出会うことができる。
-</p>
+    <h3>ヒント</h3>
 
 
-<h2 id="transx">TransX</h2>
+    <p>
+      この方法は、以下のような単純な算数の問題に例えることができる。
+    </p>
+
+    <p>
+      <img loading="lazy" src="../images/misc/rendezvous-explained/003.png" width="578" height="362">
+    </p>
+
+    <p>
+      AくんとBくんが運動場でランニングをしている。<br>
+      Aくんは1分で運動場を1周するペースで走っている。<br>
+      Aくんが先生の前を通過した10秒後に、Bくんが先生の前にやってきた。<br>
+      AくんとBくんが同時に先生の前に到着するためには、Bくんは次の1周を何秒で走ればよいか。
+    </p>
+
+    <p>
+      この場合は、60-10＝50なので50秒で1周するように走ればよいということになる。<br>
+      Bくんがそれまで1周40秒のペースで走っていたとしたら、10秒遅く走ることになる。<br>
+      1周60秒のペースなら、10秒早く走ることになる。
+    </p>
+
+    <p>
+      Sync Orbit MFDでのランデブーも同じで、「1周する時間を調整する」ことで宇宙船とステーションが出会うことができる。
+    </p>
 
 
-<p>
-宇宙船が軌道上で加速し、軌道を変化させることをマニューバと呼ぶ。<br>
-<a href="../tutorial/index.html#earth_to_moon" target="_blank">TransX</a>では、マニューバの時刻と目標までの距離を比較することでランデブー軌道を作成する。
-</p>
+    <h2 id="transx">TransX</h2>
 
 
-<h3>マニューバを作成する</h3>
+    <p>
+      宇宙船が軌道上で加速し、軌道を変化させることをマニューバと呼ぶ。<br>
+      <a href="../tutorial/index.html#earth_to_moon" target="_blank">TransX</a>では、マニューバの時刻と目標までの距離を比較することでランデブー軌道を作成する。
+    </p>
 
 
-<p>
-軌道上で加速すると、遠地点高度が上がる。<br>
-遠地点がちょうど目標の軌道に接するようにする。
-</p>
-
-<p>
-青を宇宙船の軌道、オレンジを月の軌道とする。<br>
-P<sub>1</sub>で加速すると緑の軌道となる。<br>
-このときの遠地点をA<sub>1</sub>とする。
-</p>
-
-<p>
-<img loading="lazy" src="../images/misc/rendezvous-explained/004.png" width="919" height="830">
-</p>
+    <h3>マニューバを作成する</h3>
 
 
-<h3>目標までの距離を比較する</h3>
+    <p>
+      軌道上で加速すると、遠地点高度が上がる。<br>
+      遠地点がちょうど目標の軌道に接するようにする。
+    </p>
+
+    <p>
+      青を宇宙船の軌道、オレンジを月の軌道とする。<br>
+      P<sub>1</sub>で加速すると緑の軌道となる。<br>
+      このときの遠地点をA<sub>1</sub>とする。
+    </p>
+
+    <p>
+      <img loading="lazy" src="../images/misc/rendezvous-explained/004.png" width="919" height="830">
+    </p>
 
 
-<p>
-加速を実行する時刻を変更すると、遠地点の位置が変わる。
-</p>
-
-<p>
-<img loading="lazy" src="../images/misc/rendezvous-explained/005.png" width="919" height="841">
-</p>
-
-<p>
-月の未来位置は計算によって予測できる。<br>
-したがって、遠地点の位置と月までの距離を比較することができる。
-</p>
-
-<p>
-地球低軌道から月まではおおよそ4日かかることがわかっている。<br>
-4日後の月の未来位置をMとすると、P<sub>3</sub>で加速したときに月に最も接近することになる。
-</p>
-
-<p>
-<img loading="lazy" src="../images/misc/rendezvous-explained/006.png" width="919" height="841">
-</p>
-
-<p>
-同様にして、例えば宇宙ステーションとランデブーすることもできる。
-</p>
-
-<p>
-このような計算を手で繰り返し実行するのは面倒だが、TransXが人間のかわりにやってくれる。<br>
-ユーザーは<strong>Man. Date</strong>の数字を操作するだけでよい。
-</p>
+    <h3>目標までの距離を比較する</h3>
 
 
-<h2 id="imfd">IMFD</h2>
+    <p>
+      加速を実行する時刻を変更すると、遠地点の位置が変わる。
+    </p>
+
+    <p>
+      <img loading="lazy" src="../images/misc/rendezvous-explained/005.png" width="919" height="841">
+    </p>
+
+    <p>
+      月の未来位置は計算によって予測できる。<br>
+      したがって、遠地点の位置と月までの距離を比較することができる。
+    </p>
+
+    <p>
+      地球低軌道から月まではおおよそ4日かかることがわかっている。<br>
+      4日後の月の未来位置をMとすると、P<sub>3</sub>で加速したときに月に最も接近することになる。
+    </p>
+
+    <p>
+      <img loading="lazy" src="../images/misc/rendezvous-explained/006.png" width="919" height="841">
+    </p>
+
+    <p>
+      同様にして、例えば宇宙ステーションとランデブーすることもできる。
+    </p>
+
+    <p>
+      このような計算を手で繰り返し実行するのは面倒だが、TransXが人間のかわりにやってくれる。<br>
+      ユーザーは<strong>Man. Date</strong>の数字を操作するだけでよい。
+    </p>
 
 
-<p>
-<a href="../transximfd/index.html#imfd1" target="_blank">IMFD</a>は、出発地点と目標天体の2点を通る楕円軌道を自動で作成することができる。
-</p>
+    <h2 id="imfd">IMFD</h2>
 
 
-<h3>2点を通る楕円</h3>
+    <p>
+      <a href="../transximfd/index.html#imfd1" target="_blank">IMFD</a>は、出発地点と目標天体の2点を通る楕円軌道を自動で作成することができる。
+    </p>
 
 
-<p>
-地球を出発し、火星へと向かう軌道を考える。<br>
-出発時刻をT<sub>1</sub>、到着時刻をT<sub>2</sub>とする。<br>
-T<sub>1</sub>での地球の位置をA、T<sub>2</sub>での火星の位置をBとする。
-</p>
-
-<p>
-太陽（点O）を焦点の1つとし、A・Bを通る楕円を描いてみる。
-</p>
-
-<p>
-<img loading="lazy" src="../images/misc/rendezvous-explained/007.png" width="919" height="841">
-</p>
-
-<p>
-「点Oを焦点とし、A・Bを通る楕円」は無数に存在する。
-</p>
+    <h3>2点を通る楕円</h3>
 
 
-<h3>楕円軌道と移動時間</h3>
+    <p>
+      地球を出発し、火星へと向かう軌道を考える。<br>
+      出発時刻をT<sub>1</sub>、到着時刻をT<sub>2</sub>とする。<br>
+      T<sub>1</sub>での地球の位置をA、T<sub>2</sub>での火星の位置をBとする。
+    </p>
+
+    <p>
+      太陽（点O）を焦点の1つとし、A・Bを通る楕円を描いてみる。
+    </p>
+
+    <p>
+      <img loading="lazy" src="../images/misc/rendezvous-explained/007.png" width="919" height="841">
+    </p>
+
+    <p>
+      「点Oを焦点とし、A・Bを通る楕円」は無数に存在する。
+    </p>
 
 
-<p>
-楕円軌道における位置や、楕円軌道の大きさによって、宇宙船の速度は変化する。
-</p>
+    <h3>楕円軌道と移動時間</h3>
 
-<p>
-<img loading="lazy" src="../images/misc/rendezvous-explained/009.png" width="1487" height="841">
-</p>
 
-<p>
-したがって、T<sub>1</sub>からT<sub>2</sub>までの移動時間を満たす楕円軌道は1つしか存在しないことがわかる。
-</p>
+    <p>
+      楕円軌道における位置や、楕円軌道の大きさによって、宇宙船の速度は変化する。
+    </p>
 
-<p>
-<img loading="lazy" src="../images/misc/rendezvous-explained/008.png" width="919" height="841">
-</p>
+    <p>
+      <img loading="lazy" src="../images/misc/rendezvous-explained/009.png" width="1487" height="841">
+    </p>
 
-<p>
-このように、2点を通り、かつ任意の飛行時間を満たす軌道を決定することをランベルト問題という。
-</p>
+    <p>
+      したがって、T<sub>1</sub>からT<sub>2</sub>までの移動時間を満たす楕円軌道は1つしか存在しないことがわかる。
+    </p>
 
-<p>
-IMFDはこのランベルト問題を扱うことができる。<br>
-ユーザーは目標（惑星や宇宙船など）と、<strong>TEj</strong>（出発時刻）・<strong>TIn</strong>（到着時刻）を指定するだけでよい。
-</p>
+    <p>
+      <img loading="lazy" src="../images/misc/rendezvous-explained/008.png" width="919" height="841">
+    </p>
+
+    <p>
+      このように、2点を通り、かつ任意の飛行時間を満たす軌道を決定することをランベルト問題という。
+    </p>
+
+    <p>
+      IMFDはこのランベルト問題を扱うことができる。<br>
+      ユーザーは目標（惑星や宇宙船など）と、<strong>TEj</strong>（出発時刻）・<strong>TIn</strong>（到着時刻）を指定するだけでよい。
+    </p>
 
   </main>
 
 </body>
+
 </html>

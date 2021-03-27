@@ -9,261 +9,254 @@
   <link rel="stylesheet" href="../styles/orbiterjp.css">
   <script src="../scripts/template.js" charset="utf-8" defer></script>
   <script src="../scripts/prevnext_tutorial.js" charset="utf-8" defer></script>
-
-  <script>
-window.MathJax = {
-  tex: {
-    tags: 'ams'
-  }
-}
-  </script>
-
-  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
   <title>Part5 ISSとのランデブー</title>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 </head>
 
 <body>
 
   <main>
 
-<h1>Part5 ISSとのランデブー</h1>
-
-
-  <p>ISSに接近して、相対速度を一致させます。</p>
-
-  <ol>
-    <li><a href="#oneorbit">最後の1周</a></li>
-    <li><a href="#dockingmfd">Docking MFD</a>
-      <ul>
-        <li><a href="#closing">接近する</a></li>
-        <li><a href="#dockingport">ドッキングポートへの経路</a></li>
-        <li><a href="#nosignal">信号が受信できないとき</a></li>
-      </ul>
-    </li>
-    <li><a href="#rendezvous">ランデブー</a>
-      <ul>
-        <li><a href="#rvmarker">相対速度マーカー</a></li>
-        <li><a href="#velocitymatch">相対速度をゼロにする</a></li>
-      </ul>
-    </li>
-    <li><a href="#explanation">解説</a></li>
-  </ol>
-
-  <ul>
-    <li><a href="#form">アンケート</a></li>
-    <li><a href="#videos">動画</a></li>
-  </ul>
-
-
-  <h2 id="oneorbit">最後の1周</h2>
-
-
-  <p><strong>Sync Orbit MFD</strong>を開いておく。</p>
-
-  <p>最後の1周になるまで時間経過させる。<br>
-    <strong>1000倍</strong>程度のタイムワープを使う。
-  </p>
-
-  <p>接近中は<strong>DTmin</strong>の数字を確認する。<br>
-    必要があれば<strong>Ap</strong>でエンジンを噴射して、<strong>DTmin</strong>をゼロにする。</p>
-
-  <p>黄色で表示された行がリストの1番上に来たら、最後の1周になったということ。</p>
-
-  <p>
-    <img loading="lazy" src="../images/tutorial/part5/001.png" width="425" height="425">
-  </p>
-
-
-  <h2 id="dockingmfd">Docking MFD</h2>
-
-
-  <p><kbd>SEL</kbd>をクリック。<br>
-    <strong>Docking MFD</strong>を開く。
-  </p>
-
-  <p>信号が受信できていれば、距離などの情報が表示される。</p>
-
-  <p>
-    <img loading="lazy" src="../images/tutorial/part5/002.png" width="425" height="425">
-  </p>
-
-  <table>
-    <tr>
-      <td><strong>DST</strong></td>
-      <td>Distance</td>
-      <td>ターゲットまでの距離</td>
-    </tr>
-    <tr>
-      <td><strong>CVEL</strong></td>
-      <td>Closing Velocity</td>
-      <td>ターゲットに接近する速度</td>
-    </tr>
-  </table>
-
-
-  <h3 id="closing">接近する</h3>
-
-
-  <p><strong>DST</strong>が<strong>10km</strong>になるまで接近を続ける。<br>
-    100倍程度のタイムワープを使って早送りする。</p>
-
-  <p><strong>CVEL</strong>のグラフが黄色なら、ISSに近づいている。<br>
-    緑なら遠ざかっていることになる。</p>
-
-  <p>一時的に遠ざかってから、ふたたび接近することがある。<br>
-    <strong>Sync Orbit MFD</strong>で最接近するタイミングを確認しておくこと。
-  </p>
-
-
-  <h3 id="dockingport">ドッキングポートへの経路</h3>
-
-
-  <p><kbd>HUD</kbd>をクリック。<br>
-    自動的に<strong>Docking HUD</strong>に切り替わる。</p>
-
-  <p><kbd>NAV</kbd>をクリック。<br>
-    <strong>NAV2</strong>（ドッキングポート）に切り替える。
-  </p>
-
-  <p>もう一度<kbd>HUD</kbd>をクリック。<br>
-    一列に並んだ長方形の枠がHUD上に現れる。</p>
-
-  <p>
-    <img loading="lazy" src="../images/tutorial/part5/003.png" width="500" height="500">
-  </p>
-
-
-  <h3 id="nosignal">信号が受信できないとき</h3>
-
-
-  <p><kbd>TGT</kbd>をクリックすると、直接ドッキングポートなどをターゲットできる。</p>
-
-  <p>ランデブーする相手によっては、トランスポンダーの周波数が設定されていないことがある。<br>
-    このようなときは、<kbd>TGT</kbd>をクリックしてターゲットを設定する。</p>
-
-
-  <h2 id="rendezvous">ランデブー</h2>
-
-
-  <p>メインエンジンを噴射して、ISSとの相対速度をゼロにする。</p>
-
-
-  <h3 id="rvmarker">相対速度マーカー</h3>
-
-
-  <p><strong>Docking HUD</strong>には、ISSとの相対速度を表すマーカーが表示されている。</p>
-
-  <p>
-    <img loading="lazy" src="../images/tutorial/part5/004.png" width="500" height="500">
-  </p>
-
-  <p> \( \bigodot \) のマーカーに機首を向ける。<br>
-    <strong>RCS ROT</strong>にして、機体を手動で回転させる。
-  </p>
-
-  <table>
-    <tr>
-      <td>テンキー</td>
-      <td></td>
-    </tr>
-    <tr>
-      <td><kbd>2</kbd>&nbsp;or&nbsp;<kbd>8</kbd></td>
-      <td>ピッチ</td>
-    </tr>
-    <tr>
-      <td><kbd>4</kbd>&nbsp;or&nbsp;<kbd>6</kbd></td>
-      <td>ロール</td>
-    </tr>
-    <tr>
-      <td><kbd>1</kbd>&nbsp;or&nbsp;<kbd>3</kbd></td>
-      <td>ヨー</td>
-    </tr>
-    <tr>
-      <td style="text-align:center;"><kbd>5</kbd></td>
-      <td>回転を止める</td>
-    </tr>
-    <tr>
-      <td style="text-align:center;"><kbd>/</kbd></td>
-      <td><strong>RCS MODE</strong>切り替え</td>
-    </tr>
-  </table>
-
-  <p><strong>Docking HUD</strong>中央の<strong>×</strong>に、マーカーの中心が完全に重なるようにする。</p>
-
-  <p>
-    <img loading="lazy" src="../images/tutorial/part5/005.png" width="500" height="500">
-  </p>
-
-  <p>マーカーが視界外にあるときは、<kbd>ProGrade</kbd>オートパイロットを実行する。<br>
-    最接近時には、<kbd>ProGrade</kbd>の方向にマーカーが移動する。<br>
-    マーカーを確認したら<kbd>ProGrade</kbd>を解除して、手動で操作する。</p>
-
-
-  <h3 id="velocitymatch">相対速度をゼロにする</h3>
-
-
-  <p>数km以内まで接近するのを待つ。<br>
-    機首をマーカーの中心に向けておく。</p>
-
-  <p>メインエンジンを噴射する。<br>
-    相対速度がゼロになったら噴射を止める。</p>
-
-  <p>相対速度は<strong>-V[ISS]</strong>の横に表示されている。</p>
-
-  <p>
-    <img loading="lazy" src="../images/tutorial/part5/006.png" width="500" height="500">
-  </p>
-
-
-  <h2 id="explanation">解説</h2>
-
-
-  <p>宇宙船の速度は、<strong>Pe</strong>では<strong>速く</strong>、<strong>Ap</strong>では<strong>遅く</strong>なる。<br>
-    <strong>Pe</strong>と<strong>Ap</strong>の高度差が大きければ大きいほど、速度の違いは大きくなる。
-  </p>
-
-  <p>このチュートリアルでは、宇宙船の<strong>Ap</strong>でランデブーしている。<br>
-    したがって、ランデブー地点に近づくにつれて、宇宙船の速度は遅くなる。</p>
-
-  <p>ISSは<strong>Pe</strong>と<strong>Ap</strong>の差が小さい軌道にいるので、同じ高度であればISSのほうが高速になる。<br>
-    宇宙船の進行方向に機首を向けて加速することで、この速度差を埋めることができる。</p>
-
-  <p>自分が高い軌道にいて、低い軌道の相手とランデブーするときは、これらの関係が逆になる。<br>
-    いずれの場合も、 \( \bigodot \) のマーカーに機首を向けて、メインエンジンを噴射する。</p>
-
-
-  <h2 id="form">アンケート</h2>
-
-
-  <form action="https://docs.google.com/forms/d/e/1FAIpQLSeE_mtOWWRkRn4yaqnVR2XJSA_0Fbfnkdhn9UTWWCrLpsMWVg/formResponse" target="_self" method="POST" id="mG61Hd">
-
-    <p>この記事の内容は理解できましたか？</p>
+    <h1>Part5 ISSとのランデブー</h1>
+
+
+    <p>ISSに接近して、相対速度を一致させます。</p>
+
+    <ol>
+      <li><a href="#oneorbit">最後の1周</a></li>
+      <li><a href="#dockingmfd">Docking MFD</a>
+        <ul>
+          <li><a href="#closing">接近する</a></li>
+          <li><a href="#dockingport">ドッキングポートへの経路</a></li>
+          <li><a href="#nosignal">信号が受信できないとき</a></li>
+        </ul>
+      </li>
+      <li><a href="#rendezvous">ランデブー</a>
+        <ul>
+          <li><a href="#rvmarker">相対速度マーカー</a></li>
+          <li><a href="#velocitymatch">相対速度をゼロにする</a></li>
+        </ul>
+      </li>
+      <li><a href="#explanation">解説</a></li>
+    </ol>
 
     <ul>
-      <li><label><input type="radio" name="entry.1914587356" value="できなかった、全然理解できない" />できなかった、全然理解できない</label></li>
-      <li><label><input type="radio" name="entry.1914587356" value="できなかった、途中から理解できない" />できなかった、途中から理解できない</label></li>
-      <li><label><input type="radio" name="entry.1914587356" value="できた、難しかった" />できた、難しかった</label></li>
-      <li><label><input type="radio" name="entry.1914587356" value="できた、簡単だった" />できた、簡単だった</label></li>
+      <li><a href="#form">アンケート</a></li>
+      <li><a href="#videos">動画</a></li>
     </ul>
 
-    <p><label for="question">わからなかった・難しかったところを教えてください（任意）</label><br>
-      <input id="question" type="text" name="entry.1857549962">
+
+    <h2 id="oneorbit">最後の1周</h2>
+
+
+    <p><strong>Sync Orbit MFD</strong>を開いておく。</p>
+
+    <p>最後の1周になるまで時間経過させる。<br>
+      <strong>1000倍</strong>程度のタイムワープを使う。
     </p>
 
-    <p>公開されますので個人情報を記入しないでください。<br>
-      <button type="submit" name="button" value="送信">送信</button>
+    <p>接近中は<strong>DTmin</strong>の数字を確認する。<br>
+      必要があれば<strong>Ap</strong>でエンジンを噴射して、<strong>DTmin</strong>をゼロにする。</p>
+
+    <p>黄色で表示された行がリストの1番上に来たら、最後の1周になったということ。</p>
+
+    <p>
+      <img loading="lazy" src="../images/tutorial/part5/001.png" width="425" height="425">
     </p>
 
-  </form>
+
+    <h2 id="dockingmfd">Docking MFD</h2>
 
 
-  <h2 id="videos">動画</h2>
+    <p><kbd>SEL</kbd>をクリック。<br>
+      <strong>Docking MFD</strong>を開く。
+    </p>
+
+    <p>信号が受信できていれば、距離などの情報が表示される。</p>
+
+    <p>
+      <img loading="lazy" src="../images/tutorial/part5/002.png" width="425" height="425">
+    </p>
+
+    <table>
+      <tr>
+        <td><strong>DST</strong></td>
+        <td>Distance</td>
+        <td>ターゲットまでの距離</td>
+      </tr>
+      <tr>
+        <td><strong>CVEL</strong></td>
+        <td>Closing Velocity</td>
+        <td>ターゲットに接近する速度</td>
+      </tr>
+    </table>
 
 
-  <p><a href="https://youtu.be/iGMoLlHom_0" target="_blank">YouTube</a></p>
+    <h3 id="closing">接近する</h3>
 
-  <p><a href="https://www.nicovideo.jp/watch/sm25482961" target="_blank">ニコニコ動画</a></p>
+
+    <p><strong>DST</strong>が<strong>10km</strong>になるまで接近を続ける。<br>
+      100倍程度のタイムワープを使って早送りする。</p>
+
+    <p><strong>CVEL</strong>のグラフが黄色なら、ISSに近づいている。<br>
+      緑なら遠ざかっていることになる。</p>
+
+    <p>一時的に遠ざかってから、ふたたび接近することがある。<br>
+      <strong>Sync Orbit MFD</strong>で最接近するタイミングを確認しておくこと。
+    </p>
+
+
+    <h3 id="dockingport">ドッキングポートへの経路</h3>
+
+
+    <p><kbd>HUD</kbd>をクリック。<br>
+      自動的に<strong>Docking HUD</strong>に切り替わる。</p>
+
+    <p><kbd>NAV</kbd>をクリック。<br>
+      <strong>NAV2</strong>（ドッキングポート）に切り替える。
+    </p>
+
+    <p>もう一度<kbd>HUD</kbd>をクリック。<br>
+      一列に並んだ長方形の枠がHUD上に現れる。</p>
+
+    <p>
+      <img loading="lazy" src="../images/tutorial/part5/003.png" width="500" height="500">
+    </p>
+
+
+    <h3 id="nosignal">信号が受信できないとき</h3>
+
+
+    <p><kbd>TGT</kbd>をクリックすると、直接ドッキングポートなどをターゲットできる。</p>
+
+    <p>ランデブーする相手によっては、トランスポンダーの周波数が設定されていないことがある。<br>
+      このようなときは、<kbd>TGT</kbd>をクリックしてターゲットを設定する。</p>
+
+
+    <h2 id="rendezvous">ランデブー</h2>
+
+
+    <p>メインエンジンを噴射して、ISSとの相対速度をゼロにする。</p>
+
+
+    <h3 id="rvmarker">相対速度マーカー</h3>
+
+
+    <p><strong>Docking HUD</strong>には、ISSとの相対速度を表すマーカーが表示されている。</p>
+
+    <p>
+      <img loading="lazy" src="../images/tutorial/part5/004.png" width="500" height="500">
+    </p>
+
+    <p> \( \bigodot \) のマーカーに機首を向ける。<br>
+      <strong>RCS ROT</strong>にして、機体を手動で回転させる。
+    </p>
+
+    <table>
+      <tr>
+        <td>テンキー</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><kbd>2</kbd>&nbsp;or&nbsp;<kbd>8</kbd></td>
+        <td>ピッチ</td>
+      </tr>
+      <tr>
+        <td><kbd>4</kbd>&nbsp;or&nbsp;<kbd>6</kbd></td>
+        <td>ロール</td>
+      </tr>
+      <tr>
+        <td><kbd>1</kbd>&nbsp;or&nbsp;<kbd>3</kbd></td>
+        <td>ヨー</td>
+      </tr>
+      <tr>
+        <td style="text-align:center;"><kbd>5</kbd></td>
+        <td>回転を止める</td>
+      </tr>
+      <tr>
+        <td style="text-align:center;"><kbd>/</kbd></td>
+        <td><strong>RCS MODE</strong>切り替え</td>
+      </tr>
+    </table>
+
+    <p><strong>Docking HUD</strong>中央の<strong>×</strong>に、マーカーの中心が完全に重なるようにする。</p>
+
+    <p>
+      <img loading="lazy" src="../images/tutorial/part5/005.png" width="500" height="500">
+    </p>
+
+    <p>マーカーが視界外にあるときは、<kbd>ProGrade</kbd>オートパイロットを実行する。<br>
+      最接近時には、<kbd>ProGrade</kbd>の方向にマーカーが移動する。<br>
+      マーカーを確認したら<kbd>ProGrade</kbd>を解除して、手動で操作する。</p>
+
+
+    <h3 id="velocitymatch">相対速度をゼロにする</h3>
+
+
+    <p>数km以内まで接近するのを待つ。<br>
+      機首をマーカーの中心に向けておく。</p>
+
+    <p>メインエンジンを噴射する。<br>
+      相対速度がゼロになったら噴射を止める。</p>
+
+    <p>相対速度は<strong>-V[ISS]</strong>の横に表示されている。</p>
+
+    <p>
+      <img loading="lazy" src="../images/tutorial/part5/006.png" width="500" height="500">
+    </p>
+
+
+    <h2 id="explanation">解説</h2>
+
+
+    <p>宇宙船の速度は、<strong>Pe</strong>では<strong>速く</strong>、<strong>Ap</strong>では<strong>遅く</strong>なる。<br>
+      <strong>Pe</strong>と<strong>Ap</strong>の高度差が大きければ大きいほど、速度の違いは大きくなる。
+    </p>
+
+    <p>このチュートリアルでは、宇宙船の<strong>Ap</strong>でランデブーしている。<br>
+      したがって、ランデブー地点に近づくにつれて、宇宙船の速度は遅くなる。</p>
+
+    <p>ISSは<strong>Pe</strong>と<strong>Ap</strong>の差が小さい軌道にいるので、同じ高度であればISSのほうが高速になる。<br>
+      宇宙船の進行方向に機首を向けて加速することで、この速度差を埋めることができる。</p>
+
+    <p>自分が高い軌道にいて、低い軌道の相手とランデブーするときは、これらの関係が逆になる。<br>
+      いずれの場合も、 \( \bigodot \) のマーカーに機首を向けて、メインエンジンを噴射する。</p>
+
+
+    <h2 id="form">アンケート</h2>
+
+
+    <form
+      action="https://docs.google.com/forms/d/e/1FAIpQLSeE_mtOWWRkRn4yaqnVR2XJSA_0Fbfnkdhn9UTWWCrLpsMWVg/formResponse"
+      target="_self" method="POST" id="mG61Hd">
+
+      <p>この記事の内容は理解できましたか？</p>
+
+      <ul>
+        <li><label><input type="radio" name="entry.1914587356" value="できなかった、全然理解できない" />できなかった、全然理解できない</label></li>
+        <li><label><input type="radio" name="entry.1914587356" value="できなかった、途中から理解できない" />できなかった、途中から理解できない</label>
+        </li>
+        <li><label><input type="radio" name="entry.1914587356" value="できた、難しかった" />できた、難しかった</label></li>
+        <li><label><input type="radio" name="entry.1914587356" value="できた、簡単だった" />できた、簡単だった</label></li>
+      </ul>
+
+      <p><label for="question">わからなかった・難しかったところを教えてください（任意）</label><br>
+        <input id="question" type="text" name="entry.1857549962">
+      </p>
+
+      <p>公開されますので個人情報を記入しないでください。<br>
+        <button type="submit" name="button" value="送信">送信</button>
+      </p>
+
+    </form>
+
+
+    <h2 id="videos">動画</h2>
+
+
+    <p><a href="https://youtu.be/iGMoLlHom_0" target="_blank">YouTube</a></p>
+
+    <p><a href="https://www.nicovideo.jp/watch/sm25482961" target="_blank">ニコニコ動画</a></p>
 
   </main>
 
