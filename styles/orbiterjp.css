@@ -71,14 +71,8 @@ h2, h3, h4 {
   margin-bottom: 1.5rem;
 }
 /* anchor position fix */
-[id]::before {
-  content: '';
-  display: block;
-  padding-top: 4rem;
-  margin-top: -4rem;
-  visibility: hidden;
-  position: relative;
-  z-index: -1;
+[id] {
+  scroll-margin-top: 4rem;
 }
 h2 {
   border-bottom: 0.1rem solid #399139;
@@ -330,14 +324,8 @@ footer ul {
     font-size: 0.9rem;
   }
   /* anchor position fix */
-  [id]::before {
-    content: '';
-    display: block;
-    padding-top: 3rem;
-    margin-top: -3rem;
-    visibility: hidden;
-    position: relative;
-    z-index: -1;
+  [id] {
+    scroll-margin-top: 3rem;
   }
 
   blockquote {
@@ -354,6 +342,7 @@ footer ul {
     font-size: 1.4rem;
     font-weight: normal;
     margin-bottom: 0.5rem;
+    line-height: 1.6rem;
   }
 
   main p {
