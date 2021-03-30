@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 
 <html lang="ja">
+
 <head>
   <script src="../scripts/ga.js"></script>
   <meta charset="UTF-8">
@@ -9,19 +10,27 @@
   <script src="../scripts/template.js" charset="utf-8" defer></script>
   <title>球面三角と打ち上げ方位</title>
   <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  <script>
+    window.MathJax = {
+      tex: {
+        tags: 'ams'
+      }
+    }
+  </script>
 </head>
+
 <body>
 
   <main>
 
-  <h1>球面三角と打ち上げ方位</h1>
+    <h1>球面三角と打ち上げ方位</h1>
 
 
-<p>
-ロケット・宇宙船の打ち上げ方位を計算する以下の公式について、簡単に説明します。
-</p>
+    <p>
+      ロケット・宇宙船の打ち上げ方位を計算する以下の公式について、簡単に説明します。
+    </p>
 
-<blockquote>
+    <blockquote>
 
 \begin{equation*}
 打ち上げ方位=\arcsin \left( \frac {\cos (ターゲットの軌道傾斜角)}{\cos (打ち上げ地点の緯度)}\right)
@@ -29,43 +38,43 @@
 
 </blockquote>
 
-<h2>三角形を描く
-</h2>
+    <h2>三角形を描く
+    </h2>
 
-<ul>
-<li>打ち上げ地点と赤道を通る垂線（子午線）</li>
-<li>赤道</li>
-<li>ターゲットの軌道面</li>
-</ul>
+    <ul>
+      <li>打ち上げ地点と赤道を通る垂線（子午線）</li>
+      <li>赤道</li>
+      <li>ターゲットの軌道面</li>
+    </ul>
 
-<p><img loading="lazy" src="../images/misc/spherical-trigonometry/001.png" width="379" height="379">
-</p>
+    <p><img loading="lazy" src="../images/misc/spherical-trigonometry/001.png" width="379" height="379">
+    </p>
 
-<p>
-青が子午線、赤が赤道、黄色がターゲットの軌道面。<br>
-（緑は自機を真東に打ち上げたときの軌道面だが、今回は無関係）
-</p>
-<p>
-これら3つの線が交差するところに、三角形を描くことができる。<br>
-子午線とターゲットの軌道面（青と黄色）がつくる角度が、打ち上げ方位ということになる。
-</p>
-<p>
-この三角形について、以下の情報が明らかになっている。
-</p>
+    <p>
+      青が子午線、赤が赤道、黄色がターゲットの軌道面。<br>
+      （緑は自機を真東に打ち上げたときの軌道面だが、今回は無関係）
+    </p>
+    <p>
+      これら3つの線が交差するところに、三角形を描くことができる。<br>
+      子午線とターゲットの軌道面（青と黄色）がつくる角度が、打ち上げ方位ということになる。
+    </p>
+    <p>
+      この三角形について、以下の情報が明らかになっている。
+    </p>
 
-<ul>
-<li>打ち上げ地点の緯度</li>
-<li>ターゲットの軌道傾斜角（赤道に対しての軌道面の角度）</li>
-<li>子午線と赤道が交差する角度（＝直角）</li>
-</ul>
+    <ul>
+      <li>打ち上げ地点の緯度</li>
+      <li>ターゲットの軌道傾斜角（赤道に対しての軌道面の角度）</li>
+      <li>子午線と赤道が交差する角度（＝直角）</li>
+    </ul>
 
-<p>
-内角2つ（軌道傾斜角と、子午線と赤道が交差する角度）がわかっている。<br>
-しかし球面上の三角形では、内角の和は180°から540°までの値を取る。※<br>
-このため、球面三角法の公式を使って3つ目の内角を求める必要がある。
-</p>
+    <p>
+      内角2つ（軌道傾斜角と、子午線と赤道が交差する角度）がわかっている。<br>
+      しかし球面上の三角形では、内角の和は180°から540°までの値を取る。※<br>
+      このため、球面三角法の公式を使って3つ目の内角を求める必要がある。
+    </p>
 
-<blockquote>
+    <blockquote>
 
 <p>※球面三角形の内角の和</p>
 
@@ -73,25 +82,25 @@ $$ 180^\circ \lt \theta \lt 540^\circ $$
 
 </blockquote>
 
-<h2>球面三角法
-</h2>
+    <h2>球面三角法
+    </h2>
 
-<p><img loading="lazy" src="../images/misc/spherical-trigonometry/002.png" width="1438" height="833">
-</p>
+    <p><img loading="lazy" src="../images/misc/spherical-trigonometry/002.png" width="1438" height="833">
+    </p>
 
-<p>
-3つの角をA, B, C、各辺をa, b, cとする。
-</p>
-<p>
-各辺はそれぞれ、大円（球の中心と円の中心が一致する球面上の円）の弧である。<br>
-したがって、球面上の三角形では、辺a, b, cの長さを角度で表すことができる。<br>
-例えば、赤道から打ち上げ地点までの子午線の長さは緯度で表すことができる。
-</p>
+    <p>
+      3つの角をA, B, C、各辺をa, b, cとする。
+    </p>
+    <p>
+      各辺はそれぞれ、大円（球の中心と円の中心が一致する球面上の円）の弧である。<br>
+      したがって、球面上の三角形では、辺a, b, cの長さを角度で表すことができる。<br>
+      例えば、赤道から打ち上げ地点までの子午線の長さは緯度で表すことができる。
+    </p>
 
-<h3>球面三角法の公式
-</h3>
+    <h3>球面三角法の公式
+    </h3>
 
-<blockquote>
+    <blockquote>
 
 <p>正弦法則</p>
 
@@ -127,16 +136,16 @@ $$ 180^\circ \lt \theta \lt 540^\circ $$
 
 </blockquote>
 
-<p>
-これらの式の導出については、以下のページを参照してください。<br>
-<a href="http://astronomy.webcrow.jp/coordinate/spherical_trigonometry.html">Astro Commons - 球面三角法</a>（外部サイト）
-</p>
-<p>
-今回は内角の1つが直角であることがわかっている。<br>
-\( \angle C = 90^\circ \) とする。 \( \cos 90^\circ = 0 \) 、 \( \sin 90^\circ = 1 \) なので、式が簡単になる。
-</p>
+    <p>
+      これらの式の導出については、以下のページを参照してください。<br>
+      <a href="http://astronomy.webcrow.jp/coordinate/spherical_trigonometry.html">Astro Commons - 球面三角法</a>（外部サイト）
+    </p>
+    <p>
+      今回は内角の1つが直角であることがわかっている。<br>
+      \( \angle C = 90^\circ \) とする。 \( \cos 90^\circ = 0 \) 、 \( \sin 90^\circ = 1 \) なので、式が簡単になる。
+    </p>
 
-<blockquote>
+    <blockquote>
 
 <p>(1)より
 </p>
@@ -167,11 +176,11 @@ $$ 180^\circ \lt \theta \lt 540^\circ $$
 
 </blockquote>
 
-<p>
-代入して整理すると、最初に紹介した式のかたちになる。
-</p>
+    <p>
+      代入して整理すると、最初に紹介した式のかたちになる。
+    </p>
 
-<blockquote>
+    <blockquote>
 
 <p>(4)(5)(6)より
 </p>
@@ -194,46 +203,51 @@ A &= \arcsin \left( \frac {\cos B} {\cos b} \right) \notag
 
 </blockquote>
 
-<p>補足： \( a = 90^\circ \) のときは、(5)と(4)より、必ず  \( A = 90^\circ \) になる。</p>
+    <p>補足： \( a = 90^\circ \) のときは、(5)と(4)より、必ず \( A = 90^\circ \) になる。</p>
 
-<h2>緯度と軌道傾斜角
-</h2>
+    <h2>緯度と軌道傾斜角
+    </h2>
 
-<p> \( \arcsin x \) の定義域は、\( -1 \leqq x \leqq 1 \) である。<br>
-打ち上げ地点の緯度が軌道傾斜角より大きいとき、cos(軌道傾斜角)/cos(緯度)の商は1より大きくなる。<br>
-したがって、緯度が軌道傾斜角より大きいとき、上記の式を使って打ち上げ方位を決めることはできない。</p>
+    <p> \( \arcsin x \) の定義域は、\( -1 \leqq x \leqq 1 \) である。<br>
+      打ち上げ地点の緯度が軌道傾斜角より大きいとき、cos(軌道傾斜角)/cos(緯度)の商は1より大きくなる。<br>
+      したがって、緯度が軌道傾斜角より大きいとき、上記の式を使って打ち上げ方位を決めることはできない。</p>
 
-<p>このような場合は、いったん軌道上に出てから軌道面を一致させるか、Off-plane transferを実行する。<br>
-<a href="../tutorial/part9.html">Orbiterチュートリアル Part9 月への打ち上げ</a><br>
-<a href="../transximfd/off-plane-transfer.html">地球―月でのOff-plane transfer</a>
-</p>
+    <p>このような場合は、いったん軌道上に出てから軌道面を一致させるか、Off-plane transferを実行する。</p>
 
-<h2>別の方法
-</h2>
+    <ul>
+      <li><a href="../tutorial/part9.html">Orbiterチュートリアル Part9 月への打ち上げ</a></li>
+      <li><a href="../transximfd/off-plane-transfer.html">地球―月でのOff-plane transfer</a></li>
+    </ul>
 
-<p>以下の方法でも、同じ式を導くことができます。<br>
-詳細は参考文献リストの書籍を読んでください。
-</p>
 
-<ul>
-<li>最初から直角球面三角形を考えて式を作る</li>
-<li>極三角形の性質を利用して、余弦定理の式を書き換える</li>
-</ul>
+    <h2>別の方法
+    </h2>
 
-<h2>参考文献
-</h2>
+    <p>以下の方法でも、同じ式を導くことができます。<br>
+      詳細は参考文献リストの書籍を読んでください。
+    </p>
 
-<p>
-長谷川一郎，1996，『天文計算入門』恒星社厚生閣
-</p>
-<p>
-Murray, Daniel A, 1900, <i>Spherical trigonometry, for colleges and secondary schools</i>, New York, London, Bombay: Longmans, Green and Co.<br>
-ダウンロードリンク：<a href="https://archive.org/details/sphericaltrigono00murrrich">Internet Archive</a>
-</p>
-<p><a href="http://astronomy.webcrow.jp/">Astro Commons</a>
-</p>
+    <ul>
+      <li>最初から直角球面三角形を考えて式を作る</li>
+      <li>極三角形の性質を利用して、余弦定理の式を書き換える</li>
+    </ul>
+
+    <h2>参考文献
+    </h2>
+
+    <p>
+      長谷川一郎，1996，『天文計算入門』恒星社厚生閣
+    </p>
+    <p>
+      Murray, Daniel A, 1900, <i>Spherical trigonometry, for colleges and secondary schools</i>, New York, London,
+      Bombay: Longmans, Green and Co.<br>
+      ダウンロードリンク：<a href="https://archive.org/details/sphericaltrigono00murrrich">Internet Archive</a>
+    </p>
+    <p><a href="http://astronomy.webcrow.jp/">Astro Commons</a>
+    </p>
 
   </main>
 
 </body>
+
 </html>
