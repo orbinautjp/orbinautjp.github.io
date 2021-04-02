@@ -332,6 +332,10 @@ footer ul {
     max-width: 90%;
     overflow-x: auto;
   }
+  pre {
+    max-width: 90%;
+    overflow-x: auto;
+  }
 
   main {
     padding: 1rem;
