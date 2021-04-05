@@ -24,8 +24,6 @@ main {
 img {
   border: 0.2rem solid #ffffff;
   cursor: pointer;
-  margin-top: 0.2rem;
-  margin-bottom: 0.2rem;
   width: 22rem;
   height: auto;
 }
@@ -38,7 +36,11 @@ img.vertical {
   width: auto;
 }
 figure {
-  margin-left: 0%;
+  display: inline-block;
+  margin: auto;
+}
+figcaption {
+  text-align: center;
 }
 
 /* page title */
