@@ -16,424 +16,441 @@
 
   <main>
 
-  <h1>Part12 月基地への軌道修正 1回目</h1>
-
-
-  <p>軌道修正を実行して、月面基地の上空を通る軌道にします。</p>
-
-  <ol>
-    <li><a href="#soi">地球の重力圏を出る</a></li>
-    <li><a href="#landingsite">着陸予定地点を設定する</a></li>
-    <li><a href="#mcc">軌道修正の目的</a></li>
-    <li><a href="#viewmanoeuvre">マニューバを作成する</a>
-      <ul>
-        <li><a href="#viewmanoeuvre_mandate">マニューバの時刻を設定する</a></li>
-        <li><a href="#viewmanoeuvre_compare">マニューバを比較する</a></li>
-        <li><a href="#viewmanoeuvre_combination">マニューバを組み合わせる</a></li>
-      </ul>
-    </li>
-    <li><a href="#viewtarget">マニューバを実行する</a>
-      <ul>
-        <li><a href="#viewtarget_burn">エンジンを噴射する</a></li>
-        <li><a href="#viewtarget_rcs">手動で微調整する</a></li>
-      </ul>
-    </li>
-  </ol>
-
-  <ul>
-    <li><a href="#reference">関連項目</a>
-      <ul>
-        <li><a href="#othermethod">他の方法</a></li>
-        <li><a href="#imfd">IMFD</a></li>
-      </ul>
-    </li>
-    <li><a href="#form">アンケート</a></li>
-    <li><a href="#videos">動画</a></li>
-  </ul>
-
-
-  <h2 id="soi">地球の重力圏を出る</h2>
-
-
-  <p><strong>Orbit MFD</strong>を開く。</p>
-
-  <p><strong>Orbit MFD</strong>の中央、一番下の行に注目する。<br>
-    <strong>G</strong>は「天体が及ぼす引力の割合」を表す。
-  </p>
-
-  <p>
-    <img loading="lazy" src="../images/tutorial/part12/001.png" width="425" height="425">
-  </p>
-
-  <p>数字の変化を確認しながら、地球を離れる。<br>
-    <strong>10000</strong>倍速までのタイムワープを使う。
-  </p>
-
-  <p>機体が回転を始めたら、テンキー<kbd>5</kbd>を押す。</p>
-
-  <p><strong>G</strong>が赤くなったらタイムワープを解除する。</p>
-
-  <p>
-    <img loading="lazy" src="../images/tutorial/part12/002.png" width="425" height="425">
-  </p>
-
-  <p><strong>Orbit MFD</strong>の基準を太陽に切り替えてみると、<strong>G</strong>が緑で表示されている。</p>
-
-  <p>
-    <img loading="lazy" src="../images/tutorial/part12/003.png" width="426" height="428">
-  </p>
-
-  <p>影響が一番大きい天体は、緑で表示される。<br>
-    それ以外の天体は、赤で表示される。</p>
-
-  <p>つまり、現時点では地球よりも太陽の影響が大きい。<br>
-    <strong>Orbit HUD</strong>と、<kbd>ProGrade</kbd>などの基準が、太陽を中心に変更される。
-  </p>
-
-  <p>この場所、すなわち地球の重力圏のすぐ外側で軌道修正を行う。</p>
-
-
-  <h2 id="landingsite">着陸予定地点を設定する</h2>
-
-
-  <p><strong>Map MFD</strong>を開く。</p>
-
-  <p><kbd>REF</kbd>をクリック。<br>
-    <strong>Earth</strong>→<strong>Moon</strong>を選択。
-  </p>
-
-  <p><kbd>TGT</kbd>をクリック。<br>
-    <strong>Spaceports</strong>→<strong>Brighton Beach</strong>を選択。
-  </p>
-
-  <p>
-    <img loading="lazy" src="../images/tutorial/part12/005.png" width="426" height="428">
-  </p>
-
-  <p><strong>TransX</strong>は<strong>Map MFD</strong>と連動している。<br>
-    <strong>View:Encounter</strong>に情報が追加される。
-  </p>
-
-  <p><strong>Offplane Dist</strong>が表示されるようになる。<br>
-    これは、宇宙船の軌道から基地までの距離を表す。</p>
-
-  <p>
-    <img loading="lazy" src="../images/tutorial/part12/006.png" width="426" height="426">
-  </p>
-
-  <p>月に衝突する軌道では、<strong>Min Alt</strong>と<strong>Offplane Dist</strong>は表示されない。</p>
-
-
-  <h2 id="mcc">軌道修正の目的</h2>
-
-
-  <p>軌道修正マニューバの目的はふたつ。</p>
-
-  <ol>
-    <li><strong>Min Alt</strong>を<strong>20k</strong>にする。</li>
-    <li><strong>Offplane Dist</strong>を<strong>0</strong>にする。</li>
-  </ol>
-
-  <p>数km程度の誤差は無視してよい。</p>
-
-
-  <h2 id="viewmanoeuvre">マニューバを作成する</h2>
-
-
-  <p><strong>TransX</strong>を開く。<br>
-    <strong>Stage 2</strong>の<strong>View:Encounter</strong>にする。
-  </p>
-
-  <p>反対側も<strong>TransX</strong>を開く。<br>
-    <strong>Stage 1</strong>の<strong>View:Manoeuvre</strong>にする。
-  </p>
-
-  <p>
-    <img loading="lazy" src="../images/tutorial/part12/021.png" width="1200" height="400">
-  </p>
-
-  <table>
-    <tr>
-      <td><kbd>FWD</kbd></td>
-      <td><strong>Stage</strong>の変更</td>
-    </tr>
-    <tr>
-      <td><kbd>VW</kbd></td>
-      <td><strong>View</strong>の切り替え</td>
-    </tr>
-  </table>
-
-
-  <h3 id="viewmanoeuvre_mandate">マニューバの時刻を設定する</h3>
-
-
-  <p><strong>View:Manoeuvre</strong>に移動する。</p>
-
-  <p><strong>Manoeuvre mode</strong>を選択。<br>
-    <kbd>++</kbd>をクリックして、<strong>On</strong>にする。
-  </p>
-
-  <p><kbd>VAR</kbd>を4回クリック。<br>
-    <strong>Man. date</strong>を選択する。
-  </p>
-
-  <p><kbd>ENT</kbd>をクリック。</p>
-
-  <p>表示されている数字に<strong>0.02</strong>を足す。<br>
-    入力したら<kbd>Enter</kbd>を押す。</p>
-
-  <p>例えば現在時刻が<strong>55282.64</strong>なら、<strong>55282.66</strong>にする。</p>
-
-  <p>
-    <img loading="lazy" class="small" src="../images/tutorial/part12/007.png" width="160" height="80">
-    <img loading="lazy" class="small" src="../images/tutorial/part12/008.png" width="160" height="80">
-  </p>
-
-  <p><a href="../misc/orbitalelements.html#mjd" target="_blank">MJD</a>における<strong>0.02</strong>は、普通の時計では約<strong>30分</strong>に相当する。</p>
-
-
-  <h3 id="viewmanoeuvre_compare">マニューバを比較する</h3>
-
-
-  <p>違うマニューバでも同じ結果になることがある。<br>
-    必要な<strong>Delta V</strong>が小さいものを選ぶ。</p>
-
-  <p><kbd>-VR</kbd>をクリック。<br>
-    <strong>Prograde vel.</strong>を選択する。
-  </p>
-
-  <p><kbd>ADJ</kbd>を何回かクリック。<br>
-    感度を<strong>Fine</strong>にする。</p>
-
-  <p><strong>Prograde vel.</strong>を操作する。<br>
-    <kbd>++</kbd>&nbsp;or&nbsp;<kbd>--</kbd>をクリック。
-  </p>
-
-  <p><strong>View:Encounter</strong>で結果を確認する。<br>
-    <strong>Min Alt</strong>を<strong>20k</strong>にする。
-  </p>
-
-  <p>ある程度近づけたら、<kbd>ADJ</kbd>を2回クリック。<br>
-    感度を<strong>Ultra</strong>にして細かく操作する。</p>
-
-  <p>この例では、<strong>0.764</strong>で予定の高度になった。</p>
-
-  <p>
-    <img loading="lazy" class="small" src="../images/tutorial/part12/009.png" width="160" height="80">
-    <img loading="lazy" class="small" src="../images/tutorial/part12/010.png" width="160" height="80">
-  </p>
-
-  <p><kbd>ADJ</kbd>を3回クリック。<strong>Reset</strong>を選択する。<br>
-    <kbd>++</kbd>をクリックして<strong>0</strong>に戻す。
-  </p>
-
-  <p><kbd>VAR</kbd>を2回クリック。<br>
-    <strong>Outward vel.</strong>を選択する。
-  </p>
-
-  <p><kbd>++</kbd>&nbsp;or&nbsp;<kbd>--</kbd>をクリック。<br>
-    <strong>Min Alt</strong>を<strong>20k</strong>にする。
-  </p>
-
-  <p>この例では、<strong>6.57</strong>で予定の高度になった。</p>
-
-  <p>
-    <img loading="lazy" class="small" src="../images/tutorial/part12/011.png" width="160" height="80">
-    <img loading="lazy" class="small" src="../images/tutorial/part12/012.png" width="160" height="80">
-  </p>
-
-  <p><strong>Prograde</strong>が<strong>0.764</strong>、<strong>Outward</strong>は<strong>6.57</strong>。<br>
-    <strong>Prograde</strong>のほうが効率がいいとわかる。
-  </p>
-
-  <p><strong>Outward vel.</strong>を<strong>Reset</strong>して<strong>0</strong>にする。</p>
-
-  <p><kbd>-VR</kbd>を2回クリック。<br>
-    <strong>Prograde vel.</strong>に戻す。
-  </p>
-
-  <p>もう一度、<strong>Min Alt</strong>を<strong>20k</strong>にする。</p>
-
-
-  <h3 id="viewmanoeuvre_combination">マニューバを組み合わせる</h3>
-
-
-  <p><kbd>VAR</kbd>を3回クリック。<br>
-    <strong>Ch. plane vel.</strong>を選択する。
-  </p>
-
-  <p>
-    <img loading="lazy" class="small" src="../images/tutorial/part12/013.png" width="160" height="80">
-  </p>
-
-  <p><kbd>++</kbd>&nbsp;or&nbsp;<kbd>--</kbd>をクリック。<br>
-    <strong>Offplane Dist</strong>を<strong>0</strong>に近づける。
-  </p>
-
-  <p>
-    <img loading="lazy" src="../images/tutorial/part12/014.png" width="425" height="425">
-  </p>
-
-  <p>この操作をすると、<strong>Min Alt</strong>も変化する。<br>
-    <strong>Min Alt</strong>が<strong>300k</strong>になったら止める。<br>
-    月に衝突する軌道になったときも止める。
-  </p>
-
-  <p><kbd>-VR</kbd>を3回クリック。<br>
-    <strong>Prograde vel.</strong>を選択する。
-  </p>
-
-  <p><kbd>++</kbd>&nbsp;or&nbsp;<kbd>--</kbd>をクリック。<br>
-    <strong>Min Alt</strong>を<strong>20k</strong>にする。
-  </p>
-
-  <p>この操作をすると、<strong>Offplane Dist</strong>も変化する。</p>
-
-  <p>もう一度<strong>Ch. plane vel.</strong>を操作する。<br>
-    <strong>Offplane Dist</strong>を<strong>0</strong>に近づける。
-  </p>
-
-  <p><strong>Ch. plane</strong>と<strong>Prograde</strong>を交互に操作する。<br>
-    目標の数字に近づくまで繰り返す。</p>
-
-  <p><a href="#othermethod">他の方法</a></p>
-
-  <p>
-    <img loading="lazy" class="small" src="../images/tutorial/part12/015.png" width="160" height="80">
-    <img loading="lazy" class="small" src="../images/tutorial/part12/016.png" width="160" height="80">
-  </p>
-
-  <p>目標の数km以内の数字になったら、マニューバの作成を終了する。</p>
-
-  <p>
-    <img loading="lazy" src="../images/tutorial/part12/017.png" width="425" height="425">
-  </p>
-
-
-  <h2 id="viewtarget">マニューバを実行する</h2>
-
-
-  <p><kbd>VW</kbd>をクリック。<br>
-    <strong>View:Target</strong>に切り替える。
-  </p>
-
-  <p><strong>Begin Burn</strong>が<strong>300</strong>になるまでタイムワープ。</p>
-
-  <p>
-    <img loading="lazy" src="../images/tutorial/part12/018.png" width="425" height="425">
-  </p>
-
-  <p><strong>View:Manoeuvre</strong>に切り替える。</p>
-
-  <p><kbd>VAR</kbd>を何度かクリック。<br>
-    <strong>++Updates</strong>を選択する。
-  </p>
-
-  <p><kbd>++</kbd>をクリック。<br>
-    TransXがデータを更新して再計算する。</p>
-
-  <p>必要があれば、マニューバを修正する。</p>
-
-
-  <h3 id="viewtarget_burn">エンジンを噴射する</h3>
-
-
-  <p><strong>View:Target</strong>に切り替える。</p>
-
-  <p><kbd>-VR</kbd>を何度かクリック。<br>
-    <strong>Auto-Center</strong>を選択する。
-  </p>
-
-  <p><kbd>++</kbd>をクリック。<br>
-    <strong>Auto-Center</strong>を<strong>On</strong>にする。
-  </p>
-
-  <p><strong>Begin Burn</strong>が<strong>0</strong>になったらエンジン噴射。<br>
-    <strong>Delta V</strong>が小さいので全開にはしない。
-  </p>
-
-  <p><kbd>Ctrl</kbd>を押しながら、<kbd>+</kbd>を何度か押す。<br>
-    少しずつ出力を上げていく。</p>
-
-  <p><strong>Delta V</strong>が<strong>5</strong>になったら、エンジンを切る。</p>
-
-
-  <h3 id="viewtarget_rcs">手動で微調整する</h3>
-
-
-  <p><kbd>++</kbd>をクリック。<br>
-    <strong>Auto-Center</strong>を<strong>Off</strong>にする。
-  </p>
-
-  <p><strong>View:Manoeuvre</strong>に切り替える。<br>
-    <strong>Manoeuvre mode</strong>を<strong>Off</strong>にする。
-  </p>
-
-  <p><strong>View:Encounter</strong>を開いておく。</p>
-
-  <p><strong>RCS LIN</strong>にする。<br>
-    テンキー<kbd>6</kbd>を押し続ける。</p>
-
-  <p><strong>Min Alt</strong>を<strong>20k</strong>にする。</p>
-
-  <p>
-    <img loading="lazy" src="../images/tutorial/part12/019.png" width="425" height="425">
-  </p>
-
-  <p>次回また軌道修正する。<br>
-    数km程度の誤差は無視してよい。</p>
-
-
-  <h2 id="reference">関連項目</h2>
-
-
-  <h3 id="othermethod">他の方法</h3>
-
-
-  <p><strong>TransX</strong>を使わずに軌道修正する方法について解説している。</p>
-
-  <p><a href="moon-mcc-notransx.html" target="_blank">月基地への軌道修正 別の方法</a></p>
-
-
-  <h3 id="imfd">IMFD</h3>
-
-
-  <p><a href="../transximfd/imfd-download.html" target="_blank">IMFD</a>を使えば、このような軌道修正を自動で実行することができる。</p>
-
-  <p><a href="../transximfd/imfd-tutorial-6.html" target="_blank">IMFD Part6 BaseApproachとOrbit Insertで基地上空へ</a></p>
-
-
-  <h2 id="form">アンケート</h2>
-
-
-  <form action="https://docs.google.com/forms/d/e/1FAIpQLSfaNxcNXfXdSkS3VHARafDEKUnz2phUmDzVbZzWMYbtzIIy-w/formResponse" target="_self" method="POST" id="mG61Hd">
-
-    <p>この記事の内容は理解できましたか？</p>
+    <h1>Part12 月基地への軌道修正 1回目</h1>
+
+
+    <p>軌道修正を実行して、月面基地の上空を通る軌道にします。</p>
+
+    <ol>
+      <li><a href="#soi">地球の重力圏を出る</a></li>
+      <li><a href="#landingsite">着陸予定地点を設定する</a>
+        <ul>
+          <li><a href="#landingsite_save">セーブして再開する</a></li>
+        </ul>
+      </li>
+      <li><a href="#mcc">軌道修正の目的</a></li>
+      <li><a href="#viewmanoeuvre">マニューバを作成する</a>
+        <ul>
+          <li><a href="#viewmanoeuvre_mandate">マニューバの時刻を設定する</a></li>
+          <li><a href="#viewmanoeuvre_compare">マニューバを比較する</a></li>
+          <li><a href="#viewmanoeuvre_combination">マニューバを組み合わせる</a></li>
+        </ul>
+      </li>
+      <li><a href="#viewtarget">マニューバを実行する</a>
+        <ul>
+          <li><a href="#viewtarget_burn">エンジンを噴射する</a></li>
+          <li><a href="#viewtarget_rcs">手動で微調整する</a></li>
+        </ul>
+      </li>
+    </ol>
 
     <ul>
-      <li><label><input type="radio" name="entry.1914587356" value="できなかった、全然理解できない" />できなかった、全然理解できない</label></li>
-      <li><label><input type="radio" name="entry.1914587356" value="できなかった、途中から理解できない" />できなかった、途中から理解できない</label></li>
-      <li><label><input type="radio" name="entry.1914587356" value="できた、難しかった" />できた、難しかった</label></li>
-      <li><label><input type="radio" name="entry.1914587356" value="できた、簡単だった" />できた、簡単だった</label></li>
+      <li><a href="#reference">関連項目</a>
+        <ul>
+          <li><a href="#othermethod">他の方法</a></li>
+          <li><a href="#imfd">IMFD</a></li>
+        </ul>
+      </li>
+      <li><a href="#form">アンケート</a></li>
+      <li><a href="#videos">動画</a></li>
     </ul>
 
-    <p><label for="question">わからなかった・難しかったところを教えてください（任意）</label><br>
-      <input id="question" type="text" name="entry.1857549962">
+
+    <h2 id="soi">地球の重力圏を出る</h2>
+
+
+    <p><strong>Orbit MFD</strong>を開く。</p>
+
+    <p><strong>Orbit MFD</strong>の中央、一番下の行に注目する。<br>
+      <strong>G</strong>は「天体が及ぼす引力の割合」を表す。
     </p>
 
-    <p>公開されますので個人情報を記入しないでください。<br>
-      <button type="submit" name="button" value="送信">送信</button>
+    <p>
+      <img loading="lazy" src="../images/tutorial/part12/001.png" width="425" height="425">
     </p>
 
-  </form>
+    <p>数字の変化を確認しながら、地球を離れる。<br>
+      <strong>10000</strong>倍速までのタイムワープを使う。
+    </p>
+
+    <p>機体が回転を始めたら、テンキー<kbd>5</kbd>を押す。</p>
+
+    <p><strong>G</strong>が赤くなったらタイムワープを解除する。</p>
+
+    <p>
+      <img loading="lazy" src="../images/tutorial/part12/002.png" width="425" height="425">
+    </p>
+
+    <p><strong>Orbit MFD</strong>の基準を太陽に切り替えてみると、<strong>G</strong>が緑で表示されている。</p>
+
+    <p>
+      <img loading="lazy" src="../images/tutorial/part12/003.png" width="426" height="428">
+    </p>
+
+    <p>影響が一番大きい天体は、緑で表示される。<br>
+      それ以外の天体は、赤で表示される。</p>
+
+    <p>つまり、現時点では地球よりも太陽の影響が大きい。<br>
+      <strong>Orbit HUD</strong>と、<kbd>ProGrade</kbd>などの基準が、太陽を中心に変更される。
+    </p>
+
+    <p>この場所、すなわち地球の重力圏のすぐ外側で軌道修正を行う。</p>
 
 
-  <h2 id="videos">動画</h2>
+    <h2 id="landingsite">着陸予定地点を設定する</h2>
 
 
-  <p><a href="https://youtu.be/DeNgkdFRbM4" target="_blank" rel="noopener noreferrer">YouTube</a></p>
+    <p><strong>Map MFD</strong>を開く。</p>
 
-  <p><a href="https://www.nicovideo.jp/watch/sm25601581" target="_blank" rel="noopener noreferrer">ニコニコ動画</a></p>
+    <p><kbd>REF</kbd>をクリック。<br>
+      <strong>Earth</strong>→<strong>Moon</strong>を選択。
+    </p>
+
+    <p><kbd>TGT</kbd>をクリック。<br>
+      <strong>Spaceports</strong>→<strong>Brighton Beach</strong>を選択。
+    </p>
+
+    <p>
+      <img loading="lazy" src="../images/tutorial/part12/005.png" width="426" height="428">
+    </p>
+
+    <p><strong>TransX</strong>は<strong>Map MFD</strong>と連動している。<br>
+      <strong>View:Encounter</strong>に情報が追加される。
+    </p>
+
+    <p><strong>Offplane Dist</strong>が表示されるようになる。<br>
+      これは、宇宙船の軌道から基地までの距離を表す。</p>
+
+    <p>
+      <img loading="lazy" src="../images/tutorial/part12/006.png" width="426" height="426">
+    </p>
+
+    <p>月に衝突する軌道では、<strong>Min Alt</strong>と<strong>Offplane Dist</strong>は表示されない。</p>
+
+
+    <h3 id="landingsite_save">セーブして再開する</h3>
+
+
+    <p>
+      <strong>Map MFD</strong>を閉じてセーブすると、着陸地点の情報が保存されない。<br>
+      そのようなセーブから再開するときは、上の手順で着陸地点を再設定する。
+    </p>
+
+
+    <h2 id="mcc">軌道修正の目的</h2>
+
+
+    <p>軌道修正マニューバの目的はふたつ。</p>
+
+    <ol>
+      <li><strong>Min Alt</strong>を<strong>20k</strong>にする。</li>
+      <li><strong>Offplane Dist</strong>を<strong>0</strong>にする。</li>
+    </ol>
+
+    <p>数km程度の誤差は無視してよい。</p>
+
+
+    <h2 id="viewmanoeuvre">マニューバを作成する</h2>
+
+
+    <p><strong>TransX</strong>を開く。<br>
+      <strong>Stage 2</strong>の<strong>View:Encounter</strong>にする。
+    </p>
+
+    <p>反対側も<strong>TransX</strong>を開く。<br>
+      <strong>Stage 1</strong>の<strong>View:Manoeuvre</strong>にする。
+    </p>
+
+    <p>
+      <img loading="lazy" src="../images/tutorial/part12/021.png" width="1200" height="400">
+    </p>
+
+    <table>
+      <tr>
+        <td><kbd>FWD</kbd></td>
+        <td><strong>Stage</strong>の変更</td>
+      </tr>
+      <tr>
+        <td><kbd>VW</kbd></td>
+        <td><strong>View</strong>の切り替え</td>
+      </tr>
+    </table>
+
+
+    <h3 id="viewmanoeuvre_mandate">マニューバの時刻を設定する</h3>
+
+
+    <p><strong>View:Manoeuvre</strong>に移動する。</p>
+
+    <p><strong>Manoeuvre mode</strong>を選択。<br>
+      <kbd>++</kbd>をクリックして、<strong>On</strong>にする。
+    </p>
+
+    <p><kbd>VAR</kbd>を4回クリック。<br>
+      <strong>Man. date</strong>を選択する。
+    </p>
+
+    <p><kbd>ENT</kbd>をクリック。</p>
+
+    <p>表示されている数字に<strong>0.02</strong>を足す。<br>
+      入力したら<kbd>Enter</kbd>を押す。</p>
+
+    <p>例えば現在時刻が<strong>55282.64</strong>なら、<strong>55282.66</strong>にする。</p>
+
+    <p>
+      <img loading="lazy" class="small" src="../images/tutorial/part12/007.png" width="160" height="80">
+      <img loading="lazy" class="small" src="../images/tutorial/part12/008.png" width="160" height="80">
+    </p>
+
+    <p><a href="../misc/orbitalelements.html#mjd"
+        target="_blank">MJD</a>における<strong>0.02</strong>は、普通の時計では約<strong>30分</strong>に相当する。</p>
+
+
+    <h3 id="viewmanoeuvre_compare">マニューバを比較する</h3>
+
+
+    <p>違うマニューバでも同じ結果になることがある。<br>
+      必要な<strong>Delta V</strong>が小さいものを選ぶ。</p>
+
+    <p><kbd>-VR</kbd>をクリック。<br>
+      <strong>Prograde vel.</strong>を選択する。
+    </p>
+
+    <p><kbd>ADJ</kbd>を何回かクリック。<br>
+      感度を<strong>Fine</strong>にする。</p>
+
+    <p><strong>Prograde vel.</strong>を操作する。<br>
+      <kbd>++</kbd>&nbsp;or&nbsp;<kbd>--</kbd>をクリック。
+    </p>
+
+    <p><strong>View:Encounter</strong>で結果を確認する。<br>
+      <strong>Min Alt</strong>を<strong>20k</strong>にする。
+    </p>
+
+    <p>ある程度近づけたら、<kbd>ADJ</kbd>を2回クリック。<br>
+      感度を<strong>Ultra</strong>にして細かく操作する。</p>
+
+    <p>この例では、<strong>0.764</strong>で予定の高度になった。</p>
+
+    <p>
+      <img loading="lazy" class="small" src="../images/tutorial/part12/009.png" width="160" height="80">
+      <img loading="lazy" class="small" src="../images/tutorial/part12/010.png" width="160" height="80">
+    </p>
+
+    <p><kbd>ADJ</kbd>を3回クリック。<strong>Reset</strong>を選択する。<br>
+      <kbd>++</kbd>をクリックして<strong>0</strong>に戻す。
+    </p>
+
+    <p><kbd>VAR</kbd>を2回クリック。<br>
+      <strong>Outward vel.</strong>を選択する。
+    </p>
+
+    <p><kbd>++</kbd>&nbsp;or&nbsp;<kbd>--</kbd>をクリック。<br>
+      <strong>Min Alt</strong>を<strong>20k</strong>にする。
+    </p>
+
+    <p>この例では、<strong>6.57</strong>で予定の高度になった。</p>
+
+    <p>
+      <img loading="lazy" class="small" src="../images/tutorial/part12/011.png" width="160" height="80">
+      <img loading="lazy" class="small" src="../images/tutorial/part12/012.png" width="160" height="80">
+    </p>
+
+    <p><strong>Prograde</strong>が<strong>0.764</strong>、<strong>Outward</strong>は<strong>6.57</strong>。<br>
+      <strong>Prograde</strong>のほうが効率がいいとわかる。
+    </p>
+
+    <p><strong>Outward vel.</strong>を<strong>Reset</strong>して<strong>0</strong>にする。</p>
+
+    <p><kbd>-VR</kbd>を2回クリック。<br>
+      <strong>Prograde vel.</strong>に戻す。
+    </p>
+
+    <p>もう一度、<strong>Min Alt</strong>を<strong>20k</strong>にする。</p>
+
+
+    <h3 id="viewmanoeuvre_combination">マニューバを組み合わせる</h3>
+
+
+    <p><kbd>VAR</kbd>を3回クリック。<br>
+      <strong>Ch. plane vel.</strong>を選択する。
+    </p>
+
+    <p>
+      <img loading="lazy" class="small" src="../images/tutorial/part12/013.png" width="160" height="80">
+    </p>
+
+    <p><kbd>++</kbd>&nbsp;or&nbsp;<kbd>--</kbd>をクリック。<br>
+      <strong>Offplane Dist</strong>を<strong>0</strong>に近づける。
+    </p>
+
+    <p>
+      <img loading="lazy" src="../images/tutorial/part12/014.png" width="425" height="425">
+    </p>
+
+    <p>この操作をすると、<strong>Min Alt</strong>も変化する。<br>
+      <strong>Min Alt</strong>が<strong>300k</strong>になったら止める。<br>
+      月に衝突する軌道になったときも止める。
+    </p>
+
+    <p><kbd>-VR</kbd>を3回クリック。<br>
+      <strong>Prograde vel.</strong>を選択する。
+    </p>
+
+    <p><kbd>++</kbd>&nbsp;or&nbsp;<kbd>--</kbd>をクリック。<br>
+      <strong>Min Alt</strong>を<strong>20k</strong>にする。
+    </p>
+
+    <p>この操作をすると、<strong>Offplane Dist</strong>も変化する。</p>
+
+    <p>もう一度<strong>Ch. plane vel.</strong>を操作する。<br>
+      <strong>Offplane Dist</strong>を<strong>0</strong>に近づける。
+    </p>
+
+    <p><strong>Ch. plane</strong>と<strong>Prograde</strong>を交互に操作する。<br>
+      目標の数字に近づくまで繰り返す。</p>
+
+    <p><a href="#othermethod">他の方法</a></p>
+
+    <p>
+      <img loading="lazy" class="small" src="../images/tutorial/part12/015.png" width="160" height="80">
+      <img loading="lazy" class="small" src="../images/tutorial/part12/016.png" width="160" height="80">
+    </p>
+
+    <p>目標の数km以内の数字になったら、マニューバの作成を終了する。</p>
+
+    <p>
+      <img loading="lazy" src="../images/tutorial/part12/017.png" width="425" height="425">
+    </p>
+
+
+    <h2 id="viewtarget">マニューバを実行する</h2>
+
+
+    <p><kbd>VW</kbd>をクリック。<br>
+      <strong>View:Target</strong>に切り替える。
+    </p>
+
+    <p><strong>Begin Burn</strong>が<strong>300</strong>になるまでタイムワープ。</p>
+
+    <p>
+      <img loading="lazy" src="../images/tutorial/part12/018.png" width="425" height="425">
+    </p>
+
+    <p><strong>View:Manoeuvre</strong>に切り替える。</p>
+
+    <p><kbd>VAR</kbd>を何度かクリック。<br>
+      <strong>++Updates</strong>を選択する。
+    </p>
+
+    <p><kbd>++</kbd>をクリック。<br>
+      TransXがデータを更新して再計算する。</p>
+
+    <p>必要があれば、マニューバを修正する。</p>
+
+
+    <h3 id="viewtarget_burn">エンジンを噴射する</h3>
+
+
+    <p><strong>View:Target</strong>に切り替える。</p>
+
+    <p><kbd>-VR</kbd>を何度かクリック。<br>
+      <strong>Auto-Center</strong>を選択する。
+    </p>
+
+    <p><kbd>++</kbd>をクリック。<br>
+      <strong>Auto-Center</strong>を<strong>On</strong>にする。
+    </p>
+
+    <p><strong>Begin Burn</strong>が<strong>0</strong>になったらエンジン噴射。<br>
+      <strong>Delta V</strong>が小さいので全開にはしない。
+    </p>
+
+    <p><kbd>Ctrl</kbd>を押しながら、<kbd>+</kbd>を何度か押す。<br>
+      少しずつ出力を上げていく。</p>
+
+    <p><strong>Delta V</strong>が<strong>5</strong>になったら、エンジンを切る。</p>
+
+
+    <h3 id="viewtarget_rcs">手動で微調整する</h3>
+
+
+    <p><kbd>++</kbd>をクリック。<br>
+      <strong>Auto-Center</strong>を<strong>Off</strong>にする。
+    </p>
+
+    <p><strong>View:Manoeuvre</strong>に切り替える。<br>
+      <strong>Manoeuvre mode</strong>を<strong>Off</strong>にする。
+    </p>
+
+    <p><strong>View:Encounter</strong>を開いておく。</p>
+
+    <p><strong>RCS LIN</strong>にする。<br>
+      テンキー<kbd>6</kbd>を押し続ける。</p>
+
+    <p><strong>Min Alt</strong>を<strong>20k</strong>にする。</p>
+
+    <p>
+      <img loading="lazy" src="../images/tutorial/part12/019.png" width="425" height="425">
+    </p>
+
+    <p>次回また軌道修正する。<br>
+      数km程度の誤差は無視してよい。</p>
+
+
+    <h2 id="reference">関連項目</h2>
+
+
+    <h3 id="othermethod">他の方法</h3>
+
+
+    <p><strong>TransX</strong>を使わずに軌道修正する方法について解説している。</p>
+
+    <p><a href="moon-mcc-notransx.html" target="_blank">月基地への軌道修正 別の方法</a></p>
+
+
+    <h3 id="imfd">IMFD</h3>
+
+
+    <p><a href="../transximfd/imfd-download.html" target="_blank">IMFD</a>を使えば、このような軌道修正を自動で実行することができる。</p>
+
+    <p><a href="../transximfd/imfd-tutorial-6.html" target="_blank">IMFD Part6 BaseApproachとOrbit Insertで基地上空へ</a></p>
+
+
+    <h2 id="form">アンケート</h2>
+
+
+    <form
+      action="https://docs.google.com/forms/d/e/1FAIpQLSfaNxcNXfXdSkS3VHARafDEKUnz2phUmDzVbZzWMYbtzIIy-w/formResponse"
+      target="_self" method="POST" id="mG61Hd">
+
+      <p>この記事の内容は理解できましたか？</p>
+
+      <ul>
+        <li><label><input type="radio" name="entry.1914587356" value="できなかった、全然理解できない" />できなかった、全然理解できない</label></li>
+        <li><label><input type="radio" name="entry.1914587356" value="できなかった、途中から理解できない" />できなかった、途中から理解できない</label>
+        </li>
+        <li><label><input type="radio" name="entry.1914587356" value="できた、難しかった" />できた、難しかった</label></li>
+        <li><label><input type="radio" name="entry.1914587356" value="できた、簡単だった" />できた、簡単だった</label></li>
+      </ul>
+
+      <p><label for="question">わからなかった・難しかったところを教えてください（任意）</label><br>
+        <input id="question" type="text" name="entry.1857549962">
+      </p>
+
+      <p>公開されますので個人情報を記入しないでください。<br>
+        <button type="submit" name="button" value="送信">送信</button>
+      </p>
+
+    </form>
+
+
+    <h2 id="videos">動画</h2>
+
+
+    <p><a href="https://youtu.be/DeNgkdFRbM4" target="_blank" rel="noopener noreferrer">YouTube</a></p>
+
+    <p><a href="https://www.nicovideo.jp/watch/sm25601581" target="_blank" rel="noopener noreferrer">ニコニコ動画</a></p>
 
   </main>
 
