@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+
+<html lang="ja">
+
+<head>
+  <script src="../scripts/ga.js"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../styles/orbiterjp.css">
+  <script src="../scripts/template.js" charset="utf-8" defer></script>
+  <title>XR2 Ravenstarのダウンロード+インストール</title>
+</head>
+
+<body>
+
+  <main>
+
+    <h1>XR2 Ravenstarのダウンロード+インストール</h1>
+
+
+    <nav>
+      <ul>
+        <li><a href="#feature">特徴</a></li>
+        <li><a href="#download">ダウンロード</a></li>
+        <li><a href="#install">インストール</a></li>
+        <li><a href="#control">操作方法</a></li>
+        <li><a href="#skin">見た目（スキン）の変更</a></li>
+        <li><a href="#normalmap">ノーマルマップの追加</a></li>
+      </ul>
+    </nav>
+
+
+    <h2 id="feature">特徴</h2>
+
+
+    <p>
+      <strong>XR2 Ravenstar</strong>は、スクラムジェットエンジンを搭載したスペースプレーンです。<br>
+      姿勢制御・着陸を補助するオートパイロットを実装しており、大気圏内での操縦性能に優れています。<br>
+      また、燃料タンクや居住区などのペイロードを増設することもできます。
+    </p>
+
+    <p>
+      一方で、初期機体のDelta Gliderと比べて非常に壊れやすく、航続距離が若干短くなっています。<br>
+      より難しい機体に挑戦したいプレイヤーにおすすめです。
+    </p>
+
+
+    <h2 id="download">ダウンロード</h2>
+
+
+    <p>
+      以下のページへ飛んで、<strong>Download Zip File</strong>のリンクをクリック。
+    </p>
+
+    <p>
+      <a href="https://www.alteaaerospace.com/index-3.html" target="_blank" rel="noopener noreferrer">Altea Aerospace -
+        Downloads</a>
+    </p>
+
+    <p>
+      <img loading="lazy" src="../images/ucgo/xr2-install/002.png" width="287" height="162">
+    </p>
+
+
+    <h2 id="install">インストール</h2>
+
+
+    <p>ダウンロードしたファイルを解凍する。<br>
+      中のファイル・フォルダをコピーして、Orbiterフォルダに上書き。</p>
+
+
+    <h2 id="control">操作方法</h2>
+
+
+    <ul>
+      <li><a href="xr2-control.html">XR2の操作</a></li>
+      <li><a href="xr2-launch.html">XR2の打ち上げ・軌道投入</a></li>
+      <li><a href="xr2-aerobrakemfd.html">XR2とAeroBrake MFDでの着陸</a></li>
+    </ul>
+
+
+    <h2 id="skin">見た目（スキン）の変更</h2>
+
+
+    <p>
+      ユーザーの作成したMODを導入して、XR2の見た目を変えることができる。
+    </p>
+
+
+    <ul>
+      <li><a href="#skin_download">ダウンロード</a></li>
+      <li><a href="#skin_install">インストール</a></li>
+      <li><a href="#skin_apply">スキンを適用する</a></li>
+    </ul>
+
+
+    <figure>
+      <img loading="lazy" src="../images/ucgo/xr2-install/XR2ANA.png" width="768" height="431">
+      <figcaption><a href="https://www.orbithangar.com/searchid.php?ID=5365" target="_blank"
+          rel="noopener noreferrer">XR2J ANA skin v1.1 by river crab</a></figcaption>
+    </figure>
+
+
+    <h3 id="skin_download">ダウンロード</h3>
+
+
+    <p>
+      以下のリンクをクリック。<br>
+      使いたいスキンを選んで<kbd>Read More...</kbd>をクリック。<br>
+      <kbd>Download</kbd>ボタンをクリック。
+    </p>
+
+    <p>
+      <a href="https://www.orbithangar.com/search.php?query=xr2+skin" target="_blank" rel="noopener noreferrer">Orbit
+        Hangar Mods - Search results for "xr2 skin"</a>
+    </p>
+
+
+    <h3 id="skin_install">インストール</h3>
+
+
+    <p>
+      ダウンロードしたファイルを解凍する。<br>
+      <strong>Textures</strong>フォルダをコピーして、Orbiterフォルダに上書き。
+    </p>
+
+
+    <h3 id="skin_apply">スキンを適用する</h3>
+
+
+    <p>シナリオファイルを編集して、新しいスキンを適用する。</p>
+
+    <p>
+      <strong>Scenarios\XR2 Ravenstar</strong>フォルダを開く。<br>
+      <strong>1 - Ready for Takeoff to ISS.scn</strong>を右クリック。<br>
+      メモ帳などのテキストエディタで開く。
+    </p>
+
+    <p>
+      <strong>BEGIN_SHIPS</strong>の下にある、<strong>XR2Ravenstar</strong>を探す。<br>
+      <strong>SKIN</strong>の行を追加・変更する。
+    </p>
+
+    <p><strong>ANA</strong>というスキンを追加する場合は、以下のようになる。</p>
+
+    <pre><code>XR2-01:XR2Ravenstar
+  SKIN ANA</code></pre>
+
+    <p>
+      <img loading="lazy" src="../images/ucgo/xr2-install/003.png" width="300" height="150">
+    </p>
+
+
+    <h2 id="normalmap">ノーマルマップの追加</h2>
+
+
+    <p>ノーマルマップを追加すると、船体表面の凹凸を再現できる。</p>
+
+    <ul>
+      <li>
+        <a href="#normalmap_download">ダウンロード</a>
+      </li>
+      <li>
+        <a href="#normalmap_install">インストール</a>
+      </li>
+      <li>
+        <a href="#normalmap_skin">スキンと併用する</a>
+      </li>
+    </ul>
+
+
+    <h3 id="normalmap_download">ダウンロード</h3>
+
+
+    <p>
+      <a href="https://www.orbithangar.com/searchid.php?ID=5997" target="_blank" rel="noopener noreferrer">
+        Normal Maps Pack for XR-2 Ravenstar</a>
+    </p>
+
+
+    <h3 id="normalmap_install">インストール</h3>
+
+
+    <p>
+      ダウンロードしたファイルを解凍して、中のファイルをすべてコピーする。<br>
+      <strong>Textures\XR2Ravenstar</strong>フォルダを開いて、コピーしたファイルを貼り付ける。
+    </p>
+
+
+    <h3 id="normalmap_skin">スキンと併用する</h3>
+
+
+    <p>以下の2つのファイルをコピーする。 </p>
+
+    <ul>
+      <li><strong>top_hull_colour_XR2_paint_norm.dds</strong></li>
+      <li><strong>bottom_hull_norm.dds</strong></li>
+    </ul>
+
+    <p>
+      <strong>Textures\XR2Ravenstar\Skins\スキンの名前</strong>フォルダを開く。<br>
+      コピーしたファイルを貼り付ける。
+    </p>
+
+  </main>
+
+</body>
+
+</html>
