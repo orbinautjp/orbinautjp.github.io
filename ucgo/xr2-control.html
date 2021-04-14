@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 
 <html lang="ja">
+
 <head>
   <script src="../scripts/ga.js"></script>
   <meta charset="UTF-8">
@@ -14,284 +15,525 @@
 
   <main>
 
-  <h1>XR2の操作</h1>
+    <h1>XR2の操作</h1>
 
 
-<p><a href="xr2-install.html">XR2 Ravenstarのダウンロード+インストール</a><br>
-<a href="xr2-launch.html">XR2の打ち上げ・軌道投入</a><br>
-<a href="xr2-aerobrakemfd.html">XR2とAeroBrake MFDでの着陸</a></p>
+    <p>
+      <a href="xr2-install.html">XR2 Ravenstarのダウンロード+インストール</a>
+    </p>
 
-<ul>
-<li><a href="#cockpit">2Dコクピットと操作パネル</a></li>
-<ul>
-<li><a href="#window">ウィンドウ解像度</a></li>
-</ul>
-<li><a href="#APU">APU（補助動力装置）</a></li>
-<li><a href="#damage">ダメージ判定</a></li>
-<ol>
-<li><a href="#damage_coolant">COOLANT TEMP（冷却材の温度）</a></li>
-<li><a href="#damage_hulltemp">船体外壁の温度</a></li>
-<li><a href="#damage_impact">衝撃</a></li>
-<li><a href="#damage_oxygen">酸素</a></li>
-<li><a href="#damage_drag">空気抵抗</a></li>
-<li><a href="#damage_wing">主翼荷重</a></li>
-</ol>
-<li><a href="#scramjet">スクラムジェットエンジン</a></li>
-<li><a href="#MDA">Multi-Display-Area (MDA)とオートパイロット</a></li>
-<ol>
-<li><a href="#mda_descent">DESCENT HOLD AUTOPILOT</a></li>
-<li><a href="#mda_attitude">ATTITUDE HOLD AUTOPILOT</a></li>
-</ol>
-<li><a href="#fuel">燃料および酸素の補給</a></li>
-<li><a href="#crew">乗員の管理</a></li>
-<ol>
-<li><a href="#disembark">船外に降りる・ドッキング</a></li>
-<li><a href="#eva">EVA（宇宙での船外活動）</a></li>
-</ol>
-<li><a href="#payload">ペイロードの管理</a></li>
-</ul>
+    <nav>
+      <ul>
+        <li><a href="#cockpit">2Dコクピットと操作パネル</a>
+          <ul>
+            <li><a href="#cockpit_window">ウィンドウ解像度</a></li>
+          </ul>
+        </li>
+        <li><a href="#apu">APU（補助動力装置）</a></li>
+        <li><a href="#damage">ダメージ判定</a>
+          <ol>
+            <li><a href="#damage_coolant">COOLANT TEMP（冷却材の温度）</a></li>
+            <li><a href="#damage_hulltemp">船体外壁の温度</a></li>
+            <li><a href="#damage_impact">衝撃</a></li>
+            <li><a href="#damage_oxygen">酸素</a></li>
+            <li><a href="#damage_drag">空気抵抗</a></li>
+            <li><a href="#damage_wing">主翼荷重</a></li>
+          </ol>
+        </li>
+        <li><a href="#scramjet">スクラムジェットエンジン</a></li>
+        <li><a href="#mda">MDAとオートパイロット</a>
+          <ol>
+            <li><a href="#mda_descent">DESCENT HOLD AUTOPILOT</a></li>
+            <li><a href="#mda_attitude">ATTITUDE HOLD AUTOPILOT</a></li>
+            <li><a href="#mda_airspeed">AIRSPEED HOLD AUTOPILOT</a></li>
+          </ol>
+        </li>
+        <li><a href="#fuel">燃料・酸素の補給</a></li>
+        <li><a href="#crew">乗員の管理</a>
+          <ol>
+            <li><a href="#crew_disembark">船外に降りる・ドッキング</a></li>
+            <li><a href="#crew_eva">EVA（宇宙での船外活動）</a></li>
+          </ol>
+        </li>
+        <li><a href="#payload">ペイロードの管理</a></li>
+      </ul>
+    </nav>
 
-<h2 id="cockpit">2Dコクピットと操作パネル</h2>
 
-<p>XR2は3Dコクピットから操作できないので、主に<strong>2Dコクピット</strong>を使うことになります。<br>
-<kbd>Ctrl</kbd>キーを押しながら<strong>矢印キー</strong>を押すことで、上下左右のパネルにアクセスします。</p>
+    <h2 id="cockpit">2Dコクピットと操作パネル</h2>
 
-<p>
-<img loading="lazy" src="../images/ucgo/xr2control/XR2_002.png" width="576" height="324"></p>
 
-<h3 id="window">ウィンドウ解像度</h3>
+    <p>
+      3Dコクピットのボタン操作は実装されていない。<br>
+      キーボード<kbd>F8</kbd>を押して、<a href="../basic/orbitercontrol.html#cockpit">2Dコクピット</a>に切り替える。
+    </p>
 
-<p>ゲームウィンドウの解像度（≒大きさ）によって、パネルのレイアウトが変更されます。<br>
-目当てのボタンが見当たらないときは、上下のパネルに移動して探してください。</p>
+    <p>
+      <kbd>Ctrl</kbd>キーを押しながら<strong>矢印キー</strong>を押す。<br>
+      上下のパネルにアクセスできる。
+    </p>
 
-<h2 id="APU">APU（補助動力装置）</h2>
 
-<p>XR2の油圧系統を駆動するためのエンジンです。<br>
-<strong>これを起動しないと動翼・エアロック・ラジエータなどが動きません。</strong></p>
-<p>APUは専用の燃料を必要とし、起動中は常に燃料を消費します。<br>
-燃料切れになると動作しなくなるので、必要に応じて起動したり停止したりします。</p>
-<p><strong>APU</strong>と書かれた赤いボタンを押して、起動・停止する。</p>
+    <p>
+      <img loading="lazy" src="../images/ucgo/xr2control/001.png" width="1920" height="1080">
+    </p>
 
-<p>
-<img loading="lazy" src="../images/ucgo/xr2control/APU.png" width="325" height="228"></p>
 
-<h2 id="damage">ダメージ判定</h2>
+    <h3 id="cockpit_window">ウィンドウ解像度</h3>
 
-<p>XRシリーズでは機体が被ったダメージに応じて、乗組員も負傷したり死亡したりします。※</p>
-<p class="note">※乗員がすべて死亡すると操作不能になりますが、破損状況によっては別の船から乗り込んで再起動することもできます</p>
 
-<h3 id="damage_coolant">COOLANT TEMP（冷却材の温度）</h3>
+    <p>ゲームウィンドウの解像度（≒大きさ）によって、パネルのレイアウトが変更される。<br>
+      目当てのボタンが見当たらないときは、上下のパネルに移動して探す。</p>
 
-<p>温度が危険域を超えると、メインコンピュータがシャットダウンし<strong>生命維持装置が停止、乗員が酸欠死します。</strong><br>
-対策は以下の通り。</p>
-<p>地上およびドッキング中は、<strong>EXTERNAL COOLING</strong>（外部冷却システム）を使う。<br>
-（ボタンを押して<strong>ON</strong>にするだけ。同時に酸素も補給されます）</p>
 
-<p>
-<img loading="lazy" src="../images/ucgo/xr2control/CoolantTemp.png" width="165" height="217"></p>
-<p>宇宙空間では<strong>RADIATOR</strong>（ラジエータ）を展開する。<br>
-（ボタンを押して展開（<strong>DEPLOY</strong>）するだけ。再突入時に収納するのを忘れないように）</p>
+    <h2 id="apu">APU（補助動力装置）</h2>
 
-<p>
-<img loading="lazy" src="../images/ucgo/xr2control/radiator.png" width="349" height="134"></p>
 
-<h3 id="damage_hulltemp">船体外壁の温度</h3>
+    <p>油圧系統を駆動するためのエンジンを<abbr tabindex="0" title="Auxiliary Power Unit">APU</abbr>という。<br>
+      これを起動しないと、動翼・エアロック・ラジエータが作動しない。
+    </p>
+    <p><strong>APU</strong>は専用の燃料を必要とし、起動中は常に燃料を消費する。<br>
+      燃料切れになると動作しなくなるので、必要に応じて起動・停止する。</p>
 
-<p>キーボードの<kbd>3</kbd>を押すと、<strong>Multi-Display-Area </strong>(<strong>MDA</strong>)に表示されます。<br>
-赤より上が危険域です。放置すると、<strong>船体が損傷して乗員が焼死します。</strong></p>
+    <p><strong>APU</strong>と書かれた赤いボタンを押して、起動・停止する。</p>
 
-<p>
-<img loading="lazy" src="../images/ucgo/xr2control/MDA.png" width="206" height="121"></p>
-<p>打ち上げ、大気圏突入のいずれにおいても「高度を上げる」もしくは「速度を落とす」ことで温度を下げることができます。</p>
+    <p>
+      <img loading="lazy" src="../images/ucgo/xr2control/002.png" width="300" height="150">
+    </p>
 
-<h3 id="damage_impact">衝撃</h3>
 
-<p>落下の衝撃などによって、船体が損傷したり乗員が負傷・死亡したりします。</p>
-<p>着陸時の降下速度（VS）については、2Dパネルの左下に目安が記載されています。<br>
-この速度を超えないよう、Surface MFDで確認しつつ着陸してください。</p>
+    <h2 id="damage">ダメージ判定</h2>
 
-<p>
-<img loading="lazy" src="../images/ucgo/xr2control/XR2LandingMax.png" width="190" height="435"></p>
 
-<h3 id="damage_oxygen">酸素</h3>
+    <p>機体が被ったダメージに応じて、乗組員も負傷・死亡する。<br>
+      乗員がすべて死亡すると操縦不能になる。※
+    </p>
 
-<p>XR2には初期状態で14人が乗っていますが、<strong>彼らは酸素を消費し、酸素残量がゼロになると死亡します。</strong></p>
-<p><img loading="lazy" src="../images/ucgo/xr2control/XR2LOX.png" width="276" height="313"></p>
-<p>左下の青い棒グラフが酸素残量。<br>
-右上が乗組員の人数から計算される残り日数です。</p>
-<p>地上では、エアロックを開放するか、前述のEXTERNAL COOLINGを起動しておけば、補充の必要はありません。</p>
-<p>宇宙ステーションとのドッキング中は、エアロックを開放すると同じ効果があります。</p>
-<p>火星などへの長距離飛行の場合は、後述するPayload Editorを使って、酸素タンクを増設することができます。</p>
+    <p class="note"><del>※破損状況によっては、別の船から乗り込んで再起動することもできる</del><strong>現行バージョンでは不可</strong></p>
 
-<h3 id="damage_drag">空気抵抗</h3>
 
-<p>車輪などが露出したり開放したままになっていたりすると、大気圏内を高速飛行中に機体が破損して着陸できなくなったりします。<br>
-警告が出たら減速してください。必要ないものは収納してください。</p>
+    <h3 id="damage_coolant">COOLANT TEMP（冷却材の温度）</h3>
 
-<h3 id="damage_wing">主翼荷重</h3>
 
-<p>急な旋回などによって主翼に大きな負荷がかかると、損傷して操縦不能になることがあります。<br>
-<strong>wing stress</strong>の警告が出たらゆるく旋回するようにしてください。</p>
+    <p>
+      温度が危険域を超えると、メインコンピュータがシャットダウンする。<br>
+      これに伴って、生命維持装置が停止、乗員が酸欠死する。
+    </p>
 
-<h2 id="scramjet">スクラムジェットエンジン</h2>
+    <p>地上およびドッキング中は、<strong>EXTERNAL COOLING</strong>（外部冷却システム）を使う。<br>
+      ボタンを押して<strong>ON</strong>にする。同時に酸素も補給される。</p>
 
-<p>参照：<a href="xr2-launch.html" target="_blank">XR2の打ち上げ・軌道投入</a></p>
+    <p>
+      <img loading="lazy" src="../images/ucgo/xr2control/003.png" width="400" height="200">
+    </p>
 
-<p>XR2にはスクラムジェットエンジンが搭載されており、これを使うことで推進剤を節約できます。</p>
-<p>まず、メインエンジンでマッハ3まで加速。<br>
-<strong>SCRAM DOORS</strong>を<strong>OPEN</strong>にします。</p>
+    <p>宇宙空間では<strong>RADIATOR</strong>（ラジエータ）を展開する。<br>
+      ボタンを押して<strong>DEPLOY</strong>（展開）にする。<br>
+      再突入時には<strong>STOW</strong>（収納）に戻しておく。</p>
 
-<p>
-<img loading="lazy" src="../images/ucgo/xr2control/XR2SCRAMOP.png" width="349" height="134"></p>
-<p>スクラムジェットを全開。（SCRAM LとSCRAM Rをマウス左ドラッグ）</p>
+    <p>
+      <img loading="lazy" src="../images/ucgo/xr2control/004.png" width="300" height="150">
+    </p>
 
-<p>
-<img loading="lazy" src="../images/ucgo/xr2control/XR2SCRAMTH.png" width="279" height="119"></p>
-<p>メインエンジンを停止します。</p>
-<p>船体温度を確認しつつ加速。<br>
-危険域に達したら高度を上げます。</p>
-<p>スクラムジェットの燃料が尽きるか、エンジンの温度が危険域に到達したらスクラムジェットエンジンを停止。<br>
-<strong>SCRAM DOORS</strong>を<strong>CLOSE</strong>にしてから、メインエンジンに切り換えます。</p>
 
-<h2 id="MDA">Multi-Display-Area (MDA)とオートパイロット</h2>
+    <h3 id="damage_hulltemp">船体外壁の温度</h3>
 
-<p>パネル中央の小さな画面がMDAです。<br>
-キーボードの0-9で機能を切り換えられます。</p>
-<table>
- <tbody>
-  <tr>
-   <td><strong>1</strong></td>
-   <td>オートパイロット：降下速度を維持・自動着陸(Auto-Land)</td>
-  </tr>
-  <tr>
-   <td><strong>2</strong></td>
-   <td>オートパイロット：機体の姿勢を維持</td>
-  </tr>
-  <tr>
-   <td><strong>3</strong></td>
-   <td>船体外壁および冷却材の温度</td>
-  </tr>
-  <tr>
-   <td><strong>4-8</strong></td>
-   <td>機体の破損状況を確認</td>
-  </tr>
-  <tr>
-   <td><strong>9</strong></td>
-   <td>再突入チェックリスト
-</td>
-  </tr>
-  <tr>
-   <td><strong>0</strong></td>
-   <td>オートパイロット：対気速度を維持</td>
-  </tr>
- </tbody>
-</table>
-<p>このうち、重要なのは<strong>1</strong>(DESCENT HOLD)、<strong>2</strong>(ATTITUDE HOLD)、<strong>3</strong>(TEMPERATURE)です。</p>
 
-<h3 id="mda_descent">DESCENT HOLD AUTOPILOT</h3>
+    <p>キーボードの<kbd>3</kbd>を押すと、<a href="#mda">MDA</a>に表示される。<br>
+      赤より上が危険域。放置すると、船体が損傷して乗員が焼死する。</p>
 
-<p><img loading="lazy" src="../images/ucgo/xr2control/mda002.png" width="203" height="126"></p>
-<p><strong>ホバーエンジンを制御します。</strong><br>
-<strong>HOVER DOORS</strong>が<strong>OPEN</strong>になっていないと使えません。</p>
-<p><strong>Engage</strong>を押すとシステムが起動。<br>
-初期状態だと高度を維持しようとします。<br>
-右の<strong>SET RATE</strong>（マウスクリックで操作）を調整することで降下速度を設定できます。</p>
-<p><strong>AUTO-LAND</strong>をクリックすると自動的に着陸します。<br>
-RCS・メインエンジン・逆噴射(RETRO)エンジンを使って降りたい位置に移動します。</p>
+    <p>
+      <img loading="lazy" src="../images/ucgo/xr2control/005.png" width="240" height="120">
+    </p>
 
-<h3 id="mda_attitude">ATTITUDE HOLD AUTOPILOT</h3>
+    <p>打ち上げ、大気圏突入のいずれにおいても「高度を上げる」「速度を落とす」ことで温度を下げられる。</p>
 
-<p><img loading="lazy" src="../images/ucgo/xr2control/mda003.png" width="199" height="124"></p>
-<p><strong>機体の姿勢（迎え角および左右への傾き）を制御します。</strong><br>
-<strong>Engage</strong>を押すと起動します。</p>
-<p>操作自体はRCS ROTとほぼ同じ。テンキーの<kbd>2</kbd>&nbsp;or&nbsp;<kbd>8</kbd>と<kbd>4</kbd>&nbsp;or&nbsp;<kbd>6</kbd>を押して操作します。<br>
-指定した角度を自動的に維持してくれるので、フライトスティックを長時間握り続ける必要がなくなります。</p>
-<p>AeroBrake MFDと組み合わせることで、再突入して狙った場所に容易に降りられるようになります。<br>
-<a href="xr2-aerobrakemfd.html">XR2とAeroBrake MFDでの着陸</a>
-</p>
 
-<h2 id="fuel">燃料および酸素の補給</h2>
+    <h3 id="damage_impact">衝撃</h3>
 
-<p><img loading="lazy" src="../images/ucgo/xr2control/XR2FUEL.png" width="805" height="327"></p>
-<p>着陸中・宇宙ステーションへのドッキング中に、燃料・酸素の補給を受けることができます。</p>
-<p>右側のボタンをクリックして、<strong>FUEL HATCH</strong>（燃料ハッチ）および<strong>LOX HATCH</strong>（液体酸素ハッチ）を<strong>OPEN</strong>にする。<br>
-補給ラインの圧力（<strong>EXTERNAL LINE PRESSURE</strong>）を確認する。<br>
-左下の<strong>EXTERNAL SUPPLY LINES</strong>のボタンを<strong>OPEN</strong>にする。<br>
-燃料および酸素タンクが充填される。</p>
-<p>燃料計の棒グラフの下の小さなボタンを長押しクリックすると、余分な燃料を排出できます。</p>
 
-<h2 id="crew">乗員の管理</h2>
+    <p>落下の衝撃などによって、船体が損傷したり、乗員が負傷・死亡したりする。</p>
+    <p>2Dパネルの左下に、着陸時の<strong>VS</strong>（降下率）の目安が記載されている。<br>
+      この数字を超えないように、<a href="../tutorial/part8.html#surfacemfd">Surface MFD</a>で確認しつつ着陸する。</p>
 
-<p>XR2は<strong>UMMU</strong>（Orbiterに宇宙飛行士を追加するMOD）に対応しています。<br>
-UMMUが最低でも1人は乗っていないと動きません。（Orbiter2010のみ。<strong>Orbiter2016では不要</strong>）</p>
-<p><a href="ummu-keymap.html" target="_blank">UMMU操作ガイド（キー操作一覧）</a>
-</p>
+    <p>
+      <img loading="lazy" src="../images/ucgo/xr2control/006.png" width="300" height="150">
+    </p>
 
-<h3 id="disembark">船外に降りる・ドッキング</h3>
+    <table>
+      <tr>
+        <td></td>
+        <th>燃料</th>
+        <th>積荷</th>
+        <th>最大VS</th>
+      </tr>
+      <tr>
+        <th>FULL LOAD</th>
+        <td>100%</td>
+        <td>100%</td>
+        <td>3.1 [m/s]</td>
+      </tr>
+      <tr>
+        <th>TYPICAL LOAD</th>
+        <td>33%</td>
+        <td>75%</td>
+        <td>5.8 [m/s]</td>
+      </tr>
+    </table>
 
-<p>以下の手順で宇宙飛行士を船外に降ろすことができます。（<strong>Orbiter2010</strong>のみ）</p>
 
-<p>
-<img loading="lazy" src="../images/ucgo/xr2control/XR2Airlock.png" width="298" height="158"></p>
-<p>ノーズコーン(NOSE CONE)とエアロック（OUTER DOORとINNER DOORの両方）を<strong>OPEN</strong>にする。<br>
-<strong>EVA</strong>のボタンをクリック。</p>
-<p><img loading="lazy" src="../images/ucgo/xr2control/XR2EVA.png" width="202" height="51"></p>
-<p>UMMUに対応しているほかの宇宙船やステーションとのドッキング中なら、UMMUは相手の船に移乗します。
-</p>
-<p>機内に戻るときは、エアロックに十分近づいてからキーボードで<kbd>E</kbd>を押す。</p>
-<p><strong>DEPLOY TURBOPACK</strong>のボタンをクリックすると、機体前方にターボパックを放出します。</p>
+    <h3 id="damage_oxygen">酸素</h3>
 
-<p>
-<img loading="lazy" src="../images/ucgo/xr2control/XR2_003.png" width="222" height="77"><br>
-<strong>STOW ALL</strong>のボタンをクリックすると、近くにあるターボパックを回収します。
-</p>
 
-<h3 id="eva">EVA（宇宙での船外活動）</h3>
+    <p>XR2には、初期状態で14人が乗っている。<br>
+      彼らは酸素を消費し、酸素残量がゼロになると死亡する。</p>
 
-<p>宇宙空間や、地球以外の惑星でEVAをおこなう場合は、地球上とは手順が少し異なります。
-</p>
-<p>まず、<strong>APU</strong>を起動しておく。<br>
-次に、上に<strong>CHAMBER</strong>と書かれたボタンを押して<strong>EVACUATE</strong>（減圧）にする。<br>
-（エアロック内の空気を抜いて、宇宙空間との気圧差を解消します）<br>
-<strong>NOSE CONE</strong>と<strong>OUTER DOOR</strong>を<strong>OPEN</strong>にする。
-</p>
-<p>これらの手順を踏まないと、エアロックが開かないようになっています。
-</p>
+    <p>
+      <img loading="lazy" src="../images/ucgo/xr2control/007.png" width="260" height="320">
+    </p>
 
-<h2 id="payload">ペイロードの管理</h2>
+    <p>左下の青い棒グラフが酸素残量。<br>
+      右上が乗組員の人数から計算される残り日数。</p>
 
-<p>XR2は、酸素タンクや燃料タンクなどを簡単に増設できるようになっています。
-</p>
-<p><kbd>F8</kbd>キーを押して2Dコクピットにする。<br>
-<kbd>Ctrl</kbd>キーを押しながら、十字キーの<kbd>↑</kbd>を押す。<br>
-<kbd>Ctrl</kbd>キーを押しながら、十字キーの<kbd>←</kbd>を押す。<br>
-これでペイロードの管理画面になります。</p>
+    <p>地上では、エアロックを開放するか、<a href="#damage_coolant">EXTERNAL COOLING</a>を起動しておけば、補充の必要はない。</p>
 
-<p>
-<img loading="lazy" src="../images/ucgo/xr2control/XR2PaView.png" width="768" height="432"></p>
-<p><strong>APU</strong>を起動して、<strong>BAY DOORS</strong>を<strong>OPEN</strong>にすると格納庫のドアが開きます。
-</p>
-<p><img loading="lazy" src="../images/ucgo/xr2control/XR2PaView2.png" width="794" height="201"></p>
-<p><strong>GRAPPLE</strong>のボタンを押せば、周囲にあるペイロードを搭載できます。<br>
-<strong>DEPLOY</strong>のボタンを押せば、現在のペイロードを投棄できます。
-</p>
-<p>パネル左上の<strong>PAYLOAD EDITOR</strong>の小さなボタンを押すと、ペイロードを自由に追加できるようになります。
-</p>
-<p><img loading="lazy" src="../images/ucgo/xr2control/XR2PaEdit.png" width="600" height="608"></p>
-<p><strong>LOX</strong>が酸素、<strong>FUEL</strong>が燃料です。<br>
-XR2とXR5で使えるコンテナの大きさが異なります。<br>
-プルダウンメニューから搭載したいものを選択してから、<strong>Payload Bay</strong>のボタンを押す。<br>
-指定した場所にコンテナが追加されます。
-</p>
+    <p>宇宙ステーションとのドッキング中は、エアロックを開放するのと同じ効果がある。</p>
 
-<h2>XR2の能力</h2>
+    <p>火星などへの長距離飛行の場合は、<a href="#payload">Payload Editor</a>を使って、酸素タンクを増設することができる。</p>
 
-<p>XR2は酸素タンクを増設すれば、14人を乗せて単独で地球から火星基地まで飛行可能です。<br>
-ただし、それにはある程度のテクニックが必要になります。<br>
-ゲームに慣れてきたら、ぜひ挑戦してみてください。
-</p>
+
+    <h3 id="damage_drag">空気抵抗</h3>
+
+
+    <p>車輪などが露出したままになっていると、大気圏内を飛行中に破損することがある。<br>
+      警告が出たら減速する。必要ないものは収納する。</p>
+
+
+    <h3 id="damage_wing">主翼荷重</h3>
+
+
+    <p>急な旋回によって主翼に大きな負荷がかかると、損傷して操縦不能になることがある。<br>
+      <strong>wing stress</strong>の警告が出たらゆるく旋回する。
+    </p>
+
+
+    <h2 id="scramjet">スクラムジェットエンジン</h2>
+
+
+    <p>参照：<a href="xr2-launch.html" target="_blank">XR2の打ち上げ・軌道投入</a></p>
+
+    <p>打ち上げ時にスクラムジェットエンジンを使用すると、推進剤を節約できる。</p>
+
+    <p>メインエンジンでマッハ3まで加速。<br>
+      <strong>SCRAM DOORS</strong>を<strong>OPEN</strong>にする。
+    </p>
+
+    <p>
+      <img loading="lazy" src="../images/ucgo/xr2control/008.png" width="300" height="150">
+    </p>
+
+    <p>スクラムジェットを全開にする。<br>
+      <strong>SCRAM</strong>のレバーをマウスでドラッグする。
+    </p>
+
+    <p>
+      <img loading="lazy" src="../images/ucgo/xr2control/009.png" width="240" height="120">
+    </p>
+
+    <p>スクラムジェットを点火したら、メインエンジンを停止する。</p>
+
+    <p>船体温度を確認しつつ加速。<br>
+      危険域に達したら高度を上げる。</p>
+
+    <p>燃料が尽きるか、エンジン温度が危険域に到達したら、スクラムジェットエンジンを停止する。<br>
+      <strong>SCRAM DOORS</strong>を<strong>CLOSE</strong>にしてから、メインエンジンに切り換える。
+    </p>
+
+
+    <h2 id="mda">MDAとオートパイロット</h2>
+
+
+    <p>パネル中央の小さな画面を<abbr tabindex="0" title="Multi-Display-Area">MDA</abbr>という。<br>
+      キーボードの数字キーで機能を切り換える。</p>
+
+    <table class="center1col">
+      <tbody>
+        <tr>
+          <td><kbd>1</kbd></td>
+          <td>降下率を維持・自動着陸</td>
+        </tr>
+        <tr>
+          <td><kbd>2</kbd></td>
+          <td>機体の姿勢を維持</td>
+        </tr>
+        <tr>
+          <td><kbd>3</kbd></td>
+          <td>船体外壁および冷却材の温度</td>
+        </tr>
+        <tr>
+          <td><kbd>4</kbd><kbd>5</kbd><kbd>6</kbd><kbd>7</kbd><kbd>8</kbd></td>
+          <td>機体の破損状況を確認</td>
+        </tr>
+        <tr>
+          <td><kbd>9</kbd></td>
+          <td>再突入チェックリスト
+          </td>
+        </tr>
+        <tr>
+          <td><kbd>0</kbd></td>
+          <td>対気速度を維持</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <p>
+      <kbd>1</kbd><kbd>2</kbd><kbd>0</kbd>はオートパイロット。
+    </p>
+
+
+    <h3 id="mda_descent">DESCENT HOLD AUTOPILOT</h3>
+
+
+    <p>
+      キーボードで<kbd>1</kbd>を押す。
+    </p>
+
+    <p>
+      <img loading="lazy" src="../images/ucgo/xr2control/010.png" width="240" height="120">
+    </p>
+
+    <p>ホバーエンジンを制御する。<br>
+      <strong>HOVER DOORS</strong>が<strong>OPEN</strong>になっていないと使えない。
+    </p>
+    <p><strong>Engage</strong>をクリックして起動する。<br>
+      初期状態だと高度を維持しようとする。
+    </p>
+
+    <p>
+      右の<strong>SET RATE</strong>の<kbd>▲</kbd>ボタンをクリック。<br>
+      上昇・降下率を設定する。
+    </p>
+
+    <p><strong>AUTO-LAND</strong>をクリックすると、現在の位置で自動着陸する。<br>
+      RCSやメインエンジンを使って、降りたい位置に移動する。</p>
+
+
+    <h3 id="mda_attitude">ATTITUDE HOLD AUTOPILOT</h3>
+
+
+    <p>
+      キーボードで<kbd>2</kbd>を押す。
+    </p>
+
+    <p>
+      <img loading="lazy" src="../images/ucgo/xr2control/011.png" width="240" height="120">
+    </p>
+
+    <p>迎え角と左右への傾き（ロール角）を制御する。<br>
+      <strong>Engage</strong>をクリックして起動する。
+    </p>
+    <p>操作は<strong>RCS ROT</strong>と同じ。<br>
+      テンキー<kbd>2</kbd>or<kbd>8</kbd>、<kbd>4</kbd>or<kbd>6</kbd>を押して操作する。
+    </p>
+
+    <p>
+      <a href="xr2-aerobrakemfd.html">AeroBrake MFD</a>と組み合わせて、再突入を補助することができる。
+    </p>
+
+
+    <h3 id="mda_airspeed">AIRSPEED HOLD AUTOPILOT</h3>
+
+
+    <p>
+      キーボードで<kbd>0</kbd>を押す。
+    </p>
+
+    <p>
+      <img loading="lazy" src="../images/ucgo/xr2control/012.png" width="240" height="120">
+    </p>
+
+    <p>
+      大気圏内で巡航速度を維持する。<br>
+      <strong>Engage</strong>をクリックして起動する。
+    </p>
+
+    <p>
+      右の<strong>SET AIRSPEED</strong>の<kbd>▲</kbd>ボタンをクリック。<br>
+      巡航速度を設定する。
+    </p>
+
+
+    <h2 id="fuel">燃料・酸素の補給</h2>
+
+
+    <p>
+      <img loading="lazy" src="../images/ucgo/xr2control/013.png" width="800" height="400">
+    </p>
+
+    <p>
+      着陸時・宇宙ステーションへのドッキング中に、燃料・酸素を補給できる。<br>
+      <kbd>Ctrl</kbd>+<kbd>↓</kbd>を押して、下のパネルに移動する。
+    </p>
+
+    <p>
+      右側のボタンをクリック。<br>
+      <strong>FUEL HATCH</strong>と<strong>LOX HATCH</strong>を<strong>OPEN</strong>にする。
+    </p>
+
+    <p><strong>EXTERNAL LINE PRESSURE</strong>を確認する。</p>
+
+    <p>
+      左下の<strong>EXTERNAL SUPPLY LINES</strong>を<strong>OPEN</strong>にする。<br>
+      燃料および酸素タンクが充填される。
+    </p>
+
+    <p>
+      <strong>X-FEED</strong>のノブをクリックすると、メインエンジン・RCSの燃料を移すことができる。<br>
+      燃料計の下、<strong>FUEL DUMP</strong>を長押しクリックすると、燃料を機外に排出する。
+    </p>
+
+    <table>
+      <tr>
+        <td>FUEL HATCH</td>
+        <td>燃料ハッチ</td>
+      </tr>
+      <tr>
+        <td>LOX HATCH</td>
+        <td>液体酸素ハッチ</td>
+      </tr>
+      <tr>
+        <td>EXTERNAL LINE PRESSURE</td>
+        <td>補給ラインの圧力</td>
+      </tr>
+      <tr>
+        <td>EXTERNAL SUPPLY LINES</td>
+        <td>外部補給ライン</td>
+      </tr>
+    </table>
+
+
+    <h2 id="crew">乗員の管理</h2>
+
+
+    <p>
+      2021年4月現在、XR2には<strong>宇宙飛行士が実装されていない</strong>。<br>
+      以下はOrbiter2010版での内容だが、<strong>2010対応版は公開終了</strong>になっている。
+    </p>
+
+    <del>
+
+      <p>XR2は<a href="../ucgo/index.html">UMMU</a>（Orbiterに宇宙飛行士を追加するMOD）に対応している。<br>
+        UMMUが最低でも1人は乗っていないと動かない。</p>
+
+
+      <h3 id="crew_disembark">船外に降りる・ドッキング</h3>
+
+
+      <p>以下の手順で宇宙飛行士を船外に降ろすことができる。</p>
+
+      <p>
+        <img loading="lazy" src="../images/ucgo/xr2control/XR2Airlock.png" width="298" height="158">
+      </p>
+      <p>ノーズコーン(NOSE CONE)とエアロック（OUTER DOORとINNER DOORの両方）を<strong>OPEN</strong>にする。<br>
+        <strong>EVA</strong>のボタンをクリック。
+      </p>
+      <p><img loading="lazy" src="../images/ucgo/xr2control/XR2EVA.png" width="202" height="51"></p>
+      <p>UMMUに対応しているほかの宇宙船やステーションとのドッキング中なら、UMMUは相手の船に移乗する。
+      </p>
+      <p>機内に戻るときは、エアロックに十分近づいてからキーボードで<kbd>E</kbd>を押す。</p>
+      <p><strong>DEPLOY TURBOPACK</strong>のボタンをクリックすると、機体前方にターボパックを放出する。</p>
+
+      <p>
+        <img loading="lazy" src="../images/ucgo/xr2control/XR2_003.png" width="222" height="77"><br>
+        <strong>STOW ALL</strong>のボタンをクリックすると、近くにあるターボパックを回収する。
+      </p>
+
+
+      <h3 id="crew_eva">EVA（宇宙での船外活動）</h3>
+
+
+      <p>宇宙空間や、地球以外の惑星でEVAをおこなう場合は、地球上とは手順が少し異なる。
+      </p>
+      <p>まず、<strong>APU</strong>を起動しておく。<br>
+        次に、上に<strong>CHAMBER</strong>と書かれたボタンを押して<strong>EVACUATE</strong>（減圧）にする。<br>
+        （エアロック内の空気を抜いて、宇宙空間との気圧差を解消する）<br>
+        <strong>NOSE CONE</strong>と<strong>OUTER DOOR</strong>を<strong>OPEN</strong>にする。
+      </p>
+      <p>これらの手順を踏まないと、エアロックが開かないようになっている。 </p>
+
+    </del>
+
+
+    <h2 id="payload">ペイロードの管理</h2>
+
+
+    <p>
+      酸素タンクや燃料タンクなどを増設できる。<br>
+      これによって航続距離を延ばすことが可能。
+    </p>
+
+    <p>
+      以下の手順で、ペイロードの管理画面を開く。
+    </p>
+
+    <ol>
+      <li><kbd>F8</kbd>キーを押して2Dコクピットにする。</li>
+      <li><kbd>Ctrl</kbd>を押しながら、十字キーの<kbd>↑</kbd>を押す。</li>
+      <li><kbd>Ctrl</kbd>を押しながら、十字キーの<kbd>←</kbd>を押す。</li>
+    </ol>
+
+    <p>
+      <img loading="lazy" src="../images/ucgo/xr2control/017.png" width="1920" height="1080">
+    </p>
+
+    <p>
+      <strong>APU</strong>を起動して、<strong>BAY DOORS</strong>を<strong>OPEN</strong>にする。<br>
+      格納庫のドアが開く。
+    </p>
+
+    <p>
+      <img loading="lazy" src="../images/ucgo/xr2control/018.png" width="800" height="400">
+    </p>
+
+    <table>
+      <tr>
+        <th>GRAPPLE</th>
+        <td>機体周辺のペイロードを搭載</td>
+      </tr>
+      <tr>
+        <th>DEPLOY</th>
+        <td>現在のペイロードを</td>
+      </tr>
+    </table>
+
+    <p>
+      パネル左上の<strong>PAYLOAD EDITOR</strong>の小さなボタンを押す。<br>
+      このウィンドウでペイロードを追加する。
+    </p>
+
+    <p>
+      <img loading="lazy" src="../images/ucgo/xr2control/019.png" width="584" height="595">
+    </p>
+
+    <ol>
+      <li>プルダウンメニューから搭載したいものを選択する。</li>
+      <li><strong>Payload Bay</strong>の番号をクリック。</li>
+      <li>指定した場所にコンテナが追加される。</li>
+    </ol>
+
+    <p>
+      <kbd>Empty Bay</kbd>をクリックすると、コンテナが削除される。<br>
+      <kbd>Done</kbd>をクリックすると終了する。
+    </p>
+
+    <p>
+      <abbr title="Liquid Oxygen">LOX</abbr>が液体酸素、<strong>FUEL</strong>が燃料。<br>
+      搭載位置によって使用可能なコンテナの大きさが制限される。<br>
+      また、<strong>XR5</strong>のコンテナを<strong>XR2</strong>で使用することはできない。
+    </p>
 
   </main>
 
 </body>
+
 </html>

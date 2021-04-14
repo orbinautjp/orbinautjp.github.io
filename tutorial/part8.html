@@ -26,7 +26,7 @@
       <ul>
         <li><a href="#turn">旋回を始める</a></li>
         <li><a href="#surfacemfd">Surface MFD</a></li>
-        <li><a href="#dnp">降下速度と動圧</a></li>
+        <li><a href="#dnp">降下率と動圧</a></li>
         <li><a href="#endturn">旋回を終了する</a></li>
       </ul>
     </li>
@@ -80,29 +80,26 @@
     <img loading="lazy" src="../images/tutorial/part8/002.png" width="425" height="425">
   </p>
 
-  <table>
+  <table class="center1col">
     <tr>
-      <td><strong>DNP</strong></td>
-      <td>Dynamic Pressure</td>
+      <td><abbr tabindex="0" title="Dynamic Pressure">DNP</abbr></td>
       <td>動圧</td>
       <td>機体が大気にぶつかって受ける圧力</td>
     </tr>
     <tr>
-      <td><strong>VS</strong></td>
-      <td>Vertical Speed</td>
-      <td>垂直速度</td>
-      <td>降下・上昇する速度</td>
+      <td><abbr tabindex="0" title="Vertical Speed">VS</abbr></td>
+      <td>降下率</td>
+      <td>垂直方向の速度<br>（降下・上昇する速度）</td>
     </tr>
     <tr>
-      <td><strong>VACC</strong></td>
-      <td>Vertical Acceleration</td>
+      <td><abbr tabindex="0" title="Vertical Acceleration">VACC</abbr></td>
+      <td>垂直加速度</td>
       <td>垂直方向の加速度</td>
-      <td></td>
     </tr>
   </table>
 
 
-  <h3 id="dnp">降下速度と動圧</h3>
+  <h3 id="dnp">降下率と動圧</h3>
 
 
   <p>スティックを引いたまま、左右にロールする。<br>
@@ -112,11 +109,11 @@
   <table>
     <tr>
       <td><strong>DNP</strong>が<strong>40kPa</strong>より<strong>大きい</strong></td>
-      <td>上側（宇宙）にロールして降下速度を落とす</td>
+      <td>上側（宇宙）にロールして降下率を落とす</td>
     </tr>
     <tr>
       <td><strong>DNP</strong>が<strong>40kPa</strong>より<strong>小さい</strong></td>
-      <td>下側（地球）にロールして降下速度を上げる</td>
+      <td>下側（地球）にロールして降下率を上げる</td>
     </tr>
   </table>
 
@@ -124,7 +121,7 @@
     <img loading="lazy" src="../images/tutorial/part8/003.png" width="1594" height="871">
   </p>
 
-  <p><strong>VS</strong>は、プラスなら上昇、マイナスなら降下速度を意味する。<br>
+  <p><strong>VS</strong>は、プラスなら上昇、マイナスなら降下率を意味する。<br>
     <strong>VS</strong>と<strong>VACC</strong>には、以下のような関係がある。
   </p>
 
@@ -143,7 +140,7 @@
     </tr>
   </table>
 
-  <p><strong>VACC</strong>を小さい値にとどめておくと、安定して降下速度をコントロールできる。</p>
+  <p><strong>VACC</strong>を小さい値にとどめておくと、安定して降下率をコントロールできる。</p>
 
 
   <h3 id="endturn">旋回を終了する</h3>
@@ -272,7 +269,7 @@
 
 
   <p>再突入して宇宙船が大気に接触すると、機体は大きな力を受ける。<br>
-    降下速度が高い、宇宙船の高度が低いとき、より大きな力が働く。</p>
+    降下率が高い、宇宙船の高度が低いとき、より大きな力が働く。</p>
 
   <p>この<strong>DNP</strong>（動圧）が大きすぎると、機体が損傷して操縦不能になる。<br>
     しかし、旋回半径が大きすぎると、目的地から遠ざかってしまう。</p>
