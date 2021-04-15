@@ -72,6 +72,13 @@
     modal.style.display = 'none'
   }
   document.getElementById('close').addEventListener('click', closeModal)
+
+  // abbreviations can have focus
+
+  const allAbbr = document.getElementsByTagName('abbr')
+  for (let i = 0; i < allAbbr.length; i++) {
+    allAbbr[i].setAttribute('tabindex', '-1')
+  }
 })()
 
 // responsive menu for mobile devices
