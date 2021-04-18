@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 
 <html lang="ja">
+
 <head>
   <script src="../scripts/ga.js"></script>
   <meta charset="UTF-8">
@@ -14,171 +15,305 @@
 
   <main>
 
-  <h1>XR2の打ち上げ・軌道投入</h1>
+    <h1>XR2の打ち上げ・軌道投入</h1>
 
 
-<p><a href="xr2-install.html" target="_blank">XR2 Ravenstarのダウンロード+インストール</a></p>
+    <p><a href="xr2-install.html">XR2 Ravenstar</a>の打ち上げ手順について解説します。</p>
 
-<p><strong>XR2 Ravenstar</strong>をスクラムジェットを使って打ち上げる手順について解説します。<br>
-今回はフライトスティックは使いません。（キーボードとテンキーのみ）</p>
+    <nav>
+      <ol>
+        <li><a href="#wait">待機</a></li>
+        <li><a href="#prep">準備</a></li>
+        <li><a href="#liftoff">離陸</a></li>
+        <li><a href="#ascend">上昇</a></li>
+        <li><a href="#scram">スクラムジェットエンジン</a>
+          <ul>
+            <li><a href="#scram_start">点火</a></li>
+            <li><a href="#scram_cruise">巡航</a></li>
+            <li><a href="#scram_stop">停止</a></li>
+          </ul>
+        </li>
+        <li><a href="#insertion">軌道投入</a></li>
+        <li><a href="#radiator">ラジエータを展開する</a></li>
+        <li><a href="#apustop">APUを停止する</a></li>
+      </ol>
+      <ul>
+        <li><a href="#controls">その他の操作</a></li>
+        <li><a href="#videos">動画</a></li>
+      </ul>
+    </nav>
 
-<ul>
-<li><a href="#prep">打ち上げの準備</a></li>
-<li><a href="#launch">打ち上げ</a></li>
-<ol>
-<li><a href="#liftoff">離陸</a></li>
-<li><a href="#ascend">上昇</a></li>
-<li><a href="#scram_start">スクラムジェットエンジンに点火</a></li>
-<li><a href="#scram_cruise">スクラムジェットエンジンでの巡航</a></li>
-<li><a href="#scram_stop">スクラムジェットエンジンを停止</a></li>
-</ol>
-<li><a href="#orbit">軌道投入</a></li>
-<ol>
-<li><a href="#orbit_insert">軌道投入噴射</a></li>
-<li><a href="#radiator">ラジエータを展開する</a></li>
-</ol>
-<li><a href="#videos">動画</a></li>
-</ul>
 
-<h2 id="prep">打ち上げの準備</h2>
+    <h2 id="wait">待機</h2>
 
-<p>ゲームを開始したら、すぐに<strong>APU</strong>を停止する。※</p>
 
-  <p>
-    <img loading="lazy" src="../images/ucgo/xr2-launch/XR2Launch001.png" width="314" height="228">
-</p>
+    <p>ゲームを開始したら、すぐに<strong>APU</strong>を停止する。※</p>
 
-<p class="note">※APU燃料の無駄づかいを防ぐため</p>
+    <p class="note">※APU燃料の浪費を防ぐため</p>
 
-<p><strong>EXTERNAL COOLING</strong>を<strong>ON</strong>にする。</p>
+    <p>
+      <img loading="lazy" src="../images/ucgo/xr2-launch/001.png" width="300" height="150">
+    </p>
 
-  <p>
-    <img loading="lazy" src="../images/ucgo/xr2-launch/XR2Launch002.png" width="183" height="256">
-</p>
-<p>出発のタイミングを待つ。</p>
-<p>出発直前に<strong>APU</strong>を起動。<br>
-右クリックで<strong>AF CTRL</strong>を<strong>ON</strong>にする。</p>
+    <p>
+      <kbd>Ctrl</kbd>+<kbd>↓</kbd>を押して、下のパネルに移動する。<br>
+      <strong>EXTERNAL COOLING</strong>を<strong>ON</strong>にする。
+    </p>
 
-<p>
-<img loading="lazy" src="../images/ucgo/xr2-launch/XR2Launch003.png" width="189" height="165">
-</p>
-<p><strong>EXTERNAL COOLING</strong>を<strong>OFF</strong>にする。</p>
+    <p>
+      <img loading="lazy" src="../images/ucgo/xr2-launch/002.png" width="400" height="200">
+    </p>
 
-<h2 id="launch">打ち上げ</h2>
+    <p>出発のタイミングを待つ。</p>
 
-<p>最初は通常エンジンを使って離陸し、途中からスクラムジェットエンジンに切り替えます。</p>
 
-<h3 id="liftoff">離陸</h3>
+    <h2 id="prep">準備</h2>
 
-<p>メインエンジン全開で離陸。（ <kbd>Ctrl</kbd> と <kbd>+</kbd> の同時押し）</p>
-<p>ランディングギアが風圧で破損しないように、離陸したらいったんエンジン出力を下げる。（ <kbd>Ctrl</kbd> と <kbd>-</kbd> の同時押し）<br>
-<kbd>G</kbd>を押してランディングギアを格納する。</p>
-<p>必要な方位になるまで旋回する。</p>
 
-<h3 id="ascend">上昇</h3>
+    <p>出発のタイミングが来たら、離陸準備をする。</p>
 
-<p>キーボードの<kbd>L</kbd>を押して、<strong>Attitude Hold</strong>オートパイロットを起動。</p>
+    <p><strong>EXTERNAL COOLING</strong>を<strong>OFF</strong>にする。</p>
 
-  <p>
-    <img loading="lazy" src="../images/ucgo/xr2-launch/XR2Launch004.png" width="548" height="143">
-</p>
-<p>メインエンジンを全開にする。</p>
-<p>テンキーの<kbd>4</kbd>&nbsp;or&nbsp;<kbd>6</kbd>、<kbd>2</kbd>&nbsp;or&nbsp;<kbd>8</kbd>を何度か押して、方位角を維持しつつ、迎え角を<strong>60°</strong>にする。</p>
+    <p><strong>APU</strong>を起動する。</p>
 
-  <p>
-    <img loading="lazy" src="../images/ucgo/xr2-launch/XR2Launch005.png" width="453" height="125">
-</p>
-<p>高度<strong>20km</strong>を超えるまで上昇する。</p>
-<p>20kmを超えたら、テンキーの<kbd>8</kbd>を何度か押して、迎え角をゼロまで下げる。</p>
+    <p>右クリックで<strong>AF CTRL</strong>を<strong>ON</strong>にする。</p>
 
-  <p>
-    <img loading="lazy" src="../images/ucgo/xr2-launch/XR2Launch006.png" width="448" height="122">
-</p>
-<p><strong>Surface MFD</strong>を見ながら、マッハ<strong>3.5</strong>（M 3.5）になるまで待つ。</p>
+    <p>
+      <img loading="lazy" src="../images/ucgo/xr2-launch/003.png" width="300" height="150">
+    </p>
 
-  <p>
-    <img loading="lazy" src="../images/ucgo/xr2-launch/XR2Launch007.png" width="451" height="244">
-</p>
 
-<h3 id="scram_start">スクラムジェットエンジンに点火</h3>
+    <h2 id="liftoff">離陸</h2>
 
-<p>マッハ3.5を超えたら、<strong>SCRAM DOORS</strong>を<strong>OPEN</strong>にする。</p>
 
-  <p>
-    <img loading="lazy" src="../images/ucgo/xr2-launch/XR2Launch008.png" width="292" height="346">
-</p>
-<p><strong>SCRAM</strong>エンジンを全開にする。（2Dパネル上のレバー※をマウスでドラッグする）</p>
+    <p>メインエンジンを全開にする。<br>
+      <kbd>Ctrl</kbd>+<kbd>+</kbd>を同時押しする。
+    </p>
 
-<p class="note">※<strong>SCRAM L</strong> &amp; <strong>SCRAM R</strong>の両方</p>
+    <p>
+      「ローテート」のアナウンスを聞いたら機首上げする。<br>
+      テンキー<kbd>2</kbd>を押す。
+    </p>
 
-<p>同時にメインエンジンを停止する。（テンキー <kbd>*</kbd> ）</p>
+    <p>
+      <kbd>G</kbd>を押してランディングギアを格納する。
+    </p>
 
-<h3 id="scram_cruise">スクラムジェットエンジンでの巡航</h3>
+    <p>離陸直後に、ランディングギアが風圧で破損することがある。<br>
+      <kbd>Ctrl</kbd>+<kbd>-</kbd>を同時押しして、エンジン出力を半分にする。
+    </p>
 
-<p>キーボードの<kbd>3</kbd>を押して、船体温度を確認する。</p>
+    <p>必要な方位になるまで旋回する。</p>
 
-  <p>
-    <img loading="lazy" src="../images/ucgo/xr2-launch/XR2Launch009.png" width="314" height="186">
-</p>
-<p>温度が赤色を超えたら機首を上げる。（テンキー<kbd>2</kbd>）</p>
+    <p>メインエンジンを全開にする。</p>
 
-  <p>
-    <img loading="lazy" src="../images/ucgo/xr2-launch/XR2Launch010.png" width="302" height="186">
-</p>
-<p>温度が下がったら機首を下げる。（テンキー<kbd>8</kbd>）</p>
-<p>できるだけ高度を上げすぎないようにしつつ加速を続ける。</p>
-<p><strong>Align MFD</strong>を見ながら、機体を左右に傾けて（テンキー<kbd>4</kbd>&nbsp;or&nbsp;<kbd>6</kbd>）、<strong>RInc</strong>をできるだけ小さくする。</p>
-<p>スクラムジェットの燃料がなくなるか、エンジンがオーバーヒートするまで加速する。</p>
 
-<h3 id="scram_stop">スクラムジェットエンジンを停止</h3>
+    <h2 id="ascend">上昇</h2>
 
-<p><strong>DIFFUSER</strong>の温度表示が赤くなったら（オーバーヒート）、SCRAMエンジンを切る。</p>
 
-  <p>
-    <img loading="lazy" src="../images/ucgo/xr2-launch/XR2Launch011.png" width="297" height="222">
-</p>
-<p><strong>SCRAM DOORS</strong>を<strong>CLOSE</strong>にする。</p>
+    <p><strong>Attitude Hold</strong>オートパイロットを起動する。<br>
+      キーボードの<kbd>L</kbd>を押す。</p>
 
-  <p>
-    <img loading="lazy" src="../images/ucgo/xr2-launch/XR2Launch012.png" width="113" height="139">
-</p>
-<p>メインエンジンを全開にする。（ <kbd>Ctrl</kbd> と <kbd>+</kbd> の同時押し）</p>
+    <p>
+      <img loading="lazy" src="../images/ucgo/xr2-launch/004.png" width="200" height="120">
+    </p>
 
-<h2 id="orbit">軌道投入</h2>
+    <p>
+      迎え角を<strong>60°</strong>にする。<br>
+      テンキー<kbd>2</kbd>を何度か押す。
+    </p>
 
-<p>XR2はDelta Gliderより大気の影響を受けやすい。<br>
-高度100km以下なら、Align MFDを見ながら機体を左右に傾けるだけで軌道修正ができる。</p>
+    <p>
+      <img loading="lazy" src="../images/ucgo/xr2-launch/005.png" width="200" height="120">
+    </p>
 
-<h3 id="orbit_insert">軌道投入噴射</h3>
+    <p>
+      針路を修正して、方位角を維持する。<br>
+      テンキー<kbd>4</kbd>or<kbd>6</kbd>を何度か押す。
+    </p>
 
-<p>高度<strong>100km</strong>を超えたら、キーボード<kbd>L</kbd>を押してオートパイロットを停止する。</p>
-<p>メインエンジンと<kbd>Prograde</kbd>オートパイロットを使って、通常の手順で軌道投入する。</p>
+    <p>高度<strong>20km</strong>を超えるまで上昇する。</p>
 
-<h3 id="radiator">ラジエータを展開する</h3>
+    <p>20kmを超えたら、迎え角をゼロまで下げる。<br>
+      テンキー<kbd>8</kbd>を何度か押す。</p>
 
-<p>宇宙に出たら、<strong>RADIATOR</strong>を<strong>DEPLOY</strong>にする。</p>
+    <p>
+      <img loading="lazy" src="../images/ucgo/xr2-launch/006.png" width="200" height="120">
+    </p>
 
-  <p>
-    <img loading="lazy" src="../images/ucgo/xr2-launch/XR2Launch013.png" width="113" height="140">
-</p>
-<p>これで冷却材の温度が下がる。</p>
-<p><strong class="caution">重要</strong>：<strong>APU</strong>を停止する。</p>
-<p>燃料計左下のボタンを長押しして、余ったSCRAM燃料を投棄する。</p>
+    <p>
+      <strong>M 3.5</strong>（マッハ3.5）になるまで待つ。<br>
+      <strong>Surface MFD</strong>で確認する。
+    </p>
 
-  <p>
-    <img loading="lazy" src="../images/ucgo/xr2-launch/XR2Launch014.png" width="207" height="282">
-</p>
-<p>ここから先のランデブーなどの操作は、Delta Gliderとほぼ同じです。</p>
-<p>次回は、XR2とAerobrake MFDによる、フライトスティックを使わない着陸について解説します。<br>
-<a href="xr2-aerobrakemfd.html">XR2とAeroBrake MFDでの着陸</a></p>
+    <p>
+      <img loading="lazy" src="../images/ucgo/xr2-launch/007.png" width="520" height="520">
+    </p>
 
-<h2 id="videos">動画</h2>
 
-<p><a href="https://youtu.be/20td9GReJ3g" target="_blank" rel="noopener noreferrer">YouTube</a></p>
+    <h2 id="scram">スクラムジェットエンジン</h2>
 
-<p><a href="https://www.nicovideo.jp/watch/sm26464562" target="_blank" rel="noopener noreferrer">ニコニコ動画</a></p>
+
+    <p>メインエンジンを停止し、スクラムジェットエンジンに切り替える。</p>
+
+
+    <h3 id="scram_start">点火</h3>
+
+
+    <p><strong>SCRAM DOORS</strong>を<strong>OPEN</strong>にする。</p>
+
+    <p>
+      <img loading="lazy" src="../images/ucgo/xr2-launch/008.png" width="300" height="150">
+    </p>
+
+    <p><strong>SCRAM</strong>エンジンを全開にする。<br>
+      <kbd>Alt</kbd>キーを押しながら、テンキー<kbd>+</kbd>を押す。
+    </p>
+
+    <p>
+      <img loading="lazy" src="../images/ucgo/xr2-launch/009.png" width="300" height="150">
+    </p>
+
+    <p>メインエンジンを停止する。<br>
+      テンキー<kbd>*</kbd>を押す。</p>
+
+
+    <h3 id="scram_cruise">巡航</h3>
+
+
+    <p>キーボードの<kbd>3</kbd>を押して、船体温度を確認する。</p>
+
+    <p>
+      <img loading="lazy" src="../images/ucgo/xr2-launch/010.png" width="200" height="120">
+    </p>
+
+    <p>温度が赤色を超えたら機首を上げる。<br>
+      テンキー<kbd>2</kbd>を押す。</p>
+
+    <p>
+      <img loading="lazy" src="../images/ucgo/xr2-launch/011.png" width="200" height="120">
+    </p>
+
+    <p>温度が下がったら機首を下げる。<br>
+      テンキー<kbd>8</kbd>を押す。</p>
+
+    <p>
+      高度が上がるとスクラムジェットの出力が落ちる。<br>
+      できるだけ高度を上げすぎないようにする。</p>
+
+
+    <h3 id="scram_stop">停止</h3>
+
+
+    <p>
+      以下の条件を満たしたら、スクラムジェットを停止する。<br>
+      テンキー<kbd>*</kbd>+<kbd>Alt</kbd>を同時押しする。
+    </p>
+
+    <p><strong>DIFFUSER</strong>の温度表示が赤くなったらオーバーヒート。<br>
+      もしくは、スクラムジェットの燃料がなくなるまで加速する。
+    </p>
+
+    <p>
+      <img loading="lazy" src="../images/ucgo/xr2-launch/012.png" width="300" height="150">
+    </p>
+
+    <p><strong>SCRAM DOORS</strong>を<strong>CLOSE</strong>にする。</p>
+
+    <p>
+      <img loading="lazy" src="../images/ucgo/xr2-launch/013.png" width="300" height="150">
+    </p>
+
+
+    <h2 id="insertion">軌道投入</h2>
+
+
+    <p>
+      メインエンジンを再点火して、加速を続ける。
+    </p>
+
+    <p>メインエンジンを全開にする。<br>
+      <kbd>Ctrl</kbd>+<kbd>+</kbd>を同時押しする。
+    </p>
+
+    <p>
+      <strong>ApA</strong>が<strong>200km</strong>を超えたらエンジンを切る。<br>
+      テンキー<kbd>*</kbd>を押す。
+    </p>
+
+    <p>オートパイロットを停止する。<br>
+      キーボード<kbd>L</kbd>を押す。</p>
+
+    <p>通常の手順で軌道投入する。<br>
+      メインエンジンと<kbd>Prograde</kbd>オートパイロットを使う。</p>
+
+
+    <h2 id="radiator">ラジエータを展開する</h2>
+
+
+    <p>宇宙に出たら、<strong>RADIATOR</strong>を<strong>DEPLOY</strong>にする。</p>
+
+    <p>
+      <img loading="lazy" src="../images/ucgo/xr2-launch/014.png" width="300" height="150">
+    </p>
+
+    <p>ラジエータ（放熱板）が展開される。<br>
+      これで冷却材の温度が下がる。</p>
+
+    <p>
+      余ったスクラムジェット燃料を投棄する。<br>
+      燃料計左下のボタンを長押しクリックする。</p>
+
+    <p>
+      <img loading="lazy" src="../images/ucgo/xr2-launch/015.png" width="500" height="250">
+    </p>
+
+
+    <h2 id="apustop">APUを停止する</h2>
+
+
+    <p>
+      ラジエータを展開したら、<strong>APU</strong>を停止する。
+    </p>
+
+    <p>
+      <strong>APU</strong>は起動しているだけで燃料を消費する。<br>
+      タイムワープに入る前に、停止したか確認すること。
+    </p>
+
+    <p>
+      <strong>APU</strong>を使用する機能の一覧：
+    </p>
+
+    <ul>
+      <li>動翼</li>
+      <li>ランディングギア</li>
+      <li>ラジエータ</li>
+      <li>ノーズコーン</li>
+      <li>格納庫ハッチ</li>
+    </ul>
+
+
+    <h2 id="controls">その他の操作</h2>
+
+
+    <p>ランデブーなどの操作は、Delta Gliderと同じ。</p>
+
+    <ul>
+      <li><a href="xr2-aerobrakemfd.html">XR2とAeroBrake MFDでの着陸</a></li>
+      <li><a href="xr2-control.html">XR2の操作</a></li>
+    </ul>
+
+
+    <h2 id="videos">動画</h2>
+
+
+    <p><a href="https://youtu.be/20td9GReJ3g" target="_blank" rel="noopener noreferrer">YouTube</a></p>
+
+    <p><a href="https://www.nicovideo.jp/watch/sm26464562" target="_blank" rel="noopener noreferrer">ニコニコ動画</a></p>
 
   </main>
 
 </body>
+
 </html>
