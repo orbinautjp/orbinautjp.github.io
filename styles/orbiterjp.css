@@ -96,7 +96,22 @@ h4 {
 
 p.note {
    font-size: 85%;
-  }
+}
+p.caution {
+  display: inline-block;
+  background-color: white;
+  border: 0.1rem solid #399139;
+  border-radius: 0.3rem;
+  padding: 0.7rem 0.7rem 0.7rem 3rem;
+  position: relative;
+  margin: auto;
+}
+p.caution::before {
+  content: "⚠";
+  font-size: 1.5rem;
+  position: absolute;
+  left: 0.5rem;
+}
 
 /* hyperlink */
 
@@ -385,6 +400,13 @@ footer ul {
 
   main p {
     overflow-x: auto;
+  }
+  p.caution {
+    padding: 0.5rem 0.5rem 0.5rem 2.5rem;
+  }
+  p.caution::before {
+    font-size: 1.3rem;
+    left: 0.5rem;
   }
 
   main nav {

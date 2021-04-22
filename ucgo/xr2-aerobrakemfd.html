@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 
 <html lang="ja">
+
 <head>
   <script src="../scripts/ga.js"></script>
   <meta charset="UTF-8">
@@ -14,156 +15,383 @@
 
   <main>
 
-  <h1>XR2とAeroBrake MFDでの着陸</h1>
+    <h1>XR2とAeroBrake MFDでの着陸</h1>
 
 
-<p><a href="xr2-install.html" target="_blank">XR2 Ravenstar</a>の<strong>Auto-Land</strong>機能と、<strong>AeroBrake MFD</strong>を使って着陸します。<br>
-今回はフライトスティックは一切使いません。</p>
+    <p>
+      <a href="xr2-install.html">XR2 Ravenstar</a>と、<strong>AeroBrake MFD</strong>を使って着陸します。
+    </p>
 
-<ul>
-<li><a href="#aerobrake_install">AeroBrake MFDのダウンロード・インストール</a></li>
-<li><a href="#aerobrake_reentry">XR2+AeroBrake MFDでの着陸手順</a></li>
-<ol>
-<li><a href="#periapsis">近地点を下げる</a></li>
-<li><a href="#course">針路を調整する</a></li>
-<li><a href="#aerobrake_mfd">AeroBrake MFDを開く</a></li>
-<li><a href="#descent">降下軌道に入る</a></li>
-<li><a href="#reentry">再突入</a></li>
-<li><a href="#landing">ホバーエンジンを使った着陸</a></li>
-</ol>
-<li><a href="#videos">動画</a></li>
-</ul>
+    <nav>
+      <ul>
+        <li><a href="#install">AeroBrake MFDのインストール</a></li>
+      </ul>
+      <ol>
+        <li><a href="#deorbit">周回軌道を離脱する</a></li>
+        <li><a href="#reentry">再突入の準備</a>
+          <ul>
+            <li><a href="#reentry_check">再突入チェック</a></li>
+            <li><a href="#reentry_autopilot">姿勢制御を開始する</a></li>
+          </ul>
+        </li>
+        <li><a href="#aerobrake">AeroBrake MFD</a>
+          <ul>
+            <li><a href="#aerobrake_target">ターゲットを設定する</a></li>
+            <li><a href="#aerobrake_path">降下軌道に入る</a></li>
+            <li><a href="#aerobrake_map">針路を修正する</a></li>
+          </ul>
+        </li>
+        <li><a href="#landing">着陸</a>
+          <ul>
+            <li><a href="#landing_approach">滑走路に接近する</a></li>
+            <li><a href="#landing_alignment">滑走路上空に移動する</a></li>
+            <li><a href="#landing_autoland">自動着陸</a></li>
+          </ul>
+        </li>
+      </ol>
+      <ul>
+        <li><a href="#controls">その他の操作</a></li>
+        <li><a href="#videos">動画</a></li>
+      </ul>
+    </nav>
 
-<h2 id="aerobrake_install">AeroBrake MFDのダウンロード・インストール</h2>
 
-<p><a href="https://www.orbithangar.com/searchid.php?ID=2139" target="_blank" rel="noopener noreferrer">AeroBrakeMFD</a></p>
-<p>ダウンロードしたファイルを解凍して、中身をOrbiterのインストールフォルダに上書き。<br>
-Launchpadの<strong>Modules</strong>タブで<strong>AeroBrakeMFD</strong>にチェックを入れる。</p>
+    <h2 id="install">AeroBrake MFDのインストール</h2>
 
-<h2 id="aerobrake_reentry">XR2+AeroBrake MFDでの着陸手順</h2>
 
-<p>宇宙ステーションを離脱。（<kbd>Ctrl</kbd>+<kbd>D</kbd>で分離する）</p>
+    <p>
+      下のリンクをクリック。<br>
+      <kbd>Download</kbd>をクリックして、<strong>AeroBrake0.96.2.zip</strong>をクリック。
+    </p>
 
-<h3 id="periapsis">近地点を下げる</h3>
+    <p>
+      <a href="https://www.orbithangar.com/searchid.php?ID=2139" target="_blank"
+        rel="noopener noreferrer">AeroBrakeMFD</a>
+    </p>
 
-<p><strong>Map MFD</strong>を見ながら、着陸予定地点へ最接近するタイミングを待つ。</p>
+    <p>ダウンロードしたファイルを解凍して、中のファイル・フォルダをすべてコピー。<br>
+      Orbiterのインストールフォルダにペーストして上書きする。</p>
 
-  <p>
-    <img loading="lazy" src="../images/ucgo/xr2-aerobrakemfd/XR2Landing001.png" width="411" height="394">
-</p>
-<p>あと1周を切ったら、目標地点の裏側で<strong>Retrograde</strong>噴射をする。</p>
+    <p>
+      Orbiterを起動して、<kbd>Modules</kbd>タブを開く。<br>
+      <strong>AeroBrakeMFD</strong>にチェックを入れる。
+    </p>
 
-  <p>
-    <img loading="lazy" src="../images/ucgo/xr2-aerobrakemfd/XR2Landing002.png" width="361" height="276">
-</p>
-<p>近地点の高度(<strong>PeA</strong>)が<strong>40km</strong>程度になるようにする。</p>
+    <p>
+      <img loading="lazy" src="../images/ucgo/xr2-aerobrakemfd/001.png" width="300" height="150">
+    </p>
 
-<h3 id="course">針路を調整する</h3>
 
-<p>ある程度、目標地点に近づくのを待つ。</p>
+    <h2 id="deorbit">周回軌道を離脱する</h2>
 
-  <p>
-    <img loading="lazy" src="../images/ucgo/xr2-aerobrakemfd/XR2Landing013.png" width="536" height="378">
-</p>
-<p>Map MFDを見ながら、<strong>Orbit Normal</strong>（<strong>+</strong>か<strong>-</strong>）オートパイロットを使って、目標地点のおおよそ真上を通るようにする。※<br>
-<a href="https://www.orbithangar.com/searchid.php?ID=6881" target="_blank" rel="noopener noreferrer">BaseSync MFD</a>を使うと効率がよい。</p>
 
-<p>
-<img loading="lazy" src="../images/ucgo/xr2-aerobrakemfd/XR2Landing003.png" width="403" height="392">
-</p>
-<p class="note">※参照：<a href="../tutorial/moon-mcc-notransx.html" target="_blank">月基地への軌道修正 補足解説</a>
-</p>
-<p>針路が決まったら、余分な燃料を捨てる。<br>
-残り30%以下を目安にする。</p>
+    <p>
+      <kbd>Ctrl</kbd>を押しながら<kbd>D</kbd>を押す。<br>
+      ドッキングポートを離れる。
+    </p>
 
-<p>
-<img loading="lazy" src="../images/ucgo/xr2-aerobrakemfd/XR2Landing004.png" width="180" height="369">
-</p>
+    <p>
+      RCSを使って少し距離を取る。<br>
+      <strong>RCS LIN</strong>にしてテンキーの<kbd>9</kbd>を押す。
+    </p>
 
-<h3 id="aerobrake_mfd">AeroBrake MFDを開く</h3>
+    <p>
+      <strong>APU</strong>を起動する。<br>
+      <kbd>Ctrl</kbd>+<kbd>K</kbd>を押してノーズコーンを閉じる。
+    </p>
 
-<p><kbd>SEL</kbd>をクリックして、<strong>AeroBrake MFD</strong>を起動する。</p>
-<p><kbd>TGT</kbd>をクリックして、<strong>Cape Canaveral</strong>を指定。</p>
+    <p>
+      <img loading="lazy" src="../images/ucgo/xr2-aerobrakemfd/002.png" width="260" height="130">
+    </p>
 
-  <p>
-    <img loading="lazy" src="../images/ucgo/xr2-aerobrakemfd/XR2Landing005.png" width="395" height="340">
-</p>
-<p>機首を<strong>Prograde</strong>の方向に向けておく。</p>
+    <p>
+      ノーズコーンが閉じたら、<strong>APU</strong>を停止する。
+    </p>
 
-<h3 id="descent">降下軌道に入る</h3>
+    <p>
+      以下のページを参照して、軌道離脱噴射を実行する。<br>
+      <strong>COM/NAV MFD</strong>の設定が終わったら、このページに戻る。
+    </p>
 
-<p>キーボードの<kbd>L</kbd>を押して、<strong>Attitude Hold</strong>オートパイロットを起動。</p>
+    <p>
+      <a href="../tutorial/part7.html#mapmfd">Part7 軌道離脱と再突入の準備</a>
+    </p>
 
-  <p>
-    <img loading="lazy" src="../images/ucgo/xr2-aerobrakemfd/XR2Landing006.png" width="229" height="144">
-</p>
-<p>テンキーの<kbd>2</kbd>を何度か押して機首を引き起こす。</p>
-<p>AeroBrake MFD上のふたつの直線が重なるようにする。<br>
-（黄色が目標地点、白が予測される着陸地点）</p>
 
-<p>
-<img loading="lazy" src="../images/ucgo/xr2-aerobrakemfd/XR2Landing007.png" width="309" height="337">
-</p>
-<p><kbd>PG</kbd>をクリックしてから、<kbd>PRJ</kbd>をクリックするとマップ画面になる。</p>
-<p>右上に着陸目標と予測針路が表示されるので、両者が重なるように機体の姿勢を変える。</p>
+    <h2 id="reentry">再突入の準備</h2>
 
-  <p>
-    <img loading="lazy" src="../images/ucgo/xr2-aerobrakemfd/XR2Landing009.png" width="414" height="316">
-</p>
-<p>具体的には、テンキーの<kbd>2</kbd>&nbsp;or&nbsp;<kbd>8</kbd>と<kbd>4</kbd>&nbsp;or&nbsp;<kbd>6</kbd>を使う。</p>
 
-<h3 id="reentry">再突入</h3>
+    <p>
+      再突入の前に、ラジエータなどを収納しておく。<br>
+      オートパイロットを実行し、再突入姿勢にする。
+    </p>
 
-<p>キーボードの<kbd>9</kbd>を押して、再突入チェックをする。</p>
 
-  <p>
-    <img loading="lazy" src="../images/ucgo/xr2-aerobrakemfd/XR2Landing008.png" width="226" height="139">
-</p>
-<p><strong>Radiator</strong>（ラジエータ）を格納しておく（<strong>STOW</strong>にする）。</p>
-<p><strong>Attitude Hold</strong>オートパイロットを起動させた状態で高度が下がる（大気圏に入る）と、APUが自動的に起動する。</p>
-<p>キーボードの<kbd>3</kbd>を押して温度を確認しつつ再突入する。</p>
+    <h3 id="reentry_check">再突入チェック</h3>
 
-  <p>
-    <img loading="lazy" src="../images/ucgo/xr2-aerobrakemfd/XR2Landing010.png" width="198" height="122">
-</p>
-<p>AeroBrake MFDの表示を見つつ、目標地点を目指して機体の姿勢を変える。</p>
-<p>目標地点に近づいたら、オートパイロットを切る。</p>
-<p>VORやHSIの使い方については、以下の項目を参照してください。</p>
 
-<ol>
-<li><a href="../tutorial/part7.html#vor" target="_blank">基地のVOR周波数を入力する</a><br></li>
-<li><a href="../tutorial/part8.html#vor" target="_blank">VOR/VTOL MFD</a><br></li>
-<li><a href="../tutorial/part8.html#hsi" target="_blank">HSI MFD</a></li>
-</ol>
+    <p>高度が<strong>150km</strong>になるのを待つ。</p>
 
-<h3 id="landing">ホバーエンジンを使った着陸</h3>
+    <p>
+      <kbd>ProGrade</kbd>オートパイロットを起動する。<br>
+      機首を前方に向ける。
+    </p>
 
-<p>滑走路に接近したら、<strong>Hover</strong>と<strong>Retro Doors</strong>を<strong>OPEN</strong>にする。</p>
+    <p>
+      <strong>APU</strong>を起動する。<br>
+      <strong>RADIATOR</strong>を<strong>STOW</strong>にする。<br>
+      <kbd>Alt</kbd>+<kbd>R</kbd>を押す。
+    </p>
 
-  <p>
-    <img loading="lazy" src="../images/ucgo/xr2-aerobrakemfd/XR2Landing011.png" width="149" height="173">
-</p>
-<p>キーボードの<kbd>G</kbd>を押してランディングギアを展開。</p>
-<p><kbd>Ctrl</kbd>+<kbd>B</kbd>を押してエアブレーキを展開。</p>
-<p>キーボードの<kbd>A</kbd>を押して、<strong>Descent Hold</strong>オートパイロットを起動。</p>
+    <p>
+      <img loading="lazy" src="../images/ucgo/xr2-aerobrakemfd/003.png" width="260" height="130">
+    </p>
 
-  <p>
-    <img loading="lazy" src="../images/ucgo/xr2-aerobrakemfd/XR2Landing012.png" width="246" height="152">
-</p>
-<p><strong>Auto-Land</strong>ボタンをクリックする（もしくはテンキーで<kbd>0</kbd>を押す）と自動着陸に入る。</p>
-<p>RCSを使って針路を微調整する。</p>
-<p>逆噴射（テンキーの<kbd>-</kbd>（マイナス））で速度を落とす。</p>
-<p>ホイールブレーキ（キーボード<kbd>,</kbd>（コンマ）<kbd>.</kbd>（ピリオド））を押しっぱなしにして着陸する。</p>
-<p>着陸したらオートパイロットは自動停止する。</p>
-<p>停止したら<strong>EXTERNAL COOLING</strong>を起動して、冷却材の温度を下げる。</p>
+    <p>
+      再突入チェックをする。<br>
+      キーボードの<kbd>9</kbd>を押す。
+    </p>
 
-<h2 id="videos">動画</h2>
+    <p>
+      <img loading="lazy" src="../images/ucgo/xr2-aerobrakemfd/004.png" width="200" height="120">
+    </p>
 
-<p><a href="https://youtu.be/8r9c9-lMsYg" target="_blank" rel="noopener noreferrer">YouTube</a></p>
+    <p>赤で表示されているものがあれば、隣のボタンをクリック。</p>
 
-<p><a href="https://www.nicovideo.jp/watch/sm26487920" target="_blank" rel="noopener noreferrer">ニコニコ動画</a></p>
+    <p>
+      <kbd>ProGrade</kbd>オートパイロットを解除する。<br>
+      <kbd>H</kbd>を押して<strong>Surface HUD</strong>にする。
+    </p>
+
+    <p>
+      <strong>RCS MODE</strong>を<strong>OFF</strong>に切り替える。<br>
+      <strong>AF CTRL</strong>を<strong>ON</strong>にする。
+    </p>
+
+    <p>
+      <img loading="lazy" src="../images/ucgo/xr2-aerobrakemfd/005.png" width="300" height="150">
+    </p>
+
+
+    <h3 id="reentry_autopilot">姿勢制御を開始する</h3>
+
+
+    <p>
+      <strong>ATTITUDE HOLD</strong>オートパイロットを起動する。<br>
+      キーボードの<kbd>L</kbd>を押す。
+    </p>
+
+    <p>機体が水平になるのを待つ。</p>
+
+    <p>
+      <strong>AOA</strong>（迎え角）を<strong>40°</strong>にする。<br>
+      テンキー<kbd>2</kbd>を何度か押す。
+    </p>
+
+    <p>
+      <img loading="lazy" src="../images/ucgo/xr2-aerobrakemfd/006.png" width="200" height="120">
+    </p>
+
+
+    <h2 id="aerobrake">AeroBrake MFD</h2>
+
+
+    <p><strong>AeroBrake MFD</strong>を使って、地上基地へと降下する。</p>
+
+
+    <h3 id="aerobrake_target">ターゲットを設定する</h3>
+
+
+    <p><strong>Surface MFD</strong>を開いておく。</p>
+
+    <p>
+      反対側のMFDで<kbd>SEL</kbd>をクリック。<br>
+      <strong>AeroBrake MFD</strong>を開く。
+    </p>
+
+    <p>
+      <kbd>TGT</kbd>をクリック。<br>
+      <strong>Cape Canaveral</strong>と入力する。
+    </p>
+
+    <p>
+      <img loading="lazy" src="../images/ucgo/xr2-aerobrakemfd/007.png" width="425" height="425">
+    </p>
+
+
+    <h3 id="aerobrake_path">降下軌道に入る</h3>
+
+
+    <p>
+      黄色が目標地点を表す。<br>
+      白が予想着陸地点を表す。
+    </p>
+
+    <p>
+      機首を上げ下げして、2つの直線を重ねる。<br>
+      テンキー<kbd>2</kbd>or<kbd>8</kbd>を押す。
+    </p>
+
+    <p>
+      <kbd>Alt</kbd>キーとの同時押しで、細かい調節ができる。
+    </p>
+
+    <p>
+      <img loading="lazy" src="../images/ucgo/xr2-aerobrakemfd/008.png" width="425" height="425">
+    </p>
+
+
+    <h3 id="aerobrake_map">針路を修正する</h3>
+
+
+    <p>
+      マップ画面に切り替える。<br>
+      <kbd>PG</kbd>→<kbd>PRJ</kbd>の順でクリック。
+    </p>
+
+    <p>
+      世界地図と、右上の拡大画面に予想針路が表示される。<br>
+      黄色い点が目的地を表す。
+    </p>
+
+    <p>緑の線の先端が、黄色い点の近くを通るようにする。</p>
+
+    <p>
+      <img loading="lazy" src="../images/ucgo/xr2-aerobrakemfd/009.png" width="425" height="425">
+    </p>
+
+    <p>
+      テンキー<kbd>4</kbd>or<kbd>6</kbd>を何度か押す。<br>
+      機体を大きく傾けて、針路を左右に変更する。
+    </p>
+
+    <p>
+      テンキー<kbd>2</kbd>or<kbd>8</kbd>を押す。<br>
+      迎え角に応じて、緑の線の長さが変わる。
+    </p>
+
+    <p>
+      <kbd>Alt</kbd>キーとの同時押しで、細かい調節ができる。
+    </p>
+
+
+    <h2 id="landing">着陸</h2>
+
+
+    <p>滑走路上空まで飛行し、オートパイロットで着陸する。</p>
+
+
+    <h3 id="landing_approach">滑走路に接近する</h3>
+
+
+    <p>
+      基地の<strong>200km</strong>以内に接近したら、オートパイロットを解除する。<br>
+      キーボードの<kbd>L</kbd>を押す。
+    </p>
+
+    <p>
+      <img loading="lazy" src="../images/ucgo/xr2-aerobrakemfd/010.png" width="300" height="150">
+    </p>
+
+    <p>
+      高速飛行中に旋回すると、機体が壊れることがある。<br>
+      速度が落ちるまで慎重に操縦すること。
+    </p>
+
+    <p>
+      <strong>AeroBrake MFD</strong>下の<kbd>SEL</kbd>をクリック。<br>
+      <strong>VOR/VTOL</strong>に切り替える。
+    </p>
+
+    <p>
+      以下のページを参照して、滑走路の手前まで飛行する。<br>
+      ILSの信号を受信したら、このページに戻る。
+    </p>
+
+    <p>
+      <a href="../tutorial/part8.html#vor">Part8 再突入と着陸</a>
+    </p>
+
+    <p><kbd>Ctrl</kbd>+<kbd>P</kbd>を押して、一時停止を解除する。</p>
+
+
+    <h3 id="landing_alignment">滑走路上空に移動する</h3>
+
+
+    <p>
+      <strong>HOVER</strong>と<strong>RETRO DOORS</strong>を<strong>OPEN</strong>にする。<br>
+      <kbd>Ctrl</kbd>+<kbd>\</kbd>（バックスラッシュ）を押す。<br>
+      <kbd>Ctrl</kbd>+<kbd>V</kbd>を押す。
+    </p>
+
+    <p>
+      <img loading="lazy" src="../images/ucgo/xr2-aerobrakemfd/011.png" width="260" height="130">
+    </p>
+
+    <p>
+      ランディングギアを出しておく。<br>
+      キーボードで<kbd>G</kbd>を押す。
+    </p>
+
+    <p>
+      エアブレーキを展開する。<br>
+      <kbd>Ctrl</kbd>+<kbd>B</kbd>を押す。
+    </p>
+
+    <p>
+      宇宙船を操縦して、滑走路の真上に移動する。<br>
+      メインエンジンを使って、秒速120m以上を維持する。
+    </p>
+
+
+    <h3 id="landing_autoland">自動着陸</h3>
+
+
+    <p>
+      ホバーのオートパイロットを起動する。<br>
+      キーボードで<kbd>A</kbd>を押す。
+    </p>
+
+    <p>
+      逆噴射エンジンを使って減速する。<br>
+      テンキー<kbd>-</kbd>を押す。
+    </p>
+
+    <p>
+      <strong>RCS LIN</strong>にする。<br>
+      テンキー<kbd>1</kbd>or<kbd>3</kbd>、<kbd>6</kbd>or<kbd>9</kbd>を押して移動する。
+    </p>
+
+    <p>
+      <strong>AUTO-LAND</strong>機能を有効にする。<br>
+      テンキー<kbd>0</kbd>を押す。
+    </p>
+
+    <p>現在の位置で自動着陸する。</p>
+
+    <p>
+      <img loading="lazy" src="../images/ucgo/xr2-aerobrakemfd/012.png" width="200" height="120">
+    </p>
+
+
+    <h2 id="controls">その他の操作</h2>
+
+
+    <ul>
+      <li><a href="xr2-launch.html">XR2の打ち上げ・軌道投入</a></li>
+      <li><a href="xr2-control.html">XR2の操作</a></li>
+    </ul>
+
+
+    <h2 id="videos">動画</h2>
+
+
+    <p><a href="https://youtu.be/8r9c9-lMsYg" target="_blank" rel="noopener noreferrer">YouTube</a></p>
+
+    <p><a href="https://www.nicovideo.jp/watch/sm26487920" target="_blank" rel="noopener noreferrer">ニコニコ動画</a></p>
 
   </main>
 
 </body>
+
 </html>
