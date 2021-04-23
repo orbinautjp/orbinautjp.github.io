@@ -31,21 +31,21 @@
         </li>
         <li><a href="#apu">APU（補助動力装置）</a></li>
         <li><a href="#damage">ダメージ判定</a>
-          <ol>
+          <ul>
             <li><a href="#damage_coolant">COOLANT TEMP（冷却材の温度）</a></li>
             <li><a href="#damage_hulltemp">船体外壁の温度</a></li>
             <li><a href="#damage_impact">衝撃</a></li>
             <li><a href="#damage_oxygen">酸素</a></li>
             <li><a href="#damage_drag">空気抵抗</a></li>
             <li><a href="#damage_wing">主翼荷重</a></li>
-          </ol>
+          </ul>
         </li>
         <li><a href="#scramjet">スクラムジェットエンジン</a></li>
         <li><a href="#mda">MDAとオートパイロット</a>
           <ol>
             <li><a href="#mda_descent">DESCENT HOLD AUTOPILOT</a></li>
             <li><a href="#mda_attitude">ATTITUDE HOLD AUTOPILOT</a></li>
-            <li><a href="#mda_airspeed">AIRSPEED HOLD AUTOPILOT</a></li>
+            <li value="0"><a href="#mda_airspeed">AIRSPEED HOLD AUTOPILOT</a></li>
           </ol>
         </li>
         <li><a href="#fuel">燃料・酸素の補給</a></li>
@@ -69,7 +69,7 @@
     </p>
 
     <p>
-      <kbd>Ctrl</kbd>キーを押しながら<strong>矢印キー</strong>を押す。<br>
+      <kbd>Ctrl</kbd>キーを押しながら<kbd>↑</kbd>or<kbd>↓</kbd>キーを押す。<br>
       上下のパネルにアクセスできる。
     </p>
 
@@ -442,13 +442,17 @@
         <td>EXTERNAL SUPPLY LINES</td>
         <td>外部補給ライン</td>
       </tr>
+      <tr>
+        <td>X-FEED</td>
+        <td>クロスフィードバルブ</td>
+      </tr>
     </table>
 
 
     <h2 id="crew">乗員の管理</h2>
 
 
-    <p>
+    <p class="caution">
       2021年4月現在、XR2には<strong>宇宙飛行士が実装されていない</strong>。<br>
       以下はOrbiter2010版での内容だが、<strong>2010対応版は公開終了</strong>になっている。
     </p>

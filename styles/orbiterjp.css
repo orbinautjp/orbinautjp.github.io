@@ -128,7 +128,10 @@ a[href]:hover {
 kbd {
   font-family: Arial, Meiryo;
   background-color: #ffffff;
-  border: 0.1rem solid #000000;
+  border-bottom: 0.1rem solid #4C4C4C;
+  border-right: 0.1rem solid #4C4C4C;
+  border-top: 0.1rem solid #B2B2B2;
+  border-left: 0.1rem solid #B2B2B2;
   padding: 0.05rem 0.2rem;
   margin-left: 0.2rem;
   margin-right: 0.2rem;
@@ -380,8 +383,10 @@ footer ul {
     bottom: -1.5rem;
     width: auto;
     white-space: nowrap;
+    font-size: 0.7rem;
+    color: black;
     background-color: white;
-    border: 0.1rem solid black;
+    border: 0.05rem solid black;
     padding: 0.05rem 0.2rem;
     line-height: 1.1rem;
   }
