@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <script src="../scripts/ga.js"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../styles/orbiterjp.css">
+  <script src="../scripts/template.js" charset="utf-8" defer></script>
+  <title>NASA Trajectory Browserの使い方</title>
+</head>
+
+<body>
+
+  <main>
+
+    <h1>NASA Trajectory Browserの使い方</h1>
+
+
+    <p>
+      <a href="https://trajbrowser.arc.nasa.gov/traj_browser.php" target="_blank" rel="noopener noreferrer">NASA
+        Trajectory Browser</a>の利用方法について説明します。
+    </p>
+
+    <nav>
+      <ul>
+        <li><a href="#feature">特徴</a></li>
+        <li><a href="#target">目標を設定する</a></li>
+        <li><a href="#mission">条件を設定する</a>
+          <ul>
+            <li><a href="#mission_type">Mission type</a></li>
+            <li><a href="#mission_year">Launch year</a></li>
+            <li><a href="#mission_duration">Max duration</a></li>
+            <li><a href="#mission_dv">Max ΔV</a></li>
+            <li><a href="#mission_min">Minimize</a></li>
+            <li><a href="#mission_show">Show</a></li>
+          </ul>
+        </li>
+        <li><a href="#display">軌道を表示する</a></li>
+        <li><a href="#caution">注意点</a></li>
+        <li><a href="#video">動画</a></li>
+      </ul>
+    </nav>
+
+
+    <h2 id="feature">特徴</h2>
+
+
+    <p>
+      <a href="https://trajbrowser.arc.nasa.gov/traj_browser.php" target="_blank" rel="noopener noreferrer">NASA
+        Ames Research Center Trajectory Browser</a>
+    </p>
+
+    <p>
+      NASAのエイムズ研究センターが公開している軌道検索ツールです。<br>
+      目的地と条件を設定して、該当する軌道を検索することができます。<br>
+      新しく軌道計算を行うわけではなく、すでに登録されている軌道の中から検索します。
+    </p>
+
+
+    <h2 id="target">目標を設定する</h2>
+
+
+    <p><strong>NEOs with constraints</strong>のチェックを外す。※</p>
+
+    <p class="note">※チェックが入っていると、条件に合うNEO（地球近傍天体）がすべて検索される</p>
+
+    <p>
+      <strong>Custom list</strong>にチェックを入れる。<br>
+      行きたい惑星・小惑星・彗星の名前を入力する。
+    </p>
+
+
+    <h2 id="mission">条件を設定する</h2>
+
+
+    <h3 id="mission_type">Mission type</h3>
+
+
+    <table>
+      <tr>
+        <th>one-way</th>
+        <td>片道</td>
+      </tr>
+      <tr>
+        <th>round-trip</th>
+        <td>往復</td>
+      </tr>
+      <tr>
+        <th>flyby</th>
+        <td>フライバイ（近くを通るだけ）</td>
+      </tr>
+      <tr>
+        <th>rendezvous</th>
+        <td>ランデブー（周回軌道に入る・着陸する）</td>
+      </tr>
+    </table>
+
+
+    <h3 id="mission_year">Launch year</h3>
+
+
+    <p>打ち上げる時期を決める。<br>
+      <strong>2010年の元旦から2040年の元旦まで</strong>しか設定できない。
+    </p>
+
+
+    <h3 id="mission_duration">Max duration</h3>
+
+
+    <p>ミッションの開始から終了までの年数。</p>
+
+
+    <h3 id="mission_dv">Max ΔV</h3>
+
+
+    <p>ミッションの開始から終了までに必要な<strong>Delta V</strong>の合計。</p>
+
+
+    <h3 id="mission_min">Minimize</h3>
+
+
+    <p><strong>ΔV</strong>に設定すると、合計<strong>Delta V</strong>が最小になるものを表示する。<br>
+      <strong>Duration</strong>でミッションにかかる時間を最小にする。
+    </p>
+
+
+    <h3 id="mission_show">Show</h3>
+
+
+    <table>
+      <tr>
+        <td><strong>optima</strong></td>
+        <td>合計Delta V or 必要時間が最小になるものだけ表示</td>
+      </tr>
+      <tr>
+        <td><strong>1-yr local optima</strong></td>
+        <td>1年の間隔で最適な軌道を表示</td>
+      </tr>
+      <tr>
+        <td><strong>all trajectories</strong></td>
+        <td>条件に合う軌道をすべて表示</td>
+      </tr>
+    </table>
+
+
+    <h2 id="display">軌道を表示する</h2>
+
+
+    <p>入力が終わったら、<kbd>Search</kbd>ボタンをクリック。<br>
+      条件に合う軌道が表示される。</p>
+    <p>各項目名をクリックするとソートされる。<br>
+      <kbd>View</kbd>ボタンをクリックすると、その軌道についての詳しい情報が表示される。
+    </p>
+    <p>View画面左下の三角のボタンをクリックすると、天体と宇宙船の移動する様子をアニメーションで再生する。</p>
+
+
+    <h2 id="caution">注意点</h2>
+
+
+    <p>地球以外の惑星を出発点に設定することはできない。</p>
+    <p>月などの衛星は目的地に設定できない。</p>
+    <p>
+      スイングバイを含む軌道を指定することはできない。<br>
+      条件に合う軌道のなかに、たまたまスイングバイが含まれる場合には表示される。
+    </p>
+    <p>表示される軌道は、データベースに登録されているものに限られる。<br>
+      場合によっては検索結果より効率のよい軌道が存在することもある。</p>
+
+
+    <h2 id="video">動画</h2>
+
+
+    <p>
+      <a href="https://www.nicovideo.jp/watch/sm32071224" target="_blank" rel="noopener noreferrer">【軌道計算】NASA
+        Trajectory Browserで遊ぼう【琴葉解説】 - ニコニコ動画</a>
+    </p>
+
+  </main>
+
+</body>
+
+</html>
