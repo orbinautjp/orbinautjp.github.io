@@ -23,15 +23,16 @@
     </p>
 
     <ul>
-      <li><a href="#ctd">読み込み中に強制終了する</a></li>
+      <li><a href="#ctd_loading">読み込み中に強制終了する</a></li>
       <li><a href="#sc3">Spacecraft3.dllで強制終了する</a></li>
       <li><a href="#d3d9">D3D9Clientでゲームを起動できない</a></li>
       <li><a href="#invisible">宇宙船が見えない</a></li>
       <li><a href="#ctd_ingame">ゲーム中に強制終了する</a></li>
       <li><a href="#spin">宇宙船の回転が止まらなくなる</a></li>
       <li><a href="#blur">画面がぼやける</a></li>
+      <li><a href="#mfdslow">MFDの反応が遅い</a></li>
       <li><a href="#nosound">音声が再生されない</a></li>
-      <li><a href="#mfd_delay">MFDの反応が遅い</a></li>
+      <li><a href="#soundbridge">MODの音声が再生されない (2016)</a></li>
       <li><a href="#font">Windowsのフォントが汚くなる (2016)</a></li>
       <li><a href="#runway">地面を走行できない (2016)</a></li>
       <li><a href="#sinking">機体が地面に沈む (2016)</a></li>
@@ -47,7 +48,7 @@
     </p>
 
 
-    <h2 id="ctd">読み込み中に強制終了する</h2>
+    <h2 id="ctd_loading">読み込み中に強制終了する</h2>
 
 
     <h3>症状</h3>
@@ -100,11 +101,11 @@
     <p>
       必要なファイルが揃っているか確認する。<br>
       足りないファイルがある場合は、インストールしてもう一度ゲームを開始する。<br>
-      必要なファイルがすべて揃っている場合は、開発者に報告する。※
+      必要なファイルがすべて揃っている場合は、開発者に報告する。
     </p>
 
     <p>
-      ※英語でのコメントが難しい場合は、以下のページでもバグ報告を受け付けています。<br>
+      以下のページでもバグ報告を受け付けています。<br>
       <a href="troubleshooting.html" target="_blank">バグ・トラブルを報告する</a>
     </p>
 
@@ -196,11 +197,11 @@
     <p>
       必要なファイルが揃っているか確認する。<br>
       足りないファイルがある場合は、インストールしてもう一度ゲームを開始する。<br>
-      必要なファイルがすべて揃っている場合は、開発者に報告する。※
+      必要なファイルがすべて揃っている場合は、開発者に報告する。
     </p>
 
     <p>
-      ※英語でのコメントが難しい場合は、以下のページでもバグ報告を受け付けています。<br>
+      以下のページでもバグ報告を受け付けています。<br>
       <a href="troubleshooting.html" target="_blank">バグ・トラブルを報告する</a>
     </p>
 
@@ -234,11 +235,11 @@
     </p>
 
     <p>
-      特定の操作が原因で強制終了する場合は、開発者に報告する。※
+      特定の操作が原因で強制終了する場合は、開発者に報告する。
     </p>
 
     <p>
-      ※英語でのコメントが難しい場合は、以下のページでもバグ報告を受け付けています。<br>
+      以下のページでもバグ報告を受け付けています。<br>
       <a href="troubleshooting.html" target="_blank">バグ・トラブルを報告する</a>
     </p>
 
@@ -258,7 +259,7 @@
 
 
     <p>
-      <kbd>Prograde</kbd>などのオートパイロットを実行中にタイムワープを使うと発生しやすい。
+      <kbd>ProGrade</kbd>などのオートパイロットを実行中にタイムワープを使うと発生しやすい。
     </p>
 
 
@@ -295,50 +296,7 @@
     </p>
 
 
-    <h2 id="nosound">音声が再生されない</h2>
-
-
-    <h3>症状</h3>
-
-
-    <p>ゲーム内でエンジン音など一切の音声が再生されない。</p>
-
-
-    <h3>原因</h3>
-
-
-    <p>デフォルトの<a href="orbiter2010.html">Orbiter2010</a> / <a
-        href="orbiter2016.html">Orbiter2016</a>には音声を再生する機能が存在しない。<br>
-      ユーザーが音声再生MODを導入する必要がある。</p>
-
-
-    <h3>対策</h3>
-
-
-    <p>Orbiter2010ならOrbiterSound、Orbiter2016ならXRSoundを導入する。</p>
-
-    <p><a href="orbiter2010.html#orbitersound">Orbiter2010のダウンロード+インストール - OrbiterSound</a><br>
-      <a href="orbiter2016.html#xrsound">Orbiter2016のダウンロード+インストール - XRSound</a>
-    </p>
-
-    <p><kbd>Modules</kbd>タブで<strong>OrbiterSound</strong>/<strong>XRSound</strong>にチェックを入れる。</p>
-
-    <figure>
-      <img loading="lazy" src="../images/basic/knownbugs/003.png" width="240" height="49">
-      <figcaption>Orbiter2010 + OrbiterSound</figcaption>
-    </figure>
-
-    <figure>
-      <img loading="lazy" src="../images/basic/knownbugs/004.png" width="233" height="37">
-      <figcaption>Orbiter2016 + XRSound</figcaption>
-    </figure>
-
-    <p>以上のMODを導入しているのに音声が再生されないときは、下記ページにて報告してください。<br>
-      <a href="troubleshooting.html" target="_blank">バグ・トラブルを報告する</a>
-    </p>
-
-
-    <h2 id="mfd_delay">MFDの反応が遅い</h2>
+    <h2 id="mfdslow">MFDの反応が遅い</h2>
 
 
     <h3>症状</h3>
@@ -360,6 +318,93 @@
     <p>
       <a href="../transximfd/transxinstall.html#refresh" target="_blank">TransXの更新と設定 - MFDの更新速度を設定する</a>
     </p>
+
+
+    <h2 id="nosound">音声が再生されない</h2>
+
+
+    <h3>症状</h3>
+
+
+    <p>ゲーム内でエンジン音など一切の音声が再生されない。</p>
+
+
+    <h3>原因</h3>
+
+
+    <p>
+      <a href="orbiter2010.html">Orbiter2010</a>、<a href="orbiter2016.html">Orbiter2016</a>には音声を再生する機能が存在しない。<br>
+      ユーザーが音声再生MODを導入する必要がある。
+    </p>
+
+
+    <h3>対策</h3>
+
+
+    <p>
+      <strong>Orbiter2010</strong>なら<a href="orbitersound-4.html">OrbiterSound 4.0</a>、<strong>Orbiter2016</strong>なら<a
+        href="xrsound.html">XRSound</a>を導入する。
+    </p>
+
+    <p>
+      <kbd>Modules</kbd>タブで<strong>OrbiterSound</strong>/<strong>XRSound</strong>にチェックを入れる。
+    </p>
+
+    <figure>
+      <img loading="lazy" src="../images/basic/knownbugs/003.png" width="240" height="49">
+      <figcaption>Orbiter2010 + OrbiterSound</figcaption>
+    </figure>
+
+    <figure>
+      <img loading="lazy" src="../images/basic/knownbugs/004.png" width="233" height="37">
+      <figcaption>Orbiter2016 + XRSound</figcaption>
+    </figure>
+
+    <p>以上のMODを導入しているのに音声が再生されないときは、下記ページにて報告してください。<br>
+      <a href="troubleshooting.html" target="_blank">バグ・トラブルを報告する</a>
+    </p>
+
+
+    <h2 id="soundbridge">MODの音声が再生されない (2016)</h2>
+
+
+    <h3>症状</h3>
+
+
+    <p>MODに固有の音源（打ち上げカウントダウンなど）が再生されない。</p>
+
+
+    <h3>原因</h3>
+
+
+    <p><a href="../basic/orbiter2016.html">Orbiter2016</a>には、<a
+        href="../basic/xrsound.html">XRSound</a>とOrbiterSoundの2種類の音声再生MODがある。</p>
+
+    <p>
+      <a href="../basic/xrsound.html">XRSound</a>向けの音源はOrbiterSoundで再生されない。<br>
+      OrbiterSound向けの音源は<a href="../basic/xrsound.html">XRSound</a>で再生されない。
+    </p>
+
+
+    <h3>対策</h3>
+
+
+    <p>SoundBridgeというMODを導入する。</p>
+
+    <ul>
+      <li><a href="../basic/xrsound.html">XRSound</a>を導入している
+        <ul>
+          <li><a href="https://www.orbithangar.com/showAddon.php?id=cf1405dd-4847-4e29-b019-e4ddfa36cf99"
+              target="_blank" rel="noopener noreferrer">SoundBridge</a></li>
+        </ul>
+      </li>
+      <li>OrbiterSoundを導入している
+        <ul>
+          <li><a href="https://www.orbithangar.com/showAddon.php?id=06b21eae-f5a3-4cea-ad4c-518ed0d0ea43"
+              target="_blank" rel="noopener noreferrer">Sound Bridge OS</a></li>
+        </ul>
+      </li>
+    </ul>
 
 
     <h2 id="font">Windowsのフォントが汚くなる (2016)</h2>
@@ -499,7 +544,7 @@
 
 
     <p>
-      <strong>Orbiter2016</strong> + <strong>D3D9Client</strong>環境の木星やタイタンなどにおいて、表面が暗くなったり、テクスチャの表示が乱れる。
+      <strong>Orbiter2016</strong>+<strong>D3D9Client</strong>環境の木星やタイタンなどにおいて、表面が暗くなったり、テクスチャの表示が乱れる。
     </p>
 
 
@@ -537,8 +582,9 @@
 
 
     <p>
-      <a href="http://orbiter.dansteph.com/forum/index.php?page=download" target="_blank" rel="noopener noreferrer">DeltaGliderIV</a>というMODにおいて、<a
-        href="../transximfd/transxinstall.html" target="_blank">TransX</a>などのオートパイロットが機能しない。
+      <a href="http://orbiter.dansteph.com/forum/index.php?page=download" target="_blank"
+        rel="noopener noreferrer">DeltaGliderIV</a>というMODにおいて、<a href="../transximfd/transxinstall.html"
+        target="_blank">TransX</a>などのオートパイロットが機能しない。
     </p>
 
     <h3>原因</h3>
@@ -554,8 +600,9 @@
 
     <p>
       2021年3月現在、DeltaGliderIVを含めた<a href="../ucgo/index.html" target="_blank">UCGO MOD</a>の<a
-        href="http://orbiter.dansteph.com/forum/index.php?topic=14499.0" target="_blank" rel="noopener noreferrer">最新版が開発中</a>です。<br>
-      最新版でこの問題が解決される可能性もあるので、続報を気長にお待ちください。
+        href="http://orbiter.dansteph.com/forum/index.php?topic=14499.0" target="_blank"
+        rel="noopener noreferrer">最新版が開発中</a>です。<br>
+      最新版でこの問題が解決される可能性もあるので、続報をお待ちください。
     </p>
 
   </main>

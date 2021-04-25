@@ -26,6 +26,7 @@ img {
   cursor: pointer;
   width: 22rem;
   height: auto;
+  vertical-align: top;
 }
 img.small {
   width: 12rem;
@@ -36,8 +37,9 @@ img.vertical {
   width: auto;
 }
 figure {
-  display: inline-block;
-  margin: auto;
+  display: table;
+  margin-bottom: auto;
+  margin-left: 0;
 }
 figcaption {
   text-align: center;
