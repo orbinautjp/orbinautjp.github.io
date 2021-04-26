@@ -27,6 +27,7 @@ img {
   width: 22rem;
   height: auto;
   vertical-align: top;
+  background-color: white;
 }
 img.small {
   width: 12rem;
@@ -180,6 +181,9 @@ th {
   border-collapse: collapse;
 }
 table.center1col td:nth-child(1) {
+  text-align: center;
+}
+table.center2col td:nth-child(2) {
   text-align: center;
 }
 
@@ -391,6 +395,7 @@ footer ul {
     border: 0.05rem solid black;
     padding: 0.05rem 0.2rem;
     line-height: 1.1rem;
+    z-index: 1;
   }
 
   main {
