@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 
 <html lang="ja">
+
 <head>
   <script src="../scripts/ga.js"></script>
   <meta charset="UTF-8">
@@ -14,64 +15,217 @@
 
   <main>
 
-  <h1>Vostok MODのダウンロード+インストール</h1>
+    <h1>Vostok MODのダウンロード+インストール</h1>
 
 
-<p>Vostok v1.0・v1.1は<strong>Orbiter2010</strong>でボストーク宇宙船を再現したMODです。</p>
+    <p><strong>Vostok</strong>はOrbiterでボストーク宇宙船を再現したMODです。</p>
 
-<ul>
-<li><a href="#download">ダウンロード</a></li>
-<li><a href="#install">インストール</a>
-<ul>
-<li><a href="#vzor">ВЗОР(VZOR)を有効にする</a></li>
-</ul>
-</li>
-<li><a href="#help_jp">日本語ファイル</a></li>
-<li><a href="#mods">利用可能なMOD</a></li>
-<li><a href="#feature">特徴</a></li>
-</ul>
+    <nav>
+      <ul>
+        <li><a href="#download">ダウンロード</a></li>
+        <li><a href="#requirements">必要なファイル</a>
+          <ul>
+            <li><a href="#requirements_soundbridge">SoundBridge (2016)</a></li>
+            <li><a href="#requirements_d3d9">D3D9Client</a></li>
+          </ul>
+        </li>
+        <li><a href="#install">インストール</a></li>
+        <li><a href="#d3d9settings">D3D9Clientの設定</a>
+          <ul>
+            <li><a href="#d3d9settings_2010">Orbiter2010</a></li>
+            <li><a href="#d3d9settings_2016">Orbiter2016</a></li>
+          </ul>
+        </li>
+        <li><a href="#bugs">既知の不具合</a></li>
+        <li><a href="#help_jp">日本語ファイル</a></li>
+        <li><a href="#feature">特徴</a></li>
+      </ul>
+    </nav>
 
-<h2 id="download">ダウンロード</h2>
 
-<p><a href="https://www.orbithangar.com/searchid.php?ID=5126" target="_blank" rel="noopener noreferrer">Vostok v1.0（ВЗОРあり、D3D9非対応）</a></p>
-<p><a href="https://www.orbithangar.com/searchid.php?ID=6318" target="_blank" rel="noopener noreferrer">Vostok v1.1（ВЗОРなし、D3D9対応版）</a></p>
+    <h2 id="download">ダウンロード</h2>
 
-<h2 id="install">インストール</h2>
 
-<p>ダウンロードしたファイルを解凍して、中身をOrbiterフォルダに上書き。<br>
-v1.0とv1.1は共存できないので注意してください。</p>
-<p>ゲームが正常に終了しない件については以下の記事を参照してください。<br>
-<a href="r-9-install.html" target="_blank">R-9 MODのダウンロード・インストール</a></p>
+    <p class="caution">
+      <strong>Orbiter2016</strong>対応版には<a href="#bugs">いくつか不具合があります。</a>
+    </p>
 
-<h3 id="vzor">ВЗОР(VZOR)を有効にする</h3>
+    <table class="center1col">
+      <tr>
+        <th>対応バージョン</th>
+        <th>ダウンロードリンク</th>
+      </tr>
+      <tr>
+        <td><a href="../basic/orbiter2010.html">Orbiter2010</a></td>
+        <td><a href="https://www.orbithangar.com/showAddon.php?id=dcaa4ea8-711a-46c7-a167-49e7254da801" target="_blank"
+            rel="noopener noreferrer">Orb2010 VesselM Pack</a></td>
+      </tr>
+      <tr>
+        <td><a href="../basic/orbiter2016.html">Orbiter2016</a></td>
+        <td><a href="https://www.orbithangar.com/showAddon.php?id=0bb66462-d9cc-4f68-95f3-482bc319a5c7" target="_blank"
+            rel="noopener noreferrer">Orb2016 VesselM Pack</a></td>
+      </tr>
+    </table>
 
-<p><strong class="caution">注意</strong>：<strong>v1.0</strong> + <strong>orbiter.exe</strong>でしかВЗОРは使えません。（D3D9は不可）</p>
-<p><strong>Modules</strong>タブで<strong>ВЗОР</strong>にチェックを入れる。</p>
+    <p><kbd>Download</kbd>ボタンをクリック。</p>
 
-  <p>
-    <img loading="lazy" src="../images/mods/vostok-install/001.png" width="235" height="264">
-</p>
+    <p>
+      <strong>Vostok</strong>と書かれているリンクをクリック。<br>
+      同様に、<strong>Spaceports</strong>もダウンロードする。
+    </p>
 
-<h2 id="help_jp">日本語ファイル</h2>
+    <figure>
+      <img loading="lazy" src="../images/mods/vostok-install/001.png" width="440" height="220">
+      <figcaption>2016版のダウンロードリンク</figcaption>
+    </figure>
 
-<p>Vostok MODの日本語操作ガイドを作ってみました。</p>
-<p><a href="vostok-help-jp.html" target="_blank">Vostok MOD 日本語ファイル</a></p>
 
-<h2 id="mods">利用可能なMOD</h2>
+    <h2 id="requirements">必要なファイル</h2>
 
-<p><a href="../iss/baikonur-2010-surface-tiles-v10.html" target="_blank">Baikonur 2010: Surface Tiles v1.0のインストール</a></p>
-<p>上記のMODを導入すると、発射台付近のテクスチャの色が合わなくなります。<br>
-以下のパッチを導入することで自然な感じになります。</p>
-<p><a href="https://www.orbithangar.com/searchid.php?ID=5596" target="_blank" rel="noopener noreferrer">Vostok texture replacement</a></p>
-<p>ダウンロードしたファイルを解凍して、中身をOrbiterフォルダに上書き。</p>
 
-<h2 id="feature">特徴</h2>
+    <p>上の手順に従って、<strong>Spaceports</strong>も一緒にダウンロードする。</p>
 
-<p>ボストークの操縦システムと計器をほぼ完全に再現しています。<br>
-環境の変化によって計器の表示が変わるなど、細かいところもシミュレートされています。</p>
-<p>ВЗОРを使用して、実機同様の操作で地上に着陸することもできます。</p>
+
+    <h3 id="requirements_soundbridge">SoundBridge (2016)</h3>
+
+
+    <p>
+      <strong>XRSound</strong>を導入している場合は、<strong>SoundBridge</strong>もインストールする。<br>
+      これを導入しないと、カウントダウンなどが再生されない。
+    </p>
+
+    <p>
+      <a href="../basic/xrsound.html#soundbridge" target="_blank" rel="noopener noreferrer">SoundBridgeのインストール手順</a>
+    </p>
+
+
+    <h3 id="requirements_d3d9">D3D9Client</h3>
+
+
+    <p class="caution">
+      特定のバージョンの<a href="../basic/d3d9client.html">D3D9Client</a>を導入しないと、<strong>VZOR</strong>が動作しません。
+    </p>
+
+    <p>
+      <a href="http://users.kymp.net/~p501474a/D3D9Client/" target="_blank"
+        rel="noopener noreferrer">D3D9Clientのダウンロードページ</a>を開く。<br>
+      下にスクロールして、<strong>Additional Downloads</strong>まで移動する。
+    </p>
+
+    <table class="center1col">
+      <caption>対応バージョン</caption>
+      <tr>
+        <th>Orbiter</th>
+        <th>D3D9Client</th>
+      </tr>
+      <tr>
+        <td><strong>2010</strong></td>
+        <td><strong>R16.10</strong></td>
+      </tr>
+      <tr>
+        <td><strong>2016</strong></td>
+        <td><strong>R4.18</strong>以上</td>
+      </tr>
+    </table>
+
+    <figure>
+      <img loading="lazy" src="../images/mods/vostok-install/002.png" width="800" height="800">
+    </figure>
+
+    <p>インストール手順は以下のページを参照すること。</p>
+
+    <p><a href="../basic/d3d9client.html">D3D9Clientのインストールと設定</a></p>
+
+
+    <h2 id="install">インストール</h2>
+
+
+    <p>
+      ダウンロードしたファイルをそれぞれ解凍する。<br>
+      中のファイル・フォルダをOrbiterフォルダに上書き。
+    </p>
+
+
+    <h2 id="d3d9settings">D3D9Clientの設定</h2>
+
+
+    <h3 id="d3d9settings_2010">Orbiter2010</h3>
+
+
+    <p>
+      <a href="../basic/orbitercontrol.html#launchpad">Launchpad</a>で<kbd>Video</kbd>→<kbd>Advanced</kbd>をクリック。<br>
+      <strong>Enable Virtual Cockpit reflections</strong>にチェックを入れる。
+    </p>
+
+    <figure>
+      <img loading="lazy" src="../images/mods/vostok-install/003.png" width="551" height="520">
+    </figure>
+
+
+    <h3 id="d3d9settings_2016">Orbiter2016</h3>
+
+
+    <p>
+      <a href="../basic/orbitercontrol.html#launchpad">Launchpad</a>で<kbd>Visual effects</kbd>をクリック。<br>
+      <strong>Surface elevation, using</strong>を<kbd>linear interpolation</kbd>にする。
+    </p>
+
+    <figure>
+      <img loading="lazy" src="../images/mods/vostok-install/004.png" width="530" height="500">
+    </figure>
+
+    <p>
+      <a href="../basic/orbitercontrol.html#launchpad">Launchpad</a>で<kbd>Video</kbd>→<kbd>Advanced</kbd>をクリック。<br>
+      <strong>Enable terrain flattening</strong>にチェックを入れる。
+    </p>
+
+    <figure>
+      <img loading="lazy" src="../images/mods/vostok-install/005.png" width="820" height="641">
+    </figure>
+
+
+    <h2 id="bugs">既知の不具合</h2>
+
+
+    <p>
+      ゲームが正常に終了しない場合は、以下のページを参照してください。<br>
+      <a href="r-9-install.html#install_shutdown">R-9 MODのダウンロード・インストール</a>
+    </p>
+
+    <p>
+      <strong>Orbiter2016</strong>の仕様により、以下のような不具合があります。
+    </p>
+
+    <ul>
+      <li>発射台の地下部分が土に埋まったように見える。</li>
+      <li>着陸時にゲームの挙動が不安定になる。</li>
+    </ul>
+
+    <p>
+      完全な状態でプレイしたい場合は、<strong>Orbiter2010</strong>を導入してください。
+    </p>
+
+
+    <h2 id="help_jp">日本語ファイル</h2>
+
+
+    <p>ゲーム内で利用できる、日本語の操作ガイドを作ってみました。</p>
+
+    <p><a href="vostok-help.html">Vostok MOD 日本語ファイル</a></p>
+
+
+    <h2 id="feature">特徴</h2>
+
+
+    <p>
+      ボストーク宇宙船の操縦システムと計器をほぼ完全に再現しています。<br>
+      環境の変化によって計器の表示が変わるなど、細かいところもシミュレートされています。
+    </p>
+
+    <p>VZOR(ВЗОР)を使用して、実機同様の操作で地上に着陸することもできます。</p>
 
   </main>
 
 </body>
+
 </html>
