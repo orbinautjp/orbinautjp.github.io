@@ -22,14 +22,16 @@
 
     <nav>
       <ul>
+        <li><a href="#feature">特徴</a></li>
         <li><a href="#download">ダウンロード</a></li>
+        <li><a href="#install">インストール</a></li>
         <li><a href="#requirements">必要なファイル</a>
           <ul>
-            <li><a href="#requirements_soundbridge">SoundBridge (2016)</a></li>
             <li><a href="#requirements_d3d9">D3D9Client</a></li>
+            <li><a href="#requirements_soundbridge">SoundBridge (2016)</a></li>
+            <li><a href="#requirements_help">日本語ファイル</a></li>
           </ul>
         </li>
-        <li><a href="#install">インストール</a></li>
         <li><a href="#d3d9settings">D3D9Clientの設定</a>
           <ul>
             <li><a href="#d3d9settings_2010">Orbiter2010</a></li>
@@ -37,10 +39,20 @@
           </ul>
         </li>
         <li><a href="#bugs">既知の不具合</a></li>
-        <li><a href="#help_jp">日本語ファイル</a></li>
-        <li><a href="#feature">特徴</a></li>
+
       </ul>
     </nav>
+
+
+    <h2 id="feature">特徴</h2>
+
+
+    <p>
+      ボストーク宇宙船の操縦システムと計器をほぼ完全に再現しています。<br>
+      環境の変化によって計器の表示が変わるなど、細かいところもシミュレートされています。
+    </p>
+
+    <p><strong>ВЗОР</strong>(VZOR)を使用して、実機同様の操作で地上に着陸することもできます。</p>
 
 
     <h2 id="download">ダウンロード</h2>
@@ -80,22 +92,25 @@
     </figure>
 
 
-    <h2 id="requirements">必要なファイル</h2>
-
-
-    <p>上の手順に従って、<strong>Spaceports</strong>も一緒にダウンロードする。</p>
-
-
-    <h3 id="requirements_soundbridge">SoundBridge (2016)</h3>
+    <h2 id="install">インストール</h2>
 
 
     <p>
-      <strong>XRSound</strong>を導入している場合は、<strong>SoundBridge</strong>もインストールする。<br>
-      これを導入しないと、カウントダウンなどが再生されない。
+      <strong>Vostok</strong>と<strong>Spaceports</strong>の両方をダウンロードしているか確認する。<br>
+      ダウンロードしたファイルをそれぞれ解凍する。
     </p>
 
     <p>
-      <a href="../basic/xrsound.html#soundbridge" target="_blank" rel="noopener noreferrer">SoundBridgeのインストール手順</a>
+      中のファイル・フォルダをすべてコピーする。<br>
+      Orbiterのインストールフォルダにペーストして上書き。
+    </p>
+
+
+    <h2 id="requirements">必要なファイル</h2>
+
+
+    <p>
+      以下のファイルは必須ではないが、導入しないと一部の機能が利用できない。
     </p>
 
 
@@ -132,21 +147,34 @@
       <img loading="lazy" src="../images/mods/vostok-install/002.png" width="800" height="800">
     </figure>
 
-    <p>インストール手順は以下のページを参照すること。</p>
 
-    <p><a href="../basic/d3d9client.html">D3D9Clientのインストールと設定</a></p>
-
-
-    <h2 id="install">インストール</h2>
+    <h3 id="requirements_soundbridge">SoundBridge (2016)</h3>
 
 
     <p>
-      ダウンロードしたファイルをそれぞれ解凍する。<br>
-      中のファイル・フォルダをOrbiterフォルダに上書き。
+      <strong>XRSound</strong>を導入している場合は、<strong>SoundBridge</strong>もインストールする。<br>
+      これを導入しないと、カウントダウンなどが再生されない。
+    </p>
+
+    <p>
+      <a href="../basic/xrsound.html#soundbridge" target="_blank" rel="noopener noreferrer">SoundBridgeのインストール手順</a>
     </p>
 
 
+    <h3 id="requirements_help">日本語ファイル</h3>
+
+
+    <p>ゲーム内で利用できる、日本語の操作ガイドを作ってみました。</p>
+
+    <p><a href="vostok-help.html">Vostok MOD 日本語ファイル</a></p>
+
+
     <h2 id="d3d9settings">D3D9Clientの設定</h2>
+
+
+    <p>
+      このMODは、Orbiter本体の仕様による問題を回避するため、<a href="../basic/d3d9client.html">D3D9Client</a>の機能を利用している。
+    </p>
 
 
     <h3 id="d3d9settings_2010">Orbiter2010</h3>
@@ -160,6 +188,11 @@
     <figure>
       <img loading="lazy" src="../images/mods/vostok-install/003.png" width="551" height="520">
     </figure>
+
+    <p>
+      コクピット内での反射を有効にする。<br>
+      この設定をしないと、VZORが利用できない。
+    </p>
 
 
     <h3 id="d3d9settings_2016">Orbiter2016</h3>
@@ -183,6 +216,12 @@
       <img loading="lazy" src="../images/mods/vostok-install/005.png" width="820" height="641">
     </figure>
 
+    <p>
+      地上基地周辺の地面を平らにする。<br>
+      この設定をしないと、発射台が正しく表示されない。<br>
+      残念ながら、地下部分が埋まって見えるのは改善できない。
+    </p>
+
 
     <h2 id="bugs">既知の不具合</h2>
 
@@ -204,25 +243,6 @@
     <p>
       完全な状態でプレイしたい場合は、<strong>Orbiter2010</strong>を導入してください。
     </p>
-
-
-    <h2 id="help_jp">日本語ファイル</h2>
-
-
-    <p>ゲーム内で利用できる、日本語の操作ガイドを作ってみました。</p>
-
-    <p><a href="vostok-help.html">Vostok MOD 日本語ファイル</a></p>
-
-
-    <h2 id="feature">特徴</h2>
-
-
-    <p>
-      ボストーク宇宙船の操縦システムと計器をほぼ完全に再現しています。<br>
-      環境の変化によって計器の表示が変わるなど、細かいところもシミュレートされています。
-    </p>
-
-    <p>VZOR(ВЗОР)を使用して、実機同様の操作で地上に着陸することもできます。</p>
 
   </main>
 
