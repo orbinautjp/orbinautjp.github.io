@@ -101,13 +101,13 @@ p.note {
    font-size: 85%;
 }
 p.caution {
-  display: inline-block;
+  display: table;
   background-color: white;
   border: 0.1rem solid #399139;
   border-radius: 0.3rem;
-  padding: 0.7rem 0.7rem 0.7rem 3rem;
+  padding: 0.5rem 0.5rem 0.5rem 3rem;
   position: relative;
-  margin: auto;
+  margin-top: auto;
 }
 p.caution::before {
   content: "⚠";
