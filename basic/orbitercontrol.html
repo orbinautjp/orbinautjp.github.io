@@ -23,8 +23,9 @@
     <nav>
       <ul>
         <li><a href="#key">キーボードでの操作</a></li>
-        <li><a href="#launchpad">Launchpad</a></li>
         <li><a href="#interface">必要なインターフェイス</a></li>
+        <li><a href="#launchpad">Launchpad</a></li>
+        <li><a href="#viewpoint">視点変更</a></li>
         <li><a href="#cockpit">コクピットの選択</a></li>
         <li><a href="#timewarp">タイムワープ</a></li>
         <li><a href="#info">情報メニュー</a>
@@ -60,31 +61,6 @@
       キーボードでの操作については、以下のファイルを参照してください。<br>
       <a href="orbiterhelp.html">Orbiterキー操作一覧 日本語ファイル</a>
     </p>
-
-
-    <h2 id="launchpad">Launchpad</h2>
-
-
-    <p>
-      <strong>Orbiter_ng.exe</strong>をダブルクリック。<br>
-      <strong>Launchpad</strong>を開く。
-    </p>
-
-    <figure>
-      <img loading="lazy" src="../images/basic/orbitercontrol/launchpad.png" width="485" height="485">
-      <figcaption>Orbiter2016のLaunchpad</figcaption>
-    </figure>
-
-    <p>
-      <kbd>Scenarios</kbd>画面で赤い三角のアイコンをダブルクリックすると、ゲームを開始する。<br>
-      また、各種設定を変更することもできる。
-    </p>
-
-    <ul>
-      <li><a href="realismperturbations.html">Realism（リアリズム）とPerturbations（摂動）</a></li>
-      <li><a href="orbitermod.html#enablemods">MODの有効化</a></li>
-      <li><a href="d3d9client.html#config">D3D9Clientの設定</a></li>
-    </ul>
 
 
     <h2 id="interface">必要なインターフェイス</h2>
@@ -124,10 +100,79 @@
     </p>
 
 
-    <h2 id="cockpit">コクピットの選択</h2>
+    <h2 id="launchpad">Launchpad</h2>
+
+
+    <p>
+      <strong>Orbiter_ng.exe</strong>をダブルクリック。<br>
+      <strong>Launchpad</strong>を開く。
+    </p>
+
+    <figure>
+      <img loading="lazy" src="../images/basic/orbitercontrol/launchpad.png" width="485" height="485">
+      <figcaption>Orbiter2016のLaunchpad</figcaption>
+    </figure>
+
+    <p>
+      <kbd>Scenarios</kbd>画面で赤い三角のアイコンをダブルクリックすると、ゲームを開始する。<br>
+      また、各種設定を変更することもできる。
+    </p>
+
+    <ul>
+      <li><a href="realismperturbations.html">Realism（リアリズム）とPerturbations（摂動）</a></li>
+      <li><a href="orbitermod.html#enablemods">MODの有効化</a></li>
+      <li><a href="d3d9client.html#config">D3D9Clientの設定</a></li>
+    </ul>
+
+
+    <h2 id="viewpoint">視点変更</h2>
 
 
     <p>キーボードで<kbd>F1</kbd>を押すと、機内視点と機外視点を切り替えられる。</p>
+
+    <table class="center1col">
+      <tr>
+        <td>マウス右ドラッグ</td>
+        <td>カメラの向きを変える</td>
+      </tr>
+      <tr>
+        <td rowspan="2">マウスホイール</td>
+        <td>カメラと宇宙船の距離を変更する</td>
+      </tr>
+      <tr>
+        <td>機内視点でFOVを変更する(2016)</td>
+      </tr>
+      <tr>
+        <td><kbd>Z</kbd>or<kbd>X</kbd></td>
+        <td rowspan="2">FOVを変更する<br>ズームイン・ズームアウト</td>
+      </tr>
+      <tr>
+        <td><kbd>Ctrl</kbd>+<kbd>Z</kbd><br><kbd>Ctrl</kbd>+<kbd>X</kbd></td>
+      </tr>
+    </table>
+
+    <p>
+      機外視点で<kbd>F2</kbd>を押すと、機外視点でカメラの挙動が変化する。
+    </p>
+
+    <table>
+      <tr>
+        <th>Target-relative</th>
+        <td>宇宙船の回転に追従する</td>
+      </tr>
+      <tr>
+        <th>Absolute direction</th>
+        <td>宇宙船の回転に部分的に追従する</td>
+      </tr>
+      <tr>
+        <th>Global frame</th>
+        <td>宇宙船の回転に追従しない</td>
+      </tr>
+    </table>
+
+
+    <h2 id="cockpit">コクピットの選択</h2>
+
 
     <p>機内視点で<kbd>F8</kbd>を押すと、3つのコクピット画面を切り替えられる。</p>
 
@@ -190,7 +235,7 @@
     <h3 id="info_2016">Orbiter2016</h3>
 
 
-    <p>画面上の中央で右クリックすると、情報メニューの設定ダイアログが開く。</p>
+    <p>ゲーム画面の上部で右クリックすると、情報メニューの設定ダイアログが開く。</p>
 
     <p>
       <img loading="lazy" src="../images/basic/orbitercontrol/orbiter_ui018.png" width="251" height="510">
