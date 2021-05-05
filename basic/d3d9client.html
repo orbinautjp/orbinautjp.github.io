@@ -6,7 +6,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="../styles/orbiterjp.css">
   <script src="../scripts/template.js" charset="utf-8" defer></script>
   <title>D3D9Clientのインストールと設定</title>
@@ -16,401 +16,427 @@
 
   <main>
 
-  <h1>D3D9Clientのインストールと設定</h1>
+    <h1>D3D9Clientのインストールと設定</h1>
 
 
-  <ul>
-    <li><a href="#directx">DirectXのインストール</a></li>
-    <li><a href="#download">ダウンロード</a>
-      <ul>
-        <li><a href="#download_2016">Orbiter2016</a></li>
-        <li><a href="#download_2010">Orbiter2010</a></li>
-        <li><a href="#download_microtextures">Surface micro textures (2016)</a></li>
-      </ul>
-    </li>
-    <li><a href="#install">インストール</a>
-      <ul>
-        <li><a href="#install_copypaste">ファイルの上書き</a></li>
-        <li><a href="#install_activation">モジュールの有効化</a></li>
-        <li><a href="#install_symboliclink">シンボリックリンクの作成</a></li>
-      </ul>
-    </li>
-    <li><a href="#config">設定</a>
-      <ul>
-        <li><a href="#config_advanced">D3D9Client Advanced Setup</a></li>
-        <li><a href="#config_effects">Visual effects</a></li>
-      </ul>
-    </li>
-    <li><a href="#caution">注意点</a>
-      <ul>
-        <li><a href="#caution_exe">実行ファイル</a></li>
-        <li><a href="#caution_directx">DirectXのバージョン</a></li>
-        <li><a href="#caution_intelhd">Intel HD Graphics</a></li>
-        <li><a href="#caution_spacecraft3">Spacecraft3.dll</a></li>
-      </ul>
-    </li>
-    <li><a href="#effect">効果</a>
-      <ul>
-        <li><a href="#effect_performance">パフォーマンスの改善</a></li>
-        <li><a href="#effect_graphics">グラフィックの強化</a></li>
-      </ul>
-    </li>
-    <li><a href="#compatibility">MODとの相性</a></li>
-    <li><a href="#savedata">セーブデータの互換性</a></li>
-    <li><a href="#history">歴史</a></li>
-  </ul>
+    <ul>
+      <li><a href="#directx">DirectXのインストール</a></li>
+      <li><a href="#download">ダウンロード</a>
+        <ul>
+          <li><a href="#download_2016">Orbiter2016</a></li>
+          <li><a href="#download_2010">Orbiter2010</a></li>
+          <li><a href="#download_microtextures">Surface micro textures (2016)</a></li>
+        </ul>
+      </li>
+      <li><a href="#install">インストール</a>
+        <ul>
+          <li><a href="#install_copypaste">ファイルの上書き</a></li>
+          <li><a href="#install_activation">モジュールの有効化</a></li>
+          <li><a href="#install_symboliclink">シンボリックリンクの作成</a></li>
+        </ul>
+      </li>
+      <li><a href="#config">設定</a>
+        <ul>
+          <li><a href="#config_advanced">D3D9Client Advanced Setup</a></li>
+          <li><a href="#config_effects">Visual effects</a></li>
+        </ul>
+      </li>
+      <li><a href="#caution">注意点</a>
+        <ul>
+          <li><a href="#caution_exe">実行ファイル</a></li>
+          <li><a href="#caution_directx">DirectXのバージョン</a></li>
+          <li><a href="#caution_intelhd">Intel HD Graphics</a></li>
+          <li><a href="#caution_spacecraft3">Spacecraft3.dll</a></li>
+        </ul>
+      </li>
+      <li><a href="#effect">効果</a>
+        <ul>
+          <li><a href="#effect_performance">パフォーマンスの改善</a></li>
+          <li><a href="#effect_graphics">グラフィックの強化</a></li>
+        </ul>
+      </li>
+      <li><a href="#compatibility">MODとの相性</a></li>
+      <li><a href="#savedata">セーブデータの互換性</a></li>
+      <li><a href="#history">歴史</a></li>
+    </ul>
 
 
-  <h2 id="directx">DirectXのインストール</h2>
+    <h2 id="directx">DirectXのインストール</h2>
 
 
-  <p><strong>DirectX 9.0c</strong>のランタイムを導入する。<br>
-    Orbiter2010、2016で共通。</p>
+    <p><strong>DirectX 9.0c</strong>のランタイムを導入する。<br>
+      Orbiter2010、2016で共通。</p>
 
-  <p>ダウンロードは以下のリンクから。</p>
+    <p>ダウンロードは以下のリンクから。</p>
 
-  <p><a href="https://www.microsoft.com/en-us/download/details.aspx?id=8109" target="_blank" rel="noopener noreferrer">DirectX End-User Runtimes (June 2010)</a></p>
+    <p><a href="https://www.microsoft.com/en-us/download/details.aspx?id=8109" target="_blank"
+        rel="noopener noreferrer">DirectX End-User Runtimes (June 2010)</a></p>
 
-  <p>
-    <img loading="lazy" src="../images/basic/d3d9client/005.png" width="800" height="400">
-  </p>
+    <p>
+      <img loading="lazy" src="../images/basic/d3d9client/005.png" width="800" height="400">
+    </p>
 
-  <p>ダウンロードしたファイルをダブルクリック。<br>
-    <kbd>Yes</kbd>をクリック。
-  </p>
+    <p>ダウンロードしたファイルをダブルクリック。<br>
+      <kbd>Yes</kbd>をクリック。
+    </p>
 
-  <p><kbd>Browse</kbd>をクリックして、展開先のフォルダを指定する。※<br>
-    <kbd>OK</kbd>をクリック。
-  </p>
+    <p><kbd>Browse</kbd>をクリックして、展開先のフォルダを指定する。※<br>
+      <kbd>OK</kbd>をクリック。
+    </p>
 
-  <p class="note">※あらかじめ空きフォルダを作成したほうがよい</p>
+    <p class="note">※あらかじめ空きフォルダを作成したほうがよい</p>
 
-  <p>指定したフォルダの中にある、<strong>DXSETUP.exe</strong>をダブルクリック。<br>
-    指示にしたがってインストールする。</p>
+    <p>指定したフォルダの中にある、<strong>DXSETUP.exe</strong>をダブルクリック。<br>
+      指示にしたがってインストールする。</p>
 
 
-  <h2 id="download">ダウンロード</h2>
+    <h2 id="download">ダウンロード</h2>
 
 
-  <p>Orbiterのバージョンによって、必要なファイルが異なる。</p>
+    <p>Orbiterのバージョンによって、必要なファイルが異なる。</p>
 
 
-  <h3 id="download_2016">Orbiter2016</h3>
+    <h3 id="download_2016">Orbiter2016</h3>
 
 
-  <p><a href="http://users.kymp.net/~p501474a/D3D9Client/" target="_blank" rel="noopener noreferrer">D3D9Client for Orbiter</a></p>
+    <p><a href="http://users.kymp.net/~p501474a/D3D9Client/" target="_blank" rel="noopener noreferrer">D3D9Client for
+        Orbiter</a></p>
 
-  <p><kbd>Download</kbd>ボタンをクリック。</p>
+    <p><kbd>Download</kbd>ボタンをクリック。</p>
 
-  <p>
-    <img loading="lazy" src="../images/basic/d3d9client/004.png" width="500" height="250">
-  </p>
+    <p>
+      <img loading="lazy" src="../images/basic/d3d9client/004.png" width="500" height="250">
+    </p>
 
 
-  <h3 id="download_2010">Orbiter2010</h3>
+    <h3 id="download_2010">Orbiter2010</h3>
 
 
-  <p><a href="http://users.kymp.net/~p501474a/D3D9Client/" target="_blank" rel="noopener noreferrer">D3D9Client for Orbiter</a></p>
+    <p><a href="http://users.kymp.net/~p501474a/D3D9Client/" target="_blank" rel="noopener noreferrer">D3D9Client for
+        Orbiter</a></p>
 
-  <p>リンク先のページを下にスクロールする。<br>
-    <strong>Additional Downloads</strong>まで移動する。
-  </p>
+    <p>リンク先のページを下にスクロールする。<br>
+      <strong>Additional Downloads</strong>まで移動する。
+    </p>
 
-  <p><strong>Downloads for Orbiter 2010-P1</strong>のリンクをクリック。</p>
+    <p><strong>Downloads for Orbiter 2010-P1</strong>のリンクをクリック。</p>
 
-  <p>
-    <img loading="lazy" src="../images/basic/d3d9client/007.png" width="750" height="750">
-  </p>
+    <p>
+      <img loading="lazy" src="../images/basic/d3d9client/007.png" width="750" height="750">
+    </p>
 
 
-  <h3 id="download_microtextures">Surface micro textures (2016)</h3>
+    <h3 id="download_microtextures">Surface micro textures (2016)</h3>
 
 
-  <p>テクスチャを追加すると、地表のクレーターなどを再現できる。<br>
-    <a href="orbiter2016.html">Orbiter2016</a>で追加された機能。
-  </p>
+    <p>テクスチャを追加すると、地表のクレーターなどを再現できる。<br>
+      <a href="orbiter2016.html">Orbiter2016</a>で追加された機能。
+    </p>
 
-  <p><a href="http://users.kymp.net/~p501474a/D3D9Client/" target="_blank" rel="noopener noreferrer">D3D9Client for Orbiter</a></p>
+    <p><a href="http://users.kymp.net/~p501474a/D3D9Client/" target="_blank" rel="noopener noreferrer">D3D9Client for
+        Orbiter</a></p>
 
-  <p>リンク先のページを下にスクロールする。<br>
-    <strong>MicroTexture Pack</strong>まで移動する。
-  </p>
+    <p>リンク先のページを下にスクロールする。<br>
+      <strong>MicroTexture Pack</strong>まで移動する。
+    </p>
 
-  <p>
-    <img loading="lazy" src="../images/basic/d3d9client/006.png" width="640" height="320">
-  </p>
+    <p>
+      <img loading="lazy" src="../images/basic/d3d9client/006.png" width="640" height="320">
+    </p>
 
 
-  <h2 id="install">インストール</h2>
+    <h2 id="install">インストール</h2>
 
 
-  <p>必要なファイルを上書きしてから、モジュールを有効化する。</p>
+    <p>必要なファイルを上書きしてから、モジュールを有効化する。</p>
 
 
-  <h3 id="install_copypaste">ファイルの上書き</h3>
+    <h3 id="install_copypaste">ファイルの上書き</h3>
 
 
-  <p>ダウンロードしたファイルを解凍する。</p>
+    <p>ダウンロードしたファイルを解凍する。</p>
 
-  <p>中にあるファイル・フォルダをすべてコピーする。<br>
-    Orbiterのインストールフォルダにペーストして上書き。</p>
+    <p>中にあるファイル・フォルダをすべてコピーする。<br>
+      Orbiterのインストールフォルダにペーストして上書き。</p>
 
 
-  <h3 id="install_activation">モジュールの有効化</h3>
+    <h3 id="install_activation">モジュールの有効化</h3>
 
 
-  <p><strong>Orbiter_ng.exe</strong>をダブルクリック。<br>
-    <kbd>Modules</kbd>をクリック。
-  </p>
+    <p><strong>Orbiter_ng.exe</strong>をダブルクリック。<br>
+      <kbd>Modules</kbd>をクリック。
+    </p>
 
-  <p><strong>D3D9Client</strong>にチェックを入れる。</p>
+    <p><strong>D3D9Client</strong>にチェックを入れる。</p>
 
-  <p>
-    <img loading="lazy" src="../images/basic/d3d9client/001.png" width="260" height="130">
-  </p>
+    <p>
+      <img loading="lazy" src="../images/basic/d3d9client/001.png" width="260" height="130">
+    </p>
 
+
+    <h3 id="install_symboliclink">シンボリックリンクの作成</h3>
 
-  <h3 id="install_symboliclink">シンボリックリンクの作成</h3>
 
+    <p><kbd>Video</kbd>をクリック。<br>
+      右下の<kbd>Advanced</kbd>をクリック。</p>
 
-  <p><kbd>Video</kbd>をクリック。<br>
-    右下の<kbd>Advanced</kbd>をクリック。</p>
+    <p>
+      <img loading="lazy" src="../images/basic/d3d9client/009.png" width="520" height="260">
+    </p>
 
-  <p>
-    <img loading="lazy" src="../images/basic/d3d9client/009.png" width="520" height="260">
-  </p>
+    <p>左下の<kbd>Create symbolic links</kbd>をクリック。<br>
+      <kbd>はい</kbd>をクリック。
+    </p>
 
-  <p>左下の<kbd>Create symbolic links</kbd>をクリック。<br>
-    <kbd>はい</kbd>をクリック。
-  </p>
+    <p>
+      <img loading="lazy" src="../images/basic/d3d9client/010.png" width="820" height="641">
+    </p>
 
-  <p>
-    <img loading="lazy" src="../images/basic/d3d9client/010.png" width="820" height="641">
-  </p>
+    <p>
+      <a href="#download_microtextures">MicroTextures</a>を導入している場合は、右側の<strong>Surface micro
+        textures</strong>を<strong>Enabled</strong>にしておく。
+    </p>
 
-  <p>
-    <a href="#download_microtextures">MicroTextures</a>を導入している場合は、右側の<strong>Surface micro textures</strong>を<strong>Enabled</strong>にしておく。
-  </p>
 
+    <h2 id="config">設定</h2>
 
-  <h2 id="config">設定</h2>
 
+    <h3 id="config_advanced">D3D9Client Advanced Setup</h3>
 
-  <h3 id="config_advanced">D3D9Client Advanced Setup</h3>
 
+    <p>Orbiterを起動して、<kbd>Video</kbd>をクリック。<br>
+      <kbd>Advanced</kbd>をクリック。
+    </p>
 
-  <p>Orbiterを起動して、<kbd>Video</kbd>をクリック。<br>
-    <kbd>Advanced</kbd>をクリック。
-  </p>
+    <table>
+      <tr>
+        <th>Anti-aliasing</th>
+        <td colspan="2">アンチエイリアス</td>
+        <td>宇宙船の表面が滑らかになる</td>
+      </tr>
+      <tr>
+        <th rowspan="2">Post Processing<br>(2016)</th>
+        <td rowspan="2">ポストプロセス</td>
+        <td>Light glow</td>
+        <td>グローを掛ける</td>
+      </tr>
+      <tr>
+        <td>LensFlare</td>
+        <td>レンズフレアを再現する</td>
+      </tr>
+      <tr>
+        <th>Cloud micro-textures<br>(2016)</th>
+        <td colspan="3">雲のマイクロテクスチャ</td>
+      </tr>
+      <tr>
+        <th>Cloud normal maps<br>(2016)</th>
+        <td colspan="2">雲のノーマルマップ</td>
+        <td>雲の凸凹を再現する</td>
+      </tr>
+      <tr>
+        <th>Enable terrain flattening<br>(2016)</th>
+        <td colspan="3">指定したエリアで地面の凹凸を消す</td>
+      </tr>
+      <tr>
+        <th>Terrain Resolution<br>(2016)</th>
+        <td colspan="2">地形の解像度</td>
+        <td>地形の再現度が変わる</td>
+      </tr>
+      <tr>
+        <th>Tile mipmap policy<br>(2016)</th>
+        <td colspan="2">地表テクスチャのミップマップ</td>
+        <td>ミップマップを使用する</td>
+      </tr>
+      <tr>
+        <th rowspan="2">Self Shadows<br>(2016)</th>
+        <td rowspan="2">オブジェクトの影</td>
+        <td>Vessel mapping</td>
+        <td>ISSに宇宙船の影が落ちる</td>
+      </tr>
+      <tr>
+        <td>Terrain mapping</td>
+        <td>地面に宇宙船の影が落ちる</td>
+      </tr>
+      <tr>
+        <th rowspan="2">Reflection Mode</th>
+        <td rowspan="2">反射モード<br>（環境マップ）</td>
+        <td>Planet Only</td>
+        <td>宇宙船の窓に地球が映る</td>
+      </tr>
+      <tr>
+        <td>Full Scene</td>
+        <td>宇宙船の窓に地球とISSが映る</td>
+      </tr>
+      <tr>
+        <th>Surface micro textures<br>(2016)</th>
+        <td colspan="2">地表マイクロテクスチャ</td>
+        <td>地表のクレーターなどを再現する</td>
+      </tr>
+    </table>
 
-  <table>
-    <tr>
-      <th>Anti-aliasing</th>
-      <td colspan="2">アンチエイリアス</td>
-      <td>宇宙船の表面が滑らかになる</td>
-    </tr>
-    <tr>
-      <th rowspan="2">Post Processing<br>(2016)</th>
-      <td rowspan="2">ポストプロセス</td>
-      <td>Light glow</td>
-      <td>グローを掛ける</td>
-    </tr>
-    <tr>
-      <td>LensFlare</td>
-      <td>レンズフレアを再現する</td>
-    </tr>
-    <tr>
-      <th>Terrain Resolution<br>(2016)</th>
-      <td colspan="2">地形の解像度</td>
-      <td>地形の再現度が変わる</td>
-    </tr>
-    <tr>
-      <th>Tile mipmap policy<br>(2016)</th>
-      <td colspan="2">地表テクスチャのミップマップ</td>
-      <td>ミップマップを使用する</td>
-    </tr>
-    <tr>
-      <th rowspan="2">Self Shadows<br>(2016)</th>
-      <td rowspan="2">オブジェクトの影</td>
-      <td>Vessel mapping</td>
-      <td>ISSに宇宙船の影が落ちる</td>
-    </tr>
-    <tr>
-      <td>Terrain mapping</td>
-      <td>地面に宇宙船の影が落ちる</td>
-    </tr>
-    <tr>
-      <th rowspan="2">Reflection Mode</th>
-      <td rowspan="2">反射モード<br>（環境マップ）</td>
-      <td>Planet Only</td>
-      <td>宇宙船の窓に地球が映る</td>
-    </tr>
-    <tr>
-      <td>Full Scene</td>
-      <td>宇宙船の窓に地球とISSが映る</td>
-    </tr>
-    <tr>
-      <th>Surface micro textures<br>(2016)</th>
-      <td colspan="2">地表マイクロテクスチャ</td>
-      <td>地表のクレーターなどを再現する</td>
-    </tr>
-  </table>
+    <p>
+      <img loading="lazy" src="../images/basic/d3d9client/002.png" width="820" height="641">
+    </p>
 
-  <p>
-    <img loading="lazy" src="../images/basic/d3d9client/002.png" width="820" height="641">
-  </p>
+    <p>ゲームの動作が重いときは、以上の設定を変更する。<br>
+      <strong>None</strong>や<strong>Disabled</strong>を選んで無効にするか、小さい数字に設定する。
+    </p>
 
-  <p>ゲームの動作が重いときは、以上の設定を変更する。<br>
-    <strong>None</strong>や<strong>Disabled</strong>を選んで無効にするか、小さい数字に設定する。
-  </p>
+    <p><strong>Tile mipmap policy</strong>が有効になっていると、地表テクスチャの読み込みが遅くなる。<br>
+      有効にしても大きな違いはないため、無効にすることを勧める。</p>
 
-  <p><strong>Tile mipmap policy</strong>が有効になっていると、地表テクスチャの読み込みが遅くなる。<br>
-    有効にしても大きな違いはないため、無効にすることを勧める。</p>
+    <p>
+      一部の地上基地・発射台のMODでは、<strong>Enable terrain flattening</strong>が必須となっている。
+    </p>
 
 
-  <h3 id="config_effects">Visual effects</h3>
+    <h3 id="config_effects">Visual effects</h3>
 
 
-  <p>Orbiterを起動して、<kbd>Visual effects</kbd>をクリック。</p>
+    <p>Orbiterを起動して、<kbd>Visual effects</kbd>をクリック。</p>
 
-  <p>D3D9環境で以下の設定を変更すると、特殊な効果がある。</p>
+    <p>D3D9環境で以下の設定を変更すると、特殊な効果がある。</p>
 
-  <p>
-    <img loading="lazy" src="../images/basic/d3d9client/003.png" width="400" height="200">
-  </p>
+    <p>
+      <img loading="lazy" src="../images/basic/d3d9client/003.png" width="400" height="200">
+    </p>
 
 
-  <h4>Specular ripples (2016)</h4>
+    <h4>Specular ripples (2016)</h4>
 
 
-  <p>有効にすると、水面のさざ波を再現する。<br>
-    このエフェクトはOrbiter2016で実装された。</p>
+    <p>有効にすると、水面のさざ波を再現する。<br>
+      このエフェクトはOrbiter2016で実装された。</p>
 
 
-  <h4>Surface elevation (2016)</h4>
+    <h4>Surface elevation (2016)</h4>
 
 
-  <p><strong>linear interpolation</strong>に変更すると、宇宙船・車両が地面に沈みこむことがなくなる。</p>
+    <p><strong>linear interpolation</strong>に変更すると、宇宙船・車両が地面に沈みこむことがなくなる。</p>
 
 
-  <h2 id="caution">注意点</h2>
+    <h2 id="caution">注意点</h2>
 
 
-  <h3 id="caution_exe">実行ファイル</h3>
+    <h3 id="caution_exe">実行ファイル</h3>
 
 
-  <p>D3D9Clientを利用する場合は、<strong>Orbiter_ng.exe</strong>でゲームを起動する。<br>
-    orbiter.exeでは利用できない。</p>
+    <p>D3D9Clientを利用する場合は、<strong>Orbiter_ng.exe</strong>でゲームを起動する。<br>
+      orbiter.exeでは利用できない。</p>
 
 
-  <h3 id="caution_directx">DirectXのバージョン</h3>
+    <h3 id="caution_directx">DirectXのバージョン</h3>
 
 
-  <p>Windows10に<a href="#directx">DirectX9.0c</a>は同梱されていない。<br>
-    また、DirectX12は9.0cの代わりにはならない。</p>
+    <p>Windows10に<a href="#directx">DirectX9.0c</a>は同梱されていない。<br>
+      また、DirectX12は9.0cの代わりにはならない。</p>
 
-  <p>Windows10でD3D9Clientを利用する場合、別途DirectX9.0cをインストールする必要がある。</p>
+    <p>Windows10でD3D9Clientを利用する場合、別途DirectX9.0cをインストールする必要がある。</p>
 
 
-  <h3 id="caution_intelhd">Intel HD Graphics</h3>
+    <h3 id="caution_intelhd">Intel HD Graphics</h3>
 
 
-  <p>Intel HD Graphicsを使用しているPCで、画面がぼやけることがある。<br>
-    （グラフィックカードを搭載していないPC）</p>
+    <p>Intel HD Graphicsを使用しているPCで、画面がぼやけることがある。<br>
+      （グラフィックカードを搭載していないPC）</p>
 
-  <p><strong>インテルグラフィック／メディアコントロールパネル</strong>を開く。<br>
-    <strong>3D</strong>→<strong>3D基本設定</strong>のスライダーを<strong>品質</strong>に設定する。
-  </p>
+    <p><strong>インテルグラフィック／メディアコントロールパネル</strong>を開く。<br>
+      <strong>3D</strong>→<strong>3D基本設定</strong>のスライダーを<strong>品質</strong>に設定する。
+    </p>
 
 
-  <h3 id="caution_spacecraft3">Spacecraft3.dll</h3>
+    <h3 id="caution_spacecraft3">Spacecraft3.dll</h3>
 
 
-  <p><a href="../mods/spacecraft3download.html" target="_blank">Spacecraft3.dll</a>を利用するMODにおいて、ゲームの起動時に強制終了することがある。<br>
-    <a href="#install">インストール手順</a>にしたがって、シンボリックリンク(symbolic links)を作成する。
-  </p>
+    <p><a href="../mods/spacecraft3download.html"
+        target="_blank">Spacecraft3.dll</a>を利用するMODにおいて、ゲームの起動時に強制終了することがある。<br>
+      <a href="#install">インストール手順</a>にしたがって、シンボリックリンク(symbolic links)を作成する。
+    </p>
 
 
-  <h2 id="effect">効果</h2>
+    <h2 id="effect">効果</h2>
 
 
-  <h3 id="effect_performance">パフォーマンスの改善</h3>
+    <h3 id="effect_performance">パフォーマンスの改善</h3>
 
 
-  <p>D3D9Clientを導入すると、フレームレートが改善する。<br>
-    言い換えると、ゲームの動作が軽くなる。</p>
+    <p>D3D9Clientを導入すると、フレームレートが改善する。<br>
+      言い換えると、ゲームの動作が軽くなる。</p>
 
-  <p>Orbiter2010・2016には、Vista以降のOSでフレームレートが下がる持病がある。<br>
-    D3D9Clientを導入することでこれを改善できる。</p>
+    <p>Orbiter2010・2016には、Vista以降のOSでフレームレートが下がる持病がある。<br>
+      D3D9Clientを導入することでこれを改善できる。</p>
 
-  <p>動作が重く感じられる場合は、<a href="#config">設定を変更する</a>。</p>
+    <p>動作が重く感じられる場合は、<a href="#config">設定を変更する</a>。</p>
 
 
-  <h3 id="effect_graphics">グラフィックの強化</h3>
+    <h3 id="effect_graphics">グラフィックの強化</h3>
 
 
-  <p>D3D9Clientを導入すると、アンチエイリアスや環境マップなどの設定が可能になる。<br>
-    <a href="https://www.orbithangar.com/searchid.php?ID=7233" target="_blank" rel="noopener noreferrer">HST(EX) for Orbiter2016</a>というMODを例に、D3D9Clientの効果を検証する。
-  </p>
-  <p><strong>D3D9Clientなし</strong></p>
+    <p>D3D9Clientを導入すると、アンチエイリアスや環境マップなどの設定が可能になる。<br>
+      <a href="https://www.orbithangar.com/searchid.php?ID=7233" target="_blank" rel="noopener noreferrer">HST(EX) for
+        Orbiter2016</a>というMODを例に、D3D9Clientの効果を検証する。
+    </p>
+    <p><strong>D3D9Clientなし</strong></p>
 
-  <p>
-    <img loading="lazy" src="../images/basic/d3d9client/2019.06.04-22.13.png" width="1600" height="900">
-  </p>
+    <p>
+      <img loading="lazy" src="../images/basic/d3d9client/2019.06.04-22.13.png" width="1600" height="900">
+    </p>
 
-  <p><strong>D3D9Clientあり</strong></p>
+    <p><strong>D3D9Clientあり</strong></p>
 
-  <p>
-    <img loading="lazy" src="../images/basic/d3d9client/2019.06.04-22.11.png" width="1600" height="900">
-  </p>
+    <p>
+      <img loading="lazy" src="../images/basic/d3d9client/2019.06.04-22.11.png" width="1600" height="900">
+    </p>
 
-  <p>軌道上の宇宙船は、太陽からの光だけでなく、地球の反射光にも照らされている。<br>
-    D3D9Clientを導入すれば、こうした光の効果を再現することができる。</p>
+    <p>軌道上の宇宙船は、太陽からの光だけでなく、地球の反射光にも照らされている。<br>
+      D3D9Clientを導入すれば、こうした光の効果を再現することができる。</p>
 
 
-  <h2 id="compatibility">MODとの相性</h2>
+    <h2 id="compatibility">MODとの相性</h2>
 
 
-  <p><strong>Orbiter2016</strong>では、すべてのMODでD3D9Clientが利用できる。</p>
+    <p><strong>Orbiter2016</strong>では、すべてのMODでD3D9Clientが利用できる。</p>
 
-  <p><strong>Orbiter2010</strong>では、以下のMODがD3D9Clientに対応していない。<br>
-    このようなMODを利用する場合は、<strong>orbiter.exe</strong>でゲームを起動する。</p>
+    <p><strong>Orbiter2010</strong>では、以下のMODがD3D9Clientに対応していない。<br>
+      このようなMODを利用する場合は、<strong>orbiter.exe</strong>でゲームを起動する。</p>
 
-  <ul>
-    <li>
-      <a href="https://www.orbithangar.com/searchid.php?ID=4864" target="_blank" rel="noopener noreferrer">Videnie orbit drawing 1.0</a>
-    </li>
-    <li>
-      <a href="https://www.orbithangar.com/searchid.php?ID=2686" target="_blank" rel="noopener noreferrer">Orulex_Land_Gen-v1.2</a>
-    </li>
-  </ul>
+    <ul>
+      <li>
+        <a href="https://www.orbithangar.com/searchid.php?ID=4864" target="_blank" rel="noopener noreferrer">Videnie
+          orbit drawing 1.0</a>
+      </li>
+      <li>
+        <a href="https://www.orbithangar.com/searchid.php?ID=2686" target="_blank"
+          rel="noopener noreferrer">Orulex_Land_Gen-v1.2</a>
+      </li>
+    </ul>
 
 
-  <h2 id="savedata">セーブデータの互換性</h2>
+    <h2 id="savedata">セーブデータの互換性</h2>
 
 
-  <p>セーブデータ（<strong>.scn</strong>ファイル）に違いはない。<br>
-    <strong>orbiter.exe</strong>、<strong>Orbiter_ng.exe</strong>のどちらでも、同じセーブデータを利用できる。
-  </p>
+    <p>セーブデータ（<strong>.scn</strong>ファイル）に違いはない。<br>
+      <strong>orbiter.exe</strong>、<strong>Orbiter_ng.exe</strong>のどちらでも、同じセーブデータを利用できる。
+    </p>
 
 
-  <h2 id="history">歴史</h2>
+    <h2 id="history">歴史</h2>
 
 
-  <p><strong>Orbiter2010</strong>において、<strong>Orbiter_ng.exe</strong>が新たに追加された。<br>
-    当時のマニュアル(Orbiter.pdf)には、以下のように書かれている。</p>
+    <p><strong>Orbiter2010</strong>において、<strong>Orbiter_ng.exe</strong>が新たに追加された。<br>
+      当時のマニュアル(Orbiter.pdf)には、以下のように書かれている。</p>
 
-  <blockquote>
+    <blockquote>
     The Orbiter code has been extensively restructured, to separate the graphics subsystem from the simulation core. This allowed the introduction of a new server version (Orbiter_ng) in addition to the traditional orbiter.exe executable. The server
     has no built-in graphics (ng = “no graphics”), and can be used for example as a multiuser-server application or trajectory data generator. But more interestingly for most users is the ability of orbiter_ng to link to external graphics modules.
     This feature will allow to plug in more powerful and feature-rich rendering engines in the future. Even better, the interface to the graphics module is public, so anybody can try their hand at improving the Orbiter graphics.
   </blockquote>
 
-  <blockquote>
+    <blockquote>
     Orbiterのプログラムは大きく再構成され、グラフィックに関するサブシステムがシミュレーションのコアから分離された。これにより、従来のorbiter.exeに加えて、サーバーモードでの実行ファイル(Orbiter_ng)が新たに追加された。サーバーモードにはグラフィック機能は存在せず(ng&nbsp;=&nbsp;“no&nbsp;graphics”)、例えばマルチプレイのサーバーや、軌道データのジェネレーターとして利用できる。しかし、多くのユーザーにとってより重要なのは、orbiter_ngに外部のグラフィックモジュールを接続可能だということである。この機能によって、将来的には、より強力で多機能なレンダリングエンジンを追加できるようになるだろう。さらに良いことに、グラフィックモジュールへのインターフェイスは公開されているので、誰でもOrbiterのグラフィックの改良に挑戦することが可能だ。
   </blockquote>
 
-  <p>Orbiter2010の公開とともに、D3D9Clientのプロジェクトが開始され、現在も開発は続いている。</p>
+    <p>Orbiter2010の公開とともに、D3D9Clientのプロジェクトが開始され、現在も開発は続いている。</p>
 
   </main>
 
