@@ -18,428 +18,420 @@
 
   <main>
 
-<h1>軌道要素と時刻系</h1>
+    <h1>軌道要素と時刻系</h1>
 
 
-  <p>
-    Orbiterで使用される軌道要素と時刻系のまとめです。<br>
-    主にOrbit MFDと<a href="index.html#sceditor" target="_blank">シナリオエディタ</a>に関係する内容です。
-  </p>
+    <p>
+      Orbiterで使用される軌道要素と時刻系のまとめです。<br>
+      主にOrbit MFDと<a href="index.html#sceditor" target="_blank">シナリオエディタ</a>に関係する内容です。
+    </p>
 
-  <ul>
-    <li><a href="#elements">軌道要素</a>
+    <nav>
       <ul>
-        <li><a href="#sma">Semi-major axis (SMa) / Semi-minor axis (SMi)</a></li>
-        <li><a href="#pe">Periapsis (Pe) / Apoapsis (Ap)</a></li>
-        <li><a href="#rad">Radius (Rad)</a></li>
-        <li><a href="#ecc">Eccentricity (Ecc)</a></li>
-        <li><a href="#period">Period (T)</a></li>
-        <li><a href="#pet">Time to Periapsis (PeT) / Time to Apoapsis (ApT)</a></li>
-        <li><a href="#vel">Velocity (Vel)</a></li>
-        <li><a href="#inc">Inclination (Inc)</a></li>
-        <li><a href="#lan">Longitude of ascending node (LAN)</a></li>
-        <li><a href="#agp">Argument of Periapsis (AgP)</a></li>
-        <li><a href="#lpe">Longitude of periapsis (LPe)</a></li>
-        <li><a href="#tra">True Anomaly (TrA)</a></li>
-        <li><a href="#trl">True Longitude (TrL)</a></li>
-        <li><a href="#mna">Mean Anomaly (MnA)</a></li>
-        <li><a href="#mnl">Mean Longitude (MnL)</a></li>
-        <li><a href="#frm">Reference frame (Frm): ecliptic (ECL) / equator (EQU)</a></li>
+        <li><a href="#elements">軌道要素</a>
+          <ul>
+            <li><a href="#sma">Semi-major axis (SMa) / Semi-minor axis (SMi)</a></li>
+            <li><a href="#pe">Periapsis (Pe) / Apoapsis (Ap)</a></li>
+            <li><a href="#rad">Radius (Rad)</a></li>
+            <li><a href="#ecc">Eccentricity (Ecc)</a></li>
+            <li><a href="#period">Period (T)</a></li>
+            <li><a href="#pet">Time to Periapsis (PeT) / Time to Apoapsis (ApT)</a></li>
+            <li><a href="#vel">Velocity (Vel)</a></li>
+            <li><a href="#inc">Inclination (Inc)</a></li>
+            <li><a href="#lan">Longitude of ascending node (LAN)</a></li>
+            <li><a href="#agp">Argument of Periapsis (AgP)</a></li>
+            <li><a href="#lpe">Longitude of periapsis (LPe)</a></li>
+            <li><a href="#tra">True Anomaly (TrA)</a></li>
+            <li><a href="#trl">True Longitude (TrL)</a></li>
+            <li><a href="#mna">Mean Anomaly (MnA)</a></li>
+            <li><a href="#mnl">Mean Longitude (MnL)</a></li>
+            <li><a href="#frm">Reference frame (Frm): ecliptic (ECL) / equator (EQU)</a></li>
+          </ul>
+        </li>
+        <li><a href="#time">時刻系</a>
+          <ul>
+            <li><a href="#time_tool">Orbiter Date Converter</a></li>
+            <li><a href="#ut">Universal Time (UT)</a></li>
+            <li><a href="#jd">Julian Date (JD)</a></li>
+            <li><a href="#m_jd">Modified Julian Date (MJD)</a></li>
+            <li><a href="#jc">Julian Century (JC2000)</a></li>
+            <li><a href="#epoch">Epoch</a></li>
+            <li><a href="#get">Ground Elapsed Time (GET)</a></li>
+            <li><a href="#met">Mission Elapsed Time (MET)</a></li>
+          </ul>
+        </li>
+        <li><a href="#kepler">平均近点角とケプラー方程式</a></li>
       </ul>
-    </li>
-    <li><a href="#time">時刻系</a>
-      <ul>
-        <li><a href="#time_tool">Orbiter Date Converter</a></li>
-        <li><a href="#ut">Universal Time (UT)</a></li>
-        <li><a href="#jd">Julian Date (JD)</a></li>
-        <li><a href="#m_jd">Modified Julian Date (MJD)</a></li>
-        <li><a href="#jc">Julian Century (JC2000)</a></li>
-        <li><a href="#epoch">Epoch</a></li>
-        <li><a href="#get">Ground Elapsed Time (GET)</a></li>
-        <li><a href="#met">Mission Elapsed Time (MET)</a></li>
-      </ul>
-    </li>
-    <li><a href="#kepler">平均近点角とケプラー方程式</a></li>
-  </ul>
+    </nav>
 
 
-  <h2 id="elements">軌道要素</h2>
+    <h2 id="elements">軌道要素</h2>
 
 
-  <p>
-    <img loading="lazy" src="../images/misc/orbitalelements/003.png" width="764" height="619">
-  </p>
+    <p>
+      <img loading="lazy" src="../images/misc/orbitalelements/003.png" width="764" height="619">
+    </p>
 
 
-  <h3 id="sma">Semi-major axis (SMa) / Semi-minor axis (SMi)</h3>
+    <h3 id="sma">Semi-major axis (SMa) / Semi-minor axis (SMi)</h3>
 
 
-  <p>
-    軌道長半径・軌道短半径。記号はそれぞれ \( a \) と \( b \) 。
-  </p>
-  <p>
-    楕円軌道の2焦点を通り、近点と遠点に至る線分を半分にしたものが軌道長半径。<br>
-    楕円軌道の中心を通り、軌道長半径に対して垂直な線分を半分にしたのが軌道短半径。
-  </p>
+    <p>
+      軌道長半径・軌道短半径。記号はそれぞれ \( a \) と \( b \) 。
+    </p>
+    <p>
+      楕円軌道の2焦点を通り、近点と遠点に至る線分を半分にしたものが軌道長半径。<br>
+      楕円軌道の中心を通り、軌道長半径に対して垂直な線分を半分にしたのが軌道短半径。
+    </p>
 
-  <p>
-  <blockquote>
+    <blockquote>
 $$
 \mathrm {SMa} = \frac{ \mathrm {PeR} + \mathrm {ApR} }{2}
 $$
-</blockquote>
-  </p>
+  </blockquote>
 
 
-  <h3 id="pe">Periapsis (Pe) / Apoapsis (Ap)</h3>
+    <h3 id="pe">Periapsis (Pe) / Apoapsis (Ap)</h3>
 
 
-  <p>
-    近点・遠点。
-  </p>
-  <p>
-    楕円軌道において、中心天体に一番近い点が近点。逆に一番遠いのが遠点。<br>
-    地球なら近地点(Perigee)、火星なら近火点(Periareion)と呼ぶことがある。
-  </p>
+    <p>
+      近点・遠点。
+    </p>
+    <p>
+      楕円軌道において、中心天体に一番近い点が近点。逆に一番遠いのが遠点。<br>
+      地球なら近地点(Perigee)、火星なら近火点(Periareion)と呼ぶことがある。
+    </p>
 
-  <table>
-    <tr>
-      <th>PeR</th>
-      <td>Pe Radius</td>
-      <td>天体の中心からPeまでの距離</td>
-    </tr>
-    <tr>
-      <th>ApR</th>
-      <td>Ap Radius</td>
-      <td>天体の中心からApまでの距離</td>
-    </tr>
-    <tr>
-      <th>PeA</th>
-      <td>Pe Altitude</td>
-      <td>地表からPeまでの距離</td>
-    </tr>
-    <tr>
-      <th>ApA</th>
-      <td>Ap Altitude</td>
-      <td>地表からApまでの距離</td>
-    </tr>
-  </table>
-
-
-  <h3 id="rad">Radius (Rad)</h3>
+    <table>
+      <tr>
+        <th>PeR</th>
+        <td>Pe Radius</td>
+        <td>天体の中心からPeまでの距離</td>
+      </tr>
+      <tr>
+        <th>ApR</th>
+        <td>Ap Radius</td>
+        <td>天体の中心からApまでの距離</td>
+      </tr>
+      <tr>
+        <th>PeA</th>
+        <td>Pe Altitude</td>
+        <td>地表からPeまでの距離</td>
+      </tr>
+      <tr>
+        <th>ApA</th>
+        <td>Ap Altitude</td>
+        <td>地表からApまでの距離</td>
+      </tr>
+    </table>
 
 
-  <p>
-    軌道半径。記号は \( r \) 。
-  </p>
-  <p>
-    Orbit MFDでは、中心天体の中心から宇宙船までの距離を表す。
-  </p>
+    <h3 id="rad">Radius (Rad)</h3>
 
 
-  <h3 id="ecc">Eccentricity (Ecc)</h3>
+    <p>
+      動径。記号は \( r \) 。
+    </p>
+    <p>
+      Orbit MFDでは、中心天体の中心から宇宙船までの距離を表す。
+    </p>
 
 
-  <p>
-    離心率。記号は \( e \) 。
-  </p>
-  <p>
-    この数字によって宇宙船の軌道がどういう形になるか決まる。
-  </p>
-
-  <table style="text-align:center;">
-    <tr>
-      <td>円軌道</td>
-      <td>
-        <blockquote>\( e = 0 \)</blockquote>
-      </td>
-    </tr>
-    <tr>
-      <td>楕円軌道</td>
-      <td>
-        <blockquote>\( 0 &lt; e &lt; 1 \)</blockquote>
-      </td>
-    </tr>
-    <tr>
-      <td>放物線軌道</td>
-      <td>
-        <blockquote>\( e = 1 \)</blockquote>
-      </td>
-    </tr>
-    <tr>
-      <td>双曲線軌道</td>
-      <td>
-        <blockquote>\( 1 &lt; e \)</blockquote>
-      </td>
-    </tr>
-  </table>
+    <h3 id="ecc">Eccentricity (Ecc)</h3>
 
 
-  <h3 id="period">Period (T)</h3>
+    <p>
+      離心率。記号は \( e \) 。
+    </p>
+    <p>
+      この数字によって宇宙船の軌道がどういう形になるか決まる。
+    </p>
+
+    <table style="text-align:center;">
+      <tr>
+        <th>円軌道</th>
+        <td>
+          \( e = 0 \)
+        </td>
+      </tr>
+      <tr>
+        <th>楕円軌道</th>
+        <td>
+          \( 0 &lt; e &lt; 1 \)
+        </td>
+      </tr>
+      <tr>
+        <th>放物線軌道</th>
+        <td>
+          \( e = 1 \)
+        </td>
+      </tr>
+      <tr>
+        <th>双曲線軌道</th>
+        <td>
+          \( 1 &lt; e \)
+        </td>
+      </tr>
+    </table>
 
 
-  <p>
-    公転周期。記号は \( T \) 。
-  </p>
-  <p>
-    宇宙船が軌道を1周するのに必要な時間。
-  </p>
+    <h3 id="period">Period (T)</h3>
 
 
-  <h3 id="pet">Time to Periapsis (PeT) / Time to Apoapsis (ApT)</h3>
+    <p>
+      公転周期。記号は \( T \) 。
+    </p>
+    <p>
+      宇宙船が軌道を1周するのに必要な時間。
+    </p>
 
 
-  <p>
-    近点までの・遠点までの時間。<br>
-    PeTが300なら、300秒後に近点に到達する。
-  </p>
+    <h3 id="pet">Time to Periapsis (PeT) / Time to Apoapsis (ApT)</h3>
 
 
-  <h3 id="vel">Velocity (Vel)</h3>
+    <p>
+      近点までの・遠点までの時間。<br>
+      PeTが300なら、300秒後に近点に到達する。
+    </p>
 
 
-  <p>
-    宇宙船の速度。記号は \( v \) 。
-  </p>
-  <p>
-    Orbiterではメートル毎秒[m/s]で表される。
-  </p>
+    <h3 id="vel">Velocity (Vel)</h3>
 
 
-  <h3 id="inc">Inclination (Inc)</h3>
+    <p>
+      宇宙船の速度。記号は \( v \) 。
+    </p>
+    <p>
+      Orbiterではメートル毎秒[m/s]で表される。
+    </p>
 
 
-  <p>
-    軌道傾斜角。記号は \( i \) 。
-  </p>
-  <p>
-    基準となる平面（赤道面・黄道面）に対しての軌道面の傾きを表す。
-  </p>
+    <h3 id="inc">Inclination (Inc)</h3>
 
 
-  <h3 id="lan">Longitude of ascending node (LAN)</h3>
+    <p>
+      軌道傾斜角。記号は \( i \) 。
+    </p>
+    <p>
+      基準となる平面（赤道面・黄道面）に対しての軌道面の傾きを表す。
+    </p>
 
 
-  <p>
-    昇交点黄経・赤経。記号は \( \Omega \) 。
-  </p>
-  <p>
-    基準となる平面（赤道面・黄道面）と、宇宙船の軌道は2点で交差する。<br>
-    このうち、南から北に通過するものを昇交点と呼ぶ。<br>
-    LANは、基準となる点（春分点）から昇交点がどれだけ離れているかを表す。
-  </p>
+    <h3 id="lan">Longitude of ascending node (LAN)</h3>
 
 
-  <h3 id="agp">Argument of Periapsis (AgP)</h3>
+    <p>
+      昇交点黄経・赤経。記号は \( \Omega \) 。
+    </p>
+    <p>
+      基準となる平面（赤道面・黄道面）と、宇宙船の軌道は2点で交差する。<br>
+      このうち、南から北に通過するものを昇交点と呼ぶ。<br>
+      LANは、基準となる点（春分点）から昇交点がどれだけ離れているかを表す。
+    </p>
 
 
-  <p>
-    近点引数。記号は \( \omega \) 。
-  </p>
-  <p>
-    昇交点から近点までの角度。
-  </p>
+    <h3 id="agp">Argument of Periapsis (AgP)</h3>
 
 
-  <h3 id="lpe">Longitude of periapsis (LPe)</h3>
+    <p>
+      近点引数。記号は \( \omega \) 。
+    </p>
+    <p>
+      昇交点から近点までの角度。
+    </p>
 
 
-  <p>
-    基準となる点（春分点）から昇交点までの角度に、昇交点から近点までの角度を足したもの。<br>
-    記号は \( \varpi \) 。
-  </p>
+    <h3 id="lpe">Longitude of periapsis (LPe)</h3>
 
-  <p>
-  <blockquote>
+
+    <p>
+      基準となる点（春分点）から昇交点までの角度に、昇交点から近点までの角度を足したもの。<br>
+      記号は \( \varpi \) 。
+    </p>
+
+    <blockquote>
 \begin{align}
 \mathrm {LPe} &= \mathrm {LAN} + \mathrm {AgP} \\
 \varpi &= \Omega + \omega
 \end{align}
-</blockquote>
-  </p>
+  </blockquote>
 
 
-  <h3 id="tra">True Anomaly (TrA)</h3>
+    <h3 id="tra">True Anomaly (TrA)</h3>
 
 
-  <p>
-    真近点角。記号は \( \nu \) もしくは \( \theta \) 。
-  </p>
-  <p>
-    近点から宇宙船の現在位置までの角度。
-  </p>
+    <p>
+      真近点角。記号は \( \nu \) もしくは \( \theta \) 。
+    </p>
+    <p>
+      近点から宇宙船の現在位置までの角度。
+    </p>
 
 
-  <h3 id="trl">True Longitude (TrL)</h3>
+    <h3 id="trl">True Longitude (TrL)</h3>
 
 
-  <p>
-    記号は \( l \) 。
-  </p>
+    <p>
+      記号は \( l \) 。
+    </p>
 
-  <p>
-  <blockquote>
+    <blockquote>
 \begin{align}
 \mathrm {TrL} &= \mathrm {LPe} + \mathrm {TrA} \\
 l &= \varpi + \theta
 \end{align}
-</blockquote>
-  </p>
+  </blockquote>
 
 
-  <h3 id="mna">Mean Anomaly (MnA)</h3>
+    <h3 id="mna">Mean Anomaly (MnA)</h3>
 
 
-  <p>
-    平均近点角。記号は \( M \) 。
-  </p>
-  <p>
-    近点からの移動時間を周期で割って、 \( 360 \) （もしくは \( 2 \pi \) ）を掛けたもの。<br>
-    ちなみに、近点からの移動時間は \( T - \mathrm {PeT} \) によって計算することができる。
-  </p>
+    <p>
+      平均近点角。記号は \( M \) 。
+    </p>
+    <p>
+      近点からの移動時間を周期で割って、 \( 360 \) （もしくは \( 2 \pi \) ）を掛けたもの。<br>
+      ちなみに、近点からの移動時間は \( T - \mathrm {PeT} \) によって計算することができる。
+    </p>
 
-  <p>参照：<a href="#kepler">平均近点角とケプラー方程式</a></p>
-
-
-  <h3 id="mnl">Mean Longitude (MnL)</h3>
+    <p>参照：<a href="#kepler">平均近点角とケプラー方程式</a></p>
 
 
-  <p>
-    記号は \( L \) 。
-  </p>
+    <h3 id="mnl">Mean Longitude (MnL)</h3>
 
-  <p>
-  <blockquote>
+
+    <p>
+      記号は \( L \) 。
+    </p>
+
+    <blockquote>
 \begin{align}
 \mathrm {MnL} &= \mathrm {MnA} + \mathrm {LPe} \\
 L &= M + \varpi
 \end{align}
-</blockquote>
-  </p>
+  </blockquote>
 
 
-  <h3 id="frm">Reference frame (Frm): ecliptic (ECL) / equator (EQU)</h3>
+    <h3 id="frm">Reference frame (Frm): ecliptic (ECL) / equator (EQU)</h3>
 
 
-  <p>
-    特定の平面にもとづく基準系(Frame)。<br>
-    <strong>ECL</strong>(Ecliptic)は黄道面。<strong>EQU</strong>(equator)は赤道面。
-  </p>
-  <p>
-    太陽を中心として、地球は楕円軌道を周回している。<br>
-    その楕円軌道が存在する平面が黄道面。
-  </p>
-  <p>
-    現在宇宙船が周回している天体の赤道が存在する平面が赤道面。<br>
-    地球なら地球の赤道、火星なら火星の軌道が基準になる。
-  </p>
-  <p>
-    これら平面を基準として、軌道傾斜角などが決定される。
-  </p>
+    <p>
+      特定の平面にもとづく基準系(Frame)。<br>
+      <strong>ECL</strong>(Ecliptic)は黄道面。<strong>EQU</strong>(equator)は赤道面。
+    </p>
+    <p>
+      太陽を中心として、地球は楕円軌道を周回している。<br>
+      その楕円軌道が存在する平面が黄道面。
+    </p>
+    <p>
+      現在宇宙船が周回している天体の赤道が存在する平面が赤道面。<br>
+      地球なら地球の赤道、火星なら火星の軌道が基準になる。
+    </p>
+    <p>
+      これら平面を基準として、軌道傾斜角などが決定される。
+    </p>
 
 
-  <h2 id="time">時刻系</h2>
+    <h2 id="time">時刻系</h2>
 
 
-  <table>
-    <caption>現在時刻</caption>
-    <tr>
-      <td>日本標準時</td>
-      <th>JST</th>
-      <td id="jst_clock"></td>
-    </tr>
-    <tr>
-      <td>協定世界時</td>
-      <th>UTC</th>
-      <td id="utc_clock"></td>
-    </tr>
-    <tr>
-      <td>修正ユリウス日</td>
-      <th>MJD</th>
-      <td id="mjd_clock"></td>
-    </tr>
-  </table>
+    <table>
+      <caption>現在時刻</caption>
+      <tr>
+        <td>日本標準時</td>
+        <th>JST</th>
+        <td id="jst_clock"></td>
+      </tr>
+      <tr>
+        <td>協定世界時</td>
+        <th>UTC</th>
+        <td id="utc_clock"></td>
+      </tr>
+      <tr>
+        <td>修正ユリウス日</td>
+        <th>MJD</th>
+        <td id="mjd_clock"></td>
+      </tr>
+    </table>
 
 
-  <h3 id="time_tool">Orbiter Date Converter</h3>
+    <h3 id="time_tool">Orbiter Date Converter</h3>
 
 
-  <p><strong>Orbiter2010</strong> / <strong>Orbiter2016</strong>には時刻系の変換ツールが付属している。</p>
+    <p><strong>Orbiter2010</strong> / <strong>Orbiter2016</strong>には時刻系の変換ツールが付属している。</p>
 
-  <p><strong>Orbiter\Utils</strong>フォルダを開く。<br>
-    <strong>Date.exe</strong>をダブルクリックすると<strong>Orbiter Date Converter</strong>が起動する。
-  </p>
+    <p><strong>Orbiter\Utils</strong>フォルダを開く。<br>
+      <strong>Date.exe</strong>をダブルクリックすると<strong>Orbiter Date Converter</strong>が起動する。
+    </p>
 
-  <p>
-    <img loading="lazy" src="../images/misc/orbitalelements/004.png" width="212" height="393">
-  </p>
+    <p>
+      <img loading="lazy" src="../images/misc/orbitalelements/004.png" width="212" height="393">
+    </p>
 
-  <p><a href="#ut">UT</a>、<a href="#m_jd">MJD</a>、<a href="#jd">JD</a>、<a href="#jc">JC2000</a>、<a href="#epoch">Epoch</a>の相互変換が可能。</p>
-
-
-  <h3 id="ut">Universal Time (UT)</h3>
+    <p><a href="#ut">UT</a>、<a href="#m_jd">MJD</a>、<a href="#jd">JD</a>、<a href="#jc">JC2000</a>、<a
+        href="#epoch">Epoch</a>の相互変換が可能。</p>
 
 
-  <p>世界時。<br>
-    JST（日本標準時）から9時間を引くとUTになる。</p>
+    <h3 id="ut">Universal Time (UT)</h3>
 
 
-  <h3 id="jd">Julian Date (JD)</h3>
+    <p>世界時。<br>
+      JST（日本標準時）から9時間を引くとUTになる。</p>
 
 
-  <p>
-    ユリウス日。<br>
-    紀元前4713年1月1日の正午を開始時点として、そこからの日数。<br>
-    世界時の正午に日数が増加する。
-  </p>
+    <h3 id="jd">Julian Date (JD)</h3>
 
 
-  <h3 id="m_jd">Modified Julian Date (MJD)</h3>
+    <p>
+      ユリウス日。<br>
+      紀元前4713年1月1日の正午を開始時点として、そこからの日数。<br>
+      世界時の正午に日数が増加する。
+    </p>
 
 
-  <p>
-    修正ユリウス日。<br>
-    ユリウス日から \( 2400000.5 \) を引いた数字。<br>
-    Orbiterでは、IMFDやTransXといった軌道計算MODで使われる。
-  </p>
+    <h3 id="m_jd">Modified Julian Date (MJD)</h3>
 
-  <table id="mjdconverter">
-    <caption>西暦・MJD相互変換</caption>
-    <tr>
-      <th><label for="year">年</label></th>
-      <td><input id="year" type="number" value="2000" min="1" style="width: 10em;"></td>
-    </tr>
-    <tr>
-      <th><label for="month">月</label></th>
-      <td><input id="month" type="number" value="1" min="1" max="12" style="width: 10em;"></td>
-    </tr>
-    <tr>
-      <th><label for="day">日</label></th>
-      <td><input id="day" type="number" value="1" min="1" max="31" style="width: 10em;"></td>
-    </tr>
-    <tr>
-      <th><label for="mjd">MJD</label></th>
-      <td><input id="mjd" type="number" value="51544" style="width: 10em;"></td>
-    </tr>
-  </table>
 
-  <p>
-    \( \lfloor \) および \( \rfloor \) の部分では小数点以下を切り捨てる。<br>
-    また、1月を13月、2月を14月とし、どちらの場合もYから1を引く。<br>
-    例えば2020年1月の場合、2019年13月として計算する。
-  </p>
+    <p>
+      修正ユリウス日。<br>
+      ユリウス日から \( 2400000.5 \) を引いた数字。<br>
+      Orbiterでは、IMFDやTransXといった軌道計算MODで使われる。
+    </p>
 
-  <p>
-  <blockquote>
+    <table id="mjdconverter">
+      <caption>西暦・MJD相互変換</caption>
+      <tr>
+        <th><label for="year">年</label></th>
+        <td><input id="year" type="number" value="2000" min="1" style="width: 10em;"></td>
+      </tr>
+      <tr>
+        <th><label for="month">月</label></th>
+        <td><input id="month" type="number" value="1" min="1" max="12" style="width: 10em;"></td>
+      </tr>
+      <tr>
+        <th><label for="day">日</label></th>
+        <td><input id="day" type="number" value="1" min="1" max="31" style="width: 10em;"></td>
+      </tr>
+      <tr>
+        <th><label for="mjd">MJD</label></th>
+        <td><input id="mjd" type="number" value="51544" style="width: 10em;"></td>
+      </tr>
+    </table>
+
+    <p>
+      \( \lfloor \) および \( \rfloor \) の部分では小数点以下を切り捨てる。<br>
+      また、1月を13月、2月を14月とし、どちらの場合もYから1を引く。<br>
+      例えば2020年1月の場合、2019年13月として計算する。
+    </p>
+
+    <blockquote>
 西暦からMJDへの変換式（\( Y = \) 年、 \( M = \) 月、 \( D = \) 日）<br>
 $$
 \mathrm {MJD} = \lfloor 365.25 Y \rfloor + \left \lfloor \frac{Y}{400} \right \rfloor - \left \lfloor \frac{Y}{100} \right \rfloor + \lfloor 30.59 \left( M - 2 \right) \rfloor + D - 678912
 $$
-</blockquote>
-  </p>
+  </blockquote>
 
-  <p>
-  <blockquote>
+    <blockquote>
 MJDから西暦への変換式<br>
 \begin{align}
 A &= \lfloor \mathrm {MJD} + 2468570 \rfloor \\
@@ -454,141 +446,139 @@ D &= F - \lfloor 30.59G \rfloor \\
 M &= G - 12H +2 \\
 Y &= 100(B - 49) + E +H
 \end{align}
-</blockquote>
-  </p>
+  </blockquote>
 
 
-  <h3 id="jc">Julian Century (JC2000)</h3>
+    <h3 id="jc">Julian Century (JC2000)</h3>
 
 
-  <p>
-    ユリウス世紀。<br>
-    1日を86400秒として、365.25日がユリウス年、36525日がユリウス世紀。<br>
-    2000年1月1日の正午を0とし、2100年1月1日の正午が1となる。<br>
-    ユリウス日とは無関係。
-  </p>
+    <p>
+      ユリウス世紀。<br>
+      1日を86400秒として、365.25日がユリウス年、36525日がユリウス世紀。<br>
+      2000年1月1日の正午を0とし、2100年1月1日の正午が1となる。<br>
+      ユリウス日とは無関係。
+    </p>
 
 
-  <h3 id="epoch">Epoch</h3>
+    <h3 id="epoch">Epoch</h3>
 
 
-  <p>
-    元期。<br>
-    天文・宇宙の分野においては、天体の位置や軌道が観測された時刻を意味する。
-  </p>
-  <p>
-    Orbiterのシナリオエディタでは、整数部分で年（西暦）、それより小さな日時を小数で表す。<br>
-    例えば、Epochが2020.5のとき、通常の時刻表示では2020年7月2日3時になる。
-  </p>
+    <p>
+      元期。<br>
+      天文・宇宙の分野においては、天体の位置や軌道が観測された時刻を意味する。
+    </p>
+    <p>
+      Orbiterのシナリオエディタでは、整数部分で年（西暦）、それより小さな日時を小数で表す。<br>
+      例えば、Epochが2020.5のとき、通常の時刻表示では2020年7月2日3時になる。
+    </p>
 
 
-  <h3 id="get">Ground Elapsed Time (GET)</h3>
+    <h3 id="get">Ground Elapsed Time (GET)</h3>
 
 
-  <p>
-    打ち上げからの経過時間。<br>
-    打ち上げの1秒前を0とする。時 : 分 : 秒で表す。<br>
-    アポロ計画など、スペースシャトル以前に使われていた。
-  </p>
-  <p>
-    参照： <a href="https://history.nasa.gov/SP-4029/Apollo_00c_Introduction.htm" target="_blank" rel="noopener noreferrer">Apollo by the Numbers - Introducion</a>
-  </p>
+    <p>
+      打ち上げからの経過時間。<br>
+      打ち上げの1秒前を0とする。時 : 分 : 秒で表す。<br>
+      アポロ計画など、スペースシャトル以前に使われていた。
+    </p>
+    <p>
+      参照： <a href="https://history.nasa.gov/SP-4029/Apollo_00c_Introduction.htm" target="_blank"
+        rel="noopener noreferrer">Apollo by the Numbers - Introducion</a>
+    </p>
 
 
-  <h3 id="met">Mission Elapsed Time (MET)</h3>
+    <h3 id="met">Mission Elapsed Time (MET)</h3>
 
 
-  <p>
-    打ち上げからの経過時間。<br>
-    スペースシャトル以降に使われるようになった。SRBの点火を0とする。<br>
-    日 / 時 : 分 : 秒で表す。
-  </p>
-  <p>
-    参照： <a href="https://web.archive.org/web/20070718124711/https://science.nasa.gov/Realtime/Rocket_Sci/clocks/time-met.html" target="_blank" rel="noopener noreferrer">Mission Elapsed Time Explained</a>
-  </p>
+    <p>
+      打ち上げからの経過時間。<br>
+      スペースシャトル以降に使われるようになった。SRBの点火を0とする。<br>
+      日 / 時 : 分 : 秒で表す。
+    </p>
+    <p>
+      参照： <a
+        href="https://web.archive.org/web/20070718124711/https://science.nasa.gov/Realtime/Rocket_Sci/clocks/time-met.html"
+        target="_blank" rel="noopener noreferrer">Mission Elapsed Time Explained</a>
+    </p>
 
 
-  <h2 id="kepler">平均近点角とケプラー方程式</h2>
+    <h2 id="kepler">平均近点角とケプラー方程式</h2>
 
 
-  <table>
-    <caption>ケプラー方程式の解（ニュートン法）</caption>
-    <tr>
-      <td><label for="ecc_input">離心率</label></td>
-      <td>Ecc</td>
-      <th>\( e \)</th>
-      <td><input type="number" id="ecc_input" step="0.0001" max="0.9999" width="5em"></td>
-    </tr>
-    <tr>
-      <td><label for="mna_input">平均近点角</label></td>
-      <td>MnA</td>
-      <th>\(M \)</th>
-      <td><input type="number" id="mna_input" step="0.01" width="5em"></td>
-    </tr>
-    <tr>
-      <td colspan="2"><label for="eca_output">離心近点角</label></td>
-      <th>\( E \)</th>
-      <td id="eca_output"></td>
-    </tr>
-    <tr>
-      <td><label for="tra_output">真近点角</label></td>
-      <td>TrA</td>
-      <th>\( \theta \)</th>
-      <td id="tra_output"></td>
-    </tr>
-  </table>
+    <table>
+      <caption>ケプラー方程式の解（ニュートン法）</caption>
+      <tr>
+        <td><label for="ecc_input">離心率</label></td>
+        <td>Ecc</td>
+        <th>\( e \)</th>
+        <td><input type="number" id="ecc_input" step="0.0001" max="0.9999" width="5em"></td>
+      </tr>
+      <tr>
+        <td><label for="mna_input">平均近点角</label></td>
+        <td>MnA</td>
+        <th>\(M \)</th>
+        <td><input type="number" id="mna_input" step="0.01" width="5em"></td>
+      </tr>
+      <tr>
+        <td colspan="2"><label for="eca_output">離心近点角</label></td>
+        <th>\( E \)</th>
+        <td id="eca_output"></td>
+      </tr>
+      <tr>
+        <td><label for="tra_output">真近点角</label></td>
+        <td>TrA</td>
+        <th>\( \theta \)</th>
+        <td id="tra_output"></td>
+      </tr>
+    </table>
 
-  <button type="button" id="button_kepler">計算</button>
-  <p>
-    平均近点角が近点からの移動時間を変換した仮想的な角度であるのに対し、真近点角は軌道上での実際の位置を表している。<br>
-    平均近点角とケプラー方程式によって、任意の時刻における天体（惑星・宇宙機）の位置を計算できる。
-  </p>
+    <button type="button" id="button_kepler">計算</button>
+    <p>
+      平均近点角が近点からの移動時間を変換した仮想的な角度であるのに対し、真近点角は軌道上での実際の位置を表している。<br>
+      平均近点角とケプラー方程式によって、任意の時刻における天体（惑星・宇宙機）の位置を計算できる。
+    </p>
 
-  <ol>
-    <li>天体観測によって、対象の天体の軌道（離心率など）を調べる。<br>
-      天体が近点を通過した時刻を確認する。</li>
-    <li>近点通過時刻から、任意の時刻までの経過時間を調べる。<br>
-      この経過時間を平均近点角に変換する。</li>
-    <li>ケプラー方程式によって、平均近点角から離心近点角を計算する。</li>
-    <li>離心近点角から、さらに真近点角を計算する。</li>
-  </ol>
+    <ol>
+      <li>天体観測によって、対象の天体の軌道（離心率など）を調べる。<br>
+        天体が近点を通過した時刻を確認する。</li>
+      <li>近点通過時刻から、任意の時刻までの経過時間を調べる。<br>
+        この経過時間を平均近点角に変換する。</li>
+      <li>ケプラー方程式によって、平均近点角から離心近点角を計算する。</li>
+      <li>離心近点角から、さらに真近点角を計算する。</li>
+    </ol>
 
-  <p>
-  <blockquote>
+    <blockquote>
 ケプラー方程式
 $$
 M = E - e \sin E
 $$
-</blockquote>
-  </p>
+  </blockquote>
 
-  <p>
-    \(M \) は平均近点角、 \( e \) は離心率、 \( E \) は離心近点角を表す。※<br>
-    すでにわかっている \( M \) と \( e \) から、 \( E \) の値を計算する。<br>
-    この式を簡単に解くことはできないため、ニュートン・ラフソン法などを使って近似解を求める。
-  </p>
-  <p>
-    ※離心近点角 \( E \) はOrbiterでは表示されない
-  </p>
-  <p>
-    \( E \) （離心近点角）と \( \theta \) （真近点角）には、以下のような関係がある。
-  </p>
+    <p>
+      \(M \) は平均近点角、 \( e \) は離心率、 \( E \) は離心近点角を表す。※<br>
+      すでにわかっている \( M \) と \( e \) から、 \( E \) の値を計算する。<br>
+      この式を簡単に解くことはできないため、ニュートン・ラフソン法などを使って近似解を求める。
+    </p>
+    <p>
+      ※離心近点角 \( E \) はOrbiterでは表示されない
+    </p>
+    <p>
+      \( E \) （離心近点角）と \( \theta \) （真近点角）には、以下のような関係がある。
+    </p>
 
-  <p>
-  <blockquote>
+    <blockquote>
 $$
 \tan \frac{\theta}{2} = \sqrt{ \frac{1+e}{1-e} } \tan \frac{E}{2}
 $$
-</blockquote>
-  </p>
+  </blockquote>
 
-  <p>
-    したがって、 \( E \) からさらに \( \theta \) を計算することができる。
-  </p>
+    <p>
+      したがって、 \( E \) からさらに \( \theta \) を計算することができる。
+    </p>
 
-  <p>
-    <img loading="lazy" src="../images/misc/orbitalelements/002.png" width="873" height="451">
-  </p>
+    <p>
+      <img loading="lazy" src="../images/misc/orbitalelements/002.png" width="873" height="451">
+    </p>
 
   </main>
 

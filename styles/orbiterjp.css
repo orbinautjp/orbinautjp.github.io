@@ -196,18 +196,20 @@ ul, ol {
 /* quote */
 
 pre {
-  display:inline-block;
+  display: table;
   background-color:#ffffff;
-  margin: 0.2rem;
+  margin-left: 0.2rem;
+  margin-bottom: auto;
   padding: 1rem;
   border-radius: 0.5rem;
   box-shadow :0 0 0.5rem silver;
 }
 blockquote {
-  display:inline-block;
+  display: table;
   background-color:#ffffff;
-  margin: 0.2rem;
-  padding: 0.5rem 1rem;
+  margin-left: 0.2rem;
+  margin-bottom: auto;
+  padding: 1rem;
   border-radius: 0.5rem;
   box-shadow :0 0 0.5rem silver;
 }
@@ -370,10 +372,14 @@ footer ul {
   blockquote {
     max-width: 90%;
     overflow-x: auto;
+    display: inline-block;
+    margin-right: 0%;
   }
   pre {
     max-width: 90%;
     overflow-x: auto;
+    display: inline-block;
+    margin-right: 0%;
   }
 
   abbr[title] {
