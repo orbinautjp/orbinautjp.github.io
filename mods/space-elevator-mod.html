@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 
 <html lang="ja">
+
 <head>
   <script src="../scripts/ga.js"></script>
   <meta charset="UTF-8">
@@ -14,29 +15,32 @@
 
   <main>
 
-  <h1>Space Elevator MODのダウンロード+インストール</h1>
+    <h1>Space Elevator MODのダウンロード+インストール</h1>
 
 
-  <p><strong>Space Elevator, release 4</strong>は、Orbiterで軌道エレベータを再現するMODです。<br>
-    <strong>Orbiter2010</strong>・<strong>Orbiter2016</strong>のどちらでも使えます。</p>
+    <p><strong>Space Elevator, release 4</strong>は、Orbiterで軌道エレベータを再現するMODです。<br>
+      <strong>Orbiter2010</strong>・<strong>Orbiter2016</strong>のどちらでも使えます。
+    </p>
     <h2>ダウンロード</h2>
     <p>ダウンロードは以下のリンクから。</p>
-    <p><a href="https://www.orbithangar.com/searchid.php?ID=1891" target="_blank" rel="noopener noreferrer">Space Elevator, release 4</a></p>
+    <p><a href="https://www.orbithangar.com/searchid.php?ID=1891" target="_blank" rel="noopener noreferrer">Space
+        Elevator, release 4</a></p>
     <h2>インストール</h2>
     <p><strong>SpaceElevator4.zip</strong>を解凍する。</p>
     <p>中に入っている<strong>SpaceElevatorSetup.exe</strong>をダブルクリック。<br>
-    <kbd>Next</kbd>をクリックして、出てきた画面で<kbd>Browse</kbd>をクリック。<br>
-    Orbiterのインストールフォルダを指定して、<kbd>Next</kbd>を何度かクリックする。<br>
-    <img loading="lazy" src="../images/mods/space-elevator-mod/001.png" width="511" height="396">
+      <kbd>Next</kbd>をクリックして、出てきた画面で<kbd>Browse</kbd>をクリック。<br>
+      Orbiterのインストールフォルダを指定して、<kbd>Next</kbd>を何度かクリックする。<br>
+      <img loading="lazy" src="../images/mods/space-elevator-mod/001.png" width="511" height="396">
     </p>
     <p>JSGMEを使いたい場合は、あらかじめ空のフォルダを用意する。<br>
-    そのフォルダをインストール先に指定すると、そこにMODファイルが吐き出されるので、通常のMODと同じようにJSGMEを使うことができる。</p>
+      そのフォルダをインストール先に指定すると、そこにMODファイルが吐き出されるので、通常のMODと同じようにJSGMEを使うことができる。</p>
     <h3>Configファイルの書き換え</h3>
     <p>このMODのような一部の基地追加MODでは、<strong>Earth.cfg</strong>を編集する必要があります。<br>
-    <strong class="caution">重要</strong>：あとでMODを外したい場合は、<strong>Earth.cfg</strong>のバックアップを保存してください。</p>
+      <strong class="caution">重要</strong>：あとでMODを外したい場合は、<strong>Earth.cfg</strong>のバックアップを保存してください。
+    </p>
     <p><strong>Orbiter\Config</strong>フォルダの中にある、<strong>Earth.cfg</strong>をメモ帳などで開く。<br>
-    <strong>BEGIN_SURFBASE</strong>と<strong>END_SURFBASE</strong>のあいだに以下の行を追加する。<br>
-    <img loading="lazy" src="../images/mods/space-elevator-mod/002.png" width="275" height="127">
+      <strong>BEGIN_SURFBASE</strong>と<strong>END_SURFBASE</strong>のあいだに以下の行を追加する。<br>
+      <img loading="lazy" src="../images/mods/space-elevator-mod/002.png" width="275" height="127">
     </p>
     <pre><code>SRC_Lift: +101.60 +0.00</code></pre>
     <p>編集が終わったら、上書き保存する。</p>
@@ -44,64 +48,67 @@
     <h2>軌道エレベータを使う</h2>
     <p><strong class="caution">重要</strong>：軌道エレベータが存在するシナリオでは、タイムワープが100倍速に制限されます。</p>
     <h3>キー操作一覧</h3>
-    
-    <table>
-     <tr>
-      <td><kbd>G</kbd></td>
-      <td>ドッキング用のチューブを展開・格納</td>
-     </tr>
-     <tr>
-      <td><kbd>K</kbd></td>
-      <td>貨物室のドアを開閉</td>
-     </tr>
-     <tr>
-      <td><kbd>S</kbd></td>
-      <td>運転・停止</td>
-     </tr>
-     <tr>
-      <td><kbd>D</kbd></td>
-      <td>目的地の変更</td>
-     </tr>
-     <tr>
-      <td><kbd>J</kbd></td>
-      <td>積んでいる宇宙船などを投下</td>
-     </tr>
-     <tr>
-      <td><kbd>Ctrl</kbd>+<kbd>J</kbd></td>
-      <td>積んでいる宇宙船を投下して、その船に乗り換える</td>
-     </tr>
-     <tr>
-      <td><kbd>E</kbd></td>
-      <td>緊急停止</td>
-     </tr>
-     <tr>
-      <td>矢印キー<kbd>↑</kbd>or<kbd>↓</kbd></td>
-      <td>2Dコクピットのパネルを上下に動かす</td>
-     </tr>
+
+    <table class="center1col">
+      <tr>
+        <td><kbd>G</kbd></td>
+        <td>ドッキング用のチューブを展開・格納</td>
+      </tr>
+      <tr>
+        <td><kbd>K</kbd></td>
+        <td>貨物室のドアを開閉</td>
+      </tr>
+      <tr>
+        <td><kbd>S</kbd></td>
+        <td>運転・停止</td>
+      </tr>
+      <tr>
+        <td><kbd>D</kbd></td>
+        <td>目的地の変更</td>
+      </tr>
+      <tr>
+        <td><kbd>J</kbd></td>
+        <td>積んでいる宇宙船などを投下</td>
+      </tr>
+      <tr>
+        <td><kbd>Ctrl</kbd>+<kbd>J</kbd></td>
+        <td>積んでいる宇宙船を投下して、その船に乗り換える</td>
+      </tr>
+      <tr>
+        <td><kbd>E</kbd></td>
+        <td>緊急停止</td>
+      </tr>
+      <tr>
+        <td>矢印キー<kbd>↑</kbd>or<kbd>↓</kbd></td>
+        <td>2Dコクピットのパネルを上下に動かす</td>
+      </tr>
     </table>
-    
+
     <p><strong>Space Elevator</strong>フォルダの同名のシナリオを選んでゲーム開始。<br>
-        <img loading="lazy" src="../images/mods/space-elevator-mod/003.png" width="120" height="52">
+      <img loading="lazy" src="../images/mods/space-elevator-mod/003.png" width="120" height="52">
     </p>
     <p><strong class="caution">重要</strong>：まず最初に、<kbd>G</kbd>を押してドッキングを解除する。</p>
     <p><kbd>F8</kbd>を押してコクピット画面に切り換える。<br>
-    三角のボタンをクリックして目的地を選択したら、<kbd>GO</kbd>をクリック。<br>
-    <img loading="lazy" src="../images/mods/space-elevator-mod/004.png" width="233" height="276">
+      三角のボタンをクリックして目的地を選択したら、<kbd>GO</kbd>をクリック。<br>
+      <img loading="lazy" src="../images/mods/space-elevator-mod/004.png" width="233" height="276">
     </p>
     <p><kbd>MODE</kbd>ボタンをクリックすると、ペイロードの分離などの画面に切り替えることができます。</p>
     <h2>静止軌道ステーション</h2>
     <p>静止軌道(<strong>Geostationary Orbit</strong>)には基地とドッキングポートが設置されています。<br>
-    ただしドッキングポートにバグがあるため、正常に接続・分離できなくなっています。<br>
-    <a href="../misc/sceditor2-vesselparameter.html" target="_blank">シナリオエディタ</a>を使うことで、強制的に分離させることができます。</p>
+      ただしドッキングポートにバグがあるため、正常に接続・分離できなくなっています。<br>
+      <a href="../misc/sceditor2-vesselparameter.html" target="_blank">シナリオエディタ</a>を使うことで、強制的に分離させることができます。
+    </p>
     <p>地上などから直接この基地まで飛ぶ場合は、この静止軌道ステーションに<br>
-    あらかじめターゲットとなる宇宙船をドッキングさせておきます。<br>
-    TransXなどでこの船をターゲットに指定すれば、あとは普通に飛ぶだけです。<br>
-    <a href="../transximfd/transx-geostationary.html" target="_blank">【TransX】静止軌道へ行く方法</a></p>
+      あらかじめターゲットとなる宇宙船をドッキングさせておきます。<br>
+      TransXなどでこの船をターゲットに指定すれば、あとは普通に飛ぶだけです。<br>
+      <a href="../transximfd/transx-geostationary.html" target="_blank">【TransX】静止軌道へ行く方法</a>
+    </p>
     <h3>ドッキングとセーブ・ロード</h3>
     <p>バグがあるため、静止軌道基地に船がドッキングしているとセーブ・ロードができません。<br>
-    セーブする場合は事前にドッキングポートから宇宙船を切り離してください。</p>
+      セーブする場合は事前にドッキングポートから宇宙船を切り離してください。</p>
 
   </main>
 
 </body>
+
 </html>

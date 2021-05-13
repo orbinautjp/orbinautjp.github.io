@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 
 <html lang="ja">
+
 <head>
   <script src="../scripts/ga.js"></script>
   <meta charset="UTF-8">
@@ -14,164 +15,174 @@
 
   <main>
 
-  <h1>Voyager - The 32nd Anniversary Editionの操作方法</h1>
+    <h1>Voyager - The 32nd Anniversary Editionの操作方法</h1>
 
 
-  <ul>
-    <li><a href="#key">キー操作一覧</a></li>
     <ul>
-    <li><a href="#key_titan3">タイタンⅢE-セントール</a></li>
-    <li><a href="#key_voyager">ボイジャー</a></li>
+      <li><a href="#key">キー操作一覧</a></li>
+      <ul>
+        <li><a href="#key_titan3">タイタンⅢE-セントール</a></li>
+        <li><a href="#key_voyager">ボイジャー</a></li>
+      </ul>
+      <li><a href="#launch">打ち上げ</a></li>
+      <ul>
+        <li><a href="#inherit">TransXのInherit機能を使う</a></li>
+      </ul>
+      <li><a href="#tji">TJI</a></li>
+      <ul>
+        <li><a href="#voyagerdeployment">ボイジャー探査機を展開する</a></li>
+      </ul>
+      <li><a href="#slingshot">スイングバイ・軌道修正</a></li>
+      <ul>
+        <li><a href="#mcc">軌道修正の心得</a></li>
+        <li><a href="#imfd">IMFDのMap programを使う</a></li>
+      </ul>
     </ul>
-    <li><a href="#launch">打ち上げ</a></li>
-    <ul>
-    <li><a href="#inherit">TransXのInherit機能を使う</a></li>
-    </ul>
-    <li><a href="#tji">TJI</a></li>
-    <ul>
-    <li><a href="#voyagerdeployment">ボイジャー探査機を展開する</a></li>
-    </ul>
-    <li><a href="#slingshot">スイングバイ・軌道修正</a></li>
-    <ul>
-    <li><a href="#mcc">軌道修正の心得</a></li>
-    <li><a href="#imfd">IMFDのMap programを使う</a></li>
-    </ul>
-    </ul>
-    
+
     <p>こちらの記事もあわせてお読みください。</p>
     <p><a href="voyager32-install.html">Voyager - The 32nd Anniversary Editionのダウンロード・インストール</a><br>
-    <a href="../misc/voyager32-story.html">ボイジャーへの道（翻訳）</a></p>
-    
+      <a href="../misc/voyager32-story.html">ボイジャーへの道（翻訳）</a>
+    </p>
+
     <h2 id="key">キー操作一覧</h2>
-    
+
     <h3 id="key_titan3">タイタンⅢE-セントール</h3>
-    
-    <table>
-     <tr>
-      <td><kbd>U</kbd></td>
-      <td>打ち上げ方位角を入力</td>
-     </tr>
-     <tr>
-      <td><kbd>O</kbd></td>
-      <td>オートパイロットで打ち上げ／オートパイロット解除</td>
-     </tr>
-     <tr>
-      <td><kbd>J</kbd></td>
-      <td>ステージ及びペイロードを分離</td>
-     </tr>
+
+    <table class="center1col">
+      <tr>
+        <td><kbd>U</kbd></td>
+        <td>打ち上げ方位角を入力</td>
+      </tr>
+      <tr>
+        <td><kbd>O</kbd></td>
+        <td>オートパイロットで打ち上げ／オートパイロット解除</td>
+      </tr>
+      <tr>
+        <td><kbd>J</kbd></td>
+        <td>ステージ及びペイロードを分離</td>
+      </tr>
     </table>
-    
+
     <h3 id="key_voyager">ボイジャー</h3>
-    
+
     <p>以下の操作でテンキーを使うときは<strong>NumLock</strong>を必ず外しておくこと。</p>
-    
-    <table>
-     <tr>
-      <td><kbd>J</kbd></td>
-      <td>MIRISの防護カバーを外す</td>
-     </tr>
-     <tr>
-      <td><kbd>G</kbd></td>
-      <td>RTG・サイエンスブームを展開</td>
-     </tr>
-     <tr>
-      <td><kbd>J</kbd></td>
-      <td>推進モジュールを分離</td>
-     </tr>
-     <tr>
-      <td><kbd>K</kbd></td>
-      <td>電波観測アンテナを伸ばす</td>
-     </tr>
-     <tr>
-      <td><kbd>Shift</kbd>+テンキー<kbd>0</kbd></td>
-      <td>磁力計のブームを伸ばす</td>
-     </tr>
-     <tr>
-      <td><kbd>Shift</kbd>+テンキー<kbd>1</kbd></td>
-      <td>スキャン・プラットフォームを上下に回転</td>
-     </tr>
-     <tr>
-      <td><kbd>Shift</kbd>+<kbd>Ctrl</kbd>+テンキー<kbd>1</kbd></td>
-      <td>スキャン・プラットフォームを上下に逆回転</td>
-     </tr>
-     <tr>
-      <td><kbd>Shift</kbd>+テンキー<kbd>2</kbd></td>
-      <td>スキャン・プラットフォームを左右に回転</td>
-     </tr>
-     <tr>
-      <td><kbd>Shift</kbd>+<kbd>Ctrl</kbd>+テンキー<kbd>2</kbd></td>
-      <td>スキャン・プラットフォームを左右に逆回転</td>
-     </tr>
+
+    <table class="center1col">
+      <tr>
+        <td><kbd>J</kbd></td>
+        <td>MIRISの防護カバーを外す</td>
+      </tr>
+      <tr>
+        <td><kbd>G</kbd></td>
+        <td>RTG・サイエンスブームを展開</td>
+      </tr>
+      <tr>
+        <td><kbd>J</kbd></td>
+        <td>推進モジュールを分離</td>
+      </tr>
+      <tr>
+        <td><kbd>K</kbd></td>
+        <td>電波観測アンテナを伸ばす</td>
+      </tr>
+      <tr>
+        <td><kbd>Shift</kbd>+テンキー<kbd>0</kbd></td>
+        <td>磁力計のブームを伸ばす</td>
+      </tr>
+      <tr>
+        <td><kbd>Shift</kbd>+テンキー<kbd>1</kbd></td>
+        <td>スキャン・プラットフォームを上下に回転</td>
+      </tr>
+      <tr>
+        <td><kbd>Shift</kbd>+<kbd>Ctrl</kbd>+テンキー<kbd>1</kbd></td>
+        <td>スキャン・プラットフォームを上下に逆回転</td>
+      </tr>
+      <tr>
+        <td><kbd>Shift</kbd>+テンキー<kbd>2</kbd></td>
+        <td>スキャン・プラットフォームを左右に回転</td>
+      </tr>
+      <tr>
+        <td><kbd>Shift</kbd>+<kbd>Ctrl</kbd>+テンキー<kbd>2</kbd></td>
+        <td>スキャン・プラットフォームを左右に逆回転</td>
+      </tr>
     </table>
-    
+
     <p><a href="spacecraft3keymap.html">Spacecraft3 キー操作一覧</a></p>
-    
+
     <h2 id="launch">打ち上げ</h2>
-    
+
     <p>スイングバイを含むプランの作り方については、以下のページを参照。<br>
-    <a href="../transximfd/transx-slingshot-1.html">スイングバイの基本 Part1</a></p>
+      <a href="../transximfd/transx-slingshot-1.html">スイングバイの基本 Part1</a>
+    </p>
     <p>TransXなどのMFDを使って、打ち上げ方位角を決定する。<br>
-    <kbd>U</kbd>を押してこの角度を入力。<kbd>Enter</kbd>を押して決定する。</p>
+      <kbd>U</kbd>を押してこの角度を入力。<kbd>Enter</kbd>を押して決定する。
+    </p>
     <p><kbd>O</kbd>を押すと自動で打ち上げられる。<br>
-    打ち上げを手動に切り替える場合は、もう一度<kbd>O</kbd>を押す。</p>
-    
+      打ち上げを手動に切り替える場合は、もう一度<kbd>O</kbd>を押す。</p>
+
     <h3 id="inherit">TransXのInherit機能を使う</h3>
-    
+
     <p>ステージを分離するとTransXのデータは初期化されます。※<br>
-    <strong>Inherit</strong>機能を使って、前のステージからデータを引き継ぐ必要があります。</p>
+      <strong>Inherit</strong>機能を使って、前のステージからデータを引き継ぐ必要があります。
+    </p>
     <p class="note">※シナリオによっては全段にあらかじめデータが入力されています</p>
     <p>以下のページを参考にしてください。<br>
-    <a href="../transximfd/transx-functions.html">TransXの機能（中級者向け）</a></p>
-    
+      <a href="../transximfd/transx-functions.html">TransXの機能（中級者向け）</a>
+    </p>
+
     <h2 id="tji">TJI</h2>
-    
+
     <p class="note"><strong>TJI</strong>=Trans Jupiter Injection（地球軌道を離脱して木星へ向かう噴射のこと）</p>
-    
+
     <p><a href="../transximfd/transx-slingshot-3.html">スイングバイの基本 Part3 </a></p>
-    
+
     <p>セントールロケットとスター37E※の両方を使ってTJIを実行する。<br>
-    セントールの燃料が切れたら、自動的にスター37Eに切り替わる。</p>
+      セントールの燃料が切れたら、自動的にスター37Eに切り替わる。</p>
     <p class="note">※ゲーム中での名前は<strong>PropulsionModule</strong>（推進モジュール）</p>
     <p>スター37Eは固体ロケットであり、本来は途中で燃焼を止めることはできない。<br>
-    とはいえそれでは難しすぎるので、適当なタイミングで噴射を止める。</p>
+      とはいえそれでは難しすぎるので、適当なタイミングで噴射を止める。</p>
     <p>非現実的ではあるが、スター37Eのエンジンを小刻みに噴射してあらかじめ軌道を調整すると、ミッションの難易度が大幅に下がる。<br>
-    また、分離時の衝撃でボイジャーが加速するので、これを見越して調整する。</p>
-    
+      また、分離時の衝撃でボイジャーが加速するので、これを見越して調整する。</p>
+
     <h3 id="voyagerdeployment">ボイジャー探査機を展開する</h3>
-    
+
     <p>TJIが終了したら、<kbd>F3</kbd>キーを押してボイジャーに乗り換える。</p>
     <p><kbd>J</kbd>を押してMIRISのカバーを分離。<br>
-    <kbd>G</kbd>を押してRTG・サイエンスブームを展開。</p>
+      <kbd>G</kbd>を押してRTG・サイエンスブームを展開。
+    </p>
     <p><kbd>Ctrl</kbd>+<kbd>F3</kbd>を押してスター37Eに戻る。<br>
-    <kbd>J</kbd>を押してボイジャーを分離する。<br>
-    自動的にボイジャーに切り替わる。</p>
+      <kbd>J</kbd>を押してボイジャーを分離する。<br>
+      自動的にボイジャーに切り替わる。
+    </p>
     <p><kbd>K</kbd>を押して2本のアンテナを伸ばす。<br>
-    <kbd>Shift</kbd>+テンキー<kbd>0</kbd>で磁力計のブームを展開する。</p>
-    
+      <kbd>Shift</kbd>+テンキー<kbd>0</kbd>で磁力計のブームを展開する。
+    </p>
+
     <h2 id="slingshot">スイングバイ・軌道修正</h2>
-    
+
     <p>最低限の推進剤しかないので、無駄遣いしないことを心がける。<br>
-    軌道修正の回数を少なくすることも重要になる。</p>
-    
+      軌道修正の回数を少なくすることも重要になる。</p>
+
     <h3 id="mcc">軌道修正の心得</h3>
-    
+
     <ol>
-    <li>オートパイロットは使わない</li>
-    <li>タイムワープで方向転換する</li>
+      <li>オートパイロットは使わない</li>
+      <li>タイムワープで方向転換する</li>
     </ol>
-    
+
     <p><strong>Prograde</strong>や<strong>Auto-center</strong>などのオートパイロットを使わないようにする。<br>
-    オートパイロットは無駄な噴射が多く、手動のほうが効率がよい。</p>
+      オートパイロットは無駄な噴射が多く、手動のほうが効率がよい。</p>
     <p>向きを変えるときは、ほんの少しだけ噴射する。<br>
-    少しの噴射でも、タイムワープ（キーボード<kbd>T</kbd>or<kbd>R</kbd>）を使えば短い時間で方向転換できる。</p>
-    
+      少しの噴射でも、タイムワープ（キーボード<kbd>T</kbd>or<kbd>R</kbd>）を使えば短い時間で方向転換できる。</p>
+
     <h3 id="imfd">IMFDのMap programを使う</h3>
-    
+
     <p>基本的なスイングバイは<strong>TransX</strong>、軌道予測には<strong>IMFD</strong>を使う。<br>
-    IMFDの<strong>Map program</strong>については以下の記事を参照すること。<br>
-    <a href="../transximfd/imfd-tutorial-5.html">IMFD Part5 Map Programの基本操作</a></p>
+      IMFDの<strong>Map program</strong>については以下の記事を参照すること。<br>
+      <a href="../transximfd/imfd-tutorial-5.html">IMFD Part5 Map Programの基本操作</a>
+    </p>
 
   </main>
 
 </body>
+
 </html>

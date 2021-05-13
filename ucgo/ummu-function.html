@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 
 <html lang="ja">
+
 <head>
   <script src="../scripts/ga.js"></script>
   <meta charset="UTF-8">
@@ -14,141 +15,128 @@
 
   <main>
 
-  <h1>UMMU操作ガイド（UMMUの種類・HUD・呼吸可能エリアの設定）</h1>
+    <h1>UMMU操作ガイド（UMMUの種類・HUD・呼吸可能エリアの設定）</h1>
 
 
-  <h2>UMMUの種類</h2>
+    <h2>UMMUの種類</h2>
 
-  <p>UMMUにはいくつかの職種(<strong>function</strong>)が存在し、これによって外見などを決定することができます。※</p>
+    <p>UMMUにはいくつかの職種(<strong>function</strong>)が存在し、これによって外見などを決定することができます。※</p>
 
-  <p>
-    <img loading="lazy" src="../images/ucgo/ummu-function/UMMUfunction002.png" width="766" height="260">
-  </p>
-  <p class="note">※機能に違いはありません。いずれも同じように操作できます。</p>
-  <p>また、一部のMODでは特定の種類のUMMU（船長など）が搭乗していないと動作しないものがあります。</p>
-  <p>使用可能な職種は以下の通り。</p>
+    <p>
+      <img loading="lazy" src="../images/ucgo/ummu-function/UMMUfunction002.png" width="766" height="260">
+    </p>
+    <p class="note">※機能に違いはありません。いずれも同じように操作できます。</p>
+    <p>また、一部のMODでは特定の種類のUMMU（船長など）が搭乗していないと動作しないものがあります。</p>
+    <p>使用可能な職種は以下の通り。</p>
 
-  <p>
-    <img loading="lazy" src="../images/ucgo/ummu-function/UMMUfunction001.png" width="505" height="124">
-  </p>
-  
-  <table>
-  <tr><td><strong>Capt</strong>
-  </td>
-  <td>船長
-  </td>
-  </tr>
-  <tr><td><strong>Sec</strong>
-  </td>
-  <td>警備兵
-  </td>
-  </tr>
-  <tr><td><strong>Sci</strong>
-  </td>
-  <td>科学者
-  </td>
-  </tr>
-  <tr><td><strong>Doc</strong>
-  </td>
-  <td>医者
-  </td>
-  </tr>
-  <tr><td><strong>Tech</strong>
-  </td>
-  <td>技術者
-  </td>
-  </tr>
-  <tr><td><strong>Crew</strong>, <strong>Pax</strong>, <strong>Vip</strong>
-  </td>
-  <td>船員、乗客、VIP（グラフィックは共通）
-  </td>
-  </tr>
-  </table>
-  
-  <p>このうち、<strong>Sci</strong>と<strong>Tech</strong>以外はすべて男性なので、女性のクルーを使いたい場合はこの2種類を選ぶことになります。<br>
-  また、XR2では独自に女性のUMMUを実装していますが、宇宙服を脱ぐと<strong>Crew</strong>と同じ見た目に戻ってしまうので注意してください。</p>
-  
-  <h2>HUDの表示と切り替え</h2>
-  
-  <p><kbd>F1</kbd>キーを押して1人称視点に切り替えると、左下に情報が表示されます。<br>
-  キーボード<kbd>M</kbd>を押すと、HUDの種類を変更できます。</p>
+    <p>
+      <img loading="lazy" src="../images/ucgo/ummu-function/UMMUfunction001.png" width="505" height="124">
+    </p>
 
-  <p>
-    <img loading="lazy" src="../images/ucgo/ummu-function/UMMUfunction003.png" width="212" height="235">
-  </p>
-  
-  <table>
-   <tr>
-  <td><strong>Ground</strong>
-  </td>
-  <td>地上
-  </td>
-   </tr>
-   <tr>
-  <td><strong>Nav</strong>
-  </td>
-  <td>ナビゲーション
-  </td>
-   </tr>
-   <tr>
-  <td><strong>Orbital</strong>
-  </td>
-  <td>軌道
-  </td>
-   </tr>
-   <tr>
-  <td><strong>Attachment</strong>
-  </td>
-  <td>手に持っている、もしくは背負っている荷物の情報
-  </td>
-   </tr>
-  </table>
-  
-  
-  <p>Navモードで<kbd>N</kbd>キーを押すと、宇宙船などのターゲットまでの距離と方向が確認できます。</p>
-  <p>また、ターボパックのホバーエンジンを使うと、<strong>Ground mode</strong>で高度や速度などが表示されます。</p>
+    <table class="center1col">
+      <tr>
+        <td><strong>Capt</strong></td>
+        <td>船長</td>
+      </tr>
+      <tr>
+        <td><strong>Sec</strong></td>
+        <td>警備兵</td>
+      </tr>
+      <tr>
+        <td><strong>Sci</strong></td>
+        <td>科学者</td>
+      </tr>
+      <tr>
+        <td><strong>Doc</strong></td>
+        <td>医者</td>
+      </tr>
+      <tr>
+        <td><strong>Tech</strong></td>
+        <td>技術者</td>
+      </tr>
+      <tr>
+        <td><strong>Crew</strong>, <strong>Pax</strong>, <strong>Vip</strong></td>
+        <td>船員、乗客、VIP（グラフィックは共通）</td>
+      </tr>
+    </table>
 
-  <p>
-    <img loading="lazy" src="../images/ucgo/ummu-function/UMMUfunction004.png" width="252" height="265">
-  </p>
-  
-  <h2>呼吸可能エリア(Permanent breathing area)の設定</h2>
-  
-  <p>地球以外の惑星でも、呼吸可能な空間を追加することができます。<br>
-  宇宙基地のMODを作るときなどに役立つ機能です。</p>
-  <p>まず、キーボードで<kbd>F10</kbd>を押す。</p>
+    <p>このうち、<strong>Sci</strong>と<strong>Tech</strong>以外はすべて男性なので、女性のクルーを使いたい場合はこの2種類を選ぶことになります。<br>
+      また、XR2では独自に女性のUMMUを実装していますが、宇宙服を脱ぐと<strong>Crew</strong>と同じ見た目に戻ってしまうので注意してください。</p>
 
-  <p>
-    <img loading="lazy" src="../images/ucgo/ummu-function/UMMUfunction005.png" width="565" height="266">
-  </p>
-  <p>設定したいエリアの中心に立って、キーボードで<kbd>1</kbd>を押す。</p>
+    <h2>HUDの表示と切り替え</h2>
 
-  <p>
-    <img loading="lazy" src="../images/ucgo/ummu-function/UMMUfunction006.png" width="576" height="324">
-  </p>
-  <p><kbd>Space</kbd>キーを押すと、中心点が決定される。</p>
-  <p>設定したエリアが中に入るように、中心点から外側に向かって移動する。</p>
+    <p><kbd>F1</kbd>キーを押して1人称視点に切り替えると、左下に情報が表示されます。<br>
+      キーボード<kbd>M</kbd>を押すと、HUDの種類を変更できます。</p>
 
-  <p>
-    <img loading="lazy" src="../images/ucgo/ummu-function/UMMUfunction007.png" width="500" height="286">
-  </p>
-  <p><kbd>Space</kbd>キーを押すと、中心点から現在地点を半径として、円形に呼吸可能エリアが設定される。</p>
-  <p>もう一度<kbd>Space</kbd>キーを押して登録する。<br>
-  消去したいときは<kbd>3</kbd>を押す。</p>
-  <p><kbd>4</kbd>を押すと、登録されたエリアがセーブされる。<br>
-  名前の最後に必ず<strong>.cfg</strong>をつけてから<kbd>Enter</kbd>を押す。※</p>
+    <p>
+      <img loading="lazy" src="../images/ucgo/ummu-function/UMMUfunction003.png" width="212" height="235">
+    </p>
 
-  <p>
-    <img loading="lazy" src="../images/ucgo/ummu-function/UMMUfunction008.png" width="717" height="134">
-  </p>
-  <p class="note">※ほかのcfgファイルを上書きしないように、特徴的な名前をつけておくこと。</p>
-  <p>いったんOrbiterを終了して再開すると、設定したエリアで宇宙服を脱げるようになる。</p>
+    <table>
+      <tr>
+        <td><strong>Ground</strong></td>
+        <td>地上</td>
+      </tr>
+      <tr>
+        <td><strong>Nav</strong></td>
+        <td>ナビゲーション</td>
+      </tr>
+      <tr>
+        <td><strong>Orbital</strong></td>
+        <td>軌道</td>
+      </tr>
+      <tr>
+        <td><strong>Attachment</strong></td>
+        <td>手に持っている、もしくは背負っている荷物の情報</td>
+      </tr>
+    </table>
 
-  <p>
-    <img loading="lazy" src="../images/ucgo/ummu-function/UMMUfunction009.png" width="576" height="324">
-  </p>
+
+    <p>Navモードで<kbd>N</kbd>キーを押すと、宇宙船などのターゲットまでの距離と方向が確認できます。</p>
+    <p>また、ターボパックのホバーエンジンを使うと、<strong>Ground mode</strong>で高度や速度などが表示されます。</p>
+
+    <p>
+      <img loading="lazy" src="../images/ucgo/ummu-function/UMMUfunction004.png" width="252" height="265">
+    </p>
+
+    <h2>呼吸可能エリア(Permanent breathing area)の設定</h2>
+
+    <p>地球以外の惑星でも、呼吸可能な空間を追加することができます。<br>
+      宇宙基地のMODを作るときなどに役立つ機能です。</p>
+    <p>まず、キーボードで<kbd>F10</kbd>を押す。</p>
+
+    <p>
+      <img loading="lazy" src="../images/ucgo/ummu-function/UMMUfunction005.png" width="565" height="266">
+    </p>
+    <p>設定したいエリアの中心に立って、キーボードで<kbd>1</kbd>を押す。</p>
+
+    <p>
+      <img loading="lazy" src="../images/ucgo/ummu-function/UMMUfunction006.png" width="576" height="324">
+    </p>
+    <p><kbd>Space</kbd>キーを押すと、中心点が決定される。</p>
+    <p>設定したエリアが中に入るように、中心点から外側に向かって移動する。</p>
+
+    <p>
+      <img loading="lazy" src="../images/ucgo/ummu-function/UMMUfunction007.png" width="500" height="286">
+    </p>
+    <p><kbd>Space</kbd>キーを押すと、中心点から現在地点を半径として、円形に呼吸可能エリアが設定される。</p>
+    <p>もう一度<kbd>Space</kbd>キーを押して登録する。<br>
+      消去したいときは<kbd>3</kbd>を押す。</p>
+    <p><kbd>4</kbd>を押すと、登録されたエリアがセーブされる。<br>
+      名前の最後に必ず<strong>.cfg</strong>をつけてから<kbd>Enter</kbd>を押す。※</p>
+
+    <p>
+      <img loading="lazy" src="../images/ucgo/ummu-function/UMMUfunction008.png" width="717" height="134">
+    </p>
+    <p class="note">※ほかのcfgファイルを上書きしないように、特徴的な名前をつけておくこと。</p>
+    <p>いったんOrbiterを終了して再開すると、設定したエリアで宇宙服を脱げるようになる。</p>
+
+    <p>
+      <img loading="lazy" src="../images/ucgo/ummu-function/UMMUfunction009.png" width="576" height="324">
+    </p>
 
   </main>
 
 </body>
+
 </html>

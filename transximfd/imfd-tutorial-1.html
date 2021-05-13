@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 
 <html lang="ja">
+
 <head>
   <script src="../scripts/ga.js"></script>
   <meta charset="UTF-8">
@@ -15,160 +16,155 @@
 
   <main>
 
-  <h1>IMFD Part1 Target Interceptとプランの作成</h1>
+    <h1>IMFD Part1 Target Interceptとプランの作成</h1>
 
 
-<p>Part1では、地球から火星までのフライトを通じて、<a href="imfd-download.html" target="_blank">IMFD</a>の基本的な操作について解説します。</p>
+    <p>Part1では、地球から火星までのフライトを通じて、<a href="imfd-download.html" target="_blank">IMFD</a>の基本的な操作について解説します。</p>
 
-<ol start="0">
-<li><a href="#caution">筆者からのお願い</a></li>
-<li><a href="#tgicept">Target Interceptを開く</a></li>
-<li><a href="#target">ターゲットの選択・日時の設定</a></li>
-<li><a href="#optimize">効率のよい軌道を探す</a></li>
-<li><a href="#tof">任意の飛行時間を設定する</a></li>
-<li><a href="#history">史実ミッションの再現</a></li>
-</ol>
+    <ol start="0">
+      <li><a href="#caution">筆者からのお願い</a></li>
+      <li><a href="#tgicept">Target Interceptを開く</a></li>
+      <li><a href="#target">ターゲットの選択・日時の設定</a></li>
+      <li><a href="#optimize">効率のよい軌道を探す</a></li>
+      <li><a href="#tof">任意の飛行時間を設定する</a></li>
+      <li><a href="#history">史実ミッションの再現</a></li>
+    </ol>
 
-<p>使用するシナリオは、<strong>Checklists</strong>フォルダの<strong>Quickstart</strong>です。</p>
-
-
-<h2 id="caution">筆者からのお願い</h2>
+    <p>使用するシナリオは、<strong>Checklists</strong>フォルダの<strong>Quickstart</strong>です。</p>
 
 
-<p>IMFDを導入する前に、必ず<a href="../tutorial/index.html" target="_blank">Orbiterチュートリアル</a>に目を通しておいてください。<br>
-チュートリアルの内容を理解していない場合、IMFDについて質問をいただいても回答できないことがあります。</p>
+    <h2 id="caution">筆者からのお願い</h2>
 
 
-<h2 id="tgicept">Target Interceptを開く</h2>
+    <p>IMFDを導入する前に、必ず<a href="../tutorial/index.html" target="_blank">Orbiterチュートリアル</a>に目を通しておいてください。<br>
+      チュートリアルの内容を理解していない場合、IMFDについて質問をいただいても回答できないことがあります。</p>
 
 
-<p>ゲームを起動したら、左MFDで<strong>IMFD(Interplanetary)</strong>を開く。</p>
-
-<p>
-<img loading="lazy" src="../images/transximfd/imfd-tutorial-1/009.png" width="276" height="109">
-</p>
-
-<p><kbd>MNU</kbd>をクリックして<strong>Program Menu</strong>を開く。</p>
-
-<p>
-<img loading="lazy" src="../images/transximfd/imfd-tutorial-1/002.png" width="525" height="229">
-</p>
-
-<p><kbd>Course</kbd>をクリックすると、プログラムの選択画面になる。</p>
-<p>右側の<kbd>Prv</kbd>or<kbd>Nxt</kbd>をクリックすると、選択するプログラムを変更できる。<br>
-<kbd>Set</kbd>をクリックして<strong>Target Intercept</strong>を選択する。</p>
-
-<p>
-<img loading="lazy" src="../images/transximfd/imfd-tutorial-1/003.png" width="476" height="288">
-</p>
+    <h2 id="tgicept">Target Interceptを開く</h2>
 
 
-<h2 id="target">ターゲットの選択・日時の設定</h2>
+    <p>ゲームを起動したら、左MFDで<strong>IMFD(Interplanetary)</strong>を開く。</p>
+
+    <p>
+      <img loading="lazy" src="../images/transximfd/imfd-tutorial-1/009.png" width="276" height="109">
+    </p>
+
+    <p><kbd>MNU</kbd>をクリックして<strong>Program Menu</strong>を開く。</p>
+
+    <p>
+      <img loading="lazy" src="../images/transximfd/imfd-tutorial-1/002.png" width="525" height="229">
+    </p>
+
+    <p><kbd>Course</kbd>をクリックすると、プログラムの選択画面になる。</p>
+    <p>右側の<kbd>Prv</kbd>or<kbd>Nxt</kbd>をクリックすると、選択するプログラムを変更できる。<br>
+      <kbd>Set</kbd>をクリックして<strong>Target Intercept</strong>を選択する。
+    </p>
+
+    <p>
+      <img loading="lazy" src="../images/transximfd/imfd-tutorial-1/003.png" width="476" height="288">
+    </p>
 
 
-<p><kbd>TGT</kbd>をクリックして、<strong>Mars</strong>と入力する。<br>
-これで火星がターゲットとして選択される。</p>
-
-<p>
-<img loading="lazy" src="../images/transximfd/imfd-tutorial-1/004.png" width="529" height="419">
-</p>
-
-<p><kbd>Nxt</kbd>を何度かクリックして、左側の<strong>MJD</strong>を選択する。<br>
-左が出発時刻(<strong>TEj</strong>)、右が到着時刻(<strong>TIn</strong>)となっている。<br>
-<strong>TEj</strong>と<strong>TIn</strong>は、その下の<strong>MJD</strong>と連動している。</p>
-
-<p>
-<img loading="lazy" src="../images/transximfd/imfd-tutorial-1/005.png" width="461" height="69">
-</p>
-
-<table>
- <tr>
-  <td><strong>TEj</strong></td>
-  <td>Time to Eject</td>
- </tr>
- <tr>
-  <td><strong>TIn</strong></td>
-  <td>Time to Intercept</td>
- </tr>
-</table>
-
-<p><kbd>Set</kbd>をクリックして、<strong>55270</strong>と入力して<kbd>Enter</kbd>キーを押す。</p>
-<p>ふたたび<kbd>Nxt</kbd>をクリックして、右側の<strong>MJD</strong>を選択する。<br>
-<strong>55500</strong>と入力する。<br>
-これは出発時刻(MJD 55270)の<strong>230日後</strong>になる。</p>
+    <h2 id="target">ターゲットの選択・日時の設定</h2>
 
 
-<h2 id="optimize">効率のよい軌道を探す</h2>
+    <p><kbd>TGT</kbd>をクリックして、<strong>Mars</strong>と入力する。<br>
+      これで火星がターゲットとして選択される。</p>
+
+    <p>
+      <img loading="lazy" src="../images/transximfd/imfd-tutorial-1/004.png" width="529" height="419">
+    </p>
+
+    <p><kbd>Nxt</kbd>を何度かクリックして、左側の<strong>MJD</strong>を選択する。<br>
+      左が<abbr title="Time to Eject">TEj</abbr>（出発時刻）、右が<abbr title="Time to Intercept">TIn</abbr>（到着時刻）となっている。<br>
+      <strong>TEj</strong>と<strong>TIn</strong>は、その下の<strong>MJD</strong>と連動している。
+    </p>
+
+    <p>
+      <img loading="lazy" src="../images/transximfd/imfd-tutorial-1/005.png" width="461" height="69">
+    </p>
+
+    <p><kbd>Set</kbd>をクリックして、<strong>55270</strong>と入力して<kbd>Enter</kbd>キーを押す。</p>
+    <p>ふたたび<kbd>Nxt</kbd>をクリックして、右側の<strong>MJD</strong>を選択する。<br>
+      <strong>55500</strong>と入力する。<br>
+      これは出発時刻(MJD 55270)の<strong>230日後</strong>になる。
+    </p>
 
 
-<p>ふたたび<kbd>Nxt</kbd>を何度かクリックして、<strong>TOF-UnLock</strong>※を選択する。<br>
-<kbd>+</kbd>をクリックして、<strong>TOF-Locked</strong>にする。</p>
-
-<p>
-<img loading="lazy" src="../images/transximfd/imfd-tutorial-1/006.png" width="302" height="145">
-</p>
-
-<p class="note">※<strong>TOF</strong>= Time of Flight = 飛行時間</p>
-<p>これで、飛行時間が<strong>230日</strong>で固定される。</p>
-<p><kbd>Prv</kbd>を何度かクリックして、ふたたび左側の<strong>MJD</strong>を選択する。</p>
-<p>右下の<kbd>Adj</kbd>をクリックして、<strong>Adj-10x</strong>にする。<br>
-<kbd>Adj</kbd>をクリックすることで、一度に変化する量を変えることができる。</p>
-
-<p>
-<img loading="lazy" src="../images/transximfd/imfd-tutorial-1/007.png" width="351" height="104">
-</p>
-
-<p><kbd>+</kbd>を左クリックで長押しすると、軌道が変化する。</p>
-<p>左下の<strong>Escape Vector</strong>には、必要な<strong>Delta V</strong>が表示されている。</p>
-
-<p>
-<img loading="lazy" src="../images/transximfd/imfd-tutorial-1/008.png" width="462" height="322">
-</p>
-
-<table>
- <tr>
-  <td><strong>oV</strong></td>
-  <td>出発に必要なDelta V</td>
- </tr>
- <tr>
-  <td><strong>iV</strong></td>
-  <td>ランデブーに必要なDelta V</td>
- </tr>
- <tr>
-  <td><strong>Tot</strong></td>
-  <td>合計(Total)</td>
- </tr>
-</table>
-
-<p>基本的には、<strong>Tot</strong>ができるだけ小さくなるように操作する。</p>
-<p><kbd>Adj</kbd>をクリックして、<strong>Adj-1x</strong>にする。<br>
-これ以上効率のよい軌道がないか確認する。</p>
-<p>これが、「地球離脱から火星到着まで230日」という条件のもとで、現在時刻から一番近い、効率のよい軌道ということになる。</p>
-<p>ふたたび<strong>TOF-Locked</strong>を選択して、<strong>TOF-UnLock</strong>に戻しておく。</p>
+    <h2 id="optimize">効率のよい軌道を探す</h2>
 
 
-<h2 id="tof">任意の飛行時間を設定する</h2>
+    <p>ふたたび<kbd>Nxt</kbd>を何度かクリックして、<strong>TOF-UnLock</strong>※を選択する。<br>
+      <kbd>+</kbd>をクリックして、<strong>TOF-Locked</strong>にする。
+    </p>
+
+    <p>
+      <img loading="lazy" src="../images/transximfd/imfd-tutorial-1/006.png" width="302" height="145">
+    </p>
+
+    <p class="note">※<strong>TOF</strong>= Time of Flight = 飛行時間</p>
+    <p>これで、飛行時間が<strong>230日</strong>で固定される。</p>
+    <p><kbd>Prv</kbd>を何度かクリックして、ふたたび左側の<strong>MJD</strong>を選択する。</p>
+    <p>右下の<kbd>Adj</kbd>をクリックして、<strong>Adj-10x</strong>にする。<br>
+      <kbd>Adj</kbd>をクリックすることで、一度に変化する量を変えることができる。
+    </p>
+
+    <p>
+      <img loading="lazy" src="../images/transximfd/imfd-tutorial-1/007.png" width="351" height="104">
+    </p>
+
+    <p><kbd>+</kbd>を左クリックで長押しすると、軌道が変化する。</p>
+    <p>左下の<strong>Escape Vector</strong>には、必要な<strong>Delta V</strong>が表示されている。</p>
+
+    <p>
+      <img loading="lazy" src="../images/transximfd/imfd-tutorial-1/008.png" width="462" height="322">
+    </p>
+
+    <table>
+      <tr>
+        <th>oV</th>
+        <td>出発に必要なDelta V</td>
+      </tr>
+      <tr>
+        <th>iV</th>
+        <td>ランデブーに必要なDelta V</td>
+      </tr>
+      <tr>
+        <th>Tot</th>
+        <td>合計(Total)</td>
+      </tr>
+    </table>
+
+    <p>基本的には、<strong>Tot</strong>ができるだけ小さくなるように操作する。</p>
+    <p><kbd>Adj</kbd>をクリックして、<strong>Adj-1x</strong>にする。<br>
+      これ以上効率のよい軌道がないか確認する。</p>
+    <p>これが、「地球離脱から火星到着まで230日」という条件のもとで、現在時刻から一番近い、効率のよい軌道ということになる。</p>
+    <p>ふたたび<strong>TOF-Locked</strong>を選択して、<strong>TOF-UnLock</strong>に戻しておく。</p>
 
 
-<p>かりに、出発から180日で到着したい場合は、左のMJDに180を足した値を右のMJDに入力して、上記の手順を実行する。</p>
-<p>UMMUに対応した機体の場合、酸素が尽きる前に目的地に着く必要があります。<br>
-IMFDを使えば、このような時間制限のあるミッションでも対応しやすくなります。</p>
+    <h2 id="tof">任意の飛行時間を設定する</h2>
 
 
-<h2 id="history">史実ミッションの再現</h2>
+    <p>かりに、出発から180日で到着したい場合は、左のMJDに180を足した値を右のMJDに入力して、上記の手順を実行する。</p>
+    <p>UMMUに対応した機体の場合、酸素が尽きる前に目的地に着く必要があります。<br>
+      IMFDを使えば、このような時間制限のあるミッションでも対応しやすくなります。</p>
 
 
-<p>IMFDを使えば、出発時刻と到着時刻を指定してフライトプランを作ることが可能です。<br>
-実際のそれと同じ出発時刻・到着時刻を入力することで、史実にかなり近いスケジュールでミッションを再現することもできます。<br>
-この場合は、TOF-Lockedにする必要はありません。</p>
-<p>MJDを西暦に変換する方法については以下の記事を参照してください。</p>
+    <h2 id="history">史実ミッションの再現</h2>
 
-<p>
-<a href="../misc/orbitalelements.html#time_tool" target="_blank">軌道要素と時刻系 - Orbiter Date Converter</a><br>
-<a href="../misc/orbitalelements.html#mjd" target="_blank">軌道要素と時刻系 - Modified Julian Date [MJD]</a>
-</p>
+
+    <p>IMFDを使えば、出発時刻と到着時刻を指定してフライトプランを作ることが可能です。<br>
+      実際のそれと同じ出発時刻・到着時刻を入力することで、史実にかなり近いスケジュールでミッションを再現することもできます。<br>
+      この場合は、TOF-Lockedにする必要はありません。</p>
+    <p>MJDを西暦に変換する方法については以下の記事を参照してください。</p>
+
+    <p>
+      <a href="../misc/orbitalelements.html#time_tool" target="_blank">軌道要素と時刻系 - Orbiter Date Converter</a><br>
+      <a href="../misc/orbitalelements.html#mjd" target="_blank">軌道要素と時刻系 - Modified Julian Date [MJD]</a>
+    </p>
 
   </main>
 
 </body>
+
 </html>

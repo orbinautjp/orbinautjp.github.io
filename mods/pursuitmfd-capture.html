@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 
 <html lang="ja">
+
 <head>
   <script src="../scripts/ga.js"></script>
   <meta charset="UTF-8">
@@ -14,138 +15,139 @@
 
   <main>
 
-  <h1>PursuitMFD こうのとり・ドラゴン宇宙船のキャプチャー</h1>
+    <h1>PursuitMFD こうのとり・ドラゴン宇宙船のキャプチャー</h1>
 
 
-<p>
-<a href="pursuitmfd-install.html" target="_blank">PursuitMFD</a>を使って、ロボットアームでの係留位置に宇宙船を静止させる方法について解説します。
-</p>
+    <p>
+      <a href="pursuitmfd-install.html" target="_blank">PursuitMFD</a>を使って、ロボットアームでの係留位置に宇宙船を静止させる方法について解説します。
+    </p>
 
 
-<ul>
-<li><a href="#prep">準備</a></li>
-<li><a href="#docking">Dockingモードにする</a></li>
-<li><a href="#target">ターゲットを指定する</a></li>
-<li><a href="#autopilot">オートパイロットを実行する</a></li>
-<li><a href="#apd">別の方法</a></li>
-</ul>
+    <ul>
+      <li><a href="#prep">準備</a></li>
+      <li><a href="#docking">Dockingモードにする</a></li>
+      <li><a href="#target">ターゲットを指定する</a></li>
+      <li><a href="#autopilot">オートパイロットを実行する</a></li>
+      <li><a href="#apd">別の方法</a></li>
+    </ul>
 
 
-<h2 id="prep">準備</h2>
+    <h2 id="prep">準備</h2>
 
 
-<p>
-あらかじめ宇宙船をISSとランデブーさせて、ISSの下方に移動しておく。
-</p>
+    <p>
+      あらかじめ宇宙船をISSとランデブーさせて、ISSの下方に移動しておく。
+    </p>
 
-<p>
-ドラゴン宇宙船(<a href="../iss/falcon9-dragon-2016.html" target="_blank">Dragon1</a>)のMODの場合、ランデブーが完了した状態でゲームを始めることもできる。<br>
-<strong>approaching ISS</strong>と書かれたシナリオでは、ISSの下方にドラゴン宇宙船が配置されている。
-</p>
+    <p>
+      ドラゴン宇宙船(<a href="../iss/falcon9-dragon-2016.html"
+        target="_blank">Dragon1</a>)のMODの場合、ランデブーが完了した状態でゲームを始めることもできる。<br>
+      <strong>approaching ISS</strong>と書かれたシナリオでは、ISSの下方にドラゴン宇宙船が配置されている。
+    </p>
 
-<p>
-<img loading="lazy" src="../images/mods/pursuitmfd-capture/001.png" width="310" height="139">
-</p>
-
-
-<h2 id="docking">Dockingモードにする</h2>
+    <p>
+      <img loading="lazy" src="../images/mods/pursuitmfd-capture/001.png" width="310" height="139">
+    </p>
 
 
-<p>
-<strong>PursuitMFD</strong>を開く。
-</p>
-
-<p>
-<kbd>DOC</kbd>をクリックして、<a href="pursuitmfd-docking.html" target="_blank">Dockingモード</a>にする。
-</p>
-
-<p>
-<img loading="lazy" src="../images/mods/pursuitmfd-capture/002.png" width="418" height="339">
-</p>
+    <h2 id="docking">Dockingモードにする</h2>
 
 
-<h2 id="target">ターゲットを指定する</h2>
+    <p>
+      <strong>PursuitMFD</strong>を開く。
+    </p>
+
+    <p>
+      <kbd>DOC</kbd>をクリックして、<a href="pursuitmfd-docking.html" target="_blank">Dockingモード</a>にする。
+    </p>
+
+    <p>
+      <img loading="lazy" src="../images/mods/pursuitmfd-capture/002.png" width="418" height="339">
+    </p>
 
 
-<p>
-ISSの4番ドッキングポートを利用する。<br>
-<kbd>TGT</kbd>をクリック。<strong>ISS</strong>と入力して<kbd>Enter</kbd>を押す。<br>
-<kbd>TDK</kbd>をクリック。<strong>4</strong>と入力して<kbd>Enter</kbd>。
-</p>
-
-<p>
-ドッキングポートからの距離を指定する。<br>
-<kbd>DIS</kbd>(Distance)をクリック。<strong>0 0 10</strong>と入力してEnter。
-</p>
+    <h2 id="target">ターゲットを指定する</h2>
 
 
-<h2 id="autopilot">オートパイロットを実行する</h2>
+    <p>
+      ISSの4番ドッキングポートを利用する。<br>
+      <kbd>TGT</kbd>をクリック。<strong>ISS</strong>と入力して<kbd>Enter</kbd>を押す。<br>
+      <kbd>TDK</kbd>をクリック。<strong>4</strong>と入力して<kbd>Enter</kbd>。
+    </p>
+
+    <p>
+      ドッキングポートからの距離を指定する。<br>
+      <kbd>DIS</kbd>(Distance)をクリック。<strong>0 0 10</strong>と入力してEnter。
+    </p>
 
 
-<p>
-<kbd>TRA</kbd>をクリックすると、オートパイロットを開始する。
-</p>
-
-<p>
-ドッキングポートの真下に移動したら、RCS ROTで姿勢を変える。<br>
-グラプルフィクスチャ（ロボットアームでの接続ポイント）を上に向ける。
-</p>
-
-<p>
-カナダアームを操作して、宇宙船をキャプチャする。<br>
-<a href="../iss/canadarm2-control.html" target="_blank">Canadarm2MODの操作・移動方法</a>
-</p>
-
-<p>
-ISSの姿勢制御が有効になっている場合は、<kbd>L</kbd>を押してDragon宇宙船をLVLH姿勢にしておく。※
-</p>
-
-<p class="note">
-※Level Horizon
-</p>
+    <h2 id="autopilot">オートパイロットを実行する</h2>
 
 
-<table>
- <tr>
-  <td><kbd>TRA</kbd><br>(Trim All)</td>
-  <td>すべての方向の距離を入力した数字に一致させる</td>
- </tr>
- <tr>
-  <td><kbd>TRL</kbd><br>(Trim Lateral)</td>
-  <td>横方向の距離を入力した数字に一致させる</td>
- </tr>
- <tr>
-  <td><kbd>TRV</kbd><br>(Trim Vertical)</td>
-  <td>上下方向の距離を入力した数字に一致させる</td>
- </tr>
- <tr>
-  <td><kbd>TFA</kbd><br>(Trim Fore/Aft)</td>
-  <td>前後方向の距離を入力した数字に一致させる</td>
- </tr>
-</table>
+    <p>
+      <kbd>TRA</kbd>をクリックすると、オートパイロットを開始する。
+    </p>
+
+    <p>
+      ドッキングポートの真下に移動したら、RCS ROTで姿勢を変える。<br>
+      グラプルフィクスチャ（ロボットアームでの接続ポイント）を上に向ける。
+    </p>
+
+    <p>
+      カナダアームを操作して、宇宙船をキャプチャする。<br>
+      <a href="../iss/canadarm2-control.html" target="_blank">Canadarm2MODの操作・移動方法</a>
+    </p>
+
+    <p>
+      ISSの姿勢制御が有効になっている場合は、<kbd>L</kbd>を押してDragon宇宙船をLVLH姿勢にしておく。※
+    </p>
+
+    <p class="note">
+      ※Level Horizon
+    </p>
+
+    <table class="center1col">
+      <tr>
+        <td><kbd>TRA</kbd><br>Trim All</td>
+        <td>すべての方向の距離を入力した数字に一致させる</td>
+      </tr>
+      <tr>
+        <td><kbd>TRL</kbd><br>Trim Lateral</td>
+        <td>横方向の距離を入力した数字に一致させる</td>
+      </tr>
+      <tr>
+        <td><kbd>TRV</kbd><br>Trim Vertical</td>
+        <td>上下方向の距離を入力した数字に一致させる</td>
+      </tr>
+      <tr>
+        <td><kbd>TFA</kbd><br>Trim Fore/Aft</td>
+        <td>前後方向の距離を入力した数字に一致させる</td>
+      </tr>
+    </table>
 
 
-<h2 id="apd">別の方法</h2>
+    <h2 id="apd">別の方法</h2>
 
 
-<p>
-ISSの<strong>3</strong>番ドッキングポートをターゲットする。<br>
-<kbd>DIS</kbd>をクリックして<strong>0 -15 -50</strong>と入力する。<br>
-<kbd>NOR</kbd>を何度かクリックして、ロール軸の制御を有効にする。
-</p>
+    <p>
+      ISSの<strong>3</strong>番ドッキングポートをターゲットする。<br>
+      <kbd>DIS</kbd>をクリックして<strong>0 -15 -50</strong>と入力する。<br>
+      <kbd>NOR</kbd>を何度かクリックして、ロール軸の制御を有効にする。
+    </p>
 
-<p>
-<kbd>APD</kbd>をクリック。<br>
-全自動で4番ドッキングポートの位置に移動し、キャプチャに適した姿勢になる。
-</p>
+    <p>
+      <kbd>APD</kbd>をクリック。<br>
+      全自動で4番ドッキングポートの位置に移動し、キャプチャに適した姿勢になる。
+    </p>
 
-<p>
-<kbd>APD</kbd>をクリックすると、<kbd>HLD</kbd>と<kbd>TRA</kbd>の両方が有効になる。<br>
-3番ドッキングポートはISSの後ろ、4番ドッキングポートはISSの下方に設置されている。<br>
-3番ポートの向きを指定して、4番ポートの下まで移動させることで、位置と向きの両方を自動で制御させることができる。
-</p>
+    <p>
+      <kbd>APD</kbd>をクリックすると、<kbd>HLD</kbd>と<kbd>TRA</kbd>の両方が有効になる。<br>
+      3番ドッキングポートはISSの後ろ、4番ドッキングポートはISSの下方に設置されている。<br>
+      3番ポートの向きを指定して、4番ポートの下まで移動させることで、位置と向きの両方を自動で制御させることができる。
+    </p>
 
   </main>
 
 </body>
+
 </html>

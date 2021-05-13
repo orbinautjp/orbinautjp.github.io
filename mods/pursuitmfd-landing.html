@@ -1,142 +1,145 @@
 <!DOCTYPE html>
 
 <html lang="ja">
+
 <head>
-  <script src="../scripts/ga.js"></script>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="../styles/orbiterjp.css">
-  <script src="../scripts/template.js" charset="utf-8" defer></script>
-  <title>PursuitMFD 月面基地への自動着陸</title>
+ <script src="../scripts/ga.js"></script>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <link rel="stylesheet" href="../styles/orbiterjp.css">
+ <script src="../scripts/template.js" charset="utf-8" defer></script>
+ <title>PursuitMFD 月面基地への自動着陸</title>
 </head>
+
 <body>
 
-  <main>
+ <main>
 
   <h1>PursuitMFD 月面基地への自動着陸</h1>
 
 
-<p>
-<a href="pursuitmfd-install.html" target="_blank">PursuitMFD</a>のオートパイロットによる自動着陸について解説します。
-</p>
+  <p>
+   <a href="pursuitmfd-install.html" target="_blank">PursuitMFD</a>のオートパイロットによる自動着陸について解説します。
+  </p>
 
 
-<ul>
-<li><a href="#caution">注意</a></li>
-<li><a href="#prep">準備</a></li>
-<li><a href="#landing">Laindingプログラムを開く</a></li>
-<li><a href="#target">着陸目標を設定する</a></li>
-<li><a href="#autoland">自動着陸を実行する</a></li>
-</ul>
+  <ul>
+   <li><a href="#caution">注意</a></li>
+   <li><a href="#prep">準備</a></li>
+   <li><a href="#landing">Laindingプログラムを開く</a></li>
+   <li><a href="#target">着陸目標を設定する</a></li>
+   <li><a href="#autoland">自動着陸を実行する</a></li>
+  </ul>
 
 
-<h2 id="caution">注意</h2>
+  <h2 id="caution">注意</h2>
 
 
-<p>
-地球のような濃い大気のある天体では、自動着陸はできません。
-</p>
+  <p>
+   地球のような濃い大気のある天体では、自動着陸はできません。
+  </p>
 
 
-<h2 id="prep">準備</h2>
+  <h2 id="prep">準備</h2>
 
 
-<p>
-あらかじめ、宇宙船を着陸目標の上空を通る軌道に乗せておく。
-</p>
+  <p>
+   あらかじめ、宇宙船を着陸目標の上空を通る軌道に乗せておく。
+  </p>
 
-<p>
-<a href="../tutorial/index.html#earth_to_moon" target="_blank">Orbiterチュートリアル 地球から月まで</a>
-</p>
+  <p>
+   <a href="../tutorial/index.html#earth_to_moon" target="_blank">Orbiterチュートリアル 地球から月まで</a>
+  </p>
 
-<p>
-デルタグライダーの場合は、<kbd>G</kbd>を押してランディングギアを出しておく。
-</p>
-
-
-<h2 id="landing">Laindingプログラムを開く</h2>
+  <p>
+   デルタグライダーの場合は、<kbd>G</kbd>を押してランディングギアを出しておく。
+  </p>
 
 
-<p>
-MFDで<strong>PursuitMFD</strong>を開く。
-</p>
-
-<p>
-<kbd>LAN</kbd>ボタンをクリックして、<strong>Landing</strong>（自動着陸）プログラムを開く。
-</p>
-
-<p>
-<img loading="lazy" src="../images/mods/pursuitmfd-landing/001.png" width="412" height="221">
-</p>
+  <h2 id="landing">Laindingプログラムを開く</h2>
 
 
-<h2 id="target">着陸目標を設定する</h2>
+  <p>
+   MFDで<strong>PursuitMFD</strong>を開く。
+  </p>
+
+  <p>
+   <kbd>LAN</kbd>ボタンをクリックして、<strong>Landing</strong>（自動着陸）プログラムを開く。
+  </p>
+
+  <p>
+   <img loading="lazy" src="../images/mods/pursuitmfd-landing/001.png" width="412" height="221">
+  </p>
 
 
-<p>
-<img loading="lazy" src="../images/mods/pursuitmfd-landing/002.png" width="413" height="335">
-</p>
-
-<p>
-<strong>Target</strong>欄に何も表示されていない場合は、<kbd>TGT</kbd>をクリック。<br>
-着陸したい基地などの名前を入力して<kbd>Enter</kbd>を押す。
-</p>
-
-<p>
-<kbd>PAD</kbd>をクリックして、使用する着陸パッドの番号を入力する。
-</p>
-
-<table>
-    <tr>
-        <td><kbd>MAN</kbd></td>
-        <td>緯度経度を直接入力(Manual)する</td>
-    </tr>
-    <tr>
-        <td><kbd>ELV</kbd></td>
-        <td>着陸目標からの高度(Elevation)を指定する</td>
-    </tr>
-    <tr>
-        <td><kbd>INV</kbd></td>
-        <td>後ろ向き(Inverse)に着陸する</td>
-    </tr>
-    <tr>
-        <td><kbd>GPH</kbd></td>
-        <td>グラフ(Graph)の表示を切り替える</td>
-    </tr>
-    <tr>
-        <td><kbd>ENG</kbd></td>
-        <td>使用するエンジンを切り替える</td>
-    </tr>
-    <tr>
-        <td><kbd>BRK</kbd></td>
-        <td>着陸時のホイールブレーキを有効／無効にする</td>
-    </tr>
-</table>
+  <h2 id="target">着陸目標を設定する</h2>
 
 
-<h2 id="autoland">自動着陸を実行する</h2>
+  <p>
+   <img loading="lazy" src="../images/mods/pursuitmfd-landing/002.png" width="413" height="335">
+  </p>
+
+  <p>
+   <strong>Target</strong>欄に何も表示されていない場合は、<kbd>TGT</kbd>をクリック。<br>
+   着陸したい基地などの名前を入力して<kbd>Enter</kbd>を押す。
+  </p>
+
+  <p>
+   <kbd>PAD</kbd>をクリックして、使用する着陸パッドの番号を入力する。
+  </p>
+
+  <table class="center1col">
+   <tr>
+    <td><kbd>MAN</kbd></td>
+    <td>緯度経度を直接入力(Manual)する</td>
+   </tr>
+   <tr>
+    <td><kbd>ELV</kbd></td>
+    <td>着陸目標からの高度(Elevation)を指定する</td>
+   </tr>
+   <tr>
+    <td><kbd>INV</kbd></td>
+    <td>後ろ向き(Inverse)に着陸する</td>
+   </tr>
+   <tr>
+    <td><kbd>GPH</kbd></td>
+    <td>グラフ(Graph)の表示を切り替える</td>
+   </tr>
+   <tr>
+    <td><kbd>ENG</kbd></td>
+    <td>使用するエンジンを切り替える</td>
+   </tr>
+   <tr>
+    <td><kbd>BRK</kbd></td>
+    <td>着陸時のホイールブレーキを有効／無効にする</td>
+   </tr>
+  </table>
 
 
-<p>
-着陸目標を設定したら、<kbd>HLD</kbd>(Hold)ボタンをクリック。<br>
-全自動で着陸が実行される。
-</p>
+  <h2 id="autoland">自動着陸を実行する</h2>
 
-<p>
-自動着陸中のタイムワープは10倍までに制限すること。<br>
-着陸の最終段階ではタイムワープを解除したほうがよい。
-</p>
 
-<p>
-機体が完全に静止したら、オートパイロットは自動的に解除される。
-</p>
+  <p>
+   着陸目標を設定したら、<kbd>HLD</kbd>(Hold)ボタンをクリック。<br>
+   全自動で着陸が実行される。
+  </p>
 
-<p>
-着陸の最終段階で<kbd>HLD</kbd>をクリックすると、現在の高度と速度を維持する。<br>
-もう一度<kbd>HLD</kbd>をクリックすると、オートパイロットは完全に解除される。
-</p>
+  <p>
+   自動着陸中のタイムワープは10倍までに制限すること。<br>
+   着陸の最終段階ではタイムワープを解除したほうがよい。
+  </p>
 
-  </main>
+  <p>
+   機体が完全に静止したら、オートパイロットは自動的に解除される。
+  </p>
+
+  <p>
+   着陸の最終段階で<kbd>HLD</kbd>をクリックすると、現在の高度と速度を維持する。<br>
+   もう一度<kbd>HLD</kbd>をクリックすると、オートパイロットは完全に解除される。
+  </p>
+
+ </main>
 
 </body>
+
 </html>

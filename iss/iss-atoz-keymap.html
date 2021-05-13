@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 
 <html lang="ja">
+
 <head>
   <script src="../scripts/ga.js"></script>
   <meta charset="UTF-8">
@@ -14,205 +15,212 @@
 
   <main>
 
-  <h1>ISS A to Z 操作ガイド</h1>
+    <h1>ISS A to Z 操作ガイド</h1>
 
 
-<p><a href="iss-atoz-install.html" target="_blank">ISS A to Zのインストールと設定</a></p>
+    <p><a href="iss-atoz-install.html" target="_blank">ISS A to Zのインストールと設定</a></p>
 
-<ul>
-<li><a href="#select">モジュールの選択</a></li>
-<li><a href="#control">モジュールの操作</a>
-  <ul>
-  <li><a href="#control_cmg">CMG（姿勢制御ジャイロ）</a></li>
-  <li><a href="#control_ssrmsd">SSRMSD（ロボットアーム）</a></li>
-  <li><a href="#control_mts">MTS</a></li>
-  <li><a href="#control_harmony">Harmony（ハーモニーモジュール）</a></li>
-  <li><a href="#control_cupola">Cupola（キューポラ）</a></li>
-  <li><a href="#control_jem">JEM（きぼう）</a></li>
-  <li><a href="#control_jemrms">JEMRMS（きぼうロボットアーム）</a></li>
-  </ul>
-</li>
-</ul>
+    <ul>
+      <li><a href="#select">モジュールの選択</a></li>
+      <li><a href="#control">モジュールの操作</a>
+        <ul>
+          <li><a href="#control_cmg">CMG（姿勢制御ジャイロ）</a></li>
+          <li><a href="#control_ssrmsd">SSRMSD（ロボットアーム）</a></li>
+          <li><a href="#control_mts">MTS</a></li>
+          <li><a href="#control_harmony">Harmony（ハーモニーモジュール）</a></li>
+          <li><a href="#control_cupola">Cupola（キューポラ）</a></li>
+          <li><a href="#control_jem">JEM（きぼう）</a></li>
+          <li><a href="#control_jemrms">JEMRMS（きぼうロボットアーム）</a></li>
+        </ul>
+      </li>
+    </ul>
 
-<p>これら以外にも、操作可能なモジュールはいくつかあるので探してみてください。</p>
-
-
-<h2 id="select">モジュールの選択</h2>
+    <p>これら以外にも、操作可能なモジュールはいくつかあるので探してみてください。</p>
 
 
-<p>ISS A to Zは、複数のモジュールの集合体であり、それぞれの機能を使うためには特定のモジュールを選択する必要がある。</p>
-<p><kbd>F3</kbd>キーを押して、使いたい機能に対応したモジュールを選択する。<br>
-キー入力で検索することも可能。</p>
-
-<p>
-<img loading="lazy" src="../images/iss/iss-atoz-keymap/ISSAtoZ004.png" width="310" height="244">
-</p>
-
-<p>MFDでISS A to Zそれ自体をターゲットする場合は、<strong>CMG</strong>などの特定のモジュールを選択すること。<br>
-<strong>ISSという名前ではターゲットできない。</strong></p>
+    <h2 id="select">モジュールの選択</h2>
 
 
-<h2 id="control">モジュールの操作</h2>
+    <p>ISS A to Zは、複数のモジュールの集合体であり、それぞれの機能を使うためには特定のモジュールを選択する必要がある。</p>
+    <p><kbd>F3</kbd>キーを押して、使いたい機能に対応したモジュールを選択する。<br>
+      キー入力で検索することも可能。</p>
+
+    <p>
+      <img loading="lazy" src="../images/iss/iss-atoz-keymap/ISSAtoZ004.png" width="310" height="244">
+    </p>
+
+    <p>MFDでISS A to Zそれ自体をターゲットする場合は、<strong>CMG</strong>などの特定のモジュールを選択すること。<br>
+      <strong>ISSという名前ではターゲットできない。</strong>
+    </p>
 
 
-<p>ISS A to Zは<a href="../mods/spacecraft3download.html" target="_blank">Spacecraft3.dll</a>をベースに作られており、使用可能なキーはSpacecraft3のそれとほぼ同じ。<br>
-<a href="../mods/spacecraft3keymap.html" target="_blank">Spacecraft.dll キー操作一覧</a></p>
-<p><strong class="caution">重要</strong>：テンキーを使用する場合は、あらかじめ<kbd>NumLock</kbd>を解除しておくこと。</p>
+    <h2 id="control">モジュールの操作</h2>
 
 
-<h3 id="control_cmg">CMG（姿勢制御ジャイロ）</h3>
+    <p>ISS A to Zは<a href="../mods/spacecraft3download.html"
+        target="_blank">Spacecraft3.dll</a>をベースに作られており、使用可能なキーはSpacecraft3のそれとほぼ同じ。<br>
+      <a href="../mods/spacecraft3keymap.html" target="_blank">Spacecraft.dll キー操作一覧</a>
+    </p>
+    <p><strong class="caution">重要</strong>：テンキーを使用する場合は、あらかじめ<kbd>NumLock</kbd>を解除しておくこと。</p>
 
 
-<p>ISSは通常、地球に同じ面を向けて回転しているが、ドッキングなどの必要に応じてこれを停止させることができる。</p>
-
-<table>
- <tbody>
-  <tr>
-   <td><kbd>3</kbd></td>
-   <td>Attitude keeping（姿勢制御）のオン・オフ</td>
-  </tr>
-  <tr>
-   <td><kbd>G</kbd></td>
-   <td>Zero Angular（角速度ゼロ＝回転を完全に止める）のオン・オフ</td>
-  </tr>
-  <tr>
-   <td><kbd>K</kbd></td>
-   <td>Free drift（姿勢制御をオフにする）</td>
-  </tr>
- <tr>
-  <td><kbd>2</kbd>or<kbd>8</kbd><br>（テンキー）</td>
-  <td>ピッチ角を変更</td>
- </tr>
- <tr>
-  <td><kbd>1</kbd>or<kbd>3</kbd><br>（テンキー）</td>
-  <td>ヨー角を変更</td>
- </tr>
- <tr>
-  <td><kbd>4</kbd>or<kbd>6</kbd><br>（テンキー）</td>
-  <td>ロール角を変更</td>
- </tr>
- <tr>
-  <td><kbd>Ctrl</kbd>+<kbd>1</kbd></td>
-  <td>ピッチ角を設定</td>
- </tr>
- <tr>
-  <td><kbd>Ctrl</kbd>+<kbd>2</kbd></td>
-  <td>ヨー角を設定</td>
- </tr>
- <tr>
-  <td><kbd>Ctrl</kbd>+<kbd>3</kbd></td>
-  <td>ロール角を設定</td>
- </tr>
- <tr>
-  <td><kbd>Ctrl</kbd>+<kbd>4</kbd></td>
-  <td>回転速度を設定 [&deg;/s]</td>
- </tr>
- </tbody>
-</table>
-
-<p>太陽の反射光でHUDの表示が見づらいときは、右ドラッグでカメラの向きを変更する。</p>
+    <h3 id="control_cmg">CMG（姿勢制御ジャイロ）</h3>
 
 
-<h3 id="control_ssrmsd">SSRMSD（ロボットアーム）</h3>
+    <p>ISSは通常、地球に同じ面を向けて回転しているが、ドッキングなどの必要に応じてこれを停止させることができる。</p>
+
+    <table class="center1col">
+      <tbody>
+        <tr>
+          <td><kbd>3</kbd></td>
+          <td>Attitude keeping（姿勢制御）のオン・オフ</td>
+        </tr>
+        <tr>
+          <td><kbd>G</kbd></td>
+          <td>Zero Angular（角速度ゼロ＝回転を完全に止める）のオン・オフ</td>
+        </tr>
+        <tr>
+          <td><kbd>K</kbd></td>
+          <td>Free drift（姿勢制御をオフにする）</td>
+        </tr>
+        <tr>
+          <td><kbd>2</kbd>or<kbd>8</kbd><br>テンキー</td>
+          <td>ピッチ角を変更</td>
+        </tr>
+        <tr>
+          <td><kbd>1</kbd>or<kbd>3</kbd><br>テンキー</td>
+          <td>ヨー角を変更</td>
+        </tr>
+        <tr>
+          <td><kbd>4</kbd>or<kbd>6</kbd><br>テンキー</td>
+          <td>ロール角を変更</td>
+        </tr>
+        <tr>
+          <td><kbd>Ctrl</kbd>+<kbd>1</kbd></td>
+          <td>ピッチ角を設定</td>
+        </tr>
+        <tr>
+          <td><kbd>Ctrl</kbd>+<kbd>2</kbd></td>
+          <td>ヨー角を設定</td>
+        </tr>
+        <tr>
+          <td><kbd>Ctrl</kbd>+<kbd>3</kbd></td>
+          <td>ロール角を設定</td>
+        </tr>
+        <tr>
+          <td><kbd>Ctrl</kbd>+<kbd>4</kbd></td>
+          <td>回転速度を設定 [&deg;/s]</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <p>太陽の反射光でHUDの表示が見づらいときは、右ドラッグでカメラの向きを変更する。</p>
 
 
-<p><strong>Orbiter2016</strong>の場合は以下のページを参照。<br>
-<a href="canadarm2-control.html" target="_blank">Canadarm2MODの操作・移動方法</a></p>
-
-<table>
- <tbody>
-  <tr>
-   <td><kbd>SPACE</kbd></td>
-   <td>ロボットアームの起動</td>
-  </tr>
-  <tr>
-   <td>左<kbd>Shift</kbd> + テンキー<kbd>4</kbd>or<kbd>6</kbd></td>
-   <td>アームの関節を選択</td>
-  </tr>
-  <tr>
-   <td>左<kbd>Shift</kbd> + テンキー<kbd>2</kbd>or<kbd>8</kbd></td>
-   <td>関節を曲げる</td>
-  </tr>
-  <tr>
-   <td>左<kbd>Shift</kbd> + テンキー<kbd>0</kbd></td>
-   <td>ペイロードの固定・切り離し</td>
-  </tr>
- </tbody>
-</table>
-
-<p>以下の項目で説明するいくつかのモジュールも、ロボットアームと同じキー操作になっている。</p>
-
-<ol>
-<li>スペースキーを押して、使用可能な状態にする。</li>
-<li>左<kbd>Shift</kbd> + テンキー<kbd>4</kbd>or<kbd>6</kbd>で操作したい部分を選択。</li>
-<li>左<kbd>Shift</kbd> + テンキー<kbd>2</kbd>or<kbd>8</kbd>で動かす。</li>
-</ol>
+    <h3 id="control_ssrmsd">SSRMSD（ロボットアーム）</h3>
 
 
-<h3 id="control_mts">MTS</h3>
+    <p><strong>Orbiter2016</strong>の場合は以下のページを参照。<br>
+      <a href="canadarm2-control.html" target="_blank">Canadarm2MODの操作・移動方法</a>
+    </p>
+
+    <table class="center1col">
+      <tbody>
+        <tr>
+          <td><kbd>SPACE</kbd></td>
+          <td>ロボットアームの起動</td>
+        </tr>
+        <tr>
+          <td>左<kbd>Shift</kbd> + テンキー<kbd>4</kbd>or<kbd>6</kbd></td>
+          <td>アームの関節を選択</td>
+        </tr>
+        <tr>
+          <td>左<kbd>Shift</kbd> + テンキー<kbd>2</kbd>or<kbd>8</kbd></td>
+          <td>関節を曲げる</td>
+        </tr>
+        <tr>
+          <td>左<kbd>Shift</kbd> + テンキー<kbd>0</kbd></td>
+          <td>ペイロードの固定・切り離し</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <p>以下の項目で説明するいくつかのモジュールも、ロボットアームと同じキー操作になっている。</p>
+
+    <ol>
+      <li>スペースキーを押して、使用可能な状態にする。</li>
+      <li>左<kbd>Shift</kbd> + テンキー<kbd>4</kbd>or<kbd>6</kbd>で操作したい部分を選択。</li>
+      <li>左<kbd>Shift</kbd> + テンキー<kbd>2</kbd>or<kbd>8</kbd>で動かす。</li>
+    </ol>
 
 
-<p>ロボットアームを接続して、ISSのトラスを移動することができる台車。<br>
-操作はロボットアームと同じ。</p>
+    <h3 id="control_mts">MTS</h3>
 
 
-<h3 id="control_harmony">Harmony（ハーモニーモジュール）</h3>
+    <p>ロボットアームを接続して、ISSのトラスを移動することができる台車。<br>
+      操作はロボットアームと同じ。</p>
 
 
-<p>エアロックのThermal cover（熱管理のためのカバー）を開閉する。<br>
-操作はロボットアームと同じ。</p>
+    <h3 id="control_harmony">Harmony（ハーモニーモジュール）</h3>
 
 
-<h3 id="control_cupola">Cupola（キューポラ）</h3>
+    <p>エアロックのThermal cover（熱管理のためのカバー）を開閉する。<br>
+      操作はロボットアームと同じ。</p>
 
 
-<table>
- <tr>
-  <td><kbd>F8</kbd></td>
-  <td>3Dコクピットを使う（HUDを無効にする）</td>
- </tr>
- <tr>
-  <td>左<kbd>Shift</kbd>+<kbd>K</kbd></td>
-  <td>Map MFDをTRKモードにする</td>
- </tr>
- <tr>
-  <td>左<kbd>Shift</kbd> + テンキー<kbd>1</kbd>～<kbd>7</kbd></td>
-  <td>シャッターを開閉する</td>
- </tr>
- <tr>
-  <td>左<kbd>Shift</kbd> + 左<kbd>Ctrl</kbd> + テンキー<kbd>7</kbd></td>
-  <td>天窓のシャッターを閉じる</td>
- </tr>
-</table>
-
-<p>キューポラ内のキーボードなどは使えないが、GlassCockpitというMODを導入すれば左右のMFDを操作することができる。<br>
-<a href="https://www.orbithangar.com/searchid.php?ID=1071" target="_blank" rel="noopener noreferrer">GlassCockpit v1.2</a></p>
+    <h3 id="control_cupola">Cupola（キューポラ）</h3>
 
 
-<h3 id="control_jem">JEM（きぼう）</h3>
+    <table class="center1col">
+      <tr>
+        <td><kbd>F8</kbd></td>
+        <td>3Dコクピットを使う（HUDを無効にする）</td>
+      </tr>
+      <tr>
+        <td>左<kbd>Shift</kbd>+<kbd>K</kbd></td>
+        <td>Map MFDをTRKモードにする</td>
+      </tr>
+      <tr>
+        <td>左<kbd>Shift</kbd> + テンキー<kbd>1</kbd>～<kbd>7</kbd></td>
+        <td>シャッターを開閉する</td>
+      </tr>
+      <tr>
+        <td>左<kbd>Shift</kbd> + 左<kbd>Ctrl</kbd> + テンキー<kbd>7</kbd></td>
+        <td>天窓のシャッターを閉じる</td>
+      </tr>
+    </table>
+
+    <p>キューポラ内のキーボードなどは使えないが、GlassCockpitというMODを導入すれば左右のMFDを操作することができる。<br>
+      <a href="https://www.orbithangar.com/searchid.php?ID=1071" target="_blank" rel="noopener noreferrer">GlassCockpit
+        v1.2</a>
+    </p>
 
 
-<table>
- <tr>
-  <td><kbd>G</kbd>or<kbd>K</kbd></td>
-  <td>エアロックの開閉</td>
- </tr>
- <tr>
-  <td>左<kbd>Shift</kbd> + テンキー<kbd>1</kbd></td>
-  <td>窓の開閉</td>
- </tr>
-</table>
-
-<p>エアロック内のサイドテーブルはロボットアーム扱いになっており、実際に使用することはできないが動かすことができる。</p>
+    <h3 id="control_jem">JEM（きぼう）</h3>
 
 
-<h3 id="control_jemrms">JEMRMS（きぼうロボットアーム）</h3>
+    <table class="center1col">
+      <tr>
+        <td><kbd>G</kbd>or<kbd>K</kbd></td>
+        <td>エアロックの開閉</td>
+      </tr>
+      <tr>
+        <td>左<kbd>Shift</kbd> + テンキー<kbd>1</kbd></td>
+        <td>窓の開閉</td>
+      </tr>
+    </table>
+
+    <p>エアロック内のサイドテーブルはロボットアーム扱いになっており、実際に使用することはできないが動かすことができる。</p>
 
 
-<p>操作はロボットアーム（SSRMSD）と同じ。<br>
-実際に使用することはできないが動かすことができる。</p>
+    <h3 id="control_jemrms">JEMRMS（きぼうロボットアーム）</h3>
+
+
+    <p>操作はロボットアーム（SSRMSD）と同じ。<br>
+      実際に使用することはできないが動かすことができる。</p>
 
   </main>
 
 </body>
+
 </html>

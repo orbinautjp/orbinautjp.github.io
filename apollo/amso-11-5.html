@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 
 <html lang="ja">
+
 <head>
   <script src="../scripts/ga.js"></script>
   <meta charset="UTF-8">
@@ -15,112 +16,123 @@
 
   <main>
 
-  <h1>AMSO アポロ11号チュートリアル Part5 （TEIの準備+実行）</h1>
+    <h1>AMSO アポロ11号チュートリアル Part5 （TEIの準備+実行）</h1>
 
 
-  <h2>CSMとLMを分離する</h2>
+    <h2>CSMとLMを分離する</h2>
 
-  <p>CSMに乗った状態で、<kbd>J</kbd>を押すと分離の確認メッセージが出る。<br>
-  もう一度<kbd>J</kbd>を押すと分離する。（史実では<strong>GET 130:09:31</strong>に実行）</p>
-  
-  <h2>TEIの準備+実行</h2>
-  
-  <p>以下の記事も参考にしてください。<br>
-  <a href="../transximfd/imfd-tutorial-6.html">IMFD Part6 BaseApproachとOrbit Insertで基地上空へ</a></p>
-  
-  <h3>BaseApproachでプランを作成する</h3>
-  
-  <p>左MFDでIMFDを開く。<br>
-  <strong>Program Menu</strong>から<strong>BaseApproach</strong>を選択。</p>
-  <p><kbd>PG</kbd>をクリックして<kbd>Src</kbd>ボタンを表示。<br>
-  <kbd>Src</kbd>をクリックして、<strong>Moon</strong>と入力する。<br>
-  Approach for: <strong>Re-Entry</strong>になっていることを確認する。<br>
-  <strong>GET</strong>を史実の出発時間、<strong>135:23:42</strong>にする。</p>
+    <p>CSMに乗った状態で、<kbd>J</kbd>を押すと分離の確認メッセージが出る。<br>
+      もう一度<kbd>J</kbd>を押すと分離する。（史実では<strong>GET 130:09:31</strong>に実行）</p>
 
-  <p>
-    <img loading="lazy" src="../images/apollo/amso-11-5/001.png" width="166" height="253">
-  </p>
-  <p><strong>Target:</strong>の下の項目に、以下の数字を入力する。</p>
-  
-  <table>
-   <tr>
-   <td><strong>Lon</strong></td>
-   <td><strong>-169.15</strong> (169.15°W)</td>
-   </tr>
-   <tr>
-   <td><strong>Lat</strong></td>
-   <td><strong>13.3</strong> (13.300°N)</td>
-   </tr>
-   <tr>
-   <td><strong>Alt</strong></td>
-   <td><strong>120.0k</strong></td>
-   </tr>
-   <tr>
-   <td><strong>ReA</strong></td>
-   <td><strong>6.48</strong></td>
-   </tr>
-   <tr>
-   <td><strong>Ant</strong></td>
-   <td><strong>21</strong></td>
-   </tr>
-  
-  </table> 
-  
-  <p>
-    <img loading="lazy" src="../images/apollo/amso-11-5/002.png" width="199" height="150"></p>
-  
-  <p class="note">※ReA(Reentry angle)は再突入の角度、Ant(anticipation)は突入から着地までの移動を角度で表している<br>
-  参照：<a href="https://www.orbiterwiki.org/wiki/IMFD_Base_Approach">IMFD Base Approach – OrbiterWiki</a></p>
-  <p>入力が終わったら、Flight Time:の下の<strong>Hint</strong>を選択する。<br>
-  <kbd>+</kbd>を長押しクリックすると、<strong>Hint</strong>の数字が変わる。</p>
+    <h2>TEIの準備+実行</h2>
 
-  <p>
-    <img loading="lazy" src="../images/apollo/amso-11-5/003.png" width="150" height="70">
-  </p>
-  <p class="note">※Hintは出発から再突入までの移動時間を意味する</p>
-  <p><strong>ReT</strong>(Reentry Time)の下の<strong>GET</strong>が予定時刻（史実では<strong>195:03:05</strong>）に近づくようにする。<br>
-  また、<strong>oV</strong>ができるだけ小さくなるようにする。</p>
+    <p>以下の記事も参考にしてください。<br>
+      <a href="../transximfd/imfd-tutorial-6.html">IMFD Part6 BaseApproachとOrbit Insertで基地上空へ</a>
+    </p>
 
-  <p>
-    <img loading="lazy" src="../images/apollo/amso-11-5/004.png" width="178" height="173">
-  </p>
-  <p>今回の例では、<strong>Hint</strong>は<strong>214.3k</strong>になっている。</p>
-  <p><kbd>Prv</kbd>をクリックしてほかの項目を選択すると、Hintの数字は自動的に調整される。</p>
-  
-  <h3>Hintの調整がうまくいかないとき</h3>
-  
-  <p><strong>Hint</strong>が極端な値になってしまうときは、<strong>Ant</strong>の数字を増やしてみてください。<br>
-  今回のAntは<strong>21°</strong>ですが、12号では<strong>25°</strong>くらいにすると調整しやすくなります。</p>
-  
-  <h3>Orbit Ejectでプランを微調整・実行する</h3>
-  
-  <p>上の作業が終わったら、右MFDでもIMFDを開く。<br>
-  左MFDのデータを共有させる。<strong>Program Menu</strong>で<kbd>PG</kbd>をクリックして<strong>0</strong>と入力。<br>
-  <strong>Orbit Eject</strong>を選択する。</p>
-  <p><kbd>+</kbd>を何度かクリックして、<strong>Higher Orbit</strong>を<strong>BaseApproach</strong>にする。<br>
-    <img loading="lazy" src="../images/apollo/amso-11-5/005.png" width="170" height="81">
-  </p>
-  <p><strong>GET</strong>を左MFDの<strong>Eject:</strong>と同じ数字にする。<br>
-    <img loading="lazy" src="../images/apollo/amso-11-5/006.png" width="223" height="239">
-  </p>
-  <p>そこから<strong>GET</strong>を調整して、<strong>dV</strong>ができるだけ小さくなるようにする。<br>
-    <img loading="lazy" src="../images/apollo/amso-11-5/007.png" width="227" height="232">
-  </p>
-  <p>この作業が終わったら、左MFDに戻る。<br>
-  <strong>Eject:</strong>の下の<strong>GET</strong>を右MFDの数字と同じにする。</p>
+    <h3>BaseApproachでプランを作成する</h3>
 
-  <p>
-    <img loading="lazy" src="../images/apollo/amso-11-5/008.png" width="158" height="107">
-  </p>
-  <p>終わったら、右MFDの<strong>Orbit-Eject</strong>で<kbd>AB</kbd>ボタンをクリック。<br>
-  自動噴射が実行されるのを待つ。</p>
-  
-  <h2>史実のアポロ再突入・着水のデータ</h2>
-  
-  <p>実際の再突入・着水に関する日時や座標については、以下のリンクを参照してください。<br>
-  <a href="https://history.nasa.gov/SP-4029/Apollo_18-40_Entry_Splashdown_and_Recovery.htm">Entry, Splashdown, and Recovery</a></p>
+    <p>左MFDでIMFDを開く。<br>
+      <strong>Program Menu</strong>から<strong>BaseApproach</strong>を選択。
+    </p>
+    <p><kbd>PG</kbd>をクリックして<kbd>Src</kbd>ボタンを表示。<br>
+      <kbd>Src</kbd>をクリックして、<strong>Moon</strong>と入力する。<br>
+      Approach for: <strong>Re-Entry</strong>になっていることを確認する。<br>
+      <strong>GET</strong>を史実の出発時間、<strong>135:23:42</strong>にする。
+    </p>
+
+    <p>
+      <img loading="lazy" src="../images/apollo/amso-11-5/001.png" width="166" height="253">
+    </p>
+    <p><strong>Target:</strong>の下の項目に、以下の数字を入力する。</p>
+
+    <table>
+      <tr>
+        <td><strong>Lon</strong></td>
+        <td><strong>-169.15</strong></td>
+        <td>169.15°W</td>
+      </tr>
+      <tr>
+        <td><strong>Lat</strong></td>
+        <td><strong>13.3</strong></td>
+        <td>13.300°N</td>
+      </tr>
+      <tr>
+        <td><strong>Alt</strong></td>
+        <td colspan="2"><strong>120.0k</strong></td>
+      </tr>
+      <tr>
+        <td><strong>ReA</strong></td>
+        <td colspan="2"><strong>6.48</strong></td>
+      </tr>
+      <tr>
+        <td><strong>Ant</strong></td>
+        <td colspan="2"><strong>21</strong></td>
+      </tr>
+    </table>
+
+    <p>
+      <img loading="lazy" src="../images/apollo/amso-11-5/002.png" width="199" height="150">
+    </p>
+
+    <p class="note">※<abbr title="Reentry angle">ReA</abbr>は再突入の角度、<abbr title="anticipation">Ant</abbr>は突入から着地までの移動を角度で表している<br>
+      参照：<a href="https://www.orbiterwiki.org/wiki/IMFD_Base_Approach">IMFD Base Approach – OrbiterWiki</a></p>
+    <p>入力が終わったら、Flight Time:の下の<strong>Hint</strong>を選択する。<br>
+      <kbd>+</kbd>を長押しクリックすると、<strong>Hint</strong>の数字が変わる。
+    </p>
+
+    <p>
+      <img loading="lazy" src="../images/apollo/amso-11-5/003.png" width="150" height="70">
+    </p>
+    <p class="note">※Hintは出発から再突入までの移動時間を意味する</p>
+    <p><strong>ReT</strong>(Reentry Time)の下の<strong>GET</strong>が予定時刻（史実では<strong>195:03:05</strong>）に近づくようにする。<br>
+      また、<strong>oV</strong>ができるだけ小さくなるようにする。</p>
+
+    <p>
+      <img loading="lazy" src="../images/apollo/amso-11-5/004.png" width="178" height="173">
+    </p>
+    <p>今回の例では、<strong>Hint</strong>は<strong>214.3k</strong>になっている。</p>
+    <p><kbd>Prv</kbd>をクリックしてほかの項目を選択すると、Hintの数字は自動的に調整される。</p>
+
+    <h3>Hintの調整がうまくいかないとき</h3>
+
+    <p><strong>Hint</strong>が極端な値になってしまうときは、<strong>Ant</strong>の数字を増やしてみてください。<br>
+      今回のAntは<strong>21°</strong>ですが、12号では<strong>25°</strong>くらいにすると調整しやすくなります。</p>
+
+    <h3>Orbit Ejectでプランを微調整・実行する</h3>
+
+    <p>上の作業が終わったら、右MFDでもIMFDを開く。<br>
+      左MFDのデータを共有させる。<strong>Program Menu</strong>で<kbd>PG</kbd>をクリックして<strong>0</strong>と入力。<br>
+      <strong>Orbit Eject</strong>を選択する。
+    </p>
+    <p><kbd>+</kbd>を何度かクリックして、<strong>Higher Orbit</strong>を<strong>BaseApproach</strong>にする。<br>
+      <img loading="lazy" src="../images/apollo/amso-11-5/005.png" width="170" height="81">
+    </p>
+    <p><strong>GET</strong>を左MFDの<strong>Eject:</strong>と同じ数字にする。<br>
+      <img loading="lazy" src="../images/apollo/amso-11-5/006.png" width="223" height="239">
+    </p>
+    <p>そこから<strong>GET</strong>を調整して、<strong>dV</strong>ができるだけ小さくなるようにする。<br>
+      <img loading="lazy" src="../images/apollo/amso-11-5/007.png" width="227" height="232">
+    </p>
+    <p>この作業が終わったら、左MFDに戻る。<br>
+      <strong>Eject:</strong>の下の<strong>GET</strong>を右MFDの数字と同じにする。
+    </p>
+
+    <p>
+      <img loading="lazy" src="../images/apollo/amso-11-5/008.png" width="158" height="107">
+    </p>
+    <p>終わったら、右MFDの<strong>Orbit-Eject</strong>で<kbd>AB</kbd>ボタンをクリック。<br>
+      自動噴射が実行されるのを待つ。</p>
+
+    <h2>史実のアポロ再突入・着水のデータ</h2>
+
+    <p>実際の再突入・着水に関する日時や座標については、以下のリンクを参照してください。<br>
+      <a href="https://history.nasa.gov/SP-4029/Apollo_18-40_Entry_Splashdown_and_Recovery.htm">Entry, Splashdown, and
+        Recovery</a>
+    </p>
 
   </main>
 
 </body>
+
 </html>

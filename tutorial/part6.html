@@ -17,229 +17,232 @@
 
   <main>
 
-  <h1>Part6 ドッキング</h1>
+    <h1>Part6 ドッキング</h1>
 
 
-  <p>RCSを使ってISSとドッキングします。</p>
+    <p>RCSを使ってISSとドッキングします。</p>
 
-  <ol>
-    <li><a href="#dockingport">ドッキングポートの正面に出る</a></li>
-    <li><a href="#dockingmfd">Docking MFD</a></li>
-    <li><a href="#killrot">ISSの回転を止める</a></li>
-    <li><a href="#docking">ドッキング</a></li>
-  </ol>
-
-  <ul>
-    <li><a href="#reference">関連項目</a></li>
-    <li><a href="#form">アンケート</a></li>
-    <li><a href="#videos">動画</a></li>
-  </ul>
-
-
-  <h2 id="dockingport">ドッキングポートの正面に出る</h2>
-
-
-  <p>キーボードの<kbd>K</kbd>を押す。<br>
-    ノーズコーンを開く。</p>
-
-  <p>RCSを噴射して移動する。<br>
-    テンキー<kbd>/</kbd>でRCSを切り替える。</p>
-
-  <table>
-    <tr>
-      <td rowspan="3"><strong>RCS ROT</strong></td>
-      <td rowspan="3">機体を回転させる</td>
-      <td><kbd>2</kbd>or<kbd>8</kbd></td>
-      <td>ピッチ</td>
-    </tr>
-    <tr>
-      <td><kbd>4</kbd>or<kbd>6</kbd></td>
-      <td>ロール</td>
-    </tr>
-    <tr>
-      <td><kbd>1</kbd>or<kbd>3</kbd></td>
-      <td>ヨー</td>
-    </tr>
-    <tr>
-      <td rowspan="3"><strong>RCS LIN</strong></td>
-      <td rowspan="3">機体を平行移動させる</td>
-      <td><kbd>2</kbd>or<kbd>8</kbd></td>
-      <td>上下</td>
-    </tr>
-    <tr>
-      <td><kbd>1</kbd>or<kbd>3</kbd></td>
-      <td>左右</td>
-    </tr>
-    <tr>
-      <td><kbd>6</kbd>or<kbd>9</kbd></td>
-      <td>前後</td>
-    </tr>
-    <tr>
-      <td><strong>KILL ROT</strong></td>
-      <td>回転を止める</td>
-      <td style="text-align:center;"><kbd>5</kbd></td>
-      <td></td>
-    </tr>
-  </table>
-
-  <p> \( \bigoplus \) のマーカーが進行方向の目安になる。</p>
-
-  <p>
-    <img loading="lazy" src="../images/tutorial/part6/002.png" width="500" height="500">
-  </p>
-
-  <p>高速で移動しようとするより、タイムワープで移動時間を省略したほうがよい。</p>
-
-  <p>ドッキングポートまでの経路に表示された、長方形の枠を基準に上下を決める。<br>
-    Delta Gliderの場合、線が二重になっている側が上になる。</p>
-
-  <p>
-    <img loading="lazy" src="../images/tutorial/part6/001.png" width="500" height="500">
-  </p>
-
-  <p>正面に出たら、ドッキングポートに機首を向ける。</p>
-
-  <p>
-    <img loading="lazy" src="../images/tutorial/part6/003.png" width="500" height="500">
-  </p>
-
-
-  <h2 id="killrot">ISSの回転を止める</h2>
-
-
-  <p><kbd>F3</kbd>キーを押す。<br>
-    機体選択メニューを開く。</p>
-
-  <p><strong>ISS</strong>をクリックして選択。<br>
-    <kbd>OK</kbd>or<kbd>Apply</kbd>をクリック。
-  </p>
-
-  <p>
-    <img loading="lazy" class="small" src="../images/tutorial/part6/006.png" width="240" height="200">
-    <img loading="lazy" class="small" src="../images/tutorial/part6/007.png" width="300" height="250">
-    <br>
-    1枚目がOrbiter2010、2枚目が2016
-  </p>
-
-  <p>これで、ISSを操作できるようになる。<br>
-    テンキー<kbd>5</kbd>を押す。</p>
-
-  <p>自分の宇宙船に戻る。<br>
-    <strong>GL-01</strong>を選択する。
-  </p>
-
-  <p><strong>Docking MFD</strong>で<kbd>NAV</kbd>をクリック。<br>
-    <kbd>F8</kbd>キーでコクピットの切り替え。
-  </p>
-
-  <p>静止しているように見える宇宙ステーションも、ゆっくり回転していることがある。<br>
-    これを止めておかないと、ドッキングの難易度が上がる。</p>
-
-
-  <h2 id="dockingmfd">Docking MFD</h2>
-
-
-  <p>ドッキングポートの軸線上に移動し、機体の向きを一致させる。<br>
-    前進してドッキングする。</p>
-
-  <p>
-    <img loading="lazy" src="../images/tutorial/part6/004.png" width="425" height="425">
-  </p>
-
-  <table>
-    <tr>
-      <td rowspan="3"><strong>RCS ROT</strong></td>
-      <td rowspan="2">赤&nbsp;or&nbsp;白の<strong>×</strong>を、中央に移動させる</td>
-      <td><kbd>2</kbd>or<kbd>8</kbd></td>
-    </tr>
-    <tr>
-      <td><kbd>1</kbd>or<kbd>3</kbd></td>
-    </tr>
-    <tr>
-      <td>赤&nbsp;or&nbsp;白の<strong>▲</strong>を、上に移動させる</td>
-      <td><kbd>4</kbd>or<kbd>6</kbd></td>
-    </tr>
-    <tr>
-      <td rowspan="3"><strong>RCS LIN</strong></td>
-      <td rowspan="2">黄色い十字線を、中央に移動させる</td>
-      <td><kbd>2</kbd>or<kbd>8</kbd></td>
-    </tr>
-    <tr>
-      <td><kbd>1</kbd>or<kbd>3</kbd></td>
-    </tr>
-    <tr>
-      <td>ドッキングポートに接近・減速する</td>
-      <td><kbd>6</kbd>or<kbd>9</kbd></td>
-    </tr>
-  </table>
-
-  <p>これらの要素を1つずつ修正していく。<br>
-    <strong>RCS ROT</strong>と<strong>LIN</strong>を切り替えながら操作する。
-  </p>
-
-  <p><kbd>Ctrl</kbd>を同時押しすると、RCSの出力を抑えて細かい操作ができる。</p>
-
-  <p>
-    <img loading="lazy" src="../images/tutorial/part6/005.png" width="425" height="425">
-  </p>
-
-  <p>HUD上で \( \bigoplus \) のマーカーを動かすと、<strong>Docking MFD</strong>の表示も変化する。<br>
-    これら2つの反応を見比べるとわかりやすい。</p>
-
-
-  <h2 id="docking">ドッキング</h2>
-
-
-  <p>ドッキングポートが近づいてきたら減速する。<br>
-    <strong>CVEL</strong>を<strong>0.1</strong>以下に抑える。
-  </p>
-
-  <p>ドッキングポートの向きが合っていれば、ISSに接触すると自動で固定される。</p>
-
-  <p>
-    <img loading="lazy" src="../images/tutorial/part6/008.png" width="425" height="425">
-  </p>
-
-
-  <h2 id="reference">関連項目</h2>
-
-
-  <p>
-    <a href="../mods/pursuitmfd-docking.html" target="_blank">PursuitMFD ドッキングを自動化・補助する</a>
-  </p>
-
-
-  <h2 id="form">アンケート</h2>
-
-
-  <form action="https://docs.google.com/forms/d/e/1FAIpQLSeclx1a_dOiKoI3MZmfcIzXB0SK563_rPTMF_hK1q7DyL7_Ww/formResponse" target="_self" method="POST" id="mG61Hd">
-
-    <p>この記事の内容は理解できましたか？</p>
+    <ol>
+      <li><a href="#dockingport">ドッキングポートの正面に出る</a></li>
+      <li><a href="#dockingmfd">Docking MFD</a></li>
+      <li><a href="#killrot">ISSの回転を止める</a></li>
+      <li><a href="#docking">ドッキング</a></li>
+    </ol>
 
     <ul>
-      <li><label><input type="radio" name="entry.1914587356" value="できなかった、全然理解できない" />できなかった、全然理解できない</label></li>
-      <li><label><input type="radio" name="entry.1914587356" value="できなかった、途中から理解できない" />できなかった、途中から理解できない</label></li>
-      <li><label><input type="radio" name="entry.1914587356" value="できた、難しかった" />できた、難しかった</label></li>
-      <li><label><input type="radio" name="entry.1914587356" value="できた、簡単だった" />できた、簡単だった</label></li>
+      <li><a href="#reference">関連項目</a></li>
+      <li><a href="#form">アンケート</a></li>
+      <li><a href="#videos">動画</a></li>
     </ul>
 
-    <p><label for="question">わからなかった・難しかったところを教えてください（任意）</label><br>
-      <input id="question" type="text" name="entry.1857549962">
+
+    <h2 id="dockingport">ドッキングポートの正面に出る</h2>
+
+
+    <p>キーボードの<kbd>K</kbd>を押す。<br>
+      ノーズコーンを開く。</p>
+
+    <p>RCSを噴射して移動する。<br>
+      テンキー<kbd>/</kbd>でRCSを切り替える。</p>
+
+    <table>
+      <tr>
+        <td rowspan="3"><strong>RCS ROT</strong></td>
+        <td rowspan="3">機体を回転させる</td>
+        <td><kbd>2</kbd>or<kbd>8</kbd></td>
+        <td>ピッチ</td>
+      </tr>
+      <tr>
+        <td><kbd>4</kbd>or<kbd>6</kbd></td>
+        <td>ロール</td>
+      </tr>
+      <tr>
+        <td><kbd>1</kbd>or<kbd>3</kbd></td>
+        <td>ヨー</td>
+      </tr>
+      <tr>
+        <td rowspan="3"><strong>RCS LIN</strong></td>
+        <td rowspan="3">機体を平行移動させる</td>
+        <td><kbd>2</kbd>or<kbd>8</kbd></td>
+        <td>上下</td>
+      </tr>
+      <tr>
+        <td><kbd>1</kbd>or<kbd>3</kbd></td>
+        <td>左右</td>
+      </tr>
+      <tr>
+        <td><kbd>6</kbd>or<kbd>9</kbd></td>
+        <td>前後</td>
+      </tr>
+      <tr>
+        <td><strong>KILL ROT</strong></td>
+        <td>回転を止める</td>
+        <td style="text-align:center;"><kbd>5</kbd></td>
+        <td></td>
+      </tr>
+    </table>
+
+    <p> \( \bigoplus \) のマーカーが進行方向の目安になる。</p>
+
+    <p>
+      <img loading="lazy" src="../images/tutorial/part6/002.png" width="500" height="500">
     </p>
 
-    <p>公開されますので個人情報を記入しないでください。<br>
-      <button type="submit" name="button" value="送信">送信</button>
+    <p>高速で移動しようとするより、タイムワープで移動時間を省略したほうがよい。</p>
+
+    <p>ドッキングポートまでの経路に表示された、長方形の枠を基準に上下を決める。<br>
+      Delta Gliderの場合、線が二重になっている側が上になる。</p>
+
+    <p>
+      <img loading="lazy" src="../images/tutorial/part6/001.png" width="500" height="500">
     </p>
 
-  </form>
+    <p>正面に出たら、ドッキングポートに機首を向ける。</p>
+
+    <p>
+      <img loading="lazy" src="../images/tutorial/part6/003.png" width="500" height="500">
+    </p>
 
 
-  <h2 id="videos">動画</h2>
+    <h2 id="killrot">ISSの回転を止める</h2>
 
 
-  <p><a href="https://youtu.be/VAat5rbyYuw" target="_blank" rel="noopener noreferrer">YouTube</a></p>
+    <p><kbd>F3</kbd>キーを押す。<br>
+      機体選択メニューを開く。</p>
 
-  <p><a href="https://www.nicovideo.jp/watch/sm25503408" target="_blank" rel="noopener noreferrer">ニコニコ動画</a></p>
+    <p><strong>ISS</strong>をクリックして選択。<br>
+      <kbd>OK</kbd>or<kbd>Apply</kbd>をクリック。
+    </p>
+
+    <p>
+      <img loading="lazy" class="small" src="../images/tutorial/part6/006.png" width="240" height="200">
+      <img loading="lazy" class="small" src="../images/tutorial/part6/007.png" width="300" height="250">
+      <br>
+      1枚目がOrbiter2010、2枚目が2016
+    </p>
+
+    <p>これで、ISSを操作できるようになる。<br>
+      テンキー<kbd>5</kbd>を押す。</p>
+
+    <p>自分の宇宙船に戻る。<br>
+      <strong>GL-01</strong>を選択する。
+    </p>
+
+    <p><strong>Docking MFD</strong>で<kbd>NAV</kbd>をクリック。<br>
+      <kbd>F8</kbd>キーでコクピットの切り替え。
+    </p>
+
+    <p>静止しているように見える宇宙ステーションも、ゆっくり回転していることがある。<br>
+      これを止めておかないと、ドッキングの難易度が上がる。</p>
+
+
+    <h2 id="dockingmfd">Docking MFD</h2>
+
+
+    <p>ドッキングポートの軸線上に移動し、機体の向きを一致させる。<br>
+      前進してドッキングする。</p>
+
+    <p>
+      <img loading="lazy" src="../images/tutorial/part6/004.png" width="425" height="425">
+    </p>
+
+    <table>
+      <tr>
+        <td rowspan="3"><strong>RCS ROT</strong></td>
+        <td rowspan="2">赤&nbsp;or&nbsp;白の<strong>×</strong>を、中央に移動させる</td>
+        <td><kbd>2</kbd>or<kbd>8</kbd></td>
+      </tr>
+      <tr>
+        <td><kbd>1</kbd>or<kbd>3</kbd></td>
+      </tr>
+      <tr>
+        <td>赤&nbsp;or&nbsp;白の<strong>▲</strong>を、上に移動させる</td>
+        <td><kbd>4</kbd>or<kbd>6</kbd></td>
+      </tr>
+      <tr>
+        <td rowspan="3"><strong>RCS LIN</strong></td>
+        <td rowspan="2">黄色い十字線を、中央に移動させる</td>
+        <td><kbd>2</kbd>or<kbd>8</kbd></td>
+      </tr>
+      <tr>
+        <td><kbd>1</kbd>or<kbd>3</kbd></td>
+      </tr>
+      <tr>
+        <td>ドッキングポートに接近・減速する</td>
+        <td><kbd>6</kbd>or<kbd>9</kbd></td>
+      </tr>
+    </table>
+
+    <p>これらの要素を1つずつ修正していく。<br>
+      <strong>RCS ROT</strong>と<strong>LIN</strong>を切り替えながら操作する。
+    </p>
+
+    <p><kbd>Ctrl</kbd>を同時押しすると、RCSの出力を抑えて細かい操作ができる。</p>
+
+    <p>
+      <img loading="lazy" src="../images/tutorial/part6/005.png" width="425" height="425">
+    </p>
+
+    <p>HUD上で \( \bigoplus \) のマーカーを動かすと、<strong>Docking MFD</strong>の表示も変化する。<br>
+      これら2つの反応を見比べるとわかりやすい。</p>
+
+
+    <h2 id="docking">ドッキング</h2>
+
+
+    <p>ドッキングポートが近づいてきたら減速する。<br>
+      <strong>CVEL</strong>を<strong>0.1</strong>以下に抑える。
+    </p>
+
+    <p>ドッキングポートの向きが合っていれば、ISSに接触すると自動で固定される。</p>
+
+    <p>
+      <img loading="lazy" src="../images/tutorial/part6/008.png" width="425" height="425">
+    </p>
+
+
+    <h2 id="reference">関連項目</h2>
+
+
+    <p>
+      <a href="../mods/pursuitmfd-docking.html" target="_blank">PursuitMFD ドッキングを自動化・補助する</a>
+    </p>
+
+
+    <h2 id="form">アンケート</h2>
+
+
+    <form
+      action="https://docs.google.com/forms/d/e/1FAIpQLSeclx1a_dOiKoI3MZmfcIzXB0SK563_rPTMF_hK1q7DyL7_Ww/formResponse"
+      target="_self" method="POST" id="mG61Hd">
+
+      <p>この記事の内容は理解できましたか？</p>
+
+      <ul>
+        <li><label><input type="radio" name="entry.1914587356" value="できなかった、全然理解できない" />できなかった、全然理解できない</label></li>
+        <li><label><input type="radio" name="entry.1914587356" value="できなかった、途中から理解できない" />できなかった、途中から理解できない</label>
+        </li>
+        <li><label><input type="radio" name="entry.1914587356" value="できた、難しかった" />できた、難しかった</label></li>
+        <li><label><input type="radio" name="entry.1914587356" value="できた、簡単だった" />できた、簡単だった</label></li>
+      </ul>
+
+      <p><label for="question">わからなかった・難しかったところを教えてください（任意）</label><br>
+        <input id="question" type="text" name="entry.1857549962">
+      </p>
+
+      <p>公開されますので個人情報を記入しないでください。<br>
+        <button type="submit" name="button" value="送信">送信</button>
+      </p>
+
+    </form>
+
+
+    <h2 id="videos">動画</h2>
+
+
+    <p><a href="https://youtu.be/VAat5rbyYuw" target="_blank" rel="noopener noreferrer">YouTube</a></p>
+
+    <p><a href="https://www.nicovideo.jp/watch/sm25503408" target="_blank" rel="noopener noreferrer">ニコニコ動画</a></p>
 
   </main>
 

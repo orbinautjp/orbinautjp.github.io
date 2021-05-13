@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 
 <html lang="ja">
+
 <head>
   <script src="../scripts/ga.js"></script>
   <meta charset="UTF-8">
@@ -14,149 +15,157 @@
 
   <main>
 
-  <h1>AMSO アポロ12号のハイブリッド軌道</h1>
+    <h1>AMSO アポロ12号のハイブリッド軌道</h1>
 
 
-<p>アポロ計画におけるハイブリッド軌道とは、以下のような軌道を指します。</p>
+    <p>アポロ計画におけるハイブリッド軌道とは、以下のような軌道を指します。</p>
 
-<ol>
-<li>TLIでは自由帰還軌道を設定する。</li>
-<li>道中の軌道修正で、着陸地点に向かう軌道に変更する。</li>
-</ol>
+    <ol>
+      <li>TLIでは自由帰還軌道を設定する。</li>
+      <li>道中の軌道修正で、着陸地点に向かう軌道に変更する。</li>
+    </ol>
 
-<p>今回はアポロ12号ミッションを例に、ハイブリッド軌道で月に向かいます。</p>
-
-
-<h2>必要なもの</h2>
+    <p>今回はアポロ12号ミッションを例に、ハイブリッド軌道で月に向かいます。</p>
 
 
-<p><a href="index.html#amso">AMSO</a>に加えて、<a href="../transximfd/imfd-download.html">IMFD</a>と<a href="../mods/lunartransfermfd.html">LTMFD</a>の両方をインストールしてください。<br>
-また、それぞれのMFDとAMSOの基本操作をあらかじめ確認してください。</p>
+    <h2>必要なもの</h2>
 
 
-<h2>ハイブリッド軌道を作る</h2>
+    <p><a href="index.html#amso">AMSO</a>に加えて、<a href="../transximfd/imfd-download.html">IMFD</a>と<a
+        href="../mods/lunartransfermfd.html">LTMFD</a>の両方をインストールしてください。<br>
+      また、それぞれのMFDとAMSOの基本操作をあらかじめ確認してください。</p>
 
 
-<h3>自由帰還軌道</h3>
+    <h2>ハイブリッド軌道を作る</h2>
 
 
-<p>IMFDを使って自由帰還軌道を作成します。<br>
-細かい手順については、以下の記事を参照してください。<br>
-<a href="../transximfd/imfd-offset-freereturn.html">IMFD Offset機能と自由帰還軌道(AMSO)</a></p>
-<p>IMFDの<strong>Target Intercept</strong>に、以下の数字を入力する。</p>
-<p><img loading="lazy" src="../images/apollo/amso-12-hybrid-trajectory/001.png" width="361" height="208">
-</p>
-
-<table>
- <tr>
-  <td><strong>GET</strong>(<strong>TEj</strong>)</td>
-  <td><strong>2:47:22</strong></td>
- </tr>
- <tr>
-  <td><strong>GET</strong>(<strong>TIn</strong>)</td>
-  <td><strong>83:22:53</strong></td>
- </tr>
-</table>
-
-<p><img loading="lazy" src="../images/apollo/amso-12-hybrid-trajectory/002.png" width="199" height="155">
-</p>
-
-<table>
- <tr>
-  <td><strong>Lon</strong></td>
-  <td><strong>19.5</strong></td>
- </tr>
- <tr>
-  <td><strong>Lat</strong></td>
-  <td><strong>14.0</strong></td>
- </tr>
- <tr>
-  <td><strong>Rad</strong></td>
-  <td><strong>15.25M</strong></td>
- </tr>
-</table>
-
-<p>入力が終わったら、<kbd>AB</kbd>をクリックして自動噴射を実行する。</p>
-<p>この噴射によって、宇宙船は自由帰還軌道に入る。<br>
-この軌道から直接目的地に降りることはできない。</p>
-
-<p>
-<img loading="lazy" src="../images/apollo/amso-12-hybrid-trajectory/003.png" width="339" height="265">
-</p>
+    <h3>自由帰還軌道</h3>
 
 
-<h3>軌道修正(TLCC)</h3>
+    <p>IMFDを使って自由帰還軌道を作成します。<br>
+      細かい手順については、以下の記事を参照してください。<br>
+      <a href="../transximfd/imfd-offset-freereturn.html">IMFD Offset機能と自由帰還軌道(AMSO)</a>
+    </p>
+    <p>IMFDの<strong>Target Intercept</strong>に、以下の数字を入力する。</p>
+    <p><img loading="lazy" src="../images/apollo/amso-12-hybrid-trajectory/001.png" width="361" height="208">
+    </p>
+
+    <table>
+      <tr>
+        <td>TEj</td>
+        <td><strong>GET</strong></td>
+        <td><strong>2:47:22</strong></td>
+      </tr>
+      <tr>
+        <td>TIn</td>
+        <td><strong>GET</strong></td>
+        <td><strong>83:22:53</strong></td>
+      </tr>
+    </table>
+
+    <p><img loading="lazy" src="../images/apollo/amso-12-hybrid-trajectory/002.png" width="199" height="155">
+    </p>
+
+    <table>
+      <tr>
+        <td><strong>Lon</strong></td>
+        <td><strong>19.5</strong></td>
+      </tr>
+      <tr>
+        <td><strong>Lat</strong></td>
+        <td><strong>14.0</strong></td>
+      </tr>
+      <tr>
+        <td><strong>Rad</strong></td>
+        <td><strong>15.25M</strong></td>
+      </tr>
+    </table>
+
+    <p>入力が終わったら、<kbd>AB</kbd>をクリックして自動噴射を実行する。</p>
+    <p>この噴射によって、宇宙船は自由帰還軌道に入る。<br>
+      この軌道から直接目的地に降りることはできない。</p>
+
+    <p>
+      <img loading="lazy" src="../images/apollo/amso-12-hybrid-trajectory/003.png" width="339" height="265">
+    </p>
 
 
-<p class="note">※TLCC=Trans Lunar Course Correction</p>
-<p>ロケットからCSMとLMを分離したら、LTMFDを開く。<br>
-<strong>Program Menu</strong>から<strong>Program TLI</strong>を選択。</p>
-<p>以下の項目を、ここに書かれているのと同じになるように入力・確認する。</p>
-<p><img loading="lazy" src="../images/apollo/amso-12-hybrid-trajectory/004.png" width="164" height="110">
-</p>
-
-<table>
- <tr>
-  <td><strong>Mod</strong></td>
-  <td><strong>Surface</strong></td>
- </tr>
- <tr>
-  <td><strong>Fst</strong></td>
-  <td><strong>TLCC</strong></td>
- </tr>
- <tr>
-  <td><strong>TIg</strong></td>
-  <td><strong>Manual</strong></td>
- </tr>
- <tr>
-  <td><strong>Tgt</strong></td>
-  <td><strong>Procellarum</strong>※</td>
- </tr>
-</table>
-
-<p class="note">※Oceanus Procellarum＝嵐の大洋</p>
-<p>PeT、PeA、TOA、TIgに以下の数字を入力する。</p>
-<p><img loading="lazy" src="../images/apollo/amso-12-hybrid-trajectory/005.png" width="140" height="144">
-</p>
-
-<table>
- <tr>
-  <td><strong>PeT</strong></td>
-  <td><strong>83:25:23</strong></td>
- </tr>
- <tr>
-  <td><strong>PeA</strong></td>
-  <td><strong>111k</strong></td>
- </tr>
- <tr>
-  <td><strong>TOA</strong></td>
-  <td><strong>112:30:00</strong></td>
- </tr>
- <tr>
-  <td><strong>TIg</strong></td>
-  <td><strong>30:52:44</strong></td>
- </tr>
-</table>
-
-<p>入力が終わったら、<kbd>EXE</kbd>ボタンをクリック。<br>
-<kbd>DV</kbd>をクリックしてからもう一度<kbd>EXE</kbd>をクリックして、自動噴射を待つ。</p>
-<p>この噴射によって、宇宙船は自由帰還軌道を離れ、着陸地点に向かう軌道に乗る。</p>
-
-<p>
-<img loading="lazy" src="../images/apollo/amso-12-hybrid-trajectory/006.png" width="270" height="220">
-</p>
+    <h3>軌道修正(TLCC)</h3>
 
 
-<h2>解説</h2>
+    <p class="note">※TLCC=Trans Lunar Course Correction</p>
+    <p>ロケットからCSMとLMを分離したら、LTMFDを開く。<br>
+      <strong>Program Menu</strong>から<strong>Program TLI</strong>を選択。
+    </p>
+    <p>以下の項目を、ここに書かれているのと同じになるように入力・確認する。</p>
+    <p><img loading="lazy" src="../images/apollo/amso-12-hybrid-trajectory/004.png" width="164" height="110">
+    </p>
+
+    <table>
+      <tr>
+        <td><strong>Mod</strong></td>
+        <td><strong>Surface</strong></td>
+      </tr>
+      <tr>
+        <td><strong>Fst</strong></td>
+        <td><strong>TLCC</strong></td>
+      </tr>
+      <tr>
+        <td><strong>TIg</strong></td>
+        <td><strong>Manual</strong></td>
+      </tr>
+      <tr>
+        <td><strong>Tgt</strong></td>
+        <td><strong>Procellarum</strong>※</td>
+      </tr>
+    </table>
+
+    <p class="note">※Oceanus Procellarum＝嵐の大洋</p>
+    <p>PeT、PeA、TOA、TIgに以下の数字を入力する。</p>
+    <p><img loading="lazy" src="../images/apollo/amso-12-hybrid-trajectory/005.png" width="140" height="144">
+    </p>
+
+    <table>
+      <tr>
+        <td><strong>PeT</strong></td>
+        <td><strong>83:25:23</strong></td>
+      </tr>
+      <tr>
+        <td><strong>PeA</strong></td>
+        <td><strong>111k</strong></td>
+      </tr>
+      <tr>
+        <td><strong>TOA</strong></td>
+        <td><strong>112:30:00</strong></td>
+      </tr>
+      <tr>
+        <td><strong>TIg</strong></td>
+        <td><strong>30:52:44</strong></td>
+      </tr>
+    </table>
+
+    <p>入力が終わったら、<kbd>EXE</kbd>ボタンをクリック。<br>
+      <kbd>DV</kbd>をクリックしてからもう一度<kbd>EXE</kbd>をクリックして、自動噴射を待つ。
+    </p>
+    <p>この噴射によって、宇宙船は自由帰還軌道を離れ、着陸地点に向かう軌道に乗る。</p>
+
+    <p>
+      <img loading="lazy" src="../images/apollo/amso-12-hybrid-trajectory/006.png" width="270" height="220">
+    </p>
 
 
-<p>14号までのアポロ宇宙船は、トラブルが発生しても自動的に地球に帰れるように、自由帰還軌道に乗って月まで飛行しました。</p>
-<p>しかし、自由帰還軌道では着陸可能な場所が制限されるため、12号からのミッションでは軌道修正をして自由帰還軌道を離脱するようになりました。<br>
-このように、2種類の軌道を組み合わせることをハイブリッド軌道と呼びます。</p>
-<p>アポロ15号からは直接目的地に向かう軌道が取られるようになりましたが、この軌道でも、RCSだけで自由帰還軌道に入れるようになっていたそうです。</p>
-<p>参照：<a href="https://www.orbiter-forum.com/showthread.php?p=87172#post87172">Free Return trajectories ? Orbiter-Forum</a></p>
+    <h2>解説</h2>
+
+
+    <p>14号までのアポロ宇宙船は、トラブルが発生しても自動的に地球に帰れるように、自由帰還軌道に乗って月まで飛行しました。</p>
+    <p>しかし、自由帰還軌道では着陸可能な場所が制限されるため、12号からのミッションでは軌道修正をして自由帰還軌道を離脱するようになりました。<br>
+      このように、2種類の軌道を組み合わせることをハイブリッド軌道と呼びます。</p>
+    <p>アポロ15号からは直接目的地に向かう軌道が取られるようになりましたが、この軌道でも、RCSだけで自由帰還軌道に入れるようになっていたそうです。</p>
+    <p>参照：<a href="https://www.orbiter-forum.com/showthread.php?p=87172#post87172">Free Return trajectories ?
+        Orbiter-Forum</a></p>
 
   </main>
 
 </body>
+
 </html>

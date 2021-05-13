@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 
 <html lang="ja">
+
 <head>
   <script src="../scripts/ga.js"></script>
   <meta charset="UTF-8">
@@ -9,529 +10,532 @@
   <script src="../scripts/template.js" charset="utf-8" defer></script>
   <title>OrbiterSound 4.0のインストールと設定</title>
 </head>
+
 <body>
 
   <main>
 
-  <h1>OrbiterSound 4.0のインストールと設定</h1>
+    <h1>OrbiterSound 4.0のインストールと設定</h1>
 
 
-<p>
-<strong>OrbiterSound 4.0</strong>は、<a href="orbiter2010.html" target="_blank">Orbiter2010</a>で音声を再生するためのMODです。
-</p>
+    <p>
+      <strong>OrbiterSound 4.0</strong>は、<a href="orbiter2010.html" target="_blank">Orbiter2010</a>で音声を再生するためのMODです。
+    </p>
 
-<ul>
-<li><a href="#download">ダウンロード</a>
-  <ul>
-  <li><a href="#download_requirement">必要なファイル</a></li>
-  </ul>
-</li>
-<li><a href="#install">インストール</a>
-  <ul>
-  <li><a href="#install_module">モジュールを有効にする</a></li>
-  <li><a href="#install_message">初回起動時のメッセージ</a></li>
-  </ul>
-</li>
-<li><a href="#config">設定</a>
-  <ul>
-  <li><a href="#config_exe">SoundConfig.exe</a>
     <ul>
-    <li><a href="#config_exe_general">General Sound behavior</a></li>
-    <li><a href="#config_exe_enable">Enable/disable sound and set volume</a></li>
-    <li><a href="#config_exe_atc">Atc radio chatter settings</a></li>
-    <li><a href="#config_exe_misc">Miscellaneous options</a></li>
+      <li><a href="#download">ダウンロード</a>
+        <ul>
+          <li><a href="#download_requirement">必要なファイル</a></li>
+        </ul>
+      </li>
+      <li><a href="#install">インストール</a>
+        <ul>
+          <li><a href="#install_module">モジュールを有効にする</a></li>
+          <li><a href="#install_message">初回起動時のメッセージ</a></li>
+        </ul>
+      </li>
+      <li><a href="#config">設定</a>
+        <ul>
+          <li><a href="#config_exe">SoundConfig.exe</a>
+            <ul>
+              <li><a href="#config_exe_general">General Sound behavior</a></li>
+              <li><a href="#config_exe_enable">Enable/disable sound and set volume</a></li>
+              <li><a href="#config_exe_atc">Atc radio chatter settings</a></li>
+              <li><a href="#config_exe_misc">Miscellaneous options</a></li>
+            </ul>
+          </li>
+          <li><a href="#config_background">バックグラウンドでの音声再生を有効にする</a></li>
+        </ul>
+      </li>
+      <li><a href="#mfd">Radio / Radar / MP3 MFD</a>
+        <ul>
+          <li><a href="#mfd_vhf">VHF</a></li>
+          <li><a href="#mfd_radar">Radar Sound</a></li>
+          <li><a href="#mfd_mp3">MP3</a></li>
+        </ul>
+      </li>
+      <li><a href="#playlist">プレイリストを追加する</a>
+        <ul>
+          <li><a href="#playlist_wmp">Windows Media Player</a>
+            <ul>
+              <li><a href="#playlist_wmp_caution">注意点</a></li>
+            </ul>
+          </li>
+          <li><a href="#playlist_itunes">iTunes</a></li>
+        </ul>
+      </li>
     </ul>
-  </li>
-  <li><a href="#config_background">バックグラウンドでの音声再生を有効にする</a></li>
-  </ul>
-</li>
-<li><a href="#mfd">Radio / Radar / MP3 MFD</a>
-  <ul>
-  <li><a href="#mfd_vhf">VHF</a></li>
-  <li><a href="#mfd_radar">Radar Sound</a></li>
-  <li><a href="#mfd_mp3">MP3</a></li>
-  </ul>
-</li>
-<li><a href="#playlist">プレイリストを追加する</a>
-  <ul>
-  <li><a href="#playlist_wmp">Windows Media Player</a>
-    <ul>
-    <li><a href="#playlist_wmp_caution">注意点</a></li>
-    </ul>
-  </li>
-  <li><a href="#playlist_itunes">iTunes</a></li>
-  </ul>
-</li>
-</ul>
 
 
-<h2 id="download">ダウンロード</h2>
+    <h2 id="download">ダウンロード</h2>
 
 
-<p>
-ダウンロードは以下のリンクから。
-</p>
+    <p>
+      ダウンロードは以下のリンクから。
+    </p>
 
-<p>
-<a href="http://orbiter.dansteph.com/forum/index.php?page=download" target="_blank" rel="noopener noreferrer">Dan's Orbiter page - Download</a>
-</p>
+    <p>
+      <a href="http://orbiter.dansteph.com/forum/index.php?page=download" target="_blank"
+        rel="noopener noreferrer">Dan's Orbiter page - Download</a>
+    </p>
 
-<p>
-<img loading="lazy" src="../images/basic/orbitersound-4/orbiterdl012.png" width="988" height="260">
-</p>
+    <p>
+      <img loading="lazy" src="../images/basic/orbitersound-4/orbiterdl012.png" width="988" height="260">
+    </p>
 
 
-<h3 id="download_requirement">必要なファイル</h3>
+    <h3 id="download_requirement">必要なファイル</h3>
 
 
-<p>
-DirectXのランタイムを導入していない場合は、事前にインストールしておくこと。
-</p>
+    <p>
+      DirectXのランタイムを導入していない場合は、事前にインストールしておくこと。
+    </p>
 
-<p>
-<a href="orbiter2010.html#directx" target="_blank">DirectX9.0cのダウンロード・インストール</a>
-</p>
+    <p>
+      <a href="orbiter2010.html#directx" target="_blank">DirectX9.0cのダウンロード・インストール</a>
+    </p>
 
-<h2 id="install">インストール</h2>
+    <h2 id="install">インストール</h2>
 
-
-<p>
-ダウンロードしたファイルをダブルクリック。<br>
-<kbd>Browse</kbd>ボタンをクリックして、Orbiterがインストールされているフォルダを指定する。<br>
-下の<kbd>Install</kbd>ボタンをクリックすると、自動でインストールされる。
-</p>
-
-<p>
-<img loading="lazy" src="../images/basic/orbitersound-4/004.png" width="246" height="59">
-</p>
-
-
-<h3 id="install_module">モジュールを有効にする</h3>
-
-
-<p>
-インストールが終了したら、Orbiterを起動する。<br>
-Launchpadの<kbd>Modules</kbd>タブを開いて、<strong>OrbiterSound</strong>にチェックを入れる。
-</p>
-
-<p>
-<img loading="lazy" src="../images/basic/orbitersound-4/004.png" width="246" height="59">
-</p>
-
-
-<h3 id="install_message">初回起動時のメッセージ</h3>
-
-
-<p>
-初回起動時のみ、ゲーム中にOrbiterSoundのメッセージが表示される。<br>
-<kbd>space</kbd>（スペース）キーを押すとこれを消すことができる。
-</p>
-
-
-<h2 id="config">設定</h2>
-
-
-<h3 id="config_exe">SoundConfig.exe</h3>
-
-
-<p>
-<img loading="lazy" src="../images/basic/orbitersound-4/001.png" width="764" height="614">
-</p>
-
-<p>
-Orbiterのインストールフォルダにある、<strong>SoundConfig.exe</strong>をダブルクリック。<br>
-OrbiterSoundの主な設定はここで変更できる。
-</p>
-
-<p>
-チェックを入れる・外すと有効・無効を切り替えられる。<br>
-<kbd>Test</kbd>をクリックすると、どのような音声が再生されるか確認できる。<br>
-<strong>Volume</strong>のボックスに数字を入力して音量を設定する。
-</p>
-
-<p>
-下の<kbd>Save and exit</kbd>をクリックすると、設定を保存して終了する。
-</p>
-
-<table>
- <tr>
-  <td><kbd>Save and exit</kbd></td>
-  <td>設定を保存して終了</td>
- </tr>
- <tr>
-  <td><kbd>Cancel and exit</kbd></td>
-  <td>設定を保存せずに終了</td>
- </tr>
- <tr>
-  <td><kbd>Default options</kbd></td>
-  <td>初期設定に戻す</td>
- </tr>
-</table>
-
-
-<h4 id="config_exe_general">General Sound behavior</h4>
-
-
-<table>
- <tr>
-  <td>Allow 3D Audio (recommended)</td>
-  <td>3Dオーディオを有効にする（推奨）</td>
- </tr>
- <tr>
-  <td>Allow 3D sound's projection cone</td>
-  <td>円錐状の音の広がりを有効にする</td>
- </tr>
- <tr>
-  <td>Allow 3D &gt;Mach 1 cone silence</td>
-  <td>超音速での無音化を有効にする</td>
- </tr>
- <tr>
-  <td>Allow 3D RCS positioning</td>
-  <td>RCSの噴射音を3Dで再現する</td>
- </tr>
- <tr>
-  <td colspan="2">&nbsp;</td>
- </tr>
- <tr>
-  <td>Allow the Silence of Space (Realistic, recommended)</td>
-  <td>宇宙空間では無音にする（現実的・推奨）</td>
- </tr>
- <tr>
-  <td>Vacuum reduces internal engines sound volume and frequency</td>
-  <td>真空中では船内で聞こえるエンジン音を小さくする</td>
- </tr>
- <tr>
-  <td>Play radio sound and attitude mode change also in external view</td>
-  <td>ATCの音声とRCSの噴射音を機外視点でも再生する</td>
- </tr>
- <tr>
-  <td>Play GPWS sound also in external view</td>
-  <td>GPWS（地上接近警報）を機外視点でも再生する</td>
- </tr>
- <tr>
-  <td colspan="2">&nbsp;</td>
- </tr>
- <tr>
-  <td>Shuffle Mp3 Playlist at start</td>
-  <td>mp3のプレイリストをシャッフルする</td>
- </tr>
-</table>
-
-<p>
-ドロップボックスでは、BGMとして再生されるmp3ファイルについて設定できる。<br>
-下の<kbd>Open Mp3 directory</kbd>ボタンをクリックすると、mp3ファイルが保存されているフォルダを開く。
-</p>
-
-<p>
-<img loading="lazy" src="../images/basic/orbitersound-4/002.png" width="348" height="116">
-</p>
-
-<table>
- <tr>
-  <td>Never play Mp3</td>
-  <td>mp3音源を再生しない</td>
- </tr>
- <tr>
-  <td>Play Mp3 only in space in external view (default recommended)</td>
-  <td>宇宙空間かつ機外視点でのみmp3を再生する（初期設定・推奨）</td>
- </tr>
- <tr>
-  <td>Play Mp3 only in space in all view</td>
-  <td>宇宙空間では機内・機外視点の両方でmp3を再生する</td>
- </tr>
- <tr>
-  <td>Play Mp3 only in cockpit view</td>
-  <td>機内視点でのみmp3を再生する</td>
- </tr>
- <tr>
-  <td>Always play Mp3 but in external view only</td>
-  <td>機外視点でのみmp3を再生する</td>
- </tr>
- <tr>
-  <td>Always play Mp3 in all view</td>
-  <td>すべての視点でmp3を再生する</td>
- </tr>
-</table>
-
-
-<h4 id="config_exe_enable">Enable/disable sound and set volume</h4>
-
-
-<p>
-特定の効果音を有効・無効にする。<br>
-<kbd>Test</kbd>をクリックした回数に応じて、異なる音声が再生される。
-</p>
-
-<table>
- <tr>
-  <td>Play countdown when landed and small thrust applied</td>
-  <td>着陸時にエンジンを点火すると、打ち上げカウントダウンを再生する</td>
- </tr>
- <tr>
-  <td>Play when attitude mode changes (press test two times)</td>
-  <td>RCSのモード切り替え</td>
- </tr>
- <tr>
-  <td>Play Gpws altitude sound near planet</td>
-  <td>地表からの高度を音声で通知する (GPWS)</td>
- </tr>
- <tr>
-  <td>Play main thrust sound when applied</td>
-  <td>メインエンジンの噴射音を再生する</td>
- </tr>
- <tr>
-  <td>Play hover thrust sound when applied</td>
-  <td>ホバーエンジンの噴射音を再生する</td>
- </tr>
- <tr>
-  <td>Play retro thrust sound when applied</td>
-  <td>逆噴射エンジンの噴射音を再生する</td>
- </tr>
- <tr>
-  <td>Play attitude thrust when applied</td>
-  <td>RCSの噴射音を再生する</td>
- </tr>
- <tr>
-  <td>Play docking sound at station</td>
-  <td>ドッキング音を再生する</td>
- </tr>
- <tr>
-  <td>Play radar bip when less than 800 m from an object</td>
-  <td>宇宙船などに接近したとき(&lt;800m)にレーダーのビープ音を再生する</td>
- </tr>
- <tr>
-  <td>Play wind airspeed sound when in atmosphere</td>
-  <td>大気圏内を飛行中に風切り音を再生する</td>
- </tr>
- <tr>
-  <td>Play reentry airspeed sound</td>
-  <td>再突入時に大気との接触で出る音を再生する</td>
- </tr>
- <tr>
-  <td>Play landing clearance (&lt;3000m)</td>
-  <td>高度3000mを切ったときに、着陸許可を告げる音声を再生する</td>
- </tr>
- <tr>
-  <td>Play landing or crash sound</td>
-  <td>着陸・不時着時に効果音を再生する</td>
- </tr>
- <tr>
-  <td>Play cabin air conditioning</td>
-  <td>機内視点で空調音を再生する</td>
- </tr>
- <tr>
-  <td>Play cabin random ambience (press test 9 times)</td>
-  <td>機内視点でランダムに効果音を再生する</td>
- </tr>
- <tr>
-  <td>Play wind and base ground ambience in atmosphere</td>
-  <td>着陸時に風の音や基地の効果音を再生する</td>
- </tr>
- <tr>
-  <td>Play mach sonic bang</td>
-  <td>ソニックブームを再生する</td>
- </tr>
-</table>
-
-
-<h4 id="config_exe_atc">Atc radio chatter settings</h4>
-
-
-<p>
-地上と宇宙船との通信音声をランダムに再生する。<br>
-再生される音声はゲーム内の状況とは関連しない。<br>
-<strong>Atc *** random delay (sec)</strong>で、音声が再生される間隔を設定する。
-</p>
-
-<table>
- <tr>
-  <td>Allow ATC Sound</td>
-  <td>ATCのランダム再生を有効・無効にする</td>
- </tr>
- <tr>
-  <td>Atc delay X ** when more than *** Km from planet</td>
-  <td>惑星から***km離れた時に、ATCの通信間隔が**倍になるようにする</td>
- </tr>
- <tr>
-  <td>Allow radio black-out during reentry</td>
-  <td>再突入時の通信途絶を再現する</td>
- </tr>
- <tr>
-  <td>No atc when grounded</td>
-  <td>着陸時にはATC音声を再生しない</td>
- </tr>
-</table>
-
-
-<h4 id="config_exe_misc">Miscellaneous options</h4>
-
-
-<table>
- <tr>
-  <td>Display a T+time counter at launch for 300s</td>
-  <td>打ち上げからの経過時刻を画面左下に表示する（300秒まで）</td>
- </tr>
- <tr>
-  <td>Auto disable autopilot if time warp &gt;10x</td>
-  <td>10倍以上のタイムワープを使用すると、オートパイロットを自動で解除する</td>
- </tr>
- <tr>
-  <td>Don’t warn me about outdated add-ons that use 2.5 sdk</td>
-  <td>バージョン2.5のOrbiterSound を使用する古いMODについて警告しない</td>
- </tr>
-</table>
-
-
-<h3 id="config_background">バックグラウンドでの音声再生を有効にする</h3>
-
-
-<p>
-<strong>Orbiter\Sound\cfg</strong>フォルダを開く。<br>
-<strong>Editable_Advanced_Configuration.cfg</strong>をメモ帳などのテキストエディタで開く。
-</p>
-
-<p>
-<strong>PlayWhenOrbiterInBackground</strong>を<strong>True</strong>にすると、バックグラウンドでも音声を再生し続けるようになる。
-</p>
-
-
-<h2 id="mfd">Radio / Radar / MP3 MFD</h2>
-
-
-<p>
-<img loading="lazy" src="../images/basic/orbitersound-4/003.png" width="475" height="382">
-</p>
-
-<p>
-MFDの選択画面でRadio/mp3 Panelを選択すると、 <strong>Radio / Radar / MP3 MFD</strong>を開く。<br>
-このMFDから、ATC、レーダーのビープ音、mp3の再生について設定できる。
-</p>
-
-<p>
-このMFDでの変更は保存されない。<br>
-変更を保存したいときは、<a href="#config_exe">SoundConfig.exe</a>を使う。
-</p>
-
-
-<h3 id="mfd_vhf">VHF</h3>
-
-
-<table>
- <tr>
-  <td><kbd>MUT</kbd></td>
-  <td>ATCの通信音声を有効・無効にする</td>
- </tr>
- <tr>
-  <td><kbd>VOL</kbd></td>
-  <td>ATCの音量を設定する</td>
- </tr>
- <tr>
-  <td><kbd>FRQ</kbd></td>
-  <td>ATCの周波数を入力する</td>
- </tr>
- <tr>
-  <td><kbd>SWP</kbd></td>
-  <td>ATCの周波数を切り替える</td>
- </tr>
- <tr>
-  <td><kbd>LST</kbd></td>
-  <td>使用可能なATC周波数の一覧を表示する</td>
- </tr>
-</table>
-
-
-<h3 id="mfd_radar">Radar Sound</h3>
-
-
-<table>
- <tr>
-  <td><kbd>RAD</kbd></td>
-  <td>レーダーのビープ音を有効・無効にする</td>
- </tr>
-</table>
-
-
-<h3 id="mfd_mp3">MP3</h3>
-
-
-<table>
- <tr>
-  <td><kbd>PRV</kbd></td>
-  <td>プレイリストからひとつ前の曲を選択</td>
- </tr>
- <tr>
-  <td><kbd>NXT</kbd></td>
-  <td>プレイリストから次の曲を選択</td>
- </tr>
- <tr>
-  <td><kbd>OI</kbd></td>
-  <td>mp3の再生を有効・無効にする</td>
- </tr>
- <tr>
-  <td><kbd>MOD</kbd></td>
-  <td>再生モードの切り替え</td>
- </tr>
-</table>
-
-
-<h2 id="playlist">プレイリストを追加する</h2>
-
-
-<p>
-OrbiterSound では、<strong>.m3u</strong>形式のプレイリストを使用できる。<br>
-ここでは、Windows Media PlayerとiTunesを使って.m3uファイルを作成する方法について説明する。
-</p>
-
-
-<h3 id="playlist_wmp">Windows Media Player</h3>
-
-
-<p>
-曲かアルバムを右クリックして、<strong>追加</strong>→<strong>プレイリスト</strong>を選択。<br>
-ウィンドウの右上、<strong>リストの消去</strong>のとなりの<strong>リスト&nbsp;オプション</strong>をクリック。<br>
-<strong>リストに名前を付けて保存</strong>をクリック。
-</p>
-
-<p>
-開いた画面で、<strong>Orbiter\Sound\mp3</strong>フォルダに移動する。<br>
-ファイル名を<strong>orbitersound_playlist.m3u</strong>にする。<br>
-ファイルの種類を<strong>M3U&nbsp;プレイリスト</strong>にして保存する。
-</p>
-
-<p>
-もとのorbitersound_playlist.m3uを残しておきたいときは、バックアップを取っておくこと。
-</p>
-
-
-<h4 id="playlist_wmp_caution">注意点</h4>
-
-
-<p>
-Windows Media Playerで作成される.m3uファイルは相対パスとなっている。<br>
-このため、Orbiterのインストールフォルダを移動させるとプレイリストが使えなくなることがある。<br>
-</p>
-
-
-<h3 id="playlist_itunes">iTunes</h3>
-
-
-<p>
-<strong>プレイリストに追加</strong>→<strong>新規プレイリスト</strong>で<strong>orbitersound_playlist</strong>という名前のプレイリストを作成する。<br>
-<strong>ファイル</strong>→<strong>ライブラリ</strong>→<strong>プレイリストを書き出す</strong>を選択。<br>
-<strong>ファイルの種類</strong>で<strong>M3Uファイル</strong>を選択して、拡張子を<strong>.m3u</strong>にして保存する。
-</p>
-
-<p>
-作成したファイルをメモ帳などのテキストエディタで開く。<br>
-<strong>名前を付けて保存</strong>で文字コードを<strong>ANSI</strong>にして上書き保存する。
-</p>
-
-<p>
-完成した<strong>orbitersound_playlist.m3u</strong>をコピーする。<br>
-<strong>Orbiter\Sound\mp3</strong>フォルダに貼り付けて上書きする。
-</p>
+
+    <p>
+      ダウンロードしたファイルをダブルクリック。<br>
+      <kbd>Browse</kbd>ボタンをクリックして、Orbiterがインストールされているフォルダを指定する。<br>
+      下の<kbd>Install</kbd>ボタンをクリックすると、自動でインストールされる。
+    </p>
+
+    <p>
+      <img loading="lazy" src="../images/basic/orbitersound-4/004.png" width="246" height="59">
+    </p>
+
+
+    <h3 id="install_module">モジュールを有効にする</h3>
+
+
+    <p>
+      インストールが終了したら、Orbiterを起動する。<br>
+      Launchpadの<kbd>Modules</kbd>タブを開いて、<strong>OrbiterSound</strong>にチェックを入れる。
+    </p>
+
+    <p>
+      <img loading="lazy" src="../images/basic/orbitersound-4/004.png" width="246" height="59">
+    </p>
+
+
+    <h3 id="install_message">初回起動時のメッセージ</h3>
+
+
+    <p>
+      初回起動時のみ、ゲーム中にOrbiterSoundのメッセージが表示される。<br>
+      <kbd>space</kbd>（スペース）キーを押すとこれを消すことができる。
+    </p>
+
+
+    <h2 id="config">設定</h2>
+
+
+    <h3 id="config_exe">SoundConfig.exe</h3>
+
+
+    <p>
+      <img loading="lazy" src="../images/basic/orbitersound-4/001.png" width="764" height="614">
+    </p>
+
+    <p>
+      Orbiterのインストールフォルダにある、<strong>SoundConfig.exe</strong>をダブルクリック。<br>
+      OrbiterSoundの主な設定はここで変更できる。
+    </p>
+
+    <p>
+      チェックを入れる・外すと有効・無効を切り替えられる。<br>
+      <kbd>Test</kbd>をクリックすると、どのような音声が再生されるか確認できる。<br>
+      <strong>Volume</strong>のボックスに数字を入力して音量を設定する。
+    </p>
+
+    <p>
+      下の<kbd>Save and exit</kbd>をクリックすると、設定を保存して終了する。
+    </p>
+
+    <table>
+      <tr>
+        <td><kbd>Save and exit</kbd></td>
+        <td>設定を保存して終了</td>
+      </tr>
+      <tr>
+        <td><kbd>Cancel and exit</kbd></td>
+        <td>設定を保存せずに終了</td>
+      </tr>
+      <tr>
+        <td><kbd>Default options</kbd></td>
+        <td>初期設定に戻す</td>
+      </tr>
+    </table>
+
+
+    <h4 id="config_exe_general">General Sound behavior</h4>
+
+
+    <table>
+      <tr>
+        <td>Allow 3D Audio (recommended)</td>
+        <td>3Dオーディオを有効にする（推奨）</td>
+      </tr>
+      <tr>
+        <td>Allow 3D sound's projection cone</td>
+        <td>円錐状の音の広がりを有効にする</td>
+      </tr>
+      <tr>
+        <td>Allow 3D &gt;Mach 1 cone silence</td>
+        <td>超音速での無音化を有効にする</td>
+      </tr>
+      <tr>
+        <td>Allow 3D RCS positioning</td>
+        <td>RCSの噴射音を3Dで再現する</td>
+      </tr>
+      <tr>
+        <td colspan="2">&nbsp;</td>
+      </tr>
+      <tr>
+        <td>Allow the Silence of Space (Realistic, recommended)</td>
+        <td>宇宙空間では無音にする（現実的・推奨）</td>
+      </tr>
+      <tr>
+        <td>Vacuum reduces internal engines sound volume and frequency</td>
+        <td>真空中では船内で聞こえるエンジン音を小さくする</td>
+      </tr>
+      <tr>
+        <td>Play radio sound and attitude mode change also in external view</td>
+        <td>ATCの音声とRCSの噴射音を機外視点でも再生する</td>
+      </tr>
+      <tr>
+        <td>Play GPWS sound also in external view</td>
+        <td>GPWS（地上接近警報）を機外視点でも再生する</td>
+      </tr>
+      <tr>
+        <td colspan="2">&nbsp;</td>
+      </tr>
+      <tr>
+        <td>Shuffle Mp3 Playlist at start</td>
+        <td>mp3のプレイリストをシャッフルする</td>
+      </tr>
+    </table>
+
+    <p>
+      ドロップボックスでは、BGMとして再生されるmp3ファイルについて設定できる。<br>
+      下の<kbd>Open Mp3 directory</kbd>ボタンをクリックすると、mp3ファイルが保存されているフォルダを開く。
+    </p>
+
+    <p>
+      <img loading="lazy" src="../images/basic/orbitersound-4/002.png" width="348" height="116">
+    </p>
+
+    <table>
+      <tr>
+        <td>Never play Mp3</td>
+        <td>mp3音源を再生しない</td>
+      </tr>
+      <tr>
+        <td>Play Mp3 only in space in external view (default recommended)</td>
+        <td>宇宙空間かつ機外視点でのみmp3を再生する（初期設定・推奨）</td>
+      </tr>
+      <tr>
+        <td>Play Mp3 only in space in all view</td>
+        <td>宇宙空間では機内・機外視点の両方でmp3を再生する</td>
+      </tr>
+      <tr>
+        <td>Play Mp3 only in cockpit view</td>
+        <td>機内視点でのみmp3を再生する</td>
+      </tr>
+      <tr>
+        <td>Always play Mp3 but in external view only</td>
+        <td>機外視点でのみmp3を再生する</td>
+      </tr>
+      <tr>
+        <td>Always play Mp3 in all view</td>
+        <td>すべての視点でmp3を再生する</td>
+      </tr>
+    </table>
+
+
+    <h4 id="config_exe_enable">Enable/disable sound and set volume</h4>
+
+
+    <p>
+      特定の効果音を有効・無効にする。<br>
+      <kbd>Test</kbd>をクリックした回数に応じて、異なる音声が再生される。
+    </p>
+
+    <table>
+      <tr>
+        <td>Play countdown when landed and small thrust applied</td>
+        <td>着陸時にエンジンを点火すると、打ち上げカウントダウンを再生する</td>
+      </tr>
+      <tr>
+        <td>Play when attitude mode changes (press test two times)</td>
+        <td>RCSのモード切り替え</td>
+      </tr>
+      <tr>
+        <td>Play Gpws altitude sound near planet</td>
+        <td>地表からの高度を音声で通知する (GPWS)</td>
+      </tr>
+      <tr>
+        <td>Play main thrust sound when applied</td>
+        <td>メインエンジンの噴射音を再生する</td>
+      </tr>
+      <tr>
+        <td>Play hover thrust sound when applied</td>
+        <td>ホバーエンジンの噴射音を再生する</td>
+      </tr>
+      <tr>
+        <td>Play retro thrust sound when applied</td>
+        <td>逆噴射エンジンの噴射音を再生する</td>
+      </tr>
+      <tr>
+        <td>Play attitude thrust when applied</td>
+        <td>RCSの噴射音を再生する</td>
+      </tr>
+      <tr>
+        <td>Play docking sound at station</td>
+        <td>ドッキング音を再生する</td>
+      </tr>
+      <tr>
+        <td>Play radar bip when less than 800 m from an object</td>
+        <td>宇宙船などに接近したとき(&lt;800m)にレーダーのビープ音を再生する</td>
+      </tr>
+      <tr>
+        <td>Play wind airspeed sound when in atmosphere</td>
+        <td>大気圏内を飛行中に風切り音を再生する</td>
+      </tr>
+      <tr>
+        <td>Play reentry airspeed sound</td>
+        <td>再突入時に大気との接触で出る音を再生する</td>
+      </tr>
+      <tr>
+        <td>Play landing clearance (&lt;3000m)</td>
+        <td>高度3000mを切ったときに、着陸許可を告げる音声を再生する</td>
+      </tr>
+      <tr>
+        <td>Play landing or crash sound</td>
+        <td>着陸・不時着時に効果音を再生する</td>
+      </tr>
+      <tr>
+        <td>Play cabin air conditioning</td>
+        <td>機内視点で空調音を再生する</td>
+      </tr>
+      <tr>
+        <td>Play cabin random ambience (press test 9 times)</td>
+        <td>機内視点でランダムに効果音を再生する</td>
+      </tr>
+      <tr>
+        <td>Play wind and base ground ambience in atmosphere</td>
+        <td>着陸時に風の音や基地の効果音を再生する</td>
+      </tr>
+      <tr>
+        <td>Play mach sonic bang</td>
+        <td>ソニックブームを再生する</td>
+      </tr>
+    </table>
+
+
+    <h4 id="config_exe_atc">Atc radio chatter settings</h4>
+
+
+    <p>
+      地上と宇宙船との通信音声をランダムに再生する。<br>
+      再生される音声はゲーム内の状況とは関連しない。<br>
+      <strong>Atc *** random delay (sec)</strong>で、音声が再生される間隔を設定する。
+    </p>
+
+    <table>
+      <tr>
+        <td>Allow ATC Sound</td>
+        <td>ATCのランダム再生を有効・無効にする</td>
+      </tr>
+      <tr>
+        <td>Atc delay X ** when more than *** Km from planet</td>
+        <td>惑星から***km離れた時に、ATCの通信間隔が**倍になるようにする</td>
+      </tr>
+      <tr>
+        <td>Allow radio black-out during reentry</td>
+        <td>再突入時の通信途絶を再現する</td>
+      </tr>
+      <tr>
+        <td>No atc when grounded</td>
+        <td>着陸時にはATC音声を再生しない</td>
+      </tr>
+    </table>
+
+
+    <h4 id="config_exe_misc">Miscellaneous options</h4>
+
+
+    <table>
+      <tr>
+        <td>Display a T+time counter at launch for 300s</td>
+        <td>打ち上げからの経過時刻を画面左下に表示する（300秒まで）</td>
+      </tr>
+      <tr>
+        <td>Auto disable autopilot if time warp &gt;10x</td>
+        <td>10倍以上のタイムワープを使用すると、オートパイロットを自動で解除する</td>
+      </tr>
+      <tr>
+        <td>Don’t warn me about outdated add-ons that use 2.5 sdk</td>
+        <td>バージョン2.5のOrbiterSound を使用する古いMODについて警告しない</td>
+      </tr>
+    </table>
+
+
+    <h3 id="config_background">バックグラウンドでの音声再生を有効にする</h3>
+
+
+    <p>
+      <strong>Orbiter\Sound\cfg</strong>フォルダを開く。<br>
+      <strong>Editable_Advanced_Configuration.cfg</strong>をメモ帳などのテキストエディタで開く。
+    </p>
+
+    <p>
+      <strong>PlayWhenOrbiterInBackground</strong>を<strong>True</strong>にすると、バックグラウンドでも音声を再生し続けるようになる。
+    </p>
+
+
+    <h2 id="mfd">Radio / Radar / MP3 MFD</h2>
+
+
+    <p>
+      <img loading="lazy" src="../images/basic/orbitersound-4/003.png" width="475" height="382">
+    </p>
+
+    <p>
+      MFDの選択画面でRadio/mp3 Panelを選択すると、 <strong>Radio / Radar / MP3 MFD</strong>を開く。<br>
+      このMFDから、ATC、レーダーのビープ音、mp3の再生について設定できる。
+    </p>
+
+    <p>
+      このMFDでの変更は保存されない。<br>
+      変更を保存したいときは、<a href="#config_exe">SoundConfig.exe</a>を使う。
+    </p>
+
+
+    <h3 id="mfd_vhf">VHF</h3>
+
+
+    <table class="center1col">
+      <tr>
+        <td><kbd>MUT</kbd></td>
+        <td>ATCの通信音声を有効・無効にする</td>
+      </tr>
+      <tr>
+        <td><kbd>VOL</kbd></td>
+        <td>ATCの音量を設定する</td>
+      </tr>
+      <tr>
+        <td><kbd>FRQ</kbd></td>
+        <td>ATCの周波数を入力する</td>
+      </tr>
+      <tr>
+        <td><kbd>SWP</kbd></td>
+        <td>ATCの周波数を切り替える</td>
+      </tr>
+      <tr>
+        <td><kbd>LST</kbd></td>
+        <td>使用可能なATC周波数の一覧を表示する</td>
+      </tr>
+    </table>
+
+
+    <h3 id="mfd_radar">Radar Sound</h3>
+
+
+    <table>
+      <tr>
+        <td><kbd>RAD</kbd></td>
+        <td>レーダーのビープ音を有効・無効にする</td>
+      </tr>
+    </table>
+
+
+    <h3 id="mfd_mp3">MP3</h3>
+
+
+    <table class="center1col">
+      <tr>
+        <td><kbd>PRV</kbd></td>
+        <td>プレイリストからひとつ前の曲を選択</td>
+      </tr>
+      <tr>
+        <td><kbd>NXT</kbd></td>
+        <td>プレイリストから次の曲を選択</td>
+      </tr>
+      <tr>
+        <td><kbd>OI</kbd></td>
+        <td>mp3の再生を有効・無効にする</td>
+      </tr>
+      <tr>
+        <td><kbd>MOD</kbd></td>
+        <td>再生モードの切り替え</td>
+      </tr>
+    </table>
+
+
+    <h2 id="playlist">プレイリストを追加する</h2>
+
+
+    <p>
+      OrbiterSound では、<strong>.m3u</strong>形式のプレイリストを使用できる。<br>
+      ここでは、Windows Media PlayerとiTunesを使って.m3uファイルを作成する方法について説明する。
+    </p>
+
+
+    <h3 id="playlist_wmp">Windows Media Player</h3>
+
+
+    <p>
+      曲かアルバムを右クリックして、<strong>追加</strong>→<strong>プレイリスト</strong>を選択。<br>
+      ウィンドウの右上、<strong>リストの消去</strong>のとなりの<strong>リスト&nbsp;オプション</strong>をクリック。<br>
+      <strong>リストに名前を付けて保存</strong>をクリック。
+    </p>
+
+    <p>
+      開いた画面で、<strong>Orbiter\Sound\mp3</strong>フォルダに移動する。<br>
+      ファイル名を<strong>orbitersound_playlist.m3u</strong>にする。<br>
+      ファイルの種類を<strong>M3U&nbsp;プレイリスト</strong>にして保存する。
+    </p>
+
+    <p>
+      もとのorbitersound_playlist.m3uを残しておきたいときは、バックアップを取っておくこと。
+    </p>
+
+
+    <h4 id="playlist_wmp_caution">注意点</h4>
+
+
+    <p>
+      Windows Media Playerで作成される.m3uファイルは相対パスとなっている。<br>
+      このため、Orbiterのインストールフォルダを移動させるとプレイリストが使えなくなることがある。<br>
+    </p>
+
+
+    <h3 id="playlist_itunes">iTunes</h3>
+
+
+    <p>
+      <strong>プレイリストに追加</strong>→<strong>新規プレイリスト</strong>で<strong>orbitersound_playlist</strong>という名前のプレイリストを作成する。<br>
+      <strong>ファイル</strong>→<strong>ライブラリ</strong>→<strong>プレイリストを書き出す</strong>を選択。<br>
+      <strong>ファイルの種類</strong>で<strong>M3Uファイル</strong>を選択して、拡張子を<strong>.m3u</strong>にして保存する。
+    </p>
+
+    <p>
+      作成したファイルをメモ帳などのテキストエディタで開く。<br>
+      <strong>名前を付けて保存</strong>で文字コードを<strong>ANSI</strong>にして上書き保存する。
+    </p>
+
+    <p>
+      完成した<strong>orbitersound_playlist.m3u</strong>をコピーする。<br>
+      <strong>Orbiter\Sound\mp3</strong>フォルダに貼り付けて上書きする。
+    </p>
 
   </main>
 
 </body>
+
 </html>

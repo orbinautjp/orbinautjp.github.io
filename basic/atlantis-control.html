@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 
 <html lang="ja">
+
 <head>
   <script src="../scripts/ga.js"></script>
   <meta charset="UTF-8">
@@ -9,312 +10,325 @@
   <script src="../scripts/template.js" charset="utf-8" defer></script>
   <title>バニラのスペースシャトルの操作</title>
 </head>
+
 <body>
 
   <main>
 
-  <h1>バニラのスペースシャトルの操作</h1>
-
-
-<p>MODを導入せずに利用できる、初期機体のスペースシャトル(Atlantis)の操作について説明します。</p>
-
-<ul>
-<li><a href="#caution">注意</a></li>
-<li><a href="#keymap">キー操作一覧</a></li>
-<li><a href="#orbital">軌道上での操作</a></li>
-<li><a href="#cockpit">3Dコクピット</a></li>
-<li><a href="#rms">RMS（ロボットアーム）</a></li>
-<li><a href="#door">Payload Door Operation</a>
-  <ul>
-  <li><a href="#door_plbay">ペイロードベイのドアを開く</a></li>
-  <li><a href="#door_radiator">ラジエータを展開する</a></li>
-  </ul>
-</li>
-<li><a href="#2010">Orbiter2010</a>
-  <ul>
-  <li><a href="#2010_launch">打ち上げオートパイロット</a></li>
-  </ul>
-</li>
-<li><a href="#2016">Orbiter2016</a>
-  <ul>
-  <li><a href="#2016_launch">打ち上げオートパイロット</a></li>
-  <li><a href="#2016_attitude">Attitude RCS</a></li>
-  </ul>
-</li>
-</ul>
-
-
-<h2 id="caution">注意</h2>
-
-
-<p>初期機体のスペースシャトルは、Orbiterの中でもとくに操縦が難しい機体のひとつです。<br>
-ほかの宇宙船で十分に操縦に慣れてから挑戦することをおすすめします。</p>
+    <h1>バニラのスペースシャトルの操作</h1>
+
+
+    <p>MODを導入せずに利用できる、初期機体のスペースシャトル(Atlantis)の操作について説明します。</p>
+
+    <ul>
+      <li><a href="#caution">注意</a></li>
+      <li><a href="#keymap">キー操作一覧</a></li>
+      <li><a href="#orbital">軌道上での操作</a></li>
+      <li><a href="#cockpit">3Dコクピット</a></li>
+      <li><a href="#rms">RMS（ロボットアーム）</a></li>
+      <li><a href="#door">Payload Door Operation</a>
+        <ul>
+          <li><a href="#door_plbay">ペイロードベイのドアを開く</a></li>
+          <li><a href="#door_radiator">ラジエータを展開する</a></li>
+        </ul>
+      </li>
+      <li><a href="#2010">Orbiter2010</a>
+        <ul>
+          <li><a href="#2010_launch">打ち上げオートパイロット</a></li>
+        </ul>
+      </li>
+      <li><a href="#2016">Orbiter2016</a>
+        <ul>
+          <li><a href="#2016_launch">打ち上げオートパイロット</a></li>
+          <li><a href="#2016_attitude">Attitude RCS</a></li>
+        </ul>
+      </li>
+    </ul>
+
+
+    <h2 id="caution">注意</h2>
+
+
+    <p>初期機体のスペースシャトルは、Orbiterの中でもとくに操縦が難しい機体のひとつです。<br>
+      ほかの宇宙船で十分に操縦に慣れてから挑戦することをおすすめします。</p>
+
+    <p>
+      また、初期機体のスペースシャトルには、再突入を補助するオートパイロットが搭載されていません。<br>
+      <a href="../iss/index.html#shuttle_fleet">Shuttle Fleet</a>というMODでは、AutoFCSによる自動再突入が可能です。
+    </p>
+
+
+    <h2 id="keymap">キー操作一覧</h2>
+
+
+    <p>Orbiter2010、2016で共通</p>
+
+    <table class="center1col">
+      <tr>
+        <td><kbd>J</kbd></td>
+        <td>SRBおよび外部燃料タンクの切り離し</td>
+      </tr>
+      <tr>
+        <td><kbd>K</kbd></td>
+        <td>カーゴベイのドアを開閉する</td>
+      </tr>
+      <tr>
+        <td><kbd>G</kbd></td>
+        <td>ランディングギアを展開する</td>
+      </tr>
+      <tr>
+        <td><kbd>Ctrl</kbd>+<kbd>B</kbd></td>
+        <td>エアブレーキを展開する</td>
+      </tr>
+      <tr>
+        <td><kbd>Ctrl</kbd>+<kbd>U</kbd></td>
+        <td>Kuバンドアンテナを展開する</td>
+      </tr>
+      <tr>
+        <td><kbd>Ctrl</kbd>+<kbd>Space</kbd></td>
+        <td>ペイロードベイ・RMSの操作ダイアログを開く</td>
+      </tr>
+    </table>
+
+
+    <h2 id="orbital">軌道上での操作</h2>
+
+
+    <p>
+      スペースシャトルの軌道用エンジン（OMS）は、機体の軸に対して斜めに設置されている。<br>
+      したがって、HUD上に表示される十字線を見ながら「手動で」操作する必要がある。<br>
+      OMSとProgradeなどのオートパイロットは併用できない。
+    </p>
+    <p>
+      Progradeなどの目印に手動操作で十字線を重ねて、エンジンを噴射する。<br>
+      <a href="#2016_attitude">Attitude RCS</a>（2016のみ）や<a href="../mods/../mods/pursuitmfd-install.html"
+        target="_blank">PursuitMFD</a>の姿勢制御オートパイロットを使用することもできる。
+    </p>
+    <p>
+      <img loading="lazy" src="../images/basic/atlantis-control/001.png" width="333" height="293">
+    </p>
 
-<p>
-また、初期機体のスペースシャトルには、再突入を補助するオートパイロットが搭載されていません。<br>
-<a href="../iss/index.html#shuttle_fleet">Shuttle Fleet</a>というMODでは、AutoFCSによる自動再突入が可能です。
-</p>
-
-
-<h2 id="keymap">キー操作一覧</h2>
-
-
-<p>Orbiter2010、2016で共通</p>
-
-<table>
- <tr>
-  <td><kbd>J</kbd></td>
-  <td>SRBおよび外部燃料タンクの切り離し</td>
- </tr>
- <tr>
-  <td><kbd>K</kbd></td>
-  <td>カーゴベイのドアを開閉する</td>
- </tr>
- <tr>
-  <td><kbd>G</kbd></td>
-  <td>ランディングギアを展開する</td>
- </tr>
- <tr>
-  <td><kbd>Ctrl</kbd>+<kbd>B</kbd></td>
-  <td>エアブレーキを展開する</td>
- </tr>
- <tr>
-  <td><kbd>Ctrl</kbd>+<kbd>U</kbd></td>
-  <td>Kuバンドアンテナを展開する</td>
- </tr>
- <tr>
-  <td><kbd>Ctrl</kbd>+<kbd>Space</kbd></td>
-  <td>ペイロードベイ・RMSの操作ダイアログを開く</td>
- </tr>
-</table>
+    <p><a href="../iss/index.html#shuttle_fleet">Shuttle Fleet</a>ではこの点が改良されており、通常のオートパイロットが使用できる。</p>
 
 
-<h2 id="orbital">軌道上での操作</h2>
+    <h2 id="cockpit">3Dコクピット</h2>
 
 
-<p>
-スペースシャトルの軌道用エンジン（OMS）は、機体の軸に対して斜めに設置されている。<br>
-したがって、HUD上に表示される十字線を見ながら「手動で」操作する必要がある。<br>
-OMSとProgradeなどのオートパイロットは併用できない。
-</p>
-<p>
-Progradeなどの目印に手動操作で十字線を重ねて、エンジンを噴射する。<br>
-<a href="#2016_attitude">Attitude RCS</a>（2016のみ）や<a href="../mods/../mods/pursuitmfd-install.html" target="_blank">PursuitMFD</a>の姿勢制御オートパイロットを使用することもできる。</p>
-<p>
-<img loading="lazy" src="../images/basic/atlantis-control/001.png" width="333" height="293">
-</p>
+    <p>3Dコクピット上のMFDを使ってシャトルを操作することができる。</p>
 
-<p><a href="../iss/index.html#shuttle_fleet">Shuttle Fleet</a>ではこの点が改良されており、通常のオートパイロットが使用できる。</p>
+    <table>
+      <tr>
+        <th>左端スイッチ</th>
+        <th>中央スイッチ（複数）</th>
+        <th>右端スイッチ</th>
+      </tr>
+      <tr>
+        <td>MFDのオン・オフ</td>
+        <td>MFDの操作</td>
+        <td>MFDの明るさを変更する（長押し）※</td>
+      </tr>
+    </table>
 
+    <p>※<a href="orbiter2010.html" target="_blank">Orbiter2010</a>+<a href="d3d9client.html"
+        target="_blank">D3D9Client</a>の環境において、明るさ変更スイッチを押すと強制終了するバグがある。</p>
 
-<h2 id="cockpit">3Dコクピット</h2>
+    <p>
+      <img loading="lazy" src="../images/basic/atlantis-control/013.png" width="700" height="662">
+    </p>
 
+    <p>中央に並んだボタンでMFDを操作するが、シャトルのMFDにはボタンが1列しかない。<br>
+      残りのボタンを呼び出すには<kbd>PG</kbd>ボタンをクリックする。</p>
 
-<p>3Dコクピット上のMFDを使ってシャトルを操作することができる。</p>
+    <p>ほかのMFDに切り換えるときは、<kbd>PG</kbd>ボタンを長押しする。</p>
 
-<table>
-  <tr>
-    <th>左端スイッチ</th>
-    <th>中央スイッチ（複数）</th>
-    <th>右端スイッチ</th>
-  </tr>
-  <tr>
-    <td>MFDのオン・オフ</td>
-    <td>MFDの操作</td>
-    <td>MFDの明るさを変更する（長押し）※</td>
-  </tr>
-</table>
 
-<p>※<a href="orbiter2010.html" target="_blank">Orbiter2010</a>+<a href="d3d9client.html" target="_blank">D3D9Client</a>の環境において、明るさ変更スイッチを押すと強制終了するバグがある。</p>
+    <h2 id="rms">RMS（ロボットアーム）</h2>
 
-<p>
-<img loading="lazy" src="../images/basic/atlantis-control/013.png" width="700" height="662">
-</p>
+
+    <p><kbd>Ctrl</kbd>+<kbd>Space</kbd>を押してAtlantis Controlメニューを開く。<br>
+      <kbd>RMS Operation</kbd>をクリック。
+    </p>
+
+    <p>
+      <img loading="lazy" src="../images/basic/atlantis-control/011.png" width="164" height="388">
+    </p>
+
+    <p><strong>Wrist</strong>、<strong>Elbow</strong>、<strong>Shoulder</strong>の各ボタンをクリックすると、関節を曲げる・回転させることができる。</p>
 
-<p>中央に並んだボタンでMFDを操作するが、シャトルのMFDにはボタンが1列しかない。<br>
-残りのボタンを呼び出すには<kbd>PG</kbd>ボタンをクリックする。</p>
-
-<p>ほかのMFDに切り換えるときは、<kbd>PG</kbd>ボタンを長押しする。</p>
-
-
-<h2 id="rms">RMS（ロボットアーム）</h2>
-
-
-<p><kbd>Ctrl</kbd>+<kbd>Space</kbd>を押してAtlantis Controlメニューを開く。<br>
-<kbd>RMS Operation</kbd>をクリック。</p>
-
-<p>
-<img loading="lazy" src="../images/basic/atlantis-control/011.png" width="164" height="388">
-</p>
-
-<p><strong>Wrist</strong>、<strong>Elbow</strong>、<strong>Shoulder</strong>の各ボタンをクリックすると、関節を曲げる・回転させることができる。</p>
-
-<table>
- <tr>
-  <th colspan="2">RMS</th>
- </tr>
- <tr>
-  <td>Stow</td>
-  <td>アームを格納する</td>
- </tr>
- <tr>
-  <td>Grapple</td>
-  <td>アームの先端にペイロードを接続する</td>
- </tr>
- <tr>
-  <th colspan="2">Payload</th>
- </tr>
- <tr>
-  <td>Purge</td>
-  <td>ペイロードベイからペイロードを放出する</td>
- </tr>
-</table>
-
-<p><a href="../iss/index.html#shuttle_fleet">Shuttle Fleet</a>のRMSは平行移動に対応しており、より扱いやすくなっている。</p>
-
-
-<h2 id="door">Payload Door Operation</h2>
-
-
-<p><kbd>Ctrl</kbd>+<kbd>Space</kbd>を押してAtlantis Controlメニューを開く。<br>
-<kbd>Payload Door Operation</kbd>をクリック。</p>
-
-<p>
-<img loading="lazy" src="../images/basic/atlantis-control/012.png" width="298" height="407">
-</p>
-
-
-<h3 id="door_plbay">ペイロードベイのドアを開く</h3>
-
-
-<p><strong>PL BAY DOOR</strong>のノブを両方とも<strong>ENABLE</strong>にする。<br>
-左中央のノブを<strong>OPEN</strong>にする。</p>
-
-
-<h3 id="door_radiator">ラジエータを展開する</h3>
-
-
-<p><strong>PL BAY MECH PWR</strong>のノブを両方とも<strong>ON</strong>にする。<br>
-<strong>LATCH CONTROL</strong>のノブを両方とも<strong>REL</strong>(Release)にする。<br>
-<strong>RADIATOR CONTROL</strong>のノブを両方とも<strong>DEPLOY</strong>にする。</p>
-
-
-<h2 id="2010">Orbiter2010</h2>
-
-
-<h3 id="2010_launch">打ち上げオートパイロット</h3>
-
-
-<p>
-<strong>Launchpad</strong>の<strong>Modules</strong>タブで<strong>LuaMFD</strong>にチェックを入れる。</p>
-<p>
-<img loading="lazy" src="../images/basic/atlantis-control/002.png" width="183" height="122">
-</p>
-<p>
-<strong>Launch into Sunrise</strong>シナリオを選んでゲーム開始。</p>
-<p>
-<img loading="lazy" src="../images/basic/atlantis-control/003.png" width="264" height="233">
-</p>
-<p>
-左右どちらかのMFDで<strong>Terminal MFD</strong>を選択。</p>
-<p>
-<img loading="lazy" src="../images/basic/atlantis-control/004.png" width="551" height="483">
-</p>
-<p>
-<kbd>INP</kbd>をクリックして、<strong>run('atlantis/launch')</strong>と入力して<kbd>Enter</kbd>を押す。</p>
-<p>
-<img loading="lazy" src="../images/basic/atlantis-control/005.png" width="907" height="496">
-</p>
-<p>
-<img loading="lazy" src="../images/basic/atlantis-control/006.png" width="552" height="477">
-</p>
-<p>
-高度を指定する場合：<br>
-<kbd>INP</kbd>をクリックして、<strong>orbit_alt=200e3</strong>と入力して<kbd>Enter</kbd>。（この場合は高度200km）
-</p>
-<p>
-打ち上げ方位を指定する場合：<br>
-<kbd>INP</kbd>をクリックして、<strong>azimuth=43*RAD</strong>と入力して<kbd>Enter</kbd>。（この場合は方位43°）
-</p>
-<p>
-<kbd>INP</kbd>をクリックして、<strong>launch()</strong>と入力して<kbd>Enter</kbd>を押すと、自動打ち上げが開始される。
-</p>
-
-
-<h2 id="2016">Orbiter2016</h2>
-
-
-<h3 id="2016_launch">打ち上げオートパイロット</h3>
-
-
-<p>
-<strong>Launchpad</strong>の<strong>Modules</strong>タブで<strong>ScriptMFD</strong>にチェックを入れる。</p>
-<p>
-<img loading="lazy" src="../images/basic/atlantis-control/007.png" width="182" height="181">
-</p>
-<p>
-MFDの一覧から<strong>AscentAP</strong>を選択。
-</p>
-<p>
-<img loading="lazy" src="../images/basic/atlantis-control/008.png" width="416" height="344">
-</p>
-
-<table>
- <tr>
-  <td><kbd>AZ-</kbd>or<kbd>AZ+</kbd></td>
-  <td>打ち上げ方位角を指定</td>
- </tr>
- <tr>
-  <td><kbd>AL-</kbd>or<kbd>AL+</kbd></td>
-  <td>軌道高度を指定</td>
- </tr>
- <tr>
-  <td><kbd>OM2</kbd></td>
-  <td>OMS2の自動噴射を有効・無効にする</td>
- </tr>
- <tr>
-  <td><kbd>L</kbd></td>
-  <td>自動打ち上げの実行</td>
- </tr>
- <tr>
-  <td><kbd>PG-</kbd>or<kbd>PG+</kbd></td>
-  <td>画面の切り替え</td>
- </tr>
-</table>
-
-<p><strong>Atlantis Control</strong>(<kbd>Ctrl</kbd>+<kbd>Space</kbd>)→<kbd>Ascent Autopilot</kbd>でも同じオートパイロットが利用できる。</p>
-
-
-<h3 id="2016_attitude">Attitude RCS</h3>
-
-
-<p>
-Attitude RCSを使うと、宇宙船の姿勢を自動で維持してくれる。
-</p>
-<p>
-MFDの一覧から<strong>Attitude RCS</strong>を選択。
-</p>
-<p>
-<img loading="lazy" src="../images/basic/atlantis-control/009.png" width="377" height="340">
-</p>
-<p>
-<kbd>SET</kbd>をクリック。
-</p>
-<p>
-<kbd>CUR</kbd>をクリックして、<strong>current (relative)</strong>にする。
-</p>
-<p>
-<img loading="lazy" src="../images/basic/atlantis-control/010.png" width="416" height="339">
-</p>
-<p>
-<kbd>GO</kbd>をクリックすると、現在の姿勢を維持する。
-</p>
-<p>
-終了するときは、<kbd>RTN</kbd>をクリックして元の画面に戻る。<br>
-<kbd>END</kbd>をクリックするとオートパイロットが解除される。
-</p>
+    <table>
+      <tr>
+        <th colspan="2">RMS</th>
+      </tr>
+      <tr>
+        <td>Stow</td>
+        <td>アームを格納する</td>
+      </tr>
+      <tr>
+        <td>Grapple</td>
+        <td>アームの先端にペイロードを接続する</td>
+      </tr>
+      <tr>
+        <th colspan="2">Payload</th>
+      </tr>
+      <tr>
+        <td>Purge</td>
+        <td>ペイロードベイからペイロードを放出する</td>
+      </tr>
+    </table>
+
+    <p><a href="../iss/index.html#shuttle_fleet">Shuttle Fleet</a>のRMSは平行移動に対応しており、より扱いやすくなっている。</p>
+
+
+    <h2 id="door">Payload Door Operation</h2>
+
+
+    <p><kbd>Ctrl</kbd>+<kbd>Space</kbd>を押してAtlantis Controlメニューを開く。<br>
+      <kbd>Payload Door Operation</kbd>をクリック。
+    </p>
+
+    <p>
+      <img loading="lazy" src="../images/basic/atlantis-control/012.png" width="298" height="407">
+    </p>
+
+
+    <h3 id="door_plbay">ペイロードベイのドアを開く</h3>
+
+
+    <p><strong>PL BAY DOOR</strong>のノブを両方とも<strong>ENABLE</strong>にする。<br>
+      左中央のノブを<strong>OPEN</strong>にする。</p>
+
+
+    <h3 id="door_radiator">ラジエータを展開する</h3>
+
+
+    <p><strong>PL BAY MECH PWR</strong>のノブを両方とも<strong>ON</strong>にする。<br>
+      <strong>LATCH CONTROL</strong>のノブを両方とも<strong>REL</strong>(Release)にする。<br>
+      <strong>RADIATOR CONTROL</strong>のノブを両方とも<strong>DEPLOY</strong>にする。
+    </p>
+
+
+    <h2 id="2010">Orbiter2010</h2>
+
+
+    <h3 id="2010_launch">打ち上げオートパイロット</h3>
+
+
+    <p>
+      <strong>Launchpad</strong>の<strong>Modules</strong>タブで<strong>LuaMFD</strong>にチェックを入れる。
+    </p>
+    <p>
+      <img loading="lazy" src="../images/basic/atlantis-control/002.png" width="183" height="122">
+    </p>
+    <p>
+      <strong>Launch into Sunrise</strong>シナリオを選んでゲーム開始。
+    </p>
+    <p>
+      <img loading="lazy" src="../images/basic/atlantis-control/003.png" width="264" height="233">
+    </p>
+    <p>
+      左右どちらかのMFDで<strong>Terminal MFD</strong>を選択。</p>
+    <p>
+      <img loading="lazy" src="../images/basic/atlantis-control/004.png" width="551" height="483">
+    </p>
+    <p>
+      <kbd>INP</kbd>をクリックして、<strong>run('atlantis/launch')</strong>と入力して<kbd>Enter</kbd>を押す。
+    </p>
+    <p>
+      <img loading="lazy" src="../images/basic/atlantis-control/005.png" width="907" height="496">
+    </p>
+    <p>
+      <img loading="lazy" src="../images/basic/atlantis-control/006.png" width="552" height="477">
+    </p>
+    <p>
+      高度を指定する場合：<br>
+      <kbd>INP</kbd>をクリックして、<strong>orbit_alt=200e3</strong>と入力して<kbd>Enter</kbd>。（この場合は高度200km）
+    </p>
+    <p>
+      打ち上げ方位を指定する場合：<br>
+      <kbd>INP</kbd>をクリックして、<strong>azimuth=43*RAD</strong>と入力して<kbd>Enter</kbd>。（この場合は方位43°）
+    </p>
+    <p>
+      <kbd>INP</kbd>をクリックして、<strong>launch()</strong>と入力して<kbd>Enter</kbd>を押すと、自動打ち上げが開始される。
+    </p>
+
+
+    <h2 id="2016">Orbiter2016</h2>
+
+
+    <h3 id="2016_launch">打ち上げオートパイロット</h3>
+
+
+    <p>
+      <strong>Launchpad</strong>の<strong>Modules</strong>タブで<strong>ScriptMFD</strong>にチェックを入れる。
+    </p>
+    <p>
+      <img loading="lazy" src="../images/basic/atlantis-control/007.png" width="182" height="181">
+    </p>
+    <p>
+      MFDの一覧から<strong>AscentAP</strong>を選択。
+    </p>
+    <p>
+      <img loading="lazy" src="../images/basic/atlantis-control/008.png" width="416" height="344">
+    </p>
+
+    <table class="center1col">
+      <tr>
+        <td><kbd>AZ-</kbd>or<kbd>AZ+</kbd></td>
+        <td>打ち上げ方位角を指定</td>
+      </tr>
+      <tr>
+        <td><kbd>AL-</kbd>or<kbd>AL+</kbd></td>
+        <td>軌道高度を指定</td>
+      </tr>
+      <tr>
+        <td><kbd>OM2</kbd></td>
+        <td>OMS2の自動噴射を有効・無効にする</td>
+      </tr>
+      <tr>
+        <td><kbd>L</kbd></td>
+        <td>自動打ち上げの実行</td>
+      </tr>
+      <tr>
+        <td><kbd>PG-</kbd>or<kbd>PG+</kbd></td>
+        <td>画面の切り替え</td>
+      </tr>
+    </table>
+
+    <p><strong>Atlantis Control</strong>(<kbd>Ctrl</kbd>+<kbd>Space</kbd>)→<kbd>Ascent
+        Autopilot</kbd>でも同じオートパイロットが利用できる。</p>
+
+
+    <h3 id="2016_attitude">Attitude RCS</h3>
+
+
+    <p>
+      Attitude RCSを使うと、宇宙船の姿勢を自動で維持してくれる。
+    </p>
+    <p>
+      MFDの一覧から<strong>Attitude RCS</strong>を選択。
+    </p>
+    <p>
+      <img loading="lazy" src="../images/basic/atlantis-control/009.png" width="377" height="340">
+    </p>
+    <p>
+      <kbd>SET</kbd>をクリック。
+    </p>
+    <p>
+      <kbd>CUR</kbd>をクリックして、<strong>current (relative)</strong>にする。
+    </p>
+    <p>
+      <img loading="lazy" src="../images/basic/atlantis-control/010.png" width="416" height="339">
+    </p>
+    <p>
+      <kbd>GO</kbd>をクリックすると、現在の姿勢を維持する。
+    </p>
+    <p>
+      終了するときは、<kbd>RTN</kbd>をクリックして元の画面に戻る。<br>
+      <kbd>END</kbd>をクリックするとオートパイロットが解除される。
+    </p>
 
   </main>
 
 </body>
+
 </html>

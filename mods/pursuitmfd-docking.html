@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 
 <html lang="ja">
+
 <head>
   <script src="../scripts/ga.js"></script>
   <meta charset="UTF-8">
@@ -14,127 +15,128 @@
 
   <main>
 
-  <h1>PursuitMFD ドッキングを自動化・補助する</h1>
+    <h1>PursuitMFD ドッキングを自動化・補助する</h1>
 
 
-  <p>
-    <a href="pursuitmfd-install.html" target="_blank">PursuitMFD</a>の<strong>Docking</strong>モードによる自動ドッキングについて解説します。
+    <p>
+      <a href="pursuitmfd-install.html" target="_blank">PursuitMFD</a>の<strong>Docking</strong>モードによる自動ドッキングについて解説します。
     </p>
-    
+
     <ol>
-    <li><a href="#v-bar">ドッキングポートの前方で待機する</a>
-      <ul>
-      <li><a href="#v-bar_target">ターゲットを指定する</a></li>
-      <li><a href="#v-bar_distance">ドッキングポートまでの距離を指定する</a></li>
-      </ul>
-    </li>
-    <li><a href="#autodock">自動でドッキングする</a></li>
-    <li><a href="#dockassist">ドッキングを補助する</a></li>
+      <li><a href="#v-bar">ドッキングポートの前方で待機する</a>
+        <ul>
+          <li><a href="#v-bar_target">ターゲットを指定する</a></li>
+          <li><a href="#v-bar_distance">ドッキングポートまでの距離を指定する</a></li>
+        </ul>
+      </li>
+      <li><a href="#autodock">自動でドッキングする</a></li>
+      <li><a href="#dockassist">ドッキングを補助する</a></li>
     </ol>
-    
-    
+
+
     <h2 id="v-bar">ドッキングポートの前方で待機する</h2>
-    
-    
+
+
     <p>
-    <strong>PursuitMFD</strong>を使えば、ドッキングポートの軸線上に宇宙船を待機させることができる。
+      <strong>PursuitMFD</strong>を使えば、ドッキングポートの軸線上に宇宙船を待機させることができる。
     </p>
-    
+
     <p>
-    あらかじめターゲットとランデブーして、ドッキングポートが見える位置に移動しておく。
+      あらかじめターゲットとランデブーして、ドッキングポートが見える位置に移動しておく。
     </p>
-    
-    
+
+
     <h3 id="v-bar_target">ターゲットを指定する</h3>
-    
-    
+
+
     <p>
-    <strong>PursuitMFD</strong>を開いて、<kbd>DOC</kbd>をクリックして<strong>Docking</strong>モードにする。
+      <strong>PursuitMFD</strong>を開いて、<kbd>DOC</kbd>をクリックして<strong>Docking</strong>モードにする。
     </p>
-    
+
     <p>
-    <kbd>TGT</kbd>をクリックして、ターゲットの名前（<strong>ISS</strong>など）を入力して<kbd>Enter</kbd>を押す。<br>
-    <kbd>TDK</kbd>をクリックして<strong>1</strong>と入力して<kbd>Enter</kbd>を押す。
+      <kbd>TGT</kbd>をクリックして、ターゲットの名前（<strong>ISS</strong>など）を入力して<kbd>Enter</kbd>を押す。<br>
+      <kbd>TDK</kbd>をクリックして<strong>1</strong>と入力して<kbd>Enter</kbd>を押す。
     </p>
-    
+
     <p>
-    <img loading="lazy" src="../images/mods/pursuitmfd-docking/001.png" width="410" height="336">
+      <img loading="lazy" src="../images/mods/pursuitmfd-docking/001.png" width="410" height="336">
     </p>
-    
+
     <p>
-    <kbd>TGT</kbd>でターゲット、<kbd>TDK</kbd>で使用するドッキングポート（相手側）を指定する。<br>
-    <kbd>LDK</kbd>で自機のドッキングポートを指定する。
+      <kbd>TGT</kbd>でターゲット、<kbd>TDK</kbd>で使用するドッキングポート（相手側）を指定する。<br>
+      <kbd>LDK</kbd>で自機のドッキングポートを指定する。
     </p>
-    
-    
+
+
     <h3 id="v-bar_distance">ドッキングポートまでの距離を指定する</h3>
-    
-    
+
+
     <p>
-    <kbd>NOR</kbd>を何度かクリックして、ロール軸の制御を有効にする。
+      <kbd>NOR</kbd>を何度かクリックして、ロール軸の制御を有効にする。
     </p>
-    
+
     <table>
-     <tr>
-      <td><strong>KILL ROLL</strong></td>
-      <td>ロール軸の回転を止める</td>
-     </tr>
-     <tr>
-      <td><strong>NO ROLL</strong></td>
-      <td>ロール軸の制御を無効にする</td>
-     </tr>
-     <tr>
-      <td></td>
-      <td>ロール軸の制御が有効</td>
-     </tr>
+      <tr>
+        <td><strong>KILL ROLL</strong></td>
+        <td>ロール軸の回転を止める</td>
+      </tr>
+      <tr>
+        <td><strong>NO ROLL</strong></td>
+        <td>ロール軸の制御を無効にする</td>
+      </tr>
+      <tr>
+        <td></td>
+        <td>ロール軸の制御が有効</td>
+      </tr>
     </table>
-    
+
     <p>
-    <kbd>DIS</kbd>をクリック。<strong>0 0 50</strong>と入力して<kbd>Enter</kbd>を押す。<br>
-    <kbd>APD</kbd>をクリックしてオートパイロットを開始する。<br>
-    自機のドッキングポートを目標のドッキングポートに指向しつつ、ポートの前方50mに自動で移動する。
+      <kbd>DIS</kbd>をクリック。<strong>0 0 50</strong>と入力して<kbd>Enter</kbd>を押す。<br>
+      <kbd>APD</kbd>をクリックしてオートパイロットを開始する。<br>
+      自機のドッキングポートを目標のドッキングポートに指向しつつ、ポートの前方50mに自動で移動する。
     </p>
-    
+
     <p>
-    <img loading="lazy" src="../images/mods/pursuitmfd-docking/002.png" width="408" height="333">
+      <img loading="lazy" src="../images/mods/pursuitmfd-docking/002.png" width="408" height="333">
     </p>
-    
+
     <p>
-    <kbd>DIS</kbd>ボタンではドッキングポートまでの距離を指定することができる。<br>
-    X軸、Y軸、Z軸の順番で、半角スペースをあいだに入れて入力する。
+      <kbd>DIS</kbd>ボタンではドッキングポートまでの距離を指定することができる。<br>
+      X軸、Y軸、Z軸の順番で、半角スペースをあいだに入れて入力する。
     </p>
-    
-    
+
+
     <h2 id="autodock">自動でドッキングする</h2>
-    
-    
+
+
     <p>
-    <kbd>DIS</kbd>をクリックして、<strong>0 0 -0.1</strong>と入力して<kbd>Enter</kbd>を押す。
+      <kbd>DIS</kbd>をクリックして、<strong>0 0 -0.1</strong>と入力して<kbd>Enter</kbd>を押す。
     </p>
-    
+
     <p>
-    すでにオートパイロットを実行中ならそのまま、まだオートパイロットを実行していない場合は<kbd>APD</kbd>をクリック。<br>
-    全自動でドッキングされる。
+      すでにオートパイロットを実行中ならそのまま、まだオートパイロットを実行していない場合は<kbd>APD</kbd>をクリック。<br>
+      全自動でドッキングされる。
     </p>
-    
+
     <p>
-    ドッキングが終了すると、オートパイロットは自動で解除される。
+      ドッキングが終了すると、オートパイロットは自動で解除される。
     </p>
-    
-    
+
+
     <h2 id="dockassist">ドッキングを補助する</h2>
-    
-    
+
+
     <p>
-    <kbd>HLD</kbd>で機体の向き、<kbd>TRA</kbd>でドッキングポートまでの距離をそれぞれ制御する。<br>
-    <kbd>TRL</kbd>でX軸（左右）、<kbd>TRV</kbd>でY軸（上下）、<kbd>TFA</kbd>でZ軸（前後）の距離だけを制御する。
+      <kbd>HLD</kbd>で機体の向き、<kbd>TRA</kbd>でドッキングポートまでの距離をそれぞれ制御する。<br>
+      <kbd>TRL</kbd>でX軸（左右）、<kbd>TRV</kbd>でY軸（上下）、<kbd>TFA</kbd>でZ軸（前後）の距離だけを制御する。
     </p>
-    
+
     <p>
-    <kbd>HLD</kbd>、<kbd>TRL</kbd>、<kbd>TRV</kbd>の3つだけを有効にすると、ドッキング時の速度を手動でコントロールできる。
+      <kbd>HLD</kbd>、<kbd>TRL</kbd>、<kbd>TRV</kbd>の3つだけを有効にすると、ドッキング時の速度を手動でコントロールできる。
     </p>
 
   </main>
 
 </body>
+
 </html>

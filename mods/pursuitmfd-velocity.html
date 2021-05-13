@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 
 <html lang="ja">
+
 <head>
   <script src="../scripts/ga.js"></script>
   <meta charset="UTF-8">
@@ -14,217 +15,220 @@
 
   <main>
 
-  <h1>PursuitMFD 姿勢制御と遠隔操作</h1>
+    <h1>PursuitMFD 姿勢制御と遠隔操作</h1>
 
 
-<p>
-<a href="pursuitmfd-install.html" target="_blank">PursuitMFD</a>の<strong>Velocity</strong>モードによる姿勢制御と、機体の遠隔操作について解説します。
-</p>
+    <p>
+      <a href="pursuitmfd-install.html"
+        target="_blank">PursuitMFD</a>の<strong>Velocity</strong>モードによる姿勢制御と、機体の遠隔操作について解説します。
+    </p>
 
-<ul>
-<li><a href="#velocity">宇宙船の姿勢を制御する</a>
-  <ul>
-  <li><a href="#velocity_attitude">宇宙船の姿勢を設定する</a></li>
-  <li><a href="#velocity_hold">姿勢制御を実行する</a></li>
-  </ul>
-</li>
-<li><a href="#remote">宇宙船を遠隔操作する</a>
-  <ul>
-  <li><a href="#remote_another">操作する宇宙船を切り替える</a></li>
-  </ul>
-</li>
-<li><a href="#tips">応用</a>
-  <ul>
-  <li><a href="#tips_iss">ISSの姿勢を制御する</a>
     <ul>
-    <li><a href="#tips_iss_vbar">V-barとR-bar</a></li>
+      <li><a href="#velocity">宇宙船の姿勢を制御する</a>
+        <ul>
+          <li><a href="#velocity_attitude">宇宙船の姿勢を設定する</a></li>
+          <li><a href="#velocity_hold">姿勢制御を実行する</a></li>
+        </ul>
+      </li>
+      <li><a href="#remote">宇宙船を遠隔操作する</a>
+        <ul>
+          <li><a href="#remote_another">操作する宇宙船を切り替える</a></li>
+        </ul>
+      </li>
+      <li><a href="#tips">応用</a>
+        <ul>
+          <li><a href="#tips_iss">ISSの姿勢を制御する</a>
+            <ul>
+              <li><a href="#tips_iss_vbar">V-barとR-bar</a></li>
+            </ul>
+          </li>
+          <li><a href="#tips_shuttle">スペースシャトルの姿勢を制御する</a></li>
+        </ul>
+      </li>
     </ul>
-  </li>
-  <li><a href="#tips_shuttle">スペースシャトルの姿勢を制御する</a></li>
-  </ul>
-</li>
-</ul>
 
 
-<h2 id="velocity">宇宙船の姿勢を制御する</h2>
+    <h2 id="velocity">宇宙船の姿勢を制御する</h2>
 
 
-<p>
-<strong>PursuitMFD</strong>を開く。<br>
-左上の<kbd>VEL</kbd>ボタンをクリックして、<strong>Velocity</strong>モードにする。
-</p>
+    <p>
+      <strong>PursuitMFD</strong>を開く。<br>
+      左上の<kbd>VEL</kbd>ボタンをクリックして、<strong>Velocity</strong>モードにする。
+    </p>
 
-<p>
-<strong>Velocity</strong>モードでは、宇宙船の速度ベクトルの向きを基準に宇宙船の姿勢を決定する。
-</p>
-
-
-<h3 id="velocity_attitude">宇宙船の姿勢を設定する</h3>
+    <p>
+      <strong>Velocity</strong>モードでは、宇宙船の速度ベクトルの向きを基準に宇宙船の姿勢を決定する。
+    </p>
 
 
-<p>
-<kbd>PIT</kbd>、<kbd>YAW</kbd>、<kbd>ROL</kbd>の3つのボタンで宇宙船の姿勢を決定する。<br>
-数字を入力したら<kbd>Enter</kbd>を押す。
-</p>
-
-<table>
- <tr>
-  <td><kbd>PIT</kbd></td>
-  <td>ピッチ角を入力</td>
- </tr>
- <tr>
-  <td><kbd>YAW</kbd></td>
-  <td>ヨー角を入力</td>
- </tr>
- <tr>
-  <td><kbd>ROL</kbd></td>
-  <td>ロール角を入力</td>
- </tr>
-</table>
-
-<p>
-<kbd>NOR</kbd>ボタンを何度かクリックすると、ロール軸の制御が無効・有効になる。
-</p>
-
-<table>
- <tr>
-  <td><strong>KILL ROLL</strong></td>
-  <td>ロール軸の回転を止める</td>
- </tr>
- <tr>
-  <td><strong>NO ROLL</strong></td>
-  <td>ロール軸の制御を無効にする</td>
- </tr>
- <tr>
-  <td></td>
-  <td>ロール軸の制御が有効</td>
- </tr>
-</table>
-
-<p>
-  <img loading="lazy" src="../images/mods/pursuitmfd-velocity/001.png" width="411" height="336">
-</p>
+    <h3 id="velocity_attitude">宇宙船の姿勢を設定する</h3>
 
 
-<h3 id="velocity_hold">姿勢制御を実行する</h3>
+    <p>
+      <kbd>PIT</kbd>、<kbd>YAW</kbd>、<kbd>ROL</kbd>の3つのボタンで宇宙船の姿勢を決定する。<br>
+      数字を入力したら<kbd>Enter</kbd>を押す。
+    </p>
+
+    <table class="center1col">
+      <tr>
+        <td><kbd>PIT</kbd></td>
+        <td>ピッチ角を入力</td>
+      </tr>
+      <tr>
+        <td><kbd>YAW</kbd></td>
+        <td>ヨー角を入力</td>
+      </tr>
+      <tr>
+        <td><kbd>ROL</kbd></td>
+        <td>ロール角を入力</td>
+      </tr>
+    </table>
+
+    <p>
+      <kbd>NOR</kbd>ボタンを何度かクリックすると、ロール軸の制御が無効・有効になる。
+    </p>
+
+    <table>
+      <tr>
+        <td><strong>KILL ROLL</strong></td>
+        <td>ロール軸の回転を止める</td>
+      </tr>
+      <tr>
+        <td><strong>NO ROLL</strong></td>
+        <td>ロール軸の制御を無効にする</td>
+      </tr>
+      <tr>
+        <td></td>
+        <td>ロール軸の制御が有効</td>
+      </tr>
+    </table>
+
+    <p>
+      <img loading="lazy" src="../images/mods/pursuitmfd-velocity/001.png" width="411" height="336">
+    </p>
 
 
-<p>
-<kbd>HLD</kbd>(Hold)ボタンをクリックすると、姿勢制御が開始される。<br>
-タイムワープ10倍（<kbd>T</kbd>キー）にして、しばらく待つ。
-</p>
-
-<p>
-姿勢変更が完了したら、タイムワープを解除する。（<kbd>R</kbd>キー）<br>
-完全に姿勢が安定すると、100倍までのタイムワープが可能。
-</p>
+    <h3 id="velocity_hold">姿勢制御を実行する</h3>
 
 
-<h2 id="remote">宇宙船を遠隔操作する</h2>
+    <p>
+      <kbd>HLD</kbd>(Hold)ボタンをクリックすると、姿勢制御が開始される。<br>
+      タイムワープ10倍（<kbd>T</kbd>キー）にして、しばらく待つ。
+    </p>
+
+    <p>
+      姿勢変更が完了したら、タイムワープを解除する。（<kbd>R</kbd>キー）<br>
+      完全に姿勢が安定すると、100倍までのタイムワープが可能。
+    </p>
 
 
-<p>
-MFD左上の<kbd>REM</kbd>をクリック。<br>
-遠隔操作したい宇宙船・ステーションの名前を入力して、<kbd>Enter</kbd>を押す。
-</p>
-
-<p>
-モード選択画面になるので、使用したい機能に対応したボタンをクリック。
-</p>
+    <h2 id="remote">宇宙船を遠隔操作する</h2>
 
 
-<h3 id="remote_another">操作する宇宙船を切り替える</h3>
+    <p>
+      MFD左上の<kbd>REM</kbd>をクリック。<br>
+      遠隔操作したい宇宙船・ステーションの名前を入力して、<kbd>Enter</kbd>を押す。
+    </p>
+
+    <p>
+      モード選択画面になるので、使用したい機能に対応したボタンをクリック。
+    </p>
 
 
-<p>
-すでにオートパイロットを実行中なら、<kbd>CFG</kbd>をクリック。<br>
-<strong>Summary</strong>画面で右の<kbd>REM</kbd>をクリック。<br>
-遠隔操作したい宇宙船・ステーションの名前を入力して、<kbd>Enter</kbd>を押す。
-</p>
-
-<p>
-<img loading="lazy" src="../images/mods/pursuitmfd-velocity/005.png" width="415" height="338">
-</p>
-
-<p>
-<kbd>PRV</kbd>or<kbd>NXT</kbd>で操作する宇宙船を切り替える。<br>
-<kbd>SET</kbd>で決定する。
-</p>
-
-<p>
-モード選択画面になるので、使用したい機能に対応したボタンをクリック。
-</p>
+    <h3 id="remote_another">操作する宇宙船を切り替える</h3>
 
 
-<h2 id="tips">応用</h2>
+    <p>
+      すでにオートパイロットを実行中なら、<kbd>CFG</kbd>をクリック。<br>
+      <strong>Summary</strong>画面で右の<kbd>REM</kbd>をクリック。<br>
+      遠隔操作したい宇宙船・ステーションの名前を入力して、<kbd>Enter</kbd>を押す。
+    </p>
+
+    <p>
+      <img loading="lazy" src="../images/mods/pursuitmfd-velocity/005.png" width="415" height="338">
+    </p>
+
+    <p>
+      <kbd>PRV</kbd>or<kbd>NXT</kbd>で操作する宇宙船を切り替える。<br>
+      <kbd>SET</kbd>で決定する。
+    </p>
+
+    <p>
+      モード選択画面になるので、使用したい機能に対応したボタンをクリック。
+    </p>
 
 
-<p>
-現実のISSやスペースシャトルは、それぞれ必要に応じてある姿勢を維持するようになっています。<br>
-ISSは地球側にキューポラを、スペースシャトルは地球側に放熱パネルを向けて軌道を周回しています。<br>
-PursuitMFDを使って、これらの姿勢制御を再現できます。
-</p>
+    <h2 id="tips">応用</h2>
 
 
-<h3 id="tips_iss">ISSの姿勢を制御する</h3>
+    <p>
+      現実のISSやスペースシャトルは、それぞれ必要に応じてある姿勢を維持するようになっています。<br>
+      ISSは地球側にキューポラを、スペースシャトルは地球側に放熱パネルを向けて軌道を周回しています。<br>
+      PursuitMFDを使って、これらの姿勢制御を再現できます。
+    </p>
 
 
-<p>
-ISSが登場する適当なシナリオでゲームを開始する。<br>
-PursuitMFDの遠隔操作か、<kbd>F3</kbd>キーでISSを操作できるようにしておく。
-</p>
-
-<p>
-PursuitMFDを開いて、<strong>Velocity</strong>モードにする。<br>
-<kbd>NOR</kbd>ボタンを何度かクリックして、ロール軸の制御を有効にする。 
-</p>
-
-<p>
-<kbd>PIT</kbd>、<kbd>YAW</kbd>、<kbd>ROL</kbd>の全部が<strong>000.000</strong>になっていることを確認する。<br>
-<kbd>HLD</kbd>ボタンをクリックして、タイムワープ10倍でしばらく待つ。
-</p>
+    <h3 id="tips_iss">ISSの姿勢を制御する</h3>
 
 
-<h4 id="tips_iss_vbar">V-barとR-bar</h4>
+    <p>
+      ISSが登場する適当なシナリオでゲームを開始する。<br>
+      PursuitMFDの遠隔操作か、<kbd>F3</kbd>キーでISSを操作できるようにしておく。
+    </p>
+
+    <p>
+      PursuitMFDを開いて、<strong>Velocity</strong>モードにする。<br>
+      <kbd>NOR</kbd>ボタンを何度かクリックして、ロール軸の制御を有効にする。
+    </p>
+
+    <p>
+      <kbd>PIT</kbd>、<kbd>YAW</kbd>、<kbd>ROL</kbd>の全部が<strong>000.000</strong>になっていることを確認する。<br>
+      <kbd>HLD</kbd>ボタンをクリックして、タイムワープ10倍でしばらく待つ。
+    </p>
 
 
-<p>
-宇宙船・宇宙ステーションなどが、ある天体の軌道上を周回しているものとします。<br>
-このとき、天体の中心と宇宙船を通る直線を<strong>R-bar</strong>、宇宙船の速度ベクトルの方向を<strong>V-bar</strong>と呼びます。※
-</p>
-
-<p class="note">
-※RはRadius、VはVelocityの略
-</p>
-
-<p>
-<img loading="lazy" src="../images/mods/pursuitmfd-velocity/000.png" width="597" height="351">
-</p>
-
-<p>
-ISS（国際宇宙ステーション）は地球に常に同じ面を向けて軌道上を周回しています。<br>
-このとき、スペースシャトルやクルードラゴンが使用するドッキングポートは前方(V-bar)に来るようになっています。
-</p>
-
-<p>
-PursuitMFDの<strong>Velocity</strong>モードと<a href="pursuitmfd-docking.html" target="_blank">Docking</a>モードを併用することで、V-barからのドッキングを再現することができます。
-</p>
+    <h4 id="tips_iss_vbar">V-barとR-bar</h4>
 
 
-<h3 id="tips_shuttle">スペースシャトルの姿勢を制御する</h3>
+    <p>
+      宇宙船・宇宙ステーションなどが、ある天体の軌道上を周回しているものとします。<br>
+      このとき、天体の中心と宇宙船を通る直線を<strong>R-bar</strong>、宇宙船の速度ベクトルの方向を<strong>V-bar</strong>と呼びます。※
+    </p>
+
+    <p class="note">
+      ※RはRadius、VはVelocityの略
+    </p>
+
+    <p>
+      <img loading="lazy" src="../images/mods/pursuitmfd-velocity/000.png" width="597" height="351">
+    </p>
+
+    <p>
+      ISS（国際宇宙ステーション）は地球に常に同じ面を向けて軌道上を周回しています。<br>
+      このとき、スペースシャトルやクルードラゴンが使用するドッキングポートは前方(V-bar)に来るようになっています。
+    </p>
+
+    <p>
+      PursuitMFDの<strong>Velocity</strong>モードと<a href="pursuitmfd-docking.html"
+        target="_blank">Docking</a>モードを併用することで、V-barからのドッキングを再現することができます。
+    </p>
 
 
-<p>
-PursuitMFDを開いて、<strong>Velocity</strong>モードにする。<br>
-<kbd>NOR</kbd>ボタンを何度かクリックして、ロール軸の制御を有効にする。
-</p>
+    <h3 id="tips_shuttle">スペースシャトルの姿勢を制御する</h3>
 
-<p>
-<kbd>ROL</kbd>ボタンをクリックして、<strong>180</strong>と入力して<kbd>Enter</kbd>を押す。<br>
-<kbd>HLD</kbd>ボタンをクリックして、タイムワープ10倍でしばらく待つ。
-</p>
+
+    <p>
+      PursuitMFDを開いて、<strong>Velocity</strong>モードにする。<br>
+      <kbd>NOR</kbd>ボタンを何度かクリックして、ロール軸の制御を有効にする。
+    </p>
+
+    <p>
+      <kbd>ROL</kbd>ボタンをクリックして、<strong>180</strong>と入力して<kbd>Enter</kbd>を押す。<br>
+      <kbd>HLD</kbd>ボタンをクリックして、タイムワープ10倍でしばらく待つ。
+    </p>
 
   </main>
 
 </body>
+
 </html>

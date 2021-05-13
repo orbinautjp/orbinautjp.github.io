@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 
 <html lang="ja">
+
 <head>
   <script src="../scripts/ga.js"></script>
   <meta charset="UTF-8">
@@ -14,208 +15,208 @@
 
   <main>
 
-  <h1>Align planes MFDの補足解説</h1>
+    <h1>Align planes MFDの補足解説</h1>
 
 
-<p><strong>Align planes MFD</strong>は、ふたつの軌道のずれを修正する（軌道面を一致させる）ためのMFDです。</p>
+    <p><strong>Align planes MFD</strong>は、ふたつの軌道のずれを修正する（軌道面を一致させる）ためのMFDです。</p>
 
-<ul>
-<li><a href="#nodes">2つの交点</a></li>
-<li><a href="#vector">軌道のずれを修正する</a>
-  <ol>
-  <li><a href="#orbitnormal">宇宙船の姿勢を変える</a></li>
-  <li><a href="#thrust">エンジンを噴射する</a>
     <ul>
-    <li><a href="#thrust_caution">注意点</a></li>
-    <li><a href="#thrust_time">噴射時間の違い</a></li>
+      <li><a href="#nodes">2つの交点</a></li>
+      <li><a href="#vector">軌道のずれを修正する</a>
+        <ol>
+          <li><a href="#orbitnormal">宇宙船の姿勢を変える</a></li>
+          <li><a href="#thrust">エンジンを噴射する</a>
+            <ul>
+              <li><a href="#thrust_caution">注意点</a></li>
+              <li><a href="#thrust_time">噴射時間の違い</a></li>
+            </ul>
+          </li>
+        </ol>
+      </li>
+      <li><a href="#launch">打ち上げとAlign MFD</a></li>
+      <li><a href="#misc">その他の機能</a></li>
     </ul>
-  </li>
-  </ol>
-</li>
-<li><a href="#launch">打ち上げとAlign MFD</a></li>
-<li><a href="#misc">その他の機能</a></li>
-</ul>
 
 
-<h2 id="nodes">2つの交点</h2>
+    <h2 id="nodes">2つの交点</h2>
 
 
-<p>自分の軌道とターゲットの軌道にずれがあるとき、両者の軌道は2ヶ所で交差することになる。</p>
+    <p>自分の軌道とターゲットの軌道にずれがあるとき、両者の軌道は2ヶ所で交差することになる。</p>
 
-<p>
-<img loading="lazy" src="../images/tutorial/align-planes-mfd/AlignMFD002.png" width="573" height="573">
-</p>
+    <p>
+      <img loading="lazy" src="../images/tutorial/align-planes-mfd/AlignMFD002.png" width="573" height="573">
+    </p>
 
-<p>この2つの交点(node)を、それぞれ以下のように呼ぶ。</p>
+    <p>この2つの交点(node)を、それぞれ以下のように呼ぶ。</p>
 
-<table>
- <tr>
-  <td><strong>DN</strong></td>
-  <td>Descending Node</td>
-  <td>降交点</td>
-  <td>宇宙船が北から南へ移動するとき</td>
- </tr>
- <tr>
-  <td><strong>AN</strong></td>
-  <td>Ascending Node</td>
-  <td>昇交点</td>
-  <td>宇宙船が南から北へ移動するとき</td>
- </tr>
-</table>
+    <table>
+      <tr>
+        <td><abbr title="Descending Node">DN</abbr></td>
+        <td>降交点</td>
+        <td>宇宙船が北から南へ移動するとき</td>
+      </tr>
+      <tr>
+        <td><abbr title="Ascending Node">AN</abbr></td>
+        <td>昇交点</td>
+        <td>宇宙船が南から北へ移動するとき</td>
+      </tr>
+    </table>
 
-<p><strong>DN</strong> or <strong>AN</strong>の位置は、Align MFD上に表示される。<br>
-<strong>P</strong>が宇宙船の位置を表す。</p>
+    <p><strong>DN</strong> or <strong>AN</strong>の位置は、Align MFD上に表示される。<br>
+      <strong>P</strong>が宇宙船の位置を表す。
+    </p>
 
-<p>
+    <p>
 
-</p>
-
-
-<h2 id="vector">軌道のずれを修正する</h2>
+    </p>
 
 
-<p>現在の進行方向に対して直角の方向に加速すると、速度ベクトルの向きが変わる。</p>
-
-<p>
-<img loading="lazy" src="../images/tutorial/align-planes-mfd/chplane003.png" width="1064" height="780">
-</p>
-
-<p>軌道が交差する点でこの操作を実行することで、2つの軌道のずれを修正することができる。</p>
+    <h2 id="vector">軌道のずれを修正する</h2>
 
 
-<h3 id="orbitnormal">宇宙船の姿勢を変える</h3>
+    <p>現在の進行方向に対して直角の方向に加速すると、速度ベクトルの向きが変わる。</p>
+
+    <p>
+      <img loading="lazy" src="../images/tutorial/align-planes-mfd/chplane003.png" width="1064" height="780">
+    </p>
+
+    <p>軌道が交差する点でこの操作を実行することで、2つの軌道のずれを修正することができる。</p>
 
 
-<p><strong>DN</strong> or <strong>AN</strong>のいずれかが近づいてきたら、現在の進行方向に対して直角になる方向に機首を向ける。</p>
-
-<p>
-<img loading="lazy" src="../images/tutorial/align-planes-mfd/006.png" width="779" height="397">
-</p>
-
-<table>
- <tr>
-  <td><strong>DN</strong>が近いとき</td>
-  <td>Orbit Normal (<kbd>NML+</kbd>) に機首を向ける。</td>
- </tr>
- <tr>
-  <td><strong>AN</strong>が近いとき</td>
-  <td>Orbit Anti-normal (<kbd>NML-</kbd>) に機首を向ける。</td>
- </tr>
-</table>
-
-<p>これらは<strong>Orbit HUD</strong>の<strong>+</strong> or <strong>-</strong>の表示にそれぞれ対応している。</p>
-
-<p>
-<img loading="lazy" src="../images/tutorial/align-planes-mfd/AlignMFD003.png" width="408" height="483">
-</p>
+    <h3 id="orbitnormal">宇宙船の姿勢を変える</h3>
 
 
-<h3 id="thrust">エンジンを噴射する</h3>
+    <p><strong>DN</strong> or <strong>AN</strong>のいずれかが近づいてきたら、現在の進行方向に対して直角になる方向に機首を向ける。</p>
+
+    <p>
+      <img loading="lazy" src="../images/tutorial/align-planes-mfd/006.png" width="779" height="397">
+    </p>
+
+    <table>
+      <tr>
+        <td><strong>DN</strong>が近いとき</td>
+        <td><kbd>NML+</kbd>に機首を向ける。</td>
+      </tr>
+      <tr>
+        <td><strong>AN</strong>が近いとき</td>
+        <td><kbd>NML-</kbd>に機首を向ける。</td>
+      </tr>
+    </table>
+
+    <p>これらは<strong>Orbit HUD</strong>の<strong>+</strong> or <strong>-</strong>の表示にそれぞれ対応している。</p>
+
+    <p>
+      <img loading="lazy" src="../images/tutorial/align-planes-mfd/AlignMFD003.png" width="408" height="483">
+    </p>
 
 
-<p>自分の軌道と相手の軌道とのずれは<strong>RInc</strong>で表示される。</p>
-<p><strong>TthA</strong> / <strong>TthD</strong>の時間を2で割って（画像の例では39÷2で約20秒）、<strong>Tn</strong>がその数字になったら、スロットル全開で噴射する。<br>
-<strong>RInc</strong>がゼロに近づくか、<strong>Rate</strong>が<strong>+</strong>になるまで噴射する。</p>
-
-<p>
-<img loading="lazy" src="../images/tutorial/align-planes-mfd/AlignMFD001.png" width="655" height="592">
-</p>
-
-<p>エンジンの出力を半分に抑える場合は、時間を倍にして40秒前から噴射する。</p>
-
-<table>
- <tr>
-  <td><strong>RInc</strong></td>
-  <td>relative inclination</td>
-  <td>軌道面のずれ。<br>相手の軌道面を基準にした角度として表示される。</td>
- </tr>
- <tr>
-  <td><strong>Rate</strong></td>
-  <td>rate of change</td>
-  <td>軌道面のずれが変化する速度。</td>
- </tr>
- <tr>
-  <td><strong>Tn</strong></td>
-  <td>time to node</td>
-  <td>交点(AN or DN)までの時間。</td>
- </tr>
- <tr>
-  <td><strong>Est thrust T</strong></td>
-  <td>estimated thrust times</td>
-  <td>予測噴射時間。</td>
- </tr>
- <tr>
-  <td><strong>TthA</strong></td>
-    <td></td>
-  <td>ANでの予測噴射時間。</td>
- </tr>
- <tr>
-  <td><strong>TthD</strong></td>
-    <td></td>
-  <td>DNでの予測噴射時間。</td>
- </tr>
-</table>
+    <h3 id="thrust">エンジンを噴射する</h3>
 
 
-<h4 id="thrust_caution">注意点</h4>
+    <p>自分の軌道と相手の軌道とのずれは<strong>RInc</strong>で表示される。</p>
+    <p><strong>TthA</strong> /
+      <strong>TthD</strong>の時間を2で割って（画像の例では39÷2で約20秒）、<strong>Tn</strong>がその数字になったら、スロットル全開で噴射する。<br>
+      <strong>RInc</strong>がゼロに近づくか、<strong>Rate</strong>が<strong>+</strong>になるまで噴射する。
+    </p>
+
+    <p>
+      <img loading="lazy" src="../images/tutorial/align-planes-mfd/AlignMFD001.png" width="655" height="592">
+    </p>
+
+    <p>エンジンの出力を半分に抑える場合は、時間を倍にして40秒前から噴射する。</p>
+
+    <table>
+      <tr>
+        <td><abbr title="relative inclination">RInc</abbr></td>
+        <td>軌道面のずれ。<br>相手の軌道面を基準にした角度として表示される。</td>
+      </tr>
+      <tr>
+        <td><abbr title="rate of change">Rate</abbr></td>
+        <td>軌道面のずれが変化する速度。</td>
+      </tr>
+      <tr>
+        <td><abbr title="time to node">Tn</abbr></td>
+        <td>交点(AN or DN)までの時間。</td>
+      </tr>
+      <tr>
+        <td><abbr title="estimated thrust times">Est thrust T</abbr></td>
+        <td>予測噴射時間。</td>
+      </tr>
+      <tr>
+        <td><abbr title="predicted thrust times for Ascending Node">TthA</abbr></td>
+        <td>ANでの予測噴射時間。</td>
+      </tr>
+      <tr>
+        <td><abbr title="predicted thrust times for Descending Node">TthD</abbr></td>
+        <td>DNでの予測噴射時間。</td>
+      </tr>
+    </table>
 
 
-<p>エンジンの強力な一部の機体（Delta Gliderなど）では、「エンジン全開だとオートパイロットが<strong>NML+</strong> / <strong>NML-</strong>姿勢を維持できない」という問題が発生する。<br>
-このため、出力を低めに押さえて軌道変更する必要がある。</p>
-
-<p>マニュアルには<strong>KILL THRUST</strong>の表示が出たらエンジンを切るよう書かれているが、<strong class="caution">無視して自分で判断すること。</strong><br>
-KILL THRUSTの表示はあくまでも目安であって、完璧にタイミングを合わせる必要はない。</p>
+    <h4 id="thrust_caution">注意点</h4>
 
 
-<h4 id="thrust_time">噴射時間の違い</h4>
+    <p>エンジンの強力な一部の機体（Delta Gliderなど）では、「エンジン全開だとオートパイロットが<strong>NML+</strong> /
+      <strong>NML-</strong>姿勢を維持できない」という問題が発生する。<br>
+      このため、出力を低めに押さえて軌道変更する必要がある。</p>
+
+    <p>マニュアルには<strong>KILL THRUST</strong>の表示が出たらエンジンを切るよう書かれているが、<strong class="caution">無視して自分で判断すること。</strong><br>
+      KILL THRUSTの表示はあくまでも目安であって、完璧にタイミングを合わせる必要はない。</p>
 
 
-<p>宇宙船の速度によって、軌道面の変更に必要な速度変更(Delta V)は異なる。<br>
-速度が遅ければ、必要な噴射時間が短くなる。<br>
-速度が高ければ、必要な噴射時間が長くなる。</p>
-
-<p>宇宙船の速度は、遠地点で遅くなり、近地点で早くなる。<br>
-したがって、遠地点に近いほうの交点のほうが噴射時間が短くなる。</p>
-
-<p><strong>TthA</strong>と<strong>TthD</strong>で予測噴射時間が異なるのはこのため。</p>
+    <h4 id="thrust_time">噴射時間の違い</h4>
 
 
-<h2 id="launch">打ち上げとAlign MFD</h2>
+    <p>宇宙船の速度によって、軌道面の変更に必要な速度変更(Delta V)は異なる。<br>
+      速度が遅ければ、必要な噴射時間が短くなる。<br>
+      速度が高ければ、必要な噴射時間が長くなる。</p>
+
+    <p>宇宙船の速度は、遠地点で遅くなり、近地点で早くなる。<br>
+      したがって、遠地点に近いほうの交点のほうが噴射時間が短くなる。</p>
+
+    <p><strong>TthA</strong>と<strong>TthD</strong>で予測噴射時間が異なるのはこのため。</p>
 
 
-<p>打ち上げと同時にAlign MFDを使うと、効率よく軌道投入することができる。<br>
-<a href="part9.html" target="_blank">Part9 月への打ち上げ</a></p>
-
-<p>タイミングを待って決まった方位に打ち上げるという基本は変わらないが、高度と速度が上がってきたら、Align MFDを見ながら針路を左右に調整する。<br>
-これによって、RIncを低く抑えることができる。</p>
-<p>軌道上でAlign MFDを使ってRIncを下げるには、大量の燃料が必要になる。<br>
-打ち上げの段階でRIncをできるだけ小さくするよう心がけること。</p>
+    <h2 id="launch">打ち上げとAlign MFD</h2>
 
 
-<h2 id="misc">その他の機能</h2>
+    <p>打ち上げと同時にAlign MFDを使うと、効率よく軌道投入することができる。<br>
+      <a href="part9.html" target="_blank">Part9 月への打ち上げ</a>
+    </p>
+
+    <p>タイミングを待って決まった方位に打ち上げるという基本は変わらないが、高度と速度が上がってきたら、Align MFDを見ながら針路を左右に調整する。<br>
+      これによって、RIncを低く抑えることができる。</p>
+    <p>軌道上でAlign MFDを使ってRIncを下げるには、大量の燃料が必要になる。<br>
+      打ち上げの段階でRIncをできるだけ小さくするよう心がけること。</p>
 
 
-<p>各ボタンの機能は以下の通り。</p>
+    <h2 id="misc">その他の機能</h2>
 
-<table>
- <tr>
-  <td><strong>REF</strong></td>
-  <td>基準(reference)となる天体を指定する。</td>
- </tr>
- <tr>
-  <td><strong>AR</strong></td>
-  <td>基準天体を自動で設定する。<br>例えば地球から月の重力圏内に移動したとき、ARをクリックすると自動で地球から月に切り替わる。</td>
- </tr>
- <tr>
-  <td><strong>ELS</strong></td>
-  <td>軌道要素(elements)を指定する。<br><a href="../misc/orbitalelements.html#inc" target="_blank">Inc</a>と<a href="../misc/orbitalelements.html#lan" target="_blank">LAN</a>の2つを入力する。</td>
- </tr>
-</table>
 
-<p>ELSボタンの使い方については、以下の記事を参照してください。<br>
-<a href="../transximfd/transx-functions.html#alignmfd" target="_blank">TransXの機能（中級者向け）</a></p>
+    <p>各ボタンの機能は以下の通り。</p>
+
+    <table>
+      <tr>
+        <td><abbr title="Orbit reference">REF</abbr></td>
+        <td>基準となる天体を指定する。</td>
+      </tr>
+      <tr>
+        <td><abbr title="Auto reference">AR</abbr></td>
+        <td>基準天体を自動で設定する。<br>例えば地球から月の重力圏内に移動したとき、ARをクリックすると自動で地球から月に切り替わる。</td>
+      </tr>
+      <tr>
+        <td><abbr title="Select elements">ELS</abbr></td>
+        <td>軌道要素を指定する。<br><a href="../misc/orbitalelements.html#inc" target="_blank">Inc</a>と<a
+            href="../misc/orbitalelements.html#lan" target="_blank">LAN</a>の2つを入力する。</td>
+      </tr>
+    </table>
+
+    <p>ELSボタンの使い方については、以下の記事を参照してください。<br>
+      <a href="../transximfd/transx-functions.html#alignmfd" target="_blank">TransXの機能（中級者向け）</a>
+    </p>
 
   </main>
 
 </body>
+
 </html>

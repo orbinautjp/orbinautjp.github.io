@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 
 <html lang="ja">
+
 <head>
   <script src="../scripts/ga.js"></script>
   <meta charset="UTF-8">
@@ -15,189 +16,193 @@
 
   <main>
 
-  <h1>AMSO アポロ11号チュートリアル Part1 （打ち上げとTLI）</h1>
+    <h1>AMSO アポロ11号チュートリアル Part1 （打ち上げとTLI）</h1>
 
 
-  <p>このチュートリアルでは、アポロ11号ミッションを打ち上げから着水まで通してプレイする手順について説明します。</p>
+    <p>このチュートリアルでは、アポロ11号ミッションを打ち上げから着水まで通してプレイする手順について説明します。</p>
 
-  <ul>
-  <li><a href="#required">必要なファイル</a></li>
-  <li><a href="#caution">注意点</a></li>
-  <li><a href="#sound">自動音声</a></li>
-  <li><a href="#scenario">使用するシナリオ</a></li>
-  <li><a href="#launch">打ち上げから軌道投入まで</a></li>
-  <li><a href="#tli">TLI</a>
-  <ul>
-  <li><a href="#tli_ltmfd">LTMFDを開く</a></li>
-  <li><a href="#ltmfd_data">データを入力する</a></li>
-  <li><a href="#ltmfd_exe">TLIを実行する</a></li>
-  <li><a href="#tli_fail">TLIに失敗するとき</a></li>
-  <li><a href="#tli_toa">TOAの設定</a></li>
-  </ul>
-  </li>
-  <li><a href="#timeline">史実のタイムライン</a></li>
-  </ul>
+    <ul>
+      <li><a href="#required">必要なファイル</a></li>
+      <li><a href="#caution">注意点</a></li>
+      <li><a href="#sound">自動音声</a></li>
+      <li><a href="#scenario">使用するシナリオ</a></li>
+      <li><a href="#launch">打ち上げから軌道投入まで</a></li>
+      <li><a href="#tli">TLI</a>
+        <ul>
+          <li><a href="#tli_ltmfd">LTMFDを開く</a></li>
+          <li><a href="#ltmfd_data">データを入力する</a></li>
+          <li><a href="#ltmfd_exe">TLIを実行する</a></li>
+          <li><a href="#tli_fail">TLIに失敗するとき</a></li>
+          <li><a href="#tli_toa">TOAの設定</a></li>
+        </ul>
+      </li>
+      <li><a href="#timeline">史実のタイムライン</a></li>
+    </ul>
 
-  <h2 id="required">必要なファイル</h2>
+    <h2 id="required">必要なファイル</h2>
 
-  <p>あらかじめ、以下のMODをすべてインストールしておいてください。</p>
+    <p>あらかじめ、以下のMODをすべてインストールしておいてください。</p>
 
-  <ul>
-  <li><a href="index.html#amso_download">AMSOのダウンロード+インストール</a></li>
-  <li><a href="../transximfd/imfd-download.html">IMFDのインストールと設定</a></li>
-  <li><a href="../mods/lunartransfermfd.html">LunarTransferMFDのダウンロード+インストール</a></li>
-  </ul>
+    <ul>
+      <li><a href="index.html#amso_download">AMSOのダウンロード+インストール</a></li>
+      <li><a href="../transximfd/imfd-download.html">IMFDのインストールと設定</a></li>
+      <li><a href="../mods/lunartransfermfd.html">LunarTransferMFDのダウンロード+インストール</a></li>
+    </ul>
 
-  <h2 id="caution">注意点</h2>
+    <h2 id="caution">注意点</h2>
 
-  <p>以下のショートカットキーを押してしまうと、その時点でミッション失敗になる可能性があります。</p>
+    <p>以下のショートカットキーを押してしまうと、その時点でミッション失敗になる可能性があります。</p>
 
-  <table>
-   <tr>
-    <td>テンキー<kbd>Enter</kbd></td>
-    <td>メインエンジンを全開にする。<br>
+    <table class="center1col">
+      <tr>
+        <td>テンキー<kbd>Enter</kbd></td>
+        <td>メインエンジンを全開にする。<br>
           テンキー以外の<kbd>Enter</kbd>なら問題ない。</td>
-   </tr>
-   <tr>
-    <td align="center"><kbd>J</kbd></td>
-    <td>ステージを分離する。<br>
+      </tr>
+      <tr>
+        <td><kbd>J</kbd></td>
+        <td>ステージを分離する。<br>
           打ち上げを強制的に中止する。</td>
-   </tr>
-  </table>
+      </tr>
+    </table>
 
-  <p><a href="amso-keymap.html" target="_blank">AMSO キー操作一覧</a></p>
+    <p><a href="amso-keymap.html" target="_blank">AMSO キー操作一覧</a></p>
 
-  <h2 id="sound">自動音声</h2>
+    <h2 id="sound">自動音声</h2>
 
-  <p>音声パックを導入している場合、特定の時間になるとタイムワープが自動で解除されます。<br>
-  <kbd>Ctrl</kbd>+<kbd>K</kbd>でこの機能を停止できます（音声が再生されなくなります）。</p>
+    <p>音声パックを導入している場合、特定の時間になるとタイムワープが自動で解除されます。<br>
+      <kbd>Ctrl</kbd>+<kbd>K</kbd>でこの機能を停止できます（音声が再生されなくなります）。
+    </p>
 
-  <h2 id="scenario">使用するシナリオ</h2>
+    <h2 id="scenario">使用するシナリオ</h2>
 
-  <p>使用するシナリオは、<strong>AS-506</strong>フォルダの<strong>Apollo 11 step 01</strong>です。</p>
+    <p>使用するシナリオは、<strong>AS-506</strong>フォルダの<strong>Apollo 11 step 01</strong>です。</p>
 
-<p>
-<img loading="lazy" src="../images/apollo/amso-11-1/001.png" width="227" height="119">
-  </p>
+    <p>
+      <img loading="lazy" src="../images/apollo/amso-11-1/001.png" width="227" height="119">
+    </p>
 
-  <h2 id="launch">打ち上げから軌道投入まで</h2>
+    <h2 id="launch">打ち上げから軌道投入まで</h2>
 
-  <p>ゲーム開始から<strong>30秒後</strong>に<kbd>J</kbd>キーを押す。（ゲーム内右上の時計で<strong>13:27:00</strong>）</p>
+    <p>ゲーム開始から<strong>30秒後</strong>に<kbd>J</kbd>キーを押す。（ゲーム内右上の時計で<strong>13:27:00</strong>）</p>
 
-<p>
-<img loading="lazy" src="../images/apollo/amso-11-1/002.png" width="195" height="57">
-  </p>
-  <p>5分後に自動打ち上げ＆軌道投入が実行されるので、何もせず待つ。※</p>
-  <p class="note">※音声パックを導入している場合、実際のカウントダウンの録音が再生されます。</p>
+    <p>
+      <img loading="lazy" src="../images/apollo/amso-11-1/002.png" width="195" height="57">
+    </p>
+    <p>5分後に自動打ち上げ＆軌道投入が実行されるので、何もせず待つ。※</p>
+    <p class="note">※音声パックを導入している場合、実際のカウントダウンの録音が再生されます。</p>
 
-  <h2 id="tli">TLI</h2>
+    <h2 id="tli">TLI</h2>
 
-  <h3 id="tli_ltmfd">LTMFDを開く</h3>
+    <h3 id="tli_ltmfd">LTMFDを開く</h3>
 
-  <p>ロケットが軌道に乗ったら、<strong>LunarTransferMFD</strong>を起動する。</p>
-  <p><kbd>PRG</kbd>をクリックして<strong>Program menu</strong>を開く。<br>
-  <kbd>NXT</kbd>を何度かクリックして<strong>Program TLI</strong>を選択。<br>
-  <kbd>SET</kbd>をクリック。</p>
+    <p>ロケットが軌道に乗ったら、<strong>LunarTransferMFD</strong>を起動する。</p>
+    <p><kbd>PRG</kbd>をクリックして<strong>Program menu</strong>を開く。<br>
+      <kbd>NXT</kbd>を何度かクリックして<strong>Program TLI</strong>を選択。<br>
+      <kbd>SET</kbd>をクリック。
+    </p>
 
-<p>
-<img loading="lazy" src="../images/apollo/amso-11-1/003.png" width="427" height="349">
-  </p>
+    <p>
+      <img loading="lazy" src="../images/apollo/amso-11-1/003.png" width="427" height="349">
+    </p>
 
-  <h3 id="ltmfd_data">データを入力する</h3>
+    <h3 id="ltmfd_data">データを入力する</h3>
 
-  <p><kbd>+</kbd>をクリックして<strong>Mod</strong>を<strong>Surface</strong>にする。<br>
-  <strong>TIg</strong>でも同様に<kbd>+</kbd>をクリックして<strong>Manual</strong>にする。<br>
-  <strong>Tgt</strong>では何度か<kbd>+</kbd>をクリックして、<strong>Tranquillity</strong>（静かの海）にする。</p>
+    <p><kbd>+</kbd>をクリックして<strong>Mod</strong>を<strong>Surface</strong>にする。<br>
+      <strong>TIg</strong>でも同様に<kbd>+</kbd>をクリックして<strong>Manual</strong>にする。<br>
+      <strong>Tgt</strong>では何度か<kbd>+</kbd>をクリックして、<strong>Tranquillity</strong>（静かの海）にする。
+    </p>
 
-<p>
-<img loading="lazy" src="../images/apollo/amso-11-1/004.png" width="276" height="146">
-  </p>
-  <p class="note">※ModはMode（モード）、TIgはTime to Ignition（点火までの時間）、TgtはTargetの略</p>
-  <p>出発(TLI※)・到着(LOI)・着陸の予定時刻と、月周回軌道の高度を設定する。</p>
-  <p class="note">※TLI(Trans Lunar Injection)＝エンジンを噴射して地球から月に向かうこと</p>
+    <p>
+      <img loading="lazy" src="../images/apollo/amso-11-1/004.png" width="276" height="146">
+    </p>
+    <p class="note">※ModはMode（モード）、TIgはTime to Ignition（点火までの時間）、TgtはTargetの略</p>
+    <p>出発(TLI※)・到着(LOI)・着陸の予定時刻と、月周回軌道の高度を設定する。</p>
+    <p class="note">※TLI(Trans Lunar Injection)＝エンジンを噴射して地球から月に向かうこと</p>
 
-  <table>
-   <tr>
-    <td><strong>PeT</strong></td>
-    <td><strong>75:49:50</strong></td>
-   </tr>
-   <tr>
-    <td><strong>PeA</strong></td>
-    <td><strong>111k</strong></td>
-   </tr>
-   <tr>
-    <td><strong>TOA</strong></td>
-    <td><strong>106:30:00</strong></td>
-   </tr>
-   <tr>
-    <td><strong>TIg</strong></td>
-    <td><strong>2:44:16</strong></td>
-   </tr>
-  </table>
+    <table>
+      <tr>
+        <td><strong>PeT</strong></td>
+        <td><strong>75:49:50</strong></td>
+      </tr>
+      <tr>
+        <td><strong>PeA</strong></td>
+        <td><strong>111k</strong></td>
+      </tr>
+      <tr>
+        <td><strong>TOA</strong></td>
+        <td><strong>106:30:00</strong></td>
+      </tr>
+      <tr>
+        <td><strong>TIg</strong></td>
+        <td><strong>2:44:16</strong></td>
+      </tr>
+    </table>
 
-  <p><img loading="lazy" src="../images/apollo/amso-11-1/005.png" width="149" height="177"></p>
+    <p><img loading="lazy" src="../images/apollo/amso-11-1/005.png" width="149" height="177"></p>
 
-  <p><strong>PeT</strong>は近月点に到着する（＝月に最接近する）時刻。<br>
-  PeTはLOI（Lunar orbit insertion＝月軌道投入噴射）の開始時刻でもある。</p>
-  <p><strong>PeA</strong>は近月点高度。これが月周回軌道の高度になる。<br>
-  60海里≒111km。</p>
-  <p><strong>TOA</strong>(Time of alignment)は、宇宙船が目標地点の上空を通る時刻。<br>
-  月に到着してから着陸まで間があるので、PeTとは別に設定しておく。</p>
-  <p><strong>TIg</strong>(Time to ignition)はTLI(Trans lunar injection)のエンジン噴射の時刻。</p>
+    <p><strong>PeT</strong>は近月点に到着する（＝月に最接近する）時刻。<br>
+      PeTはLOI（Lunar orbit insertion＝月軌道投入噴射）の開始時刻でもある。</p>
+    <p><strong>PeA</strong>は近月点高度。これが月周回軌道の高度になる。<br>
+      60海里≒111km。</p>
+    <p><strong>TOA</strong>(Time of alignment)は、宇宙船が目標地点の上空を通る時刻。<br>
+      月に到着してから着陸まで間があるので、PeTとは別に設定しておく。</p>
+    <p><strong>TIg</strong>(Time to ignition)はTLI(Trans lunar injection)のエンジン噴射の時刻。</p>
 
-  <h3 id="ltmfd_exe">TLIを実行する</h3>
+    <h3 id="ltmfd_exe">TLIを実行する</h3>
 
-  <p>各項目を設定したら、左下の<kbd>EXE</kbd>ボタンをクリック。</p>
+    <p>各項目を設定したら、左下の<kbd>EXE</kbd>ボタンをクリック。</p>
 
-<p>
-<img loading="lazy" src="../images/apollo/amso-11-1/006.png" width="483" height="430">
-  </p>
-  <p><kbd>DV</kbd>ボタンをクリックして、もう一度<kbd>EXE</kbd>ボタンをクリックすると、自動噴射のカウントダウンが開始する。</p>
+    <p>
+      <img loading="lazy" src="../images/apollo/amso-11-1/006.png" width="483" height="430">
+    </p>
+    <p><kbd>DV</kbd>ボタンをクリックして、もう一度<kbd>EXE</kbd>ボタンをクリックすると、自動噴射のカウントダウンが開始する。</p>
 
-<p>
-<img loading="lazy" src="../images/apollo/amso-11-1/007.png" width="415" height="389">
-  </p>
-  <p>タイムワープで早送りして、何もせず待つ。<br>
-  全自動で噴射が実行される。<br>
-  噴射が終わったら、<kbd>DV</kbd>ボタンをクリックして元の画面に戻る。</p>
+    <p>
+      <img loading="lazy" src="../images/apollo/amso-11-1/007.png" width="415" height="389">
+    </p>
+    <p>タイムワープで早送りして、何もせず待つ。<br>
+      全自動で噴射が実行される。<br>
+      噴射が終わったら、<kbd>DV</kbd>ボタンをクリックして元の画面に戻る。</p>
 
-  <h3 id="tli_fail">TLIに失敗するとき</h3>
+    <h3 id="tli_fail">TLIに失敗するとき</h3>
 
-  <p>LunarTransferMFDの計算がうまくいかず、TLIに失敗することがあるようです。<br>
-  MFD上の軌道表示が正しくない（軌道が大気圏に入っている）場合は、いったんゲームを終了してください。</p>
+    <p>LunarTransferMFDの計算がうまくいかず、TLIに失敗することがあるようです。<br>
+      MFD上の軌道表示が正しくない（軌道が大気圏に入っている）場合は、いったんゲームを終了してください。</p>
 
-  <p><img loading="lazy" src="../images/apollo/amso-11-1/010.png" width="859" height="428">
-  </p>
+    <p><img loading="lazy" src="../images/apollo/amso-11-1/010.png" width="859" height="428">
+    </p>
 
-  <p><strong>Launchpad</strong>の<strong>Current state</strong>からやり直して、もう一度LunarTransferMFDにデータを入力すると正しく計算されます。</p>
+    <p><strong>Launchpad</strong>の<strong>Current state</strong>からやり直して、もう一度LunarTransferMFDにデータを入力すると正しく計算されます。</p>
 
-  <p><img loading="lazy" src="../images/apollo/amso-11-1/011.png" width="191" height="145">
-  </p>
+    <p><img loading="lazy" src="../images/apollo/amso-11-1/011.png" width="191" height="145">
+    </p>
 
-  <h3 id="tli_toa">TOAの設定</h3>
+    <h3 id="tli_toa">TOAの設定</h3>
 
-  <p>TOAは「宇宙船の軌道が、目的地上空を通る時刻」を決定します。<br>
-  通常は着陸予定時刻(11号ならGET 102:45:39.9)に設定します。</p>
-  <p>ただしアポロ11号のミッションでは、着陸船を月から打ち上げて、司令船とランデブーさせる必要があります。</p>
-  <p>着陸した時点では、司令船の軌道は着陸地点のほぼ真上を通っています。</p>
+    <p>TOAは「宇宙船の軌道が、目的地上空を通る時刻」を決定します。<br>
+      通常は着陸予定時刻(11号ならGET 102:45:39.9)に設定します。</p>
+    <p>ただしアポロ11号のミッションでは、着陸船を月から打ち上げて、司令船とランデブーさせる必要があります。</p>
+    <p>着陸した時点では、司令船の軌道は着陸地点のほぼ真上を通っています。</p>
 
-<p>
-<img loading="lazy" src="../images/apollo/amso-11-1/008.png" width="425" height="264">
-  </p>
-  <p>けれども、月が自転しているため、出発予定時刻が近づく頃には遠ざかってしまいます。</p>
+    <p>
+      <img loading="lazy" src="../images/apollo/amso-11-1/008.png" width="425" height="264">
+    </p>
+    <p>けれども、月が自転しているため、出発予定時刻が近づく頃には遠ざかってしまいます。</p>
 
-<p>
-<img loading="lazy" src="../images/apollo/amso-11-1/009.png" width="426" height="264">
-  </p>
-  <p>TOAと着陸予定時刻をずらしておくことによって、出発予定時刻において着陸船と司令船の軌道を近づけることができます。<br>
-  不要な軌道修正を減らして、帰還のための燃料を節約するのに役立ちます。</p>
+    <p>
+      <img loading="lazy" src="../images/apollo/amso-11-1/009.png" width="426" height="264">
+    </p>
+    <p>TOAと着陸予定時刻をずらしておくことによって、出発予定時刻において着陸船と司令船の軌道を近づけることができます。<br>
+      不要な軌道修正を減らして、帰還のための燃料を節約するのに役立ちます。</p>
 
-  <h2 id="timeline">史実のタイムライン</h2>
+    <h2 id="timeline">史実のタイムライン</h2>
 
-  <p>以下のウェブサイトにて、アポロ11号ミッションの実際のタイムラインを確認できます。</p>
-  <p><a href="https://history.nasa.gov/SP-4029/Apollo_11i_Timeline.htm">Apollo 11 Timeline</a></p>
+    <p>以下のウェブサイトにて、アポロ11号ミッションの実際のタイムラインを確認できます。</p>
+    <p><a href="https://history.nasa.gov/SP-4029/Apollo_11i_Timeline.htm">Apollo 11 Timeline</a></p>
 
   </main>
 
 </body>
+
 </html>
