@@ -63,8 +63,14 @@ main nav {
   display: block;
   max-width: 22rem;
   background-color: #ffffff;
-  padding: 0.1rem 0.5rem;
+  padding: 0.2rem 0.9rem;
+  margin-top: 0.9rem;
+  margin-bottom: auto;
   border-radius: 0.5rem;
+}
+main nav > ul, main nav > ol {
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
 }
 
 /* heading */
@@ -97,8 +103,12 @@ h4 {
 
 /* paragraph */
 
+p {
+  margin-top: 0.9rem;
+  margin-bottom: auto;
+}
 p.note {
-   font-size: 85%;
+  font-size: 85%;
 }
 p.caution {
   display: table;
@@ -107,7 +117,6 @@ p.caution {
   border-radius: 0.3rem;
   padding: 0.5rem 0.5rem 0.5rem 3rem;
   position: relative;
-  margin-top: auto;
 }
 p.caution::before {
   content: "⚠";
@@ -162,8 +171,8 @@ table {
   width: auto;
   text-align: left;
   vertical-align: middle;
-  margin-top: 0.2rem;
-  margin-bottom: 0.2rem;
+  margin-top: 0.9rem;
+  margin-bottom: auto;
   border: 0.1rem solid #a4a4a4;
   border-collapse: collapse;
 }
@@ -191,6 +200,7 @@ table.center2col td:nth-child(2) {
 
 ul, ol {
   padding-left: 1.2rem;
+  margin-bottom: auto;
 }
 
 /* quote */
@@ -218,7 +228,9 @@ blockquote {
 
 button {
   background-image: linear-gradient(#ffffff, #ffffff, #e9e9e9, #d4d4d4);
-  margin: 1rem;
+  margin-left: 0.5rem;
+  margin-top: 0.9rem;
+  margin-bottom: auto;
   padding: 0.3rem;
   border-radius: 0.2rem;
   cursor: pointer;
