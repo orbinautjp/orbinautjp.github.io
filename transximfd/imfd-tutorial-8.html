@@ -2,12 +2,12 @@
 
 <html lang="ja">
 <head>
-  <script src="../scripts/ga.js"></script>
+  <script src="/scripts/ga.js"></script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="../styles/orbiterjp.css">
-  <script src="../scripts/template.js" charset="utf-8" defer></script>
-  <script src="../scripts/prevnext_imfd.js" charset="utf-8" defer></script>
+  <link rel="stylesheet" href="/styles/orbiterjp.css">
+  <script src="/scripts/template.js" charset="utf-8" defer></script>
+  <script src="/scripts/prevnext_imfd.js" charset="utf-8" defer></script>
   <title>IMFD Part8 月を出発点にしたフライトを作る</title>
 </head>
 
@@ -36,7 +36,7 @@
 
 <ul>
 <li><a href="#explanation">解説</a></li>
-<li><a href="index.html#imfd" target="_blank">IMFDの操作</a></li>
+<li><a href="/transximfd/#imfd" target="_blank">IMFDの操作</a></li>
 </ul>
 
 
@@ -59,14 +59,14 @@
 <p><strong>Delta-glider</strong>フォルダの<strong>Brighton Beach</strong>シナリオでゲームを開始する。</p>
 
 <p>
-<img loading="lazy" src="../images/transximfd/imfd-tutorial-8/001.png" width="253" height="128">
+<img loading="lazy" src="/images/transximfd/imfd-tutorial-8/001.png" width="253" height="128">
 </p>
 
 <p><strong>Program Menu</strong>→<strong>Course</strong>→<strong>Target Intercept</strong>を開く。</p>
 <p><strong>Tgt Mars</strong>、<strong>Src Earth</strong>、<strong>Ref Sun</strong>にする。</p>
 
 <p>
-<img loading="lazy" src="../images/transximfd/imfd-tutorial-8/002.png" width="407" height="456">
+<img loading="lazy" src="/images/transximfd/imfd-tutorial-8/002.png" width="407" height="456">
 </p>
 
 <p>地球から火星へ向かう軌道を作成する。※<br>
@@ -78,13 +78,13 @@
 <h2 id="date">1周前の日時へ飛ぶ</h2>
 
 
-<p><a href="../misc/index.html#sceditor" target="_blank">シナリオエディタ</a>を使って、予定時刻の少し前まで移動する。</p>
+<p><a href="/misc/#sceditor" target="_blank">シナリオエディタ</a>を使って、予定時刻の少し前まで移動する。</p>
 <p>地球発の惑星間飛行では、地球が1日で自転するため、およそ1日前を基準にする。</p>
 <p>しかし、月が地球のまわりを1周するのには27日くらいかかる。<br>
 このため、月を出発点にする場合は、<strong>28日前</strong>まで移動する。</p>
 
 <p>
-<img loading="lazy" src="../images/transximfd/imfd-tutorial-8/003.png" width="250" height="290">
+<img loading="lazy" src="/images/transximfd/imfd-tutorial-8/003.png" width="250" height="290">
 </p>
 
 <p>エウロパの場合、およそ3.6日で木星のまわりを1周するので、4日前まで移動する。</p>
@@ -96,7 +96,7 @@
 <p>もうひとつのMFDでIMFDを開いて、データを共有させる。</p>
 
 <p>
-<img loading="lazy" src="../images/transximfd/imfd-tutorial-8/004.png" width="290" height="97">
+<img loading="lazy" src="/images/transximfd/imfd-tutorial-8/004.png" width="290" height="97">
 </p>
 
 <p><strong>Sling-shot</strong>プログラムを使って、作成しておいた遷移軌道と月の軌道を接続する。</p>
@@ -111,7 +111,7 @@
 <p><strong>Course</strong>が選択されていることを確認する。</p>
 
 <p>
-<img loading="lazy" src="../images/transximfd/imfd-tutorial-8/005.png" width="456" height="456">
+<img loading="lazy" src="/images/transximfd/imfd-tutorial-8/005.png" width="456" height="456">
 </p>
 
 
@@ -122,7 +122,7 @@
 <strong>Escape Vector:</strong>の下の<strong>oV</strong>の数字ができるだけ小さくなるようにする。</p>
 
 <p>
-<img loading="lazy" src="../images/transximfd/imfd-tutorial-8/006.png" width="453" height="457">
+<img loading="lazy" src="/images/transximfd/imfd-tutorial-8/006.png" width="453" height="457">
 </p>
 
 <p>※<strong class="caution">重要</strong>：バグがあるため、MJDを操作しても正常に反応しません。</p>
@@ -135,14 +135,14 @@
 <kbd>Set</kbd>をクリックして、<strong>Sling-shot</strong>の<strong>TEj</strong>と同じ数字を<strong>Target Intercept</strong>の<strong>TEj</strong>に入力する。※</p>
 
 <p>
-<img loading="lazy" src="../images/transximfd/imfd-tutorial-8/007.png" width="263" height="249">
+<img loading="lazy" src="/images/transximfd/imfd-tutorial-8/007.png" width="263" height="249">
 </p>
 
 <p class="note">※桁の小さい数が表示されないため若干のずれがありますが、気にする必要はありません。</p>
 <p><strong>TIn</strong>の時刻を調整して、<strong>Tot</strong>をできるだけ小さくする。※</p>
 
 <p>
-<img loading="lazy" src="../images/transximfd/imfd-tutorial-8/008.png" width="407" height="279">
+<img loading="lazy" src="/images/transximfd/imfd-tutorial-8/008.png" width="407" height="279">
 </p>
 
 <p class="note">※日時を指定して飛ぶ場合は、この作業は必要ありません。</p>
@@ -161,7 +161,7 @@ TransXとは違ってスイングバイの設計はできませんが、「現�
 これを応用して、地球から火星へ飛ぶ軌道と、月の衛星軌道を接続します。</p>
 
 <p>通常のスイングバイを実行する場合は、TransXを使用してください。<br>
-<a href="index.html#slingshot" target="_blank">スイングバイの基本</a></p>
+<a href="/transximfd/#slingshot" target="_blank">スイングバイの基本</a></p>
 
   </main>
 

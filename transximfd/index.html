@@ -3,13 +3,13 @@
 <html lang="ja">
 
 <head>
-  <script src="../scripts/ga.js"></script>
+  <script src="/scripts/ga.js"></script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Orbiterの軌道計算MODについて解説しています。">
-  <link rel="stylesheet" href="../styles/orbiterjp.css">
+  <link rel="stylesheet" href="/styles/orbiterjp.css">
   <link rel="canonical" href="https://orbinautjp.github.io/transximfd/">
-  <script src="../scripts/template.js" charset="utf-8" defer></script>
+  <script src="/scripts/template.js" charset="utf-8" defer></script>
   <title>TransXとIMFD</title>
 </head>
 
@@ -68,7 +68,7 @@
 
 
   <ul>
-    <li><a href="../tutorial/index.html">Orbiterチュートリアル</a></li>
+    <li><a href="/tutorial/">Orbiterチュートリアル</a></li>
     <li><a href="transxbasics.html">TransXの基本</a></li>
   </ul>
 
@@ -88,7 +88,7 @@
   <h3 id="offplane">Off-plane transfer</h3>
 
 
-  <p>軌道面を変更せずに（<a href="../tutorial/align-planes-mfd.html" target="_blank">Align MFD</a>を使わずに）地球から月まで飛行するテクニックについて説明します。
+  <p>軌道面を変更せずに（<a href="/tutorial/align-planes-mfd.html" target="_blank">Align MFD</a>を使わずに）地球から月まで飛行するテクニックについて説明します。
   </p>
 
   <ul>
@@ -144,7 +144,7 @@
 
 
   <p><strong>Offset</strong>機能を使った自由帰還軌道について解説します。<br>
-    <a href="../apollo/index.html#amso" target="_blank">AMSO</a>（アポロ計画のMOD）で必要になるテクニックです。
+    <a href="/apollo/#amso" target="_blank">AMSO</a>（アポロ計画のMOD）で必要になるテクニックです。
   </p>
 
   <ul>
@@ -168,7 +168,7 @@
     <li>単純なマニューバやフライトプランを手早く作れる。</li>
     <li>スイングバイを含むフライトプランの作成が得意。</li>
     <li>比較的シンプルで理解しやすい。</li>
-    <li><a href="../mods/launchmfd.html" target="_blank">LaunchMFD</a>での自動打ち上げが可能。</li>
+    <li><a href="/mods/launchmfd.html" target="_blank">LaunchMFD</a>での自動打ち上げが可能。</li>
   </ul>
 
 
@@ -218,7 +218,7 @@
   <p>TransXの<strong>Auto-min</strong>は、指定した出発時刻において、必要なデルタVが最小になるような軌道を計算します。<br>
     到着時刻の指定はできませんが、手っ取り早く効率のよい軌道を探してくれます。</p>
   <p>IMFDの<strong>Target Intercept</strong>は、出発時刻と到着時刻を指定すると、その条件に合う軌道を自動で作成してくれます。<br>
-    このような計算のことを<a href="../misc/rendezvous-explained.html#imfd" target="_blank">ランベルト問題</a>と呼びます。</p>
+    このような計算のことを<a href="/misc/rendezvous-explained.html#imfd" target="_blank">ランベルト問題</a>と呼びます。</p>
   <p>両者を使い分けたり、組み合わせたりすることで、最適な軌道をすばやく計算することができます。</p>
 
 
@@ -227,10 +227,10 @@
 
   <p>TransXの軌道予測は比較的単純なモデルに基づいています。<br>
     別の言い方をすると、TransXの軌道予測は（ある程度）<strong>必ず外れます。</strong><br>
-    <a href="../basic/realismperturbations.html#perturbations_nonspherical" target="blank">Non spherical gravity</a>にも対応していません。
+    <a href="/basic/realismperturbations.html#perturbations_nonspherical" target="blank">Non spherical gravity</a>にも対応していません。
   </p>
   <p>IMFDの<strong>Map program</strong>は、かなり正確に軌道を予測することができます。※<br>
-    また、<a href="../basic/realismperturbations.html#perturbations_nonspherical" target="blank">Non spherical gravity</a>に対応しています。</p>
+    また、<a href="/basic/realismperturbations.html#perturbations_nonspherical" target="blank">Non spherical gravity</a>に対応しています。</p>
   <p class="note">※Map programの軌道予測にも多少の誤差はあります</p>
   <p>ただし、<strong>Target Intercept</strong>は別の計算方法を用いているため、<strong>必ず誤差が出ます。</strong><br>
     正確な軌道を知るためには、Map programと併用する必要があります。</p>
@@ -259,7 +259,7 @@
     6.571e6(6.571×1000000)と書くこともできます。</p>
 
   <p>
-    <img loading="lazy" src="../images/transximfd/index/002.png"
+    <img loading="lazy" src="/images/transximfd/index/002.png"
         width="220" height="177" />
   </p>
 
@@ -277,7 +277,7 @@
     本来であれば、単位としてm（メートル）をくっつけてkmと表記すべきですが、省略して接頭辞だけを入力します。</p>
 
   <p>
-    <img loading="lazy" src="../images/transximfd/index/003.png"
+    <img loading="lazy" src="/images/transximfd/index/003.png"
         width="226" height="221" />
   </p>
 

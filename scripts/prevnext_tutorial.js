@@ -14,9 +14,9 @@
   const prev = pageNumber - 1
   const next = pageNumber + 1
 
-  const prevURL = (prev < 0) ? 'index.html' : category + prev + '.html'
+  const prevURL = (prev < 0) ? '/tutorial/' : category + prev + '.html'
   const prevText = (prev < 0) ? '目次' : '❮ 戻る'
-  const nextURL = (next > 22) ? 'index.html' : category + next + '.html'
+  const nextURL = (next > 22) ? '/tutorial/' : category + next + '.html'
   const nextText = (next > 22) ? '目次' : '進む ❯'
 
   document.getElementById('prev').href = prevURL

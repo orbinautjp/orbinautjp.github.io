@@ -9,20 +9,20 @@
   <header>
 
   <h1>
-    <a href="../index.html">Home for Orbinauts</a>
+    <a href="/">Home for Orbinauts</a>
   </h1>
 
   </header>
 
   <nav id="topmenu" class="menubar">
-    <a id="menu_basic" href="../basic/index.html">初心者ガイド</a>
-    <a id="menu_tutorial" href="../tutorial/index.html">チュートリアル</a>
-    <a id="menu_transx" href="../transximfd/index.html">TransXとIMFD</a>
-    <a id="menu_iss" href="../iss/index.html">スペースシャトルとISS</a>
-    <a id="menu_apollo" href="../apollo/index.html">アポロ計画</a>
-    <a id="menu_ucgo" href="../ucgo/index.html">UCGOとUMMU</a>
-    <a id="menu_mods" href="../mods/index.html">その他のMOD</a>
-    <a id="menu_misc" href="../misc/index.html">その他</a>
+    <a id="menu_basic" href="/basic/">初心者ガイド</a>
+    <a id="menu_tutorial" href="/tutorial/">チュートリアル</a>
+    <a id="menu_transx" href="/transximfd/">TransXとIMFD</a>
+    <a id="menu_iss" href="/iss/">スペースシャトルとISS</a>
+    <a id="menu_apollo" href="/apollo/">アポロ計画</a>
+    <a id="menu_ucgo" href="/ucgo/">UCGOとUMMU</a>
+    <a id="menu_mods" href="/mods/">その他のMOD</a>
+    <a id="menu_misc" href="/misc/">その他</a>
     <button type="button" id="button_menu">メニュー</button>
   </nav>
   `)
