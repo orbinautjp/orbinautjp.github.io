@@ -12,9 +12,9 @@
   const prev = missionStage - 1
   const next = missionStage + 1
 
-  const prevURL = (prev < 1) ? 'index.html#slingshot' : missionName + prev + '.html'
+  const prevURL = (prev < 1) ? '/transximfd/#slingshot' : missionName + prev + '.html'
   const prevText = (prev < 1) ? '目次' : '❮ 戻る'
-  const nextURL = (next > 3) ? 'index.html#slingshot' : missionName + next + '.html'
+  const nextURL = (next > 3) ? '/transximfd/#slingshot' : missionName + next + '.html'
   const nextText = (next > 3) ? '目次' : '進む ❯'
 
   document.getElementById('prev').href = prevURL

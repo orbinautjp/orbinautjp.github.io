@@ -12,9 +12,9 @@
   const prev = missionStage - 1
   const next = missionStage + 1
 
-  const prevURL = (prev < 1) ? 'index.html' : missionName + prev + '.html'
+  const prevURL = (prev < 1) ? '/apollo/#amso' : missionName + prev + '.html'
   const prevText = (prev < 1) ? '目次' : '❮ 戻る'
-  const nextURL = (next > 6) ? 'index.html' : missionName + next + '.html'
+  const nextURL = (next > 6) ? '/apollo/#amso' : missionName + next + '.html'
   const nextText = (next > 6) ? '目次' : '進む ❯'
 
   document.getElementById('prev').href = prevURL

@@ -12,9 +12,9 @@
   const prev = missionStage - 1
   const next = missionStage + 1
 
-  const prevURL = (prev < 1) ? 'index.html#imfd' : missionName + prev + '.html'
+  const prevURL = (prev < 1) ? '/transximfd/#imfd' : missionName + prev + '.html'
   const prevText = (prev < 1) ? '目次' : '❮ 戻る'
-  const nextURL = (next > 9) ? 'index.html#imfd' : missionName + next + '.html'
+  const nextURL = (next > 9) ? '/transximfd/#imfd' : missionName + next + '.html'
   const nextText = (next > 9) ? '目次' : '進む ❯'
 
   document.getElementById('prev').href = prevURL
