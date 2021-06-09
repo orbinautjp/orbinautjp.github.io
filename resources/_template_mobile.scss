@@ -1,48 +1,62 @@
-/* for mobile devices */
+@use "mixin" as b;
+@use "color" as c;
+
+/* template for mobile */
 
 @media only screen and (max-width: 768px) {
 
-  /* responsive template */
- 
+  /* header */
+
   header {
-   background-color: #498c5f;
-   background-image: none;
+    background: {
+      color: c.$GreenBackground;
+      image: none;
+    }
+    h1 {
+      font-size: 1.4rem;
+      a[href] {
+        color: white;
+        text-shadow: none;
+      }
+    }
   }
-  header h1 {
-   font-size: 1.4rem;
+
+  /* menu bar */
+
+  .menubar {
+    a[href] {
+      display: none;
+    }
+    button {
+      display: block;
+      margin: 0%;
+      padding: 0.3rem;
+      border-radius: 0%;
+      line-height: 1.4rem;
+    }
+    &.responsive {
+      button {
+        position: absolute;
+        left: 0;
+        top: 0;
+      }
+      a[href] {
+        float: none;
+        display: block;
+        text-align: right;
+        padding: 0.3rem;
+      }
+    }
   }
-  header h1 a[href] {
-   color: #ffffff;
-   text-shadow: none;
-  }
- 
-  .menubar a[href] {
-   display: none;
-  }
-  .menubar button {
-   display: block;
-   margin: 0%;
-   padding: 0.3rem;
-   border-radius: 0%;
-   line-height: 1.4rem;
-  }
-  .menubar.responsive button {
-  position: absolute;
-  left: 0;
-  top: 0;
-  }
-  .menubar.responsive a[href] {
-  float: none;
-  display: block;
-  text-align: right;
-  padding: 0.3rem;
-  }
-  .menubar:hover {
-   box-shadow: none;
-  }
+
+  /* footer */
 
   footer ul {
-   font-size: 0.7rem;
+    font-size: 0.7rem;
   }
 
+  #prev,
+  #next {
+    padding: 0.5rem 0.7rem;
+  }
 }

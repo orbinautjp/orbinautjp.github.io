@@ -3,11 +3,11 @@
 body {
   font-family: Arial, Meiryo, sans-serif;
   font-weight: normal;
+  font-size: 0.9rem;
   color: black;
   margin: 0%;
   padding: 0%;
   background-color: #498c5f;
-  font-size: 0.9rem;
   line-height: 1.5rem;
 }
 
@@ -56,12 +56,9 @@ img {
   vertical-align: top;
   background-color: white;
 }
-
 img.small {
   width: 12rem;
-  height: auto;
 }
-
 img.vertical {
   width: auto;
   height: 17rem;
@@ -80,6 +77,7 @@ figcaption {
 h2 {
   font-family: Arial, Meiryo, sans-serif;
   font-weight: normal;
+  font-size: 0.9rem;
   color: black;
   margin: 1.5rem 0%;
   border-bottom: 0.1rem solid #399139;
@@ -91,6 +89,7 @@ h2 {
 h3 {
   font-family: Arial, Meiryo, sans-serif;
   font-weight: normal;
+  font-size: 0.9rem;
   color: black;
   margin: 1.5rem 0%;
   border-bottom: 0.1rem solid black;
@@ -101,6 +100,7 @@ h3 {
 h4 {
   font-family: Arial, Meiryo, sans-serif;
   font-weight: normal;
+  font-size: 0.9rem;
   color: black;
   margin: 1.5rem 0%;
   border-bottom: 0.1rem solid #808080;
@@ -117,11 +117,9 @@ h4 {
 p {
   margin: 0.8rem 0%;
 }
-
 p.note {
   font-size: 85%;
 }
-
 p.caution {
   display: table;
   background-color: white;
@@ -130,7 +128,6 @@ p.caution {
   padding: 0.5rem 0.5rem 0.5rem 3rem;
   position: relative;
 }
-
 p.caution::before {
   content: "⚠";
   font-size: 1.5rem;
@@ -143,16 +140,12 @@ a[href] {
   color: #0037d4;
   text-decoration: none;
 }
-
 a[href]:hover {
   color: #00bfff;
 }
 
 /* keyword */
 kbd {
-  font-family: Arial, Meiryo, sans-serif;
-  font-weight: normal;
-  color: black;
   border-bottom: 0.1rem solid #4c4c4c;
   border-right: 0.1rem solid #4c4c4c;
   border-top: 0.1rem solid #b2b2b2;
@@ -160,7 +153,10 @@ kbd {
   white-space: nowrap;
   font-weight: bold;
   padding: 0.05rem 0.2rem;
+  font-family: Arial, Meiryo, sans-serif;
   font-weight: normal;
+  font-size: 0.9rem;
+  color: black;
   background-color: white;
   margin: 0% 0.2rem;
 }
@@ -221,7 +217,7 @@ ol ol {
   margin: auto;
 }
 
-/* quote */
+/* quotes */
 pre,
 blockquote {
   margin: 0.8rem 0%;
@@ -243,9 +239,10 @@ input[type=submit] {
   padding: 0.3rem;
   border-radius: 0.2rem;
   cursor: pointer;
+  /* onclick */
 }
-
-button:active,
+button:active, button:active,
+input[type=submit]:active,
 input[type=submit]:active {
   border: 0.15rem solid #f2f2f2;
 }
@@ -256,40 +253,37 @@ textarea {
   min-height: 10rem;
 }
 
-/* header (template) */
+/* template for desktop */
+/* header */
 header {
   margin-top: 0%;
   padding: 0%;
   background-color: #000000;
-  background-image: url(../images/background_header.jpg);
+  background-image: url(/images/background_header.jpg);
   background-repeat: no-repeat;
   background-size: 100%;
   background-position: center;
+  /* website name */
 }
-
 header h1 {
   margin: 0%;
   padding: 1rem;
   font-family: Georgia, serif;
   font-size: 1.8rem;
   font-weight: normal;
-  text-shadow: -0.05rem 0 black, 0 0.05rem black, 0.05rem 0 black, 0 -0.05rem black, 0 0 0.3rem black;
+  text-shadow: -0.05rem 0 black, 0 0.05rem black, 0.05rem 0 black, 0 -0.05rem black, 0 0 0.5rem black;
 }
-
 header h1 a[href] {
-  color: #ffffff;
+  color: white;
 }
-
 header h1 a[href]:hover {
   text-shadow: none;
-  color: #ffffff;
+  color: white;
 }
 
-/* menu bar (template) */
+/* menu bar */
 .menubar {
   position: sticky;
-  position: -webkit-sticky;
-  /* Safari */
   top: 0;
   background-color: #3d3d3d;
   overflow: hidden;
@@ -297,6 +291,24 @@ header h1 a[href]:hover {
   z-index: 1;
   font-size: 0;
   line-height: 0;
+  /* links */
+  /* hidden on desktop */
+}
+.menubar a[href] {
+  margin: 0%;
+  white-space: nowrap;
+  display: inline-block;
+  padding: 0.7rem;
+  color: white;
+  font-size: 0.9rem;
+  line-height: 1.5rem;
+}
+.menubar a[href]:hover {
+  color: white;
+  background-color: #000000;
+}
+.menubar button {
+  display: none;
 }
 
 .body_basic #menu_basic,
@@ -310,40 +322,18 @@ header h1 a[href]:hover {
   background-color: #43ab43;
 }
 
-.menubar a[href] {
-  margin: 0%;
-  white-space: nowrap;
-  display: inline-block;
-  padding: 0.7rem;
-  color: #ffffff;
-  font-size: 0.9rem;
-  line-height: 1.5rem;
-}
-
-.menubar a[href]:hover {
-  color: #ffffff;
-  background-color: #000000;
-}
-
-.menubar button {
-  display: none;
-}
-
-/* footer (template) */
+/* footer */
 footer {
   margin-top: 0%;
   margin-left: auto;
   margin-right: auto;
-  padding-top: 0.2rem;
-  padding-bottom: 0.2rem;
-  padding-left: 2rem;
-  padding-right: 2rem;
+  padding: 0.2rem 2rem;
   background-color: #f2f2f2;
-  border-top: 0.1rem solid #6c6c6c;
+  border-top: 0.1rem solid #808080;
   text-align: center;
   max-width: 55rem;
+  /* site infomation */
 }
-
 footer ul {
   list-style: none;
 }
@@ -358,21 +348,15 @@ img.modal-content {
 /* The Modal (background) */
 .modal {
   display: none;
-  /* Hidden by default */
   position: fixed;
-  /* Stay in place */
   z-index: 1;
-  /* Sit on top */
   padding-top: 3rem;
   /* Location of the box */
   left: 0;
   top: 0;
   width: 100%;
-  /* Full width */
   height: 100%;
-  /* Full height */
   overflow: auto;
-  /* Enable scroll if needed */
   background-color: black;
   /* Fallback color */
   background-color: rgba(0, 0, 0, 0.9);
@@ -390,20 +374,17 @@ img.modal-content {
   position: fixed;
   top: 1rem;
   right: 2rem;
-  color: #f1f1f1;
+  color: white;
   font-size: 1.5rem;
   font-weight: bold;
-  transition: 0.3s;
-}
-
-.close:hover,
-.close:focus {
-  color: #bbb;
-  text-decoration: none;
+  transition: color 0.3s;
   cursor: pointer;
 }
+.close:hover, .close:focus {
+  color: #808080;
+}
 
-/* prev/next button (template) */
+/* prev/next button */
 #prev {
   float: left;
 }
@@ -412,23 +393,20 @@ img.modal-content {
   float: right;
 }
 
-#prev, #next {
+#prev,
+#next {
   text-decoration: none;
   padding: 0.5rem 1rem;
   background-color: #43ab43;
-  color: #ffffff;
+  color: white;
 }
-
-#prev:hover, #next:hover {
+#prev:hover, #prev:hover,
+#next:hover,
+#next:hover {
   background-color: #dadada;
   color: black;
 }
 
-@media only screen and (max-width: 768px) {
-  #prev, #next {
-    padding: 0.5rem 0.7rem;
-  }
-}
 /* for mobile devices */
 @media only screen and (max-width: 768px) {
   body {
@@ -437,29 +415,24 @@ img.modal-content {
     line-height: 1.4rem;
   }
 
+  /* images */
   img {
     max-width: 85vw;
     height: auto;
   }
-
   img.small {
     max-width: 60vw;
-    height: auto;
   }
-
   img.vertical {
     max-height: 65vw;
     width: auto;
   }
 
-  h2, h3, h4 {
-    margin-top: 1.3rem;
-    margin-bottom: 1.3rem;
-  }
-
-  h2 {
+  /* headings */
+  h2, h4, h3 {
     padding-bottom: 0.4rem;
     font-size: 1.2rem;
+    margin: 1.3rem 0;
   }
 
   h3 {
@@ -477,32 +450,27 @@ img.modal-content {
     scroll-margin-top: 3rem;
   }
 
-  blockquote {
+  /* quotes */
+  blockquote,
+pre {
     max-width: 90%;
     overflow-x: auto;
+    display: inline-block;
   }
 
-  pre {
-    max-width: 90%;
-    overflow-x: auto;
-  }
-
+  /* keyword */
   abbr[title] {
     outline: none;
     position: relative;
+    /* onclick */
   }
-
-  abbr[title]:hover::after,
-abbr[title]:focus::after {
+  abbr[title]:focus::after {
     content: attr(title);
     font-weight: normal;
+    font-size: 0.7rem;
     position: absolute;
     left: 0;
     bottom: -1.5rem;
-    width: auto;
-    white-space: nowrap;
-    font-size: 0.7rem;
-    color: black;
     background-color: white;
     border: 0.05rem solid black;
     padding: 0.05rem 0.2rem;
@@ -510,56 +478,51 @@ abbr[title]:focus::after {
     z-index: 1;
   }
 
+  /* main */
   main {
     padding: 1rem;
     margin: auto;
   }
-
   main h1 {
     font-size: 1.4rem;
     font-weight: normal;
     margin-bottom: 0.5rem;
     line-height: 1.6rem;
   }
-
+  main nav {
+    max-width: inherit;
+  }
   main p {
     overflow-x: auto;
   }
 
+  /* paragraph */
   p.caution {
-    padding: 0.5rem 0.5rem 0.5rem 2.5rem;
+    padding: 0.5rem 0.5rem 0.5rem 2.2rem;
   }
-
   p.caution::before {
     font-size: 1.3rem;
-    left: 0.5rem;
-  }
-
-  main nav {
-    max-width: inherit;
   }
 }
-/* for mobile devices */
+/* template for mobile */
 @media only screen and (max-width: 768px) {
-  /* responsive template */
+  /* header */
   header {
     background-color: #498c5f;
     background-image: none;
   }
-
   header h1 {
     font-size: 1.4rem;
   }
-
   header h1 a[href] {
-    color: #ffffff;
+    color: white;
     text-shadow: none;
   }
 
+  /* menu bar */
   .menubar a[href] {
     display: none;
   }
-
   .menubar button {
     display: block;
     margin: 0%;
@@ -567,13 +530,11 @@ abbr[title]:focus::after {
     border-radius: 0%;
     line-height: 1.4rem;
   }
-
   .menubar.responsive button {
     position: absolute;
     left: 0;
     top: 0;
   }
-
   .menubar.responsive a[href] {
     float: none;
     display: block;
@@ -581,11 +542,13 @@ abbr[title]:focus::after {
     padding: 0.3rem;
   }
 
-  .menubar:hover {
-    box-shadow: none;
-  }
-
+  /* footer */
   footer ul {
     font-size: 0.7rem;
+  }
+
+  #prev,
+#next {
+    padding: 0.5rem 0.7rem;
   }
 }/*# sourceMappingURL=orbiterjp.css.map */

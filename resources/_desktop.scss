@@ -1,0 +1,212 @@
+@use "mixin" as b;
+@use "color" as c;
+
+/* for desktop */
+
+body {
+  @include b.fontBasic;
+  margin: 0%;
+  padding: 0%;
+  background-color: c.$GreenBackground;
+  line-height: 1.5rem;
+}
+
+/* main */
+
+main {
+  background-color: c.$GreyBackground;
+  margin: auto;
+  padding: 2rem;
+  max-width: 55rem;
+  min-height: 100vh;
+  /* page title */
+  h1 {
+    font-size: 1.6rem;
+    font-weight: normal;
+    margin-top: 0%;
+    margin-bottom: 1.7rem;
+    letter-spacing: 0.05rem;
+    line-height: 1.9rem;
+  }
+  /* in-page navigation */
+  nav {
+    display: block;
+    max-width: 22rem;
+    background-color: white;
+    padding: 0.1rem 0.5rem;
+    border-radius: 0.5rem;
+    ul,
+    ol {
+      margin: 0.7rem 0%;
+      ul,
+      ol {
+        margin: auto;
+      }
+    }
+  }
+}
+
+/* images */
+
+img {
+  border: 0.2rem solid white;
+  cursor: pointer;
+  width: 22rem;
+  height: auto;
+  vertical-align: top;
+  background-color: white;
+  &.small {
+    width: 12rem;
+  }
+  &.vertical {
+    width: auto;
+    height: 17rem;
+  }
+}
+
+figure {
+  @include b.marginBlock;
+  display: table;
+}
+figcaption {
+  text-align: center;
+}
+
+/* heading */
+
+h2 {
+  @include b.heading(c.$Green, 0.1rem, 0.7rem, 1.3rem);
+  letter-spacing: 0.05rem;
+}
+h3 {
+  @include b.heading(black, 0.1rem, 0.3rem, 1rem);
+}
+h4 {
+  @include b.heading(c.$GreyBorder, 0.1rem, 0.3rem, 0.9rem);
+}
+
+/* anchor position fix */
+
+[id] {
+  scroll-margin-top: 4rem;
+}
+
+/* paragraph */
+
+p {
+  @include b.marginBlock;
+  &.note {
+    font-size: 85%;
+  }
+  &.caution {
+    display: table;
+    background-color: white;
+    border: 0.1rem solid c.$Green;
+    border-radius: 0.3rem;
+    padding: 0.5rem 0.5rem 0.5rem 3rem;
+    position: relative;
+  }
+  &.caution::before {
+    content: "⚠";
+    font-size: 1.5rem;
+    position: absolute;
+    left: 0.5rem;
+  }
+}
+
+/* hyperlink */
+
+a[href] {
+  color: c.$Blue;
+  text-decoration: none;
+  &:hover {
+    color: c.$LightBlue;
+  }
+}
+
+/* keyword */
+
+kbd {
+  @include b.borderButton(0.1rem);
+  @include b.keyword;
+  @include b.fontBasic;
+  background-color: white;
+  margin: 0% 0.2rem;
+}
+
+strong {
+  @include b.keyword;
+}
+
+abbr {
+  @include b.keyword;
+  cursor: help;
+  text-decoration: none;
+  border-bottom: dotted 0.1rem;
+}
+
+/* table */
+
+table {
+  @include b.marginBlock;
+  @include b.borderTable;
+}
+td {
+  @include b.borderTable;
+}
+th {
+  @include b.borderTable;
+  background-color: white;
+  font-weight: bold;
+  text-align: center;
+}
+table.center1col td:nth-child(1),
+table.center2col td:nth-child(2) {
+  text-align: center;
+}
+
+/* list */
+
+ul,
+ol {
+  @include b.marginBlock;
+  padding-left: 1.2rem;
+  ul,
+  ol {
+    margin: auto;
+  }
+}
+
+/* quotes */
+
+pre,
+blockquote {
+  @include b.marginBlock;
+  display: table;
+  background-color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 0 0.5rem silver;
+}
+
+/* input */
+
+button,
+input[type="submit"] {
+  @include b.borderButton(0.15rem);
+  background-image: linear-gradient(white, white, #e9e9e9, #d4d4d4);
+  padding: 0.3rem;
+  border-radius: 0.2rem;
+  cursor: pointer;
+  /* onclick */
+  &:active,
+  &:active {
+    @include b.borderClickedButton(0.15rem);
+  }
+}
+
+textarea {
+  box-sizing: border-box;
+  width: 100%;
+  min-height: 10rem;
+}

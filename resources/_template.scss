@@ -1,169 +1,167 @@
-/* header (template) */
+@use "mixin" as b;
+@use "color" as c;
+
+/* template for desktop */
+
+/* header */
 
 header {
-    margin-top: 0%;
-    padding: 0%;
-    background-color: #000000;
-    background-image: url(../images/background_header.jpg);
-    background-repeat: no-repeat;
-    background-size: 100%;
-    background-position: center;
-    }
-  
-  header h1 {
+  margin-top: 0%;
+  padding: 0%;
+  background: {
+    color: #000000;
+    image: url(/images/background_header.jpg);
+    repeat: no-repeat;
+    size: 100%;
+    position: center;
+  }
+  /* website name */
+  h1 {
     margin: 0%;
     padding: 1rem;
-    font-family: Georgia, serif;
-    font-size: 1.8rem;
-    font-weight: normal;
-    text-shadow:
-    -0.05rem 0 black, 0 0.05rem black, 0.05rem 0 black, 0 -0.05rem black,
-    0 0 0.3rem black;
+    font: {
+      family: Georgia, serif;
+      size: 1.8rem;
+      weight: normal;
     }
-    header h1 a[href] {
-    color: #ffffff;
+    text-shadow: -0.05rem 0 black, 0 0.05rem black, 0.05rem 0 black, 0 -0.05rem black, 0 0 0.5rem black;
+    a[href] {
+      color: white;
+      &:hover {
+        text-shadow: none;
+        color: white;
+      }
     }
-    header h1 a[href]:hover {
-    text-shadow: none;
-    color: #ffffff;
-    }
-  
-  /* menu bar (template) */
-  
-  .menubar {
-    position: sticky;
-    position: -webkit-sticky; /* Safari */
-    top: 0;
-    background-color: #3d3d3d;
-    overflow: hidden;
-    text-align: center;
-    z-index: 1;
-    font-size: 0;
-    line-height: 0;
-    }
-  
-  .body_basic #menu_basic,
-  .body_tutorial #menu_tutorial,
-  .body_transx #menu_transx,
-  .body_iss #menu_iss,
-  .body_apollo #menu_apollo,
-  .body_ucgo #menu_ucgo,
-  .body_mods #menu_mods,
-  .body_misc #menu_misc {
-    background-color: #43ab43;
   }
-  
-  .menubar a[href] {
+}
+
+/* menu bar */
+
+.menubar {
+  position: sticky;
+  top: 0;
+  background-color: #3d3d3d;
+  overflow: hidden;
+  text-align: center;
+  z-index: 1;
+  font-size: 0;
+  line-height: 0;
+  /* links */
+  a[href] {
     margin: 0%;
     white-space: nowrap;
     display: inline-block;
     padding: 0.7rem;
-    color: #ffffff;
+    color: white;
     font-size: 0.9rem;
     line-height: 1.5rem;
+    &:hover {
+      color: white;
+      background-color: #000000;
+    }
   }
-  
-  .menubar a[href]:hover {
-    color: #ffffff;
-    background-color: #000000;
-  }
-  
-  .menubar button {
+  /* hidden on desktop */
+  button {
     display: none;
   }
-  
-  /* footer (template) */
-  
-  footer {
-    margin-top: 0%;
-    margin-left: auto;
-    margin-right: auto;
-    padding-top: 0.2rem;
-    padding-bottom: 0.2rem;
-    padding-left: 2rem;
-    padding-right: 2rem;
-    background-color: #f2f2f2;
-    border-top: 0.1rem solid #6c6c6c;
-    text-align: center;
-    max-width: 55rem;
+}
+
+.body_basic #menu_basic,
+.body_tutorial #menu_tutorial,
+.body_transx #menu_transx,
+.body_iss #menu_iss,
+.body_apollo #menu_apollo,
+.body_ucgo #menu_ucgo,
+.body_mods #menu_mods,
+.body_misc #menu_misc {
+  background-color: c.$LightGreen;
+}
+
+/* footer */
+
+footer {
+  margin: {
+    top: 0%;
+    left: auto;
+    right: auto;
   }
-  
-  footer ul {
+  padding: 0.2rem 2rem;
+  background-color: c.$GreyBackground;
+  border-top: 0.1rem solid c.$GreyBorder;
+  text-align: center;
+  max-width: 55rem;
+  /* site infomation */
+  ul {
     list-style: none;
   }
-  
-  /* modal for images */
+}
+
+/* modal for images */
 
 img.modal-content {
-    width: auto;
-    max-width: 95%;
-    cursor: default;
+  width: auto;
+  max-width: 95%;
+  cursor: default;
+}
+
+/* The Modal (background) */
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  padding-top: 3rem; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0, 0, 0); /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.9); /* Black w/ opacity */
+}
+
+/* Modal Content (image) */
+
+.modal-content {
+  margin: auto;
+  display: block;
+}
+
+/* The Close Button */
+
+.close {
+  position: fixed;
+  top: 1rem;
+  right: 2rem;
+  color: white;
+  font-size: 1.5rem;
+  font-weight: bold;
+  transition: color 0.3s;
+  cursor: pointer;
+  &:hover,
+  &:focus {
+    color: c.$GreyBorder;
   }
-  
-  /* The Modal (background) */
-  .modal {
-    display: none; /* Hidden by default */
-    position: fixed; /* Stay in place */
-    z-index: 1; /* Sit on top */
-    padding-top: 3rem; /* Location of the box */
-    left: 0;
-    top: 0;
-    width: 100%; /* Full width */
-    height: 100%; /* Full height */
-    overflow: auto; /* Enable scroll if needed */
-    background-color: rgb(0,0,0); /* Fallback color */
-    background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
-  }
-  
-  /* Modal Content (image) */
-  .modal-content {
-    margin: auto;
-    display: block;
-  }
-  
-  /* The Close Button */
-  .close {
-    position: fixed;
-    top: 1rem;
-    right: 2rem;
-    color: #f1f1f1;
-    font-size: 1.5rem;
-    font-weight: bold;
-    transition: 0.3s;
-  }
-  
-  .close:hover,
-  .close:focus {
-    color: #bbb;
-    text-decoration: none;
-    cursor: pointer;
-  }
-  
-  /* prev/next button (template) */
-  
-  #prev {
-    float: left;
-  }
-  #next {
-    float: right;
-  }
-  #prev, #next {
-    text-decoration: none;
-    padding: 0.5rem 1rem;
-    background-color: #43ab43;
-    color: #ffffff;
-  }
-  
-  #prev:hover, #next:hover {
-    background-color: #dadada;
+}
+
+/* prev/next button */
+
+#prev {
+  float: left;
+}
+#next {
+  float: right;
+}
+#prev,
+#next {
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  background-color: c.$LightGreen;
+  color: white;
+  &:hover,
+  &:hover {
+    background-color: c.$GreyButton;
     color: black;
   }
-  
-  @media only screen and (max-width: 768px) {
-  
-    #prev, #next {
-      padding: 0.5rem 0.7rem;
-    }
-  
-  }
-  
+}
+
