@@ -9,7 +9,7 @@ header {
   margin-top: 0%;
   padding: 0%;
   background: {
-    color: #000000;
+    color: black;
     image: url(/images/background_header.jpg);
     repeat: no-repeat;
     size: 100%;
@@ -24,9 +24,10 @@ header {
       size: 1.8rem;
       weight: normal;
     }
-    text-shadow: -0.05rem 0 black, 0 0.05rem black, 0.05rem 0 black, 0 -0.05rem black, 0 0 0.5rem black;
     a[href] {
       color: white;
+      @include b.textOutline (0.05rem, black, 0.3rem);
+      transition: text-shadow 0.3s;
       &:hover {
         text-shadow: none;
         color: white;
@@ -164,4 +165,3 @@ img.modal-content {
     color: black;
   }
 }
-
