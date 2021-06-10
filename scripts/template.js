@@ -50,21 +50,21 @@
   // modal for images
 
   const modal = document.getElementById('myModal')
-  const allImages = document.querySelectorAll('img')
+  const allImages = document.getElementsByTagName('img')
   function openModal () {
     modal.style.display = 'block'
     document.getElementById('img_modal').src = this.src
   }
-  allImages.forEach(function (img) {
-    img.addEventListener('click', openModal)
-    // vertical images
-    const imgWidth = parseInt(img.getAttribute('width'))
-    const imgHeight = parseInt(img.getAttribute('height'))
+  for (let i = 0; i < allImages.length; i++) {
+    allImages[i].addEventListener('click', openModal)
+    const imgWidth = parseInt(allImages[i].getAttribute('width'))
+    const imgHeight = parseInt(allImages[i].getAttribute('height'))
     const imgRatio = imgHeight / imgWidth
+    // for vertical images
     if (imgRatio >= 1.1) {
-      img.setAttribute('class', 'vertical')
+      allImages[i].setAttribute('class', 'vertical')
     }
-  })
+  }
   function closeModal () {
     modal.style.display = 'none'
   }
@@ -95,7 +95,6 @@ function closeMenu (event) {
     menuArea.className = 'menubar'
   }
 }
-
 document.addEventListener('click', closeMenu)
 
 // Scroll to anchor

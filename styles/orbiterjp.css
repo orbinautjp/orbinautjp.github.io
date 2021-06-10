@@ -258,7 +258,7 @@ textarea {
 header {
   margin-top: 0%;
   padding: 0%;
-  background-color: black;
+  background-color: #88776E;
   background-image: url(/images/background_header.jpg);
   background-repeat: no-repeat;
   background-size: 100%;
@@ -348,7 +348,7 @@ footer #next {
   padding: 0.7rem 1rem;
   background-color: #43ab43;
   color: white;
-  transition: color 0.3s;
+  transition: 0.3s;
 }
 footer #prev:hover, footer #prev:hover,
 footer #next:hover,

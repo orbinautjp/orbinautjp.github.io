@@ -9,7 +9,7 @@ header {
   margin-top: 0%;
   padding: 0%;
   background: {
-    color: black;
+    color: c.$BeigeBackground;
     image: url(/images/background_header.jpg);
     repeat: no-repeat;
     size: 100%;
@@ -105,7 +105,7 @@ footer {
     padding: 0.7rem 1rem;
     background-color: c.$LightGreen;
     color: white;
-    transition: color 0.3s;
+    transition: 0.3s;
     &:hover,
     &:hover {
       background-color: c.$GreyButton;
