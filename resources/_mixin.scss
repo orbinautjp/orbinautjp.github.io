@@ -1,6 +1,7 @@
 @use "color" as c;
 
 @mixin fontBasic {
+  letter-spacing: 0.02em;
   font: {
     family: Arial, Meiryo, sans-serif;
     weight: normal;
@@ -46,6 +47,6 @@
   border-collapse: collapse;
 }
 
-@mixin textOutline($width, $color, $blur) {
-  text-shadow: $width 0 $color, 0 $width $color, $width * -1 0 $color, 0 $width * -1 $color, 0 0 $blur $color;
+@mixin textOutline($offset, $color, $blur) {
+  text-shadow: $offset 0 $color, 0 $offset $color, $offset * -1 0 $color, 0 $offset * -1 $color, 0 0 $blur $color;
 }

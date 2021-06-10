@@ -4,7 +4,6 @@
 /* template for mobile */
 
 @media only screen and (max-width: 768px) {
-
   /* header */
 
   header {
@@ -24,26 +23,22 @@
   /* menu bar */
 
   .menubar {
+    justify-content: flex-start;
     a[href] {
       display: none;
     }
     button {
       display: block;
-      margin: 0%;
       padding: 0.3rem;
       border-radius: 0%;
-      line-height: 1.4rem;
     }
     &.responsive {
       button {
-        position: absolute;
-        left: 0;
-        top: 0;
+        display: none;
       }
       a[href] {
-        float: none;
         display: block;
-        text-align: right;
+        flex-basis: 100vw;
         padding: 0.3rem;
       }
     }
@@ -51,12 +46,14 @@
 
   /* footer */
 
-  footer ul {
-    font-size: 0.7rem;
-  }
-
-  #prev,
-  #next {
-    padding: 0.5rem 0.7rem;
+  footer {
+    padding: 0.2rem 1rem;
+    ul {
+      font-size: 0.8rem;
+    }
+    #prev,
+    #next {
+      padding: 0.5rem 0.7rem;
+    }
   }
 }

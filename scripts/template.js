@@ -41,11 +41,8 @@
   <ul>
     <li><a href="../basic/comment.html">コメント</a></li>
     <li><a href="../basic/privacy-policy.html">プライバシーポリシー</a></li>
+    <li>管理人：<a href="https://twitter.com/4FootBlowtorch">Nikogori</a></li>
   </ul>
-
-  <p>
-    管理人：<a href="https://twitter.com/4FootBlowtorch">Nikogori</a>
-  </p>
 
   </footer>
   `)
@@ -87,15 +84,23 @@ function openMenu () {
   const x = document.getElementById('topmenu')
   if (x.className === 'menubar') {
     x.className += ' responsive'
-  } else {
-    x.className = 'menubar'
   }
 }
 document.getElementById('button_menu').addEventListener('click', openMenu)
 
+function closeMenu (event) {
+  const menuArea = document.getElementById('topmenu')
+  const insideMenu = menuArea.contains(event.target)
+  if (!insideMenu) {
+    menuArea.className = 'menubar'
+  }
+}
+
+document.addEventListener('click', closeMenu)
+
 // Scroll to anchor
 
-function pgshow (e) {
+function pgshow () {
   const elId = window.location.hash
   if (elId.length > 1) {
     const el = document.getElementById(elId.substr(1))

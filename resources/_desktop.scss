@@ -25,7 +25,6 @@ main {
     font-weight: normal;
     margin-top: 0%;
     margin-bottom: 1.7rem;
-    letter-spacing: 0.05rem;
     line-height: 1.9rem;
   }
   /* in-page navigation */
@@ -76,7 +75,6 @@ figcaption {
 
 h2 {
   @include b.heading(c.$Green, 0.1rem, 0.7rem, 1.3rem);
-  letter-spacing: 0.05rem;
 }
 h3 {
   @include b.heading(black, 0.1rem, 0.3rem, 1rem);
@@ -128,8 +126,9 @@ a[href] {
 
 kbd {
   @include b.borderButton(0.1rem);
-  @include b.keyword;
   @include b.fontBasic;
+  @include b.keyword;
+  font-weight: normal;
   background-color: white;
   margin: 0% 0.2rem;
 }
@@ -150,19 +149,19 @@ abbr {
 table {
   @include b.marginBlock;
   @include b.borderTable;
-}
-td {
-  @include b.borderTable;
-}
-th {
-  @include b.borderTable;
-  background-color: white;
-  font-weight: bold;
-  text-align: center;
-}
-table.center1col td:nth-child(1),
-table.center2col td:nth-child(2) {
-  text-align: center;
+  td {
+    @include b.borderTable;
+  }
+  th {
+    @include b.borderTable;
+    background-color: white;
+    font-weight: bold;
+    text-align: center;
+  }
+  &.center1col td:nth-child(1),
+  &.center2col td:nth-child(2) {
+    text-align: center;
+  }
 }
 
 /* list */

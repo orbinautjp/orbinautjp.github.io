@@ -26,7 +26,7 @@ header {
     }
     a[href] {
       color: white;
-      @include b.textOutline (0.05rem, black, 0.3rem);
+      @include b.textOutline(0.05rem, black, 0.3rem);
       transition: text-shadow 0.3s;
       &:hover {
         text-shadow: none;
@@ -39,26 +39,20 @@ header {
 /* menu bar */
 
 .menubar {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
   position: sticky;
   top: 0;
-  background-color: #3d3d3d;
-  overflow: hidden;
-  text-align: center;
+  background-color: c.$DarkGreyBackground;
   z-index: 1;
-  font-size: 0;
-  line-height: 0;
   /* links */
   a[href] {
     margin: 0%;
-    white-space: nowrap;
-    display: inline-block;
     padding: 0.7rem;
     color: white;
-    font-size: 0.9rem;
-    line-height: 1.5rem;
     &:hover {
-      color: white;
-      background-color: #000000;
+      background-color: black;
     }
   }
   /* hidden on desktop */
@@ -89,11 +83,34 @@ footer {
   padding: 0.2rem 2rem;
   background-color: c.$GreyBackground;
   border-top: 0.1rem solid c.$GreyBorder;
-  text-align: center;
   max-width: 55rem;
   /* site infomation */
   ul {
+    text-align: center;
     list-style: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  /* prev/next button */
+  #prev {
+    float: left;
+  }
+  #next {
+    float: right;
+  }
+  #prev,
+  #next {
+    text-decoration: none;
+    padding: 0.7rem 1rem;
+    background-color: c.$LightGreen;
+    color: white;
+    transition: color 0.3s;
+    &:hover,
+    &:hover {
+      background-color: c.$GreyButton;
+      color: black;
+    }
   }
 }
 
@@ -142,26 +159,5 @@ img.modal-content {
   &:hover,
   &:focus {
     color: c.$GreyBorder;
-  }
-}
-
-/* prev/next button */
-
-#prev {
-  float: left;
-}
-#next {
-  float: right;
-}
-#prev,
-#next {
-  text-decoration: none;
-  padding: 0.5rem 1rem;
-  background-color: c.$LightGreen;
-  color: white;
-  &:hover,
-  &:hover {
-    background-color: c.$GreyButton;
-    color: black;
   }
 }
