@@ -1,10 +1,8 @@
 @use "color" as c;
 
 @mixin fontBasic {
-  letter-spacing: 0.02em;
   font: {
     family: Arial, Meiryo, sans-serif;
-    weight: normal;
     size: 0.9rem;
   }
   color: black;
@@ -15,11 +13,13 @@
 }
 
 @mixin heading($color, $width, $padding, $size) {
-  @include fontBasic;
   margin: 1.5rem 0%;
   border-bottom: $width solid $color;
   padding-bottom: $padding;
-  font-size: $size;
+  font: {
+    size: $size;
+    weight: normal;
+  }
 }
 
 @mixin borderButton($width) {
@@ -35,9 +35,9 @@
   border: $width solid c.$GreyBackground;
 }
 
-@mixin keyword {
+@mixin keyword ($weight:bold) {
   white-space: nowrap;
-  font-weight: bold;
+  font-weight: $weight;
   padding: 0.05rem 0.2rem;
 }
 

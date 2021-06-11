@@ -26,6 +26,7 @@ main {
     margin-top: 0%;
     margin-bottom: 1.7rem;
     line-height: 1.9rem;
+    letter-spacing: 0.02em;
   }
   /* in-page navigation */
   nav {
@@ -77,10 +78,10 @@ h2 {
   @include b.heading(c.$Green, 0.1rem, 0.7rem, 1.3rem);
 }
 h3 {
-  @include b.heading(black, 0.1rem, 0.3rem, 1rem);
+  @include b.heading(black, 0.1rem, 0.3rem, 1.1rem);
 }
 h4 {
-  @include b.heading(c.$GreyBorder, 0.1rem, 0.3rem, 0.9rem);
+  @include b.heading(c.$GreyBorder, 0.1rem, 0.3rem, 1.0rem);
 }
 
 /* anchor position fix */
@@ -127,8 +128,7 @@ a[href] {
 kbd {
   @include b.borderButton(0.1rem);
   @include b.fontBasic;
-  @include b.keyword;
-  font-weight: normal;
+  @include b.keyword($weight:normal);
   background-color: white;
   margin: 0% 0.2rem;
 }
