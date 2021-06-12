@@ -1,0 +1,52 @@
+@use "color" as c;
+
+@mixin fontBasic {
+  font: {
+    family: Arial, Meiryo, sans-serif;
+    size: 0.9rem;
+  }
+  color: black;
+}
+
+@mixin marginBlock {
+  margin: 0.8rem 0%;
+}
+
+@mixin heading($color, $width, $padding, $size) {
+  margin: 1.5rem 0%;
+  border-bottom: $width solid $color;
+  padding-bottom: $padding;
+  font: {
+    size: $size;
+    weight: normal;
+  }
+}
+
+@mixin borderButton($width) {
+  border: {
+    bottom: $width solid c.$DarkGreyBorder;
+    right: $width solid c.$DarkGreyBorder;
+    top: $width solid c.$LightGreyBorder;
+    left: $width solid c.$LightGreyBorder;
+  }
+}
+
+@mixin borderClickedButton($width) {
+  border: $width solid c.$GreyBackground;
+}
+
+@mixin keyword ($weight:bold) {
+  white-space: nowrap;
+  font-weight: $weight;
+  padding: 0.05rem 0.2rem;
+}
+
+@mixin borderTable {
+  padding: 0.3rem 0.5rem;
+  border: 0.05rem solid c.$GreyBorder;
+  border-collapse: collapse;
+}
+
+@mixin textOutline($offset, $color, $blur) {
+  text-shadow: $offset 0 $color, 0 $offset $color, $offset * -1 0 $color, 0 $offset * -1 $color, 0 0 $blur $color;
+}

@@ -1,8 +1,7 @@
 (function () {
   document.querySelector('footer').insertAdjacentHTML('afterbegin', `
-<p><a id="prev" href=""></a></p>
-<p><a id="next" href=""></a></p>
-`)
+  <p><a id="prev" href=""></a></p><p><a id="next" href=""></a></p>
+  `)
 
   const pathName = window.location.pathname.split('/')
   const pageName = pathName.pop()

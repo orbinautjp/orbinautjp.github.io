@@ -39,13 +39,10 @@
   <footer>
 
   <ul>
-    <li><a href="../basic/comment.html">コメント</a></li>
-    <li><a href="../basic/privacy-policy.html">プライバシーポリシー</a></li>
+    <li><a href="/basic/comment.html">コメント</a></li>
+    <li><a href="/basic/privacy-policy.html">プライバシーポリシー</a></li>
+    <li><a href="/basic/about.html">このサイトについて</a></li>
   </ul>
-
-  <p>
-    管理人：<a href="https://twitter.com/4FootBlowtorch">Nikogori</a>
-  </p>
 
   </footer>
   `)
@@ -53,21 +50,21 @@
   // modal for images
 
   const modal = document.getElementById('myModal')
-  const allImages = document.querySelectorAll('img')
+  const allImages = document.getElementsByTagName('img')
   function openModal () {
     modal.style.display = 'block'
     document.getElementById('img_modal').src = this.src
   }
-  allImages.forEach(function (img) {
-    img.addEventListener('click', openModal)
-    // vertical images
-    const imgWidth = parseInt(img.getAttribute('width'))
-    const imgHeight = parseInt(img.getAttribute('height'))
+  for (let i = 0; i < allImages.length; i++) {
+    allImages[i].addEventListener('click', openModal)
+    const imgWidth = parseInt(allImages[i].getAttribute('width'))
+    const imgHeight = parseInt(allImages[i].getAttribute('height'))
     const imgRatio = imgHeight / imgWidth
+    // for vertical images
     if (imgRatio >= 1.1) {
-      img.setAttribute('class', 'vertical')
+      allImages[i].setAttribute('class', 'vertical')
     }
-  })
+  }
   function closeModal () {
     modal.style.display = 'none'
   }
@@ -87,15 +84,22 @@ function openMenu () {
   const x = document.getElementById('topmenu')
   if (x.className === 'menubar') {
     x.className += ' responsive'
-  } else {
-    x.className = 'menubar'
   }
 }
 document.getElementById('button_menu').addEventListener('click', openMenu)
 
+function closeMenu (event) {
+  const menuArea = document.getElementById('topmenu')
+  const insideMenu = menuArea.contains(event.target)
+  if (!insideMenu) {
+    menuArea.className = 'menubar'
+  }
+}
+document.addEventListener('click', closeMenu)
+
 // Scroll to anchor
 
-function pgshow (e) {
+function pgshow () {
   const elId = window.location.hash
   if (elId.length > 1) {
     const el = document.getElementById(elId.substr(1))

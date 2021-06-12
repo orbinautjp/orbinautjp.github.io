@@ -1,0 +1,56 @@
+@use "mixin" as b;
+@use "color" as c;
+
+/* template for mobile */
+
+@media only screen and (max-width: 768px) {
+  /* header */
+
+  header {
+    background: {
+      color: c.$GreenBackground;
+      image: none;
+    }
+    h1 {
+      font-size: 1.4rem;
+      a[href] {
+        color: white;
+        text-shadow: none;
+      }
+    }
+  }
+
+  /* menu bar */
+
+  .menubar {
+    justify-content: flex-start;
+    a[href] {
+      display: none;
+    }
+    button {
+      display: block;
+      padding: 0.3rem;
+      border-radius: 0%;
+    }
+    &.responsive {
+      button {
+        display: none;
+      }
+      a[href] {
+        display: block;
+        flex-basis: 100vw;
+        padding: 0.3rem;
+      }
+    }
+  }
+
+  /* footer */
+
+  footer {
+    padding: 0.2rem 1rem;
+    #prev,
+    #next {
+      padding: 0.5rem 0.7rem;
+    }
+  }
+}
