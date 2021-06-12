@@ -90,7 +90,10 @@ footer {
     list-style: none;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    font-size: 0.8rem;
+    li {
+      padding: 0.1rem 0;
+    }
   }
   /* prev/next button */
   #prev {

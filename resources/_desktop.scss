@@ -67,9 +67,14 @@ img {
 figure {
   @include b.marginBlock;
   display: table;
-}
-figcaption {
-  text-align: center;
+  figcaption {
+    text-align: center;
+  }
+  &.gallery {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center
+  }
 }
 
 /* heading */
@@ -81,7 +86,7 @@ h3 {
   @include b.heading(black, 0.1rem, 0.3rem, 1.1rem);
 }
 h4 {
-  @include b.heading(c.$GreyBorder, 0.1rem, 0.3rem, 1.0rem);
+  @include b.heading(c.$GreyBorder, 0.1rem, 0.3rem, 1rem);
 }
 
 /* anchor position fix */
@@ -128,7 +133,7 @@ a[href] {
 kbd {
   @include b.borderButton(0.1rem);
   @include b.fontBasic;
-  @include b.keyword($weight:normal);
+  @include b.keyword($weight: normal);
   background-color: white;
   margin: 0% 0.2rem;
 }

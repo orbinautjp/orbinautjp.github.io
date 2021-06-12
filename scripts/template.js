@@ -39,9 +39,9 @@
   <footer>
 
   <ul>
-    <li><a href="../basic/comment.html">コメント</a></li>
-    <li><a href="../basic/privacy-policy.html">プライバシーポリシー</a></li>
-    <li>管理人：<a href="https://twitter.com/4FootBlowtorch">Nikogori</a></li>
+    <li><a href="/basic/comment.html">コメント</a></li>
+    <li><a href="/basic/privacy-policy.html">プライバシーポリシー</a></li>
+    <li><a href="/basic/about.html">このサイトについて</a></li>
   </ul>
 
   </footer>
