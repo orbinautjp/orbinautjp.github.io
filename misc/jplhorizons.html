@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <script src="/scripts/ga.js"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/styles/orbiterjp.css">
+  <script src="/scripts/template.js" charset="utf-8" defer></script>
+  <script src="/scripts/horizons.js" charset="utf-8" defer></script>
+  <title>JPL Horizons</title>
+</head>
+
+<body>
+
+  <main>
+
+    <h1>JPL Horizons</h1>
+
+
+    <nav>
+      <ul>
+        <li><a href="#horizons">JPL Horizons</a></li>
+        <li><a href="#settings">設定を変更する</a>
+          <ul>
+            <li><a href="#settings_ephemeris">Ephemeris Type</a></li>
+            <li><a href="#settings_target">Target Body</a></li>
+            <li><a href="#settings_origin">Coordinate Origin</a></li>
+            <li><a href="#settings_time">Time Span</a></li>
+            <li><a href="#settings_table">Table Settings</a></li>
+            <li><a href="#settings_display">Display/Output</a></li>
+          </ul>
+        </li>
+        <li><a href="#output">データを取得する</a></li>
+        <li><a href="#scenario">シナリオファイルの作成</a>
+          <ul>
+            <li><a href="#scenario_maker">シナリオ作成機</a></li>
+          </ul>
+        </li>
+        <li><a href="#example">例題</a>
+          <ul>
+            <li><a href="#example_iss">ISSの現在位置</a></li>
+            <li><a href="#example_voy2">ボイジャー2号の木星フライバイ</a></li>
+            <li><a href="#example_hayabusa">はやぶさ2の現在位置</a></li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+
+
+    <h2 id="horizons">JPL Horizons</h2>
+
+
+    <p>
+      <strong>JPL Horizons</strong>は、惑星・衛星、ならびに探査機などの軌道・位置情報を取得できるサービスです。<br>
+      Horizonsの<strong>web-interface</strong>を利用して、Orbiterに軌道データをインポートする手順について説明します。
+    </p>
+
+    <p>
+      <a href="https://ssd.jpl.nasa.gov/horizons.cgi" target="_blank" rel="noopener noreferrer">HORIZONS
+        Web-Interface</a>
+    </p>
+
+
+    <h2 id="settings">設定を変更する</h2>
+
+
+    <p>
+      <kbd>change</kbd>をクリックして、以下の設定を変更する。
+    </p>
+
+
+    <h3 id="settings_ephemeris">Ephemeris Type</h3>
+
+
+    <p>
+      天体暦の種類を選択する。<br>
+      <strong>Vector Table</strong>にする。
+    </p>
+
+    <p>
+      変更したら、<kbd>Use Selection Above</kbd>をクリック。
+    </p>
+
+
+    <h3 id="settings_target">Target Body</h3>
+
+
+    <p>
+      目標とする天体・探査機の名前を英語で入力する。
+    </p>
+
+    <p>
+      <strong>Lookup the specified body:</strong>の下に、名前を入力する。<br>
+      入力したら、右端の<kbd>Search</kbd>ボタンをクリック。
+    </p>
+
+
+    <h3 id="settings_origin">Coordinate Origin</h3>
+
+
+    <p>
+      中心天体を示すコードを入力する。<br>
+      名前を直接入力しても反映されない。
+    </p>
+
+    <p>
+      コードを入力したら、<kbd>Search</kbd>をクリック。
+    </p>
+
+
+    <h3 id="settings_time">Time Span</h3>
+
+
+    <p>
+      データを取得する期間を設定する。
+    </p>
+
+    <p>
+      開始日時と終了日時を両方入力する。<br>
+      片方だけではエラーになる。
+    </p>
+
+    <p>
+      年・月・日をハイフンで接続する。<br>
+      <strong>2000-01-01</strong>のように入力する。
+    </p>
+
+    <p>
+      <strong>Step Size</strong>でデータの間隔を設定する。<br>
+      <strong>1 hours</strong>なら、1時間の間隔でデータが出力される。
+    </p>
+
+    <p>
+      入力したら、<kbd>Use Specified Times</kbd>をクリック。
+    </p>
+
+
+    <h3 id="settings_table">Table Settings</h3>
+
+
+    <p>
+      出力されるデータの形式を選択する。
+    </p>
+
+    <p>
+      <kbd>Default Optional Settings</kbd>をクリックすると、デフォルトの設定に戻る。
+    </p>
+
+
+    <h4>Select vector table output</h4>
+
+
+    <p>
+      <strong>Type 2 (state vector {x,y,z,vx,vy,vz})</strong>を選択する。
+    </p>
+
+
+    <h4>Optional vector-table settings:</h4>
+
+
+    <p>
+      <strong>output units</strong>を<strong>km & km/s</strong>に変更する。
+    </p>
+
+    <p>
+      入力したら、<kbd>Use Settings Above</kbd>をクリック。
+    </p>
+
+
+    <h3 id="settings_display">Display/Output</h3>
+
+
+    <p>
+      変更しなくてよい。<br>
+      <strong>default (formatted HTML)</strong>のままにしておく。
+    </p>
+
+
+    <h2 id="output">データを取得する</h2>
+
+
+    <p>
+      以上の設定が終わったら、<kbd>Generate Ephemeris</kbd>をクリック。
+    </p>
+
+
+    <h2 id="scenario">シナリオファイルの作成</h2>
+
+
+    <p>
+      画面を下にスクロールして、<strong>Results</strong>まで移動する。
+    </p>
+
+    <p>
+      <strong>$$SOE</strong>の下の3行をコピーする。<br>
+      コピーしたら、このページに戻る。
+    </p>
+
+
+    <h3 id="scenario_maker">シナリオ作成機</h3>
+
+
+    <p>
+      中心天体の名前を入力する。<br>
+      コピーしたデータを入力欄に貼り付ける。<br>
+      作成ボタンをクリック。
+    </p>
+
+    <p>
+      中心天体 (Coordinate Origin)
+      <input type="text" id="centerbody">
+    </p>
+
+    <label for="input_horizons">Horizonsのデータ</label>
+    <textarea name="input_horizons" id="input_horizons" rows="3"></textarea>
+
+    <button id="button1">作成</button>
+
+    <p>
+      <strong>Scenarios</strong>フォルダを開いて、作成した<strong>.scn</strong>ファイルを貼り付ける。
+    </p>
+
+
+    <h2 id="example">例題</h2>
+
+
+    <p>
+      以下に入力例を示す。
+    </p>
+
+    <p>
+      これらの設定も変更しておくこと。<br>
+      （<kbd>Change</kbd>をクリック）
+    </p>
+
+    <table>
+      <tr>
+        <td><a href="#settings_ephemeris">Ephemeris Type</a></td>
+        <td>VECTORS</td>
+      </tr>
+      <tr>
+        <td><a href="#settings_table">Table Settings</a></td>
+        <td>quantities code=2; output units=KM-S</td>
+      </tr>
+    </table>
+
+
+    <h3 id="example_iss">ISSの現在位置</h3>
+
+
+    <p>
+      <strong>Target Body</strong>で<kbd>Change</kbd>をクリック。<br>
+      <strong>Lookup the specified body:</strong>の下に、<strong>ISS</strong>と入力する。<br>
+      入力したら、右端の<kbd>Search</kbd>ボタンをクリック。
+    </p>
+
+    <p>
+      <strong>Coordinate Origin</strong>で<kbd>Change</kbd>をクリック。<br>
+      <strong>@399</strong>と入力して、<kbd>Search</kbd>をクリック。
+    </p>
+
+    <p>
+      <strong>Time Span</strong>で<kbd>Change</kbd>をクリック。<br>
+      <strong>Start Time</strong>に今日の日付を入力。<br>
+      <strong>Stop Time</strong>に明日の日付を入力。<br>
+      <kbd>Use Specified Times</kbd>をクリック。
+    </p>
+
+    <p>
+      <kbd>Generate Ephemeris</kbd>をクリック。
+    </p>
+
+
+    <h3 id="example_voy2">ボイジャー2号の木星フライバイ</h3>
+
+
+    <p>
+      <strong>Target Body</strong>で<kbd>Change</kbd>をクリック。<br>
+      <strong>Lookup the specified body:</strong>の下に、<strong>voyager 2</strong>と入力する。<br>
+      入力したら、右端の<kbd>Search</kbd>ボタンをクリック。
+    </p>
+
+    <p>
+      <strong>Coordinate Origin</strong>で<kbd>Change</kbd>をクリック。<br>
+      <strong>@599</strong>と入力して、<kbd>Search</kbd>をクリック。
+    </p>
+
+    <p>
+      <strong>Time Span</strong>で<kbd>Change</kbd>をクリック。<br>
+      <strong>Start Time</strong>に<strong>1979-07-09</strong>と入力。<br>
+      <strong>Stop Time</strong>に<strong>1979-07-10</strong>と入力。<br>
+      <kbd>Use Specified Times</kbd>をクリック。
+    </p>
+
+    <p>
+      <kbd>Generate Ephemeris</kbd>をクリック。
+    </p>
+
+
+    <h3 id="example_hayabusa">はやぶさ2の現在位置</h3>
+
+
+    <p>
+      <strong>Target Body</strong>で<kbd>Change</kbd>をクリック。<br>
+      <strong>Lookup the specified body:</strong>の下に、<strong>hayabusa 2</strong>と入力する。<br>
+      入力したら、右端の<kbd>Search</kbd>ボタンをクリック。
+    </p>
+
+    <p>
+      <strong>Coordinate Origin</strong>で<kbd>Change</kbd>をクリック。<br>
+      <strong>@sun</strong>と入力して、<kbd>Search</kbd>をクリック。
+    </p>
+
+    <p>
+      <strong>Time Span</strong>で<kbd>Change</kbd>をクリック。<br>
+      <strong>Start Time</strong>に今日の日付を入力。<br>
+      <strong>Stop Time</strong>に明日の日付を入力。<br>
+      <kbd>Use Specified Times</kbd>をクリック。
+    </p>
+
+    <p>
+      <kbd>Generate Ephemeris</kbd>をクリック。<br>
+    </p>
+
+  </main>
+
+</body>
+
+</html>
