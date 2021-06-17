@@ -8,15 +8,19 @@
   <link rel="stylesheet" href="/styles/orbiterjp.css">
   <script src="/scripts/template.js" charset="utf-8" defer></script>
   <script src="/scripts/horizons.js" charset="utf-8" defer></script>
-  <title>JPL Horizons</title>
+  <title>JPL Horizonsから軌道をインポートする</title>
 </head>
 
 <body>
 
   <main>
 
-    <h1>JPL Horizons</h1>
+    <h1>JPL Horizonsから軌道をインポートする</h1>
 
+
+    <p>
+      <strong>HORIZONS Web-Interface</strong>を利用して、Orbiterに軌道データをインポートする手順について説明します。
+    </p>
 
     <nav>
       <ul>
@@ -52,8 +56,7 @@
 
 
     <p>
-      <strong>JPL Horizons</strong>は、惑星・衛星、ならびに探査機などの軌道・位置情報を取得できるサービスです。<br>
-      Horizonsの<strong>web-interface</strong>を利用して、Orbiterに軌道データをインポートする手順について説明します。
+      <strong>JPL Horizons</strong>は、惑星・衛星、および探査機などの軌道・位置情報を取得できるサービスです。
     </p>
 
     <p>
@@ -106,6 +109,68 @@
 
     <p>
       コードを入力したら、<kbd>Search</kbd>をクリック。
+    </p>
+
+    <table>
+      <tr>
+        <th>@sun</th>
+        <td>Sun</td>
+        <td>太陽</td>
+      </tr>
+      <tr>
+        <th>@199</th>
+        <td>Mercury</td>
+        <td>水星</td>
+      </tr>
+      <tr>
+        <th>@299</th>
+        <td>Venus</td>
+        <td>金星</td>
+      </tr>
+      <tr>
+        <th>@399<br>500</th>
+        <td>Earth<br>(Geocentric)</td>
+        <td>地球</td>
+      </tr>
+      <tr>
+        <th>@499</th>
+        <td>Mars</td>
+        <td>火星</td>
+      </tr>
+      <tr>
+        <th>@599</th>
+        <td>Jupiter</td>
+        <td>木星</td>
+      </tr>
+      <tr>
+        <th>@699</th>
+        <td>Saturn</td>
+        <td>土星</td>
+      </tr>
+      <tr>
+        <th>@799</th>
+        <td>Uranus</td>
+        <td>天王星</td>
+      </tr>
+      <tr>
+        <th>@899</th>
+        <td>Neptune</td>
+        <td>海王星</td>
+      </tr>
+      <tr>
+        <th>@999</th>
+        <td>Pluto</td>
+        <td>冥王星</td>
+      </tr>
+    </table>
+
+    <p>
+      これら以外の衛星など、詳しい情報は以下のリンクを参照。
+    </p>
+
+    <p>
+      <a href="https://naif.jpl.nasa.gov/pub/naif/toolkit_docs/C/req/naif_ids.html" target="_blank"
+        rel="noopener noreferrer">NAIF Integer ID codes</a>
     </p>
 
 
@@ -189,7 +254,8 @@
 
 
     <p>
-      画面を下にスクロールして、<strong>Results</strong>まで移動する。
+      Horizonsの画面を下にスクロールする。<br>
+      <strong>Results</strong>まで移動する。
     </p>
 
     <p>
@@ -207,15 +273,15 @@
       作成ボタンをクリック。
     </p>
 
-    <p>
-      中心天体 (Coordinate Origin)
-      <input type="text" id="centerbody">
-    </p>
-
-    <label for="input_horizons">Horizonsのデータ</label>
-    <textarea name="input_horizons" id="input_horizons" rows="3"></textarea>
-
-    <button id="button1">作成</button>
+    <ul class="nostyle">
+      <li><label for="centerbody">中心天体 (Coordinate Origin)</label></li>
+      <li><input type="text" name="centerbody" id="centerbody" required></li>
+      <li><label for="filename">ファイル名（オプション）</label></li>
+      <li><input type="text" name="filename" id="filename"></li>
+      <li><label for="input_horizons">Horizonsのデータ</label></li>
+      <li><textarea name="input_horizons" id="input_horizons" spellcheck="false" required></textarea></li>
+      <li><button id="button1">作成</button></li>
+    </ul>
 
     <p>
       <strong>Scenarios</strong>フォルダを開いて、作成した<strong>.scn</strong>ファイルを貼り付ける。

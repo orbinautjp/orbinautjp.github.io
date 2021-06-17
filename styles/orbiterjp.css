@@ -205,6 +205,11 @@ ol ol {
   margin: auto;
 }
 
+ul.nostyle {
+  list-style-type: none;
+  padding-left: 0%;
+}
+
 /* quotes */
 pre,
 blockquote {
@@ -238,7 +243,7 @@ input[type=submit]:active {
 textarea {
   box-sizing: border-box;
   width: 100%;
-  min-height: 10rem;
+  min-height: 5rem;
 }
 
 /* template for desktop */

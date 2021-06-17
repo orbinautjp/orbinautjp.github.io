@@ -180,6 +180,12 @@ ol {
     margin: auto;
   }
 }
+ul {
+  &.nostyle {
+    list-style-type: none;
+    padding-left: 0%
+  }
+}
 
 /* quotes */
 
@@ -212,5 +218,5 @@ input[type="submit"] {
 textarea {
   box-sizing: border-box;
   width: 100%;
-  min-height: 10rem;
+  min-height: 5rem;
 }

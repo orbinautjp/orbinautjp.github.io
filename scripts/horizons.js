@@ -17,19 +17,48 @@ function downloadScn () {
     centerBody.substr(1).toLowerCase()
   /* input (textarea) */
   const inputData = document.getElementById('input_horizons').value
-  if (inputData.includes('=') === false) {
+  if (inputData === '') {
+    errMessage('入力欄が空白です。')
+    return
+  } else if (inputData.includes('=') === false) {
     errMessage()
+    return
   }
   const textArray = inputData.split('=')
   if (textArray.length < 8) {
     errMessage()
+    return
   }
-  /* date */
+  /* MJD */
   const regJD = /\d{7}\.\d{9}/
   const JDString = textArray[0].toString()
   const JD = Number(JDString.match(regJD))
   const MJD = JD - 2400000.5
-  const Date = Math.trunc(MJD)
+  /* Date */
+  const dateObj = {
+    Jan: '01',
+    Feb: '02',
+    Mar: '03',
+    Apr: '04',
+    May: '05',
+    Jun: '06',
+    Jul: '07',
+    Aug: '08',
+    Sep: '09',
+    Oct: '10',
+    Nov: '11',
+    Dec: '12'
+  }
+  const regDate = /\d{4}-[a-zA-Z]{3}-\d{2}/
+  const regMonth = /[a-zA-Z]{3}/
+  const regTime = /\d{2}:\d{2}:\d{2}/
+  const dateString = textArray[1].toString()
+  const dateValue = dateString.match(regDate).toString()
+  const monthValue = dateValue.match(regMonth).toString()
+  const monthNumber = dateObj[monthValue]
+  const dateHyphen = dateValue.replace(monthValue, monthNumber)
+  const Date = dateHyphen.replace(/-/g, '')
+  const Time = dateString.match(regTime).toString()
   /* state vector */
   function component (x) {
     const regDecimal = /-?\d+\.\d+/
@@ -56,7 +85,7 @@ function downloadScn () {
 State vector from JPL Horizons.
 
 
-Date: MJD ${MJD}
+Date: ${dateHyphen} ${Time}
 END_DESC
 
 BEGIN_ENVIRONMENT
@@ -91,11 +120,21 @@ GL-01:DeltaGlider
 END
 END_SHIPS
 `
+  /* file name (optional) */
+  const nameInput = document.getElementById('filename').value
+  function optionalName (a) {
+    if (a === '') {
+      a = 'horizons'
+      return a
+    } else {
+      return a
+    }
+  }
   /* blob for scn file */
   const blob = new Blob([scnData], { type: 'text/plain' })
   const scnURL = window.URL.createObjectURL(blob)
   const link = document.createElement('a')
-  const fileName = 'horizons_' + Date + '.scn'
+  const fileName = optionalName(nameInput) + '_' + Date + '.scn'
   link.download = fileName
   link.href = scnURL
   /* stop execution when JD is not a number */
