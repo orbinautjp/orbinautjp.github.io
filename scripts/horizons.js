@@ -5,11 +5,15 @@ function downloadScn () {
   }
   /* coordinate origin */
   const centerBody = document.getElementById('centerbody').value
+  const regCenterNumber = /\d+/
+  const regCenterAt = /@/
   if (centerBody.length === 0) {
     errMessage('中心天体の名前を入力してください。')
     return
-  } else if (centerBody.charCodeAt(0) >= 256) {
-    errMessage('英語で入力してください。')
+  } else if ((regCenterNumber.test(centerBody) === true) ||
+   (regCenterAt.test(centerBody) === true) ||
+   (centerBody.charCodeAt(0) >= 256)) {
+    errMessage('中心天体の名前を英語で入力してください。 \n @は不要です。')
     return
   }
   const centerTitle =
@@ -34,8 +38,8 @@ function downloadScn () {
   const JDString = textArray[0].toString()
   const JD = Number(JDString.match(regJD))
   const MJD = JD - 2400000.5
-  /* Date */
-  const dateObj = {
+  /* Epoch */
+  const monthObj = {
     Jan: '01',
     Feb: '02',
     Mar: '03',
@@ -49,16 +53,16 @@ function downloadScn () {
     Nov: '11',
     Dec: '12'
   }
-  const regDate = /\d{4}-[a-zA-Z]{3}-\d{2}/
+  const regEpoch = /\d{4}-[a-zA-Z]{3}-\d{2}/
   const regMonth = /[a-zA-Z]{3}/
   const regTime = /\d{2}:\d{2}:\d{2}/
-  const dateString = textArray[1].toString()
-  const dateValue = dateString.match(regDate).toString()
-  const monthValue = dateValue.match(regMonth).toString()
-  const monthNumber = dateObj[monthValue]
-  const dateHyphen = dateValue.replace(monthValue, monthNumber)
-  const Date = dateHyphen.replace(/-/g, '')
-  const Time = dateString.match(regTime).toString()
+  const epochArray = textArray[1].toString()
+  const epochString = epochArray.match(regEpoch).toString()
+  const monthString = epochArray.match(regMonth).toString()
+  const monthNumber = monthObj[monthString]
+  const epochHyphen = epochString.replace(monthString, monthNumber)
+  const Epoch = epochHyphen.replace(/-/g, '')
+  const Time = epochArray.match(regTime).toString()
   /* state vector */
   function component (x) {
     const regDecimal = /-?\d+\.\d+/
@@ -85,7 +89,7 @@ function downloadScn () {
 State vector from JPL Horizons.
 
 
-Date: ${dateHyphen} ${Time}
+Epoch: ${epochHyphen} ${Time}
 END_DESC
 
 BEGIN_ENVIRONMENT
@@ -122,6 +126,10 @@ END_SHIPS
 `
   /* file name (optional) */
   const nameInput = document.getElementById('filename').value
+  if (nameInput.charCodeAt(0) >= 256) {
+    errMessage('ファイル名は半角英数字で入力してください。')
+    return
+  }
   function optionalName (a) {
     if (a === '') {
       a = 'horizons'
@@ -134,7 +142,7 @@ END_SHIPS
   const blob = new Blob([scnData], { type: 'text/plain' })
   const scnURL = window.URL.createObjectURL(blob)
   const link = document.createElement('a')
-  const fileName = optionalName(nameInput) + '_' + Date + '.scn'
+  const fileName = optionalName(nameInput) + '_' + Epoch + '.scn'
   link.download = fileName
   link.href = scnURL
   /* stop execution when JD is not a number */
@@ -146,7 +154,7 @@ END_SHIPS
     link.click()
   }
   /* revoke URL when execution is over */
-  URL.revokeObjectURL(link.href)
+  window.URL.revokeObjectURL(scnURL)
 }
 
 document.getElementById('button1').addEventListener('click', downloadScn)
