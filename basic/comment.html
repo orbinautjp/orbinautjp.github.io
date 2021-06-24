@@ -26,6 +26,7 @@
           <ul>
             <li><a href="#2021-03-31">2021-03-31</a></li>
             <li><a href="#2021-06-01">2021-06-01</a></li>
+            <li><a href="#2021-06-24">2021-06-24</a></li>
           </ul>
         </li>
       </ul>
@@ -126,6 +127,35 @@
       一方でOrbit MFDは、接触軌道という単純なモデルを採用しているので、誤差が生じることがあります。<br>
       また、<a href="https://orbinautjp.github.io/basic/realismperturbations.html#perturbations_nonspherical">Nonspherical
         gravity sources</a>のオプションを有効にしたときに、Orbit MFDの表示に誤差が生じることがあります。
+    </p>
+
+
+    <h3 id="2021-06-24">2021-06-24</h3>
+
+
+    <blockquote>
+      orbit MFDなどの peの丸（●）が、orbiter ngではapの丸（〇）になってしまいます。原因は何でしょうか？
+    </blockquote>
+
+    <p>
+      <strong>orbiter.exe</strong>と<strong>Orbiter_ng.exe</strong>でMFDの表示が変わるということはありません。<br>
+      ちなみに、当サイトの画像はすべて<strong>Orbiter_ng.exe</strong>+<a href="d3d9client.html">D3D9Client</a>で撮影されたものです。<br>
+      <a href="/tutorial/part3.html#make_periapsis">Part3 ランデブーのための軌道力学</a>
+    </p>
+
+    <p>
+      可能性としては、<a href="realismperturbations.html">Nonspherical gravity
+        sources</a>の設定が有効になっているということが考えられます。<br>
+      <strong>Orbiter_ng.exe</strong>の設定は<strong>orbiter.exe</strong>に反映されないため、結果としてMFDに違う結果が表示されることになります。
+    </p>
+
+    <p>
+      設定などに不審な点がなく、それでもMFDの表示に異常が見られる場合、以下のページで不具合として報告してください。<br>
+      また、スクリーンショットを共有していただけると問題を解決しやすくなります。
+    </p>
+
+    <p>
+      <a href="troubleshooting.html">バグ・トラブルを報告する</a>
     </p>
 
   </main>
