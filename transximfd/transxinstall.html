@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 
 <html lang="ja">
+
 <head>
   <script src="/scripts/ga.js"></script>
   <meta charset="UTF-8">
@@ -14,123 +15,179 @@
 
   <main>
 
-  <h1>TransXの更新と設定</h1>
+    <h1>TransXの更新と設定</h1>
 
 
-<ul>
-<li><a href="#caution">注意</a></li>
-<li><a href="#download">ダウンロード</a>
-  <ul>
-  <li><a href="#download_mmext">ModuleMessagingExt</a></li>
-  </ul>
-</li>
-<li><a href="#install">インストール</a>
-  <ul>
-  <li><a href="#install_vc">Visual C++</a></li>
-  </ul>
-</li>
-<li><a href="#refresh">MFDの更新速度を設定する</a></li>
-<li><a href="#control">TransXの操作</a></li>
-<li><a href="#new">TransXの新機能</a></li>
-</ul>
+    <nav>
+      <ul>
+        <li><a href="#caution">注意</a></li>
+        <li><a href="#download">ダウンロード</a>
+          <ul>
+            <li><a href="#download_mmext">ModuleMessagingExt</a></li>
+          </ul>
+        </li>
+        <li><a href="#install">インストール</a>
+          <ul>
+            <li><a href="#install_vc">Visual C++</a></li>
+          </ul>
+        </li>
+        <li><a href="#refresh">MFDの更新速度を設定する</a></li>
+        <li><a href="#control">TransXの操作</a></li>
+        <li><a href="#transx2">TransX2</a></li>
+        <li><a href="#new">TransXの新機能</a></li>
+      </ul>
+    </nav>
 
 
-<h2 id="caution">注意</h2>
+    <h2 id="caution">注意</h2>
 
 
-<p>Orbiter本体に同梱されているのは旧バージョン。<br>
-最新版に比べて機能が制限されている。<br>
-バグも残っているため、必ず更新すること。</p>
+    <p class="caution">Orbiter本体に同梱されているのは旧バージョン。<br>
+      最新版に比べて機能が制限されている。<br>
+      バグも残っているため、必ず更新すること。</p>
 
 
-<h2 id="download">ダウンロード</h2>
+    <h2 id="download">ダウンロード</h2>
 
 
-<p><kbd>Download</kbd>をクリック。<br>
-出てきた青色のリンクをクリック。</p>
+    <p><kbd>Download</kbd>をクリック。<br>
+      出てきた青色のリンクをクリック。</p>
 
-<p><strong>Orbiter2010</strong>対応版<br>
-<a href="https://www.orbithangar.com/searchid.php?ID=6987" target="_blank" rel="noopener noreferrer">TransX MMExt2 for Orbiter 2010</a></p>
+    <p><strong>Orbiter2010</strong>対応版<br>
+      <a href="https://www.orbithangar.com/searchid.php?ID=6987" target="_blank" rel="noopener noreferrer">TransX MMExt2
+        for Orbiter 2010</a>
+    </p>
 
-<p><strong>Orbiter2016</strong>対応版<br>
-<a href="https://www.orbithangar.com/searchid.php?ID=6393" target="_blank" rel="noopener noreferrer">TransX MMExt2 for Orbiter 2016</a></p>
-
-
-<h3 id="download_mmext">ModuleMessagingExt</h3>
-
-
-<p><a href="/mods/launchmfd.html" target="_blank">LaunchMFD</a>などのMODと、TransXを連携させるためのMOD。</p>
-
-<p><strong>Orbiter2010</strong>対応版<br>
-<a href="https://www.orbithangar.com/searchid.php?ID=6966" target="_blank" rel="noopener noreferrer">ModuleMessagingExt for Orbiter 2010</a></p>
-
-<p><strong>Orbiter2016</strong>対応版<br>
-<a href="https://www.orbithangar.com/searchid.php?ID=6889" target="_blank" rel="noopener noreferrer">ModuleMessagingExt for Orbiter 2016</a></p>
+    <p><strong>Orbiter2016</strong>対応版<br>
+      <a href="https://www.orbithangar.com/searchid.php?ID=6393" target="_blank" rel="noopener noreferrer">TransX MMExt2
+        for Orbiter 2016</a>
+    </p>
 
 
-<h2 id="install">インストール</h2>
+    <h3 id="download_mmext">ModuleMessagingExt</h3>
 
 
-<p>上記のファイルをそれぞれ解凍する。<br>
-中のファイル・フォルダをコピーして、Orbiterフォルダに上書き。</p>
-<p>Orbiterを起動して、<kbd>Modules</kbd>をクリック。<br>
-<strong>TransX</strong>と<strong>TransX2</strong>の両方にチェックを入れる。※</p>
+    <p><a href="/mods/launchmfd.html" target="_blank">LaunchMFD</a>などのMODと、TransXを連携させるためのMOD。</p>
 
-<p>
-<img loading="lazy" src="/images/transximfd/transxinstall/001.png" width="300" height="150">
-</p>
+    <p><strong>Orbiter2010</strong>対応版<br>
+      <a href="https://www.orbithangar.com/searchid.php?ID=6966" target="_blank"
+        rel="noopener noreferrer">ModuleMessagingExt for Orbiter 2010</a>
+    </p>
 
-<p class="note">※通常使用するのは<strong>TransX</strong>だが、両方チェックする</p>
-
-
-<h3 id="install_vc">Visual C++</h3>
+    <p><strong>Orbiter2016</strong>対応版<br>
+      <a href="https://www.orbithangar.com/searchid.php?ID=6889" target="_blank"
+        rel="noopener noreferrer">ModuleMessagingExt for Orbiter 2016</a>
+    </p>
 
 
-<p>Visual C++のランタイムを導入する。</p>
-
-<p><a href="https://www.microsoft.com/ja-jp/download/details.aspx?id=40784" target="_blank" rel="noopener noreferrer">Visual Studio 2013 の Visual C++ 再頒布可能パッケージ</a></p>
-
-<p>インストール手順はリンク先のページ下部を参照。</p>
+    <h2 id="install">インストール</h2>
 
 
-<h2 id="refresh">MFDの更新速度を設定する</h2>
+    <p>上記のファイルをそれぞれ解凍する。<br>
+      中のファイル・フォルダをコピーして、Orbiterフォルダに上書き。</p>
+
+    <p>Orbiterを起動して、<kbd>Modules</kbd>をクリック。<br>
+      <strong>TransX</strong>にチェックを入れる。
+    </p>
+
+    <p>
+      <img loading="lazy" src="/images/transximfd/transxinstall/001.png" width="300" height="150">
+    </p>
+
+    <p>
+      <strong>TransX2</strong>については<a href="#transx2">下記</a>を参照すること。
+    </p>
 
 
-<p>Orbiterを起動して、<kbd>Parameters</kbd>をクリック。<br>
-<strong>MFD refresh [sec]</strong>の値を小さくする。</p>
-
-<p>この例では<strong>0.10</strong>に設定している。</p>
-
-<p>
-<img loading="lazy" src="/images/transximfd/transxinstall/002.png" width="500" height="250">
-</p>
-
-<p>PCスペックによっては、かえって重くなることがある。<br>
-そのような場合は、1.00に戻す。</p>
+    <h3 id="install_vc">Visual C++</h3>
 
 
-<h2 id="control">TransXの操作</h2>
+    <p>
+      起動しない場合は、Visual C++のランタイムを導入する。
+    </p>
+
+    <p><a href="https://www.microsoft.com/ja-jp/download/details.aspx?id=40784" target="_blank"
+        rel="noopener noreferrer">Visual Studio 2013 の Visual C++ 再頒布可能パッケージ</a></p>
+
+    <p>インストール手順はリンク先のページ下部を参照すること。</p>
 
 
-<ul>
-<li><a href="/tutorial/#earth_to_moon" target="_blank">Orbiterチュートリアル - 地球から月まで</a></li>
-<li><a href="/tutorial/#earth_to_venus" target="_blank">Orbiterチュートリアル - 地球から金星まで</a></li>
-<li><a href="/transximfd/#transx" target="_blank">TransXの解説一覧</a></li>
-</ul>
+    <h2 id="refresh">MFDの更新速度を設定する</h2>
 
 
-<h2 id="new">TransXの新機能</h2>
+    <p>Orbiterを起動して、<kbd>Parameters</kbd>をクリック。<br>
+      <strong>MFD refresh [sec]</strong>の値を小さくする。
+    </p>
+
+    <p>この例では<strong>0.10</strong>に設定している。</p>
+
+    <p>
+      <img loading="lazy" src="/images/transximfd/transxinstall/002.png" width="500" height="250">
+    </p>
+
+    <p>PCスペックによっては、かえって重くなることがある。<br>
+      そのような場合は、1.00に戻す。</p>
 
 
-<p>最新バージョンでは、以下のような機能が追加されている。</p>
+    <h2 id="control">TransXの操作</h2>
 
-<ul>
-<li><strong>Auto-center</strong>機能を有効にすると、マニューバ中に自動で機体の向きを制御してくれる。</li>
-<li>惑星間移動の<strong>Plan</strong>を作成するとき、<strong>Auto-min</strong>機能を有効にすると、自動でDeltaVを計算してくれる。</li>
-<li><a href="/mods/burn-time-calculator-install.html" target="_blank">Burn time calculator</a>や<a href="/mods/launchmfd.html" target="_blank">LaunchMFD</a>と連携させると、自動でエンジンを噴射してくれる。</li>
-</ul>
+
+    <ul>
+      <li><a href="/tutorial/#earth_to_moon">Orbiterチュートリアル - 地球から月まで</a></li>
+      <li><a href="/tutorial/#earth_to_venus">Orbiterチュートリアル - 地球から金星まで</a></li>
+      <li><a href="/transximfd/#transx">TransXの解説一覧</a></li>
+    </ul>
+
+
+    <h2 id="transx2">TransX2</h2>
+
+
+    <p>
+      <strong>TransX2</strong>は、「2個目の<strong>TransX</strong>」である。<br>
+      軌道が赤色で表示されるので区別できる。
+    </p>
+
+    <ul>
+      <li><strong>TransX2</strong>と<strong>TransX</strong>の機能は同じ</li>
+      <li><strong>TransX2</strong>と<strong>TransX</strong>はデータを共有しない</li>
+      <li><strong>TransX2</strong>は<strong>TransX</strong>で発生したバグの影響を受けない</li>
+    </ul>
+
+    <p>
+      <strong>TransX</strong>を複数、例えば左右のMFDで開いた場合、すべてのデータが共有される。<br>
+      左のMFDでマニューバを修正したら、右のMFDにもその変更が反映される。
+    </p>
+
+    <p>
+      左のMFDで<strong>TransX</strong>、右のMFDで<strong>TransX2</strong>を開いた場合は、データが共有されない。<br>
+      左右両方で<strong>TransX2</strong>を開いた場合は、データが共有される。
+    </p>
+
+    <p>
+      <strong>TransX</strong>単体では、複数のプラン・マニューバを同時に作成できない。<br>
+      例えば、地球―火星軌道と、地球―金星軌道を並行して作成できない。<br>
+      このようなとき、<strong>TransX2</strong>と<strong>TransX</strong>を同時に開いておけば、それぞれ別の計算をさせることができる。
+    </p>
+
+    <p>
+      また、<strong>TransX2</strong>は<strong>TransX</strong>で発生したバグの影響を受けないため、非常用の予備として使用できる。
+    </p>
+
+
+    <h2 id="new">TransXの新機能</h2>
+
+
+    <p>最新バージョンでは、以下のような機能が追加されている。</p>
+
+    <ul>
+      <li><strong>Auto-center</strong>機能を有効にすると、マニューバ中に自動で機体の向きを制御してくれる。</li>
+      <li>惑星間移動の<strong>Plan</strong>を作成するとき、<strong>Auto-min</strong>機能を有効にすると、自動でDeltaVを計算する。</li>
+      <li><a href="/mods/burn-time-calculator-install.html">Burn time calculator</a>や<a
+          href="/mods/launchmfd.html">LaunchMFD</a>と連携させると、自動でエンジンを噴射してくれる。</li>
+    </ul>
 
   </main>
 
 </body>
+
 </html>
