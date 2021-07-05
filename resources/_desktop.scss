@@ -220,3 +220,11 @@ textarea {
   width: 100%;
   min-height: 5rem;
 }
+
+/* geogebra applet */
+
+.ggbcontainer {
+  @include b.marginBlock;
+  width: 30rem;
+  max-height: 20rem;
+}

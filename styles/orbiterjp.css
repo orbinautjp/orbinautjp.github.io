@@ -246,6 +246,13 @@ textarea {
   min-height: 5rem;
 }
 
+/* geogebra applet */
+.ggbcontainer {
+  margin: 0.8rem 0%;
+  width: 30rem;
+  max-height: 20rem;
+}
+
 /* template for desktop */
 /* header */
 header {
@@ -491,6 +498,12 @@ pre {
   }
   p.caution::before {
     font-size: 1.3rem;
+  }
+
+  /* geogebra applet */
+  .ggbcontainer {
+    width: 90vw;
+    max-height: 60vw;
   }
 }
 /* template for mobile */
