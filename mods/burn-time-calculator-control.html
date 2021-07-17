@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+
+<html lang="ja">
+
+<head>
+  <script src="/scripts/ga.js"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/styles/orbiterjp.css">
+  <script src="/scripts/template.js" charset="utf-8" defer></script>
+  <title>Burn time calculatorの操作</title>
+</head>
+
+<body>
+
+  <main>
+
+    <h1>Burn time calculatorの操作</h1>
+
+
+    <nav>
+      <ul>
+        <li><a href="#caution">注意</a></li>
+        <li><a href="#insertion">円軌道に投入する</a>
+          <ul>
+            <li><a href="#insertion_ap">打ち上げからの軌道投入</a></li>
+            <li><a href="#insertion_transfer">遷移軌道から周回軌道へ</a></li>
+          </ul>
+        </li>
+        <li><a href="#braking">減速に必要な距離を求める</a>
+          <ul>
+            <li><a href="#braking_landing">惑星・衛星への着陸</a></li>
+            <li><a href="#braking_rendezvous">軌道上でのランデブー</a></li>
+          </ul>
+        </li>
+        <li><a href="#inherit">TransXのデータを転送する</a></li>
+        <li><a href="#engines">使用するエンジンを切り替える</a></li>
+        <li><a href="#totaldv">機体の合計Delta Vを確認する</a></li>
+        <li><a href="#videos">動画</a></li>
+      </ul>
+    </nav>
+
+    <ul>
+      <li><a href="burn-time-calculator-install.html">Burn time calculatorのダウンロード+インストール</a></li>
+    </ul>
+
+
+    <h2 id="caution">注意</h2>
+
+
+    <p class="caution">
+      宇宙船の姿勢を制御する機能はありません。<br>
+      <kbd>ProGrade</kbd>などのオートパイロットをあらかじめ実行してください。
+    </p>
+
+
+    <h2 id="insertion">円軌道に投入する</h2>
+
+
+    <p>
+      打ち上げや他の惑星へ到達したときに、自動で円軌道に投入することができる。
+    </p>
+
+
+    <h3 id="insertion_ap">打ち上げからの軌道投入</h3>
+
+
+    <p>
+      通常の手順で打ち上げを実行し、<strong>Ap</strong>が目標高度に到達したらエンジンを停止。<br>
+      左右どちらかのMFDで<strong>BurnTimeMFD</strong>を開く。<br>
+    </p>
+
+    <p>
+      <strong>Ap</strong>の手前で<kbd>MD</kbd>をクリック。<br>
+      <strong>Time to Apoapsis</strong>に切り替える。
+    </p>
+
+    <p>
+      <kbd>CIR</kbd>をクリック。<br>
+      <strong>Time to Ignition</strong>（自動噴射のカウントダウン）が開始する。
+    </p>
+
+    <p>
+      <kbd>ProGrade</kbd>オートパイロットを使って、機首を前に向けておく。<br>
+      時間が来たら、自動噴射で円軌道に投入される。
+    </p>
+
+    <figure>
+      <img loading="lazy" src="/images/mods/burn-time-calculator-control/001.png" width="525" height="425">
+    </figure>
+
+
+    <h3 id="insertion_transfer">遷移軌道から周回軌道へ</h3>
+
+
+    <p>
+      他の惑星・衛星まで（例：地球から月）飛行して、周回軌道に乗せるときにも応用できる。
+    </p>
+
+    <figure>
+      <img loading="lazy" src="/images/mods/burn-time-calculator-control/002.png" width="524" height="425">
+    </figure>
+
+    <p>
+      <kbd>MD</kbd>をクリック。<br>
+      <strong>Time to Periapsis</strong>にする。
+    </p>
+
+    <p>
+      <kbd>CIR</kbd>をクリック。<br>
+      自動噴射のカウントダウンが開始する。
+    </p>
+
+    <p>
+      <kbd>RetroGrade</kbd>オートパイロットを使って、機首を後ろに向けておく。<br>
+      時間が来たら、自動噴射で円軌道に投入される。
+    </p>
+
+    <figure>
+      <img loading="lazy" src="/images/mods/burn-time-calculator-control/003.png" width="525" height="425">
+    </figure>
+
+
+    <h2 id="braking">減速に必要な距離を求める</h2>
+
+
+    <p>
+      速度を入力して、減速・加速のために必要な距離を計算することができる。
+    </p>
+
+
+    <h3 id="braking_landing">惑星・衛星への着陸</h3>
+
+
+    <p>
+      相対速度をゼロにして、月などの周回軌道から地上に降下する。
+    </p>
+
+    <p>
+      <abbr title="Orbital Speed">OS</abbr>（現在の軌道速度）を確認する。<br>
+      これは<strong>Orbit HUD</strong>左上に表示されている。
+    </p>
+
+    <figure>
+      <img loading="lazy" src="/images/mods/burn-time-calculator-control/004.jpg" width="1594" height="871">
+    </figure>
+
+    <p>
+      <strong>BurnTimeMFD</strong>を開く。
+    </p>
+
+    <p>
+      <kbd>DV</kbd>をクリック。<br>
+      <strong>OS</strong>の数字を入力する。
+    </p>
+
+    <figure>
+      <img loading="lazy" src="/images/mods/burn-time-calculator-control/005.png" width="300" height="150">
+    </figure>
+
+    <p>
+      <strong>Rel. DeltaS Distance</strong>を確認する。<br>
+      これが、現在の速度をゼロにするのに必要な距離になる。
+    </p>
+
+    <figure>
+      <img loading="lazy" src="/images/mods/burn-time-calculator-control/006.png" width="525" height="425">
+    </figure>
+
+    <p>
+      <kbd>RetroGrade</kbd>オートパイロットを使って、機首を後ろに向けておく。
+    </p>
+
+    <p>
+      機体を地面と平行にする。<br>
+      <kbd>HORZ LVL</kbd>をクリック。
+    </p>
+
+    <p>
+      現在の高度を維持する。<br>
+      <kbd>HOLD ALT</kbd>をクリック。
+    </p>
+
+    <p>
+      参照：<a href="/basic/orbitercontrol.html#autopilot">Orbiterの基本操作 - オートパイロット</a>
+    </p>
+
+    <p>
+      <strong>Map MFD</strong>で<abbr title="Distance">Dst</abbr>（目標地点までの距離）を確認する。<br>
+      <strong>Rel. DeltaS Distance</strong>に近づいたら、エンジンを全開にする。
+    </p>
+
+    <p>
+      速度がゼロになったらエンジンを切る。
+    </p>
+
+    <p>
+      目標地点のほぼ真上にいるはずなので、位置を合わせつつホバーエンジンで降下する。
+    </p>
+
+
+    <h3 id="braking_rendezvous">軌道上でのランデブー</h3>
+
+
+    <p>
+      ランデブー時に、相対速度を合わせるのに必要な距離を計算することができる。
+    </p>
+
+    <p>
+      参照：<a href="/transximfd/transx-rendezvous.html">TransX 宇宙船とのランデブー</a>
+    </p>
+
+    <p>
+      <strong>TransX</strong>を使ってランデブーすると、<abbr title="Encounter Velocity">Enc. V</abbr>が表示される。
+    </p>
+
+    <figure>
+      <img loading="lazy" src="/images/mods/burn-time-calculator-control/007.png" width="525" height="425">
+    </figure>
+
+    <p>
+      反対側のMFDで<strong>BurnTimeMFD</strong>を開く。<br>
+      <kbd>DV</kbd>をクリックして、<strong>Enc. V</strong>の数字を入力する。<br>
+      <strong>Rel. DeltaS Distance</strong>が表示される。
+    </p>
+
+    <p>
+      <strong>Docking HUD</strong>で、ターゲットとの距離を確認する。<br>
+      同じ距離になったら、<a href="/tutorial/part5.html#rvmarker">相対速度マーカー</a>に機首を向けてエンジンを噴射する。
+    </p>
+
+
+    <h2 id="inherit">TransXのデータを転送する</h2>
+
+
+    <p>
+      <strong>TransX</strong>でマニューバを作成する。<br>
+      反対側のMFDで<strong>BurnTimeMFD</strong>を開く。<br>
+      <kbd>GET</kbd>をクリックすると、自動噴射のカウントダウンが開始する。
+    </p>
+
+    <figure>
+      <img loading="lazy" src="/images/mods/burn-time-calculator-control/008.png" width="524" height="425">
+    </figure>
+
+    <p>
+      カウントダウンが終了すると、自動でエンジンが噴射される。<br>
+      姿勢制御はできないので、<strong>TransX</strong>の<strong>Auto-center</strong>を使う。
+    </p>
+
+    <p>
+      少し<strong>Delta V</strong>を残して停止するので、手動で微調整する。
+    </p>
+
+
+    <h2 id="engines">使用するエンジンを切り替える</h2>
+
+
+    <p>
+      <kbd>ENG</kbd>をクリックすると、使用するエンジンを切り替えることができる。
+    </p>
+
+    <table>
+      <tr>
+        <th>Hover</th>
+        <td>ホバー</td>
+      </tr>
+      <tr>
+        <th>Retro</th>
+        <td>逆噴射</td>
+      </tr>
+      <tr>
+        <th>RCS</th>
+        <td>RCS</td>
+      </tr>
+    </table>
+
+    <figure>
+      <img loading="lazy" src="/images/mods/burn-time-calculator-control/009.png" width="524" height="425">
+    </figure>
+
+
+    <h2 id="totaldv">合計Delta Vを確認する</h2>
+
+
+    <p class="caution">
+      多段式ロケットの場合、合計Delta Vを正しく表示できないことがある。
+    </p>
+
+    <p>
+      <strong>BurnTimeMFD</strong>を開く。<br>
+      <strong>Estimate Total dV</strong>の表示を探す。
+    </p>
+
+    <p>
+      これは「推定される合計Delta V」を意味する。
+    </p>
+
+    <figure>
+      <img loading="lazy" src="/images/mods/burn-time-calculator-control/010.png" width="524" height="425">
+    </figure>
+
+    <p>
+      <strong>TransX</strong>でマニューバやプランを作成すると、必要な<strong>Delta V</strong>が表示される。
+    </p>
+
+    <figure>
+      <img loading="lazy" src="/images/mods/burn-time-calculator-control/011.png" width="525" height="425">
+    </figure>
+
+    <p>
+      これを<strong>Estimate Total dV</strong>と比較することで、そのマニューバが実行可能か確認できる。
+    </p>
+
+
+    <h2 id="videos">動画</h2>
+
+
+    <ul>
+      <li><a href="https://www.youtube.com/watch?v=F4qIZMcjTzM" target="_blank" rel="noopener noreferrer">YouTube</a>
+      </li>
+      <li><a href="https://www.nicovideo.jp/watch/sm26057709" target="_blank" rel="noopener noreferrer">ニコニコ動画</a></li>
+    </ul>
+
+  </main>
+
+</body>
+
+</html>
