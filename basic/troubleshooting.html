@@ -43,6 +43,7 @@
             <li><a href="#2021-08-10">2021-08-10</a></li>
             <li><a href="#2021-08-24">2021-08-24</a></li>
             <li><a href="#2021-09-22">2021-09-22</a></li>
+            <li><a href="#2021-09-24">2021-09-24</a></li>
           </ul>
         </li>
       </ul>
@@ -392,6 +393,33 @@
     <p>
       <a href="orbitercontrol.html#launchpad">Launchpad</a>→<kbd>Modules</kbd>を開く。<br>
       orbSpotLightのチェックを外す。
+    </p>
+
+
+    <h3 id="2021-09-24">2021-09-24</h3>
+
+
+    <blockquote>
+      ALIEN 2.1を起動、遭難信号126.00㎒をCOM/NAV MFDに入力するとオービターがシャットダウンしてしまいます。
+    </blockquote>
+
+    <p>
+      <strong>Config\LV_426\Base\SOS.cfg</strong>をメモ帳などのテキストエディタで開く。<br>
+      <strong>LV426_SOS</strong>を<strong>SOS</strong>に書き換えて上書き保存する。
+    </p>
+
+    <blockquote>
+      同アドオンでRetroGradeを作動させてもデルタグライダーのように迅速に逆噴射体勢にならないです。
+    </blockquote>
+
+    <p>
+      船体が重くてRCSの出力が低いだけです。
+    </p>
+
+    <p>
+      <strong>Config\Spacecraft\Nostromo.ini</strong>をメモ帳などのテキストエディタで開く。<br>
+      <strong>ATTITUDE_THRUST</strong>を適当な数字に変更して上書き保存する。<br>
+      元の数字<strong>12.5e6</strong>を、例えば<strong>12.5e8</strong>に書き換える。
     </p>
 
   </main>
