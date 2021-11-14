@@ -48,6 +48,7 @@
             <li><a href="#frm">Reference frame (Frm): ecliptic (ECL) / equator (EQU)</a></li>
           </ul>
         </li>
+        <li><a href="#statevector">軌道状態ベクトル</a></li>
         <li><a href="#time">時刻系</a>
           <ul>
             <li><a href="#time_tool">Orbiter Date Converter</a></li>
@@ -317,7 +318,7 @@ L &= M + \varpi
 
     <p>
       特定の平面にもとづく基準系(Frame)。<br>
-      <strong>ECL</strong>(Ecliptic)は黄道面。<strong>EQU</strong>(equator)は赤道面。
+      <abbr title="Ecliptic">ECL</abbr>は黄道面。<abbr title="equator">EQU</abbr>は赤道面。
     </p>
     <p>
       太陽を中心として、地球は楕円軌道を周回している。<br>
@@ -325,10 +326,37 @@ L &= M + \varpi
     </p>
     <p>
       現在宇宙船が周回している天体の赤道が存在する平面が赤道面。<br>
-      地球なら地球の赤道、火星なら火星の軌道が基準になる。
+      地球なら地球の赤道、火星なら火星の赤道が基準になる。
     </p>
     <p>
       これら平面を基準として、軌道傾斜角などが決定される。
+    </p>
+
+
+    <h2 id="statevector">軌道状態ベクトル</h2>
+
+
+    <p>
+      宇宙船の位置ベクトル \( \vec{r} \) と速度ベクトル \( \vec{v} \) の組み合わせのことを、軌道状態ベクトル(Orbital State Vectors)という。<br>
+      これによって、宇宙船の軌道を決定することができる。
+    </p>
+
+    <p>
+      <a href="https://en.wikipedia.org/wiki/Orbital_state_vectors" target="_blank" rel="noopener noreferrer">Orbital
+        state vectors - Wikipedia</a>
+    </p>
+
+    <figure>
+      <img loading="lazy" src="/images/misc/orbitalelements/001.png" width="900" height="700">
+      <figcaption>
+        オレンジが位置ベクトル \( \vec{r} \) 、青が速度ベクトル \( \vec{v} \)
+      </figcaption>
+    </figure>
+
+    <p>
+      Orbiterのシナリオファイルには、黄道面を基準とした軌道状態ベクトルが保存されている。<br>
+      <strong>RPOS</strong>が位置ベクトル、<strong>RVEL</strong>が速度ベクトルを表す。<br>
+      ゲームを再開すると、このベクトルに基づいて、その後の軌道が決定される。
     </p>
 
 
