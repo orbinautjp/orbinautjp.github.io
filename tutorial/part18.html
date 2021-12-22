@@ -16,226 +16,270 @@
 
   <main>
 
-  <h1>Part18 金星へのPlanを作る</h1>
-
-
-  <p>惑星間遷移軌道の<strong>Plan</strong>を作成します。</p>
-
-  <ol>
-    <li><a href="#scenario">使用するシナリオ</a></li>
-    <li><a href="#stages">ステージの作成</a></li>
-    <li><a href="#automin">Auto-Min機能</a>
-      <ul>
-        <li><a href="#manoeuvre">Auto-Minを有効にする</a></li>
-        <li><a href="#date">打ち上げ予定日を決定する</a></li>
-        <li><a href="#tofdays">TOFとTotal Delta V</a></li>
-      </ul>
-    </li>
-  </ol>
-
-  <ul>
-    <li><a href="#related">関連項目</a></li>
-    <li><a href="#form">アンケート</a></li>
-    <li><a href="#videos">動画</a></li>
-  </ul>
-
-
-  <h2 id="scenario">使用するシナリオ</h2>
-
-
-  <p><strong>Checklists</strong>フォルダの<strong>Quickstart</strong>を選択。</p>
-
-  <p>
-    <img loading="lazy" src="/images/tutorial/part18/quickstart.png" width="250" height="125">
-  </p>
-
-  <p>ダブルクリックでゲームを開始する。</p>
-
-
-  <h2 id="stages">ステージの作成</h2>
-
-
-  <p>左右両方のMFDで<strong>TransX</strong>を開く。</p>
-
-  <p><strong>Select Target</strong>で、<kbd>++</kbd>を2回クリック。<br>
-    <strong>Escape</strong>を選択する。
-  </p>
-
-  <p>
-    <img loading="lazy" src="/images/tutorial/part18/001.png" width="425" height="425">
-  </p>
-
-  <p><kbd>FWD</kbd>をクリック。<br>
-    <strong>Stage 2</strong>にする。
-  </p>
-
-  <p><strong>Select Target</strong>を選択しておく。</p>
-
-  <p><kbd>++</kbd>を何度かクリック。<br>
-    <strong>Venus</strong>を選択する。
-  </p>
-
-  <p>
-    <img loading="lazy" src="/images/tutorial/part18/002.png" width="425" height="425">
-  </p>
-
-
-  <h2 id="automin">Auto-Min機能</h2>
-
-
-  <p><strong>Auto-Min</strong>機能を使うと、惑星間軌道の<strong>Plan</strong>を自動で作成できる。</p>
-
-
-  <h3 id="manoeuvre">Auto-Minを有効にする</h3>
-
-
-  <p><kbd>VW</kbd>をクリック。<br>
-    <strong>View:Eject Plan</strong>に切り替える。
-  </p>
-
-  <p><strong>Prograde vel.</strong>を選択する。</p>
-
-  <p><kbd>-AJ</kbd>を3回クリック。<br>
-    <strong>Auto-Min</strong>にする。
-  </p>
-
-  <p>
-    <img loading="lazy" class="small" src="/images/tutorial/part18/003.png" width="250" height="80">
-  </p>
-
-  <p><kbd>VAR</kbd>で要素を切り替える。<br>
-    <strong>Outward</strong>と<strong>Ch. plane</strong>を選択。
-  </p>
-
-  <p>両方とも<strong>Auto-Min</strong>にする。</p>
-
-  <p>
-    <img loading="lazy" class="small" src="/images/tutorial/part18/004.png" width="250" height="80">
-    <img loading="lazy" class="small" src="/images/tutorial/part18/005.png" width="250" height="80">
-  </p>
-
-
-  <h3 id="date">打ち上げ予定日を決定する</h3>
-
-
-  <p><kbd>-VR</kbd>を何度かクリック。<br>
-    <strong>Eject date</strong>を選択する。
-  </p>
-
-  <p><kbd>-AJ</kbd>をクリック。<br>
-    感度を<strong>Rough</strong>にする。</p>
-
-  <p><kbd>++</kbd>を何回かクリック。<br>
-    <strong>Cl. App.</strong>をできるだけ小さくする。
-  </p>
-
-  <p>
-    <img loading="lazy" src="/images/tutorial/part18/006.png" width="425" height="425">
-  </p>
-
-  <p><strong>G</strong>&gt;<strong>M</strong>&gt;<strong>k</strong>の順番で小さくなる。<br>
-    Gがギガメートル、Mがメガメートル、kがキロメートルを意味する。</p>
-
-  <table>
-    <tr>
-      <td><strong>Eject date</strong></td>
-      <td>惑星の重力圏を出る日時</td>
-    </tr>
-    <tr>
-      <td><abbr title="Closest Approach">Cl. App.</abbr></td>
-      <td>最接近時の距離</td>
-    </tr>
-  </table>
-
-
-  <h3 id="tofdays">TOFとTotal Delta V</h3>
-
-
-  <p><strong>TOF (days)</strong>と<strong>Total Delta V</strong>を確認する。<br>
-    <strong>View:Eject Plan</strong>の右下に表示されている。
-  </p>
-
-  <p>
-    <img loading="lazy" src="/images/tutorial/part18/007.png" width="425" height="425">
-  </p>
-
-  <table>
-    <tr>
-      <td><abbr title="Time of flight">TOF (days)</abbr></td>
-      <td>移動に必要な日数</td>
-    </tr>
-    <tr>
-      <td><strong>Total DeltaV</strong></td>
-      <td>必要なDelta Vの合計</td>
-    </tr>
-  </table>
-
-  <p><strong>Eject date</strong>を細かく操作する。<br>
-    上の2つをできるだけ小さくする。</p>
-
-  <p><kbd>ADJ</kbd>を3回クリック。<br>
-    感度を<strong>Fine</strong>に切り替える。</p>
-
-  <p><kbd>++</kbd>or<kbd>--</kbd>を長押しクリック。<br>
-    2つの数字を小さくする。</p>
-
-  <p><strong>Total DeltaV</strong>は<strong>3k</strong>(3000)が目安。</p>
-
-  <p>
-    <img loading="lazy" src="/images/tutorial/part18/008.png" width="425" height="425">
-  </p>
-
-  <p>使用しているアルゴリズムの問題で、数字は激しく変動する。<br>
-    長押しして、数字が小さくなったら止める。</p>
-
-  <p>数字が小さくならないときは、<strong>Reset</strong>するか、<strong>Rough</strong>にして次のタイミングを探す。</p>
-
-
-  <h2 id="related">関連項目</h2>
-
-
-  <ul>
-    <li><a href="transx-plan-explained.html">打ち上げ前にPlan（計画）を作るのはなぜ？</a></li>
-    <li>惑星間航行の基本（動画）
-      <ul>
-        <li><a href="https://www.youtube.com/watch?v=9m2ZToyNGHQ" target="_blank" rel="noopener noreferrer">YouTube</a></li>
-        <li><a href="https://www.nicovideo.jp/watch/sm27580450" target="_blank" rel="noopener noreferrer">ニコニコ動画</a></li>
-      </ul>
-    </li>
-  </ul>
-
-
-  <h2 id="form">アンケート</h2>
-
-
-  <form action="https://docs.google.com/forms/d/e/1FAIpQLSdD6y2GJEBYVzOaKpj1wtT9r6OXgmLTUBkSBh_cAUBXxsEXHg/formResponse" target="_self" method="POST" id="mG61Hd">
-
-    <p>この記事の内容は理解できましたか？</p>
+    <h1>Part18 金星へのPlanを作る</h1>
+
+
+    <p>惑星間遷移軌道の<strong>Plan</strong>を作成します。</p>
+
+    <ol>
+      <li><a href="#scenario">使用するシナリオ</a></li>
+      <li><a href="#stages">ステージの作成</a></li>
+      <li><a href="#automin">Auto-Min機能</a>
+        <ul>
+          <li><a href="#manoeuvre">Auto-Minを有効にする</a></li>
+          <li><a href="#date">打ち上げ予定日を決定する</a></li>
+          <li><a href="#tofdays">TOFとTotal Delta V</a></li>
+        </ul>
+      </li>
+    </ol>
 
     <ul>
-      <li><label><input type="radio" name="entry.1914587356" value="できなかった、全然理解できない" />できなかった、全然理解できない</label></li>
-      <li><label><input type="radio" name="entry.1914587356" value="できなかった、途中から理解できない" />できなかった、途中から理解できない</label></li>
-      <li><label><input type="radio" name="entry.1914587356" value="できた、難しかった" />できた、難しかった</label></li>
-      <li><label><input type="radio" name="entry.1914587356" value="できた、簡単だった" />できた、簡単だった</label></li>
+      <li><a href="#related">関連項目</a></li>
+      <li><a href="#form">アンケート</a></li>
+      <li><a href="#videos">動画</a></li>
     </ul>
 
-    <p><label for="question">わからなかった・難しかったところを教えてください（任意）</label><br>
-      <input id="question" type="text" name="entry.1857549962">
+
+    <h2 id="scenario">使用するシナリオ</h2>
+
+
+    <p>
+      <strong>Checklists</strong>フォルダの<strong>Quickstart</strong>を選択。
     </p>
 
     <p>
-      <button type="submit" name="button" value="送信">送信</button>
+      <img loading="lazy" src="/images/tutorial/part18/quickstart.png" width="250" height="125">
     </p>
 
-  </form>
+    <p>ダブルクリックでゲームを開始する。</p>
 
 
-  <h2 id="videos">動画</h2>
+    <h2 id="stages">ステージの作成</h2>
 
 
-  <p><a href="https://youtu.be/v6qZi3gGk7M" target="_blank" rel="noopener noreferrer">YouTube</a></p>
+    <p>左右両方のMFDで<strong>TransX</strong>を開く。</p>
 
-  <p><a href="https://www.nicovideo.jp/watch/sm25705169" target="_blank" rel="noopener noreferrer">ニコニコ動画</a></p>
+    <p>
+      <strong>Select Target</strong>で、<kbd>++</kbd>を2回クリック。<br>
+      <strong>Escape</strong>を選択する。
+    </p>
+
+    <p>
+      <img loading="lazy" src="/images/tutorial/part18/001.png" width="425" height="425">
+    </p>
+
+    <p>
+      <kbd>FWD</kbd>をクリック。<br>
+      <strong>Stage 2</strong>にする。
+    </p>
+
+    <p>
+      <strong>Select Target</strong>を選択しておく。
+    </p>
+
+    <p>
+      <kbd>++</kbd>を何度かクリック。<br>
+      <strong>Venus</strong>を選択する。
+    </p>
+
+    <p>
+      <img loading="lazy" src="/images/tutorial/part18/002.png" width="425" height="425">
+    </p>
+
+
+    <h2 id="automin">Auto-Min機能</h2>
+
+
+    <p>
+      <strong>Auto-Min</strong>機能を使うと、惑星間軌道の<strong>Plan</strong>を自動で作成できる。
+    </p>
+
+
+    <h3 id="manoeuvre">Auto-Minを有効にする</h3>
+
+
+    <p>
+      <kbd>VW</kbd>をクリック。<br>
+      <strong>View:Eject Plan</strong>に切り替える。
+    </p>
+
+    <p>
+      <strong>Prograde vel.</strong>を選択する。
+    </p>
+
+    <p>
+      <kbd>-AJ</kbd>を3回クリック。<br>
+      <strong>Auto-Min</strong>にする。
+    </p>
+
+    <p>
+      <img loading="lazy" class="small" src="/images/tutorial/part18/003.png" width="250" height="80">
+    </p>
+
+    <p>
+      <kbd>VAR</kbd>で要素を切り替える。<br>
+      <strong>Outward</strong>と<strong>Ch. plane</strong>を選択。
+    </p>
+
+    <p>両方とも<strong>Auto-Min</strong>にする。</p>
+
+    <p>
+      <img loading="lazy" class="small" src="/images/tutorial/part18/004.png" width="250" height="80">
+      <img loading="lazy" class="small" src="/images/tutorial/part18/005.png" width="250" height="80">
+    </p>
+
+
+    <h3 id="date">打ち上げ予定日を決定する</h3>
+
+
+    <p>
+      <kbd>-VR</kbd>を何度かクリック。<br>
+      <strong>Eject date</strong>を選択する。
+    </p>
+
+    <p>
+      <kbd>-AJ</kbd>をクリック。<br>
+      感度を<strong>Rough</strong>にする。
+    </p>
+
+    <p>
+      <kbd>++</kbd>を何回かクリック。<br>
+      <strong>Cl. App.</strong>をできるだけ小さくする。
+    </p>
+
+    <p>
+      <img loading="lazy" src="/images/tutorial/part18/006.png" width="425" height="425">
+    </p>
+
+    <p>
+      <strong>G</strong>&gt;<strong>M</strong>&gt;<strong>k</strong>の順番で小さくなる。<br>
+      Gがギガメートル、Mがメガメートル、kがキロメートルを意味する。
+    </p>
+
+    <table>
+      <tr>
+        <td><strong>Eject date</strong></td>
+        <td>惑星の重力圏を出る日時</td>
+      </tr>
+      <tr>
+        <td><abbr title="Closest Approach">Cl. App.</abbr></td>
+        <td>最接近時の距離</td>
+      </tr>
+    </table>
+
+
+    <h3 id="tofdays">TOFとTotal Delta V</h3>
+
+
+    <p>
+      <strong>TOF (days)</strong>と<strong>Total Delta V</strong>を確認する。<br>
+      <strong>View:Eject Plan</strong>の右下に表示されている。
+    </p>
+
+    <p>
+      <img loading="lazy" src="/images/tutorial/part18/007.png" width="425" height="425">
+    </p>
+
+    <table>
+      <tr>
+        <td><abbr title="Time of flight (days)">TOF (days)</abbr></td>
+        <td>移動に必要な日数</td>
+      </tr>
+      <tr>
+        <td><strong>Total DeltaV</strong></td>
+        <td>必要なDelta Vの合計</td>
+      </tr>
+    </table>
+
+    <p>
+      <strong>Eject date</strong>を細かく操作する。<br>
+      上の2つをできるだけ小さくする。
+    </p>
+
+    <p>
+      <kbd>ADJ</kbd>を2回クリック。<br>
+      感度を<strong>Medium</strong>に切り替える。
+    </p>
+
+    <p>
+      <kbd>++</kbd>or<kbd>--</kbd>を長押しクリック。<br>
+      2つの数字を小さくする。
+    </p>
+
+    <p>
+      <strong>Total DeltaV</strong>は<strong>3k</strong>(3000)が目安。
+    </p>
+
+    <p>
+      <img loading="lazy" src="/images/tutorial/part18/008.png" width="425" height="425">
+    </p>
+
+    <p>
+      使用しているアルゴリズムの問題で、数字は激しく変動する。<br>
+      長押しして、数字が小さくなったら止める。
+      行きすぎたら<kbd>--</kbd>をクリックして戻る。
+    </p>
+
+    <p>
+      数字が小さくならないときは、<strong>Reset</strong>するか、<strong>Rough</strong>にして次のタイミングを探す。
+    </p>
+
+
+    <h2 id="related">関連項目</h2>
+
+
+    <ul>
+      <li><a href="transx-plan-explained.html">打ち上げ前にPlan（計画）を作るのはなぜ？</a></li>
+      <li>惑星間航行の基本（動画）
+        <ul>
+          <li><a href="https://www.youtube.com/watch?v=9m2ZToyNGHQ" target="_blank"
+              rel="noopener noreferrer">YouTube</a></li>
+          <li><a href="https://www.nicovideo.jp/watch/sm27580450" target="_blank" rel="noopener noreferrer">ニコニコ動画</a>
+          </li>
+        </ul>
+      </li>
+    </ul>
+
+
+    <h2 id="form">アンケート</h2>
+
+
+    <form
+      action="https://docs.google.com/forms/d/e/1FAIpQLSdD6y2GJEBYVzOaKpj1wtT9r6OXgmLTUBkSBh_cAUBXxsEXHg/formResponse"
+      target="_self" method="POST" id="mG61Hd">
+
+      <p>この記事の内容は理解できましたか？</p>
+
+      <ul>
+        <li><label><input type="radio" name="entry.1914587356" value="できなかった、全然理解できない" />できなかった、全然理解できない</label></li>
+        <li><label><input type="radio" name="entry.1914587356" value="できなかった、途中から理解できない" />できなかった、途中から理解できない</label>
+        </li>
+        <li><label><input type="radio" name="entry.1914587356" value="できた、難しかった" />できた、難しかった</label></li>
+        <li><label><input type="radio" name="entry.1914587356" value="できた、簡単だった" />できた、簡単だった</label></li>
+      </ul>
+
+      <p>
+        <label for="question">わからなかった・難しかったところを教えてください（任意）</label><br>
+        <input id="question" type="text" name="entry.1857549962">
+      </p>
+
+      <p>
+        <button type="submit" name="button" value="送信">送信</button>
+      </p>
+
+    </form>
+
+
+    <h2 id="videos">動画</h2>
+
+
+    <p>
+      <a href="https://youtu.be/v6qZi3gGk7M" target="_blank" rel="noopener noreferrer">YouTube</a>
+    </p>
+
+    <p>
+      <a href="https://www.nicovideo.jp/watch/sm25705169" target="_blank" rel="noopener noreferrer">ニコニコ動画</a>
+    </p>
 
   </main>
 
