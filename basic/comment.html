@@ -93,6 +93,9 @@
         <li><a href="#2021-10-16">2021-10-16</a></li>
         <li><a href="#2021-12-26">2021-12-26</a></li>
         <li><a href="#2022-02-11">2022-02-11</a></li>
+        <li><a href="#2022-02-14-01">2022-02-14-01</a></li>
+        <li><a href="#2022-02-14-02">2022-02-14-02</a></li>
+        <li><a href="#2022-02-15">2022-02-15</a></li>
       </ul>
     </nav>
 
@@ -464,6 +467,73 @@
 
     <p>
       <strong>ISS A to Z</strong>と書かれたシナリオです。
+    </p>
+
+
+    <h3 id="2022-02-14-01">2022-02-14-01</h3>
+
+
+    <blockquote>
+      「JPL Horizonsから軌道をインポートする」<br>
+      ですが、インポートして作成された.scnファイル上の座標がsunの場合でもearthの場合でもJPL HorizonsのデータからY軸とZ軸を入れ替えていますよね？<br>
+      これはOrbiterではどの天体にしてもそのようなaxesの設定になっていると考えて良いんでしょうか？
+    </blockquote>
+
+    <p>
+      JPL Horizonsが使用しているのは「Z軸が上の右手座標系」です。<br>
+      Orbiterが使用しているのは「Y軸が上の左手座標系」です。
+    </p>
+
+    <p>
+      これら座標系における「上」とは、天の北極もしくは黄道北極のことを指します。
+    </p>
+
+    <figure>
+      <img src="/images/basic/comment/002.png" width="600" height="600">
+      <figcaption>Z軸が上の右手系</figcaption>
+    </figure>
+
+    <figure>
+      <img src="/images/basic/comment/003.png" width="600" height="600">
+      <figcaption>Y軸が上の左手系</figcaption>
+    </figure>
+
+    <p>
+      前者で表現された座標を後者で利用する場合は、Y軸とZ軸を入れ替えればよい、ということになります。
+    </p>
+
+
+    <h3 id="2022-02-14-02">2022-02-14-02</h3>
+
+
+    <blockquote>
+      「シナリオファイルの直接編集」についてですが、<br>
+      BEGIN_SHIPS<br>
+      から<br>
+      END_SHIPS<br>
+      までの記載内容について、特にRPOSのデータの仕様を教えてください。<br>
+      .scnファイルの仕様について調べてみましたが、Orbiterの添付ファイルやネット上では見当たりませんでした。
+    </blockquote>
+
+    <p>
+      .scnファイルの仕様については、Docフォルダにある<strong>OrbiterConfig.pdf</strong>を参照してください。<br>
+      <strong>Scenario files</strong>の項目に詳しく書かれています。
+    </p>
+
+    <p>
+      RPOSは位置ベクトルです。上の<a href="#2022-02-14-01">2022-02-14-01</a>の回答を参照してください。
+    </p>
+
+
+    <h3 id="2022-02-15">2022-02-15</h3>
+
+
+    <blockquote>
+      NikogoriさんってMIT卒ですか？SpaceXの社員ですか？
+    </blockquote>
+
+    <p>
+      違います。
     </p>
 
   </main>
