@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 
 <html lang="ja">
+
 <head>
   <script src="/scripts/ga.js"></script>
   <meta charset="UTF-8">
@@ -14,112 +15,283 @@
 
   <main>
 
-  <h1>Scenario Editor TLEのインストールと操作</h1>
+    <h1>Scenario Editor TLEのインストールと操作</h1>
 
 
-<p><strong>Scenario Editor TLE</strong>は、TLE形式の軌道データをOrbiterにインポートできるMODです。<br>
-実際の軌道データをOrbiterに読み込ませることで、人工衛星などの軌道も簡単に再現できます。</p>
+    <p>
+      <strong>Scenario Editor TLE</strong>は、TLE形式の軌道データをOrbiterにインポートできるMODです。
+    </p>
 
-<p>今回の内容に進む前に、シナリオエディタの基本操作を確認してください。<br>
-<a href="/misc/#sceditor">シナリオエディタの記事一覧</a></p>
+    <p>
+      <a href="/misc/#sceditor">シナリオエディタの記事一覧</a>
+    </p>
 
-<ul>
-<li><a href="#install">ダウンロード+インストール</a>
-<ul>
-<li><a href="#install_caution">注意点 (Orbiter2016)</a></li>
-</ul>
-</li>
-<li><a href="#tle">ISSの軌道データをインポートする</a>
-<ul>
-<li><a href="#tle_download">TLEを取得する</a></li>
-<li><a href="#tle_import">OrbiterにTLEを読み込ませる</a></li>
-</ul>
-</li>
-<li><a href="#reference">資料</a></li>
-</ul>
+    <nav>
+      <ul>
+        <li><a href="#whatstle">TLEとは何か</a></li>
+        <li><a href="#download">ダウンロード</a></li>
+        <li><a href="#install">インストール</a>
+          <ul>
+            <li><a href="#install_caution">Orbiter2016</a></li>
+          </ul>
+        </li>
+        <li><a href="#tle">ISSの軌道をインポートする</a>
+          <ul>
+            <li><a href="#tle_download">TLEを取得する</a></li>
+            <li><a href="#tle_import">TLEの読み込み</a></li>
+            <li><a href="#tle_time">時刻の設定</a></li>
+          </ul>
+        </li>
+        <li><a href="#reference">資料</a></li>
+      </ul>
+    </nav>
 
-<h2 id="install">ダウンロード+インストール</h2>
 
-<p><a href="https://www.orbithangar.com/searchid.php?ID=2617">Scenario Editor TLE</a>※</p>
-<p class="note">※Orbiter2010でも2016でも使えます。</p>
-<p>ダウンロードしたファイルを解凍して、Orbiterのインストールフォルダに上書き。</p>
-<p><strong>Launchpad</strong>の<strong>Modules</strong>タブを開く。</p>
-<p><strong>ScnEditorTLE</strong>にチェックを入れる。</p>
+    <h2 id="whatstle">TLEとは何か</h2>
 
-<p>
 
-</p>
+    <p>
+      <abbr title="Two-line element set">TLE</abbr>とは、地球上空を周回する物体の軌道を表現する形式の1つです。<br>
+      ほとんどの人工衛星・宇宙船について、TLE形式による軌道データが公開されています。
+    </p>
 
-<h3 id="install_caution">注意点 (Orbiter2016)</h3>
+    <p>
+      このTLEをOrbiterに読み込ませることで、現実の人工衛星などの軌道も簡単に再現できます。
+    </p>
 
-<p><strong>Orbiter2016</strong>において、宇宙船を地表に配置する場合は、通常の<strong>ScnEditor</strong>を使用してください。</p>
 
-<h2 id="tle">ISSの軌道データをインポートする</h2>
+    <h2 id="download">ダウンロード</h2>
 
-<p>現実のISSは定期的に軌道を変更しているため、OrbiterにおけるISSの軌道とは異なる軌道を周回しています。</p>
-<p>TLE形式で表される軌道データを使って、ISSの軌道を現実のそれに近づける方法について説明します。</p>
 
-<h3 id="tle_download">TLEを取得する</h3>
+    <p>
+      以下のリンクをクリック。
+    </p>
 
-<p>今回は、<strong>CelesTrak</strong>さんで公開されている<strong>TLE</strong>を利用します。</p>
-<p><a href="https://celestrak.com/">CelesTrak</a></p>
-<p>以下のページにある、<strong>Space Stations</strong>のリンクをクリック。</p>
-<p><a href="https://celestrak.com/NORAD/elements/">CelesTrak: Current NORAD Two-Line Element Sets</a></p>
-<p>メモ帳などのテキストエディタを開いて、<strong>ISS (ZARYA)</strong> 以下の3行をコピーする。</p>
+    <p>
+      <a href="https://www.orbithangar.com/searchid.php?ID=2617" target="_blank" rel="noopener noreferrer">
+        Scenario Editor TLE</a>
+    </p>
 
-<p>
-<img loading="lazy" src="/images/misc/scenario-editor-tle/002.png" width="609" height="131">
-</p>
-<p>適当な名前をつけて、<strong>.txt</strong>形式で保存する。</p>
+    <p>
+      <kbd>Download</kbd>ボタンをクリック。<br>
+      <strong>ScnEditorTLE.zip</strong>をクリックすると、ダウンロードが開始する。
+    </p>
 
-<p>
-<img loading="lazy" src="/images/misc/scenario-editor-tle/003.png" width="404" height="118">
-</p>
 
-<h3 id="tle_import">OrbiterにTLEを読み込ませる</h3>
+    <h2 id="install">インストール</h2>
 
-<p>ISSが登場する適当なシナリオでゲームを開始する。<br>
-（例：<strong>Checklists</strong>フォルダの<strong>DG to ISS</strong>）</p>
 
-<p><kbd>Ctrl</kbd>キーを押しながら<kbd>F4</kbd>キーを押す。<br>
-<strong>Scenario Editor TLE</strong>を選択して<kbd>OK</kbd>をクリック。</p>
+    <p>
+      ダウンロードしたzipファイルを解凍する。<br>
+      <strong>ScnEditorTLE.dll</strong>をコピーする。
+    </p>
 
-<p>最初に<kbd>Date</kbd>をクリックして、<kbd>Now</kbd>をクリック。※</p>
+    <p>
+      Orbiterがインストールされているフォルダに移動する。
+    </p>
 
-<p class="note">※今回は現在の時刻を使用しますが、過去のミッションなどを参照する場合は過去の日付に設定してください。<br>
-※Nowボタンで現在時刻を取得すると、1分程度のずれが生じるため、気になる場合は手動で合わせてください。</p>
+    <p>
+      <strong>Modules\Plugin</strong>フォルダを開く。<br>
+      <strong>ScnEditorTLE.dll</strong>を貼り付ける。
+    </p>
 
-<p>一覧から<strong>ISS</strong>をクリックして、<kbd>Edit</kbd>をクリック。</p>
+    <p>
+      <a href="/basic/orbitercontrol.html#launchpad">Launchpad</a>の<kbd>Modules</kbd>タブを開く。
+    </p>
 
-<p>
-<img loading="lazy" src="/images/misc/scenario-editor-tle/005.png" width="416" height="422">
-</p>
-<p><kbd>State vectors</kbd>をクリック。</p>
-<p><strong>Frame</strong>を<strong>ref. equator (fixed)</strong>にする。<br>
-<strong>Coordinates</strong>を<strong>cartesian</strong>にする。</p>
+    <p>
+      <strong>ScnEditorTLE</strong>にチェックを入れる。
+    </p>
 
-<p>
-<img loading="lazy" src="/images/misc/scenario-editor-tle/006.png" width="413" height="420">
-</p>
-<p>下の<kbd>Load TLE</kbd>をクリック。<br>
-保存しておいたTLEのテキストファイルを選択して、<kbd>開く</kbd>をクリック。</p>
-<p>TLEが読み込まれたら<kbd>OK</kbd>をクリック。</p>
+    <figure>
+      <img loading="lazy" src="/images/misc/scneditor-tle/001.png" width="330" height="330">
+    </figure>
 
-<p>
-<img loading="lazy" src="/images/misc/scenario-editor-tle/007.png" width="476" height="311">
-</p>
-<p><kbd>Apply</kbd>をクリックすると、ISSが現実のそれとほぼ同じ位置に移動する。</p>
-<p>以下のページにて、現実のISSの現在位置を確認できます。<br>
-<a href="https://www.esa.int/Our_Activities/Human_Spaceflight/International_Space_Station/Where_is_the_International_Space_Station">Where is the International Space Station? - ESA</a></p>
 
-<h2 id="reference">資料</h2>
+    <h3 id="install_caution">Orbiter2016</h3>
 
-<p>TLEにおける数字の読み方については、以下のページに詳しく解説されているので参考にしてください。<br>
-<a href="https://www.lizard-tail.com/isana/tle/misc/what_is_tle.html" target="_blank" rel="noopener noreferrer">きどうようそのひみつ</a>(Author: KASHIWAI, Isana)</p>
-<p>月日/日数の早見表<br>
-<a href="https://www.esrl.noaa.gov/gmd/grad/neubrew/Calendar.jsp" target="_blank" rel="noopener noreferrer">DOY Calendar - NOAA Earth System Research Laboratory</a></p>
+
+    <p>
+      <a href="/basic/orbiter2016.html">Orbiter2016</a>でも、このMODを使ってTLEの読み込みができる。
+    </p>
+
+    <p>
+      ただし、<strong>Orbiter2016</strong>では着陸関連の仕様が変更されており、このMODも影響を受ける。<br>
+      宇宙船を地表に配置するときは、通常の<a href="scneditor-date.html#launch">シナリオエディタ</a>を使用すること。
+    </p>
+
+
+    <h2 id="tle">ISSの軌道をインポートする</h2>
+
+
+    <p>
+      <abbr title="International Space Station">ISS</abbr>の軌道を例に、TLEのインポート手順について説明する。
+    </p>
+
+    <p>
+      ISSは定期的に軌道を変更しているため、Orbiter上のISSとは異なる軌道を周回している。<br>
+      以下の手順によって、ISSの軌道を現実のそれに近づけることができる。
+    </p>
+
+    <p>
+      この記事では、<a href="https://celestrak.com/" target="_blank" rel="noopener noreferrer">
+        CelesTrak</a>で公開されている<strong>TLE</strong>を利用する。
+    </p>
+
+
+    <h3 id="tle_download">TLEを取得する</h3>
+
+
+    <p>
+      以下のページにある、<strong>Space Stations</strong>のリンクをクリック。
+    </p>
+
+    <p>
+      <a href="https://celestrak.com/NORAD/elements/" target="_blank" rel="noopener noreferrer">
+        CelesTrak: Current NORAD Two-Line Element Sets</a>
+    </p>
+
+    <figure>
+      <img loading="lazy" src="/images/misc/scneditor-tle/002.png" width="401" height="200">
+    </figure>
+
+    <p>
+      メモ帳などのテキストエディタを開いて、<strong>ISS (ZARYA)</strong> 以下の3行をコピーする。
+    </p>
+
+    <p>
+      <img loading="lazy" src="/images/misc/scneditor-tle/003.png" width="600" height="150">
+    </p>
+
+    <p>
+      適当な名前をつけて、<strong>.txt</strong>形式で保存する。
+    </p>
+
+    <p>
+      <img loading="lazy" src="/images/misc/scneditor-tle/004.png" width="500" height="150">
+    </p>
+
+
+    <h3 id="tle_import">TLEの読み込み</h3>
+
+
+    <p>
+      <strong>Space Stations</strong>フォルダの<strong>ISS</strong>シナリオでゲームを開始する。
+    </p>
+
+    <figure>
+      <img loading="lazy" src="/images/misc/scneditor-tle/005.png" width="350" height="350">
+    </figure>
+
+    <p>
+      <kbd>Ctrl</kbd>キーを押しながら<kbd>F4</kbd>キーを押す。<br>
+      <strong>Scenario Editor TLE</strong>を選択して<kbd>OK</kbd>をクリック。
+    </p>
+
+    <figure>
+      <img loading="lazy" src="/images/misc/scneditor-tle/006.png">
+    </figure>
+
+    <p>
+      ウィンドウ右下の<kbd>Date</kbd>をクリック。<br>
+      日時変更画面を開く。
+    </p>
+
+    <figure>
+      <img loading="lazy" src="/images/misc/scneditor-tle/007.png" width="401" height="414">
+    </figure>
+
+    <p>
+      <kbd>Now</kbd>をクリック。<br>
+      <kbd>Done</kbd>をクリックして戻る。
+    </p>
+
+    <figure>
+      <img loading="lazy" src="/images/misc/scneditor-tle/008.png" width="401" height="414">
+    </figure>
+
+    <p>
+      一覧から<strong>ISS</strong>をクリックして選択。<br>
+      ウィンドウ右下の<kbd>Edit</kbd>をクリック。
+    </p>
+
+    <p>
+      <kbd>State vectors</kbd>をクリック。
+    </p>
+
+    <p>
+      <img loading="lazy" src="/images/misc/scneditor-tle/009.png" width="401" height="414">
+    </p>
+
+    <p>
+      <strong>Frame</strong>を<strong>ref. equator (fixed)</strong>にする。<br>
+      <strong>Coordinates</strong>が<strong>cartesian</strong>になっているか確認する。
+    </p>
+
+    <p>
+      <img loading="lazy" src="/images/misc/scneditor-tle/010.png" width="401" height="414">
+    </p>
+
+    <p>
+      <kbd>Load TLE</kbd>をクリック。<br>
+      保存しておいた<strong>.txt</strong>ファイルを選択して、<kbd>開く</kbd>をクリック。
+    </p>
+
+    <p>
+      TLEが読み込まれたら<kbd>OK</kbd>をクリック。
+    </p>
+
+    <p>
+      <img loading="lazy" src="/images/misc/scneditor-tle/011.png" width="412" height="193">
+    </p>
+
+    <p>
+      <kbd>Apply</kbd>をクリック。<br>
+      ISSが現実のそれとほぼ同じ位置に移動する。
+    </p>
+
+    <p>
+      以下のページにて、現実のISSの現在位置を確認できる。<br>
+      <a href="https://www.esa.int/Our_Activities/Human_Spaceflight/International_Space_Station/Where_is_the_International_Space_Station"
+        target="_blank" rel="noopener noreferrer">
+        Where is the International Space Station? - ESA</a>
+    </p>
+
+
+    <h3 id="tle_time">時刻の設定</h3>
+
+
+    <p>
+      <kbd>Now</kbd>ボタンで現在時刻を取得すると、1分程度のずれが生じる。<br>
+      これはOrbiterの仕様なので、気になる場合は手動で修正する。
+    </p>
+
+    <p>
+      過去のミッションを再現する場合は、TLEの読み込み前に時間移動しておく。
+    </p>
+
+    <p>
+      <a href="scneditor-date.html#date">シナリオエディタ 基本操作と日時の変更</a>
+    </p>
+
+
+    <h2 id="reference">資料</h2>
+
+
+    <p>
+      TLEにおける数字の意味については、以下のページを参照。<br>
+      <a href="https://www.lizard-tail.com/isana/tle/misc/what_is_tle.html" target="_blank" rel="noopener noreferrer">
+        きどうようそのひみつ</a> (Author: KASHIWAI, Isana)
+    </p>
+
+    <p>
+      月日/日数の早見表<br>
+      <a href="https://www.esrl.noaa.gov/gmd/grad/neubrew/Calendar.jsp" target="_blank" rel="noopener noreferrer">
+        DOY Calendar - NOAA Earth System Research Laboratory</a>
+    </p>
 
   </main>
 
 </body>
+
 </html>
