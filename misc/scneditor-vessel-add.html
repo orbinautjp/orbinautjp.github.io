@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 
 <html lang="ja">
+
 <head>
   <script src="/scripts/ga.js"></script>
   <meta charset="UTF-8">
@@ -14,48 +15,99 @@
 
   <main>
 
-  <h1>シナリオエディタ 宇宙船の追加</h1>
+    <h1>シナリオエディタ 宇宙船の追加</h1>
 
 
-<p>シナリオエディタを使って、既存のシナリオに新しく宇宙船を追加したり、削除したりできます。</p>
+    <p>
+      シナリオエディタを使用して、ゲーム内で宇宙船を追加・削除する。
+    </p>
 
-<ul>
-<li><a href="#delete">宇宙船を削除する</a></li>
-<li><a href="#add">宇宙船を追加する</a></li>
-<li><a href="#others">その他のケース</a></li>
-</ul>
+    <nav>
+      <ul>
+        <li><a href="#select">宇宙船を選択する</a></li>
+        <li><a href="#delete">宇宙船を削除する</a>
+        <ul>
+          <li><a href="#delete_bugged">ゲームが強制終了するとき</a></li>
+        </ul>
+        </li>
+        <li><a href="#add">宇宙船を追加する</a></li>
+        <li><a href="#others">その他のケース</a></li>
+      </ul>
+    </nav>
 
-<p><img loading="lazy" src="/images/misc/sceditor3-addvessel/SCE004.png" width="412" height="417"></p>
 
-<p>右上の<strong>Track</strong>にチェックが入っていると、選択した宇宙船にカメラが移動する。</p>
+    <h2 id="select">宇宙船を選択する</h2>
 
-<h2 id="delete">宇宙船を削除する</h2>
 
-<p>リストから選択して、右下の<kbd>Delete</kbd>をクリックすると、既存の宇宙船を消去できる。</p>
+    <p>
+      <a href="/misc/scneditor-date.html#launch">シナリオエディタを開く</a>。<br>
+      宇宙船の名前をクリックして選択する。
+    </p>
 
-<p><strong class="caution">重要</strong>：ゲームが強制終了する場合、不具合の原因になっている宇宙船を削除すると復旧できることがある。</p>
+    <p>
+      右上の<strong>Track</strong>にチェックが入っていると、選択した宇宙船にカメラが移動する。
+    </p>
 
-<h2 id="add">宇宙船を追加する</h2>
+    <figure>
+      <img loading="lazy" src="/images/misc/scneditor-vessel-add/001.png" width="412" height="417">
+    </figure>
 
-<p>シナリオエディタを開いて、<kbd>New</kbd>をクリック。</p>
 
-<p><img loading="lazy" src="/images/misc/sceditor3-addvessel/SCE010.png" width="413" height="419"></p>
+    <h2 id="delete">宇宙船を削除する</h2>
 
-<p>リストから追加したい宇宙船・宇宙ステーションを選んで<strong>Vessel name</strong>に名前を入力。<br>
-左下の<kbd>Create</kbd>をクリックすると、宇宙船が追加される。</p>
 
-<p>右上の<strong>Set camera</strong>にチェックが入っていると、追加した宇宙船にカメラが移動する。<br>
-<strong>Set input focus</strong>にチェックを入れておくと、追加した宇宙船をそのまま操作できる。</p>
+    <p>
+      リストから選択して、右下の<kbd>Delete</kbd>をクリックすると、既存の宇宙船を消去できる。
+    </p>
 
-<h2 id="others">その他のケース</h2>
 
-<p><strong>Spacecraft3.dll</strong>を利用する宇宙船の場合は、あらかじめConfigファイルを作成しないとリストに表示されない。<br>
-<a href="/mods/spacecraft3download.html" target="_blank">Spacecraft3.dll+Multistage2.dll+Stage.dllのダウンロード</a></p>
+    <h3 id="delete_bugged">ゲームが強制終了するとき</h3>
 
-<p>複数のモジュールから構成される宇宙船・宇宙ステーションを追加する場合は、シナリオファイルを直接編集する必要がある。<br>
-<a href="scenarioedit.html" target="_blank">シナリオファイルの直接編集</a></p>
+
+    <p>
+      何らかの不具合でゲームが強制終了する場合、原因になっている宇宙船を削除すると復旧できることがある。
+    </p>
+
+
+    <h2 id="add">宇宙船を追加する</h2>
+
+
+    <p>
+      <kbd>New</kbd>をクリック。
+    </p>
+
+    <figure>
+      <img loading="lazy" src="/images/misc/scneditor-vessel-add/002.png" width="413" height="419">
+    </figure>
+
+    <p>
+      リストから宇宙船を選んで<strong>Vessel name:</strong>に名前を入力。<br>
+      左下の<kbd>Create</kbd>をクリックすると、宇宙船が追加される。
+    </p>
+
+    <figure>
+      <img loading="lazy" src="/images/misc/scneditor-vessel-add/003.png">
+    </figure>
+
+    <p>
+      右上の<strong>Set camera</strong>にチェックが入っていると、追加した宇宙船にカメラが移動する。<br>
+      <strong>Set input focus</strong>にチェックを入れておくと、追加した宇宙船をそのまま操作できる。
+    </p>
+
+
+    <h2 id="others">その他のケース</h2>
+
+
+    <p>
+      <a href="/mods/spacecraft3download.html">Spacecraft.dll</a>を利用する宇宙船は、あらかじめConfigファイルを作成しないとリストに表示されない。
+    </p>
+
+    <p>
+      複数のモジュールが結合した宇宙船・宇宙ステーションを追加する場合は、<a href="scenarioedit.html">シナリオファイルを直接編集する</a>。
+    </p>
 
   </main>
 
 </body>
+
 </html>
