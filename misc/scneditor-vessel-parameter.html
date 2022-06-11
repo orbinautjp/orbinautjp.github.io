@@ -1,0 +1,576 @@
+<!DOCTYPE html>
+
+<html lang="ja">
+
+<head>
+  <script src="/scripts/ga.js"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/styles/orbiterjp.css">
+  <script src="/scripts/template.js" charset="utf-8" defer></script>
+  <title>シナリオエディタ 宇宙船のパラメータの変更</title>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+
+<body>
+
+  <main>
+
+
+    <h1>シナリオエディタ 宇宙船のパラメータの変更</h1>
+
+
+    <p>
+      シナリオエディタでは、宇宙船の軌道要素や残り燃料などのパラメータを変更できる。
+    </p>
+
+    <nav>
+      <ul>
+        <li><a href="#select">宇宙船を選択する</a></li>
+        <li>Free flight
+          <ul>
+            <li><a href="#elements">Orbital elements</a> …軌道要素
+              <ul>
+                <li><a href="#element_sma">Semi-major axis [SMa]</a></li>
+                <li><a href="#element_ecc">Eccentricity [Ecc]</a></li>
+                <li><a href="#element_inc">Inclination [Inc]</a></li>
+                <li><a href="#element_lan">Longitude of ascending node [LAN]</a></li>
+                <li><a href="#element_reference">Orbit reference</a></li>
+                <li><a href="#element_frame">Frame</a></li>
+                <li><a href="#element_epoch">Epoch</a></li>
+                <li><a href="#element_application">打ち上げを省略する</a></li>
+              </ul>
+            </li>
+            <li><a href="#vectors">State vectors</a> …軌道状態ベクトル
+              <ul>
+                <li><a href="#vectors_copyvector">Copy state from</a></li>
+              </ul>
+            </li>
+            <li><a href="#orientation">Orientation</a> …機体の向き</li>
+            <li><a href="#angular">Angular velocity</a> …角速度</li>
+          </ul>
+        </li>
+        <li>On the ground
+          <ul>
+            <li><a href="#location">Location</a> …地上での位置
+              <ul>
+                <li><a href="#location_surface">Surface position</a></li>
+                <li><a href="#location_reference">Reference</a></li>
+                <li><a href="#location_copy">Copy state from</a></li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+        <li>Misc
+          <ul>
+            <li><a href="#propellant">Propellant</a> …推進剤（燃料）
+              <ul>
+                <li><a href="#propellant_tank">Tank no.</a></li>
+              </ul>
+            </li>
+            <li><a href="#docking">Docking</a> …ドッキング</li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+
+
+    <h2 id="select">宇宙船を選択する</h2>
+
+
+    <p>
+      <a href="scneditor-date.html#launch">シナリオエディタを開く</a>と、そのシナリオに含まれる宇宙船が一覧表示される。<br>
+      宇宙船をクリックして選択する。<br>
+    </p>
+
+    <p>
+      右下の<kbd>Edit</kbd>をクリック。<br>
+      軌道要素や現在位置、残り燃料などを変更する。
+    </p>
+
+    <figure>
+      <img loading="lazy" src="/images/misc/scneditor-vessel-parameter/001.png" width="401" height="414">
+    </figure>
+
+    <p>
+      以下の3つのカテゴリーから、変更したい項目を選ぶ。
+    </p>
+
+    <table>
+      <tr>
+        <th>Free flight</th>
+        <td>自由落下</td>
+      </tr>
+      <tr>
+        <th>On the ground</th>
+        <td>地上</td>
+      </tr>
+      <tr>
+        <th>Misc</th>
+        <td>その他</td>
+      </tr>
+    </table>
+
+    <figure>
+      <img loading="lazy" src="/images/misc/scneditor-vessel-parameter/002.png" width="401" height="414">
+    </figure>
+
+    <p>
+      設定が終わったら、ウィンドウ下の<kbd>Apply</kbd>をクリック。<br>
+      変更が適用される。
+    </p>
+
+    <figure>
+      <img loading="lazy" src="/images/misc/scneditor-vessel-parameter/003.png" width="401" height="414">
+    </figure>
+
+    <p>
+      <kbd>Refresh</kbd>をクリックすると、時間経過による変化が反映される。
+    </p>
+
+
+    <h2 id="flight">Free flight</h2>
+
+
+    <p>
+      軌道要素や角速度など、宇宙船の軌道上での状態を決定する。
+    </p>
+
+
+    <h3 id="elements">Orbital elements</h3>
+
+
+    <p>
+      宇宙船の<a href="orbitalelements.html">軌道要素</a>を決定する。
+    </p>
+
+    <figure>
+      <img loading="lazy" src="/images/misc/scneditor-vessel-parameter/004.png" width="401" height="414">
+    </figure>
+
+
+    <h4 id="element_sma">Semi-major axis [SMa]</h4>
+
+
+    <p>
+      <a href="/misc/orbitalelements.html#sma">軌道長半径</a>。楕円軌道の長半径を指定する。<br>
+      地球のまわりをほぼ完全な円軌道で周回する場合、6571kmなら高度200kmになる。
+    </p>
+
+
+    <h4 id="element_ecc">Eccentricity [Ecc]</h4>
+
+
+    <p>
+      <a href="/misc/orbitalelements.html#ecc">軌道離心率</a>。0にするとほぼ完全な円軌道になる。
+    </p>
+
+
+    <h4 id="element_inc">Inclination [Inc]</h4>
+
+
+    <p>
+      <a href="/misc/orbitalelements.html#inc">軌道傾斜角</a>。基準となる平面（黄道もしくは赤道）からの傾きを指定する。
+    </p>
+
+
+    <h4 id="element_lan">Longitude of ascending node [LAN]</h4>
+
+
+    <p>
+      <a href="/misc/orbitalelements.html#lan">昇交点黄経／赤経</a>。軌道の傾きは同じままで、向きが変わる。<br>
+      軌道傾斜角が同じでも、LANが違えば軌道面は一致しない。
+    </p>
+
+
+    <h4 id="element_reference">Orbit reference</h4>
+
+
+    <p>
+      基準となる天体（中心天体）を選択する。
+    </p>
+
+
+    <h4 id="element_frame">Frame</h4>
+
+
+    <p>
+      <a href="/misc/orbitalelements.html#frm">基準となる平面</a>を選択する。
+    </p>
+
+    <p>
+      黄道面を基準にするか、赤道面を基準にするか決める。<br>
+      <a href="/tutorial/part1.html#orbitmfd">Orbit MFD</a>などを使用しているときは、同じ基準を参照するように設定する。
+    </p>
+
+    <table>
+      <tr>
+        <th>ecliptic</th>
+        <td>黄道面を基準にする</td>
+      </tr>
+      <tr>
+        <th>ref. equator</th>
+        <td>赤道面を基準にする</td>
+      </tr>
+    </table>
+
+
+    <h4 id="element_epoch">Epoch</h4>
+
+
+    <p>
+      元期を決定する。<br>
+      「この時刻に、左のような軌道要素だった」ことを表す。
+    </p>
+
+    <table>
+      <tr>
+        <th>current</th>
+        <td>（ゲーム内の）現在時刻</td>
+      </tr>
+      <tr>
+        <th>MJD</th>
+        <td><a href="/misc/orbitalelements.html#m_jd">修正ユリウス日</a>による任意の日時</td>
+      </tr>
+    </table>
+
+
+    <h4 id="element_application">打ち上げを省略する</h4>
+
+
+    <p>
+      打ち上げを省略して、ISSと同じ軌道面に宇宙船を配置することができる。
+    </p>
+
+    <p>
+      <a href="/tutorial/part1.html#orbitmfd">Orbit MFD</a>を開いて<strong>ISS</strong>をターゲットする。<br>
+      Orbit MFDの右側を見て、ISSの<strong>Inc</strong>と<strong>LAN</strong>を確認する。
+    </p>
+
+    <figure>
+      <img loading="lazy" src="/images/misc/scneditor-vessel-parameter/005.png" width="425" height="425">
+    </figure>
+
+    <p>
+      シナリオエディタを開く。
+    </p>
+
+    <p>
+      <strong>Frame</strong>を<strong>ref. equator</strong>にする。<br>
+      ISSと同じ数値を<strong>Inc</strong>と<strong>LAN</strong>に入力する。<br>
+      <strong>Semi-major axis</strong>を<strong>6571km</strong>、
+      <strong>Eccentricity</strong>を<strong>0</strong>にする。<br>
+    </p>
+
+    <figure>
+      <img loading="lazy" src="/images/misc/scneditor-vessel-parameter/006.png" width="401" height="414">
+    </figure>
+
+    <p>
+      <kbd>Apply</kbd>をクリックすると、ISSと軌道面が一致した状態になる。
+    </p>
+
+    <figure>
+      <img loading="lazy" src="/images/misc/scneditor-vessel-parameter/007.png" width="425" height="425">
+    </figure>
+
+
+    <h3 id="vectors">State vectors</h3>
+
+
+    <p>
+      <a href="/misc/orbitalelements.html#statevector">軌道状態ベクトル</a>を決定する。<br>
+      初期状態では<strong>cartesian</strong>（デカルト座標）で表現される。
+    </p>
+
+    <figure>
+      <img loading="lazy" src="/images/misc/scneditor-vessel-parameter/008.png" width="401" height="414">
+    </figure>
+
+    <table>
+      <tr>
+        <th>\( ( x, y, z ) \)</th>
+        <td>位置ベクトル</td>
+      </tr>
+      <tr>
+        <th>\(\displaystyle \left( \frac{dx}{dt}, \frac{dy}{dt}, \frac{dz}{dt} \right) \)</th>
+        <td>速度ベクトル</td>
+      </tr>
+      <tr>
+        <th>Orbit reference</th>
+        <td>中心天体</td>
+      </tr>
+      <tr>
+        <th>Frame</th>
+        <td>基準となる平面</td>
+      </tr>
+      <tr>
+        <th>Coordinates</th>
+        <td>座標系</td>
+      </tr>
+      <tr>
+        <th>Copy state from</th>
+        <td>軌道状態ベクトルをコピーする</td>
+      </tr>
+    </table>
+
+    <p>
+      <strong>Coordinates</strong>を<strong>polar</strong>（極座標）にすると、表示が変化する。
+    </p>
+
+    <figure>
+      <img loading="lazy" src="/images/misc/scneditor-vessel-parameter/014.png" width="401" height="414">
+    </figure>
+
+    <table>
+      <tr>
+        <th>radius</th>
+        <td>動径</td>
+      </tr>
+      <tr>
+        <th>longitude</th>
+        <td>経度</td>
+      </tr>
+      <tr>
+        <th>latitude</th>
+        <td>緯度</td>
+      </tr>
+      <tr>
+        <th>\(\displaystyle \left( \frac{ d~ \mathrm{ radius } }{dt} \right) \)</th>
+        <td>動径方向の速度。経度・緯度についても同じ。</td>
+      </tr>
+    </table>
+
+
+    <h4 id="vectors_copyvector">Copy state from</h4>
+
+
+    <p>
+      <kbd>Ctrl</kbd>+<kbd>P</kbd>を押して、ゲームを一時停止する。<br>
+      <strong>Copy state from</strong>のリストから、任意の宇宙船をクリック。<br>
+      <kbd>Apply</kbd>をクリックすると、選択した宇宙船と同じ位置・軌道に移行する。
+    </p>
+
+
+    <h3 id="orientation">Orientation</h3>
+
+
+    <p>
+      機体の向きを指定する。<br>
+      地上では変更できない。
+    </p>
+
+    <figure>
+      <img loading="lazy" src="/images/misc/scneditor-vessel-parameter/009.png" width="401" height="414">
+    </figure>
+
+
+    <h3 id="angular">Angular velocity</h3>
+
+
+    <p>
+      角速度。<br>
+      宇宙船が回転する速度を変更できる。
+    </p>
+
+    <figure>
+      <img loading="lazy" src="/images/misc/scneditor-vessel-parameter/010.png" width="401" height="414">
+    </figure>
+
+    <p>
+      <kbd>Kill</kbd>をクリックすると回転が止まる。<br>
+      宇宙船が高速回転して制御できなくなった場合でも、強制的に止めることができる。
+    </p>
+
+
+    <h2 id="ground">On the ground</h2>
+
+
+    <p>
+      地上での位置を変更する。
+    </p>
+
+
+    <h3 id="location">Location</h3>
+
+
+    <p>
+      地上にいる宇宙船の位置を変更する。<br>
+      軌道上にいる宇宙船を地上に降ろすこともできる。
+    </p>
+
+    <p>
+      <img loading="lazy" src="/images/misc/scneditor-vessel-parameter/011.png" width="401" height="414">
+    </p>
+
+
+    <h4 id="location_surface">Surface position</h4>
+
+
+    <p>
+      地上での位置を決定する。
+    </p>
+
+    <table>
+      <tbody>
+        <tr>
+          <th>Longitude</th>
+          <td>経度</td>
+        </tr>
+        <tr>
+          <th>Latitude</th>
+          <td>緯度</td>
+        </tr>
+        <tr>
+          <th>Heading</th>
+          <td>宇宙船の向き</td>
+        </tr>
+      </tbody>
+    </table>
+
+
+    <h4 id="location_reference">Reference</h4>
+
+
+    <p>
+      惑星や月などの天体を選択する。<br>
+      選択した天体に移動する。
+    </p>
+
+    <table>
+      <tbody>
+        <tr>
+          <th>Celestial body</th>
+          <td>天体（惑星とその月）の選択</td>
+        </tr>
+        <tr>
+          <th>Surface base</th>
+          <td>地上基地
+          </td>
+        </tr>
+        <tr>
+          <th>Landing pad</th>
+          <td>着陸パッド</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <p>
+      滑走路を指定することはできない。
+    </p>
+
+
+    <h4 id="location_copy">Copy state from</h4>
+
+
+    <p>
+      地上にいる他の宇宙船から、位置情報をコピーする。
+    </p>
+
+    <p>
+      これを使うと、他の宇宙船と同じ位置に移動する。<br>
+      Orbiterには宇宙船どうしの衝突判定はないので、2機が重なり合うことになる。
+    </p>
+
+
+    <h2 id="misc">Misc</h2>
+
+
+    <p>
+      その他の項目。
+    </p>
+
+
+    <h3 id="propellant">Propellant</h3>
+
+
+    <p>
+      推進剤の残量を変更する。
+    </p>
+
+    <figure>
+      <img loading="lazy" src="/images/misc/scneditor-vessel-parameter/012.png" width="401" height="414">
+    </figure>
+
+    <table>
+      <tr>
+        <th>Tank no.</th>
+        <td>推進剤タンクの番号</td>
+      </tr>
+      <tr>
+        <th>Empty</th>
+        <td>空にする</td>
+      </tr>
+      <tr>
+        <th>Full</th>
+        <td>満タンにする</td>
+      </tr>
+      <tr>
+        <th>Empty all</th>
+        <td>全タンクを空にする</td>
+      </tr>
+      <tr>
+        <th>Fill all</th>
+        <td>全タンクを満タンにする</td>
+      </tr>
+    </table>
+
+
+    <h4 id="propellant_tank">Tank no.</h4>
+
+
+    <p>
+      どの推進剤タンクの残量を変更するか選択する。
+    </p>
+
+    <p>
+      宇宙船によっては、スクラムジェット、メインエンジン、RCSで別のタンクを使用することがある。<br>
+      逆に、探査機・人工衛星では、すべて同じタンクの燃料を使用するものもある。
+    </p>
+
+
+    <h3 id="docking">Docking</h3>
+
+
+    <p>
+      宇宙船および宇宙ステーションとドッキングする。
+    </p>
+
+    <figure>
+      <img loading="lazy" src="/images/misc/scneditor-vessel-parameter/013.png" width="401" height="414">
+    </figure>
+
+    <p>
+      相手の宇宙船とドッキングポートを選んで、<kbd>Dock</kbd>をクリック。<br>
+      即座にドッキングされる。
+    </p>
+
+    <table>
+      <tr>
+        <th>Dock no.</th>
+        <td>自機のドッキングポートを選択</td>
+      </tr>
+      <tr>
+        <th>Establish docking connection with</th>
+        <td>ドロップダウンメニューで宇宙船を選択</td>
+      </tr>
+      <tr>
+        <th>using dock</th>
+        <td>相手のドッキングポートを選択</td>
+      </tr>
+      <tr>
+        <th>Bring target to...</th>
+        <td>相手がこちらの現在位置に移動する</td>
+      </tr>
+      <tr>
+        <th>Move me to...</th>
+        <td>こちらが相手の現在位置に移動する</td>
+      </tr>
+    </table>
+
+
+  </main>
+
+</body>
+
+</html>
