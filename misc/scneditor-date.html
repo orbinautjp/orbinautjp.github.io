@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+
+<html lang="ja">
+
+<head>
+  <script src="/scripts/ga.js"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/styles/orbiterjp.css">
+  <script src="/scripts/template.js" charset="utf-8" defer></script>
+  <title>シナリオエディタ 基本操作と日時の変更</title>
+</head>
+
+<body>
+
+  <main>
+
+    <h1>シナリオエディタ 基本操作と日時の変更</h1>
+
+
+    <nav>
+      <ul>
+        <li><a href="#launch">シナリオエディタを開く</a></li>
+        <li><a href="#save">シナリオを保存する</a></li>
+        <li><a href="#date">日時の変更</a>
+          <ul>
+            <li><a href="#date_time">Date and time</a></li>
+            <li><a href="#date_mjd">Modified Julian Date [MJD]</a></li>
+            <li><a href="#date_propagation">Vessel state propagation</a></li>
+          </ul>
+        </li>
+        <li><a href="#timejump">シナリオエディタを使ったタイムワープ</a></li>
+        <li><a href="#caution">注意点</a></li>
+      </ul>
+    </nav>
+
+
+    <h2 id="launch">シナリオエディタを開く</h2>
+
+
+    <p>
+      <a href="/basic/orbitercontrol.html#launchpad">Launchpad</a>の<kbd>Modules</kbd>タブをクリック。<br>
+      <strong>ScnEditor</strong>にチェックを入れる。
+    </p>
+
+    <figure>
+      <img loading="lazy" src="/images/misc/scneditor-date/001.png" width="554" height="565">
+    </figure>
+
+    <p>
+      <strong>ゲーム内で</strong><kbd>Ctrl</kbd>キーを押しながら<kbd>F4</kbd>キーを押す。<br>
+      <strong>Scenario Editor</strong>を選んで<kbd>OK</kbd>をクリック。
+    </p>
+
+    <figure>
+      <img loading="lazy" src="/images/misc/scneditor-date/002.png" width="254" height="276">
+    </figure>
+
+
+    <h2 id="save">シナリオを保存する</h2>
+
+
+    <p>
+      <kbd>Save</kbd>をクリックすると、現在のシナリオに名前をつけて保存できる。
+    </p>
+
+    <figure>
+      <img loading="lazy" src="/images/misc/scneditor-date/003.png" width="401" height="414">
+    </figure>
+
+
+    <h2 id="date">日時の変更</h2>
+
+
+    <p>
+      シナリオエディタを開いて、<kbd>Date</kbd>をクリック。
+    </p>
+
+    <figure>
+      <img loading="lazy" src="/images/misc/scneditor-date/004.png" width="401" height="414">
+    </figure>
+
+    <p>
+      <kbd>▲</kbd>ボタンをクリックするか、キーボードで直接日時を入力。<br>
+      <kbd>Apply</kbd>と書かれたボタンをクリックすると、指定した日時に移動する。
+    </p>
+
+    <p>
+      参照：<a href="orbitalelements.html#time" target="_blank">軌道要素と時刻系</a>
+    </p>
+
+    <figure>
+      <img loading="lazy" src="/images/misc/scneditor-date/005.png" width="401" height="414">
+    </figure>
+
+    <p>
+      <kbd>Now</kbd>をクリックすると、現在時刻に移動する。<br>
+      ただし、Orbiterの仕様で1分程度のずれが生じるので注意すること。
+    </p>
+
+
+    <h3 id="date_time">Date and time</h3>
+
+
+    <p>
+      日時を指定する。<br>
+      <a href="/misc/orbitalelements.html#ut">UT</a>（世界時）が使われている。特定地域の標準時を表示することはできない。<br>
+      左から、<strong>日・月・年</strong>、<strong>時・分・秒</strong>を指定する。
+    </p>
+
+
+    <h3 id="date_mjd">Modified Julian Date [MJD]</h3>
+
+
+    <p>
+      <a href="orbitalelements.html#mjd">Modified Julian Date</a> = 修正ユリウス日。<br>
+      100日後に移動したいなら、この数字に100を足す。
+    </p>
+
+    <p>
+      小数点以下は時・分・秒に相当するが、<strong>12進法ではなく10進法を使うので注意。</strong><br>
+      （例えば、0.1は10分の1日なので2.4時間になる）</p>
+
+    <p>
+      西暦とMJDの変換については以下の記事を参照すること。
+    </p>
+
+    <ul>
+      <li><a href="orbitalelements.html#time_tool">Orbiter Date Converter</a></li>
+      <li><a href="orbitalelements.html#mjd">Modified Julian Date [MJD]</a></li>
+    </ul>
+
+
+    <h3 id="date_propagation">Vessel state propagation</h3>
+
+
+    <p>
+      シナリオエディタでのタイムワープが宇宙船の挙動にどう影響するかを決定する。
+    </p>
+
+    <p>
+      通常は、以下の設定のままにしておく。
+    </p>
+
+    <table>
+      <tr>
+        <th>Orbital</th>
+        <td>Propagate along osculating elements</td>
+      </tr>
+      <tr>
+        <th>Suborbital</th>
+        <td>Maintain fixed surface position</td>
+      </tr>
+    </table>
+
+    <p>
+      それぞれの設定の意味は以下の通り。
+    </p>
+
+    <table>
+      <tr>
+        <th>Orbital</th>
+        <td>軌道上</td>
+      </tr>
+      <tr>
+        <th>Suborbital</th>
+        <td>地上・大気圏内</td>
+      </tr>
+      <tr>
+        <th>Maintain fixed state vectors</th>
+        <td>基準となる座標系に対して、現在の位置・速度を保存する。<br>
+          中心天体の自転の影響を受けない。</td>
+      </tr>
+      <tr>
+        <th>Maintain fixed surface position</th>
+        <td>地表における位置を保存する。<br>
+          惑星の自転に合わせて移動する。</td>
+      </tr>
+      <tr>
+        <th>Propagate along osculating elements</th>
+        <td>現在の軌道にしたがって移動する。<br>
+          中心天体以外の重力の影響は計算されない。</td>
+      </tr>
+    </table>
+
+
+    <h2 id="timejump">シナリオエディタを使ったタイムワープ</h2>
+
+
+    <p>
+      シナリオエディタを使って、長距離移動でのプレイ時間を短縮できる。
+    </p>
+
+    <p>
+      宇宙船の飛行中にシナリオエディタを使って時間を操作すると、宇宙船は予測された軌道に従って、その時点のあるべき位置に移動する。
+    </p>
+
+    <p>
+      例えば、宇宙船を「半年後に火星に到着する軌道」に乗せてから、シナリオエディタで半年後に時間移動すると、一瞬で火星に到着することになる。
+    </p>
+
+    <p>
+      ただし、軌道計算が簡略化されるため、<kbd>T</kbd> or <kbd>R</kbd>キーでのタイムワープと比べて多少の誤差がある。<br>
+      <strong>惑星の重力圏から離れた位置</strong>まで移動してから実行するとよい。
+    </p>
+
+
+    <h2 id="caution">注意点</h2>
+
+
+    <p class="caution">
+      指定された日時によっては、Orbiterの挙動が不安定になることがある。
+    </p>
+
+    <p>
+      惑星表面が振動し、宇宙飛行士などが歩行できなくなる。<br>
+      21世紀前半であれば問題ないが、20世紀や21世紀後半になると不安定になる。<br>
+      惑星表面に着陸しないのであれば、宇宙船の航行にはほとんど影響しない。
+    </p>
+
+  </main>
+
+</body>
+
+</html>

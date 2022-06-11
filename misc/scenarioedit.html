@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 
 <html lang="ja">
+
 <head>
   <script src="/scripts/ga.js"></script>
   <meta charset="UTF-8">
@@ -14,70 +15,538 @@
 
   <main>
 
-  <h1>シナリオファイルの直接編集</h1>
+    <h1>シナリオファイルの直接編集</h1>
 
 
-<p>Orbiterのシナリオファイル（拡張子が<strong>.scn</strong>のファイル）は、メモ帳などのテキストエディタで直接編集できます。</p>
+    <p>
+      シナリオファイルをテキストエディタで編集する方法について説明します。
+    </p>
 
-<p>今回は例題として、<strong>DG to ISS</strong>シナリオのISSを<a href="/iss/iss-atoz-install.html" target="_blank">ISS A to Z</a>に入れ替える方法を解説します。</p>
+    <nav>
+      <ul>
+        <li><a href="#aboutscn">シナリオファイルを開く</a></li>
+        <li><a href="#scn">シナリオファイル</a>
+          <ul>
+            <li><a href="#scn_desc">BEGIN_DESC</a></li>
+            <li><a href="#scn_env">BEGIN_ENVIRONMENT</a></li>
+            <li><a href="#scn_focus">BEGIN_FOCUS</a></li>
+            <li><a href="#scn_camera">BEGIN_CAMERA</a></li>
+            <li><a href="#scn_hud">BEGIN_HUD</a></li>
+            <li><a href="#scn_mfd">BEGIN_MFD</a></li>
+            <li><a href="#scn_vc">BEGIN_PANEL / BEGIN_VC</a></li>
+            <li><a href="#scn_ships">BEGIN_SHIPS</a>
+              <ul>
+                <li><a href="#scn_ships_name">名前とクラス</a></li>
+                <li><a href="#scn_ships_status">STATUS</a></li>
+                <li><a href="#scn_ships_base">BASE</a></li>
+                <li><a href="#scn_ships_pos">POS</a></li>
+                <li><a href="#scn_ships_heading">HEADING</a></li>
+                <li><a href="#scn_ships_rpos">RPOS</a></li>
+                <li><a href="#scn_ships_rvel">RVEL</a></li>
+                <li><a href="#scn_ships_prplevel">PRPLEVEL</a></li>
+                <li><a href="#scn_ships_dock">DOCKINFO</a></li>
+                <li><a href="#scn_ships_attach">ATTACHED</a></li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+        <li><a href="#example">例題</a>
+          <ul>
+            <li><a href="#example_scn">シナリオファイルを開く</a></li>
+            <li><a href="#example_copy">宇宙船をコピーする</a></li>
+            <li><a href="#example_paste">宇宙船を貼り付ける</a></li>
+            <li><a href="#example_modify">数字を書き換える</a></li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
 
-<ul>
-<li><a href="#modules">モジュールをコピーする</a></li>
-<li><a href="#elements">軌道要素をコピーする</a></li>
-</ul>
 
-<h2 id="modules">モジュールをコピーする</h2>
+    <h2 id="aboutscn">シナリオファイルを開く</h2>
 
-<p><strong>orbiter\Scenarios\Checklists</strong>フォルダにある、<strong>Mission 1 - DG to ISS.scn</strong>をメモ帳で開く。</p>
 
-<p>同時に、<strong>ISS AtoZ.scn</strong>をメモ帳で開く。</p>
+    <p>
+      Orbiterがインストールされているフォルダを開く。<br>
+      <strong>Scenarios</strong>フォルダを開く。
+    </p>
 
-<p><strong>BEGIN_SHIPS</strong>から<strong>END_SHIPS</strong>のあいだに、シナリオに登場する宇宙船が記述されている。</p>
+    <p>
+      拡張子が<strong>.scn</strong>になっているのがシナリオファイル。<br>
+      Orbiterのセーブデータはすべてこの形式で保存されている。
+    </p>
 
-<p><strong>ISS AtoZ.scn</strong>を見て、<br>
-<strong>BEGIN_SHIPS</strong>の次の行（<strong>Zarya:ISSR\Zarya</strong>）から<br>
-<strong>END_SHIPS</strong>の手前（<strong>END</strong>）までのすべての行を選択してコピーする。</p>
+    <p>
+      <strong>.scn</strong>ファイルを右クリックする。<br>
+      <strong>プログラムから開く</strong>でメモ帳を選択する。
+    </p>
 
-<p><img loading="lazy" src="/images/misc/scenarioedit/SCE013.png" width="272" height="187"></p>
 
-<p><strong>DG to ISS.scn</strong>を見て、以下の2行のあいだに改行を入れる。</p>
+    <h2 id="scn">シナリオファイル</h2>
 
-<pre><code>END
-Mir</code></pre>
 
-<p><img loading="lazy" src="/images/misc/scenarioedit/SCE011.png" width="136" height="157"></p>
+    <p>
+      シナリオファイルの各項目のうち、主要なものについて説明する。<br>
+      <strong>BEGIN_***</strong>で始めて、必ず<strong>END_***</strong>で閉じる。
+    </p>
 
-<p>コピーした行を、この空行に貼り付ける。</p>
+    <figure>
+      <img loading="lazy" src="/images/misc/scenarioedit/001.png" width="500" height="500">
+    </figure>
 
-<p><strong>宇宙船の名前</strong>から<strong>END</strong>までがひとまとまりになっているので、このあいだに割りこまなければどこでもかまいません。</p>
 
-<h2 id="elements">軌道要素をコピーする</h2>
+    <h3 id="scn_desc">BEGIN_DESC</h3>
 
-<p><strong>ISS:ProjectAlpha_ISS</strong>の下にある、以下の2行をコピーする。</p>
 
-<pre><code>  RPOS 4915269.75 4084559.88 -2105227.01
-  RVEL 5064.033 -5764.583 645.739</code></pre>
+    <p>
+      シナリオの説明文をここに記述する。<br>
+      <a href="/basic/orbitercontrol.html#launchpad">Launchpad</a>の右側に表示される。
+    </p>
 
-<p><img loading="lazy" src="/images/misc/scenarioedit/SCE015.png" width="370" height="148"></p>
+    <p>
+      <a href="/basic/orbiter2016.html">Orbiter2016</a>では、
+      <abbr title="HyperText Markup Language">HTML</abbr>を使って文を整形できるようになった。<br>
+      <strong>BEGIN_DESC</strong>のかわりに、<strong>BEGIN_HYPERDESC</strong>を使用する。
+    </p>
 
-<p><strong>Zarya:ISSR\Zarya</strong>以下の該当する行を削除して上書き。</p>
 
-<p>ほかのモジュールについてはそのままで問題ありません。<br>
-<strong>RPOS</strong>が宇宙船の位置、<strong>RVEL</strong>が軌道を決定します。</p>
+    <h3 id="scn_env">BEGIN_ENVIRONMENT</h3>
 
-<p>この状態で、いったん適当な名前をつけて（拡張子は<strong>.scn</strong>）、<strong>Scenarios</strong>フォルダに保存する。</p>
 
-<p>
-<img loading="lazy" src="/images/misc/scenarioedit/SCE014.png" width="214" height="70"></p>
+    <p>
+      ゲームの舞台・日時を指定する。
+    </p>
 
-<p>このシナリオをプレイして、<kbd>F3</kbd>キーを押してISSの状態を確認します。<br>
-両者が以下の画像のように、重ね合わせの状態になっていれば成功です。</p>
+    <table>
+      <tr>
+        <th>System</th>
+        <td>舞台となる恒星系<br><strong>Sol</strong>なら太陽系、MODでは他の星系も使用可</td>
+      </tr>
+      <tr>
+        <th>Date</th>
+        <td><a href="orbitalelements.html#m_jd">MJD</a>で表現される日時</td>
+      </tr>
+    </table>
 
-<p><img loading="lazy" src="/images/misc/scenarioedit/SCE016.png" width="960" height="540"></p>
 
-<p>もとのISSを削除すれば、入れ替えは完了です。</p>
+    <h3 id="scn_focus">BEGIN_FOCUS</h3>
+
+
+    <p>
+      操作する宇宙船を指定する。<br>
+      ゲームの動作に<strong>必須</strong>。
+    </p>
+
+    <table>
+      <tr>
+        <th>Ship</th>
+        <td>操作する宇宙船の名前</td>
+      </tr>
+    </table>
+
+
+    <h3 id="scn_camera">BEGIN_CAMERA</h3>
+
+
+    <p>
+      カメラを設定する。
+    </p>
+
+    <table>
+      <tr>
+        <th>TARGET</th>
+        <td colspan="2">カメラのターゲット</td>
+      </tr>
+      <tr>
+        <th rowspan="2">MODE</th>
+        <td>Extern</td>
+        <td>機外視点</td>
+      </tr>
+      <tr>
+        <td>Cockpit</td>
+        <td>機内視点</td>
+      </tr>
+    </table>
+
+
+    <h3 id="scn_hud">BEGIN_HUD</h3>
+
+
+    <p>
+      ゲーム開始時点での<a href="/basic/orbitercontrol.html#hud">HUD</a>を指定する。
+    </p>
+
+
+    <table>
+      <tr>
+        <th>TYPE</th>
+        <td><a href="/basic/orbitercontrol.html#hud">HUD</a>の種類</td>
+      </tr>
+    </table>
+
+
+    <h3 id="scn_mfd">BEGIN_MFD</h3>
+
+
+    <p>
+      ゲーム開始時点での<a href="/basic/orbitercontrol.html#mfd">MFD</a>を指定する。<br>
+      <strong>BEGIN_MFD Left</strong>なら左、<strong>Right</strong>なら右MFDになる。
+    </p>
+
+    <table>
+      <tr>
+        <th>TYPE</th>
+        <td>MFDの種類</td>
+      </tr>
+      <tr>
+        <th>REF</th>
+        <td>基準となる天体</td>
+      </tr>
+      <tr>
+        <th>TARGET</th>
+        <td>MFDのターゲット</td>
+      </tr>
+    </table>
+
+
+    <h3 id="scn_vc">BEGIN_PANEL / BEGIN_VC</h3>
+
+
+    <p>
+      <a href="/basic/orbitercontrol.html#cockpit">コクピット視点</a>において、3D・2Dコクピットのどちらを使用するか選択する。<br>
+      <strong>BEGIN</strong>と<strong>END</strong>の間には何も記述しなくてよい。
+    </p>
+
+    <table>
+      <tr>
+        <th>BEGIN_PANEL</th>
+        <td>2Dコクピット</td>
+      </tr>
+      <tr>
+        <th>BEGIN_VC</th>
+        <td>3Dコクピット</td>
+      </tr>
+    </table>
+
+
+    <h3 id="scn_ships">BEGIN_SHIPS</h3>
+
+
+    <p>
+      このシナリオに登場する宇宙船と、その状態を記述する。
+    </p>
+
+    <pre><code>GL-01:DeltaGlider
+  STATUS Landed Earth
+  POS -80.6824940 28.5967940
+  HEADING 330.01
+  RCSMODE 0
+  PRPLEVEL 0:0.995000 1:1.000000
+  NAVFREQ 94 524 84 114
+  XPDR 0
+  GEAR 1 1.0000
+  PSNGR 2 3 4
+  AAP 0:0 0:0 0:0
+END</code></pre>
+
+
+    <h4 id="scn_ships_name">名前とクラス</h4>
+
+
+    <p>
+      <strong>名前</strong>:<strong>クラス</strong>の組み合わせで、宇宙船を指定する。<br>
+      以下の例では、<strong>GL-01</strong>が名前、<strong>DeltaGlider</strong>がクラスとなる。
+    </p>
+
+    <pre><code>GL-01:DeltaGlider</code></pre>
+
+    <p>
+      クラス(Class)とは、宇宙船の種類を指す。<br>
+      名前さえ変更すれば、同じクラスの宇宙船を複数登場させることができる。
+    </p>
+
+    <p>
+      <strong>名前</strong>:<strong>クラス</strong>の組み合わせで始めて、必ず<strong>END</strong>で閉じる。
+    </p>
+
+
+    <h4 id="scn_ships_status">STATUS</h4>
+
+
+    <p>
+      宇宙船の状態を記述する。
+    </p>
+
+    <pre><code>STATUS Landed Earth</code></pre>
+
+    <table>
+      <tr>
+        <th>Landed ***</th>
+        <td>***に着陸している</td>
+      </tr>
+      <tr>
+        <th>Orbiting ***</th>
+        <td>***の上空を飛行中</td>
+      </tr>
+    </table>
+
+
+    <h4 id="scn_ships_base">BASE</h4>
+
+
+    <p>
+      どの基地に着陸しているか指定する。<br>
+      ただし、滑走路に着陸している場合は使用できない。
+    </p>
+
+    <pre><code>BASE Habana:1</code></pre>
+
+    <p>
+      上の例では、<strong>Habana</strong>基地の<strong>1</strong>番パッドに着陸していることを表す。
+    </p>
+
+
+    <h4 id="scn_ships_pos">POS</h4>
+
+
+    <p>
+      着陸地点の経度・緯度を指定する。
+    </p>
+
+    <pre><code>POS -80.6824940 28.5967940</code></pre>
+
+    <p>
+      上の例では、西経80.682494°、北緯28.596794°の地点に着陸していることを表す。<br>
+      <a href="https://goo.gl/maps/h5yAJHkcsGhdV1gG6" target="_blank" rel="noopener noreferrer">
+        28°35'48.5"N 80°40'57.0"W - Google マップ</a>
+    </p>
+
+
+    <h4 id="scn_ships_heading">HEADING</h4>
+
+
+    <p>
+      地上において、機首がどの方位を向いているか指定する。
+    </p>
+
+    <pre><code>HEADING 330.01</code></pre>
+
+
+    <h4 id="scn_ships_rpos">RPOS</h4>
+
+
+    <p>
+      飛行中の<a href="orbitalelements.html#statevector">位置ベクトル</a>。
+    </p>
+
+    <pre><code>RPOS 6609477.84 -64359.79 -1263202.12</code></pre>
+
+
+    <h4 id="scn_ships_rvel">RVEL</h4>
+
+
+    <p>
+      飛行中の<a href="orbitalelements.html#statevector">速度ベクトル</a>。
+    </p>
+
+    <pre><code>RVEL 319.601 -7420.414 2031.754</code></pre>
+
+
+    <h4 id="scn_ships_prplevel">PRPLEVEL</h4>
+
+
+    <p>
+      推進剤の残量。<br>
+      <strong>タンクのID</strong>:<strong>残り燃料</strong>の組み合わせで指定する。
+    </p>
+
+    <pre><code>PRPLEVEL 0:0.995000 1:1.000000</code></pre>
+
+    <p>
+      上の例では、IDが0のタンクは残り99.5%、IDが1のタンクは満タンということになる。
+    </p>
+
+    <p>
+      シナリオファイルでは、IDは0から始まるようになっている。<br>
+      IDが0のタンクは、ゲーム内では1番タンクを指す。
+    </p>
+
+
+    <h4 id="scn_ships_dock">DOCKINFO</h4>
+
+
+    <p>
+      宇宙船がドッキング中であることを表す。<br>
+      <strong>ドッキングポートのID</strong>:<strong>相手側ポートのID</strong>,<strong>相手の宇宙船の名前</strong>の組み合わせで指定する。
+    </p>
+
+    <pre><code>DOCKINFO 0:0,ISS</code></pre>
+
+    <p>
+      上の例では、自分の1番ドッキングポートでISSの1番ポートとドッキングしていることになる。
+    </p>
+
+    <p>
+      ドッキング中の<a href="#scn_ships_rpos">RPOS</a>、<a href="#scn_ships_rvel">RVEL</a>は、シナリオファイルで1番上に記述されている宇宙船が参照される。
+    </p>
+
+
+    <h4 id="scn_ships_attach">ATTACHED</h4>
+
+
+    <p>
+      貨物コンテナなどが宇宙船に結合していることを表す。<br>
+      <strong>Attachment point</strong>（取り付け位置）をIDで指定する。
+    </p>
+
+    <pre><code>ATTACHED 0:0,STS-101</code></pre>
+
+
+    <h2 id="example">例題</h2>
+
+
+    <p>
+      例題として、ミール宇宙ステーションに、ペイロードを積んだスペースシャトルをドッキングさせてみる。
+    </p>
+
+
+    <h3 id="example_scn">シナリオファイルを開く</h3>
+
+
+    <p>
+      Orbiterがインストールされているフォルダを開く。<br>
+      <strong>Scenarios</strong>フォルダを開く。
+    </p>
+
+    <p>
+      <strong>Space Shuttle Atlantis</strong>フォルダを開く。<br>
+      <strong>Atlantis ISS Resupply.scn</strong>を右クリックして開く。
+    </p>
+
+    <p>
+      <strong>Space Stations</strong>フォルダを開く。<br>
+      <strong>Mir.scn</strong>を右クリックして開く。
+    </p>
+
+
+    <h3 id="example_copy">宇宙船をコピーする</h3>
+
+
+    <p>
+      <strong>Atlantis ISS Resupply.scn</strong>に移動する。
+    </p>
+
+    <p>
+      <strong>STS-101:Atlantis</strong>、<strong>Leonardo:Leonardo_mplm</strong>に関連する行をすべてコピーする。
+    </p>
+
+    <pre><code>STS-101:Atlantis
+  STATUS Orbiting Earth
+  RPOS 6604529.05 32796.63 -1288983.27
+  RVEL 431.660 -7419.871 2010.494
+  AROT -70.00 10.00 100.00
+  PRPLEVEL 0:0.708
+  DOCKINFO 0:1,ISS
+  NAVFREQ 466 0
+  XPDR 460
+  CONFIGURATION 3
+  CARGODOOR 1 1.0000
+  GEAR 0 0.0000
+END
+Leonardo:Leonardo_mplm
+  STATUS Orbiting Earth
+  ATTACHED 0:0,STS-101
+END</code></pre>
+
+    <p>
+      Atlantisはスペースシャトル、Leonardoは<abbr title="Multi-Purpose Logistics Module">MPLM</abbr>（多目的補給モジュール）を指す。
+    </p>
+
+
+    <h3 id="example_paste">宇宙船を貼り付ける</h3>
+
+
+    <p>
+      <strong>Mir.scn</strong>に移動する。
+    </p>
+
+    <p>
+      ファイルの一番下に移動して、<strong>END_SHIPS</strong>の手前に改行を入れる。
+    </p>
+
+    <pre><code>SH-01:ShuttleA
+  STATUS Landed Moon
+  BASE Brighton Beach:1
+  POS -33.4375000 41.1184067
+  HEADING 0.00
+  FUEL 1
+  NAVFREQ 0 0
+END
+
+END_SHIPS</code></pre>
+
+    <p>
+      空いた行を右クリックして、コピーした行を貼り付ける。
+    </p>
+
+
+    <h3 id="example_modify">数字を書き換える</h3>
+
+
+    <p>
+      <strong>STS-101:Atlantis</strong>で始まる行に移動する。
+    </p>
+
+    <p>
+      <strong>DOCKINFO 0:1,ISS</strong>を探す。<br>
+      <strong>DOCKINFO 0:1,Mir</strong>に書き換える。
+    </p>
+
+    <pre><code>SH-01:ShuttleA
+  STATUS Landed Moon
+  BASE Brighton Beach:1
+  POS -33.4375000 41.1184067
+  HEADING 0.00
+  FUEL 1
+  NAVFREQ 0 0
+END
+STS-101:Atlantis
+  STATUS Orbiting Earth
+  RPOS 6604529.05 32796.63 -1288983.27
+  RVEL 431.660 -7419.871 2010.494
+  AROT -70.00 10.00 100.00
+  PRPLEVEL 0:0.708
+  DOCKINFO 0:1,Mir
+  NAVFREQ 466 0
+  XPDR 460
+  CONFIGURATION 3
+  CARGODOOR 1 1.0000
+  GEAR 0 0.0000
+END
+Leonardo:Leonardo_mplm
+  STATUS Orbiting Earth
+  ATTACHED 0:0,STS-101
+END
+END_SHIPS</code></pre>
+
+    <p>
+      上書き保存するか、適当な名前を付けて保存する。
+    </p>
+
+    <figure>
+      <img loading="lazy" src="/images/misc/scenarioedit/002.png" width="500" height="125">
+    </figure>
+
+    <p>
+      Orbiterを起動して、保存したシナリオでゲームを開始する。<br>
+      ミールにスペースシャトルがドッキングされていれば成功。
+    </p>
+
+    <figure>
+      <img loading="lazy" src="/images/misc/scenarioedit/003.jpg" width="1274" height="691">
+    </figure>
 
   </main>
 
 </body>
+
 </html>
