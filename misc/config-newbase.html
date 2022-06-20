@@ -23,148 +23,167 @@
 
     <nav>
       <ul>
-        <li><a href="#section1">基地を追加する</a>
+        <li><a href="#addbase">基地を追加する</a>
           <ul>
-            <li><a href="#section2">基地をコピーする</a></li>
-            <li><a href="#section3">設定を変更する</a></li>
+            <li><a href="#addbase_copy">基地をコピーする</a></li>
+            <li><a href="#addbase_settings">設定を変更する</a></li>
           </ul>
         </li>
-        <li><a href="#section4">地面を平たくする (2016)</a>
+        <li><a href="#flatten">地面を平坦にする (2016)</a>
           <ul>
-            <li><a href="#section5">fltファイルを作成する</a></li>
-            <li><a href="#section6">fltファイルを記述する</a></li>
+            <li><a href="#flatten_new">fltファイルを作成する</a></li>
+            <li><a href="#flatten_lines">fltファイルを記述する</a></li>
           </ul>
         </li>
-        <li><a href="#section7">見本ファイル</a></li>
+        <li><a href="#sample">見本ファイル</a></li>
       </ul>
     </nav>
 
 
-    <h2 id="section1">基地を追加する</h2>
+    <h2 id="addbase">基地を追加する</h2>
 
 
     <p>
-      例題として、火星のマリネリス峡谷に基地を追加する。<br>
-      Windowsの設定を変更し、ファイルの拡張子を表示しておくこと。
+      例題として、火星のマリネリス峡谷に基地を追加する。
+    </p>
+
+    <p>
+      あらかじめWindowsの設定を変更し、ファイルの拡張子を表示しておくこと。
     </p>
 
 
-    <h3 id="section2">基地をコピーする</h3>
+    <h3 id="addbase_copy">基地をコピーする</h3>
 
 
     <p>
       Orbiterがインストールされているフォルダを開く。<br>
-      Configフォルダを開く。
+      <strong>Config</strong>フォルダを開く。
     </p>
 
     <p>
-      Marsフォルダを開く。<br>
-      Baseフォルダを開く。
+      <strong>Mars</strong>フォルダを開く。<br>
+      <strong>Base</strong>フォルダを開く。
     </p>
 
     <p>
-      Olympus.cfgをコピーして、同じ場所に貼り付ける。
+      <strong>Olympus.cfg</strong>をコピーして、同じ場所に貼り付ける。
     </p>
 
     <p>
       コピーされたファイルの名前を変更する。<br>
-      Marineris.cfgという名前にする。
+      <strong>Marineris.cfg</strong>という名前にする。
     </p>
 
+    <figure>
+      <img loading="lazy" class="small" src="/images/misc/config-newbase/001.png" width="150" height="75">
+    </figure>
 
-    <h3 id="section3">設定を変更する</h3>
+
+    <h3 id="addbase_settings">設定を変更する</h3>
 
 
     <p>
-      Marineris.cfgを右クリック。<br>
+      <strong>Marineris.cfg</strong>を右クリック。<br>
       プログラムから開くでメモ帳を選択。
     </p>
 
     <p>
-      NameをMarinerisに変更する。
+      <strong>Name</strong>を<strong>Marineris</strong>に変更する。
     </p>
 
     <p>
-      LocationとVORを-59.2 -13.9にする。
+      <strong>Location</strong>と<strong>VOR</strong>の座標を<strong>-59.2 -13.9</strong>にする。
     </p>
+
+    <pre><code>BASE-V2.0
+Name = Marineris
+Location = -59.2 -13.9
+Size = 500
+
+BEGIN_NAVBEACON
+VOR OSRB -59.2 -13.9 114.20 500
+END_NAVBEACON</code></pre>
+
+    <table>
+      <tr>
+        <th>Name</th>
+        <td>基地の名前<br>
+          他の基地と重複しないようにする</td>
+      </tr>
+      <tr>
+        <th>Location</th>
+        <td>基地の座標<br>
+          経度・緯度の順番</td>
+      </tr>
+      <tr>
+        <th>VOR</th>
+        <td>VORの座標・周波数・有効距離を設定する</td>
+      </tr>
+    </table>
 
     <p>
-      BASE-V2.0<br>
-      Name = Marineris<br>
-      Location = -59.2 -13.9<br>
-      Size = 500
-    </p>
-
-    <p>
-      BEGIN_NAVBEACON<br>
-      VOR OSRB -59.2 -13.9 114.20 500<br>
-      END_NAVBEACON
-    </p>
-
-    <p>
-      Name<br>
-      基地の名前。重複しないようにする<br>
-      Location<br>
-      基地の座標。経度・緯度の順番<br>
-      VOR<br>
-      VORの位置・周波数・有効距離を設定する
+      変更が終わったら、上書き保存してファイルを閉じる。
     </p>
 
 
-    <h2 id="section4">地面を平たくする (2016)</h2>
+    <h2 id="flatten">地面を平坦にする (2016)</h2>
 
 
     <p>
       Orbiter2016では、一部の天体で地形が再現されるようになっている。<br>
-      基地周辺の地面を平らにする手順について説明する。
+      追加した基地の座標によっては、傾斜のために利用できないことがある。
     </p>
 
     <p>
-      D3D9Clientを導入し、Enable terrain flatteningを有効にしておくこと。
+      <strong>flt</strong>ファイルを追加すると、指定したエリアの凹凸を消すことができる。<br>
+      <a href="/basic/d3d9client.html">D3D9Client</a>を導入し、<a href="/basic/d3d9client.html#config_advanced">Enable
+        terrain flattening</a>を有効にしておくこと。
     </p>
 
 
-    <h3 id="section5">fltファイルを作成する</h3>
+    <h3 id="flatten_new">fltファイルを作成する</h3>
 
 
     <p>
       Orbiterがインストールされているフォルダを開く。<br>
-      Texturesフォルダを開く。
+      <strong>Textures</strong>フォルダを開く。
     </p>
 
     <p>
-      Marsフォルダを開いて、新しいフォルダを作成する。<br>
-      Flatという名前にする。
+      <strong>Mars</strong>フォルダを開いて、新しいフォルダを作成する。<br>
+      <strong>Flat</strong>という名前にする。
     </p>
 
     <p>
-      Flatフォルダを開く。<br>
-      右クリック→新規作成→テキストドキュメントをクリック。
+      <strong>Flat</strong>フォルダを開く。<br>
+      <strong>右クリック</strong>→<strong>新規作成</strong>→<strong>テキストドキュメント</strong>をクリック。
     </p>
 
     <p>
-      Marineris.fltという名前のファイルを作成する。
+      <strong>Marineris.flt</strong>という名前のファイルを作成する。
     </p>
 
+    <figure>
+      <img loading="lazy" class="small" src="/images/misc/config-newbase/002.png" width="150" height="75">
+    </figure>
 
-    <h3 id="section6">fltファイルを記述する</h3>
+
+    <h3 id="flatten_lines">fltファイルを記述する</h3>
 
 
     <p>
       以下のように記述して、上書き保存する。
     </p>
 
+    <pre><code>ELLIPSE -4300 -59.2 -13.9 1000 1000</code></pre>
+
     <p>
-      ELLIPSE -4300 -59.2 -13.9 1000 1000
+      左から、形状・標高・経度・緯度・長半径・短半径の順番で指定する。
     </p>
 
     <p>
-      左から、形状・標高・座標（経度緯度）・長半径・短半径の順番で指定する。
-    </p>
-
-    <p>
-      形状はELLIPSE（楕円）とRECT（長方形）の2つから選ぶことができる。<br>
-      行の最後に角度を追加すると、平たくするエリアの向きを指定できる。
+      形状は<strong>ELLIPSE</strong>（楕円）と<strong>RECT</strong>（長方形）の2つから選ぶことができる。<br>
+      また、行の最後に角度を追加すると、平たくするエリアの向きを指定できる。
     </p>
 
     <p>
@@ -172,12 +191,20 @@
       以下の画像のように、基地周辺の地面が平たくなっていればよい。
     </p>
 
+    <figure>
+      <img loading="lazy" src="/images/misc/config-newbase/003.jpg" width="1274" height="691">
+    </figure>
 
-    <h2 id="section7">見本ファイル</h2>
+
+    <h2 id="sample">見本ファイル</h2>
 
 
     <p>
       以下のリンクから、この記事で作成したファイルをダウンロードできます。
+    </p>
+
+    <p>
+      <a href="https://github.com/orbinautjp/Base-Test-Marineris/archive/refs/heads/main.zip" target="_blank" rel="noopener noreferrer">Base-Test-Marineris</a>
     </p>
 
   </main>
