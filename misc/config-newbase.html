@@ -92,7 +92,11 @@
     </p>
 
     <p>
-      <strong>Location</strong>と<strong>VOR</strong>の座標を<strong>-59.2 -13.9</strong>にする。
+      <strong>Location</strong>の座標を<strong>-59.2 -13.9</strong>にする。
+    </p>
+
+    <p>
+      <strong>VOR</strong>のIDを<strong>MMR</strong>、座標を<strong>-59.2 -13.9</strong>にする。
     </p>
 
     <pre><code>BASE-V2.0
@@ -101,28 +105,30 @@ Location = -59.2 -13.9
 Size = 500
 
 BEGIN_NAVBEACON
-VOR OSRB -59.2 -13.9 114.20 500
+VOR MMR -59.2 -13.9 114.20 500
 END_NAVBEACON</code></pre>
 
     <table>
       <tr>
         <th>Name</th>
-        <td>基地の名前<br>
-          他の基地と重複しないようにする</td>
+        <td>基地の名前</td>
+        <td>他の基地と重複しないようにする</td>
       </tr>
       <tr>
         <th>Location</th>
-        <td>基地の座標<br>
-          経度・緯度の順番</td>
+        <td>基地の座標</td>
+        <td>経度・緯度の順番</td>
       </tr>
       <tr>
         <th>VOR</th>
-        <td>VORの座標・周波数・有効距離を設定する</td>
+        <td>VORのID・座標・周波数・有効距離</td>
+        <td>IDは自由に設定できる（上限4文字）</td>
       </tr>
     </table>
 
     <p>
-      変更が終わったら、上書き保存してファイルを閉じる。
+      変更が終わったら、上書き保存してファイルを閉じる。<br>
+      これで、火星に<strong>Marineris</strong>という名前の基地が追加される。
     </p>
 
 
@@ -204,7 +210,8 @@ END_NAVBEACON</code></pre>
     </p>
 
     <p>
-      <a href="https://github.com/orbinautjp/Base-Test-Marineris/archive/refs/heads/main.zip" target="_blank" rel="noopener noreferrer">Base-Test-Marineris</a>
+      <a href="https://github.com/orbinautjp/Base-Test-Marineris/archive/refs/heads/main.zip" target="_blank"
+        rel="noopener noreferrer">Base-Test-Marineris</a>
     </p>
 
   </main>
