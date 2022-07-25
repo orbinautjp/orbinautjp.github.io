@@ -18,146 +18,394 @@
     <h1>OrbiterにMODを導入する</h1>
 
 
-    <ul>
-      <li><a href="#aboutmods">MODとは何か？</a></li>
-      <li><a href="#download">MODの入手方法</a></li>
-      <li><a href="#install">MODのインストール</a>
-        <ul>
-          <li><a href="#install_exe">インストーラ形式</a></li>
-          <li><a href="#install_zip">Zipファイル</a></li>
-          <li><a href="#enablemods">MODの有効化</a></li>
-          <li><a href="#others">その他のケース</a></li>
-          <li><a href="#jsgme">JSGMEを使う</a></li>
-        </ul>
-      </li>
-      <li><a href="#compatibility">MODの互換性</a></li>
-    </ul>
+    <nav>
+      <ul>
+        <li><a href="#aboutmods">MODとは何か？</a></li>
+        <li><a href="#download">MODのダウンロード</a>
+          <ul>
+            <li><a href="#download_site">配布サイト</a></li>
+            <li><a href="#download_search">MODを探す</a></li>
+            <li><a href="#download_page">ダウンロードページ</a>
+              <ul>
+                <li><a href="#download_page_multiplefiles">複数のファイルがある場合</a></li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+        <li><a href="#install">MODのインストール</a>
+          <ul>
+            <li><a href="#install_exe">インストーラー形式</a></li>
+            <li><a href="#install_zip">Zipファイル</a></li>
+            <li><a href="#install_enable">MODの有効化</a></li>
+            <li><a href="#install_others">その他のケース</a></li>
+            <li><a href="#install_jsgme">JSGMEを使う</a></li>
+          </ul>
+        </li>
+        <li><a href="#compatibility">MODの互換性</a></li>
+        <li><a href="#history">OrbiterとMODの関係</a></li>
+      </ul>
+    </nav>
 
 
     <h2 id="aboutmods">MODとは何か？</h2>
 
 
     <p>
-      <strong>MOD</strong>（モッド）というのは「ユーザーが作ったゲームのための追加ファイル」のことです。<br>
-      <strong>ADDON</strong>（アドオン）と呼ばれることもありますが、これらはまったく同じものです。<br>
-      また、MODを入れていない環境のことを「<strong>バニラ</strong>」と呼びます。
+      <strong>MOD</strong>とは、「ユーザーが作ったゲームのための追加ファイル」のこと。<br>
+      <strong>ADDON</strong>と呼ばれることもあるが、これらはまったく同じものを指す。
+    </p>
+
+    <table>
+      <tr>
+        <td></td>
+        <th>読み方</th>
+        <th>由来</th>
+      </tr>
+      <tr>
+        <th>MOD</th>
+        <td>モッド</td>
+        <td><strong>Modification</strong>（改造）の短縮</td>
+      </tr>
+      <tr>
+        <th>ADDON</th>
+        <td>アドオン</td>
+        <td>句動詞<strong>Add on</strong>（付け加える・増築する）の名詞化</td>
+      </tr>
+    </table>
+
+
+    <h2 id="download">MODのダウンロード</h2>
+
+
+    <h3 id="download_site">配布サイト</h3>
+
+
+    <p>
+      <a href="https://www.orbiter-forum.com/" target="_blank" rel="noopener noreferrer">Orbiter Forum</a> の
+      <a href="https://www.orbiter-forum.com/resources/" target="_blank" rel="noopener noreferrer">Orbiter Downloads</a>
+      セクションからダウンロードできる。
+    </p>
+
+    <ul>
+      <li>
+        <a href="https://www.orbiter-forum.com/resources/categories/orbiter-addon.1/" target="_blank"
+          rel="noopener noreferrer">
+          Orbiter Addon</a>
+      </li>
+    </ul>
+
+    <figure>
+      <img loading="lazy" src="/images/basic/orbitermod/001.png" width="600" height="600">
+    </figure>
+
+    <p>
+      他には、以下のサイトがある。
+    </p>
+
+    <ul>
+      <li><a href="http://orbiter.dansteph.com/forum/index.php?page=download" target="_blank" rel="noopener noreferrer">
+          Dan's Orbiter page</a></li>
+      <li><a href="http://francophone.dansteph.com/" target="_blank" rel="noopener noreferrer">
+          Pappy's Hangar</a></li>
+      <li><a href="https://www.alteaaerospace.com/index-3.html" target="_blank" rel="noopener noreferrer">
+          Altea Aerospace</a></li>
+    </ul>
+
+
+    <h3 id="download_search">MODを探す</h3>
+
+
+    <p>
+      以下のページを開いて、キーワードを入力する。
+    </p>
+
+    <ul>
+      <li>
+        <a href="https://www.orbiter-forum.com/search/?type=resource" target="_blank" rel="noopener noreferrer">
+          Search Orbiter Addons</a>
+      </li>
+    </ul>
+
+    <figure>
+      <img loading="lazy" src="/images/basic/orbitermod/002.png" width="800" height="800">
+    </figure>
+
+    <table>
+      <tr>
+        <th>Keywords</th>
+        <td colspan="2">キーワード</td>
+      </tr>
+      <tr>
+        <td></td>
+        <th>Search titles only</th>
+        <td>MODの名前で検索</td>
+      </tr>
+      <tr>
+        <th>Posted by</th>
+        <td colspan="2">投稿者の名前</td>
+      </tr>
+      <tr>
+        <th>Newer / Older than</th>
+        <td colspan="2">投稿日時</td>
+      </tr>
+      <tr>
+        <th>Search in categories</th>
+        <td colspan="2">カテゴリーで検索</td>
+      </tr>
+      <tr>
+        <td rowspan="11"></td>
+        <th>Spacecraft</th>
+        <td>宇宙船・探査機・人工衛星・宇宙ステーション</td>
+      </tr>
+      <tr>
+        <th>Launchers</th>
+        <td>打ち上げロケット</td>
+      </tr>
+      <tr>
+        <th>Aircraft</th>
+        <td>飛行機</td>
+      </tr>
+      <tr>
+        <th>Sounds</th>
+        <td>音声ファイル</td>
+      </tr>
+      <tr>
+        <th>Scenery</th>
+        <td>地形・地上基地</td>
+      </tr>
+      <tr>
+        <th>Repaints</th>
+        <td>塗装の変更（スキン）</td>
+      </tr>
+      <tr>
+        <th>Scenarios</th>
+        <td>シナリオファイル</td>
+      </tr>
+      <tr>
+        <th>Tutorials</th>
+        <td>チュートリアル</td>
+      </tr>
+      <tr>
+        <th>Utilities</th>
+        <td>ユーティリティ</td>
+      </tr>
+      <tr>
+        <th>Resources</th>
+        <td>素材</td>
+      </tr>
+      <tr>
+        <th>Miscellaneous</th>
+        <td>その他</td>
+      </tr>
+    </table>
+
+    <p>
+      検索結果が一覧表示されるので、MODの名前をクリックする。
+    </p>
+
+    <figure>
+      <img loading="lazy" src="/images/basic/orbitermod/003.png" width="600" height="600">
+    </figure>
+
+
+    <h3 id="download_page">ダウンロードページ</h3>
+
+
+    <p>
+      MODページの<kbd>Download</kbd>ボタンをクリックする。
     </p>
 
     <p>
-      <a href="orbitermod-guide.html">機体追加MODのすすめ</a>
+      MODによっては、<kbd>Go to download</kbd>と書かれていることがある。
+    </p>
+
+    <figure>
+      <img loading="lazy" src="/images/basic/orbitermod/004.png" width="1200" height="600">
+    </figure>
+
+    <p>
+      ログインすると、MODを評価・レビューの投稿ができる。
     </p>
 
 
-    <h2 id="download">MODの入手方法</h2>
+    <h4 id="download_page_multiplefiles">複数のファイルがある場合</h4>
 
-
-    <p>OrbiterのMODのほとんどが、<a href="https://www.orbithangar.com/index.php" target="_blank" rel="noopener noreferrer">Orbit
-        Hangar Mods</a>にて公開されています。<br>
-      左上の<kbd>Browse</kbd>と書かれたリンクをクリックすると、カテゴリー別にMODを閲覧することができます。</p>
 
     <p>
-      <strong>Download</strong>と書かれたボタンをクリック。</p>
-
-    <p>
-      <img loading="lazy" src="/images/basic/orbitermod/005.png" width="384" height="119">
-    </p>
-
-    <p>青字のリンクをクリックすると、ダウンロードが開始される。</p>
-
-    <p>
-      <img loading="lazy" src="/images/basic/orbitermod/006.png" width="646" height="116">
+      1つのページで、複数のMODが配布されていることがある。
     </p>
 
 
     <h2 id="install">MODのインストール</h2>
 
 
-    <p>MODによって、インストールの手順は異なります。</p>
+    <p>MODの配布形式によって、インストールの手順が異なる。</p>
 
 
-    <h3 id="install_exe">インストーラ形式</h3>
+    <h3 id="install_exe">インストーラー形式</h3>
 
 
     <p>
-      <strong>.exe</strong>ファイルで配布されているMODの場合は、ダブルクリックしてインストーラの指示に従うだけです。<br>
-      たいていの場合、以下のような手順になっています。</p>
-
-    <p>
-      <img loading="lazy" src="/images/basic/orbitermod/004.png" width="631" height="205">
+      <strong>.exe</strong>ファイルで配布されている。<br>
+      ダブルクリックすると、インストーラーが起動する。
     </p>
 
     <p>
-      <kbd>Browse</kbd>と書かれたボタンをクリックして、Orbiterがインストールされているフォルダを指定する。<br>
-      <kbd>Install</kbd>と書かれたボタンをクリックすると、中のファイルが自動的にインストールされる。
+      インストーラーの指示に従ってインストールする。<br>
+      ほとんどの場合、以下のような手順になっている。
+    </p>
+
+    <p>
+      <img loading="lazy" src="/images/basic/orbitermod/005.png" width="763" height="219">
+    </p>
+
+    <p>
+      <kbd>Browse</kbd>と書かれたボタンをクリック。<br>
+      Orbiterがインストールされているフォルダを指定する。
+    </p>
+
+    <p>
+      <kbd>Install</kbd>と書かれたボタンをクリック。<br>
+      中のファイルが自動的にインストールされる。
     </p>
 
 
     <h3 id="install_zip">Zipファイル</h3>
 
 
-    <p>Zipファイルなどの圧縮ファイルを自分で解凍して、インストールする必要があるMODも多く存在します。</p>
-    <p>解凍ソフトについてですが、筆者は<a href="https://sevenzip.osdn.jp/" target="_blank"
-        rel="noopener noreferrer">7-Zip</a>を使っています。<br>
-      もちろんこれ以外の解凍ソフトでも問題ありません。<br>
-      解凍ソフトの使い方については、それぞれのマニュアルを参照してください。</p>
-    <p>解凍されたMODフォルダの中には、様々なフォルダが入っているはずです。<br>
-      これをOrbiterのインストールフォルダと比較すると、同名のフォルダが並んでいることがわかります。</p>
     <p>
-      <img loading="lazy" src="/images/basic/orbitermod/modsinstall.png" width="533" height="384"><br>
-      （左がOrbiterのフォルダ、右がMODフォルダ）
-    </p>
-    <p>MODフォルダの中にあるフォルダをすべてコピーして、Orbiterのフォルダにペーストして上書きします。</p>
-
-
-    <h3 id="enablemods">MODの有効化</h3>
-
-
-    <p>一部のMODでは、Orbiterの側で有効化しないと使えないことがあります。</p>
-    <p>
-      <strong>Launchpad</strong>の<kbd>Modules</kbd>ボタンをクリック。<br>
-      該当するMODにチェックを入れてください。</p>
-
-    <p>
-      <img loading="lazy" src="/images/basic/orbitermod/001.png" width="286" height="367">
+      <strong>.zip</strong>や<strong>.7z</strong>などの圧縮ファイルで配布されている。<br>
+      ユーザーが解凍ソフトを用意して、自分でインストールする。
     </p>
 
-
-    <h3 id="others">その他のケース</h3>
-
+    <p>
+      解凍ソフトの例としては、
+      <a href="https://sevenzip.osdn.jp/" target="_blank" rel="noopener noreferrer">7-Zip</a>
+      などがある。<br>
+      解凍ソフトの使い方については、それぞれのマニュアルを参照すること。
+    </p>
 
     <p>
-      <strong class="caution">重要</strong>：MODによってはConfigファイルの編集などが必要なものもあります。※<br>
-      readmeファイルやマニュアルをよく確認してください。</p>
-    <p>どうしてもわかりにくい場合は、こちらで質問していただければ可能なかぎり回答します。</p>
-    <p>※Configファイルの編集が必要なMODの例：<br>
-      <a href="orbiter2010visualmods.html" target="_blank">Orbiter2010のグラフィックMOD</a><br>
-      <a href="/mods/space-elevator-mod.html" target="_blank">Space Elevator MODのダウンロード+インストール</a>
+      解凍されたMODフォルダの中には、いくつかのフォルダが入っている。<br>
+      これをOrbiterのインストールフォルダと比較すると、同名のフォルダが並んでいることがわかる。
+    </p>
+
+    <figure>
+      <img loading="lazy" src="/images/basic/orbitermod/006.png" width="300" height="300">
+      <figcaption>左がOrbiterフォルダ、右がMODフォルダ</figcaption>
+    </figure>
+
+    <p>
+      MODフォルダの中にあるフォルダをすべてコピーする。<br>
+      Orbiterのフォルダにペーストして上書きする。
     </p>
 
 
-    <h3 id="jsgme">JSGMEを使う</h3>
+    <h3 id="install_enable">MODの有効化</h3>
 
 
-    <p>ここまでの内容を踏まえたうえで、以下の記事を参照してください。<br>
-      <a href="/misc/jsgme.html" target="_blank">JSGMEを使ったMODのインストール</a>
+    <p>
+      一部のMODでは、Orbiterの側で有効化しないと使えないことがある。
     </p>
+
+    <p>
+      <a href="/basic/orbitercontrol.html#launchpad">Launchpad</a>の<kbd>Modules</kbd>ボタンをクリック。<br>
+      該当するMODにチェックを入れる。
+    </p>
+
+    <p>
+      <img loading="lazy" src="/images/basic/orbitermod/007.png" width="300" height="300">
+    </p>
+
+
+    <h3 id="install_others">その他のケース</h3>
+
+
+    <p>
+      MODによっては、Configファイルの編集などが必要なものがある。
+    </p>
+
+    <ul>
+      <li><a href="orbiter2010visualmods.html">Orbiter2010のグラフィックMOD</a></li>
+      <li><a href="/mods/space-elevator-mod.html">Space Elevator MODのダウンロード+インストール</a></li>
+    </ul>
+
+    <p>
+      当サイトで解説していないMODの場合は、readmeファイルやマニュアルを確認してください。<br>
+      どうしてもわかりにくい場合は、以下のページで質問を受け付けています。
+    </p>
+
+    <ul>
+      <li><a href="/basic/troubleshooting.html">バグ・トラブルを報告する</a></li>
+      <li><a href="/basic/comment.html">コメント</a></li>
+    </ul>
+
+
+    <h3 id="install_jsgme">JSGMEを使う</h3>
+
+
+    <p>
+      <strong>JSGME</strong>を導入すると、MODの追加・削除が容易になる。
+    </p>
+
+    <p>
+      このページの内容を踏まえたうえで、以下の記事を参照すること。
+    </p>
+
+    <ul>
+      <li><a href="/misc/jsgme.html">JSGMEを使ったMODのインストール</a></li>
+    </ul>
 
 
     <h2 id="compatibility">MODの互換性</h2>
 
 
-    <p>ダウンロードリンクの右に、対応バージョンが記載されています。</p>
-
-    <p>
-      <img loading="lazy" src="/images/basic/orbitermod/007.png" width="646" height="116">
+    <p class="caution">
+      <a href="/basic/orbiter2016.html">Orbiter2016</a>では、Orbiter2006・<a
+        href="/basic/orbiter2010.html">2010</a>向けMODの大半が正常に動作しない。
     </p>
 
-    <p>Orbiter2016では、Orbiter2006・2010向けMODの大半が正常に動作しません。</p>
-    <p>Orbiter2010では、Orbiter2006・2010向けMODの両方が使えます。<br>
-      当然ながら、2010で2016向けのMODを動かすことはできません。</p>
-    <p>ごくわずかな例外を除いて、2006のMODは2010で正常に動作します。※<br>
-      Orbiter2006を導入する必要はありません。</p>
-    <p class="note">※シナリオファイルの書き換えが必要な場合もあります</p>
+    <p>
+      MODの対応バージョンは、ダウンロードページか、同梱のreadmeに記述されている。
+    </p>
+
+    <figure>
+      <img loading="lazy" src="/images/basic/orbitermod/008.png" width="270" height="135">
+    </figure>
+
+    <p>
+      <a
+        href="/basic/orbiter2010.html">Orbiter2010</a>では、Orbiter<strong>2006</strong>と<strong>2010</strong>の両方のMODが利用できる。<br>
+      Orbiter2006を導入する必要はない。
+    </p>
+
+
+    <h2 id="history">OrbiterとMODの関係</h2>
+
+
+    <p>
+      一般的なゲームはそれ自体で完成しており、MODを入れなくても一通り遊べるようになっています。<br>
+      Orbiterも単体で遊べないことはないのですが、音声を再生する機能がなかったり、やや未完成なところがあります。
+    </p>
+
+    <p>
+      これは、Orbiterの開発者とMOD製作者たちの距離が近く、お互いに協力しながら発展してきたゲームだからです。
+    </p>
+
+    <p>
+      Orbiter本体が提供するのは、いってみれば宇宙そのもの、それだけです。<br>
+      現実世界と同じ物理法則と、太陽系の主要な天体があり、手段さえあればどこへでも飛んでいけます。<br>
+      そこに宇宙船や、軌道計算のためのツールや、目的地となる基地を追加するのは、MOD製作者にゆだねられています。
+    </p>
+
+    <p>
+      実際に、デフォルトで収録されているいくつかの宇宙船は、ユーザーが製作した3Dモデルが採用されています。<br>
+      また、Orbiterの新バージョンの開発では、よりMODが作りやすくなるような機能が追加されてきました。
+    </p>
+
+    <p>
+      開発者とMOD製作者たちがアイディアを出し合い、一体となって作り上げてきたのが、Orbiterの歴史だといえます。
+    </p>
 
   </main>
 
