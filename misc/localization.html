@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <script src="/scripts/ga.js"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/styles/orbiterjp.css">
+  <script src="/scripts/template.js" charset="utf-8" defer></script>
+  <title>Orbiterと日本語化</title>
+</head>
+
+<body>
+
+  <main>
+
+    <h1>Orbiterと日本語化</h1>
+
+
+    <p>
+      Orbiterは2バイト文字に対応しておらず、MFDなどの日本語化は不可能です。<br>
+      ただし、一部のテキストで日本語の文章を表示させることができます。
+    </p>
+
+    <nav>
+      <ul>
+        <li><a href="#scndesc">シナリオの説明文</a></li>
+        <li><a href="#ingamehelp">ゲーム内ヘルプ</a></li>
+        <li><a href="#files">日本語ファイル</a></li>
+      </ul>
+    </nav>
+
+
+    <h2 id="scndesc">シナリオの説明文</h2>
+
+
+    <p>
+      <a href="/basic/orbitercontrol.html#launchpad">Launchpad</a>に表示されるシナリオの説明文は、日本語で表示できます。
+    </p>
+
+    <figure>
+      <img loading="lazy" src="/images/misc/localization/001.png">
+    </figure>
+
+    <p>
+      <a href="scenarioedit.html">シナリオファイル</a>を開く。<br>
+      <a href="scenarioedit.html#scn_desc">BEGIN_DESC</a>に日本語の文章を入力する。
+    </p>
+
+    <p>
+      文字コードを<strong>Shift_JIS</strong>(<strong>ANSI</strong>)にして保存する。
+    </p>
+
+
+    <h2 id="ingamehelp">ゲーム内ヘルプ</h2>
+
+
+    <p>
+      ゲーム内ヘルプとして<strong>CHM</strong>ファイルが採用されており、これは日本語に対応しています。
+    </p>
+
+    <figure>
+      <img loading="lazy" src="/images/misc/localization/002.png">
+    </figure>
+
+    <p>
+      HTMLファイルを作成する。
+    </p>
+
+    <p>
+      <strong>htmlhelp.exe</strong>をダウンロードする。<br>
+      <a href="https://web.archive.org/web/20120505125945/https://www.microsoft.com/en-us/download/details.aspx?id=21138"
+        target="_blank" rel="noopener noreferrer">HTML Help Workshop and Documentation - Internet Archive</a>
+    </p>
+
+    <p>
+      以下のサイトを参考に、CHMファイルを作成する。<br>
+      <a href="https://so-zou.jp/software/tech/tool/document/html-help/" target="_blank" rel="noopener noreferrer">HTML
+        Help Workshopの使用方法 - so-zou.jp</a>
+    </p>
+
+
+    <h2 id="files">日本語ファイル</h2>
+
+
+    <p>
+      以下のファイルでは、シナリオの説明文・ゲーム内ヘルプで日本語表示しています。
+    </p>
+
+    <ul>
+      <li><a href="/basic/orbiterhelp.html">キー操作一覧 日本語ファイル</a></li>
+      <li><a href="/tutorial/#help_scenarios">Orbiterチュートリアル - シナリオファイル</a></li>
+      <li><a href="/mods/vostok-help.html">Vostok MOD 日本語ファイル</a></li>
+    </ul>
+
+  </main>
+
+</body>
+
+</html>
