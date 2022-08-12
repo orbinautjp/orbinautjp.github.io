@@ -19,21 +19,20 @@
 
 
     <p>
-      <strong>HORIZONS Web-Interface</strong>を利用して、Orbiterに軌道データをインポートする手順について説明します。
+      <strong>Horizons Web Application</strong>を利用して、Orbiterに軌道データをインポートする手順について説明します。
     </p>
 
     <nav>
       <ul>
         <li><a href="#horizons">JPL Horizons</a></li>
         <li><a href="#settings">設定を変更する</a>
-          <ul>
+          <ol>
             <li><a href="#settings_ephemeris">Ephemeris Type</a></li>
             <li><a href="#settings_target">Target Body</a></li>
-            <li><a href="#settings_origin">Coordinate Origin</a></li>
-            <li><a href="#settings_time">Time Span</a></li>
+            <li><a href="#settings_center">Coordinate Center</a></li>
+            <li><a href="#settings_time">Time Specification</a></li>
             <li><a href="#settings_table">Table Settings</a></li>
-            <li><a href="#settings_display">Display/Output</a></li>
-          </ul>
+          </ol>
         </li>
         <li><a href="#output">データを取得する</a></li>
         <li><a href="#scenario">シナリオファイルの作成</a>
@@ -60,8 +59,8 @@
     </p>
 
     <p>
-      <a href="https://ssd.jpl.nasa.gov/horizons.cgi" target="_blank" rel="noopener noreferrer">HORIZONS
-        Web-Interface</a>
+      <a href="https://ssd.jpl.nasa.gov/horizons/app.html#/" target="_blank" rel="noopener noreferrer">Horizons Web
+        Application</a>
     </p>
 
 
@@ -69,7 +68,7 @@
 
 
     <p>
-      <strong>change</strong>をクリックして、以下の設定を変更する。
+      <kbd>Edit</kbd>をクリックして、以下の設定を変更する。
     </p>
 
     <figure>
@@ -85,10 +84,6 @@
       <strong>Vector Table</strong>にする。
     </p>
 
-    <p>
-      変更したら、<kbd>Use Selection Above</kbd>をクリック。
-    </p>
-
     <figure>
       <img loading="lazy" src="/images/misc/jplhorizons/002.png" width="741" height="240">
     </figure>
@@ -98,12 +93,12 @@
 
 
     <p>
-      目標とする天体・探査機の名前を英語で入力する。
+      目標とする天体・宇宙機の名前を英語で入力する。
     </p>
 
     <p>
-      <strong>Lookup the specified body:</strong>の下に、名前を入力する。<br>
-      入力したら、右端の<kbd>Search</kbd>ボタンをクリック。
+      <strong>Lookup the Specified Body</strong>の下に、名前を入力する。<br>
+      入力したら、<kbd>Search</kbd>ボタンをクリック。
     </p>
 
     <figure>
@@ -111,7 +106,7 @@
     </figure>
 
 
-    <h3 id="settings_origin">Coordinate Origin</h3>
+    <h3 id="settings_center">Coordinate Center</h3>
 
 
     <p>
@@ -190,7 +185,7 @@
     </p>
 
 
-    <h3 id="settings_time">Time Span</h3>
+    <h3 id="settings_time">Time Specification</h3>
 
 
     <p>
@@ -213,7 +208,7 @@
     </p>
 
     <p>
-      入力したら、<kbd>Use Specified Times</kbd>をクリック。
+      入力したら、<kbd>Use Specified Time Span</kbd>をクリック。
     </p>
 
     <figure>
@@ -229,7 +224,7 @@
     </p>
 
     <p>
-      <kbd>Default Optional Settings</kbd>をクリックすると、デフォルトの設定に戻る。
+      <kbd>Reset to Defaults</kbd>をクリックすると、デフォルトの設定に戻る。
     </p>
 
     <figure>
@@ -237,32 +232,23 @@
     </figure>
 
 
-    <h4>Select vector table output</h4>
+    <h4>Select Output Quantities</h4>
 
 
     <p>
-      <strong>Type 2 (state vector {x,y,z,vx,vy,vz})</strong>を選択する。
+      <strong>2. State vector {x,y,z,vx,vy,vz}</strong>を選択する。
     </p>
 
 
-    <h4>Optional vector-table settings:</h4>
+    <h4>Additional Table Settings</h4>
 
 
     <p>
-      <strong>output units</strong>を<strong>km & km/s</strong>に変更する。
+      <strong>Output units</strong>が<strong>km and seconds</strong>になっているか確認する。
     </p>
 
     <p>
-      入力したら、<kbd>Use Settings Above</kbd>をクリック。
-    </p>
-
-
-    <h3 id="settings_display">Display/Output</h3>
-
-
-    <p>
-      変更しなくてよい。<br>
-      <strong>default (formatted HTML)</strong>のままにしておく。
+      設定したら、<kbd>Use Specified Settings</kbd>をクリック。
     </p>
 
 
@@ -270,7 +256,7 @@
 
 
     <p>
-      以上の設定が終わったら、<kbd>Generate Ephemeris</kbd>をクリック。
+      以上の設定が終わったら、緑色の<kbd>Generate Ephemeris</kbd>をクリック。
     </p>
 
 
@@ -279,7 +265,7 @@
 
     <p>
       Horizonsの画面を下にスクロールする。<br>
-      <strong>Results</strong>まで移動する。
+      <strong>Ephemeris Results</strong>に移動する。
     </p>
 
     <p>
@@ -302,7 +288,7 @@
     </p>
 
     <ul class="nostyle">
-      <li><label for="centerbody">中心天体 (Coordinate Origin, body center)</label></li>
+      <li><label for="centerbody">中心天体 (Coordinate Center, body center)</label></li>
       <li><input type="text" name="centerbody" id="centerbody" required></li>
       <li><label for="filename">ファイル名（オプション）</label></li>
       <li><input type="text" name="filename" id="filename"></li>
@@ -316,7 +302,8 @@
     </figure>
 
     <p>
-      <strong>Scenarios</strong>フォルダを開いて、作成した<strong>.scn</strong>ファイルを貼り付ける。
+      <strong>Scenarios</strong>フォルダを開いて、作成した<strong>.scn</strong>ファイルを貼り付ける。<br>
+      <a href="/misc/scenarioedit.html">シナリオファイルの直接編集</a>
     </p>
 
 
@@ -334,11 +321,16 @@
     <table>
       <tr>
         <td><a href="#settings_ephemeris">Ephemeris Type</a></td>
-        <td>VECTORS</td>
+        <td>Vector Table</td>
       </tr>
       <tr>
         <td><a href="#settings_table">Table Settings</a></td>
-        <td>quantities code=2; output units=KM-S</td>
+        <td>
+          <ul>
+            <li>2. State vector {x,y,z,vx,vy,vz}</li>
+            <li>Output units: km and seconds</li>
+          </ul>
+        </td>
       </tr>
     </table>
 
@@ -348,20 +340,20 @@
 
     <p>
       <strong>Target Body</strong>を開く。<br>
-      <strong>Lookup the specified body:</strong>の下に、<strong>ISS</strong>と入力する。<br>
-      入力したら、右端の<kbd>Search</kbd>ボタンをクリック。
+      <strong>Lookup the Specified Body</strong>の下に、<strong>ISS</strong>と入力する。<br>
+      入力したら、右の<kbd>Search</kbd>ボタンをクリック。
     </p>
 
     <p>
-      <strong>Coordinate Origin</strong>を開く。<br>
+      <strong>Coordinate Center</strong>を開く。<br>
       <strong>@399</strong>と入力して、<kbd>Search</kbd>をクリック。
     </p>
 
     <p>
-      <strong>Time Span</strong>を開く。<br>
-      <strong>Start Time</strong>に今日の日付を入力。<br>
-      <strong>Stop Time</strong>に明日の日付を入力。<br>
-      <kbd>Use Specified Times</kbd>をクリック。
+      <strong>Time Specification</strong>を開く。<br>
+      <strong>Start time</strong>に今日の日付を入力。<br>
+      <strong>Stop time</strong>に明日の日付を入力。<br>
+      <kbd>Use Specified Time Span</kbd>をクリック。
     </p>
 
     <p>
@@ -384,20 +376,20 @@
 
     <p>
       <strong>Target Body</strong>を開く。<br>
-      <strong>Lookup the specified body:</strong>の下に、<strong>voyager 2</strong>と入力する。<br>
-      入力したら、右端の<kbd>Search</kbd>ボタンをクリック。
+      <strong>Lookup the Specified Body</strong>の下に、<strong>voyager 2</strong>と入力する。<br>
+      入力したら、右の<kbd>Search</kbd>ボタンをクリック。
     </p>
 
     <p>
-      <strong>Coordinate Origin</strong>を開く。<br>
+      <strong>Coordinate Center</strong>を開く。<br>
       <strong>@599</strong>と入力して、<kbd>Search</kbd>をクリック。
     </p>
 
     <p>
-      <strong>Time Span</strong>を開く。<br>
-      <strong>Start Time</strong>に<strong>1979-07-09</strong>と入力。<br>
-      <strong>Stop Time</strong>に<strong>1979-07-10</strong>と入力。<br>
-      <kbd>Use Specified Times</kbd>をクリック。
+      <strong>Time Specification</strong>を開く。<br>
+      <strong>Start time</strong>に<strong>1979-07-09</strong>と入力。<br>
+      <strong>Stop time</strong>に<strong>1979-07-10</strong>と入力。<br>
+      <kbd>Use Specified Time Span</kbd>をクリック。
     </p>
 
     <p>
@@ -420,20 +412,20 @@
 
     <p>
       <strong>Target Body</strong>を開く。<br>
-      <strong>Lookup the specified body:</strong>の下に、<strong>hayabusa 2</strong>と入力する。<br>
-      入力したら、右端の<kbd>Search</kbd>ボタンをクリック。
+      <strong>Lookup the Specified Body</strong>の下に、<strong>hayabusa 2</strong>と入力する。<br>
+      入力したら、右の<kbd>Search</kbd>ボタンをクリック。
     </p>
 
     <p>
-      <strong>Coordinate Origin</strong>を開く。<br>
+      <strong>Coordinate Center</strong>を開く。<br>
       <strong>@10</strong>と入力して、<kbd>Search</kbd>をクリック。
     </p>
 
     <p>
-      <strong>Time Span</strong>を開く。<br>
-      <strong>Start Time</strong>に今日の日付を入力。<br>
-      <strong>Stop Time</strong>に明日の日付を入力。<br>
-      <kbd>Use Specified Times</kbd>をクリック。
+      <strong>Time Specification</strong>を開く。<br>
+      <strong>Start time</strong>に今日の日付を入力。<br>
+      <strong>Stop time</strong>に明日の日付を入力。<br>
+      <kbd>Use Specified Time Span</kbd>をクリック。
     </p>
 
     <p>
