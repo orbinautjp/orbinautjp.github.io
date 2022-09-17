@@ -5,7 +5,7 @@
 <head>
   <script src="/scripts/ga.js"></script>
   <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="/styles/orbiterjp.css">
   <script src="/scripts/template.js" charset="utf-8" defer></script>
   <title>Orbiter2016のダウンロード+インストール</title>
@@ -15,374 +15,521 @@
 
   <main>
 
-  <h1>Orbiter2016のダウンロード+インストール</h1>
+    <h1>Orbiter2016のダウンロード+インストール</h1>
 
 
-  <ol>
-    <li><a href="#2016_download">ダウンロード</a></li>
-    <li><a href="#2016_install">インストール</a></li>
-    <li><a href="#mods">MODを追加する</a>
-      <ul>
-        <li><a href="#xrsound">XRSound</a></li>
-        <li><a href="#d3d9">D3D9Client</a>
+    <nav>
+      <ol>
+        <li><a href="#2016_download">ダウンロード</a></li>
+        <li><a href="#2016_install">インストール</a></li>
+        <li><a href="#mods">MODを追加する</a>
           <ul>
-            <li><a href="#directx">DirectX9.0c</a></li>
+            <li><a href="#xrsound">XRSound</a></li>
+            <li><a href="#d3d9">D3D9Client</a>
+              <ul>
+                <li><a href="#directx">DirectX9.0c</a></li>
+              </ul>
+            </li>
+            <li><a href="#localization">日本語ファイル</a></li>
+          </ul>
+        </li>
+        <li><a href="#launchpad">起動と設定</a>
+          <ul>
+            <li><a href="#runorbiter">Orbiterの起動</a></li>
+            <li><a href="#activatemods">モジュールの有効化</a></li>
+            <li><a href="#config_d3d9">D3D9Clientの設定</a></li>
+            <li><a href="#fontsmoothing">文字のスムージング</a></li>
+          </ul>
+        </li>
+        <li><a href="#startup">ゲームの開始</a></li>
+        <li><a href="#save">セーブ+ロード</a></li>
+        <li><a href="#exit">ゲームを終了する</a></li>
+      </ol>
+      <ul>
+        <li><a href="#microtextures">MicroTexturesの導入（オプション）</a></li>
+        <li><a href="#hirestextures">高解像度テクスチャの導入（オプション）</a>
+          <ul>
+            <li><a href="#hires_download">高解像度テクスチャのダウンロード</a></li>
+            <li><a href="#hires_install">高解像度テクスチャのインストール</a>
+              <ul>
+                <li><a href="#hires_cfg">cfgファイルの差し替え</a></li>
+              </ul>
+            </li>
           </ul>
         </li>
       </ul>
-    </li>
-    <li><a href="#launchpad">起動と設定</a>
-      <ul>
-        <li><a href="#runorbiter">Orbiterの起動</a></li>
-        <li><a href="#activatemods">モジュールの有効化</a></li>
-        <li><a href="#config_d3d9">D3D9Clientの設定</a></li>
-        <li><a href="#fontsmoothing">文字のスムージング</a></li>
-      </ul>
-    </li>
-    <li><a href="#startup">ゲームの開始</a></li>
-    <li><a href="#save">セーブ+ロード</a></li>
-    <li><a href="#exit">ゲームを終了する</a></li>
-  </ol>
+    </nav>
 
-  <ul>
-    <li><a href="#microtextures">MicroTexturesの導入（オプション）</a></li>
-    <li><a href="#hirestextures">高解像度テクスチャの導入（オプション）</a>
-      <ul>
-        <li><a href="#hires_download">高解像度テクスチャのダウンロード</a></li>
-        <li><a href="#hires_install">高解像度テクスチャのインストール</a>
-          <ul>
-            <li><a href="#hires_cfg">cfgファイルの差し替え</a></li>
-          </ul>
-        </li>
-      </ul>
-    </li>
-  </ul>
 
+    <h2 id="2016_download">ダウンロード</h2>
 
-  <h2 id="2016_download">ダウンロード</h2>
 
+    <p>
+      以下のリンクをクリック。
+    </p>
 
-  <p>以下のリンクをクリック。</p>
+    <p>
+      <a href="http://orbit.medphys.ucl.ac.uk/download.html" target="_blank" rel="noopener noreferrer">Orbiter -
+        Download</a>
+    </p>
 
-  <p><a href="http://orbit.medphys.ucl.ac.uk/download.html" target="_blank" rel="noopener noreferrer">Orbiter - Download</a></p>
+    <p>
+      <strong>Orbiter core package download</strong>が、本体のダウンロード。<br>
+      4つのミラーサイトから、どれか1つを選んでクリック。
+    </p>
 
-  <p><strong>Orbiter core package download</strong>が、本体のダウンロード。<br>
-    4つのミラーサイトから、どれか1つを選んでクリック。</p>
+    <p>
+      <img loading="lazy" src="/images/basic/orbiter2016/001.png" width="800" height="400">
+    </p>
 
-  <p>
-    <img loading="lazy" src="/images/basic/orbiter2016/001.png" width="800" height="400">
-  </p>
+    <p>
+      <strong>ZIP installer</strong>の、<kbd>http download</kbd>をクリック。
+    </p>
 
-  <p><strong>ZIP installer</strong>の、<kbd>http download</kbd>をクリック。</p>
+    <p>
+      <img loading="lazy" src="/images/basic/orbiter2016/002.png" width="400" height="200">
+    </p>
 
-  <p>
-    <img loading="lazy" src="/images/basic/orbiter2016/002.png" width="400" height="200">
-  </p>
 
+    <h2 id="2016_install">インストール</h2>
 
-  <h2 id="2016_install">インストール</h2>
 
+    <p>
+      ダウンロードしたzipファイルを、適当なフォルダ※に置いて解凍する。
+    </p>
 
-  <p>ダウンロードしたzipファイルを、適当なフォルダ※に置いて解凍する。</p>
-  <p class="note">※インストールフォルダ（及び上位フォルダ）の名前に日本語を入れない（半角英数のみ）</p>
+    <p class="note">
+      ※インストールフォルダ（及び上位フォルダ）の名前に日本語を入れない（半角英数のみ）
+    </p>
 
 
-  <h2 id="mods">MODを追加する</h2>
+    <h2 id="mods">MODを追加する</h2>
 
 
-  <p>音声・グラフィックMODを導入する。</p>
+    <p>
+      音声・グラフィックMODを導入する。
+    </p>
 
-  <p>参照：<a href="orbitermod.html" target="_blank">OrbiterにMODを導入する</a></p>
+    <p>
+      参照：<a href="orbitermod.html" target="_blank">OrbiterにMODを導入する</a>
+    </p>
 
 
-  <h3 id="xrsound">XRSound</h3>
+    <h3 id="xrsound">XRSound</h3>
 
 
-  <p>音声再生MODの<strong>XRSound</strong>を導入する。</p>
+    <p>
+      音声再生MODの<strong>XRSound</strong>を導入する。
+    </p>
 
-  <p><a href="https://www.alteaaerospace.com/index-3.html" target="_blank" rel="noopener noreferrer">Altea Aerospace - Downloads</a></p>
+    <p>
+      <a href="https://www.alteaaerospace.com/index-3.html" target="_blank" rel="noopener noreferrer">Altea Aerospace -
+        Downloads</a>
+    </p>
 
-  <p><strong>Download Zip File</strong>のリンクをクリック。</p>
+    <p>
+      <strong>Download Zip File</strong>のリンクをクリック。
+    </p>
 
-  <p>
-    <img loading="lazy" src="/images/basic/orbiter2016/003.png" width="1100" height="550">
-  </p>
+    <p>
+      <img loading="lazy" src="/images/basic/orbiter2016/003.png" width="1100" height="550">
+    </p>
 
-  <p>ダウンロードしたファイルを解凍する。</p>
+    <p>
+      ダウンロードしたファイルを解凍する。
+    </p>
 
-  <p>中に入っているファイル・フォルダを、すべてコピーする。<br>
-    Orbiterのインストールフォルダにペーストして上書きする。</p>
+    <p>
+      中に入っているファイル・フォルダを、すべてコピーする。<br>
+      Orbiterのインストールフォルダにペーストして上書きする。
+    </p>
 
-  <p>詳しい解説：<a href="xrsound.html" target="_blank">XRSoundのインストールと設定</a></p>
+    <p>
+      詳しい解説：<a href="xrsound.html" target="_blank">XRSoundのインストールと設定</a>
+    </p>
 
 
-  <h3 id="d3d9">D3D9Client</h3>
+    <h3 id="d3d9">D3D9Client</h3>
 
 
-  <p>描画MODの<strong>D3D9Client</strong>を導入する。</p>
+    <p>
+      描画MODの<strong>D3D9Client</strong>を導入する。
+    </p>
 
-  <p><a href="http://users.kymp.net/~p501474a/D3D9Client/" target="_blank" rel="noopener noreferrer">D3D9Client for Orbiter</a></p>
+    <p>
+      <a href="http://users.kymp.net/~p501474a/D3D9Client/" target="_blank" rel="noopener noreferrer">D3D9Client for
+        Orbiter</a>
+    </p>
 
-  <p><kbd>Download</kbd>と書かれたボタンをクリック。</p>
+    <p>
+      <kbd>Download</kbd>と書かれたボタンをクリック。
+    </p>
 
-  <p>
-    <img loading="lazy" src="/images/basic/orbiter2016/004.png" width="500" height="250">
-  </p>
+    <p>
+      <img loading="lazy" src="/images/basic/orbiter2016/004.png" width="500" height="250">
+    </p>
 
-  <p>ダウンロードしたファイルを解凍する。</p>
+    <p>
+      ダウンロードしたファイルを解凍する。
+    </p>
 
-  <p>中に入っているファイル・フォルダを、すべてコピーする。<br>
-    Orbiterのインストールフォルダにペーストして上書きする。</p>
+    <p>
+      中に入っているファイル・フォルダを、すべてコピーする。<br>
+      Orbiterのインストールフォルダにペーストして上書きする。
+    </p>
 
-  <p>詳しい解説：<a href="d3d9client.html" target="_blank">D3D9Clientのインストールと設定</a></p>
+    <p>
+      詳しい解説：<a href="d3d9client.html" target="_blank">D3D9Clientのインストールと設定</a>
+    </p>
 
 
-  <h4 id="directx">DirectX9.0c</h4>
+    <h4 id="directx">DirectX9.0c</h4>
 
 
-  <p><a href="#d3d9">D3D9Client</a>のために、<strong>DirectX</strong>のランタイムを導入する。</p>
+    <p>
+      <a href="#d3d9">D3D9Client</a>のために、<strong>DirectX</strong>のランタイムを導入する。
+    </p>
 
-  <p><a href="https://www.microsoft.com/en-us/download/details.aspx?id=8109" target="_blank" rel="noopener noreferrer">DirectX End-User Runtimes (June 2010)</a></p>
+    <p>
+      <a href="https://www.microsoft.com/en-us/download/details.aspx?id=8109" target="_blank"
+        rel="noopener noreferrer">DirectX End-User Runtimes (June 2010)</a>
+    </p>
 
-  <p>
-    <img loading="lazy" src="/images/basic/orbiter2016/005.png" width="800" height="400">
-  </p>
+    <p>
+      <img loading="lazy" src="/images/basic/orbiter2016/005.png" width="800" height="400">
+    </p>
 
-  <p>ダウンロードしたファイルをダブルクリック。<br>
-    <kbd>Yes</kbd>をクリック。
-  </p>
+    <p>
+      ダウンロードしたファイルをダブルクリック。<br>
+      <kbd>Yes</kbd>をクリック。
+    </p>
 
-  <p><kbd>Browse</kbd>をクリックして、展開先のフォルダを指定する。※<br>
-    <kbd>OK</kbd>をクリック。
-  </p>
+    <p>
+      <kbd>Browse</kbd>をクリックして、展開先のフォルダを指定する。<br>
+      大量のファイルが吐き出されるので、あらかじめ空きフォルダを作成したほうがよい。
+    </p>
 
-  <p class="note">※あらかじめ空きフォルダを作成したほうがよい</p>
+    <p>
+      <kbd>OK</kbd>をクリック。
+    </p>
 
-  <p>指定したフォルダの中にある、<strong>DXSETUP.exe</strong>をダブルクリック。<br>
-    指示にしたがってインストールする。</p>
+    <p>
+      指定したフォルダの中にある、<strong>DXSETUP.exe</strong>をダブルクリック。<br>
+      指示にしたがってインストールする。
+    </p>
 
 
-  <h2 id="launchpad">起動と設定</h2>
+    <h3 id="localization">日本語ファイル</h3>
 
 
-  <p><a href="#xrsound">XRSound</a>、<a href="#d3d9">D3D9Client</a>を導入していることを前提に解説する。</p>
+    <p>
+      シナリオファイルの日本語化パッチを配布しています。<br>
+      導入方法は付属のreadmeをお読みください。
+    </p>
 
+    <p>
+      <a href="https://github.com/orbinautjp/scn-localization-JP/archive/refs/heads/master.zip" target="_blank"
+        rel="noopener noreferrer">scn-localization-JP</a>
+    </p>
 
-  <h3 id="runorbiter">Orbiterの起動</h3>
 
+    <h2 id="launchpad">起動と設定</h2>
 
-  <p><strong>Orbiter_ng.exe</strong>をダブルクリック。</p>
 
-  <p>
-    <img loading="lazy" src="/images/basic/orbiter2016/007.png" width="250" height="125">
-  </p>
+    <p>
+      <a href="#xrsound">XRSound</a>、<a href="#d3d9">D3D9Client</a>を導入していることを前提に解説する。
+    </p>
 
 
-  <h3 id="activatemods">モジュールの有効化</h3>
+    <h3 id="runorbiter">Orbiterの起動</h3>
 
 
-  <p><kbd>Modules</kbd>をクリック。<br>
-    以下の3つにチェックを入れる。</p>
+    <p>
+      <strong>Orbiter_ng.exe</strong>をダブルクリック。
+    </p>
 
-  <ul>
-    <li><strong>D3D9Client</strong></li>
-    <li><strong>XRSound</strong></li>
-    <li><strong>ScnEditor</strong></li>
-  </ul>
+    <p>
+      <img loading="lazy" src="/images/basic/orbiter2016/007.png" width="250" height="125">
+    </p>
 
-  <p>
-    <img loading="lazy" src="/images/basic/orbiter2016/008.png" width="360" height="360">
-  </p>
 
+    <h3 id="activatemods">モジュールの有効化</h3>
 
-  <h3 id="config_d3d9">D3D9Clientの設定</h3>
 
+    <p>
+      <kbd>Modules</kbd>をクリック。<br>
+      以下の3つにチェックを入れる。
+    </p>
 
-  <p><kbd>Video</kbd>をクリック。<br>
-    右下の<kbd>Advanced</kbd>をクリック。</p>
+    <ul>
+      <li><strong>D3D9Client</strong></li>
+      <li><strong>XRSound</strong></li>
+      <li><strong>ScnEditor</strong></li>
+    </ul>
 
-  <p>
-    <img loading="lazy" src="/images/basic/orbiter2016/009.png" width="520" height="260">
-  </p>
+    <p>
+      <img loading="lazy" src="/images/basic/orbiter2016/008.png" width="360" height="360">
+    </p>
 
-  <p>左下の<kbd>Create symbolic links</kbd>をクリック。<br>
-    <kbd>はい</kbd>をクリック。
-  </p>
 
-  <p>
-    <img loading="lazy" src="/images/basic/orbiter2016/010.png" width="820" height="641">
-  </p>
+    <h3 id="config_d3d9">D3D9Clientの設定</h3>
 
-  <p>
-    <a href="#microtextures">MicroTextures</a>を導入している場合は、右側の<strong>Surface micro textures</strong>を<strong>Enabled</strong>にしておく。
-  </p>
 
-  <p><kbd>OK</kbd>をクリックしてウィンドウを閉じる。</p>
+    <p>
+      <kbd>Video</kbd>をクリック。<br>
+      右下の<kbd>Advanced</kbd>をクリック。
+    </p>
 
+    <p>
+      <img loading="lazy" src="/images/basic/orbiter2016/009.png" width="520" height="260">
+    </p>
 
-  <h3 id="fontsmoothing">文字のスムージング</h3>
+    <p>
+      左下の<kbd>Create symbolic links</kbd>をクリック。<br>
+      <kbd>はい</kbd>をクリック。
+    </p>
 
+    <p>
+      <img loading="lazy" src="/images/basic/orbiter2016/010.png" width="820" height="641">
+    </p>
 
-  <p><kbd>Extra</kbd>をクリック。</p>
+    <p>
+      <a href="#microtextures">MicroTextures</a>を導入している場合は、右側の<strong>Surface micro
+        textures</strong>を<strong>Enabled</strong>にしておく。
+    </p>
 
-  <p><strong>Debugging options</strong>をクリック。<br>
-    <strong>Performance options</strong>をクリック。
-  </p>
+    <p>
+      <kbd>OK</kbd>をクリックしてウィンドウを閉じる。
+    </p>
 
-  <p>下の<kbd>Edit</kbd>をクリック。</p>
 
-  <p>
-    <img loading="lazy" src="/images/basic/orbiter2016/011.png" width="300" height="150">
-  </p>
+    <h3 id="fontsmoothing">文字のスムージング</h3>
 
-  <p><strong>Disable font smoothing while Orbiter is running</strong>のチェックを外す。<br>
-    <strong>Enforce font smoothing on exit</strong>にチェックを入れる。
-  </p>
 
-  <p><kbd>OK</kbd>をクリック。</p>
+    <p>
+      <kbd>Extra</kbd>をクリック。
+    </p>
 
-  <p>
-    <img loading="lazy" src="/images/basic/orbiter2016/012.png" width="325" height="240">
-  </p>
+    <p>
+      <strong>Debugging options</strong>をクリック。<br>
+      <strong>Performance options</strong>をクリック。
+    </p>
 
-  <p>Orbiterを起動すると、Windowsのフォントが汚くなる（スムージングが解除される）ことがある。<br>
-    以上の設定で、これを防ぐことができる。</p>
+    <p>
+      下の<kbd>Edit</kbd>をクリック。
+    </p>
 
+    <p>
+      <img loading="lazy" src="/images/basic/orbiter2016/011.png" width="300" height="150">
+    </p>
 
-  <h2 id="startup">ゲームの開始</h2>
+    <p>
+      <strong>Disable font smoothing while Orbiter is running</strong>のチェックを外す。<br>
+      <strong>Enforce font smoothing on exit</strong>にチェックを入れる。
+    </p>
 
+    <p>
+      <kbd>OK</kbd>をクリック。
+    </p>
 
-  <p><kbd>Scenarios</kbd>をクリック。</p>
+    <p>
+      <img loading="lazy" src="/images/basic/orbiter2016/012.png" width="325" height="240">
+    </p>
 
-  <p>フォルダのアイコンをダブルクリック。<br>
-    赤い三角のアイコン（シナリオファイル）をダブルクリック。</p>
+    <p>
+      Orbiterを起動すると、Windowsのフォントが汚くなる（スムージングが解除される）ことがある。<br>
+      以上の設定で、これを防ぐことができる。
+    </p>
 
-  <p>
-    <img loading="lazy" src="/images/basic/orbiter2016/013.png" width="480" height="240">
-  </p>
 
-  <p><strong># Welcome to Orbiter 2016</strong>では、あらかじめ設定されたシナリオが自動再生される。<br>
-    自分で宇宙船を操作する場合は、別のシナリオファイルを選択する。</p>
+    <h2 id="startup">ゲームの開始</h2>
 
 
-  <h2 id="save">セーブ+ロード</h2>
+    <p>
+      <kbd>Scenarios</kbd>をクリック。
+    </p>
 
+    <p>
+      フォルダのアイコンをダブルクリック。<br>
+      赤い三角のアイコン（シナリオファイル）をダブルクリック。
+    </p>
 
-  <p>マウスカーソルを画面上部に持っていくと、メニューが表示される。</p>
+    <p>
+      <img loading="lazy" src="/images/basic/orbiter2016/013.png" width="480" height="240">
+    </p>
 
-  <p>
-    <img loading="lazy" src="/images/basic/orbiter2016/014.png" width="600" height="300">
-  </p>
+    <p>
+      <strong># Welcome to Orbiter 2016</strong>では、あらかじめ設定されたシナリオが自動再生される。<br>
+      自分で宇宙船を操作する場合は、別のシナリオファイルを選択する。
+    </p>
 
-  <p><kbd>save</kbd>をクリック。<br>
-    <strong>Quicksave</strong>フォルダにセーブデータが作成される。
-  </p>
 
-  <p>ゲームを終了したら、<kbd>Scenarios</kbd>をクリック。<br>
-    <strong>Quicksave</strong>フォルダを開くと、セーブしたシナリオを選択できる。
-  </p>
+    <h2 id="save">セーブ+ロード</h2>
 
 
-  <h2 id="exit">ゲームを終了する</h2>
+    <p>
+      マウスカーソルを画面上部に持っていくと、メニューが表示される。
+    </p>
 
+    <p>
+      <img loading="lazy" src="/images/basic/orbiter2016/014.png" width="600" height="300">
+    </p>
 
-  <p><kbd>Ctrl</kbd>キーを押しながら<kbd>Q</kbd>を押す。<br>
-    もしくは、上のメニューで<kbd>exit</kbd>をクリック。</p>
+    <p>
+      <kbd>save</kbd>をクリック。<br>
+      <strong>Quicksave</strong>フォルダにセーブデータが作成される。
+    </p>
 
-  <p>ゲームを終了すると、<strong>(Current state)</strong>に自動でセーブされる。<br>
-    このファイルからゲームを再開することもできる。</p>
+    <p>
+      ゲームを終了したら、<kbd>Scenarios</kbd>をクリック。<br>
+      <strong>Quicksave</strong>フォルダを開くと、セーブしたシナリオを選択できる。
+    </p>
 
-  <p><kbd>Save Current</kbd>をクリックすると、この自動セーブに名前をつけて保存できる。</p>
 
+    <h2 id="exit">ゲームを終了する</h2>
 
-  <h2 id="microtextures">MicroTexturesの導入（オプション）</h2>
 
+    <p>
+      <kbd>Ctrl</kbd>キーを押しながら<kbd>Q</kbd>を押す。<br>
+      もしくは、上のメニューで<kbd>exit</kbd>をクリック。
+    </p>
 
-  <p>テクスチャを追加すると、地表のクレーターなどを再現できる。</p>
+    <p>
+      ゲームを終了すると、<strong>(Current state)</strong>に自動でセーブされる。<br>
+      このファイルからゲームを再開することもできる。
+    </p>
 
-  <p><a href="http://users.kymp.net/~p501474a/D3D9Client/" target="_blank" rel="noopener noreferrer">D3D9Client for Orbiter</a></p>
+    <p>
+      <kbd>Save Current</kbd>をクリックすると、この自動セーブに名前をつけて保存できる。
+    </p>
 
-  <p>リンク先のページを下にスクロールする。<br>
-    <strong>MicroTexture Pack</strong>まで移動する。
-  </p>
 
-  <p>
-    <img loading="lazy" src="/images/basic/orbiter2016/006.png" width="640" height="320">
-  </p>
+    <h2 id="microtextures">MicroTexturesの導入（オプション）</h2>
 
-  <p>ダウンロードしたファイルを解凍する。</p>
 
-  <p>中にある2つのフォルダをコピーする。<br>
-    Orbiterのインストールフォルダにペーストして上書き。</p>
+    <p>
+      テクスチャを追加すると、地表のクレーターなどを再現できる。
+    </p>
 
-  <p><a href="#config_d3d9">D3D9Clientの設定画面</a>を開く。<br>
-    <strong>Surface micro textures</strong>を<strong>Enabled</strong>にする。
-  </p>
+    <p>
+      <a href="http://users.kymp.net/~p501474a/D3D9Client/" target="_blank" rel="noopener noreferrer">D3D9Client for
+        Orbiter</a>
+    </p>
 
+    <p>
+      リンク先のページを下にスクロールする。<br>
+      <strong>MicroTexture Pack</strong>まで移動する。
+    </p>
 
-  <h2 id="hirestextures">高解像度テクスチャの導入（オプション）</h2>
+    <p>
+      <img loading="lazy" src="/images/basic/orbiter2016/006.png" width="640" height="320">
+    </p>
 
+    <p>
+      ダウンロードしたファイルを解凍する。
+    </p>
 
-  <p>高解像度テクスチャを導入しなくてもゲームは動作する。<br>
-    地球だけ、もしくは月・火星だけ高解像度化することもできる。</p>
+    <p>
+      中にある2つのフォルダをコピーする。<br>
+      Orbiterのインストールフォルダにペーストして上書き。
+    </p>
 
-  <p><strong>100GB</strong>程度のHDD・SSD空き容量を確保しておくこと。</p>
+    <p>
+      <a href="#config_d3d9">D3D9Clientの設定画面</a>を開く。<br>
+      <strong>Surface micro textures</strong>を<strong>Enabled</strong>にする。
+    </p>
 
-  <h3 id="hires_download">高解像度テクスチャのダウンロード</h3>
 
+    <h2 id="hirestextures">高解像度テクスチャの導入（オプション）</h2>
 
-  <p><a href="http://orbit.medphys.ucl.ac.uk/download.html#hires_tex" target="_blank" rel="noopener noreferrer">ダウンロードページ</a>に戻る。</p>
 
-  <p><strong>Optional high-resolution texture download</strong>に移動する。<br>
-    4つのミラーサイトから1つ選んでクリック。</p>
+    <p>
+      高解像度テクスチャを導入しなくてもゲームは動作する。<br>
+      地球だけ、もしくは月・火星だけ高解像度化することもできる。
+    </p>
 
-  <p>
-    <img loading="lazy" src="/images/basic/orbiter2016/015.png" width="800" height="400">
-  </p>
+    <p>
+      <strong>100GB</strong>程度のHDD・SSD空き容量を確保しておくこと。
+    </p>
 
-  <p><kbd>http</kbd>と書かれたリンクをクリック。<br>
-    拡張子<strong>.tree</strong>のファイルをすべてダウンロードする。</p>
+    <h3 id="hires_download">高解像度テクスチャのダウンロード</h3>
 
-  <p>
-    <img loading="lazy" src="/images/basic/orbiter2016/016.png" width="400" height="200">
-  </p>
 
+    <p>
+      <a href="http://orbit.medphys.ucl.ac.uk/download.html#hires_tex" target="_blank"
+        rel="noopener noreferrer">ダウンロードページ</a>に戻る。
+    </p>
 
-  <h3 id="hires_install">高解像度テクスチャのインストール</h3>
+    <p>
+      <strong>Optional high-resolution texture download</strong>に移動する。<br>
+      4つのミラーサイトから1つ選んでクリック。
+    </p>
 
+    <p>
+      <img loading="lazy" src="/images/basic/orbiter2016/015.png" width="800" height="400">
+    </p>
 
-  <p>地球の場合を例に、インストール方法を説明する。</p>
+    <p>
+      <kbd>http</kbd>と書かれたリンクをクリック。<br>
+      拡張子<strong>.tree</strong>のファイルをすべてダウンロードする。
+    </p>
 
-  <ol>
-    <li><strong>Textures</strong>フォルダを開く。</li>
-    <li><strong>Earth</strong>フォルダを開く。</li>
-    <li><strong>Archive</strong>フォルダを開く。</li>
-  </ol>
+    <p>
+      <img loading="lazy" src="/images/basic/orbiter2016/016.png" width="400" height="200">
+    </p>
 
-  <p>ダウンロードした<strong>.tree</strong>ファイルを、<strong>Archive</strong>フォルダにコピーして上書き。</p>
 
-  <p>
-    <img loading="lazy" src="/images/basic/orbiter2016/017.png" width="350" height="175">
-  </p>
+    <h3 id="hires_install">高解像度テクスチャのインストール</h3>
 
-  <p>月の場合は<strong>Moon</strong>フォルダ、火星の場合は<strong>Mars</strong>フォルダで、上の手順を繰り返す。</p>
 
-  <p><strong>Minor bodies</strong>（その他天体）の場合は、ダウンロードしたファイルを解凍する。<br>
-    中に入っている<strong>Textures</strong>フォルダをコピーして、Orbiter2016のフォルダに貼り付け。<br>
-    既存の<strong>Textures</strong>フォルダを上書きする。</p>
+    <p>
+      地球の場合を例に、インストール方法を説明する。
+    </p>
 
+    <ol>
+      <li><strong>Textures</strong>フォルダを開く。</li>
+      <li><strong>Earth</strong>フォルダを開く。</li>
+      <li><strong>Archive</strong>フォルダを開く。</li>
+    </ol>
 
-  <h3 id="hires_cfg">cfgファイルの差し替え</h3>
+    <p>
+      ダウンロードした<strong>.tree</strong>ファイルを、<strong>Archive</strong>フォルダにコピーして上書き。
+    </p>
 
+    <p>
+      <img loading="lazy" src="/images/basic/orbiter2016/017.png" width="350" height="175">
+    </p>
 
-  <p><strong>火星</strong>・<strong>水星</strong>・<strong>タイタン</strong>に高解像度テクスチャを導入する場合、<strong>cfg</strong>ファイルの差し替えが必要になる。</p>
+    <p>
+      月の場合は<strong>Moon</strong>フォルダ、火星の場合は<strong>Mars</strong>フォルダで、上の手順を繰り返す。
+    </p>
 
-  <p>3つの<strong>cfg</strong>ファイルをまとめたものを用意している。<br>
-    以下のリンクからダウンロード。</p>
+    <p>
+      <strong>Minor bodies</strong>（その他天体）の場合は、ダウンロードしたファイルを解凍する。<br>
+      中に入っている<strong>Textures</strong>フォルダをコピーして、Orbiter2016のフォルダに貼り付け。<br>
+      既存の<strong>Textures</strong>フォルダを上書きする。
+    </p>
 
-  <p><a href="https://www.dropbox.com/s/g11959c2yubli25/cfg_hires.zip?dl=1">cfg_hires.zip</a></p>
 
-  <p>ダウンロードしたファイルを解凍して、<strong>Config</strong>フォルダをコピーして上書き。</p>
+    <h3 id="hires_cfg">cfgファイルの差し替え</h3>
+
+
+    <p>
+      <strong>火星</strong>・<strong>水星</strong>・<strong>タイタン</strong>に高解像度テクスチャを導入する場合、<strong>cfg</strong>ファイルの差し替えが必要になる。
+    </p>
+
+    <p>
+      3つの<strong>cfg</strong>ファイルをまとめたものを用意している。<br>
+      以下のリンクからダウンロード。
+    </p>
+
+    <p>
+      <a href="https://www.dropbox.com/s/g11959c2yubli25/cfg_hires.zip?dl=1">cfg_hires.zip</a>
+    </p>
+
+    <p>
+      ダウンロードしたファイルを解凍して、<strong>Config</strong>フォルダをコピーして上書き。
+    </p>
 
   </main>
 
