@@ -38,6 +38,7 @@
             <li><a href="#relocate_switch">先端・根元の切り替え</a></li>
           </ul>
         </li>
+        <li><a href="#keys">キー操作一覧</a></li>
       </ul>
     </nav>
 
@@ -46,10 +47,11 @@
 
 
     <p>
-      <kbd>F3</kbd>キーを押して<strong>SSRMSD</strong>を選択する。<br>
-      <kbd>Ctrl</kbd>+<kbd>Space</kbd>で操作ダイアログを呼び出す。
+      <kbd>F3</kbd>キーを押して<strong>SSRMSD</strong>を選択する。
     </p>
+
     <p>
+      <kbd>Ctrl</kbd>+<kbd>Space</kbd>で操作ダイアログを呼び出す。<br>
       操作ダイアログを出したままにしておけば、ほかの宇宙船を選択した状態でも使用できる。
     </p>
 
@@ -57,14 +59,47 @@
     <h2 id="control">アームを操作する</h2>
 
 
-    <p>
+    <figure>
       <img loading="lazy" src="/images/iss/canadarm2-control/SSRMSD005.png" width="351" height="567">
-    </p>
+    </figure>
+
     <p>
-      <strong>Wrist</strong>（手首）<strong>Elbow</strong>（ひじ）<strong>Shoulder</strong>（肩）のボタンをクリックすることで、それぞれの関節を操作できる。
+      左上のボタンをクリックすると、それぞれの関節を操作できる。
     </p>
+
+    <table>
+      <tr>
+        <th>Wrist</th>
+        <td>手首</td>
+      </tr>
+      <tr>
+        <th>Elbow</th>
+        <td>ひじ</td>
+      </tr>
+      <tr>
+        <th>Shoulder</th>
+        <td>肩</td>
+      </tr>
+      <tr>
+        <th>R</th>
+        <td>ロール</td>
+      </tr>
+      <tr>
+        <th>Y</th>
+        <td>ヨー</td>
+      </tr>
+      <tr>
+        <th>P</th>
+        <td>ピッチ</td>
+      </tr>
+    </table>
+
     <p>
-      また、宇宙船のRCSと同じ操作で、テンキーを使ってアームを平行移動させたり、向きを変えることができる。<br>
+      <strong>Arm Speed</strong>でアームの移動速度を変更する。
+    </p>
+
+    <p>
+      また、RCSと同じテンキー操作で、アームを平行移動させたり、向きを変えることができる。<br>
       <strong>RCS LIN</strong>なら平行移動、<strong>RCS ROT</strong>なら先端がその場で回転する。<br>
       ただし、関節の可動域の制約があるので、ロックした場合は各関節を個別に動かす必要がある。
     </p>
@@ -74,23 +109,25 @@
 
 
     <p>
-      カメラの位置をペイロードの目印に合わせて、アームの先端を密着させてから、<kbd>Grapple</kbd>ボタンをクリック。
+      カメラの位置をペイロードの目印に合わせて、アームの先端を密着させる。<br>
+      <kbd>Grapple</kbd>ボタンをクリック。
     </p>
-    <p>
+
+    <figure>
       <img loading="lazy" src="/images/iss/canadarm2-control/SSRMSD006.png" width="578" height="376">
+    </figure>
+
+    <p class="caution">
+      <a href="/iss/#iss_32">
+        ISS v3.2</a>では、アームの取り付け位置が左に<strong>90°</strong>ずれている。
     </p>
-    <p>
-      Shuttle FleetのRMSと違って、上下が合っていないと接続されない。
-    </p>
-    <p>
-      <strong class="caution">重要</strong>：<a href="/iss/#iss_32" target="_blank">ISS
-        v3.2</a>では、アームの取り付け位置が左に<strong>90°</strong>ずれている。※
-    </p>
-    <p>
+
+    <figure>
       <img loading="lazy" src="/images/iss/canadarm2-control/SSRMSD007.png" width="554" height="392">
-    </p>
-    <p class="note">
-      ※このMODはISS v3.2向けに作られたわけではないので、アームの取り付け位置にずれが生じている。<br>
+    </figure>
+
+    <p>
+      Canadarm2はISS v3.2向けに作られたわけではないので、取り付け位置にずれが生じている。<br>
       ISS A to Z、こうのとり、ドラゴン宇宙船などのMODでは、目印の通りに接続できる。
     </p>
 
@@ -117,25 +154,32 @@
     <h2 id="relocate">ステーション上を移動させる</h2>
 
 
-    <p>現実のカナダアーム2と同じく、ISSの上をしゃくとり虫のように移動できる。</p>
+    <p>
+      現実のカナダアーム2と同じく、ISSの上をしゃくとり虫のように移動できる。
+    </p>
 
 
     <h3 id="relocate_pdgf">PDGFを探す</h3>
 
 
     <p>
-      ダイアログボックスで<strong>Grapple Points</strong>のボタンをクリックして、取り付け位置を示す矢印を表示させる。
+      ダイアログボックスで<strong>Grapple Points</strong>のボタンをクリック。<br>
+      取り付け位置を示す矢印を表示させる。
     </p>
-    <p>
+
+    <figure>
       <img loading="lazy" src="/images/iss/canadarm2-control/Inchworm002.png" width="171" height="65">
-    </p>
+    </figure>
+
     <p>
-      <strong>青い矢印</strong>が表示されている取り付け位置（<a href="https://en.wikipedia.org/wiki/Grapple_fixture" target="_blank"
-        rel="noopener noreferrer">PDGF</a>）を探す。
+      <strong>青い矢印</strong>が表示されている
+      <a href="https://en.wikipedia.org/wiki/Grapple_fixture" target="_blank"
+        rel="noopener noreferrer">PDGF</a>（アームの取り付け位置）を探す。
     </p>
-    <p>
+
+    <figure>
       <img loading="lazy" src="/images/iss/canadarm2-control/Inchworm001.png" width="561" height="363">
-    </p>
+    </figure>
 
 
     <h3 id="relocate_grapple">アームを接続する</h3>
@@ -148,24 +192,90 @@
 
 
     <p>
-      この状態で<kbd>Ctrl</kbd>キーを押しながら<kbd>A</kbd>を押すと、アームの先端と根元が入れ替わる。
+      PDGFと接触した状態で<kbd>Ctrl</kbd>キーを押しながら<kbd>A</kbd>を押す。<br>
+      アームの先端と根元が入れ替わる。
     </p>
-    <p>
+
+    <figure>
       <img loading="lazy" src="/images/iss/canadarm2-control/Inchworm003.png" width="563" height="393">
+    </figure>
+
+    <p>
+      <strong>青い矢印のPDGF</strong>を探して接続することで、好きな場所に移動できる。
     </p>
+
     <p>
-      また別の<strong>青い矢印のPDGF</strong>を探して接続することで、好きな場所に移動できる。</p>
-    <p>
-      <a href="/iss/#iss_32" target="_blank">International Space Station v3.2</a>や<a href="/iss/#iss_atoz"
-        target="_blank">ISS A to Z</a>では、MBSに接続して移動することもできる。
+      <a href="/iss/#iss_32">International Space Station v3.2</a>や
+      <a href="/iss/#iss_atoz">ISS A to Z</a>では、MBSに接続して移動することもできる。
     </p>
-    <p>
+
+    <figure>
       <img loading="lazy" src="/images/iss/canadarm2-control/Inchworm004.png" width="515" height="361">
-    </p>
+    </figure>
+
+    <ul>
+      <li><a href="iss-v32-canadarm2.html">ISS v3.2 カナダアーム2とMBSの操作</a></li>
+      <li><a href="iss-atoz-keymap.html">ISS A to Zの操作</a></li>
+    </ul>
+
+
+    <h2 id="keys">キー操作一覧</h2>
+
+
     <p>
-      <a href="iss-v32-canadarm2.html" target="_blank">ISS v3.2 カナダアーム2とMBSの操作</a><br>
-      <a href="iss-atoz-keymap.html" target="_blank">ISS A to Zの操作</a>
+      <kbd>Ctrl</kbd>との同時押しで、逆方向に回転する。
     </p>
+
+    <table class="center1col">
+      <tr>
+        <td><kbd>S</kbd></td>
+        <td>アームの移動速度を変える</td>
+      </tr>
+      <tr>
+        <td><kbd>1</kbd></td>
+        <td>肩ロール角を変更</td>
+      </tr>
+      <tr>
+        <td><kbd>2</kbd></td>
+        <td>肩ヨー角を変更</td>
+      </tr>
+      <tr>
+        <td><kbd>3</kbd></td>
+        <td>肩ピッチ角を変更</td>
+      </tr>
+      <tr>
+        <td><kbd>4</kbd></td>
+        <td>ひじピッチ角を変更</td>
+      </tr>
+      <tr>
+        <td><kbd>5</kbd></td>
+        <td>手首ピッチ角を変更</td>
+      </tr>
+      <tr>
+        <td><kbd>6</kbd></td>
+        <td>手首ヨー角を変更</td>
+      </tr>
+      <tr>
+        <td><kbd>7</kbd></td>
+        <td>手首ロール角を変更</td>
+      </tr>
+      <tr>
+        <td><kbd>Ctrl</kbd>+<kbd>F</kbd></td>
+        <td>平行移動の基準となる平面を変更</td>
+      </tr>
+      <tr>
+        <td><strong>矢印キー</strong></td>
+        <td>Y-Z平面を移動（RCS ROTのみ）</td>
+      </tr>
+      <tr>
+        <td><kbd>Delete</kbd>or<kbd>Insert</kbd></td>
+        <td>X軸方向に移動（RCS ROTのみ）</td>
+      </tr>
+      <tr>
+        <td><strong>テンキー</strong></td>
+        <td>アームの先端を移動・回転させる<br>RCSと同じ操作</td>
+      </tr>
+    </table>
 
   </main>
 
