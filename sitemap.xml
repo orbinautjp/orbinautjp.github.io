@@ -154,11 +154,11 @@
     </url>
     <url>
         <loc>https://orbinautjp.github.io/iss/canadarm2-control.html</loc>
-        <lastmod>2021-04-22</lastmod>
+        <lastmod>2022-09-24</lastmod>
     </url>
     <url>
-        <loc>https://orbinautjp.github.io/iss/canadarm2mod-install.html</loc>
-        <lastmod>2021-04-22</lastmod>
+        <loc>https://orbinautjp.github.io/iss/canadarm2-install.html</loc>
+        <lastmod>2022-09-24</lastmod>
     </url>
     <url>
         <loc>https://orbinautjp.github.io/iss/dragon-control.html</loc>
@@ -751,5 +751,13 @@
     <url>
         <loc>https://orbinautjp.github.io/misc/localization.html</loc>
         <lastmod>2022-07-27</lastmod>
+    </url>
+    <url>
+        <loc>https://orbinautjp.github.io/iss/betteriss-install.html</loc>
+        <lastmod>2022-09-24</lastmod>
+    </url>
+    <url>
+        <loc>https://orbinautjp.github.io/iss/betteriss-control.html</loc>
+        <lastmod>2022-09-24</lastmod>
     </url>
 </urlset>

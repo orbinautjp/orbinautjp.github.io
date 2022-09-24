@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+
+<html lang="ja">
+
+<head>
+  <script src="/scripts/ga.js"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/styles/orbiterjp.css">
+  <script src="/scripts/template.js" charset="utf-8" defer></script>
+  <title>Canadarm2のインストール</title>
+</head>
+
+<body>
+
+  <main>
+
+    <h1>Canadarm2のインストール</h1>
+
+
+    <p>
+      <strong>Canadarm2</strong>は、ISSに搭載されているカナダアーム2を再現したMODです。
+    </p>
+
+    <nav>
+      <ul>
+        <li><a href="#install">ダウンロード+インストール</a>
+          <ul>
+            <li><a href="#install_2016">Orbiter2016</a></li>
+            <li><a href="#win10">Windows10</a></li>
+          </ul>
+        </li>
+        <li><a href="#control">操作</a></li>
+        <li><a href="#problem">接続が不安定なときは</a></li>
+        <li><a href="#scenario">シナリオに追加する</a></li>
+      </ul>
+    </nav>
+
+
+    <h2 id="features">特徴</h2>
+
+
+    <p>
+      <a href="/iss/#iss_32" target="_blank">ISS v3.2</a>や
+      <a href="/iss/#iss_atoz" target="_blank">ISS A to Z</a>
+      のカナダアームと比べて、より使いやすく、再現度が高くなっています。<br>
+      関節を1つずつ動かすだけでなく、RCSのように移動させることができます。
+    </p>
+
+
+    <h2 id="install">ダウンロード+インストール</h2>
+
+
+    <p>
+      ダウンロードは以下のリンクから。
+    </p>
+
+    <ul>
+      <li>
+        <a href="https://www.orbiter-forum.com/resources/canadarm2-v-4-0.1867/" target="_blank"
+          rel="noopener noreferrer">Canadarm2v4.0</a>
+      </li>
+    </ul>
+
+    <p>
+      ダウンロードしたファイルを解凍する。<br>
+      中のファイル・フォルダをOrbiterのインストールフォルダに上書き。
+    </p>
+
+
+    <h3 id="install_2016">Orbiter2016</h3>
+
+
+    <p>
+      Orbiter2016で使用する場合は、以下のMODを導入してください。
+    </p>
+
+    <ul>
+      <li>
+        <a href="https://www.orbiter-forum.com/resources/ssrmsd-dll-update.1221/" target="_blank">SSRMSD.dll update</a>
+      </li>
+    </ul>
+
+    <p>
+      ダウンロードしたファイルを解凍して、<strong>SSRMSD.dll</strong>をコピー。<br>
+      <strong>Modules</strong>フォルダを開いて、ペーストして上書きする。
+    </p>
+
+
+    <h3 id="win10">Windows10</h3>
+
+
+    <p>
+      <strong>Windows10</strong>環境において、ゲームの開始時に強制終了する場合は、以下のファイルを試してみてください。
+    </p>
+
+    <p>
+      ダウンロードには
+      <a href="https://www.orbiter-forum.com/" target="_blank" rel="noopener noreferrer">
+        Orbiter Forum</a>のアカウントが必要です。
+    </p>
+
+    <ul>
+      <li>
+        <a href="https://www.orbiter-forum.com/threads/canadarm2-v-4-0.33346/page-3#post-508868" target="_blank"
+          rel="noopener noreferrer">
+          OHM - Canadarm2 v 4.0 | Page 3 | Orbiter Forum</a>
+      </li>
+    </ul>
+
+    <p class="caution">
+      このファイルを<strong>Orbiter2010</strong>で使用する場合は、コクピット視点（<kbd>F1</kbd>キー）にはしないでください。
+    </p>
+
+
+    <h2 id="control">操作</h2>
+
+
+    <ul>
+      <li><a href="canadarm2-control.html">Canadarm2の操作</a></li>
+    </ul>
+
+
+    <h2 id="problem">接続が不安定なときは</h2>
+
+
+    <p>
+      このMODを<strong>D3D9Client</strong>と同時に使うと、ペイロードとの接続が不安定になることがあるようです。<br>
+      Launchpadの<strong>Video</strong>タブで、
+      <strong>Disable vertical sync</strong>のチェックを
+      <strong>外す</strong>ことで症状が改善する可能性があります。
+    </p>
+
+    <p>
+      <img loading="lazy" src="/images/iss/canadarm2mod-install/SSRMSD008.png" width="323" height="230">
+    </p>
+
+    <p>
+      どうしても改善しない場合は、一時的に<strong>Orbiter.exe</strong>でプレイしてみてください。
+    </p>
+
+
+    <h2 id="scenario">シナリオに追加する</h2>
+
+
+    <p>
+      <a href="/iss/#iss_32" target="_blank">ISS v3.2</a>の<strong>STS-104</strong>シナリオを例に説明します。
+    </p>
+
+    <p>
+      <strong>STS-104 (Atlantis).scn</strong>をメモ帳で開く。
+    </p>
+
+    <p>
+      以下の行で始まる項目を探す。
+    </p>
+
+    <pre><code>SSRMS:ISSR\SSRMS</code></pre>
+
+    <p>
+      <strong>END</strong>の次に改行を入れる。
+    </p>
+
+    <p>
+      <img loading="lazy" src="/images/iss/canadarm2mod-install/SSRMSD001.png" width="573" height="306">
+    </p>
+
+    <p>
+      空いた行に、以下をコピーして貼り付ける。
+    </p>
+
+    <pre><code>SSRMSD:SSRMSD
+  ATTACHED 1:10,ISS
+  ARM_STATUS 0.000000 0.000000 30.000000 -60.000000 40.000000 0.000000 0.000000
+END</code></pre>
+
+    <p>
+      うまくコピペできない場合は、以下の画像を参考にしてください。
+    </p>
+
+    <p>
+      <img loading="lazy" src="/images/iss/canadarm2mod-install/SSRMSD009.png" width="657" height="102">
+    </p>
+
+    <p>
+      もとのSSRMSを消して、空いた行を詰める。
+    </p>
+
+    <p>
+      <img loading="lazy" src="/images/iss/canadarm2mod-install/SSRMSD002.png" width="360" height="268">
+    </p>
+
+    <p>
+      ほかのシナリオの場合、アームの取り付け先のモジュールと取り付け位置を変更する必要があります。
+    </p>
+
+    <p class="caution">
+      赤で囲んだ部分以外は変更しないでください。
+    </p>
+
+    <p>
+      <img loading="lazy" src="/images/iss/canadarm2mod-install/SSRMSD010.png" width="349" height="88">
+    </p>
+
+    <p>
+      <strong>10</strong>がアームの取り付け位置、<strong>ISS</strong>が取り付け先の宇宙船の名前です。<br>
+      この場合の取り付け先は<strong>ISS</strong>になっていますが、シナリオによっては<strong>MBS</strong>や<strong>Harmony</strong>になっています。<br>
+      もとのSSRMSの情報を参考にして書き換えてください。
+    </p>
+
+  </main>
+
+</body>
+
+</html>

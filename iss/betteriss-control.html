@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <script src="/scripts/ga.js"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/styles/orbiterjp.css">
+  <script src="/scripts/template.js" charset="utf-8" defer></script>
+  <title>Better ISSの操作</title>
+</head>
+
+<body>
+
+  <main>
+
+    <h1>Better ISSの操作</h1>
+
+
+    <p>
+      <a href="betteriss-install.html">Better ISS</a>の操作方法について説明します。
+    </p>
+
+    <nav>
+      <ul>
+        <li><a href="#scenario">利用可能なシナリオ</a></li>
+        <li><a href="#keys">キー操作一覧</a></li>
+        <li><a href="#iva">船内を移動する</a></li>
+        <li><a href="#nav">周波数一覧</a></li>
+        <li><a href="#ssrms">ロボットアームの操作</a></li>
+      </ul>
+    </nav>
+
+
+    <h2 id="scenario">利用可能なシナリオ</h2>
+
+
+    <p>
+      <a href="/basic/orbitercontrol.html#launchpad">Launchpad</a>を開く。<br>
+      <strong>Space Stations</strong>→<strong>Better ISS</strong>を開く。
+    </p>
+
+
+    <h2 id="keys">キー操作一覧</h2>
+
+
+    <table class="center1col">
+      <tr>
+        <td><kbd>1</kbd></td>
+        <td rowspan="3" style="text-align: center;"><abbr title="Control Moment Gyroscope">CMG</abbr>の設定</td>
+        <td>姿勢制御を解除</td>
+      </tr>
+      <tr>
+        <td><kbd>2</kbd></td>
+        <td>回転を止める</td>
+      </tr>
+      <tr>
+        <td><kbd>3</kbd></td>
+        <td>設定した姿勢を維持する</td>
+      </tr>
+      <tr>
+        <td><kbd>7</kbd></td>
+        <td colspan="2">ロール角を任意の数字に設定する</td>
+      </tr>
+      <tr>
+        <td><kbd>8</kbd></td>
+        <td colspan="2">ピッチ角を任意の数字に設定する</td>
+      </tr>
+      <tr>
+        <td><kbd>9</kbd></td>
+        <td colspan="2">ヨー角を任意の数字に設定する</td>
+      </tr>
+      <tr>
+        <td><kbd>Shift</kbd>+<kbd>S</kbd></td>
+        <td colspan="2">ソーラーパネルの太陽追尾を有効・無効にする</td>
+      </tr>
+      <tr>
+        <td><kbd>G</kbd></td>
+        <td colspan="2">Destinyモジュールの窓カバーを開閉</td>
+      </tr>
+      <tr>
+        <td><kbd>K</kbd></td>
+        <td colspan="2">キューポラの窓カバーを開閉</td>
+      </tr>
+      <tr>
+        <td><kbd>Insert</kbd>or<kbd>Delete</kbd></td>
+        <td colspan="2"><abbr title="Mobile Base System">MBS</abbr>を移動させる</td>
+      </tr>
+      <tr>
+        <td><kbd>S</kbd>or<kbd>W</kbd></td>
+        <td colspan="2">船内カメラを移動する</td>
+      </tr>
+      <tr>
+        <td><kbd>Ctrl</kbd>+<kbd>L</kbd></td>
+        <td colspan="2">船外照明のオン・オフ・自動を切り替え</td>
+      </tr>
+    </table>
+
+
+    <h2 id="iva">船内を移動する</h2>
+
+
+    <p>
+      キーボード<kbd>F1</kbd>を押して、一人称視点にする。<br>
+      <kbd>F8</kbd>を押すと、船外画面に切り替わる。
+    </p>
+
+    <p>
+      <kbd>Ctrl</kbd>+<strong>矢印キー</strong>でモジュールを切り替える。<br>
+      ロシア側モジュールにはこの方法でしか行けない。
+    </p>
+
+    <p>
+      キーボード<kbd>W</kbd>で前進、<kbd>S</kbd>で後退する。<br>
+      マウス右ドラッグで向きを変える。
+    </p>
+
+
+    <h2 id="nav">周波数一覧</h2>
+
+
+    <table>
+      <tr>
+        <td>ISSトランスポンダー</td>
+        <td>126.0</td>
+      </tr>
+      <tr>
+        <td><abbr title="Pressurized Mating Adapter">PMA</abbr>-2</td>
+        <td>126.1</td>
+      </tr>
+      <tr>
+        <td><abbr title="Pressurized Mating Adapter">PMA</abbr>-3</td>
+        <td>126.2</td>
+      </tr>
+      <tr>
+        <td>ズヴェズダ</td>
+        <td>126.3</td>
+      </tr>
+      <tr>
+        <td><abbr title="Mini-Research Module">MRM</abbr></td>
+        <td>126.4</td>
+      </tr>
+      <tr>
+        <td>ピルス（天底側）</td>
+        <td>126.5</td>
+      </tr>
+      <tr>
+        <td>ピルス（天頂側）</td>
+        <td>126.6</td>
+      </tr>
+    </table>
+
+
+    <h2 id="ssrms">ロボットアームの操作</h2>
+
+
+    <p>
+      以下のページを参照すること。
+    </p>
+
+    <ul>
+      <li><a href="canadarm2-control.html">Canadarm2の操作</a></li>
+    </ul>
+
+  </main>
+
+</body>
+
+</html>

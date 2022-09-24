@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 
 <html lang="ja">
+
 <head>
   <script src="/scripts/ga.js"></script>
   <meta charset="UTF-8">
@@ -14,55 +15,72 @@
 
   <main>
 
-  <h1>ISS A to Zのインストールと設定</h1>
+    <h1>ISS A to Zのインストールと設定</h1>
 
 
-  <p>ISS A to Zは、完成した状態のISS（国際宇宙ステーション）を細部に至るまで忠実に再現したMODです。</p>
-  <p>操作方法については以下を参照してください。<br>
-  <a href="iss-atoz-keymap.html" target="_blank">ISS A to Zの操作</a></p>
-  
-  <h2>ダウンロード</h2>
-  
-  <p>ダウンロードはこちらから。<br>
-  <a href="https://www.orbithangar.com/searchid.php?ID=5633" target="_blank" rel="noopener noreferrer">US ISS A to Z v.3</a></p>
-  
-  <h3>必要なファイル</h3>
-  
-  <p>このMODにはロシア側のモジュールが含まれていないので、あらかじめ<strong>ISS v3.2</strong>というMODをインストールする必要があります。<br>
-  <a href="iss-v32-install.html" target="_blank">International Space Station v3.2のインストールと特徴</a></p>
-  <p>ISS A to Zは<strong>Spacecraft3.dll</strong>をベースに作られているので、これもあらかじめインストールしてください。<br>
-  <a href="/mods/spacecraft3download.html" target="_blank">Spacecraft3.dll+Multistage2.dll+Stage.dllのダウンロード</a></p>
-  
-  <h2>インストール</h2>
-  
-  <p>ISS v3.2とSpacecraft3のインストールが終わったら、<strong>ISS_A2Z_v3.zip</strong>を解凍する。<br>
-  中身をOrbiterのインストールフォルダに上書き。</p>
-  <p>インストールが終わったら、<strong>ISS AtoZ</strong>というシナリオでゲームを開始して、正常に表示されるか確認してください。<br>
-  ISS AtoZ with new arraysというシナリオは使えません。</p>
+    <p>ISS A to Zは、完成した状態のISS（国際宇宙ステーション）を細部に至るまで忠実に再現したMODです。</p>
+    <p>操作方法については以下を参照してください。<br>
+      <a href="iss-atoz-keymap.html">ISS A to Zの操作</a>
+    </p>
 
-<p>
-<img loading="lazy" src="/images/iss/iss-atoz-install/ISSAtoZ003.png" width="264" height="90">
-  </p>
-  <p>ほかのシナリオで使用する場合は、以下の記事を参照してください。<br>
-  <a href="/misc/scenarioedit.html" target="_blank">シナリオファイルの直接編集</a></p>
-  
-  <h3>カナダアーム</h3>
-  
-  <p>このMODにはカナダアームが付属していますが、やや使いにくいので、必要であれば<strong>Canadarm2</strong>というMODを導入してください。<br>
-  <a href="canadarm2mod-install.html" target="_blank">Canadarm2MODのダウンロード+インストール</a></p>
-  <p>ISS A to Zの場合、アームの取り付け位置は以下のようになります。</p>
-  
-  <pre><code>  ATTACHED 1:0,Harmony</code></pre>
-  
-  <p><img loading="lazy" src="/images/iss/iss-atoz-install/ISSAtoZ002.png" width="195" height="133"></p>
-  
-  <h2>ドッキングポートの修正</h2>
-  
-  <p><strong>PMA2</strong>（Harmonyモジュールの2番ドッキングポート）の設定に不具合があるため、一部ファイルを書き換える必要があります。</p>
-  <p><strong>config\spacecraft</strong>フォルダにある、<strong>PMA2dummy.ini</strong>をメモ帳などのテキストエディタで開く。</p>
-  <p>以下の行をすべて削除して上書き保存する。</p>
-  
-  <pre><code>[DOCK_0]
+
+    <h2>ダウンロード</h2>
+
+
+    <p>ダウンロードはこちらから。<br>
+      <a href="https://www.orbithangar.com/searchid.php?ID=5633" target="_blank" rel="noopener noreferrer">US ISS A to Z
+        v.3</a>
+    </p>
+
+
+    <h3>必要なファイル</h3>
+
+
+    <p>このMODにはロシア側のモジュールが含まれていないので、あらかじめ<strong>ISS v3.2</strong>というMODをインストールする必要があります。<br>
+      <a href="iss-v32-install.html" target="_blank">International Space Station v3.2のインストールと特徴</a>
+    </p>
+    <p>ISS A to Zは<strong>Spacecraft3.dll</strong>をベースに作られているので、これもあらかじめインストールしてください。<br>
+      <a href="/mods/spacecraft3download.html" target="_blank">Spacecraft3.dll+Multistage2.dll+Stage.dllのダウンロード</a>
+    </p>
+
+
+    <h2>インストール</h2>
+
+
+    <p>ISS v3.2とSpacecraft3のインストールが終わったら、<strong>ISS_A2Z_v3.zip</strong>を解凍する。<br>
+      中身をOrbiterのインストールフォルダに上書き。</p>
+    <p>インストールが終わったら、<strong>ISS AtoZ</strong>というシナリオでゲームを開始して、正常に表示されるか確認してください。<br>
+      ISS AtoZ with new arraysというシナリオは使えません。</p>
+
+    <p>
+      <img loading="lazy" src="/images/iss/iss-atoz-install/ISSAtoZ003.png" width="264" height="90">
+    </p>
+    <p>ほかのシナリオで使用する場合は、以下の記事を参照してください。<br>
+      <a href="/misc/scenarioedit.html" target="_blank">シナリオファイルの直接編集</a>
+    </p>
+
+
+    <h3>カナダアーム</h3>
+
+
+    <p>このMODのカナダアームは使いにくいので、必要であれば<strong>Canadarm2</strong>というMODを導入してください。<br>
+      <a href="canadarm2-install.html" target="_blank">Canadarm2のインストール</a>
+    </p>
+    <p>ISS A to Zの場合、アームの取り付け位置は以下のようになります。</p>
+
+    <pre><code>  ATTACHED 1:0,Harmony</code></pre>
+
+    <p><img loading="lazy" src="/images/iss/iss-atoz-install/ISSAtoZ002.png" width="195" height="133"></p>
+
+
+    <h2>ドッキングポートの修正</h2>
+
+
+    <p><strong>PMA2</strong>（Harmonyモジュールの2番ドッキングポート）の設定に不具合があるため、一部ファイルを書き換える必要があります。</p>
+    <p><strong>config\spacecraft</strong>フォルダにある、<strong>PMA2dummy.ini</strong>をメモ帳などのテキストエディタで開く。</p>
+    <p>以下の行をすべて削除して上書き保存する。</p>
+
+    <pre><code>[DOCK_0]
   ;to shuttle
   POS=(0,0.625,1.082)
   DIR=(0,0,-1)
@@ -73,10 +91,11 @@
   POS=(0.00,-0.086,-1.278)
   DIR=(0,0,1)
   ROT=(0,1,0)</code></pre>
-  
-  <p><img loading="lazy" src="/images/iss/iss-atoz-install/ISSAtoZ001.png" width="300" height="279"></p>
+
+    <p><img loading="lazy" src="/images/iss/iss-atoz-install/ISSAtoZ001.png" width="300" height="279"></p>
 
   </main>
 
 </body>
+
 </html>
