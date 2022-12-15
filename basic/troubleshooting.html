@@ -145,6 +145,7 @@
         <li><a href="#2021-09-24">2021-09-24</a></li>
         <li><a href="#2021-10-05">2021-10-05</a></li>
         <li><a href="#2022-02-16">2022-02-16</a></li>
+        <li><a href="#2022-12-15">2022-12-15</a></li>
       </ul>
     </nav>
 
@@ -476,6 +477,54 @@
 
     <p>
       <a href="/mods/r-9-install.html#install_shutdown">R-9 MODのダウンロード・インストール - シャットダウン方法の設定</a>
+    </p>
+
+
+    <h3 id="2022-12-15">2022-12-15</h3>
+
+
+    <blockquote>
+      ISS A to Zのシナリオ中に、AeroBrake MFDを立ち上げるとアプリが落ちます
+    </blockquote>
+
+    <p>
+      こちらの環境でも同じ現象を確認できました。
+    </p>
+
+
+    <h4>結論</h4>
+
+
+    <p>
+      ISS A to Z(ISS for Orbiter 2016)ではなく、
+      <a href="/iss/betteriss-install.html">BetterISS</a>を導入してください。
+    </p>
+
+
+    <h4>理由</h4>
+
+
+    <p>
+      <a href="/iss/betteriss-install.html">BetterISS</a>と
+      <a href="/ucgo/xr2-aerobrakemfd.html">AeroBrake MFD</a>
+      の組み合わせでは問題は発生しませんでした。<br>
+      したがって、以下のような推測が成り立ちます。
+    </p>
+
+    <ol>
+      <li>AeroBrake単体の問題ではない</li>
+      <li>Spacecraft3、GenericVesselに問題がある？</li>
+      <li>MODの構造（多数のモジュールが結合している）に起因する問題？</li>
+    </ol>
+
+    <p>
+      AeroBrake MFD、Spacecraft3、GenericVesselの開発は終了しており、問題を報告しても改善される見込みはありません。<br>
+      多数のモジュールを読み込んで結合させるという、このMODの構造そのものが原因だとすれば、改善は不可能です。
+    </p>
+
+    <p>
+      このような理由から、動作が安定しており、AeroBrake MFDが利用できる
+      <a href="/iss/betteriss-install.html">BetterISS</a>をおすすめします。
     </p>
 
   </main>
