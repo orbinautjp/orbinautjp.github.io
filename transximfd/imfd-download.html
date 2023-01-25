@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 
 <html lang="ja">
+
 <head>
   <script src="/scripts/ga.js"></script>
   <meta charset="UTF-8">
@@ -14,86 +15,155 @@
 
   <main>
 
-  <h1>IMFDのインストールと設定</h1>
+    <h1>IMFDのインストールと設定</h1>
 
 
-<p>IMFD(Interplanetary MFD)は、ランデブーや惑星間航行など、さまざまなマニューバを実行できる多機能なMODです。<br>
-また、手動では難しい操作の多くを自動化することができます。</p>
+    <p>
+      <abbr title="Interplanetary MFD">IMFD</abbr>は、ランデブーや惑星間航行など、さまざまなマニューバを実行できるMODです。<br>
+      また、手動では難しい操作の多くを自動化することができます。
+    </p>
 
-<ul>
-<li><a href="#caution">筆者からのお願い</a></li>
-<li><a href="#download">ダウンロード + インストール</a></li>
-<li><a href="#config">設定</a>
-  <ul>
-  <li><a href="#config_time">時刻系の変更</a></li>
-  </ul>
-</li>
-</ul>
-
-<p><a href="/transximfd/#imfd" target="_blank">IMFDの操作</a></p>
-
-
-<h2 id="caution">筆者からのお願い</h2>
-
-
-<p>IMFDを導入する前に、必ず<a href="/tutorial/" target="_blank">Orbiterチュートリアル</a>に目を通しておいてください。<br>
-チュートリアルの内容を理解していない場合、IMFDについて質問をいただいても回答できないことがあります。</p>
+    <nav>
+      <ul>
+        <li><a href="#caution">筆者からのお願い</a></li>
+        <li><a href="#download">ダウンロード</a></li>
+        <li><a href="#install">インストール</a></li>
+        <li><a href="#config">設定</a>
+          <ul>
+            <li><a href="#config_time">時刻系の変更</a></li>
+          </ul>
+        </li>
+        <li><a href="#control">操作方法</a></li>
+      </ul>
+    </nav>
 
 
-<h2 id="download">ダウンロード + インストール</h2>
+    <h2 id="caution">筆者からのお願い</h2>
 
 
-<p><a href="http://users.kymp.net/p501474a/Orbiter/Orbiter.html" target="_blank" rel="noopener noreferrer">Interplanetary MFD - Orbiter addon</a></p>
-<p><strong>Orbiter2016</strong>なら<strong>5.7</strong><br>
-<strong>Orbiter2010</strong>なら<strong>5.5</strong>をダウンロードする。※</p>
-
-<p>
-<img loading="lazy" src="/images/transximfd/imfd-download/001.png" width="326" height="89">
-</p>
-
-<p class="note">※どちらのバージョンでも、操作方法に違いはありません。</p>
-<p>ダウンロードしたファイルを解凍して、中身をOrbiterのフォルダに上書き。</p>
-<p>Launchpadの<kbd>Modules</kbd>タブを開く。</p>
-<p><strong>Orbiter2016</strong>なら<strong>InterMFD57</strong><br>
-<strong>Orbiter2010</strong>なら<strong>InterMFD55</strong>にチェックを入れる。</p>
-
-<p>
-<img loading="lazy" src="/images/transximfd/imfd-download/002.png" width="214" height="36">
-</p>
+    <p>
+      IMFDを導入する前に、必ず<a href="/tutorial/">Orbiterチュートリアル</a>に目を通しておいてください。<br>
+      チュートリアルの内容を理解していない場合、IMFDについて質問をいただいても回答できないことがあります。
+    </p>
 
 
-<h2 id="config">設定</h2>
+    <h2 id="download">ダウンロード</h2>
 
 
-<p><strong>Config</strong>フォルダを開いて、<strong>IMFD.cfg</strong>というファイルを探す。<br>
-<strong>IMFD.cfg</strong>をメモ帳などのテキストエディタで開く。</p>
+    <p>
+      リンク先ページ右上の<kbd>Download</kbd>ボタンをクリック。
+    </p>
 
-<p>
-<img loading="lazy" src="/images/transximfd/imfd-download/004.png" width="248" height="154">
-</p>
-
-<p><strong>IMFD.cfg</strong>にはIMFDの様々な設定が保存されている。<br>
-これらの設定は、ゲーム内からは<strong>Program Menu</strong>→<strong>Configuration</strong>で変更できる。</p>
+    <p>
+      どちらのバージョンでも、同じように操作できる。
+    </p>
 
 
-<h3 id="config_time">時刻系の変更</h3>
+    <h3>Orbiter2010</h3>
 
 
-<p><strong>DateFormat</strong>のすぐ右側の数字を変更することで、IMFDで使用する時刻系を選択できる。</p>
+    <ul>
+      <li><a href="https://www.orbiter-forum.com/resources/interplanetarymfd.5499/" target="_blank"
+          rel="noopener noreferrer">
+          InterplanetaryMFD 4.2.2
+        </a></li>
+    </ul>
 
-<p>
-<img loading="lazy" src="/images/transximfd/imfd-download/003.png" width="701" height="137">
-</p>
 
-<p><strong>0</strong>なら<a href="/misc/orbitalelements.html#mjd" target="_blank">MJD</a>（Modified Julian Date＝修正ユリウス日）<br>
-<strong>1</strong>なら<a href="/misc/orbitalelements.html#get" target="_blank">GET</a>（Ground Elapsed Time＝地上経過時間）になる。</p>
-<p><strong>通常はMJD</strong>、AMSOではGETにしておく。</p>
+    <h3>Orbiter2016</h3>
 
-<p>
-参照：<a href="/misc/orbitalelements.html#time" target="_blank">軌道要素と時刻系</a>
-</p>
+
+    <ul>
+      <li><a href="https://www.orbiter-forum.com/resources/interplanetary-mfd.5500/" target="_blank"
+          rel="noopener noreferrer">
+          Interplanetary MFD 5.7
+        </a></li>
+    </ul>
+
+
+    <h2 id="install">インストール</h2>
+
+    <p>
+      ダウンロードしたファイルを解凍して、中身をOrbiterのフォルダに上書き。
+    </p>
+
+    <p>
+      <a href="/basic/orbitercontrol.html#launchpad">Launchpad</a>の<kbd>Modules</kbd>タブを開く。<br>
+      <strong>InterMFD</strong>にチェックを入れる。
+    </p>
+
+    <table>
+      <tr>
+        <th>Orbiter2010</th>
+        <td>InterMFD422</td>
+      </tr>
+      <tr>
+        <th>Orbiter2016</th>
+        <td>InterMFD57</td>
+      </tr>
+    </table>
+
+
+    <h2 id="config">設定</h2>
+
+
+    <p>
+      <strong>Config</strong>フォルダを開いて、<strong>IMFD.cfg</strong>というファイルを探す。<br>
+      <strong>IMFD.cfg</strong>をメモ帳などのテキストエディタで開く。
+    </p>
+
+    <figure>
+      <img loading="lazy" src="/images/transximfd/imfd-download/004.png" width="248" height="154">
+    </figure>
+
+    <p>
+      <strong>IMFD.cfg</strong>にはIMFDの様々な設定が保存されている。<br>
+      これらの設定は、ゲーム内からは<strong>Program Menu</strong>→<strong>Configuration</strong>で変更できる。
+    </p>
+
+
+    <h3 id="config_time">時刻系の変更</h3>
+
+
+    <p>
+      <strong>DateFormat</strong>のすぐ右側の数字を変更することで、IMFDで使用する時刻系を選択できる。
+    </p>
+
+    <figure>
+      <img loading="lazy" src="/images/transximfd/imfd-download/003.png" width="701" height="137">
+    </figure>
+
+    <table>
+      <tr>
+        <th>0</th>
+        <td><a href="/misc/orbitalelements.html#mjd">MJD</a></td>
+        <td>修正ユリウス日</td>
+      </tr>
+      <tr>
+        <th>1</th>
+        <td><a href="/misc/orbitalelements.html#get">GET</a></td>
+        <td>地上経過時間</td>
+      </tr>
+    </table>
+
+    <p>
+      <strong>通常はMJD</strong>、<a href="/apollo/#amso">AMSO</a>ではGETにしておく。
+    </p>
+
+
+    <h2 id="control">操作方法</h2>
+
+
+    <p>
+      以下のチュートリアルを参照してください。
+    </p>
+
+    <ul>
+      <li><a href="/transximfd/#imfd">IMFDの操作</a></li>
+    </ul>
 
   </main>
 
 </body>
+
 </html>
