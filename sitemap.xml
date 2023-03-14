@@ -149,6 +149,22 @@
         <lastmod>2021-04-22</lastmod>
     </url>
     <url>
+        <loc>https://orbinautjp.github.io/basic/orbitermod-guide.html</loc>
+        <lastmod>2021-06-01</lastmod>
+    </url>
+    <url>
+        <loc>https://orbinautjp.github.io/basic/launch.html</loc>
+        <lastmod>2021-06-26</lastmod>
+    </url>
+    <url>
+        <loc>https://orbinautjp.github.io/iss/</loc>
+        <lastmod>2023-03-14</lastmod>
+    </url>
+    <url>
+        <loc>https://orbinautjp.github.io/iss/atlantis-photoreal.html</loc>
+        <lastmod>2023-03-14</lastmod>
+    </url>
+    <url>
         <loc>https://orbinautjp.github.io/iss/baikonur-2010-surface-tiles-v10.html</loc>
         <lastmod>2021-04-22</lastmod>
     </url>
@@ -161,8 +177,12 @@
         <lastmod>2022-09-24</lastmod>
     </url>
     <url>
-        <loc>https://orbinautjp.github.io/iss/dragon1-control.html</loc>
-        <lastmod>2021-04-22</lastmod>
+        <loc>https://orbinautjp.github.io/iss/falcon9-install-2010.html</loc>
+        <lastmod>2023-03-14</lastmod>
+    </url>
+    <url>
+        <loc>https://orbinautjp.github.io/iss/falcon9-install-2016.html</loc>
+        <lastmod>2023-03-14</lastmod>
     </url>
     <url>
         <loc>https://orbinautjp.github.io/iss/falcon9-control-2010.html</loc>
@@ -173,19 +193,31 @@
         <lastmod>2021-04-22</lastmod>
     </url>
     <url>
-        <loc>https://orbinautjp.github.io/iss/falcon9-dragon-2010.html</loc>
+        <loc>https://orbinautjp.github.io/iss/falconheavy-install.html</loc>
+        <lastmod>2023-03-14</lastmod>
+    </url>
+    <url>
+        <loc>https://orbinautjp.github.io/iss/dragon1-control.html</loc>
         <lastmod>2021-04-22</lastmod>
     </url>
     <url>
-        <loc>https://orbinautjp.github.io/iss/falcon9-dragon-2016.html</loc>
-        <lastmod>2021-04-22</lastmod>
+        <loc>https://orbinautjp.github.io/iss/dragon1-install-2010.html</loc>
+        <lastmod>2023-03-14</lastmod>
+    </url>
+    <url>
+        <loc>https://orbinautjp.github.io/iss/dragon1-install-2016.html</loc>
+        <lastmod>2023-03-14</lastmod>
+    </url>
+    <url>
+        <loc>https://orbinautjp.github.io/iss/dragon2-install.html</loc>
+        <lastmod>2023-03-14</lastmod>
+    </url>
+    <url>
+        <loc>https://orbinautjp.github.io/iss/dragon2-control.html</loc>
+        <lastmod>2023-03-14</lastmod>
     </url>
     <url>
         <loc>https://orbinautjp.github.io/iss/htvmod-install.html</loc>
-        <lastmod>2021-04-22</lastmod>
-    </url>
-    <url>
-        <loc>https://orbinautjp.github.io/iss/</loc>
         <lastmod>2021-04-22</lastmod>
     </url>
     <url>
@@ -237,6 +269,10 @@
         <lastmod>2021-04-22</lastmod>
     </url>
     <url>
+        <loc>https://orbinautjp.github.io/iss/iss-textureupdate.html.html</loc>
+        <lastmod>2023-03-14</lastmod>
+    </url>
+    <url>
         <loc>https://orbinautjp.github.io/iss/lc39ab-for-shuttlefleet.html</loc>
         <lastmod>2021-04-22</lastmod>
     </url>
@@ -283,6 +319,14 @@
     <url>
         <loc>https://orbinautjp.github.io/iss/soyuz-tma.html</loc>
         <lastmod>2021-04-22</lastmod>
+    </url>
+        <url>
+        <loc>https://orbinautjp.github.io/iss/betteriss-install.html</loc>
+        <lastmod>2022-09-24</lastmod>
+    </url>
+    <url>
+        <loc>https://orbinautjp.github.io/iss/betteriss-control.html</loc>
+        <lastmod>2022-09-24</lastmod>
     </url>
     <url>
         <loc>https://orbinautjp.github.io/misc/</loc>
@@ -371,6 +415,18 @@
     <url>
         <loc>https://orbinautjp.github.io/misc/voyager32-story.html</loc>
         <lastmod>2021-04-22</lastmod>
+    </url>
+    <url>
+        <loc>https://orbinautjp.github.io/misc/jplhorizons.html</loc>
+        <lastmod>2021-06-20</lastmod>
+    </url>
+    <url>
+        <loc>https://orbinautjp.github.io/misc/modding-newbase.html</loc>
+        <lastmod>2022-07-09</lastmod>
+    </url>
+    <url>
+        <loc>https://orbinautjp.github.io/misc/localization.html</loc>
+        <lastmod>2022-07-27</lastmod>
     </url>
     <url>
         <loc>https://orbinautjp.github.io/mods/burn-time-calculator-install.html</loc>
@@ -731,33 +787,5 @@
     <url>
         <loc>https://orbinautjp.github.io/ucgo/xr2-control.html</loc>
         <lastmod>2021-04-22</lastmod>
-    </url>
-    <url>
-        <loc>https://orbinautjp.github.io/basic/orbitermod-guide.html</loc>
-        <lastmod>2021-06-01</lastmod>
-    </url>
-    <url>
-        <loc>https://orbinautjp.github.io/misc/jplhorizons.html</loc>
-        <lastmod>2021-06-20</lastmod>
-    </url>
-    <url>
-        <loc>https://orbinautjp.github.io/basic/launch.html</loc>
-        <lastmod>2021-06-26</lastmod>
-    </url>
-    <url>
-        <loc>https://orbinautjp.github.io/misc/modding-newbase.html</loc>
-        <lastmod>2022-07-09</lastmod>
-    </url>
-    <url>
-        <loc>https://orbinautjp.github.io/misc/localization.html</loc>
-        <lastmod>2022-07-27</lastmod>
-    </url>
-    <url>
-        <loc>https://orbinautjp.github.io/iss/betteriss-install.html</loc>
-        <lastmod>2022-09-24</lastmod>
-    </url>
-    <url>
-        <loc>https://orbinautjp.github.io/iss/betteriss-control.html</loc>
-        <lastmod>2022-09-24</lastmod>
     </url>
 </urlset>
