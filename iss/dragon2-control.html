@@ -1,0 +1,586 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <script src="/scripts/ga.js"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/styles/orbiterjp.css">
+  <script src="/scripts/template.js" charset="utf-8" defer></script>
+  <title>Crew Dragonの操作</title>
+</head>
+
+<body>
+
+  <main>
+
+    <h1>Crew Dragonの操作</h1>
+
+
+    <nav>
+      <ul>
+        <li><a href="#keymap">キー操作一覧</a>
+          <ul>
+            <li><a href="#keymap_dragon">Crew Dragon</a></li>
+            <li><a href="#keymap_gosearcher">GoSearcher</a></li>
+            <li><a href="#keymap_as350">AS350</a></li>
+          </ul>
+        </li>
+        <li><a href="#mfd">CrewDragonMFD</a>
+          <ul>
+            <li><a href="#mfd_autopilot">オートパイロット画面</a></li>
+          </ul>
+        </li>
+        <li><a href="#launch">打ち上げ</a></li>
+        <li><a href="#docking">ドッキング</a></li>
+        <li><a href="#deorbit">軌道離脱</a></li>
+        <li><a href="#reentry">再突入</a></li>
+      </ul>
+    </nav>
+
+
+    <h2 id="keymap">キー操作一覧</h2>
+
+
+
+    <h3 id="keymap_dragon">Crew Dragon</h3>
+
+
+    <p>
+      クルー・ドラゴン宇宙船。
+    </p>
+
+    <p>
+      <kbd>F8</kbd>キーで3Dコクピットを選択できる。<br>
+      パネル下部のボタン類は飾りだが、MFDの操作は可能。
+    </p>
+
+    <table class="center1col">
+      <tr>
+        <td>テンキー<kbd>+</kbd></td>
+        <td>ドラコ・エンジン（逆噴射）</td>
+      </tr>
+      <tr>
+        <td><kbd>.</kbd>or<kbd>,</kbd></td>
+        <td>スーパードラコ・エンジン</td>
+      </tr>
+      <tr>
+        <td><kbd>W</kbd></td>
+        <td>積み荷の重量を設定<br>設定した分だけ船体重量が増える</td>
+      </tr>
+      <tr>
+        <td><kbd>P</kbd></td>
+        <td>非与圧トランクにペイロードを搭載する</td>
+      </tr>
+      <tr>
+        <td><kbd>K</kbd></td>
+        <td>船首ハッチを開く</td>
+      </tr>
+      <tr>
+        <td><kbd>G</kbd></td>
+        <td>側面ハッチを開く</td>
+      </tr>
+      <tr>
+        <td><kbd>J</kbd></td>
+        <td>非与圧トランクのペイロードを放出する</td>
+      </tr>
+      <tr>
+        <td><kbd>Ctrl</kbd>+<kbd>U</kbd></td>
+        <td>非与圧トランクを分離する<br>ドッキング時は不可</td>
+      </tr>
+      <tr>
+        <td><kbd>B</kbd></td>
+        <td>ノーズコーンを開く・閉じる</td>
+      </tr>
+      <tr>
+        <td><kbd>V</kbd></td>
+        <td>ドッキングリングを展開・格納</td>
+      </tr>
+      <tr>
+        <td><kbd>N</kbd><br><kbd>Ctrl</kbd>+<kbd>N</kbd></td>
+        <td>カメラ位置を切り替え</td>
+      </tr>
+      <tr>
+        <td><kbd>D</kbd></td>
+        <td>RCSをReentry（再突入）とNormal（通常）で切り替え</td>
+      </tr>
+      <tr>
+        <td><kbd>L</kbd></td>
+        <td>パラシュートを使用可能な状態にする</td>
+      </tr>
+      <tr>
+        <td><kbd>Ctrl</kbd>+<kbd>8</kbd></td>
+        <td>船内照明のオン・オフ</td>
+      </tr>
+      <tr>
+        <td><kbd>1</kbd>-<kbd>3</kbd></td>
+        <td>航法灯・船首灯のオン・オフ</td>
+      </tr>
+      <tr>
+        <td><kbd>Ctrl</kbd>+<kbd>1</kbd>-<kbd>7</kbd></td>
+        <td>パネル下部のカバー・ボタンを動かす</td>
+      </tr>
+      <tr>
+        <td><kbd>Ctrl</kbd>+<kbd>Space</kbd></td>
+        <td>HUD上の表示を消す・戻す</td>
+      </tr>
+    </table>
+
+
+    <h3 id="keymap_gosearcher">GoSearcher</h3>
+
+
+    <p>
+      回収船。<br>
+      着水したドラゴン宇宙船を収容できる。
+    </p>
+
+    <table class="center1col">
+      <tr>
+        <td>テンキー<kbd>+</kbd>or<kbd>-</kbd></td>
+        <td>前進・後退</td>
+      </tr>
+      <tr>
+        <td>テンキー<kbd>1</kbd>or<kbd>3</kbd></td>
+        <td>左右に舵を切る</td>
+      </tr>
+      <tr>
+        <td><kbd>E</kbd></td>
+        <td>カメラを切り替え</td>
+      </tr>
+      <tr>
+        <td><kbd>N</kbd>or<kbd>M</kbd></td>
+        <td>クレーンを上下させる</td>
+      </tr>
+      <tr>
+        <td><kbd>G</kbd></td>
+        <td>クレーンに宇宙船を固定する</td>
+      </tr>
+      <tr>
+        <td><kbd>V</kbd></td>
+        <td>台車を移動させる</td>
+      </tr>
+      <tr>
+        <td><kbd>B</kbd></td>
+        <td>台車に宇宙船を固定する</td>
+      </tr>
+      <tr>
+        <td><kbd>L</kbd></td>
+        <td>照明のオン・オフ</td>
+      </tr>
+      <tr>
+        <td><kbd>K</kbd></td>
+        <td>発着パッドを使用可能にする</td>
+      </tr>
+      <tr>
+        <td><kbd>J</kbd></td>
+        <td>AS350ヘリコプターを出現させる</td>
+      </tr>
+    </table>
+
+
+    <h3 id="keymap_as350">AS350</h3>
+
+
+    <p>
+      GoSearcher（回収船）に搭載されるヘリコプター。<br>
+      船で<kbd>J</kbd>を押すと出現する。
+    </p>
+
+    <p>
+      回収船で<kbd>K</kbd>を押して、発着パッドを使用可能にしておく。<br>
+      この操作はヘリ側から実行できないので注意すること。
+    </p>
+
+    <p>
+      <kbd>F3</kbd>キーで選択ウィンドウを開く。<br>
+      右下の<strong>Flat</strong>にチェックを入れる。<br>
+      <strong>AS350</strong>を選択して<kbd>Apply</kbd>をクリック。
+    </p>
+
+    <table class="center1col">
+      <tr>
+        <td><kbd>K</kbd></td>
+        <td>エンジン起動・停止<br>1分後に飛行可能になる</td>
+      </tr>
+      <tr>
+        <td>テンキー<kbd>+</kbd>or<kbd>-</kbd></td>
+        <td>スロットル（メインローター）</td>
+      </tr>
+      <tr>
+        <td>テンキー数字キー</td>
+        <td>機体を傾ける<br>RCSと同じ。フライトスティック対応</td>
+      </tr>
+      <tr>
+        <td><kbd>V</kbd></td>
+        <td>停止して高度を維持する</td>
+      </tr>
+      <tr>
+        <td><kbd>B</kbd></td>
+        <td>高度を維持する</td>
+      </tr>
+      <tr>
+        <td><kbd>N</kbd>or<kbd>M</kbd></td>
+        <td>メインローターを前後に傾ける</td>
+      </tr>
+      <tr>
+        <td><kbd>Delete</kbd>or<kbd>Insert</kbd></td>
+        <td>エレベータートリム</td>
+      </tr>
+      <tr>
+        <td><kbd>L</kbd></td>
+        <td>航法灯のオン・オフ</td>
+      </tr>
+      <tr>
+        <td><kbd>G</kbd></td>
+        <td>探照灯のオン・オフ</td>
+      </tr>
+      <tr>
+        <td>矢印キー</td>
+        <td>探照灯を動かす</td>
+      </tr>
+      <tr>
+        <td><kbd>P</kbd></td>
+        <td>目標を入力。HUD上に情報が表示される</td>
+      </tr>
+    </table>
+
+    <table>
+      <tr>
+        <td><abbr title="Bearing">BRG</abbr></td>
+        <td>方位</td>
+      </tr>
+      <tr>
+        <td><abbr title="Target Distance">Tgt. DIST</abbr></td>
+        <td>目標までの距離</td>
+      </tr>
+      <tr>
+        <td><abbr title="Relative Altitude">REL. ALT</abbr></td>
+        <td>相対高度</td>
+      </tr>
+    </table>
+
+
+    <h2 id="mfd">CrewDragonMFD</h2>
+
+
+    <p>
+      左右どちらかのMFDで<strong>CrewDragonMFD</strong>を選択する。
+    </p>
+
+    <ul>
+      <li><a href="/basic/orbitercontrol.html#mfd">Orbiterの基本操作</a></li>
+    </ul>
+
+    <table class="center1col">
+      <tr>
+        <td><kbd>DSP</kbd></td>
+        <td>Display</td>
+        <td>画面を切り替える</td>
+      </tr>
+      <tr>
+        <th colspan="3">オートパイロット</th>
+      </tr>
+      <tr>
+        <td><kbd>VES</kbd></td>
+        <td>Vessel</td>
+        <td>使用する宇宙船を選択する</td>
+      </tr>
+      <tr>
+        <td><kbd>TGT</kbd></td>
+        <td>Target</td>
+        <td>着陸目標を入力する</td>
+      </tr>
+      <tr>
+        <td><kbd>REF</kbd></td>
+        <td>Reference</td>
+        <td>基準となる天体を選択する</td>
+      </tr>
+      <tr>
+        <td><kbd>DEO</kbd></td>
+        <td>Deorbit</td>
+        <td>軌道離脱オートパイロットを開始する</td>
+      </tr>
+      <tr>
+        <td><kbd>RNT</kbd></td>
+        <td>Reentry</td>
+        <td>再突入オートパイロットを開始する</td>
+      </tr>
+      <tr>
+        <td><kbd>CHT</kbd></td>
+        <td>Parachute</td>
+        <td>パラシュートを使用可能にする</td>
+      </tr>
+      <tr>
+        <td><kbd>MOD</kbd></td>
+        <td>Mode</td>
+        <td>再突入モードの切り替え</td>
+      </tr>
+      <tr>
+        <td><kbd>OB+</kbd>or<kbd>OB-</kbd></td>
+        <td>Orbit</td>
+        <td>軌道離脱噴射までの周回数を変更する</td>
+      </tr>
+      <tr>
+        <th colspan="3">宇宙船のシステム</th>
+      </tr>
+      <tr>
+        <td><kbd>NOH</kbd></td>
+        <td>Nose Hatch</td>
+        <td>船首ハッチ</td>
+      </tr>
+      <tr>
+        <td><kbd>SID</kbd></td>
+        <td>Side Hatch</td>
+        <td>側面ハッチ</td>
+      </tr>
+      <tr>
+        <td><kbd>NOC</kbd></td>
+        <td>Nose Cone</td>
+        <td>ノーズコーン</td>
+      </tr>
+      <tr>
+        <td><kbd>PLD</kbd></td>
+        <td>Payload</td>
+        <td>ペイロード</td>
+      </tr>
+      <tr>
+        <td><kbd>TNK</kbd></td>
+        <td>Trunk</td>
+        <td>非与圧トランクを分離する<br>ドッキング時は不可</td>
+      </tr>
+      <tr>
+        <td><kbd>RCS</kbd></td>
+        <td>Reaction Control System</td>
+        <td>Reentry（再突入）とNormal（通常）で切り替え</td>
+      </tr>
+      <tr>
+        <td><kbd>DOK</kbd></td>
+        <td>Docking</td>
+        <td>ドッキングリングを展開・格納</td>
+      </tr>
+      <tr>
+        <td><kbd>CAB</kbd></td>
+        <td>Cabin Light</td>
+        <td>船内照明のオン・オフ</td>
+      </tr>
+      <tr>
+        <td><kbd>NAV</kbd></td>
+        <td>Navigation Beacon</td>
+        <td>航法灯のオン・オフ</td>
+      </tr>
+      <tr>
+        <td><kbd>LMP</kbd></td>
+        <td>Lamp</td>
+        <td>船首灯のオン・オフ</td>
+      </tr>
+    </table>
+
+
+    <h3 id="mfd_autopilot">オートパイロット画面</h3>
+
+
+    <table>
+      <tr>
+        <td rowspan="3">Reentry Mode</td>
+        <td rowspan="3">再突入モード</td>
+        <td><abbr title="Low Earth Orbit">LEO</abbr></td>
+        <td>低軌道<br>高度200km – 600km</td>
+      </tr>
+      <tr>
+        <td><abbr title="Geostationary Orbit">GEO</abbr></td>
+        <td>静止軌道<br>高度600km – 40,000km</td>
+      </tr>
+      <tr>
+        <td><abbr title="Hyperbolic Orbit">Hyper</abbr></td>
+        <td>双曲線軌道<br>高度40,000km以上</td>
+      </tr>
+      <tr>
+        <td>T-to-Burn</td>
+        <td colspan="3">軌道離脱噴射のカウントダウン</td>
+      </tr>
+      <tr>
+        <td>Target Range</td>
+        <td colspan="3">着陸地点までの距離</td>
+      </tr>
+      <tr>
+        <td>Cross Range</td>
+        <td colspan="3">宇宙船の針路（軌道平面）から、着陸地点までの距離</td>
+      </tr>
+      <tr>
+        <td>Required Inc.</td>
+        <td colspan="3">現在位置から着陸地点まで直接降下できる軌道傾斜角</td>
+      </tr>
+      <tr>
+        <td>Orbits to Target</td>
+        <td colspan="3">着陸までの残り周回数</td>
+      </tr>
+      <tr>
+        <td>Available dV</td>
+        <td colspan="3">宇宙船の残りDelta V</td>
+      </tr>
+      <tr>
+        <td>De-orbit dV</td>
+        <td colspan="3">軌道離脱噴射に必要なDelta V</td>
+      </tr>
+    </table>
+
+    <p>
+      再突入モードが<strong>GEO</strong>か<strong>Hyper</strong>の場合、軌道離脱オートパイロットは利用できない。<br>
+      以下の数字を<a href="/transximfd/imfd-download.html">IMFD</a>の<a
+        href="/transximfd/imfd-tutorial-6.html">BaseApproach</a>に入力して実行する。
+    </p>
+
+    <table>
+      <tr>
+        <td><abbr title="Altitude">Alt</abbr></td>
+        <td>再突入を開始する高度</td>
+      </tr>
+      <tr>
+        <td><abbr title="Reentry Flightpath Angle">ReA</abbr></td>
+        <td>再突入時の突入角</td>
+      </tr>
+      <tr>
+        <td><abbr title="Reentry Anterior Angle">Ant</abbr></td>
+        <td>再突入開始地点をA、着陸地点をB、地球の中心をOとしたときの、∠AOBの角度</td>
+      </tr>
+    </table>
+
+
+    <h2 id="launch">打ち上げ</h2>
+
+
+    <p>
+      以下のMODが必要。
+    </p>
+
+    <ul>
+      <li><a href="falcon9-install-2016.html">Falcon9のインストール (2016)</a></li>
+      <li><a href="falconheavy-install.html">FalconHeavy for Orbiter2016のインストール</a></li>
+    </ul>
+
+    <p>
+      <a href="/basic/orbitercontrol.html#launchpad">Launchpad</a>の<strong>Crew Dragon 2022</strong>フォルダを開く。<br>
+      <strong>Launch</strong>と書かれたものが打ち上げシナリオ。
+    </p>
+
+    <p>
+      キーボード<kbd>V</kbd>を押すと、全自動で打ち上げが実行される。<br>
+      軌道投入が終了したら、<kbd>J</kbd>を押してドラゴン宇宙船を分離する。
+    </p>
+
+    <p>
+      <kbd>F3</kbd>キーを押して、宇宙船の選択ウィンドウを開く。<br>
+      <strong>Dragon</strong>を選択して<kbd>Apply</kbd>をクリック。
+    </p>
+
+    <p>
+      ドラゴン宇宙船に移動したら、<kbd>B</kbd>を押してノーズコーンを開く。
+    </p>
+
+    <p>
+      ランデブーの手順は、ほかの宇宙船と同じ。
+    </p>
+
+    <ul>
+      <li><a href="/tutorial/part4.html">Part4 ランデブーの準備</a></li>
+    </ul>
+
+
+    <h2 id="docking">ドッキング</h2>
+
+
+    <p>
+      ISSに接近したら、<kbd>V</kbd>を押してドッキングリングを展開する。<br>
+      通常の手順でドッキングする。
+    </p>
+
+    <p>
+      ドッキングしたら、<kbd>V</kbd>を押してドッキングリングを格納する。<br>
+      <kbd>K</kbd>を押して船首ハッチを開く。
+    </p>
+
+
+    <h2 id="deorbit">軌道離脱</h2>
+
+
+    <p>
+      <strong>Map MFD</strong>を開く。<br>
+      <kbd>TGT</kbd>をクリックして、<strong>GoSearcher</strong>をターゲットする。
+    </p>
+
+    <p>
+      宇宙船の軌道がターゲットに一番近づくタイミングを待つ。
+    </p>
+
+    <ul>
+      <li><a href="/tutorial/part7.html">Part7 軌道離脱と再突入の準備</a></li>
+    </ul>
+
+    <figure>
+      <img loading="lazy" src="/images/iss/dragon2-control/001.png" width="425" height="425">
+    </figure>
+
+    <p>
+      ターゲットまで残り1周を切ったら、<a href="#mfd">CrewDragonMFD</a>を開く。<br>
+      <kbd>TGT</kbd>をクリックして、<strong>GoSearcher</strong>をターゲットする。
+    </p>
+
+    <p>
+      <strong>Cross-Range</strong>が<strong>100km</strong>以下であることを確認する。<br>
+      100kmを超える場合は、次の機会を待つ。
+    </p>
+
+    <figure>
+      <img loading="lazy" src="/images/iss/dragon2-control/002.png" width="425" height="425">
+    </figure>
+
+    <p>
+      <kbd>Ctrl</kbd>+<kbd>U</kbd>を押して、非与圧トランクを分離する。
+    </p>
+
+    <p>
+      <strong>T-to-Burn</strong>のカウントダウンを確認する。<br>
+      残り<strong>300秒</strong>になるまで待つ。
+    </p>
+
+    <figure>
+      <img loading="lazy" src="/images/iss/dragon2-control/003.png" width="425" height="425">
+    </figure>
+
+    <p>
+      <kbd>DEO</kbd>をクリックする。<br>
+      全自動で軌道離脱噴射が実行される。
+    </p>
+
+    <p>
+      オートパイロットの実行中は、タイムワープ10倍までに制限される。
+    </p>
+
+
+    <h2 id="reentry">再突入</h2>
+
+
+    <p>
+      <kbd>B</kbd>を押してノーズコーンを閉じる。
+    </p>
+
+    <p>
+      <a href="#mfd">CrewDragonMFD</a>で<kbd>RNT</kbd>をクリック。<br>
+      全自動で再突入が実行される。
+    </p>
+
+    <p>
+      オートパイロット実行中はタイムワープが制限される。<br>
+      時間を節約したいなら、高度が下がるのを待ってもよい。
+    </p>
+
+    <p>
+      <kbd>CHT</kbd>をクリックして、パラシュートを展開可能にしておく。
+    </p>
+
+  </main>
+
+</body>
+
+</html>

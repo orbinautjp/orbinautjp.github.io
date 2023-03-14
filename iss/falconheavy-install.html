@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <script src="/scripts/ga.js"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/styles/orbiterjp.css">
+  <script src="/scripts/template.js" charset="utf-8" defer></script>
+  <title>FalconHeavy for Orbiter2016のインストール</title>
+</head>
+
+<body>
+
+  <main>
+
+    <h1>FalconHeavy for Orbiter2016のインストール</h1>
+
+
+    <nav>
+      <ul>
+        <li><a href="#download">ダウンロード</a></li>
+        <li><a href="#install">インストール</a></li>
+        <li><a href="#control">操作方法</a></li>
+        <li><a href="#mods">使用可能なMOD</a>
+          <ul>
+            <li><a href="#mods_lc39a">LC39A発射台</a></li>
+            <li><a href="#mods_dragon">ドラゴン宇宙船</a></li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+
+
+    <h2 id="download">ダウンロード</h2>
+
+
+    <p>
+      リンク先ページでDownloadボタンをクリック。
+    </p>
+
+    <ul>
+      <li><a href="https://www.orbiter-forum.com/resources/falconheavy-for-orbiter2016.3287/" target="_blank"
+          rel="noopener noreferrer">FalconHeavy for Orbiter2016</a></li>
+    </ul>
+
+
+    <h2 id="install">インストール</h2>
+
+
+    <p>
+      ダウンロードしたファイルを解凍する。<br>
+      中に入っているフォルダをすべてコピーする。
+    </p>
+
+    <p>
+      Orbiterがインストールされているフォルダを開く。<br>
+      ペーストして既存のフォルダを上書き。
+    </p>
+
+
+    <h2 id="control">操作方法</h2>
+
+
+    <p>
+      Falcon9とほぼ同じだが、CORE（第1段）とBOOSTERS（側面ブースター）の項目が追加されている。
+    </p>
+
+    <ul>
+      <li><a href="falcon9-control-2016.html">Falcon9 for Orbiter2016の操作</a></li>
+    </ul>
+
+
+    <h2 id="mods">使用可能なMOD</h2>
+
+
+    <p>
+      必須ではないが、以下のMODを追加できる。
+    </p>
+
+
+    <h3 id="mods_lc39a">LC39A発射台</h3>
+
+
+    <p>
+      SpaceXのロケットのために改修されたLC39A発射台。<br>
+      発射に合わせてウォーターカーテンが展開するなどのギミックがある。
+    </p>
+
+    <ul>
+      <li>
+        <a href="https://www.orbiter-forum.com/resources/lc39a-spacex.3092/" target="_blank" rel="noopener noreferrer">
+          LC39A SpaceX</a>
+      </li>
+    </ul>
+
+    <p>
+      ダウンロードしたファイルを解凍して、中身をOrbiterフォルダに上書き。
+    </p>
+
+    <p>
+      <strong>Orbiter2016\Config</strong>フォルダを開く。<br>
+      <strong>Earth.cfg</strong>をメモ帳などのテキストエディタで開く。
+    </p>
+
+    <p>
+      <strong>BEGIN_SURFBASE</strong>の下に、以下の行を追加する。
+    </p>
+
+    <p>
+    <pre><code>DIR Earth\BaseSpaceX CONTEXT SpaceX</code></pre>
+    </p>
+
+    <figure>
+      <img loading="lazy" src="/images/iss/falcon9-install-2016/001.png" width="350" height="169">
+    </figure>
+
+    <p>
+      上書き保存してゲームを開始する。
+    </p>
+
+
+    <h3 id="mods_dragon">ドラゴン宇宙船</h3>
+
+
+    <p>
+      有人のクルードラゴン宇宙船を搭載できる。
+    </p>
+
+    <ul>
+      <li><a href="dragon2-install.html">Crew Dragonのインストール</a></li>
+    </ul>
+
+  </main>
+
+</body>
+
+</html>
