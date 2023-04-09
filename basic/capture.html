@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <script src="/scripts/ga.js"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/styles/orbiterjp.css">
+  <script src="/scripts/template.js" charset="utf-8" defer></script>
+  <title>画像・動画を撮影する</title>
+</head>
+
+<body>
+
+  <main>
+
+    <h1>画像・動画を撮影する</h1>
+
+
+    <p>
+      Orbiterの画像・動画を撮影する方法について解説します。
+    </p>
+
+    <nav>
+      <ul>
+        <li><a href="#d3d9">D3D9Client</a></li>
+        <li><a href="#screenshot">画像を撮影する</a>
+          <ul>
+            <li><a href="#screenshot_2010">Orbiter2010</a></li>
+            <li><a href="#screenshot_2016">Orbiter2016</a></li>
+          </ul>
+        </li>
+        <li><a href="#video">動画を撮影する</a></li>
+        <li><a href="#overlay">画面表示を消す</a></li>
+        <li><a href="#fov">FOVを変更する</a></li>
+        <li><a href="#camera">カメラ位置を変更する</a>
+          <ul>
+            <li><a href="#camera_reference">カメラの基準を変更する</a></li>
+            <li><a href="#camera_position">カメラの位置を固定する</a></li>
+            <li><a href="#camera_target">追尾する対象を設定する</a></li>
+            <li><a href="#camera_center">カメラの中心を移動する</a></li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+
+
+    <h2 id="section1">D3D9Client</h2>
+
+
+    <p>
+      グラフィックの質が向上する<br>
+      画像撮影・録画ソフトとの相性がよい<br>
+      できることが増える（後述）
+    </p>
+
+    <p>
+      これらの理由から、D3D9Clientの導入をおすすめします。
+    </p>
+
+    <p>
+      D3D9Clientのインストールと設定
+    </p>
+
+
+    <h2 id="screenshot">画像を撮影する</h2>
+
+
+    <p>
+      グラフィックボードを搭載したPCであれば、同梱のソフトで画像撮影が可能なことがある。<br>
+      使用しているPCにそのような機能がないか、あらかじめ確認すること。
+    </p>
+
+    <p>
+      NVIDIA<br>
+      GeForce Experience（NVIDIA ANSELには非対応）<br>
+      https://www.nvidia.com/ja-jp/geforce/geforce-experience/<br>
+      AMD<br>
+      AMD Software：Adrenalin Edition<br>
+      https://www.amd.com/ja/technologies/software-gaming-media
+    </p>
+
+
+    <h3 id="screenshot_2010">Orbiter2010</h3>
+
+
+    <p>
+      Orbiter2010には、画像を撮影する機能は実装されていない。<br>
+      PrintScreenキーを使うか、外部のキャプチャソフト等を導入する必要がある。
+    </p>
+
+    <p>
+      例として、Windows10でのスクリーンショット保存手順を紹介する。
+    </p>
+
+    <p>
+      Windows+Alt+PrintScreenを同時押しする。<br>
+      ビデオフォルダ→キャプチャフォルダを開く。<br>
+      撮影した画像が保存されている。
+    </p>
+
+
+    <h3 id="screenshot_2016">Orbiter2016</h3>
+
+
+    <p>
+      Ctrl+PrintScreenキーを押す。<br>
+      スクリーンショットの撮影ダイアログが開く。
+    </p>
+
+    <p>
+      Take snapshotをクリック。<br>
+      capture\imagesフォルダに画像が保存される。
+    </p>
+
+    <p>
+      Take snapshot<br>
+      画像を撮影する<br>
+      Start recording<br>
+      連写を開始する<br>
+      To the clipboard<br>
+      クリップボードに保存<br>
+      To file<br>
+      ファイルに保存<br>
+      File format<br>
+      画像のファイル形式<br>
+      Image quality<br>
+      画質
+    </p>
+
+    <p>
+      連写した画像は、capture\framesフォルダに保存される。
+    </p>
+
+
+    <h2 id="video">動画を撮影する</h2>
+
+
+    <p>
+      ゲーム録画はPCへの負担が大きい。<br>
+      録画専用のストレージを用意することが望ましい。
+    </p>
+
+    <p>
+      Orbiter自体には録画機能は実装されていない。<br>
+      Windowsの録画機能を使うか、外部のキャプチャソフト等を導入する必要がある。
+    </p>
+
+    <p>
+      Open Broadcaster Software | OBS<br>
+      https://obsproject.com/ja
+    </p>
+
+    <p>
+      グラフィックボードを搭載したPCであれば、同梱のソフトで録画可能なことがある。<br>
+      使用しているPCにそのような機能がないか、あらかじめ確認すること。
+    </p>
+
+    <p>
+      NVIDIA<br>
+      GeForce Experience（NVIDIA ANSELには非対応）<br>
+      https://www.nvidia.com/ja-jp/geforce/geforce-experience/<br>
+      AMD<br>
+      AMD Software：Adrenalin Edition<br>
+      https://www.amd.com/ja/technologies/software-gaming-media
+    </p>
+
+    <p>
+      例として、Windows10での動画保存手順を紹介する。
+    </p>
+
+    <p>
+      Windows+Alt+Rを押す。<br>
+      録画が開始される。
+    </p>
+
+    <p>
+      もう一度、Windows+Alt+Rを押す。<br>
+      ビデオフォルダ→キャプチャフォルダに動画が保存される。
+    </p>
+
+
+    <h2 id="overlay">画面表示を消す</h2>
+
+
+    <p>
+      以下のページを参照すること。
+    </p>
+
+    <p>
+      Orbiterの基本操作 - 情報メニュー<br>
+      orbitercontrol.html#info
+    </p>
+
+
+    <h2 id="fov">FOVを変更する</h2>
+
+
+    <p>
+      キーボードZorXでFOVを変更する。<br>
+      Ctrlとの同時押しで10°ずつ変化する。
+    </p>
+
+    <p>
+      FOVが小さいと視界が狭くなるが、画面の歪みが小さくなる。<br>
+      FOVが大きいと視界が広くなるが、画面の歪みが大きくなる。
+    </p>
+
+    <p>
+      同じ景色でも、FOVによってその印象が変わってくる。
+    </p>
+
+    <p>
+      FOV10°のとき<br>
+      FOV40°のとき
+    </p>
+
+
+    <h2 id="camera">カメラ位置を変更する</h2>
+
+
+    <p>
+      キーボードF1で機外視点・機内視点を切り替える。
+    </p>
+
+    <p>
+      カメラの向きを変える<br>
+      マウス右ドラッグ<br>
+      Ctrl+矢印キー<br>
+      カメラと目標の距離を変更する<br>
+      マウスホイール<br>
+      PageDownorPageUp
+    </p>
+
+
+    <h3 id="camera_reference">カメラの基準を変更する</h3>
+
+
+    <p>
+      キーボードF2を押すと、カメラの基準が変更される。
+    </p>
+
+    <p>
+      Target-relative<br>
+      ターゲットを基準にカメラを回転させる。<br>
+      Absolute direction<br>
+      カメラの向きは固定されるが、ターゲットに合わせて回転する。<br>
+      Global frame<br>
+      カメラの向き・回転が固定される。
+    </p>
+
+    <p>
+      地球をターゲットに選択し、カメラをGlobal frameにして早送りすると、地球の自転が観測できる。
+    </p>
+
+
+    <h3 id="camera_position">カメラの位置を固定する</h3>
+
+
+    <p>
+      Ctrl+F1を押して、カメラの設定ダイアログを開く。
+    </p>
+
+    <p>
+      Groundをクリック。<br>
+      Ground observer（地表の観測者）メニューが開く。
+    </p>
+
+    <p>
+      Currentをクリックすると、地表を基準にカメラ位置が固定される。<br>
+      Target lockにチェックが入っていると、現在のターゲットを追尾する。
+    </p>
+
+    <p>
+      Target lockを外すと、カメラの向きを変更できるようになる。
+    </p>
+
+
+    <h3 id="camera_target">追尾する対象を設定する</h3>
+
+
+    <p>
+      Ctrl+F1を押して、カメラの設定ダイアログを開く。
+    </p>
+
+    <p>
+      Track（追尾）をクリック。<br>
+      プルダウンメニューで追尾する目標を選択する。
+    </p>
+
+    <p>
+      例として、Sun（太陽）を選択した場合について説明する。<br>
+      太陽と宇宙船を通る直線上の、以下の位置にカメラが移動する。
+    </p>
+
+    <p>
+      Target from<br>
+      太陽→カメラ→宇宙船<br>
+      Target to<br>
+      カメラ→宇宙船→太陽
+    </p>
+
+
+    <h3 id="camera_center">カメラの中心を移動する</h3>
+
+
+    <p>
+      D3D9Clientが必要なテクニック。
+    </p>
+
+    <p>
+      Ctrl+F4を押す。<br>
+      D3D9 Debug Controlsを選択してOKをクリック。
+    </p>
+
+    <p>
+      Cameraの右側にあるダイアログで、カメラの挙動を変更できる。
+    </p>
+
+    <p>
+      Center on visual<br>
+      ターゲットの中心にカメラを向ける<br>
+      Wheel Fly/Pan Cam<br>
+      カメラの向きを変更する
+    </p>
+
+    <p>
+      Wheel Fly/Pan Camに設定することで、カメラの向きを変更できる。
+    </p>
+
+  </main>
+
+</body>
+
+</html>
