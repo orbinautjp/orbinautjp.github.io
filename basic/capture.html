@@ -33,11 +33,12 @@
         <li><a href="#video">動画を撮影する</a></li>
         <li><a href="#overlay">画面表示を消す</a></li>
         <li><a href="#fov">FOVを変更する</a></li>
-        <li><a href="#camera">カメラ位置を変更する</a>
+        <li><a href="#camera">カメラを操作する</a>
           <ul>
-            <li><a href="#camera_reference">カメラの基準を変更する</a></li>
+            <li><a href="#camera_target">ターゲットを選択する</a></li>
+            <li><a href="#camera_reference">カメラの挙動を変更する</a></li>
             <li><a href="#camera_position">カメラの位置を固定する</a></li>
-            <li><a href="#camera_target">追尾する対象を設定する</a></li>
+            <li><a href="#camera_track">追尾する対象を設定する</a></li>
             <li><a href="#camera_center">カメラの中心を移動する</a></li>
           </ul>
         </li>
@@ -45,40 +46,46 @@
     </nav>
 
 
-    <h2 id="section1">D3D9Client</h2>
+    <h2 id="d3d9">D3D9Client</h2>
 
 
-    <p>
-      グラフィックの質が向上する<br>
-      画像撮影・録画ソフトとの相性がよい<br>
-      できることが増える（後述）
-    </p>
-
-    <p>
-      これらの理由から、D3D9Clientの導入をおすすめします。
-    </p>
+    <ul>
+      <li>グラフィックの質が向上する</li>
+      <li>画像撮影・録画ソフトとの相性がよい</li>
+      <li>できることが増える（後述）</li>
+    </ul>
 
     <p>
-      D3D9Clientのインストールと設定
+      これらの理由から、<strong>D3D9Client</strong>の導入をおすすめします。
     </p>
+
+    <ul>
+      <li><a href="d3d9client.html">D3D9Clientのインストールと設定</a></li>
+    </ul>
 
 
     <h2 id="screenshot">画像を撮影する</h2>
 
 
     <p>
-      グラフィックボードを搭載したPCであれば、同梱のソフトで画像撮影が可能なことがある。<br>
+      グラフィックボードを搭載したPCであれば、付属するソフトで画像撮影が可能なことがある。<br>
       使用しているPCにそのような機能がないか、あらかじめ確認すること。
     </p>
 
-    <p>
-      NVIDIA<br>
-      GeForce Experience（NVIDIA ANSELには非対応）<br>
-      https://www.nvidia.com/ja-jp/geforce/geforce-experience/<br>
-      AMD<br>
-      AMD Software：Adrenalin Edition<br>
-      https://www.amd.com/ja/technologies/software-gaming-media
-    </p>
+    <table>
+      <tr>
+        <th>NVIDIA</th>
+        <td><a href="https://www.nvidia.com/ja-jp/geforce/geforce-experience/" target="_blank"
+            rel="noopener noreferrer">GeForce Experience</a><br>
+          （NVIDIA ANSELには非対応）</td>
+      </tr>
+      <tr>
+        <th>AMD</th>
+        <td><a href="https://www.amd.com/ja/technologies/software-gaming-media" target="_blank"
+            rel="noopener noreferrer">
+            AMD Software：Adrenalin Edition</a></td>
+      </tr>
+    </table>
 
 
     <h3 id="screenshot_2010">Orbiter2010</h3>
@@ -86,7 +93,7 @@
 
     <p>
       Orbiter2010には、画像を撮影する機能は実装されていない。<br>
-      PrintScreenキーを使うか、外部のキャプチャソフト等を導入する必要がある。
+      <kbd>PrintScreen</kbd>キーを使うか、外部のキャプチャソフト等を導入する必要がある。
     </p>
 
     <p>
@@ -94,8 +101,8 @@
     </p>
 
     <p>
-      Windows+Alt+PrintScreenを同時押しする。<br>
-      ビデオフォルダ→キャプチャフォルダを開く。<br>
+      <kbd>Windows</kbd>+<kbd>Alt</kbd>+<kbd>PrintScreen</kbd>を同時押しする。<br>
+      <strong>ビデオ</strong>フォルダ→<strong>キャプチャ</strong>フォルダを開く。<br>
       撮影した画像が保存されている。
     </p>
 
@@ -104,39 +111,51 @@
 
 
     <p>
-      Ctrl+PrintScreenキーを押す。<br>
+      <kbd>Ctrl</kbd>+<kbd>PrintScreen</kbd>キーを押す。<br>
       スクリーンショットの撮影ダイアログが開く。
     </p>
 
     <p>
-      Take snapshotをクリック。<br>
-      capture\imagesフォルダに画像が保存される。
+      <kbd>Take snapshot</kbd>をクリック。<br>
+      <strong>capture\images</strong>フォルダに画像が保存される。
     </p>
 
-    <p>
-      Take snapshot<br>
-      画像を撮影する<br>
-      Start recording<br>
-      連写を開始する<br>
-      To the clipboard<br>
-      クリップボードに保存<br>
-      To file<br>
-      ファイルに保存<br>
-      File format<br>
-      画像のファイル形式<br>
-      Image quality<br>
-      画質
-    </p>
+    <table>
+      <tr>
+        <td><kbd>Take snapshot</kbd></td>
+        <td>画像を撮影する</td>
+      </tr>
+      <tr>
+        <td><kbd>Start recording</kbd></td>
+        <td>連写を開始する</td>
+      </tr>
+      <tr>
+        <td><strong>To the clipboard</strong></td>
+        <td>クリップボードに保存</td>
+      </tr>
+      <tr>
+        <td><strong>To file</strong></td>
+        <td>ファイルに保存</td>
+      </tr>
+      <tr>
+        <td><strong>File format</strong></td>
+        <td>画像のファイル形式</td>
+      </tr>
+      <tr>
+        <td><strong>Image quality</strong></td>
+        <td>画質</td>
+      </tr>
+    </table>
 
     <p>
-      連写した画像は、capture\framesフォルダに保存される。
+      連写した画像は、<strong>capture\frames</strong>フォルダに保存される。
     </p>
 
 
     <h2 id="video">動画を撮影する</h2>
 
 
-    <p>
+    <p class="caution">
       ゲーム録画はPCへの負担が大きい。<br>
       録画専用のストレージを用意することが望ましい。
     </p>
@@ -146,37 +165,43 @@
       Windowsの録画機能を使うか、外部のキャプチャソフト等を導入する必要がある。
     </p>
 
-    <p>
-      Open Broadcaster Software | OBS<br>
-      https://obsproject.com/ja
-    </p>
+    <ul>
+      <li><a href="https://obsproject.com/ja" target="_blank" rel="noopener noreferrer">
+          Open Broadcaster Software | OBS</a></li>
+    </ul>
 
     <p>
-      グラフィックボードを搭載したPCであれば、同梱のソフトで録画可能なことがある。<br>
+      グラフィックボードを搭載したPCであれば、付属するソフトで録画可能なことがある。<br>
       使用しているPCにそのような機能がないか、あらかじめ確認すること。
     </p>
 
-    <p>
-      NVIDIA<br>
-      GeForce Experience（NVIDIA ANSELには非対応）<br>
-      https://www.nvidia.com/ja-jp/geforce/geforce-experience/<br>
-      AMD<br>
-      AMD Software：Adrenalin Edition<br>
-      https://www.amd.com/ja/technologies/software-gaming-media
-    </p>
+    <table>
+      <tr>
+        <th>NVIDIA</th>
+        <td><a href="https://www.nvidia.com/ja-jp/geforce/geforce-experience/" target="_blank"
+            rel="noopener noreferrer">GeForce Experience</a><br>
+          （NVIDIA ANSELには非対応）</td>
+      </tr>
+      <tr>
+        <th>AMD</th>
+        <td><a href="https://www.amd.com/ja/technologies/software-gaming-media" target="_blank"
+            rel="noopener noreferrer">
+            AMD Software：Adrenalin Edition</a></td>
+      </tr>
+    </table>
 
     <p>
       例として、Windows10での動画保存手順を紹介する。
     </p>
 
     <p>
-      Windows+Alt+Rを押す。<br>
+      <kbd>Windows</kbd>+<kbd>Alt</kbd>+<kbd>R</kbd>を押す。<br>
       録画が開始される。
     </p>
 
     <p>
-      もう一度、Windows+Alt+Rを押す。<br>
-      ビデオフォルダ→キャプチャフォルダに動画が保存される。
+      もう一度、<kbd>Windows</kbd>+<kbd>Alt</kbd>+<kbd>R</kbd>を押す。<br>
+      <strong>ビデオ</strong>フォルダ→<strong>キャプチャ</strong>フォルダに動画が保存される。
     </p>
 
 
@@ -187,70 +212,114 @@
       以下のページを参照すること。
     </p>
 
-    <p>
-      Orbiterの基本操作 - 情報メニュー<br>
-      orbitercontrol.html#info
-    </p>
+    <ul>
+      <li><a href="orbitercontrol.html#info">Orbiterの基本操作 - 情報メニュー</a></li>
+    </ul>
 
 
     <h2 id="fov">FOVを変更する</h2>
 
 
     <p>
-      キーボードZorXでFOVを変更する。<br>
-      Ctrlとの同時押しで10°ずつ変化する。
+      キーボード<kbd>Z</kbd>or<kbd>X</kbd>で<abbr title="Field of view">FOV</abbr>を変更する。<br>
+      <kbd>Ctrl</kbd>との同時押しで10°ずつ変化する。
     </p>
 
-    <p>
-      FOVが小さいと視界が狭くなるが、画面の歪みが小さくなる。<br>
-      FOVが大きいと視界が広くなるが、画面の歪みが大きくなる。
-    </p>
+    <table>
+      <tr>
+        <td></td>
+        <th>視野</th>
+        <th>画面の歪み</th>
+      </tr>
+      <tr>
+        <th>FOVが小さい</th>
+        <td>狭い</td>
+        <td>小さい</td>
+      </tr>
+      <tr>
+        <th>FOVが大きい</th>
+        <td>広い</td>
+        <td>大きい</td>
+      </tr>
+    </table>
 
     <p>
       同じ景色でも、FOVによってその印象が変わってくる。
     </p>
 
+    <figure>
+      <img loading="lazy" src="/images/basic/capture/001.png">
+      <figcaption>FOV10°のとき</figcaption>
+    </figure>
+
+    <figure>
+      <img loading="lazy" src="/images/basic/capture/002.png">
+      <figcaption>FOV40°のとき</figcaption>
+    </figure>
+
+
+    <h2 id="camera">カメラを操作する</h2>
+
+
     <p>
-      FOV10°のとき<br>
-      FOV40°のとき
+      キーボード<kbd>F1</kbd>で機外視点・機内視点を切り替える。
+    </p>
+
+    <table>
+      <tr>
+        <th rowspan="2">カメラを移動させる</th>
+        <td>マウス右ドラッグ</td>
+      </tr>
+      <tr>
+        <td><kbd>Ctrl</kbd>+<strong>矢印キー</strong></td>
+      </tr>
+      <tr>
+        <th rowspan="2">カメラと目標の距離を変更する</th>
+        <td>マウスホイール</td>
+      </tr>
+      <tr>
+        <td><kbd>PageDown</kbd>or<kbd>PageUp</kbd></td>
+      </tr>
+    </table>
+
+
+    <h3 id="camera_target">ターゲットを選択する</h3>
+
+
+    <p>
+      <kbd>Ctrl</kbd>+<kbd>F1</kbd>を押して、カメラの設定ダイアログを開く。
+    </p>
+
+    <p>
+      <kbd>Target</kbd>をクリック。<br>
+      ターゲットを選択して<kbd>Apply</kbd>をクリック。
     </p>
 
 
-    <h2 id="camera">カメラ位置を変更する</h2>
+    <h3 id="camera_reference">カメラの挙動を変更する</h3>
 
 
     <p>
-      キーボードF1で機外視点・機内視点を切り替える。
+      キーボード<kbd>F2</kbd>を押すと、カメラの挙動が変更される。
     </p>
 
-    <p>
-      カメラの向きを変える<br>
-      マウス右ドラッグ<br>
-      Ctrl+矢印キー<br>
-      カメラと目標の距離を変更する<br>
-      マウスホイール<br>
-      PageDownorPageUp
-    </p>
-
-
-    <h3 id="camera_reference">カメラの基準を変更する</h3>
-
-
-    <p>
-      キーボードF2を押すと、カメラの基準が変更される。
-    </p>
+    <table>
+      <tr>
+        <th>Target-relative</th>
+        <td>ターゲットを基準にカメラを回転させる</td>
+      </tr>
+      <tr>
+        <th>Absolute direction</th>
+        <td>カメラの向きは固定されるが、ターゲットに合わせて回転する</td>
+      </tr>
+      <tr>
+        <th>Global frame</th>
+        <td>カメラの向き・回転が固定される</td>
+      </tr>
+    </table>
 
     <p>
-      Target-relative<br>
-      ターゲットを基準にカメラを回転させる。<br>
-      Absolute direction<br>
-      カメラの向きは固定されるが、ターゲットに合わせて回転する。<br>
-      Global frame<br>
-      カメラの向き・回転が固定される。
-    </p>
-
-    <p>
-      地球をターゲットに選択し、カメラをGlobal frameにして早送りすると、地球の自転が観測できる。
+      地球をターゲットに選択し、カメラを<strong>Global frame</strong>にして早送りすると、地球の自転が観測できる。
     </p>
 
 
@@ -258,74 +327,90 @@
 
 
     <p>
-      Ctrl+F1を押して、カメラの設定ダイアログを開く。
+      <kbd>Ctrl</kbd>+<kbd>F1</kbd>を押して、カメラの設定ダイアログを開く。
     </p>
 
     <p>
-      Groundをクリック。<br>
-      Ground observer（地表の観測者）メニューが開く。
+      <kbd>Ground</kbd>をクリック。<br>
+      <strong>Ground observer</strong>（地表の観測者）メニューが開く。
     </p>
 
     <p>
-      Currentをクリックすると、地表を基準にカメラ位置が固定される。<br>
-      Target lockにチェックが入っていると、現在のターゲットを追尾する。
+      <kbd>Current</kbd>をクリックすると、地表を基準にカメラ位置が固定される。<br>
+      <strong>Target lock</strong>にチェックが入っていると、現在のターゲットを追尾する。
     </p>
 
     <p>
-      Target lockを外すと、カメラの向きを変更できるようになる。
+      <strong>Target lock</strong>を外すと、カメラの向きを変更できるようになる。
     </p>
 
+    <ul>
+      <li><a href="https://youtu.be/ToZ9_NucxYw" target="_blank" rel="noopener noreferrer">動画</a></li>
+    </ul>
 
-    <h3 id="camera_target">追尾する対象を設定する</h3>
+
+    <h3 id="camera_track">追尾する対象を設定する</h3>
 
 
     <p>
-      Ctrl+F1を押して、カメラの設定ダイアログを開く。
+      <kbd>Ctrl</kbd>+<kbd>F1</kbd>を押して、カメラの設定ダイアログを開く。
     </p>
 
     <p>
-      Track（追尾）をクリック。<br>
+      <kbd>Track</kbd>をクリック。<br>
       プルダウンメニューで追尾する目標を選択する。
     </p>
 
     <p>
-      例として、Sun（太陽）を選択した場合について説明する。<br>
-      太陽と宇宙船を通る直線上の、以下の位置にカメラが移動する。
+      例として、<strong>ISS</strong>を選択した場合について説明する。<br>
+      ISSと宇宙船を通る直線上の、以下の位置にカメラが移動する。
     </p>
 
-    <p>
-      Target from<br>
-      太陽→カメラ→宇宙船<br>
-      Target to<br>
-      カメラ→宇宙船→太陽
-    </p>
+    <table>
+      <tr>
+        <td><kbd>Target from</kbd></td>
+        <td>ISS→カメラ→宇宙船</td>
+      </tr>
+      <tr>
+        <td><kbd>Target to</kbd></td>
+        <td>カメラ→宇宙船→ISS</td>
+      </tr>
+    </table>
+
+    <ul>
+      <li><a href="https://youtu.be/Ft40o1lkwdo" target="_blank" rel="noopener noreferrer">動画</a></li>
+    </ul>
 
 
     <h3 id="camera_center">カメラの中心を移動する</h3>
 
 
     <p>
-      D3D9Clientが必要なテクニック。
+      <a href="d3d9client.html">D3D9Client</a>が必要なテクニック。
     </p>
 
     <p>
-      Ctrl+F4を押す。<br>
-      D3D9 Debug Controlsを選択してOKをクリック。
+      <kbd>Ctrl</kbd>+<kbd>F4</kbd>を押す。<br>
+      <strong>D3D9 Debug Controls</strong>を選択して<kbd>OK</kbd>をクリック。
     </p>
 
     <p>
-      Cameraの右側にあるダイアログで、カメラの挙動を変更できる。
+      <strong>Camera</strong>の右側にあるダイアログで、カメラの挙動を変更できる。
     </p>
 
-    <p>
-      Center on visual<br>
-      ターゲットの中心にカメラを向ける<br>
-      Wheel Fly/Pan Cam<br>
-      カメラの向きを変更する
-    </p>
+    <table>
+      <tr>
+        <td><kbd>Center on visual</kbd></td>
+        <td>ターゲットの中心にカメラを向ける</td>
+      </tr>
+      <tr>
+        <td><kbd>Wheel Fly/Pan Cam</kbd></td>
+        <td>カメラの向きを変更する</td>
+      </tr>
+    </table>
 
     <p>
-      Wheel Fly/Pan Camに設定することで、カメラの向きを変更できる。
+      <strong>Wheel Fly/Pan Cam</strong>に設定することで、カメラの向きを変更できる。
     </p>
 
   </main>
