@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
         <loc>https://orbinautjp.github.io/</loc>
-        <lastmod>2021-04-22</lastmod>
+        <lastmod>2023-04-09</lastmod>
     </url>
     <url>
         <loc>https://orbinautjp.github.io/apollo/amso-11-1.html</loc>
@@ -74,7 +74,7 @@
     </url>
     <url>
         <loc>https://orbinautjp.github.io/basic/</loc>
-        <lastmod>2021-04-22</lastmod>
+        <lastmod>2023-04-09</lastmod>
     </url>
     <url>
         <loc>https://orbinautjp.github.io/basic/knownbugs.html</loc>
@@ -155,6 +155,10 @@
     <url>
         <loc>https://orbinautjp.github.io/basic/launch.html</loc>
         <lastmod>2021-06-26</lastmod>
+    </url>
+    <url>
+        <loc>https://orbinautjp.github.io/basic/capture.html</loc>
+        <lastmod>2023-04-09</lastmod>
     </url>
     <url>
         <loc>https://orbinautjp.github.io/iss/</loc>
