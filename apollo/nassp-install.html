@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 
 <html lang="ja">
+
 <head>
   <script src="/scripts/ga.js"></script>
   <meta charset="UTF-8">
@@ -14,51 +15,118 @@
 
   <main>
 
-  <h1>NASSPのダウンロード+インストール</h1>
+    <h1>NASSPのダウンロード+インストール</h1>
 
 
-  <p>Project Apollo – NASSPは、アポロ宇宙船をOrbiter上で再現したMODです。<br>
-    コクピットのスイッチ類を実際に操作してアポロ宇宙船を操作することができます。</p>
-    <p>現時点では、Orbiter2016には対応していません。（Orbiter2010のみ）</p>
-    
-    <h2>ダウンロード</h2>
-    
-    <p><a href="http://nassp.sourceforge.net/wiki/Installation" target="_blank" rel="noopener noreferrer">Installation – ProjectApollo</a></p>
-    <p>ページ右上のリンクをクリックしてダウンロードする。</p>
-
-<p>
-<img loading="lazy" src="/images/apollo/nassp-install/NASSP001-1.png" width="236" height="96">
+    <p>
+      <strong>Project Apollo - NASSP</strong>は、アポロ宇宙船・サターンロケットのMODです。<br>
+      実機のシステムを再現しており、コクピットのボタン類も実際に操作できます。
     </p>
-    
-    <h2>インストール</h2>
-    
-    <p>ダウンロードしたファイルを解凍して、Orbiterのインストールフォルダに上書き。</p>
-    <p><a href="/basic/orbitermod.html" target="_blank">OrbiterにMODを導入する</a></p>
-    <p>Launchpadの<strong>Modules</strong>タブで、<strong>ProjectApolloMFD</strong>にチェックを入れる。</p>
 
-<p>
-<img loading="lazy" src="/images/apollo/nassp-install/NASSP002.png" width="142" height="97">
+    <nav>
+      <ul>
+        <li><a href="#download">ダウンロード</a></li>
+        <li><a href="#install">インストール</a></li>
+        <li><a href="#config">設定</a></li>
+        <li><a href="#control">操作</a></li>
+      </ul>
+    </nav>
+
+
+    <h2 id="download">ダウンロード</h2>
+
+
+    <p>
+      下記のリンクを開く。<br>
+      ページ右上のリンクをクリック。
     </p>
-    <p>Visual C++のランタイムを導入していない場合は、こちらもインストールしてください。</p>
-    <p><a href="https://www.microsoft.com/ja-jp/download/details.aspx?id=52685" target="_blank" rel="noopener noreferrer">Microsoft Visual C++ 2015 再頒布可能パッケージ</a></p>
-    <p>ダウンロードしたファイルをダブルクリックして、インストーラの指示に従ってください。</p>
-    
-    <h2>設定</h2>
-    
-    <p>Launchpadの<strong>Parameters</strong>タブを開く。<br>
-    以下の項目にチェックを入れる。</p>
-    
+
+    <p>
+      <a href="https://nassp.space/index.php/Installation" target="_blank" rel="noopener noreferrer">
+        Installation - ProjectApollo</a>
+    </p>
+
+    <table>
+      <tr>
+        <th>Orbiter2016</th>
+        <td>NASSP <strong>8.0</strong> 以上</td>
+      </tr>
+      <tr>
+        <th>Orbiter2010</th>
+        <td>NASSP <strong>7.0</strong></td>
+      </tr>
+    </table>
+
+    <figure>
+      <img loading="lazy" src="/images/apollo/nassp-install/001.png" width="403" height="211">
+    </figure>
+
+
+    <h2 id="install">インストール</h2>
+
+
+    <p>
+      ダウンロードしたファイルを解凍する。<br>
+      中身をOrbiterのインストールフォルダに上書き。
+    </p>
+
+    <p>
+      <a href="/basic/orbitercontrol.html#launchpad">Launchpad</a>の<kbd>Modules</kbd>タブを開く。<br>
+      <strong>ProjectApolloMFD</strong>にチェックを入れる。
+    </p>
+
+    <figure>
+      <img loading="lazy" src="/images/apollo/nassp-install/002.png" width="142" height="97">
+    </figure>
+
+    <p>
+      Visual C++のランタイムを導入していない場合は、以下のファイルもインストールする。
+    </p>
+
+    <p>
+      <a href="https://www.microsoft.com/ja-jp/download/details.aspx?id=52685" target="_blank"
+        rel="noopener noreferrer">Microsoft Visual C++ 2015 再頒布可能パッケージ</a>
+    </p>
+
+    <p>
+      ダウンロードしたファイルをダブルクリック。<br>
+      インストーラの指示に従ってインストールする。
+    </p>
+
+
+    <h2 id="config">設定</h2>
+
+
+    <p>
+      <a href="/basic/orbitercontrol.html#launchpad">Launchpad</a>の<kbd>Parameters</kbd>タブを開く。<br>
+      以下の項目にチェックを入れる。
+    </p>
+
     <ul>
-    <li>Complex flight model</li>
-    <li>Limited fuel</li>
-    <li>Gravity-gradient torque</li>
-    <li>Nonspherical gravity sources</li>
+      <li>Complex flight model</li>
+      <li>Limited fuel</li>
+      <li>Gravity-gradient torque</li>
+      <li>Nonspherical gravity sources</li>
     </ul>
-    
-    <p>設定項目の意味については、以下のページを参照してください。</p>
-    <p><a href="/basic/realismperturbations.html" target="_blank">Realism（リアリズム）とPerturbations（摂動）の設定</a></p>
+
+    <p>
+      設定項目の意味については、以下のページを参照すること。
+    </p>
+
+    <p>
+      <a href="/basic/realismperturbations.html" target="_blank">Realism（リアリズム）とPerturbations（摂動）の設定</a>
+    </p>
+
+
+    <h2 id="control">操作</h2>
+
+
+    <p>
+      <a href="nassp-control.html">NASSPの基本操作</a>
+    </p>
 
   </main>
 
 </body>
+
 </html>
