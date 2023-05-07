@@ -48,7 +48,7 @@
 
     <table>
       <tr>
-        <th>Orbiter2016</th>
+        <th>Orbiter2016 Beta</th>
         <td>NASSP <strong>8.0</strong> 以上</td>
       </tr>
       <tr>
@@ -56,6 +56,13 @@
         <td>NASSP <strong>7.0</strong></td>
       </tr>
     </table>
+
+    <p class="caution">
+      <strong>8.0</strong>は<a href="http://orbit.medphys.ucl.ac.uk/betainstall.html" target="_blank"
+        rel="noopener noreferrer">
+        Orbiter 2016 Beta</a>が必要。<br>
+      普通のOrbiter2016では動かない。
+    </p>
 
     <figure>
       <img loading="lazy" src="/images/apollo/nassp-install/001.png" width="403" height="211">
@@ -72,12 +79,13 @@
 
     <p>
       <a href="/basic/orbitercontrol.html#launchpad">Launchpad</a>の<kbd>Modules</kbd>タブを開く。<br>
-      <strong>ProjectApolloMFD</strong>にチェックを入れる。
+      以下の2つのモジュールにチェックを入れる。
     </p>
 
-    <figure>
-      <img loading="lazy" src="/images/apollo/nassp-install/002.png" width="142" height="97">
-    </figure>
+    <ul>
+      <li><strong>ProjectApolloMFD</strong></li>
+      <li><strong>RTCC MFD</strong></li>
+    </ul>
 
     <p>
       Visual C++のランタイムを導入していない場合は、以下のファイルもインストールする。
