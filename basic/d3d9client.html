@@ -47,6 +47,7 @@
             <li><a href="#caution_exe">実行ファイル</a></li>
             <li><a href="#caution_directx">DirectXのバージョン</a></li>
             <li><a href="#caution_intelhd">Intel HD Graphics</a></li>
+            <li><a href="#caution_inteliris">Intel Iris Xe</a></li>
             <li><a href="#caution_spacecraft3">Spacecraft3.dll</a></li>
           </ul>
         </li>
@@ -409,6 +410,26 @@
       <strong>インテルグラフィック／メディアコントロールパネル</strong>を開く。<br>
       <strong>3D</strong>→<strong>3D基本設定</strong>のスライダーを<strong>品質</strong>に設定する。
     </p>
+
+
+    <h3 id="caution_inteliris">Intel Iris Xe</h3>
+
+
+    <p class="caution">
+      <strong>Intel Iris Xe</strong>を使用している（グラフィックカードを搭載していない）PCでは、D3D9Clientが動作しない。
+    </p>
+
+    <p>
+      <a href="https://www.orbiter-forum.com/threads/d3d9-for-orbiter-2010-is-not-working.41672/#post-617524"
+        target="_blank" rel="noopener noreferrer">公式</a>では以下の対処法を推奨していますが、当サイトでは検証できないため、自力での対応をお願いします。
+    </p>
+
+    <ol>
+      <li><a href="https://github.com/doitsujin/dxvk/releases" target="_blank"
+          rel="noopener noreferrer">DXVK</a>のパッケージ（tar.gzのファイル）をダウンロードする。</li>
+      <li>中に入っているdllファイルをコピーする。</li>
+      <li>\Modules\Serverフォルダを開いて、コピーしたファイルを貼り付ける。</li>
+    </ol>
 
 
     <h3 id="caution_spacecraft3">Spacecraft3.dll</h3>
