@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <script src="/scripts/ga.js"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/styles/orbiterjp.css">
+  <script src="/scripts/template.js" charset="utf-8" defer></script>
+  <title>SSV 打ち上げと軌道投入</title>
+</head>
+
+<body>
+
+  <main>
+
+    <h1>SSV 打ち上げと軌道投入</h1>
+
+
+    <p>
+      SSVの打ち上げ・軌道投入手順について簡単に説明します。
+    </p>
+
+    <nav>
+      <ul>
+        <li><a href="#panels">コクピットパネル</a></li>
+        <li><a href="#switch">スイッチの操作</a></li>
+        <li><a href="#caution">注意点</a></li>
+        <li><a href="#scenario">使用するシナリオ</a></li>
+        <li><a href="#prelaunch">打ち上げの準備</a>
+          <ul>
+            <li><a href="#prelaunch_apuprep">APUの始動準備</a></li>
+            <li><a href="#prelaunch_apustart">APUの始動</a></li>
+          </ul>
+        </li>
+        <li><a href="#postmeco">打ち上げ後の手順</a>
+          <ul>
+            <li><a href="#postmeco_apu">APUの停止</a></li>
+            <li><a href="#postmeco_etdoors">ETアンビリカルドアを閉鎖</a></li>
+          </ul>
+        </li>
+        <li><a href="#oms2">OMS-2での軌道投入</a>
+          <ul>
+            <li><a href="#oms2_gpcinput">GPCにデータを入力する</a></li>
+            <li><a href="#oms2_attitude">姿勢制御を開始する</a></li>
+            <li><a href="#oms2_ignition">OMSに点火する</a></li>
+          </ul>
+        </li>
+        <li><a href="#reference">資料</a></li>
+      </ul>
+    </nav>
+
+
+    <h2 id="panels">コクピットパネル</h2>
+
+
+    <p>
+      このチュートリアルでは、パネルの位置を番号で記述している。<br>
+      以下の画像を印刷するか保存して、いつでも確認できるようにしておく。
+    </p>
+
+    <figure>
+      <img loading="lazy" src="/images/iss/ssv-launch/001.png">
+      <figcaption>コクピット前方</figcaption>
+    </figure>
+
+    <figure>
+      <img loading="lazy" src="/images/iss/ssv-launch/002.png">
+      <figcaption>コクピット後方</figcaption>
+    </figure>
+
+    <table class="center1col">
+      <tr>
+        <td>L</td>
+        <td>Left</td>
+        <td>左側</td>
+      </tr>
+      <tr>
+        <td>R</td>
+        <td>Right</td>
+        <td>右側</td>
+      </tr>
+      <tr>
+        <td>C</td>
+        <td>Center</td>
+        <td>中央</td>
+      </tr>
+      <tr>
+        <td>O</td>
+        <td>Overhead</td>
+        <td>頭上</td>
+      </tr>
+      <tr>
+        <td>F</td>
+        <td>Forward</td>
+        <td>船首</td>
+      </tr>
+      <tr>
+        <td>A</td>
+        <td>Aft</td>
+        <td>船尾</td>
+      </tr>
+      <tr>
+        <td>W</td>
+        <td>Windows</td>
+        <td>窓</td>
+      </tr>
+      <tr>
+        <td>S</td>
+        <td>Seats</td>
+        <td>座席</td>
+      </tr>
+    </table>
+
+    <p>
+      指示されている番号のパネルに移動して、スイッチを探して操作する。<br>
+      <kbd>Ctrl</kbd>+<strong>矢印キー</strong>の同時押しで座席を移動する。
+    </p>
+
+    <p>
+      また、スペースシャトルでは<a href="/basic/orbitercontrol.html#mfd">MFD</a>のことを<abbr
+        title="Multifunction Display Unit">MDU</abbr>と呼ぶ。
+    </p>
+
+
+    <h2 id="switch">スイッチの操作</h2>
+
+
+    <p>
+      コクピット上のスイッチをマウスクリックして操作する。
+    </p>
+
+    <p>
+      倒したい側にクリックするとその向きに倒れる。<br>
+      2回クリックすると2回倒れる。
+    </p>
+
+    <p>
+      一部のスイッチは引っ張ってから倒す構造になっている。<br>
+      マウスドラッグして移動させる。
+    </p>
+
+    <p>
+      一部のスイッチは、上・中央・下の3つを選択できる。<br>
+      例えば<strong>APU OPERATE</strong>のスイッチの場合、中央が<strong>OFF</strong>になっている。
+    </p>
+
+
+    <h2 id="caution">注意点</h2>
+
+
+    <p>
+      一部の操作には時間制限があり、遅れるとカウントダウンが中断する。
+    </p>
+
+    <p>
+      <strong>√</strong>の記号は「チェック（確認）」を意味する。<br>
+      指示通りの状態であれば何もしなくてよい。
+    </p>
+
+    <p>
+      以下のチュートリアルはスペースシャトルの操作を簡単に説明することを目的としている。<br>
+      そのため、実際のミッションとはいくつか相違点がある。
+    </p>
+
+
+    <h2 id="scenario">使用するシナリオ</h2>
+
+
+    <p>
+      <a href="/basic/orbitercontrol.html#launchpad">Launchpad</a>を開いて、以下のシナリオをダブルクリックして開始する。
+    </p>
+
+    <blockquote>Space Shuttle Vessel\Historic missions\STS-120\STS-120 T-9minutes</blockquote>
+
+
+    <h2 id="prelaunch">打ち上げの準備</h2>
+
+
+    <p>
+      1行目の数字は打ち上げまでの残り時間を意味する。<br>
+      2行目はパネルの位置。
+    </p>
+
+    <table class="center1col">
+      <tr>
+        <th colspan="2">-8:00</th>
+      </tr>
+      <tr>
+        <td colspan="2">R1</td>
+      </tr>
+      <tr>
+        <td>ESS BUS SOURCE FC</td>
+        <td>ON （1-3の3つ）</td>
+      </tr>
+    </table>
+
+
+    <h3 id="prelaunch_apuprep">APUの始動準備</h3>
+
+
+    <table class="center1col">
+      <tr>
+        <th colspan="2">-6:15</th>
+      </tr>
+      <tr>
+        <td colspan="2">R2</td>
+      </tr>
+      <tr>
+        <td>√BOILER N2 SUPPLY</td>
+        <td>ON ×3</td>
+      </tr>
+      <tr>
+        <td>√BOILER POWER</td>
+        <td>ON ×3</td>
+      </tr>
+      <tr>
+        <td>√BOILER CNTLR/HTR</td>
+        <td>A ×3</td>
+      </tr>
+      <tr>
+        <td>√HYD CIRC PUMP</td>
+        <td>GPC ×3</td>
+      </tr>
+      <tr>
+        <td>√APU FUEL TK VLV</td>
+        <td>CLOSE ×3</td>
+      </tr>
+      <tr>
+        <td>√APU OPERATE</td>
+        <td>OFF ×3</td>
+      </tr>
+      <tr>
+        <td>HYD MAIN PUMP PRESS</td>
+        <td>LOW ×3</td>
+      </tr>
+      <tr>
+        <td>APU CNTLR PWR</td>
+        <td>ON ×3</td>
+      </tr>
+      <tr>
+        <td>APU FUEL TK VLV</td>
+        <td>OPEN ×3</td>
+      </tr>
+      <tr>
+        <td>√APU/HYD READY TO START</td>
+        <td>インジケーターが灰色 ×3</td>
+      </tr>
+    </table>
+
+
+    <h3 id="prelaunch_apustart">APUの始動</h3>
+
+
+    <p>
+      1分以内に下記の手順を完了できなかった場合、カウントダウンが中断される。
+    </p>
+
+    <table class="center1col">
+      <tr>
+        <th colspan="2">-5:00</th>
+      </tr>
+      <tr>
+        <td colspan="2">R2</td>
+      </tr>
+      <tr>
+        <td>APU OPERATE</td>
+        <td>START/RUN ×3</td>
+      </tr>
+      <tr>
+        <td>√HYDRAULIC PRESS</td>
+        <td>MDU画面のゲージがLの位置で緑色 ×3</td>
+      </tr>
+      <tr>
+        <td>√APU/HYD READY TO START</td>
+        <td>斜めの縞模様 ×3</td>
+      </tr>
+      <tr>
+        <td>HYD MAIN PUMP PRESS</td>
+        <td>NORM ×3</td>
+      </tr>
+      <tr>
+        <td>√PRESS</td>
+        <td>MDUのゲージが上まで伸びて緑色 ×3</td>
+      </tr>
+    </table>
+
+    <p>
+      時間内に<abbr title="Auxiliary Power Unit">APU</abbr>（補助動力装置）が起動できていれば、自動で打ち上げが開始する。<br>
+      全自動で打ち上げが進行するので待つ。
+    </p>
+
+
+    <h2 id="postmeco">打ち上げ後の手順</h2>
+
+
+    <p>
+      外部燃料タンクは自動で切り離される。
+    </p>
+
+    <p>
+      OMS等のスイッチをオフにする。
+    </p>
+
+    <table class="center1col">
+      <tr>
+        <td colspan="2">C3</td>
+      </tr>
+      <tr>
+        <td>OMS ENG</td>
+        <td>OFF ×2</td>
+      </tr>
+      <tr>
+        <td colspan="2">F6, F8</td>
+      </tr>
+      <tr>
+        <td>FLT CNTLR POWER</td>
+        <td>OFF ×2</td>
+      </tr>
+      <tr>
+        <td>√ADI ATTITUDE</td>
+        <td>INRTL ×2</td>
+      </tr>
+    </table>
+
+
+    <h3 id="postmeco_apu">APUの停止</h3>
+
+
+    <table class="center1col">
+      <tr>
+        <td colspan="2">R2</td>
+      </tr>
+      <tr>
+        <td>BOILER PWR</td>
+        <td>OFF ×3</td>
+      </tr>
+      <tr>
+        <td>BOILER N2 SUPPLY</td>
+        <td>OFF ×3</td>
+      </tr>
+      <tr>
+        <td>APU OPERATE</td>
+        <td>OFF ×3 (MA)</td>
+      </tr>
+      <tr>
+        <td>APU FUEL TK VLV</td>
+        <td>CL ×3</td>
+      </tr>
+      <tr>
+        <td>APU CNTLR PWR</td>
+        <td>OFF ×3</td>
+      </tr>
+      <tr>
+        <td>√HYD MAIN PUMP PRESS</td>
+        <td>NORM ×3</td>
+      </tr>
+    </table>
+
+    <p>
+      (MA)はマスターアラームを意味する。<br>
+      つまり、この作業でアラームが鳴るのは正常な動作なので気にしなくてよい。<br>
+      コクピット前方の<kbd>MASTER ALARM</kbd>を押すと警報音が止まる。
+    </p>
+
+
+    <h3 id="postmeco_etdoors">ETアンビリカルドアを閉鎖</h3>
+
+
+    <p>
+      ET（外部燃料タンク）が接続されていた開口部を閉鎖する。
+    </p>
+
+    <table class="center1col">
+      <tr>
+        <td colspan="2">R2</td>
+      </tr>
+      <tr>
+        <td colspan="2">ET UMBILICAL DOOR</td>
+      </tr>
+      <tr>
+        <td>MODE</td>
+        <td>MAN</td>
+      </tr>
+      <tr>
+        <td>CENTERLINE LATCH</td>
+        <td>STOW</td>
+      </tr>
+      <tr>
+        <td>√CENTERLINE LATCH</td>
+        <td>STO（6秒後）</td>
+      </tr>
+      <tr>
+        <td>CENTERLINE LATCH</td>
+        <td>GND</td>
+      </tr>
+      <tr>
+        <td>LEFT,RIGHT DOOR</td>
+        <td>CLOSE ×2</td>
+      </tr>
+      <tr>
+        <td>√LEFT,RIGHT DOOR</td>
+        <td>CL ×2（24秒後）</td>
+      </tr>
+      <tr>
+        <td>LEFT,RIGHT LATCH</td>
+        <td>LATCH ×2</td>
+      </tr>
+      <tr>
+        <td>√LEFT,RIGHT LATCH</td>
+        <td>LAT ×2（6秒後）</td>
+      </tr>
+      <tr>
+        <td>LEFT,RIGHT DOOR</td>
+        <td>OFF ×2</td>
+      </tr>
+      <tr>
+        <td>LEFT,RIGHT LATCH</td>
+        <td>OFF ×2</td>
+      </tr>
+      <tr>
+        <td>MODE</td>
+        <td>GPC</td>
+      </tr>
+    </table>
+
+
+    <h2 id="oms2">OMS-2での軌道投入</h2>
+
+
+    <p>
+      スペースシャトルの<abbr title="General Purpose Computer">GPC</abbr>（汎用コンピューター）を使用して、<abbr
+        title="Orbital Maneuvering System">OMS</abbr>（軌道用エンジン）を噴射する。<br>
+      このミッションではOMS-1（1回目噴射）は必要ないので、OMS-2のみで軌道投入する。
+    </p>
+
+    <p>
+      前方左側（Commander＝船長）の席に戻る。<br>
+      コクピット中央（C2パネル）のキーパッドでGPCを操作する。
+    </p>
+
+
+    <h3 id="oms2_gpcinput">GPCにデータを入力する</h3>
+
+
+    <table>
+      <tr>
+        <td>GPCのモードを変更</td>
+        <td>OPS 105 PRO</td>
+      </tr>
+      <tr>
+        <td>ジンバルのトリムを設定</td>
+        <td>ITEM 6 +0.4 -5.7 +5.7 EXEC</td>
+      </tr>
+      <tr>
+        <td>噴射開始時刻（日時分秒）を入力</td>
+        <td>ITEM 10 +00 +00 +39 +07 EXEC</td>
+      </tr>
+      <tr>
+        <td>デルタVを入力</td>
+        <td>ITEM 19 +230 EXEC</td>
+      </tr>
+      <tr>
+        <td>入力したデータの読み込み</td>
+        <td>ITEM 22 EXEC</td>
+      </tr>
+      <tr>
+        <td>タイマーの開始</td>
+        <td>ITEM 23 EXEC</td>
+      </tr>
+    </table>
+
+    <p>
+      噴射のカウントダウンはGPC画面の右上に表示される。
+    </p>
+
+
+    <h3 id="oms2_attitude">姿勢制御を開始する</h3>
+
+
+    <table class="center1col">
+      <tr>
+        <td colspan="2">F6, F8</td>
+      </tr>
+      <tr>
+        <td>FLT CNTLR POWER</td>
+        <td>ON ×2</td>
+      </tr>
+      <tr>
+        <td colspan="2">C3</td>
+      </tr>
+      <tr>
+        <td>ORBITAL DAP</td>
+        <td>AUTO/PRI/DISC RATE</td>
+      </tr>
+      <tr>
+        <td colspan="2">C2</td>
+      </tr>
+      <tr>
+        <td>GPC</td>
+        <td>ITEM 27 EXEC</td>
+      </tr>
+    </table>
+
+
+    <h3 id="oms2_ignition">OMSに点火する</h3>
+
+
+    <table class="center1col">
+      <tr>
+        <th colspan="2">-2:00</th>
+      </tr>
+      <tr>
+        <td colspan="2">C3</td>
+      </tr>
+      <tr>
+        <td>OMS ENG</td>
+        <td>ARM PRESS</td>
+      </tr>
+      <tr>
+        <th colspan="2">-0:15</th>
+      </tr>
+      <tr>
+        <td colspan="2">C2</td>
+      </tr>
+      <tr>
+        <td>GPC</td>
+        <td>EXEC</td>
+      </tr>
+    </table>
+
+
+    <h2 id="reference">資料</h2>
+
+
+    <ul>
+      <li><a href="https://www.orbiter-forum.com/resources/ssu-checklists-r1-0.3185/" target="_blank"
+          rel="noopener noreferrer">SSU Checklists R1.0</a> by Wolf</li>
+      <li><a href="https://www.orbiter-forum.com/threads/space-shuttle-ultra-v5-xx-ascent-checklist-condensed.36141/"
+          target="_blank" rel="noopener noreferrer">SSU CONDENSED ASCENT</a> by Tim13</li>
+      <li><a
+          href="http://web.archive.org/web/20061002122124/http://www1.nasa.gov/centers/johnson/news/flightdatafiles/index.html"
+          target="_blank" rel="noopener noreferrer">NASA - Flight Data Files (Internet Archive)</a></li>
+    </ul>
+
+  </main>
+
+</body>
+
+</html>

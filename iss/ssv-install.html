@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <script src="/scripts/ga.js"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/styles/orbiterjp.css">
+  <script src="/scripts/template.js" charset="utf-8" defer></script>
+  <title>Space Shuttle Vesselのインストール</title>
+</head>
+
+<body>
+
+  <main>
+
+    <h1>Space Shuttle Vesselのインストール</h1>
+
+
+    <p>
+      <strong>Space Shuttle Vessel</strong>は、スペースシャトルの操縦システムを忠実に再現したMODです。
+    </p>
+
+    <nav>
+      <ul>
+        <li><a href="#requirement">必要なファイル</a>
+          <ul>
+            <li><a href="#requirement_sound">音声MOD</a></li>
+            <li><a href="#requirement_scenery">Antelope Valley</a></li>
+            <li><a href="#requirement_d3d9">D3D9Client</a></li>
+          </ul>
+        </li>
+        <li><a href="#download">ダウンロード</a></li>
+        <li><a href="#install">インストール</a>
+          <ul>
+            <li><a href="#install_font">フォントファイル</a></li>
+            <li><a href="#install_mfd">MFDの解像度</a></li>
+            <li><a href="#install_locallight">Local light sources</a></li>
+          </ul>
+        </li>
+        <li><a href="#control">SSVの操作</a></li>
+        <li><a href="#features">SSVの特徴</a></li>
+      </ul>
+    </nav>
+
+
+    <h2 id="requirement">必要なファイル</h2>
+
+
+    <p>
+      SSVは<a href="/basic/orbiter2016.html">Orbiter2016</a>で動作する。<br>
+      また、以下のMODが必要である。
+    </p>
+
+
+    <h3 id="requirement_sound">音声MOD</h3>
+
+
+    <p>
+      SSVは<a href="http://orbiter.dansteph.com/forum/index.php?page=download" target="_blank"
+        rel="noopener noreferrer">OrbiterSound 5.0</a>を前提に作られている。<br>
+      <a href="/basic/xrsound.html">XRSound</a>を導入している場合は、<a href="/basic/xrsound.html#soundbridge">SoundBridge</a>が必要。
+    </p>
+
+
+    <h3 id="requirement_scenery">Antelope Valley</h3>
+
+
+    <p>
+      アンテロープ・バレーの追加マップを導入する。<br>
+      以下のリンクから、<strong>antelope_scn.zip</strong>をダウンロード。
+    </p>
+
+    <p>
+      <a href="http://orbit.medphys.ucl.ac.uk/mirrors/orbiter_radio/tex_mirror.html#earth" target="_blank"
+        rel="noopener noreferrer">Orbiter - Textures</a>
+    </p>
+
+    <p>
+      ダウンロードしたzipファイルを解凍して、中のファイル・フォルダをすべてコピーする。<br>
+      Orbiterがインストールされているフォルダにペーストして上書き。
+    </p>
+
+
+    <h3 id="requirement_d3d9">D3D9Client</h3>
+
+
+    <p>
+      動作に必須ではないが、導入すると船内カメラ等が利用できるようになる。
+    </p>
+
+    <p>
+      <a href="/basic/d3d9client.html">D3D9Clientのインストールと設定</a>
+    </p>
+
+
+    <h2 id="download">ダウンロード</h2>
+
+
+    <p>
+      以下のページに飛んで、 <strong>SpaceShuttleVessel_v1.8.zip</strong>をダウンロードする。
+    </p>
+
+    <p>
+      <a href="https://github.com/GLS-SSV/SSV/releases/tag/v1.8" target="_blank" rel="noopener noreferrer">Release Space
+        Shuttle Vessel v1.8 · GLS-SSV/SSV · GitHub</a>
+    </p>
+
+
+    <h2 id="install">インストール</h2>
+
+
+    <p>
+      ダウンロードしたzipファイルを解凍して、中のファイル・フォルダをすべてコピーする。<br>
+      Orbiterがインストールされているフォルダにペーストして上書き。
+    </p>
+
+
+    <h3 id="install_font">フォントファイル</h3>
+
+
+    <p>
+      <strong>Install</strong>という名前のフォルダを開く。<br>
+      <strong>Space Shuttle Vessel</strong>フォルダを開く。
+    </p>
+
+    <p>
+      <strong>SSV_Font_A.otf</strong>を右クリックしてインストールする。<br>
+      <strong>SSV_Font_B.otf</strong>もインストールする。
+    </p>
+
+
+    <h3 id="install_mfd">MFDの解像度</h3>
+
+
+    <p>
+      MFDの解像度を変更する。<br>
+      この設定をしないと、船内のMFDがずれて表示される。
+    </p>
+
+    <p>
+      <a href="/basic/orbitercontrol.html#launchpad">Launchpad</a>を開いて、<kbd>Extra</kbd>タブを選択。<br>
+      <strong>Instruments and panels</strong>を選択し、<strong>MFD parameter configuration</strong>をダブルクリック。<br>
+      <strong>MFD texture size</strong>を<strong>512×512</strong>に設定してOKをクリック。
+    </p>
+
+
+    <h3 id="install_locallight">Local light sources</h3>
+
+
+    <p>
+      光源の設定をする。
+    </p>
+
+    <p>
+      <a href="/basic/orbitercontrol.html#launchpad">Launchpad</a>の<kbd>Visual effects</kbd>タブを開く。<br>
+      <strong>Local light sources</strong>にチェックを入れる。
+    </p>
+
+    <p>
+      D3D9Clientでも同様の設定をする。
+    </p>
+
+    <p>
+      <a href="/basic/orbitercontrol.html#launchpad">Launchpad</a>の<kbd>Video</kbd>タブを開く。<br>
+      右下の<kbd>Advanced</kbd>をクリック。<br>
+      <strong>Local lights</strong>を<strong>None</strong>以外に設定する。
+    </p>
+
+
+    <h2 id="control">SSVの操作</h2>
+
+
+    <ul>
+      <li><a href="ssv-launch.html">SSV 打ち上げと軌道投入</a></li>
+    </ul>
+
+
+    <h2 id="features">SSVの特徴</h2>
+
+
+    <ul>
+      <li>コクピット上のスイッチ類を操作して、スペースシャトルの操縦を体験できる。</li>
+      <li>実機のチェックリストを参照して、同じ操作ができる。</li>
+      <li>GPC（汎用コンピューター）の操作と機能が再現されている。</li>
+      <li>実機と同様に、打ち上げ・着陸をある程度自動で実行できる。</li>
+      <li>ペイロードベイやロボットアームなどの操作と機能も再現されている。</li>
+      <li>年代ごとに違う、スペースシャトルの外観がそれぞれ再現されている。</li>
+      <li>IUS（慣性上段ステージ）などによる探査機の打ち上げが可能。</li>
+      <li>クローラー・トランスポーターによる発射台の移動も体験できる。</li>
+    </ul>
+
+  </main>
+
+</body>
+
+</html>
