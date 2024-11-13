@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <script src="/scripts/ga.js"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/styles/orbiterjp.css">
+  <script src="/scripts/template.js" charset="utf-8" defer></script>
+  <title>Parking Brakeのインストール</title>
+</head>
+
+<body>
+
+  <main>
+
+    <h1>Parking Brakeのインストール</h1>
+
+
+    <p>
+      <strong>Parking Brake</strong>は、<a href="/basic/orbiter2016.html">Orbiter2016</a>で宇宙船を静止させるためのMODです。
+    </p>
+
+    <nav>
+      <ul>
+        <li><a href="#purpose">機能</a></li>
+        <li><a href="#download">ダウンロード</a></li>
+        <li><a href="#install">インストール</a></li>
+        <li><a href="#control">操作</a>
+          <ul>
+            <li><a href="#control_mfd">Parking Brake MFD</a></li>
+            <li><a href="#control_cfg">ParkingBrake.cfg</a></li>
+          </ul>
+        </li>
+        <li><a href="#problems">既知の問題</a></li>
+      </ul>
+    </nav>
+
+
+    <h2 id="purpose">機能</h2>
+
+
+    <p>
+      ブレーキを解除すると機体が走り出してしまうような状況で、その場に静止させることができる。
+    </p>
+
+
+    <h2 id="download">ダウンロード</h2>
+
+
+    <p>
+      リンク先ページ右上の<kbd>Go to download</kbd>をクリックする。
+    </p>
+
+    <p>
+      <a href="https://www.orbiter-forum.com/resources/parking-brake.3105/" target="_blank"
+        rel="noopener noreferrer">Parking Brake</a>
+    </p>
+
+
+    <h2 id="install">インストール</h2>
+
+
+    <p>
+      ダウンロードしたファイルを解凍する。<br>
+      中に入っているファイル・フォルダをコピーする。<br>
+      Orbiterのフォルダにペーストして上書きする。
+    </p>
+
+    <p>
+      <a href="/basic/orbitercontrol.html#launchpad">Launchpad</a>を開いて、<kbd>Modules</kbd>をクリック。<br>
+      <strong>ParkingBrakeMFD</strong>にチェックを入れる。
+    </p>
+
+
+    <h2 id="control">操作</h2>
+
+
+    <h3 id="control_mfd">Parking Brake MFD</h3>
+
+
+    <p>
+      ゲームを開始して、<a href="/basic/orbitercontrol.html#mfd">MFD</a>から<strong>Parking Brake</strong>を選択する。
+    </p>
+
+    <table class="center1col">
+      <tr>
+        <td><kbd>ON</kbd>or<kbd>OFF</kbd></td>
+        <td><strong>Auto mode</strong>を有効にする</td>
+      </tr>
+      <tr>
+        <td><kbd>NOW</kbd></td>
+        <td>その場で静止させる</td>
+      </tr>
+      <tr>
+        <td><kbd>MDE</kbd></td>
+        <td><strong>Auto mode</strong>を切り替える</td>
+      </tr>
+      <tr>
+        <th colspan="2">Auto mode</th>
+      </tr>
+      <tr>
+        <td><strong>low speed</strong></td>
+        <td>設定された速度以下になったら静止させる</td>
+      </tr>
+      <tr>
+        <td><strong>contact</strong></td>
+        <td>接地した瞬間に静止させる</td>
+      </tr>
+      <tr>
+        <td><strong>launch control</strong></td>
+        <td>エンジン全開で静止状態を解除する</td>
+      </tr>
+    </table>
+
+
+    <h3 id="control_cfg">ParkingBrake.cfg</h3>
+
+
+    <p>
+      Configファイルに設定が保存されている。
+    </p>
+
+    <p>
+      <strong>Config\MFD</strong>フォルダを開く。<br>
+      <strong>ParkingBrake.cfg</strong>をメモ帳などのテキストエディタで開く。
+    </p>
+
+    <p>
+      <strong>TRUE</strong>で有効、<strong>FALSE</strong>で無効にする。
+    </p>
+
+    <table class="center1col">
+      <tr>
+        <td><strong>ActivateMFD</strong></td>
+        <td>無効にするとMFDが表示されなくなる</td>
+      </tr>
+      <tr>
+        <td><strong>DefAutoPark</strong></td>
+        <td>無効にすると自動で静止されなくなる</td>
+      </tr>
+      <tr>
+        <td><strong>DefParkMode</strong></td>
+        <td>Auto modeを変更する（0、1、2から選択）</td>
+      </tr>
+      <tr>
+        <td><strong>DefSpeedLimit</strong></td>
+        <td>速度がこの値より下なら静止させる</td>
+      </tr>
+    </table>
+
+    <p>
+      変更したら上書き保存する。
+    </p>
+
+
+    <h2 id="problems">既知の問題</h2>
+
+
+    <p>
+      斜面で静止したとき、地面に突き刺さったような見た目になるがそういう仕様。
+    </p>
+
+  </main>
+
+</body>
+
+</html>
