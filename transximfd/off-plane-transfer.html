@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 
 <html lang="ja">
+
 <head>
   <script src="/scripts/ga.js"></script>
   <meta charset="UTF-8">
@@ -14,156 +15,172 @@
 
   <main>
 
-  <h1>地球―月でのOff-plane transfer</h1>
+    <h1>地球―月でのOff-plane transfer</h1>
 
 
-<p>地球から月へのフライトについて、チュートリアルでは「地球周回軌道上で軌道面を月と一致させる」という方法を紹介しました。<br>
-今回は、軌道面を一致させない（Align planes MFDを使わない）<strong>Off-plane transfer</strong>について解説します。</p>
+    <p>地球から月へのフライトについて、チュートリアルでは「地球周回軌道上で軌道面を月と一致させる」という方法を紹介しました。<br>
+      今回は、軌道面を一致させない（Align planes MFDを使わない）<strong>Off-plane transfer</strong>について解説します。</p>
 
-<ul>
-<li><a href="#offplane_window">打ち上げのタイミングを探す</a></li>
-<ul>
-<li><a href="#protractor">分度器を使う場合</a></li>
-<ul>
-<li><a href="#protractor_calc">タイミングを計算する</a></li>
-<li><a href="#protractor_measure">分度器で測る</a></li>
-</ul>
-</ul>
-<ul>
-<li><a href="#scneditor">シナリオエディタを使う場合</a></li>
-</ul>
-<li><a href="#offplane_exec">Off-plane transferを実行する</a></li>
-<ul>
-<li><a href="#offplane_launch">打ち上げから軌道投入まで</a></li>
-<li><a href="#offplane_manoeuvre">マニューバを作成する</a></li>
-</ul>
-<li><a href="#offplane_explained">解説</a></li>
-</ul>
+    <ul>
+      <li><a href="#offplane_window">打ち上げのタイミングを探す</a></li>
+      <ul>
+        <li><a href="#protractor">分度器を使う場合</a></li>
+        <ul>
+          <li><a href="#protractor_calc">タイミングを計算する</a></li>
+          <li><a href="#protractor_measure">分度器で測る</a></li>
+        </ul>
+      </ul>
+      <ul>
+        <li><a href="#scneditor">シナリオエディタを使う場合</a></li>
+      </ul>
+      <li><a href="#offplane_exec">Off-plane transferを実行する</a></li>
+      <ul>
+        <li><a href="#offplane_launch">打ち上げから軌道投入まで</a></li>
+        <li><a href="#offplane_manoeuvre">マニューバを作成する</a></li>
+      </ul>
+      <li><a href="#offplane_explained">解説</a></li>
+    </ul>
 
-<h2 id="offplane_window">打ち上げのタイミングを探す</h2>
+    <h2 id="offplane_window">打ち上げのタイミングを探す</h2>
 
-<p><strong>Off-plane transfer</strong>では、打ち上げのタイミングが重要になります。<br>
-分度器かシナリオエディタのいずれかを使って、このタイミングを決定することができます。</p>
+    <p><strong>Off-plane transfer</strong>では、打ち上げのタイミングが重要になります。<br>
+      分度器かシナリオエディタのいずれかを使って、このタイミングを決定することができます。</p>
 
-<p>Orbiterの基本操作については、Orbiterチュートリアルを参照してください。<br>
-<a href="/tutorial/part9.html">Orbiterチュートリアル Part9 月への打ち上げ</a></p>
+    <p>Orbiterの基本操作については、Orbiterチュートリアルを参照してください。<br>
+      <a href="/tutorial/part9.html">Orbiterチュートリアル Part9 月への打ち上げ</a>
+    </p>
 
-<h3 id="protractor">分度器を使う場合</h3>
+    <h3 id="protractor">分度器を使う場合</h3>
 
-<p>
-分度器を使って、打ち上げのタイミングを探す方法について解説します。
-</p>
+    <p>
+      分度器を使って、打ち上げのタイミングを探す方法について解説します。
+    </p>
 
-<h4 id="protractor_calc">タイミングを計算する</h4>
+    <h4 id="protractor_calc">タイミングを計算する</h4>
 
-<p>
-<strong>TransX</strong>を開く。<br>
-<strong>Select Target</strong>で<strong>Moon</strong>を選択。
-</p>
+    <p>
+      <strong>TransX</strong>を開く。<br>
+      <strong>Select Target</strong>で<strong>Moon</strong>を選択。
+    </p>
 
-<p><img loading="lazy" src="/images/transximfd/off-plane-transfer/001.png" width="519" height="521">
-</p>
+    <p><img loading="lazy" src="/images/transximfd/off-plane-transfer/001.png" width="519" height="521">
+    </p>
 
-<p>
-今回は、打ち上げから月に到着するまでの時間を<strong>4日間</strong>とする。
-</p>
-<p>
-白い直線は、自機の（真東に打ち上げたときの）軌道面と、ターゲットの軌道面の交線を表している。<br>
-青い直線は月の現在位置を表している。<br>
-青い線が4日後に白い線と重なるタイミングを狙って真東に打ち上げれば、そのまま月に行くことができる。
-</p>
-<p>
-月の公転周期は<strong>27.3</strong>日であり、<strong>360÷27.3×4≒53</strong>である。<br>
-したがって、青い線と白い線のなす角度がおおよそ<strong>53°</strong>のときに打ち上げればよいということになる。
-</p>
+    <p>
+      今回は、打ち上げから月に到着するまでの時間を<strong>4日間</strong>とする。
+    </p>
+    <p>
+      白い直線は、自機の（真東に打ち上げたときの）軌道面と、ターゲットの軌道面の交線を表している。<br>
+      青い直線は月の現在位置を表している。<br>
+      青い線が4日後に白い線と重なるタイミングを狙って真東に打ち上げれば、そのまま月に行くことができる。
+    </p>
+    <p>
+      月の公転周期は<strong>27.3</strong>日であり、<strong>360÷27.3×4≒53</strong>である。<br>
+      したがって、青い線と白い線のなす角度がおおよそ<strong>53°</strong>のときに打ち上げればよいということになる。
+    </p>
 
-<h4 id="protractor_measure">分度器で測る</h4>
+    <h4 id="protractor_measure">分度器で測る</h4>
 
-<p>
-この記事では「<a href="https://www.vector.co.jp/soft/cmt/winnt/util/se345469.html" target="_blank" rel="noopener noreferrer">分度器で測りましょ</a>」というフリーウェアを使用しています。<br>
-このソフトの使用方法については付属のマニュアルを参照してください。
-</p>
-<p>
-タイムワープで時間経過させて、白い線と青い線のなす角度がおよそ<strong>53°</strong>になるのを待つ。
-</p>
+    <p>
+      この記事では「<a href="https://www.vector.co.jp/soft/cmt/winnt/util/se345469.html" target="_blank"
+        rel="noopener noreferrer">分度器で測りましょ</a>」というフリーウェアを使用しています。<br>
+      このソフトの使用方法については付属のマニュアルを参照してください。
+    </p>
+    <p>
+      タイムワープで時間経過させて、白い線と青い線のなす角度がおよそ<strong>53°</strong>になるのを待つ。
+    </p>
 
-<p><img loading="lazy" src="/images/transximfd/off-plane-transfer/002.png" width="519" height="519">
-</p>
+    <p><img loading="lazy" src="/images/transximfd/off-plane-transfer/002.png" width="519" height="519">
+    </p>
 
-<p><strong>53°</strong>になったら、<a href="#offplane_exec">Off-plane transferを実行する。</a></p>
+    <p><strong>53°</strong>になったら、<a href="#offplane_exec">Off-plane transferを実行する。</a></p>
 
-<h3 id="scneditor">シナリオエディタを使う場合</h3>
+    <h3 id="scneditor">シナリオエディタを使う場合</h3>
 
-<p><a href="/misc/scneditor-date.html" target="_blank">シナリオエディタ</a>を使って、打ち上げのタイミングを探す方法について解説します。</p>
+    <p><a href="/misc/scneditor-date.html">シナリオエディタ</a>を使って、打ち上げのタイミングを探す方法について解説します。</p>
 
-<p><strong>Map MFD</strong>を開いて、<strong>MFD</strong>の左の<kbd>DSP</kbd>ボタンをクリック。<br>
-<kbd>MOD</kbd>をクリックして<strong>Orbit lines</strong>を<strong>Orbit plane</strong>にする。</p>
+    <p><strong>Map MFD</strong>を開いて、<strong>MFD</strong>の左の<kbd>DSP</kbd>ボタンをクリック。<br>
+      <kbd>MOD</kbd>をクリックして<strong>Orbit lines</strong>を<strong>Orbit plane</strong>にする。
+    </p>
 
-<p>
-<img loading="lazy" src="/images/transximfd/off-plane-transfer/DGtoISS003.png" width="501" height="237"></p>
-<p><kbd>TGT</kbd>をクリックして<strong>Moon</strong>をターゲットする。</p>
+    <p>
+      <img loading="lazy" src="/images/transximfd/off-plane-transfer/DGtoISS003.png" width="501" height="237">
+    </p>
+    <p><kbd>TGT</kbd>をクリックして<strong>Moon</strong>をターゲットする。</p>
 
-<p>
-<img loading="lazy" src="/images/transximfd/off-plane-transfer/offplane003.png" width="573" height="573"></p>
-<p>自分の軌道面が緑、ターゲット（今回は月）の軌道面が黄色で表示されている。<br>
-ふたつの線は、2ヶ所（赤丸で囲んだところ）で交差している。</p>
-<p><a href="/misc/scneditor-date.html" target="_blank">シナリオエディタ</a>を開いて、<kbd>Date</kbd>（日時の設定）をクリック。</p>
+    <p>
+      <img loading="lazy" src="/images/transximfd/off-plane-transfer/offplane003.png" width="573" height="573">
+    </p>
+    <p>自分の軌道面が緑、ターゲット（今回は月）の軌道面が黄色で表示されている。<br>
+      ふたつの線は、2ヶ所（赤丸で囲んだところ）で交差している。</p>
+    <p><a href="/misc/scneditor-date.html">シナリオエディタ</a>を開いて、<kbd>Date</kbd>（日時の設定）をクリック。</p>
 
-<p>
-<img loading="lazy" src="/images/transximfd/off-plane-transfer/offplane001.png" width="416" height="424"></p>
-<p><strong>DD</strong>（日）を操作する（一日ずつ増やす）と、<strong>Map MFD</strong>において月が軌道面を移動する。</p>
+    <p>
+      <img loading="lazy" src="/images/transximfd/off-plane-transfer/offplane001.png" width="416" height="424">
+    </p>
+    <p><strong>DD</strong>（日）を操作する（一日ずつ増やす）と、<strong>Map MFD</strong>において月が軌道面を移動する。</p>
 
-<p>
-<img loading="lazy" src="/images/transximfd/off-plane-transfer/offplane004.png" width="572" height="572"></p>
-<p>ふたつの線が交差するところに、月が重なるようにする。<br>
-多少ずれていても問題ない。</p>
-<p>月が画像の位置に来たら、シナリオエディタを使って<strong>4日前</strong>に戻る。</p>
+    <p>
+      <img loading="lazy" src="/images/transximfd/off-plane-transfer/offplane004.png" width="572" height="572">
+    </p>
+    <p>ふたつの線が交差するところに、月が重なるようにする。<br>
+      多少ずれていても問題ない。</p>
+    <p>月が画像の位置に来たら、シナリオエディタを使って<strong>4日前</strong>に戻る。</p>
 
-<h2 id="offplane_exec">Off-plane transferを実行する</h2>
+    <h2 id="offplane_exec">Off-plane transferを実行する</h2>
 
-<p>TransXを使って、月までのホーマン軌道を作成します。</p>
+    <p>TransXを使って、月までのホーマン軌道を作成します。</p>
 
-<h3 id="offplane_launch">打ち上げから軌道投入まで</h3>
+    <h3 id="offplane_launch">打ち上げから軌道投入まで</h3>
 
-<p>打ち上げのタイミングが決まったら、方位<strong>090</strong>（真東）に向かって軌道投入する。<br>
-とくに決まりはないが、高度200kmくらいの円軌道にしておく。</p>
-<p>軌道に乗ったら、両方のMFDで<strong>TransX</strong>を開く。</p>
-<p><strong>View:Setup</strong>の<strong>Select Target</strong>で<strong>Moon</strong>を選択。</p>
+    <p>打ち上げのタイミングが決まったら、方位<strong>090</strong>（真東）に向かって軌道投入する。<br>
+      とくに決まりはないが、高度200kmくらいの円軌道にしておく。</p>
+    <p>軌道に乗ったら、両方のMFDで<strong>TransX</strong>を開く。</p>
+    <p><strong>View:Setup</strong>の<strong>Select Target</strong>で<strong>Moon</strong>を選択。</p>
 
-<p>
-<img loading="lazy" src="/images/transximfd/off-plane-transfer/offplane005.png" width="576" height="575"></p>
-<p>片方のMFDで<kbd>FWD</kbd>をクリックして<strong>Stage2</strong>にする。<br>
-<kbd>VW</kbd>をクリックして<strong>View:Encounter</strong>にしておく。</p>
+    <p>
+      <img loading="lazy" src="/images/transximfd/off-plane-transfer/offplane005.png" width="576" height="575">
+    </p>
+    <p>片方のMFDで<kbd>FWD</kbd>をクリックして<strong>Stage2</strong>にする。<br>
+      <kbd>VW</kbd>をクリックして<strong>View:Encounter</strong>にしておく。
+    </p>
 
-<p>
-<img loading="lazy" src="/images/transximfd/off-plane-transfer/offplane006.png" width="577" height="578"></p>
+    <p>
+      <img loading="lazy" src="/images/transximfd/off-plane-transfer/offplane006.png" width="577" height="578">
+    </p>
 
-<h3 id="offplane_manoeuvre">マニューバを作成する</h3>
+    <h3 id="offplane_manoeuvre">マニューバを作成する</h3>
 
-<p><strong>Stage1</strong>で<strong>View:Manoeuvre</strong>を開く。<br>
-<strong>Manoeuvre mode</strong>を<strong>On</strong>にする。</p>
-<p><strong>Prograde vel.</strong>を操作して、だいたい<strong>3130</strong>（<strong>3.130k</strong>）にする。<br>
-（この数字は、地球周回軌道からホーマン軌道で月に向かう時のおおよその目安です）</p>
-<p><strong>Man. date</strong>を操作して、黄色い直線と白い直線が重なるようにする。</p>
+    <p><strong>Stage1</strong>で<strong>View:Manoeuvre</strong>を開く。<br>
+      <strong>Manoeuvre mode</strong>を<strong>On</strong>にする。
+    </p>
+    <p><strong>Prograde vel.</strong>を操作して、だいたい<strong>3130</strong>（<strong>3.130k</strong>）にする。<br>
+      （この数字は、地球周回軌道からホーマン軌道で月に向かう時のおおよその目安です）</p>
+    <p><strong>Man. date</strong>を操作して、黄色い直線と白い直線が重なるようにする。</p>
 
-<p>
-<img loading="lazy" src="/images/transximfd/off-plane-transfer/offplane007.png" width="578" height="578"></p>
-<p><strong>Stage2</strong>の<strong>View:Encounter</strong>を見ながら、<strong>Prograde vel.</strong>と<strong>Man. date</strong>を操作して、月に衝突するような軌道にする。</p>
+    <p>
+      <img loading="lazy" src="/images/transximfd/off-plane-transfer/offplane007.png" width="578" height="578">
+    </p>
+    <p><strong>Stage2</strong>の<strong>View:Encounter</strong>を見ながら、<strong>Prograde vel.</strong>と<strong>Man.
+        date</strong>を操作して、月に衝突するような軌道にする。</p>
 
-<p>
-<img loading="lazy" src="/images/transximfd/off-plane-transfer/offplane008.png" width="573" height="575"></p>
-<p><strong class="caution">重要</strong>：<strong>Outward</strong>と<strong>Ch. plane</strong>は使いません。</p>
-<p>ここから先の操作は、Orbiterチュートリアルの内容と同じです。<br>
-<a href="/tutorial/part10.html">Part10 TransXで地球軌道から月へ(TLI)</a><br>
-<a href="/tutorial/part12.html">Part12 月基地への軌道修正 1回目</a>
-</p>
+    <p>
+      <img loading="lazy" src="/images/transximfd/off-plane-transfer/offplane008.png" width="573" height="575">
+    </p>
+    <p><strong class="caution">重要</strong>：<strong>Outward</strong>と<strong>Ch. plane</strong>は使いません。</p>
+    <p>ここから先の操作は、Orbiterチュートリアルの内容と同じです。<br>
+      <a href="/tutorial/part10.html">Part10 TransXで地球軌道から月へ(TLI)</a><br>
+      <a href="/tutorial/part12.html">Part12 月基地への軌道修正 1回目</a>
+    </p>
 
-<h2 id="offplane_explained">解説</h2>
+    <h2 id="offplane_explained">解説</h2>
 
-<p>Off-plane transferの仕組みやメリットについては、以下の記事を参照してください。<br>
-<a href="off-plane-explanation.html" target="_blank">Off-plane transferの原理</a></p>
+    <p>Off-plane transferの仕組みやメリットについては、以下の記事を参照してください。<br>
+      <a href="off-plane-explanation.html">Off-plane transferの原理</a>
+    </p>
 
   </main>
 
 </body>
+
 </html>

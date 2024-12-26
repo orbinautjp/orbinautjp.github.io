@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 
 <html lang="ja">
+
 <head>
   <script src="/scripts/ga.js"></script>
   <meta charset="UTF-8">
@@ -14,162 +15,168 @@
 
   <main>
 
-  <h1>月基地への軌道修正 別の方法</h1>
+    <h1>月基地への軌道修正 別の方法</h1>
 
 
-<p>月基地の上空を通る軌道を作成する方法について解説します。<br>
-<a href="part10.html" target="_blank">TLI</a>ではTransXを使用しますが、軌道修正はTransXを使わずに実行します。</p>
+    <p>月基地の上空を通る軌道を作成する方法について解説します。<br>
+      <a href="part10.html">TLI</a>ではTransXを使用しますが、軌道修正はTransXを使わずに実行します。
+    </p>
 
-<ol>
-<li><a href="#tli">準備</a></li>
-<li><a href="#mcc">軌道修正</a>
-  <ul>
-  <li><a href="#mcc_plane">軌道の傾きを変える</a></li>
-  <li><a href="#mcc_alt">軌道高度を上げる・下げる</a></li>
-  <li><a href="#mcc_2">二度目の軌道修正</a></li>
-  </ul>
-</li>
-<li><a href="#transx">TransXとの関係</a>
-  <ul>
-  <li><a href="#transx_appx">補足</a></li>
-  </ul>
-</li>
-</ol>
+    <ol>
+      <li><a href="#tli">準備</a></li>
+      <li><a href="#mcc">軌道修正</a>
+        <ul>
+          <li><a href="#mcc_plane">軌道の傾きを変える</a></li>
+          <li><a href="#mcc_alt">軌道高度を上げる・下げる</a></li>
+          <li><a href="#mcc_2">二度目の軌道修正</a></li>
+        </ul>
+      </li>
+      <li><a href="#transx">TransXとの関係</a>
+        <ul>
+          <li><a href="#transx_appx">補足</a></li>
+        </ul>
+      </li>
+    </ol>
 
-<ul>
-<li><a href="#video">動画</a></li>
-</ul>
-
-
-<h2 id="tli">準備</h2>
+    <ul>
+      <li><a href="#video">動画</a></li>
+    </ul>
 
 
-<p>まず、TransXを使って月に衝突する軌道に宇宙船を乗せる。<br>
-<a href="part10.html" target="_blank">Orbiterチュートリアル Part10 TransXで地球軌道から月へ(TLI)</a></p>
-<p>マニューバを実行したら、月の重力圏内に入るのを待つ。<br>
-<strong>Orbit MFD</strong>で<kbd>REF</kbd>をクリック。矢印キーで<strong>Moon</strong>を選択して<kbd>Enter</kbd>を押す。<br>
-月の重力圏に入っていれば、<strong>Orbit MFD</strong>の一番下の数字が緑色になる。</p>
-
-<p>
-<img loading="lazy" src="/images/tutorial/moon-mcc-notransx/MoonApproach003.png" width="221" height="80">
-</p>
+    <h2 id="tli">準備</h2>
 
 
-<h2 id="mcc">軌道修正</h2>
+    <p>まず、TransXを使って月に衝突する軌道に宇宙船を乗せる。<br>
+      <a href="part10.html">Orbiterチュートリアル Part10 TransXで地球軌道から月へ(TLI)</a>
+    </p>
+    <p>マニューバを実行したら、月の重力圏内に入るのを待つ。<br>
+      <strong>Orbit MFD</strong>で<kbd>REF</kbd>をクリック。矢印キーで<strong>Moon</strong>を選択して<kbd>Enter</kbd>を押す。<br>
+      月の重力圏に入っていれば、<strong>Orbit MFD</strong>の一番下の数字が緑色になる。
+    </p>
+
+    <p>
+      <img loading="lazy" src="/images/tutorial/moon-mcc-notransx/MoonApproach003.png" width="221" height="80">
+    </p>
 
 
-<p>月の重力圏内に入ったら、軌道を変更する。</p>
+    <h2 id="mcc">軌道修正</h2>
 
 
-<h3 id="mcc_plane">軌道の傾きを変える</h3>
+    <p>月の重力圏内に入ったら、軌道を変更する。</p>
 
 
-<p><strong>Map MFD</strong>で<kbd>REF</kbd>をクリックして、矢印キーで<strong>Moon</strong>を選択する。</p>
-<p><kbd>DSP</kbd>をクリックしてから<kbd>MOD</kbd>をクリック。<br>
-<strong>Orbit lines</strong>を<strong>Orbit plane</strong>にしておく。</p>
-
-<p>
-<img loading="lazy" src="/images/tutorial/moon-mcc-notransx/MoonApproach004.png" width="598" height="255">
-</p>
-
-<p><kbd>TGT</kbd>をクリックして、矢印キーで<strong>Spaceports</strong>→<strong>Brighton Beach</strong>を選択して<kbd>Enter</kbd>。</p>
-
-<p>
-<img loading="lazy" src="/images/tutorial/moon-mcc-notransx/MoonApproach005.png" width="556" height="288">
-</p>
-
-<p><kbd>NML+</kbd> (<kbd>Orbit Normal+</kbd>)をクリック。<br>
-オートパイロットが姿勢を変えるのを待つ。</p>
-
-<p>
-<img loading="lazy" src="/images/tutorial/moon-mcc-notransx/MoonApproach006.png" width="246" height="96">
-</p>
-
-<p>出力を抑えて少しずつ加速する。（<kbd>Ctrl</kbd>キーを押しながら<kbd>+</kbd>を少しずつ押す）</p>
-<p><strong>Map MFD</strong>を見ると、<kbd>NML+</kbd>で加速することで、軌道の傾き（軌道面）が変化するのがわかる。<br>
-うまくいかない場合は、<kbd>NML -</kbd>姿勢にしてからエンジンを噴射する。</p>
-<p>基地の近くを軌道が通るようにする。</p>
-
-<p>
-<img loading="lazy" src="/images/tutorial/moon-mcc-notransx/MoonApproach007.png" width="321" height="323">
-</p>
-
-<p>時間が経つと月の自転で少しずつずれていくので、正確に合わせる必要はない。</p>
+    <h3 id="mcc_plane">軌道の傾きを変える</h3>
 
 
-<h3 id="mcc_alt">軌道高度を上げる・下げる</h3>
+    <p><strong>Map MFD</strong>で<kbd>REF</kbd>をクリックして、矢印キーで<strong>Moon</strong>を選択する。</p>
+    <p><kbd>DSP</kbd>をクリックしてから<kbd>MOD</kbd>をクリック。<br>
+      <strong>Orbit lines</strong>を<strong>Orbit plane</strong>にしておく。
+    </p>
+
+    <p>
+      <img loading="lazy" src="/images/tutorial/moon-mcc-notransx/MoonApproach004.png" width="598" height="255">
+    </p>
+
+    <p><kbd>TGT</kbd>をクリックして、矢印キーで<strong>Spaceports</strong>→<strong>Brighton Beach</strong>を選択して<kbd>Enter</kbd>。</p>
+
+    <p>
+      <img loading="lazy" src="/images/tutorial/moon-mcc-notransx/MoonApproach005.png" width="556" height="288">
+    </p>
+
+    <p><kbd>NML+</kbd> (<kbd>Orbit Normal+</kbd>)をクリック。<br>
+      オートパイロットが姿勢を変えるのを待つ。</p>
+
+    <p>
+      <img loading="lazy" src="/images/tutorial/moon-mcc-notransx/MoonApproach006.png" width="246" height="96">
+    </p>
+
+    <p>出力を抑えて少しずつ加速する。（<kbd>Ctrl</kbd>キーを押しながら<kbd>+</kbd>を少しずつ押す）</p>
+    <p><strong>Map MFD</strong>を見ると、<kbd>NML+</kbd>で加速することで、軌道の傾き（軌道面）が変化するのがわかる。<br>
+      うまくいかない場合は、<kbd>NML -</kbd>姿勢にしてからエンジンを噴射する。</p>
+    <p>基地の近くを軌道が通るようにする。</p>
+
+    <p>
+      <img loading="lazy" src="/images/tutorial/moon-mcc-notransx/MoonApproach007.png" width="321" height="323">
+    </p>
+
+    <p>時間が経つと月の自転で少しずつずれていくので、正確に合わせる必要はない。</p>
 
 
-<p>いったん<kbd>Prograde</kbd>にする。</p>
-<p>姿勢変更が終わったら、<kbd>Prograde</kbd>を解除する。<br>
-<strong>RCS ROT</strong>にして、テンキーの<kbd>3</kbd>を押して右を向く。</p>
-
-<p>
-<img loading="lazy" src="/images/tutorial/moon-mcc-notransx/MoonApproach008.png" width="281" height="66">
-</p>
-
-<p>機首を<strong>090</strong>に向けて、回転を止める。（テンキー<kbd>5</kbd>）</p>
-
-<p>
-<img loading="lazy" src="/images/tutorial/moon-mcc-notransx/MoonApproach009.png" width="348" height="112">
-</p>
-
-<p>これで、軌道の外側に機首を向けたことになる。</p>
-<p><strong>Orbit MFD</strong>の<strong>PeA</strong>の数字を見ながら加速する。<br>
-メインエンジンかRCSを噴射する。</p>
-<p>加速すると、<strong>PeA</strong>が上昇するので、これを<strong>20km</strong>くらいにする。<br>
-うまくいかない場合は、ちょうど反対側に機首を向けてエンジンを噴射する。</p>
-
-<p>
-<img loading="lazy" src="/images/tutorial/moon-mcc-notransx/MoonApproach010.png" width="365" height="140">
-</p>
-
-<p>これで、目的地のほぼ真上を通る、高度20kmの軌道に乗ることができた。</p>
+    <h3 id="mcc_alt">軌道高度を上げる・下げる</h3>
 
 
-<h3 id="mcc_2">二度目の軌道修正</h3>
+    <p>いったん<kbd>Prograde</kbd>にする。</p>
+    <p>姿勢変更が終わったら、<kbd>Prograde</kbd>を解除する。<br>
+      <strong>RCS ROT</strong>にして、テンキーの<kbd>3</kbd>を押して右を向く。
+    </p>
+
+    <p>
+      <img loading="lazy" src="/images/tutorial/moon-mcc-notransx/MoonApproach008.png" width="281" height="66">
+    </p>
+
+    <p>機首を<strong>090</strong>に向けて、回転を止める。（テンキー<kbd>5</kbd>）</p>
+
+    <p>
+      <img loading="lazy" src="/images/tutorial/moon-mcc-notransx/MoonApproach009.png" width="348" height="112">
+    </p>
+
+    <p>これで、軌道の外側に機首を向けたことになる。</p>
+    <p><strong>Orbit MFD</strong>の<strong>PeA</strong>の数字を見ながら加速する。<br>
+      メインエンジンかRCSを噴射する。</p>
+    <p>加速すると、<strong>PeA</strong>が上昇するので、これを<strong>20km</strong>くらいにする。<br>
+      うまくいかない場合は、ちょうど反対側に機首を向けてエンジンを噴射する。</p>
+
+    <p>
+      <img loading="lazy" src="/images/tutorial/moon-mcc-notransx/MoonApproach010.png" width="365" height="140">
+    </p>
+
+    <p>これで、目的地のほぼ真上を通る、高度20kmの軌道に乗ることができた。</p>
 
 
-<p><strong>Orbit MFD</strong>の一番下の数字を見て、<strong>0.80</strong>を超えたらもう一度軌道修正する。<br>
-余裕があれば、<strong>0.90</strong>を超えた時点でもう一度軌道修正してもよい。</p>
+    <h3 id="mcc_2">二度目の軌道修正</h3>
 
 
-<h2 id="transx">TransXとの関係</h2>
+    <p><strong>Orbit MFD</strong>の一番下の数字を見て、<strong>0.80</strong>を超えたらもう一度軌道修正する。<br>
+      余裕があれば、<strong>0.90</strong>を超えた時点でもう一度軌道修正してもよい。</p>
 
 
-<p>「軌道の傾きを変える（<kbd>NML+</kbd>か<kbd>NML-</kbd>）」は、TransXの<strong>Ch. plane vel.</strong>と同じマニューバである。</p>
-
-<p>
-<img loading="lazy" src="/images/tutorial/moon-mcc-notransx/MoonApproach011.png" width="302" height="195">
-</p>
-
-<p>「軌道高度を変更する（軌道の外側を向いて加速）」は、TransXの<strong>Outward. vel.</strong>と同じマニューバである。</p>
-
-<p>
-<img loading="lazy" src="/images/tutorial/moon-mcc-notransx/MoonApproach012.png" width="321" height="178">
-</p>
-
-<p>TransXを使えば、これらのふたつのマニューバをひとつにまとめることができる。</p>
+    <h2 id="transx">TransXとの関係</h2>
 
 
-<h3 id="transx_appx">補足</h3>
+    <p>「軌道の傾きを変える（<kbd>NML+</kbd>か<kbd>NML-</kbd>）」は、TransXの<strong>Ch. plane vel.</strong>と同じマニューバである。</p>
+
+    <p>
+      <img loading="lazy" src="/images/tutorial/moon-mcc-notransx/MoonApproach011.png" width="302" height="195">
+    </p>
+
+    <p>「軌道高度を変更する（軌道の外側を向いて加速）」は、TransXの<strong>Outward. vel.</strong>と同じマニューバである。</p>
+
+    <p>
+      <img loading="lazy" src="/images/tutorial/moon-mcc-notransx/MoonApproach012.png" width="321" height="178">
+    </p>
+
+    <p>TransXを使えば、これらのふたつのマニューバをひとつにまとめることができる。</p>
 
 
-<p>今回は直感的にわかりやすいマニューバでしたが、そうでない場合もあります。<br>
-そういう場合は、TransXのマニューバの3つの要素を組み合わせて、試行錯誤を繰り返して目的を達成します。</p>
-
-<p>すこし難しい作業ではありますが、スイングバイなどの複雑な軌道を作成するために必須となるテクニックです。<br>
-時間に余裕があるときなどにぜひ練習してみてください。</p>
+    <h3 id="transx_appx">補足</h3>
 
 
-<h2 id="video">動画</h2>
+    <p>今回は直感的にわかりやすいマニューバでしたが、そうでない場合もあります。<br>
+      そういう場合は、TransXのマニューバの3つの要素を組み合わせて、試行錯誤を繰り返して目的を達成します。</p>
+
+    <p>すこし難しい作業ではありますが、スイングバイなどの複雑な軌道を作成するために必須となるテクニックです。<br>
+      時間に余裕があるときなどにぜひ練習してみてください。</p>
 
 
-<p><a href="https://www.youtube.com/watch?v=QpaSCq0Mhpg" target="_blank" rel="noopener noreferrer">YouTube</a></p>
+    <h2 id="video">動画</h2>
 
-<p><a href="https://www.nicovideo.jp/watch/sm27819386" target="_blank" rel="noopener noreferrer">ニコニコ動画</a></p>
+
+    <p><a href="https://www.youtube.com/watch?v=QpaSCq0Mhpg" target="_blank" rel="noopener noreferrer">YouTube</a></p>
+
+    <p><a href="https://www.nicovideo.jp/watch/sm27819386" target="_blank" rel="noopener noreferrer">ニコニコ動画</a></p>
 
   </main>
 
 </body>
+
 </html>

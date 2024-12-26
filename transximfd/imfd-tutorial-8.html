@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 
 <html lang="ja">
+
 <head>
   <script src="/scripts/ga.js"></script>
   <meta charset="UTF-8">
@@ -15,155 +16,163 @@
 
   <main>
 
-  <h1>IMFD Part8 月を出発点にしたフライトを作る</h1>
+    <h1>IMFD Part8 月を出発点にしたフライトを作る</h1>
 
 
-<p>月などの衛星を出発点にしたフライトを作成する方法について解説します。<br>
-例題として、地球の月から火星へのフライトを作成します。</p>
+    <p>月などの衛星を出発点にしたフライトを作成する方法について解説します。<br>
+      例題として、地球の月から火星へのフライトを作成します。</p>
 
-<ol start="0">
-<li><a href="#summary">衛星を出発点にした遷移軌道</a></li>
-<li><a href="#transfer">地球→火星への遷移軌道を作る</a></li>
-<li><a href="#date">1周前の日時へ飛ぶ</a></li>
-<li><a href="#connect">軌道を接続する</a>
-  <ul>
-  <li><a href="#connect_sling">Sling-shotプログラムを開く</a></li>
-  <li><a href="#connect_orbit">遷移軌道と衛星軌道を重ねる</a></li>
-  <li><a href="#connect_tgicept">Target Interceptと一致させる</a></li>
-  </ul>
-</li>
-</ol>
+    <ol start="0">
+      <li><a href="#summary">衛星を出発点にした遷移軌道</a></li>
+      <li><a href="#transfer">地球→火星への遷移軌道を作る</a></li>
+      <li><a href="#date">1周前の日時へ飛ぶ</a></li>
+      <li><a href="#connect">軌道を接続する</a>
+        <ul>
+          <li><a href="#connect_sling">Sling-shotプログラムを開く</a></li>
+          <li><a href="#connect_orbit">遷移軌道と衛星軌道を重ねる</a></li>
+          <li><a href="#connect_tgicept">Target Interceptと一致させる</a></li>
+        </ul>
+      </li>
+    </ol>
 
-<ul>
-<li><a href="#explanation">解説</a></li>
-<li><a href="/transximfd/#imfd" target="_blank">IMFDの操作</a></li>
-</ul>
-
-
-<h2 id="summary">衛星を出発点にした遷移軌道</h2>
+    <ul>
+      <li><a href="#explanation">解説</a></li>
+      <li><a href="/transximfd/#imfd">IMFDの操作</a></li>
+    </ul>
 
 
-<p>地球の月や、木星のエウロパなどの衛星を出発点とする遷移軌道を作成するときは、以下のような手順になる。</p>
-
-<ol>
-<li>惑星（例：月の場合は地球）を基準にした他の惑星へ向かう軌道を作成する</li>
-<li>衛星と、他の惑星へ向かう軌道が最適な角度で接するタイミングを探す</li>
-</ol>
-
-<p><a href="imfd-download.html" target="_blank">IMFD</a>の<strong>Sling-shot</strong>プログラムを使って、これらの作業を実行する。</p>
+    <h2 id="summary">衛星を出発点にした遷移軌道</h2>
 
 
-<h2 id="transfer">地球→火星への遷移軌道を作る</h2>
+    <p>地球の月や、木星のエウロパなどの衛星を出発点とする遷移軌道を作成するときは、以下のような手順になる。</p>
+
+    <ol>
+      <li>惑星（例：月の場合は地球）を基準にした他の惑星へ向かう軌道を作成する</li>
+      <li>衛星と、他の惑星へ向かう軌道が最適な角度で接するタイミングを探す</li>
+    </ol>
+
+    <p><a href="imfd-download.html">IMFD</a>の<strong>Sling-shot</strong>プログラムを使って、これらの作業を実行する。</p>
 
 
-<p><strong>Delta-glider</strong>フォルダの<strong>Brighton Beach</strong>シナリオでゲームを開始する。</p>
-
-<p>
-<img loading="lazy" src="/images/transximfd/imfd-tutorial-8/001.png" width="253" height="128">
-</p>
-
-<p><strong>Program Menu</strong>→<strong>Course</strong>→<strong>Target Intercept</strong>を開く。</p>
-<p><strong>Tgt Mars</strong>、<strong>Src Earth</strong>、<strong>Ref Sun</strong>にする。</p>
-
-<p>
-<img loading="lazy" src="/images/transximfd/imfd-tutorial-8/002.png" width="407" height="456">
-</p>
-
-<p>地球から火星へ向かう軌道を作成する。※<br>
-<a href="imfd-tutorial-1.html" target="_blank">Target Interceptとフライトプランの作成</a></p>
-
-<p class="note">※今回は日数の指定はありません。</p>
+    <h2 id="transfer">地球→火星への遷移軌道を作る</h2>
 
 
-<h2 id="date">1周前の日時へ飛ぶ</h2>
+    <p><strong>Delta-glider</strong>フォルダの<strong>Brighton Beach</strong>シナリオでゲームを開始する。</p>
+
+    <p>
+      <img loading="lazy" src="/images/transximfd/imfd-tutorial-8/001.png" width="253" height="128">
+    </p>
+
+    <p><strong>Program Menu</strong>→<strong>Course</strong>→<strong>Target Intercept</strong>を開く。</p>
+    <p><strong>Tgt Mars</strong>、<strong>Src Earth</strong>、<strong>Ref Sun</strong>にする。</p>
+
+    <p>
+      <img loading="lazy" src="/images/transximfd/imfd-tutorial-8/002.png" width="407" height="456">
+    </p>
+
+    <p>地球から火星へ向かう軌道を作成する。※<br>
+      <a href="imfd-tutorial-1.html">Target Interceptとフライトプランの作成</a>
+    </p>
+
+    <p class="note">※今回は日数の指定はありません。</p>
 
 
-<p><a href="/misc/#scneditor" target="_blank">シナリオエディタ</a>を使って、予定時刻の少し前まで移動する。</p>
-<p>地球発の惑星間飛行では、地球が1日で自転するため、およそ1日前を基準にする。</p>
-<p>しかし、月が地球のまわりを1周するのには27日くらいかかる。<br>
-このため、月を出発点にする場合は、<strong>28日前</strong>まで移動する。</p>
-
-<p>
-<img loading="lazy" src="/images/transximfd/imfd-tutorial-8/003.png" width="250" height="290">
-</p>
-
-<p>エウロパの場合、およそ3.6日で木星のまわりを1周するので、4日前まで移動する。</p>
+    <h2 id="date">1周前の日時へ飛ぶ</h2>
 
 
-<h2 id="connect">軌道を接続する</h2>
+    <p><a href="/misc/#scneditor">シナリオエディタ</a>を使って、予定時刻の少し前まで移動する。</p>
+    <p>地球発の惑星間飛行では、地球が1日で自転するため、およそ1日前を基準にする。</p>
+    <p>しかし、月が地球のまわりを1周するのには27日くらいかかる。<br>
+      このため、月を出発点にする場合は、<strong>28日前</strong>まで移動する。</p>
+
+    <p>
+      <img loading="lazy" src="/images/transximfd/imfd-tutorial-8/003.png" width="250" height="290">
+    </p>
+
+    <p>エウロパの場合、およそ3.6日で木星のまわりを1周するので、4日前まで移動する。</p>
 
 
-<p>もうひとつのMFDでIMFDを開いて、データを共有させる。</p>
-
-<p>
-<img loading="lazy" src="/images/transximfd/imfd-tutorial-8/004.png" width="290" height="97">
-</p>
-
-<p><strong>Sling-shot</strong>プログラムを使って、作成しておいた遷移軌道と月の軌道を接続する。</p>
+    <h2 id="connect">軌道を接続する</h2>
 
 
-<h3 id="connect_sling">Sling-shotプログラムを開く</h3>
+    <p>もうひとつのMFDでIMFDを開いて、データを共有させる。</p>
+
+    <p>
+      <img loading="lazy" src="/images/transximfd/imfd-tutorial-8/004.png" width="290" height="97">
+    </p>
+
+    <p><strong>Sling-shot</strong>プログラムを使って、作成しておいた遷移軌道と月の軌道を接続する。</p>
 
 
-<p><strong>Program Menu</strong>→<strong>Sling-shot</strong>を開く。</p>
-<p><kbd>REF</kbd>をクリックして、<strong>Ref Earth</strong>にする。<br>
-<kbd>Src</kbd>は<strong>Moon</strong>にする。</p>
-<p><strong>Course</strong>が選択されていることを確認する。</p>
-
-<p>
-<img loading="lazy" src="/images/transximfd/imfd-tutorial-8/005.png" width="456" height="456">
-</p>
+    <h3 id="connect_sling">Sling-shotプログラムを開く</h3>
 
 
-<h3 id="connect_orbit">遷移軌道と衛星軌道を重ねる</h3>
+    <p><strong>Program Menu</strong>→<strong>Sling-shot</strong>を開く。</p>
+    <p><kbd>REF</kbd>をクリックして、<strong>Ref Earth</strong>にする。<br>
+      <kbd>Src</kbd>は<strong>Moon</strong>にする。
+    </p>
+    <p><strong>Course</strong>が選択されていることを確認する。</p>
+
+    <p>
+      <img loading="lazy" src="/images/transximfd/imfd-tutorial-8/005.png" width="456" height="456">
+    </p>
 
 
-<p><strong>TEj</strong>※を選択して、<kbd>+</kbd>ボタンをクリックして時刻を進める。<br>
-<strong>Escape Vector:</strong>の下の<strong>oV</strong>の数字ができるだけ小さくなるようにする。</p>
-
-<p>
-<img loading="lazy" src="/images/transximfd/imfd-tutorial-8/006.png" width="453" height="457">
-</p>
-
-<p>※<strong class="caution">重要</strong>：バグがあるため、MJDを操作しても正常に反応しません。</p>
+    <h3 id="connect_orbit">遷移軌道と衛星軌道を重ねる</h3>
 
 
-<h3 id="connect_tgicept">Target Interceptと一致させる</h3>
+    <p><strong>TEj</strong>※を選択して、<kbd>+</kbd>ボタンをクリックして時刻を進める。<br>
+      <strong>Escape Vector:</strong>の下の<strong>oV</strong>の数字ができるだけ小さくなるようにする。
+    </p>
+
+    <p>
+      <img loading="lazy" src="/images/transximfd/imfd-tutorial-8/006.png" width="453" height="457">
+    </p>
+
+    <p>※<strong class="caution">重要</strong>：バグがあるため、MJDを操作しても正常に反応しません。</p>
 
 
-<p><strong>Target Intercept</strong>に戻って、<strong>TEj</strong>の時刻を<strong>Sling-shot</strong>と一致させる。<br>
-<kbd>Set</kbd>をクリックして、<strong>Sling-shot</strong>の<strong>TEj</strong>と同じ数字を<strong>Target Intercept</strong>の<strong>TEj</strong>に入力する。※</p>
-
-<p>
-<img loading="lazy" src="/images/transximfd/imfd-tutorial-8/007.png" width="263" height="249">
-</p>
-
-<p class="note">※桁の小さい数が表示されないため若干のずれがありますが、気にする必要はありません。</p>
-<p><strong>TIn</strong>の時刻を調整して、<strong>Tot</strong>をできるだけ小さくする。※</p>
-
-<p>
-<img loading="lazy" src="/images/transximfd/imfd-tutorial-8/008.png" width="407" height="279">
-</p>
-
-<p class="note">※日時を指定して飛ぶ場合は、この作業は必要ありません。</p>
-<p><strong>Sling-shot</strong>に戻る。<br>
-<strong>TEj</strong>を調整して、<strong>oV</strong>をできるだけ小さくする。</p>
-<p>ふたたび<strong>Target Intercept</strong>に戻って、<strong>TEj</strong>の時刻を一致させる。</p>
-<p>これでフライトプランが作成できました。<br>
-次回はこのプランを実行して、月から火星に向かいます。</p>
+    <h3 id="connect_tgicept">Target Interceptと一致させる</h3>
 
 
-<h2 id="explanation">解説</h2>
+    <p><strong>Target Intercept</strong>に戻って、<strong>TEj</strong>の時刻を<strong>Sling-shot</strong>と一致させる。<br>
+      <kbd>Set</kbd>をクリックして、<strong>Sling-shot</strong>の<strong>TEj</strong>と同じ数字を<strong>Target
+        Intercept</strong>の<strong>TEj</strong>に入力する。※
+    </p>
+
+    <p>
+      <img loading="lazy" src="/images/transximfd/imfd-tutorial-8/007.png" width="263" height="249">
+    </p>
+
+    <p class="note">※桁の小さい数が表示されないため若干のずれがありますが、気にする必要はありません。</p>
+    <p><strong>TIn</strong>の時刻を調整して、<strong>Tot</strong>をできるだけ小さくする。※</p>
+
+    <p>
+      <img loading="lazy" src="/images/transximfd/imfd-tutorial-8/008.png" width="407" height="279">
+    </p>
+
+    <p class="note">※日時を指定して飛ぶ場合は、この作業は必要ありません。</p>
+    <p><strong>Sling-shot</strong>に戻る。<br>
+      <strong>TEj</strong>を調整して、<strong>oV</strong>をできるだけ小さくする。
+    </p>
+    <p>ふたたび<strong>Target Intercept</strong>に戻って、<strong>TEj</strong>の時刻を一致させる。</p>
+    <p>これでフライトプランが作成できました。<br>
+      次回はこのプランを実行して、月から火星に向かいます。</p>
 
 
-<p><strong>Sling-shot</strong>は本来はスイングバイを実行するためのプログラムです。<br>
-TransXとは違ってスイングバイの設計はできませんが、「現在の軌道を、次の軌道に接続する」ことができます。<br>
-これを応用して、地球から火星へ飛ぶ軌道と、月の衛星軌道を接続します。</p>
+    <h2 id="explanation">解説</h2>
 
-<p>通常のスイングバイを実行する場合は、TransXを使用してください。<br>
-<a href="/transximfd/#slingshot" target="_blank">スイングバイの基本</a></p>
+
+    <p><strong>Sling-shot</strong>は本来はスイングバイを実行するためのプログラムです。<br>
+      TransXとは違ってスイングバイの設計はできませんが、「現在の軌道を、次の軌道に接続する」ことができます。<br>
+      これを応用して、地球から火星へ飛ぶ軌道と、月の衛星軌道を接続します。</p>
+
+    <p>通常のスイングバイを実行する場合は、TransXを使用してください。<br>
+      <a href="/transximfd/#slingshot">スイングバイの基本</a>
+    </p>
 
   </main>
 
 </body>
+
 </html>

@@ -16,382 +16,386 @@
 
   <main>
 
-  <h1>Part11 TransXのマニューバ</h1>
-
-
-  <p><strong>TransX MFD</strong>のマニューバ作成機能について説明します。</p>
-
-  <ol>
-    <li><a href="#aboutmanoeuvre">マニューバとは何か</a></li>
-    <li><a href="#viewmanoeuvre">マニューバの準備</a></li>
-    <li><a href="#variable">マニューバの要素</a></li>
-    <li><a href="#input">マニューバの入力</a>
-      <ul>
-        <li><a href="#input_++"><kbd>++</kbd>or<kbd>--</kbd></a></li>
-        <li><a href="#input_adj"><kbd>ADJ</kbd>or<kbd>-AJ</kbd></a></li>
-        <li><a href="#input_updates">++ Updates</a></li>
-      </ul>
-    </li>
-    <li><a href="#viewencounter">結果を確認する</a>
-      <ul>
-        <li><a href="#viewencounter_view">View:Encounter</a></li>
-      </ul>
-    </li>
-    <li><a href="#viewtarget">マニューバを実行する</a>
-      <ul>
-        <li><a href="#viewtarget_view">View:Target</a></li>
-        <li><a href="#viewtarget_autocenter">Auto-Center</a></li>
-        <li><a href="#viewtarget_burn">エンジン噴射</a></li>
-        <li><a href="#viewtarget_end">マニューバの完了</a></li>
-        <li><a href="#viewtarget_caution">注意点</a></li>
-      </ul>
-    </li>
-  </ol>
-
-  <ul>
-    <li><a href="#form">アンケート</a></li>
-    <li><a href="#videos">動画</a></li>
-  </ul>
-
-  <p>ここで書かれているのと<strong>同じ操作をする必要はありません。</strong><br>
-    一度だけざっくり読んでいただければ十分です。</p>
-
-
-  <h2 id="aboutmanoeuvre">マニューバとは何か</h2>
-
-
-  <p>エンジンを噴射して加速し、軌道を変化させることをマニューバ(Manoeuvre)と呼ぶ。</p>
-
-  <p>このチュートリアルにおいて、<strong>マニューバの作成</strong>とは、どのようなマニューバを実行するか決定することを意味する。</p>
-
-  <p>マニューバを作成・実行して、ほかの天体へと飛行する、周回軌道に投入することができる。</p>
-
-
-  <h2 id="viewmanoeuvre">マニューバの準備</h2>
-
-
-  <p><kbd>VW</kbd>をクリック。<br>
-    <strong>View:Manoeuvre</strong>にする。
-  </p>
-
-  <p>
-    <img loading="lazy" src="/images/tutorial/part11/001.png" width="525" height="425">
-  </p>
-
-  <p><kbd>++</kbd>をクリック。<br>
-    <strong>Manoeuvre mode</strong>を<strong>On</strong>にする。
-  </p>
-
-  <p>
-    <img loading="lazy" src="/images/tutorial/part11/002.png" width="525" height="425">
-  </p>
-
-  <p><kbd>VAR</kbd>or<kbd>-VR</kbd>をクリック。<br>
-    これから説明する要素を選択する。</p>
-
-  <p>
-    <img loading="lazy" src="/images/tutorial/part11/003.png" width="525" height="425">
-  </p>
-
-
-  <h2 id="variable">マニューバの要素</h2>
-
-
-  <p>以下の要素を組み合わせて、予定通りの軌道になるようにマニューバを作成する。</p>
-
-  <p>
-    <img loading="lazy" src="/images/tutorial/part11/004.png" width="905" height="640">
-  </p>
-
-  <table>
-    <tr>
-      <td><a href="#variable_prograde">Prograde vel.</a></td>
-      <td>Prograde velocity</td>
-    </tr>
-    <tr>
-      <td><a href="#variable_mandate">Man. date</a></td>
-      <td>Manoeuvre date</td>
-    </tr>
-    <tr>
-      <td><a href="#variable_outward">Outward vel.</a></td>
-      <td>Outward velocity</td>
-    </tr>
-    <tr>
-      <td><a href="#variable_chplane">Ch. plane vel.</a></td>
-      <td>Change plane velocity</td>
-    </tr>
-  </table>
-
-
-  <h3 id="variable_prograde">Prograde vel.</h3>
-
-
-  <p>宇宙船の速度ベクトルの方向へ加速する。</p>
-
-  <p>
-    <img loading="lazy" src="/images/tutorial/part11/008.png" width="250" height="80">
-  </p>
-
-  <p><kbd>ProGrade</kbd>or<kbd>RetroGrade</kbd>オートパイロットと同じ。</p>
-
-  <p>プラスの値なら前を向いて加速。<br>
-    マイナスなら後ろを向いて加速する。（＝減速する）</p>
-
-
-  <h3 id="variable_mandate">Man. date</h3>
-
-
-  <p>マニューバ実行の日時。</p>
-
-  <p>
-    <img loading="lazy" src="/images/tutorial/part11/005.png" width="250" height="80">
-  </p>
-
-  <p>「いつ」マニューバを実行するか決める。<br>
-    <a href="/misc/orbitalelements.html#mjd" target="_blank">MJD</a>（修正ユリウス日）で表示される。
-  </p>
-
-  <p>MJDでは「時・分・秒」は小数点以下で表示される。<br>
-    12進法ではなく10進法なので注意。</p>
-  <p>例えば、MJDにおける111.1は、111日と2.4時間になる。<br>
-    0.02はおよそ30分になる。</p>
-  <p>現在時刻より前の、過去の時刻を指定しないよう注意する。<br>
-    現在時刻は画面右上の<a href="/basic/orbitercontrol.html#info" target="_blank">情報メニュー</a>に表示されている。</p>
-
-  <p>
-    <img loading="lazy" src="/images/tutorial/part11/006.png" width="200" height="50">
-    <br>
-    <img loading="lazy" src="/images/tutorial/part11/007.png" width="200" height="50">
-    <br>
-    1枚目がOrbiter2010、2枚目が2016
-  </p>
-
-
-  <h3 id="variable_outward">Outward vel.</h3>
-
-
-  <p>軌道の外側／内側への加速。</p>
-
-  <p>
-    <img loading="lazy" src="/images/tutorial/part11/009.png" width="250" height="80">
-  </p>
-
-  <p>プラスなら、軌道の外側に加速。<br>
-    マイナスなら、軌道の内側に加速。</p>
-
-
-  <h3 id="variable_chplane">Ch. plane vel.</h3>
-
-
-  <p>現在の軌道面に対して垂直方向に加速する。</p>
-
-  <p>
-    <img loading="lazy" src="/images/tutorial/part11/010.png" width="250" height="80">
-  </p>
-
-  <p><kbd>Orbit Normal</kbd>オートパイロットと同じ。<br>
-    軌道面を変更するために使用する。</p>
-
-  <p>軌道面を変更することで、目標地点の真上を通る軌道にすることができる。</p>
-
-
-  <h2 id="input">マニューバの入力</h2>
-
-
-  <p>マニューバの要素を選択したら、必要な数値を入力する。</p>
-
-
-  <h3 id="input_++"><kbd>++</kbd>or<kbd>--</kbd></h3>
-
-
-  <p><kbd>++</kbd>でプラス方向に数値を変化させる。<br>
-    <kbd>--</kbd>でマイナス方向に変化させる。
-  </p>
-
-  <p>
-    <img loading="lazy" src="/images/tutorial/part11/011.png" width="525" height="425">
-  </p>
-
-  <p>一部の機能は、<kbd>++</kbd>をクリックすることで実行できる。</p>
-
-
-  <h3 id="input_adj"><kbd>ADJ</kbd>or<kbd>-AJ</kbd></h3>
-
-
-  <p>感度を変更する。<br>
-    (Adjust sensitivity)</p>
-
-  <p><kbd>++</kbd>or<kbd>--</kbd>をクリックしたときの変化を、小さく・大きくする。</p>
-
-  <p>
-    <img loading="lazy" src="/images/tutorial/part11/012.png" width="525" height="425">
-  </p>
-
-  <p>以下の順番で小さくなる。<br>
-    <strong>Rough</strong> &gt; <strong>Coarse</strong> &gt; <strong>Medium</strong> &gt; <strong>Fine</strong> &gt; <strong>Super</strong> &gt; <strong>Ultra</strong> &gt; <strong>Hyper</strong> &gt; <strong>Micro</strong>
-  </p>
-
-  <p><strong>Reset</strong>を選択して<kbd>++</kbd>をクリックすると、初期値に戻る。</p>
-
-
-  <h3 id="input_updates">++ Updates</h3>
-
-
-  <p>情報を更新して再計算する。</p>
-
-  <p>
-    <img loading="lazy" src="/images/tutorial/part11/013.png" width="250" height="80">
-  </p>
-
-  <p>TransXは、その時点でのデータをもとに予測軌道を計算する。<br>
-    時間経過によって計算結果は変わるので、マニューバの実行直前に再計算しておく。</p>
-
-  <p><kbd>VAR</kbd>or<kbd>-VR</kbd>でこれを選択してから、<kbd>++</kbd>をクリックして実行する。</p>
-
-
-  <h2 id="viewencounter">結果を確認する</h2>
-
-
-  <p>マニューバを作成したら、もう1つのMFDで<kbd>FWD</kbd>をクリック。<br>
-    <strong>Stage 2</strong>にする。
-  </p>
-
-  <p>目標に接近したときの予測軌道が表示される。</p>
-
-  <p>
-    <img loading="lazy" src="/images/tutorial/part11/014.png" width="519" height="425">
-  </p>
-
-
-  <h3 id="viewencounter_view">View:Encounter</h3>
-
-
-  <p><kbd>VW</kbd>をクリックして、<strong>View:Encounter</strong>にする。<br>
-    最接近時の高度などが表示される。</p>
-
-  <p>
-    <img loading="lazy" src="/images/tutorial/part11/015.png" width="519" height="425">
-  </p>
-
-  <p>これらのデータを確認しつつ、マニューバを修正する。</p>
-
-  <table>
-    <tr>
-      <td><abbr title="Focus Periapsis Distance">Focus PeD</abbr></td>
-      <td>予測される<strong>Pe</strong>の、惑星中心からの距離</td>
-    </tr>
-    <tr>
-      <td><abbr title="Minimum Altitude">Min Alt</abbr></td>
-      <td>最接近時の地表からの高度</td>
-    </tr>
-    <tr>
-      <td><abbr title="Off-plane Distance">Offplane Dist</abbr></td>
-      <td>着陸目標から、自分の軌道までの距離。<br>これを小さくすれば、目的地の真上を通る軌道にすることができる</td>
-    </tr>
-  </table>
-
-
-  <h2 id="viewtarget">マニューバを実行する</h2>
-
-
-  <p><strong>View:Target</strong>に切り替えて、エンジンを噴射する。</p>
-
-
-  <h3 id="viewtarget_view">View:Target</h3>
-
-
-  <p>マニューバを作成したら、<kbd>VW</kbd>をクリック。<br>
-    <strong>View:Target</strong>に切り替える。
-  </p>
-
-  <p>
-    <img loading="lazy" src="/images/tutorial/part11/016.png" width="525" height="425">
-  </p>
-
-
-  <h3 id="viewtarget_autocenter">Auto-Center</h3>
-
-
-  <p><kbd>VAR</kbd>or<kbd>-VR</kbd>を何度かクリック。<br>
-    <strong>Auto-Center</strong>を選択する。
-  </p>
-
-  <p><kbd>++</kbd>をクリック。<br>
-    <strong>Auto-Center</strong>を<strong>On</strong>にする。
-  </p>
-
-  <p>オートパイロットが宇宙船の姿勢を変更するのを待つ。</p>
-
-  <p>
-    <img loading="lazy" src="/images/tutorial/part11/017.png" width="525" height="425">
-  </p>
-
-
-  <h3 id="viewtarget_burn">エンジン噴射</h3>
-
-
-  <p><strong>Begin Burn</strong>がエンジン点火までの残り時間。<br>
-    <strong>0</strong>になったら加速を始める。
-  </p>
-
-  <p>残り<strong>Delta V</strong>が<strong>5</strong>になったら、噴射を止める。</p>
-
-
-  <h3 id="viewtarget_end">マニューバの完了</h3>
-
-
-  <p><strong>Auto-Center</strong>を選択して、<kbd>++</kbd>をクリック。<br>
-    <strong>Off</strong>にする。<br>
-    <strong>Manoeuvre mode</strong>も<strong>Off</strong>にしておく。
-  </p>
-
-  <p><strong>RCS LIN</strong>を噴射して、手動で微調整する。<br>
-    <strong>View:Encounter</strong>で結果を確認する。
-  </p>
-
-
-  <h3 id="viewtarget_caution">注意点</h3>
-
-
-  <p>マニューバを終了するときは、<strong>Auto-Center</strong>と<strong>Manoeuvre mode</strong>を必ず<strong>Off</strong>にする。</p>
-
-  <p><strong>Auto-Center</strong>のオートパイロットを解除しないまま放置すると、不具合が発生する可能性がある。</p>
-
-  <p><strong>Manoeuvre mode</strong>では、作成中のマニューバから予測される軌道を表示する。<br>
-    これを解除しないと、実際の軌道を確認できない。</p>
-
-
-  <h2 id="form">アンケート</h2>
-
-
-  <form action="https://docs.google.com/forms/d/e/1FAIpQLSfrsNtgJpTU0b-hMPq0aayL_wArVvbi0YXQ0WOnOAFjeWzsRA/formResponse" target="_self" method="POST" id="mG61Hd">
-
-    <p>この記事の内容は理解できましたか？</p>
+    <h1>Part11 TransXのマニューバ</h1>
+
+
+    <p><strong>TransX MFD</strong>のマニューバ作成機能について説明します。</p>
+
+    <ol>
+      <li><a href="#aboutmanoeuvre">マニューバとは何か</a></li>
+      <li><a href="#viewmanoeuvre">マニューバの準備</a></li>
+      <li><a href="#variable">マニューバの要素</a></li>
+      <li><a href="#input">マニューバの入力</a>
+        <ul>
+          <li><a href="#input_++"><kbd>++</kbd>or<kbd>--</kbd></a></li>
+          <li><a href="#input_adj"><kbd>ADJ</kbd>or<kbd>-AJ</kbd></a></li>
+          <li><a href="#input_updates">++ Updates</a></li>
+        </ul>
+      </li>
+      <li><a href="#viewencounter">結果を確認する</a>
+        <ul>
+          <li><a href="#viewencounter_view">View:Encounter</a></li>
+        </ul>
+      </li>
+      <li><a href="#viewtarget">マニューバを実行する</a>
+        <ul>
+          <li><a href="#viewtarget_view">View:Target</a></li>
+          <li><a href="#viewtarget_autocenter">Auto-Center</a></li>
+          <li><a href="#viewtarget_burn">エンジン噴射</a></li>
+          <li><a href="#viewtarget_end">マニューバの完了</a></li>
+          <li><a href="#viewtarget_caution">注意点</a></li>
+        </ul>
+      </li>
+    </ol>
 
     <ul>
-      <li><label><input type="radio" name="entry.1914587356" value="できなかった、全然理解できない" />できなかった、全然理解できない</label></li>
-      <li><label><input type="radio" name="entry.1914587356" value="できなかった、途中から理解できない" />できなかった、途中から理解できない</label></li>
-      <li><label><input type="radio" name="entry.1914587356" value="できた、難しかった" />できた、難しかった</label></li>
-      <li><label><input type="radio" name="entry.1914587356" value="できた、簡単だった" />できた、簡単だった</label></li>
+      <li><a href="#form">アンケート</a></li>
+      <li><a href="#videos">動画</a></li>
     </ul>
 
-    <p><label for="question">わからなかった・難しかったところを教えてください（任意）</label><br>
-      <input id="question" type="text" name="entry.1857549962">
+    <p>ここで書かれているのと<strong>同じ操作をする必要はありません。</strong><br>
+      一度だけざっくり読んでいただければ十分です。</p>
+
+
+    <h2 id="aboutmanoeuvre">マニューバとは何か</h2>
+
+
+    <p>エンジンを噴射して加速し、軌道を変化させることをマニューバ(Manoeuvre)と呼ぶ。</p>
+
+    <p>このチュートリアルにおいて、<strong>マニューバの作成</strong>とは、どのようなマニューバを実行するか決定することを意味する。</p>
+
+    <p>マニューバを作成・実行して、ほかの天体へと飛行する、周回軌道に投入することができる。</p>
+
+
+    <h2 id="viewmanoeuvre">マニューバの準備</h2>
+
+
+    <p><kbd>VW</kbd>をクリック。<br>
+      <strong>View:Manoeuvre</strong>にする。
     </p>
 
     <p>
-      <button type="submit" name="button" value="送信">送信</button>
+      <img loading="lazy" src="/images/tutorial/part11/001.png" width="525" height="425">
     </p>
 
-  </form>
+    <p><kbd>++</kbd>をクリック。<br>
+      <strong>Manoeuvre mode</strong>を<strong>On</strong>にする。
+    </p>
+
+    <p>
+      <img loading="lazy" src="/images/tutorial/part11/002.png" width="525" height="425">
+    </p>
+
+    <p><kbd>VAR</kbd>or<kbd>-VR</kbd>をクリック。<br>
+      これから説明する要素を選択する。</p>
+
+    <p>
+      <img loading="lazy" src="/images/tutorial/part11/003.png" width="525" height="425">
+    </p>
 
 
-  <h2 id="videos">動画</h2>
+    <h2 id="variable">マニューバの要素</h2>
 
 
-  <p><a href="https://youtu.be/S-dko8kxh_Q" target="_blank" rel="noopener noreferrer">YouTube</a></p>
+    <p>以下の要素を組み合わせて、予定通りの軌道になるようにマニューバを作成する。</p>
 
-  <p><a href="https://www.nicovideo.jp/watch/sm25574166" target="_blank" rel="noopener noreferrer">ニコニコ動画</a></p>
+    <p>
+      <img loading="lazy" src="/images/tutorial/part11/004.png" width="905" height="640">
+    </p>
+
+    <table>
+      <tr>
+        <td><a href="#variable_prograde">Prograde vel.</a></td>
+        <td>Prograde velocity</td>
+      </tr>
+      <tr>
+        <td><a href="#variable_mandate">Man. date</a></td>
+        <td>Manoeuvre date</td>
+      </tr>
+      <tr>
+        <td><a href="#variable_outward">Outward vel.</a></td>
+        <td>Outward velocity</td>
+      </tr>
+      <tr>
+        <td><a href="#variable_chplane">Ch. plane vel.</a></td>
+        <td>Change plane velocity</td>
+      </tr>
+    </table>
+
+
+    <h3 id="variable_prograde">Prograde vel.</h3>
+
+
+    <p>宇宙船の速度ベクトルの方向へ加速する。</p>
+
+    <p>
+      <img loading="lazy" src="/images/tutorial/part11/008.png" width="250" height="80">
+    </p>
+
+    <p><kbd>ProGrade</kbd>or<kbd>RetroGrade</kbd>オートパイロットと同じ。</p>
+
+    <p>プラスの値なら前を向いて加速。<br>
+      マイナスなら後ろを向いて加速する。（＝減速する）</p>
+
+
+    <h3 id="variable_mandate">Man. date</h3>
+
+
+    <p>マニューバ実行の日時。</p>
+
+    <p>
+      <img loading="lazy" src="/images/tutorial/part11/005.png" width="250" height="80">
+    </p>
+
+    <p>「いつ」マニューバを実行するか決める。<br>
+      <a href="/misc/orbitalelements.html#mjd">MJD</a>（修正ユリウス日）で表示される。
+    </p>
+
+    <p>MJDでは「時・分・秒」は小数点以下で表示される。<br>
+      12進法ではなく10進法なので注意。</p>
+    <p>例えば、MJDにおける111.1は、111日と2.4時間になる。<br>
+      0.02はおよそ30分になる。</p>
+    <p>現在時刻より前の、過去の時刻を指定しないよう注意する。<br>
+      現在時刻は画面右上の<a href="/basic/orbitercontrol.html#info">情報メニュー</a>に表示されている。</p>
+
+    <p>
+      <img loading="lazy" src="/images/tutorial/part11/006.png" width="200" height="50">
+      <br>
+      <img loading="lazy" src="/images/tutorial/part11/007.png" width="200" height="50">
+      <br>
+      1枚目がOrbiter2010、2枚目が2016
+    </p>
+
+
+    <h3 id="variable_outward">Outward vel.</h3>
+
+
+    <p>軌道の外側／内側への加速。</p>
+
+    <p>
+      <img loading="lazy" src="/images/tutorial/part11/009.png" width="250" height="80">
+    </p>
+
+    <p>プラスなら、軌道の外側に加速。<br>
+      マイナスなら、軌道の内側に加速。</p>
+
+
+    <h3 id="variable_chplane">Ch. plane vel.</h3>
+
+
+    <p>現在の軌道面に対して垂直方向に加速する。</p>
+
+    <p>
+      <img loading="lazy" src="/images/tutorial/part11/010.png" width="250" height="80">
+    </p>
+
+    <p><kbd>Orbit Normal</kbd>オートパイロットと同じ。<br>
+      軌道面を変更するために使用する。</p>
+
+    <p>軌道面を変更することで、目標地点の真上を通る軌道にすることができる。</p>
+
+
+    <h2 id="input">マニューバの入力</h2>
+
+
+    <p>マニューバの要素を選択したら、必要な数値を入力する。</p>
+
+
+    <h3 id="input_++"><kbd>++</kbd>or<kbd>--</kbd></h3>
+
+
+    <p><kbd>++</kbd>でプラス方向に数値を変化させる。<br>
+      <kbd>--</kbd>でマイナス方向に変化させる。
+    </p>
+
+    <p>
+      <img loading="lazy" src="/images/tutorial/part11/011.png" width="525" height="425">
+    </p>
+
+    <p>一部の機能は、<kbd>++</kbd>をクリックすることで実行できる。</p>
+
+
+    <h3 id="input_adj"><kbd>ADJ</kbd>or<kbd>-AJ</kbd></h3>
+
+
+    <p>感度を変更する。<br>
+      (Adjust sensitivity)</p>
+
+    <p><kbd>++</kbd>or<kbd>--</kbd>をクリックしたときの変化を、小さく・大きくする。</p>
+
+    <p>
+      <img loading="lazy" src="/images/tutorial/part11/012.png" width="525" height="425">
+    </p>
+
+    <p>以下の順番で小さくなる。<br>
+      <strong>Rough</strong> &gt; <strong>Coarse</strong> &gt; <strong>Medium</strong> &gt; <strong>Fine</strong> &gt;
+      <strong>Super</strong> &gt; <strong>Ultra</strong> &gt; <strong>Hyper</strong> &gt; <strong>Micro</strong>
+    </p>
+
+    <p><strong>Reset</strong>を選択して<kbd>++</kbd>をクリックすると、初期値に戻る。</p>
+
+
+    <h3 id="input_updates">++ Updates</h3>
+
+
+    <p>情報を更新して再計算する。</p>
+
+    <p>
+      <img loading="lazy" src="/images/tutorial/part11/013.png" width="250" height="80">
+    </p>
+
+    <p>TransXは、その時点でのデータをもとに予測軌道を計算する。<br>
+      時間経過によって計算結果は変わるので、マニューバの実行直前に再計算しておく。</p>
+
+    <p><kbd>VAR</kbd>or<kbd>-VR</kbd>でこれを選択してから、<kbd>++</kbd>をクリックして実行する。</p>
+
+
+    <h2 id="viewencounter">結果を確認する</h2>
+
+
+    <p>マニューバを作成したら、もう1つのMFDで<kbd>FWD</kbd>をクリック。<br>
+      <strong>Stage 2</strong>にする。
+    </p>
+
+    <p>目標に接近したときの予測軌道が表示される。</p>
+
+    <p>
+      <img loading="lazy" src="/images/tutorial/part11/014.png" width="519" height="425">
+    </p>
+
+
+    <h3 id="viewencounter_view">View:Encounter</h3>
+
+
+    <p><kbd>VW</kbd>をクリックして、<strong>View:Encounter</strong>にする。<br>
+      最接近時の高度などが表示される。</p>
+
+    <p>
+      <img loading="lazy" src="/images/tutorial/part11/015.png" width="519" height="425">
+    </p>
+
+    <p>これらのデータを確認しつつ、マニューバを修正する。</p>
+
+    <table>
+      <tr>
+        <td><abbr title="Focus Periapsis Distance">Focus PeD</abbr></td>
+        <td>予測される<strong>Pe</strong>の、惑星中心からの距離</td>
+      </tr>
+      <tr>
+        <td><abbr title="Minimum Altitude">Min Alt</abbr></td>
+        <td>最接近時の地表からの高度</td>
+      </tr>
+      <tr>
+        <td><abbr title="Off-plane Distance">Offplane Dist</abbr></td>
+        <td>着陸目標から、自分の軌道までの距離。<br>これを小さくすれば、目的地の真上を通る軌道にすることができる</td>
+      </tr>
+    </table>
+
+
+    <h2 id="viewtarget">マニューバを実行する</h2>
+
+
+    <p><strong>View:Target</strong>に切り替えて、エンジンを噴射する。</p>
+
+
+    <h3 id="viewtarget_view">View:Target</h3>
+
+
+    <p>マニューバを作成したら、<kbd>VW</kbd>をクリック。<br>
+      <strong>View:Target</strong>に切り替える。
+    </p>
+
+    <p>
+      <img loading="lazy" src="/images/tutorial/part11/016.png" width="525" height="425">
+    </p>
+
+
+    <h3 id="viewtarget_autocenter">Auto-Center</h3>
+
+
+    <p><kbd>VAR</kbd>or<kbd>-VR</kbd>を何度かクリック。<br>
+      <strong>Auto-Center</strong>を選択する。
+    </p>
+
+    <p><kbd>++</kbd>をクリック。<br>
+      <strong>Auto-Center</strong>を<strong>On</strong>にする。
+    </p>
+
+    <p>オートパイロットが宇宙船の姿勢を変更するのを待つ。</p>
+
+    <p>
+      <img loading="lazy" src="/images/tutorial/part11/017.png" width="525" height="425">
+    </p>
+
+
+    <h3 id="viewtarget_burn">エンジン噴射</h3>
+
+
+    <p><strong>Begin Burn</strong>がエンジン点火までの残り時間。<br>
+      <strong>0</strong>になったら加速を始める。
+    </p>
+
+    <p>残り<strong>Delta V</strong>が<strong>5</strong>になったら、噴射を止める。</p>
+
+
+    <h3 id="viewtarget_end">マニューバの完了</h3>
+
+
+    <p><strong>Auto-Center</strong>を選択して、<kbd>++</kbd>をクリック。<br>
+      <strong>Off</strong>にする。<br>
+      <strong>Manoeuvre mode</strong>も<strong>Off</strong>にしておく。
+    </p>
+
+    <p><strong>RCS LIN</strong>を噴射して、手動で微調整する。<br>
+      <strong>View:Encounter</strong>で結果を確認する。
+    </p>
+
+
+    <h3 id="viewtarget_caution">注意点</h3>
+
+
+    <p>マニューバを終了するときは、<strong>Auto-Center</strong>と<strong>Manoeuvre mode</strong>を必ず<strong>Off</strong>にする。</p>
+
+    <p><strong>Auto-Center</strong>のオートパイロットを解除しないまま放置すると、不具合が発生する可能性がある。</p>
+
+    <p><strong>Manoeuvre mode</strong>では、作成中のマニューバから予測される軌道を表示する。<br>
+      これを解除しないと、実際の軌道を確認できない。</p>
+
+
+    <h2 id="form">アンケート</h2>
+
+
+    <form
+      action="https://docs.google.com/forms/d/e/1FAIpQLSfrsNtgJpTU0b-hMPq0aayL_wArVvbi0YXQ0WOnOAFjeWzsRA/formResponse"
+      target="_self" method="POST" id="mG61Hd">
+
+      <p>この記事の内容は理解できましたか？</p>
+
+      <ul>
+        <li><label><input type="radio" name="entry.1914587356" value="できなかった、全然理解できない" />できなかった、全然理解できない</label></li>
+        <li><label><input type="radio" name="entry.1914587356" value="できなかった、途中から理解できない" />できなかった、途中から理解できない</label>
+        </li>
+        <li><label><input type="radio" name="entry.1914587356" value="できた、難しかった" />できた、難しかった</label></li>
+        <li><label><input type="radio" name="entry.1914587356" value="できた、簡単だった" />できた、簡単だった</label></li>
+      </ul>
+
+      <p><label for="question">わからなかった・難しかったところを教えてください（任意）</label><br>
+        <input id="question" type="text" name="entry.1857549962">
+      </p>
+
+      <p>
+        <button type="submit" name="button" value="送信">送信</button>
+      </p>
+
+    </form>
+
+
+    <h2 id="videos">動画</h2>
+
+
+    <p><a href="https://youtu.be/S-dko8kxh_Q" target="_blank" rel="noopener noreferrer">YouTube</a></p>
+
+    <p><a href="https://www.nicovideo.jp/watch/sm25574166" target="_blank" rel="noopener noreferrer">ニコニコ動画</a></p>
 
   </main>
 

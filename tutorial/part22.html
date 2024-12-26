@@ -16,173 +16,176 @@
 
   <main>
 
-  <h1>Part22 地球―金星間の軌道修正</h1>
+    <h1>Part22 地球―金星間の軌道修正</h1>
 
 
-  <p>地球―金星の惑星間宇宙で軌道修正します。</p>
+    <p>地球―金星の惑星間宇宙で軌道修正します。</p>
 
-  <ol>
-    <li><a href="#mcc">軌道修正のタイミング</a></li>
-    <li><a href="#stages">Stageの自動消去</a></li>
-    <li><a href="#viewmanoeuvre">マニューバの作成</a></li>
-    <li><a href="#2ndmcc">二度目の軌道修正</a></li>
-    <li><a href="#explanation">解説</a></li>
-  </ol>
-
-  <ul>
-    <li><a href="#reference">関連項目</a></li>
-    <li><a href="#form">アンケート</a></li>
-    <li><a href="#videos">動画</a></li>
-  </ul>
-
-
-  <h2 id="mcc">軌道修正のタイミング</h2>
-
-
-  <p><strong>Stage 2</strong>の<strong>View:Eject Plan</strong>を開く。<br>
-    <strong>TOF (days)</strong>を確認する。
-  </p>
-
-  <p>行程の<strong>2分の1</strong>～<strong>4分の3</strong>で軌道修正する。<br>
-    このタイミングについては下の<a href="#explanation">解説</a>を参照。</p>
-
-  <p>タイムワープ最大、<strong>100000</strong>倍速にする。</p>
-
-  <p>この例では、移動に約<strong>120日</strong>かかることがわかっているので、<strong>90日</strong>ほど経過させる。</p>
-
-  <p>
-    <img loading="lazy" src="/images/tutorial/part22/001.png" width="425" height="425">
-  </p>
-
-  <p>現在時刻は画面右上の<a href="/basic/orbitercontrol.html#info" target="_blank">情報メニュー</a>に表示されている。</p>
-
-  <p>タイムワープ中、TransXの軌道予測が変動することがあるが、無視してよい。</p>
-
-
-  <h2 id="stages">Stageの自動消去</h2>
-
-
-  <p>地球を離れると、最初のStageが消去される。<br>
-    3つあったStageが2つになる。</p>
-
-  <p><strong>View:Escape Plan</strong>が消える。<br>
-    <strong>Stage 1</strong>で<strong>View:Eject Plan</strong>が表示される。
-  </p>
-
-  <p>
-    <img loading="lazy" src="/images/tutorial/part22/002.png" width="425" height="425">
-  </p>
-
-
-  <h2 id="viewmanoeuvre">マニューバの作成</h2>
-
-
-  <p>必要な日数が過ぎたら、タイムワープを解除。<br>
-    軌道修正のマニューバを作成・実行する。</p>
-
-  <p>
-    <img loading="lazy" src="/images/tutorial/part22/003.png" width="425" height="425">
-  </p>
-
-  <p><strong>View:Encounter</strong>を確認する。<br>
-    <strong>Min Alt</strong>を<strong>300k</strong>にする。
-  </p>
-
-  <p>
-    <img loading="lazy" src="/images/tutorial/part22/004.png" width="425" height="425">
-  </p>
-
-  <p>マニューバの作成・実行手順は月飛行と同じ。<br>
-    着陸やランデブーは行わないので、軌道の高さだけを設定する。</p>
-
-  <p><a href="part12.html" target="_blank">Part12 月基地への軌道修正  1回目</a></p>
-
-
-  <h2 id="2ndmcc">二度目の軌道修正</h2>
-
-
-  <p><strong>Orbit MFD</strong>を開く。<br>
-    <kbd>REF</kbd>をクリックして、<strong>Venus</strong>を選択。
-  </p>
-
-  <p><strong>PeT</strong>を確認しながら、金星に接近する。<br>
-    タイムワープで時間経過させる。</p>
-
-  <p>
-    <img loading="lazy" src="/images/tutorial/part22/005.png" width="425" height="425">
-  </p>
-
-  <p><strong>Orbit MFD</strong>の一番下の<strong>G</strong>を確認する。<br>
-    <strong>G</strong>が緑になったら、タイムワープを解除する。
-  </p>
-
-  <p>金星の重力圏内に入ったら、軌道修正する。</p>
-
-  <p>
-    <img loading="lazy" src="/images/tutorial/part22/006.png" width="425" height="425">
-  </p>
-
-  <p><strong>G</strong>が<strong>0.90</strong>になったら、もう一度軌道修正する。</p>
-
-  <p>金星の周回軌道に投入する。<br>
-    手順は月周回軌道に投入したときと同じ。</p>
-
-  <p><a href="part14.html" target="_blank">Part14 月周回軌道に入る</a></p>
-
-  <p>これにてOrbiterチュートリアルを終了します。<br>
-    誤字脱字・リクエストなどがありましたら、下のコメント欄にお願いします。</p>
-
-
-  <h2 id="explanation">解説</h2>
-
-
-  <p>タイミングが早ければ早いほど、少ないDelta Vで軌道修正できる。<br>
-    一方で、目的地に近ければ近いほど、軌道予測は正確になる。</p>
-
-  <p>あまり早めに軌道修正しても、予測が外れてしまって意味がない。<br>
-    ある程度時間を経過させたほうが、無駄が少ないということになる。</p>
-
-
-  <h2 id="reference">関連項目</h2>
-
-
-  <p>金星には濃い大気があるため、ほとんどの宇宙船は離着陸できない。<br>
-    このような着陸不可の天体を出発点としたフライトでは、以下のテクニックが応用できる。</p>
-
-  <p><a href="/transximfd/transx-iss-to-mars.html" target="_blank">TransX ISSから火星まで </a></p>
-
-
-  <h2 id="form">アンケート</h2>
-
-
-  <form action="https://docs.google.com/forms/d/e/1FAIpQLSdUd9vhS1gn3PfFtx6MiYitlsAnLYPLMxMj5CmdPfms-jl1rQ/formResponse" target="_self" method="POST" id="mG61Hd">
-
-    <p>この記事の内容は理解できましたか？</p>
+    <ol>
+      <li><a href="#mcc">軌道修正のタイミング</a></li>
+      <li><a href="#stages">Stageの自動消去</a></li>
+      <li><a href="#viewmanoeuvre">マニューバの作成</a></li>
+      <li><a href="#2ndmcc">二度目の軌道修正</a></li>
+      <li><a href="#explanation">解説</a></li>
+    </ol>
 
     <ul>
-      <li><label><input type="radio" name="entry.1914587356" value="できなかった、全然理解できない" />できなかった、全然理解できない</label></li>
-      <li><label><input type="radio" name="entry.1914587356" value="できなかった、途中から理解できない" />できなかった、途中から理解できない</label></li>
-      <li><label><input type="radio" name="entry.1914587356" value="できた、難しかった" />できた、難しかった</label></li>
-      <li><label><input type="radio" name="entry.1914587356" value="できた、簡単だった" />できた、簡単だった</label></li>
+      <li><a href="#reference">関連項目</a></li>
+      <li><a href="#form">アンケート</a></li>
+      <li><a href="#videos">動画</a></li>
     </ul>
 
-    <p><label for="question">わからなかった・難しかったところを教えてください（任意）</label><br>
-      <input id="question" type="text" name="entry.1857549962">
+
+    <h2 id="mcc">軌道修正のタイミング</h2>
+
+
+    <p><strong>Stage 2</strong>の<strong>View:Eject Plan</strong>を開く。<br>
+      <strong>TOF (days)</strong>を確認する。
+    </p>
+
+    <p>行程の<strong>2分の1</strong>～<strong>4分の3</strong>で軌道修正する。<br>
+      このタイミングについては下の<a href="#explanation">解説</a>を参照。</p>
+
+    <p>タイムワープ最大、<strong>100000</strong>倍速にする。</p>
+
+    <p>この例では、移動に約<strong>120日</strong>かかることがわかっているので、<strong>90日</strong>ほど経過させる。</p>
+
+    <p>
+      <img loading="lazy" src="/images/tutorial/part22/001.png" width="425" height="425">
+    </p>
+
+    <p>現在時刻は画面右上の<a href="/basic/orbitercontrol.html#info">情報メニュー</a>に表示されている。</p>
+
+    <p>タイムワープ中、TransXの軌道予測が変動することがあるが、無視してよい。</p>
+
+
+    <h2 id="stages">Stageの自動消去</h2>
+
+
+    <p>地球を離れると、最初のStageが消去される。<br>
+      3つあったStageが2つになる。</p>
+
+    <p><strong>View:Escape Plan</strong>が消える。<br>
+      <strong>Stage 1</strong>で<strong>View:Eject Plan</strong>が表示される。
     </p>
 
     <p>
-      <button type="submit" name="button" value="送信">送信</button>
+      <img loading="lazy" src="/images/tutorial/part22/002.png" width="425" height="425">
     </p>
 
-  </form>
+
+    <h2 id="viewmanoeuvre">マニューバの作成</h2>
 
 
-  <h2 id="videos">動画</h2>
+    <p>必要な日数が過ぎたら、タイムワープを解除。<br>
+      軌道修正のマニューバを作成・実行する。</p>
+
+    <p>
+      <img loading="lazy" src="/images/tutorial/part22/003.png" width="425" height="425">
+    </p>
+
+    <p><strong>View:Encounter</strong>を確認する。<br>
+      <strong>Min Alt</strong>を<strong>300k</strong>にする。
+    </p>
+
+    <p>
+      <img loading="lazy" src="/images/tutorial/part22/004.png" width="425" height="425">
+    </p>
+
+    <p>マニューバの作成・実行手順は月飛行と同じ。<br>
+      着陸やランデブーは行わないので、軌道の高さだけを設定する。</p>
+
+    <p><a href="part12.html">Part12 月基地への軌道修正 1回目</a></p>
 
 
-  <p><a href="https://youtu.be/L82ZwuKtOZU" target="_blank" rel="noopener noreferrer">YouTube</a></p>
+    <h2 id="2ndmcc">二度目の軌道修正</h2>
 
-  <p><a href="https://www.nicovideo.jp/watch/sm25750919" target="_blank" rel="noopener noreferrer">ニコニコ動画</a></p>
+
+    <p><strong>Orbit MFD</strong>を開く。<br>
+      <kbd>REF</kbd>をクリックして、<strong>Venus</strong>を選択。
+    </p>
+
+    <p><strong>PeT</strong>を確認しながら、金星に接近する。<br>
+      タイムワープで時間経過させる。</p>
+
+    <p>
+      <img loading="lazy" src="/images/tutorial/part22/005.png" width="425" height="425">
+    </p>
+
+    <p><strong>Orbit MFD</strong>の一番下の<strong>G</strong>を確認する。<br>
+      <strong>G</strong>が緑になったら、タイムワープを解除する。
+    </p>
+
+    <p>金星の重力圏内に入ったら、軌道修正する。</p>
+
+    <p>
+      <img loading="lazy" src="/images/tutorial/part22/006.png" width="425" height="425">
+    </p>
+
+    <p><strong>G</strong>が<strong>0.90</strong>になったら、もう一度軌道修正する。</p>
+
+    <p>金星の周回軌道に投入する。<br>
+      手順は月周回軌道に投入したときと同じ。</p>
+
+    <p><a href="part14.html">Part14 月周回軌道に入る</a></p>
+
+    <p>これにてOrbiterチュートリアルを終了します。<br>
+      誤字脱字・リクエストなどがありましたら、下のコメント欄にお願いします。</p>
+
+
+    <h2 id="explanation">解説</h2>
+
+
+    <p>タイミングが早ければ早いほど、少ないDelta Vで軌道修正できる。<br>
+      一方で、目的地に近ければ近いほど、軌道予測は正確になる。</p>
+
+    <p>あまり早めに軌道修正しても、予測が外れてしまって意味がない。<br>
+      ある程度時間を経過させたほうが、無駄が少ないということになる。</p>
+
+
+    <h2 id="reference">関連項目</h2>
+
+
+    <p>金星には濃い大気があるため、ほとんどの宇宙船は離着陸できない。<br>
+      このような着陸不可の天体を出発点としたフライトでは、以下のテクニックが応用できる。</p>
+
+    <p><a href="/transximfd/transx-iss-to-mars.html">TransX ISSから火星まで </a></p>
+
+
+    <h2 id="form">アンケート</h2>
+
+
+    <form
+      action="https://docs.google.com/forms/d/e/1FAIpQLSdUd9vhS1gn3PfFtx6MiYitlsAnLYPLMxMj5CmdPfms-jl1rQ/formResponse"
+      target="_self" method="POST" id="mG61Hd">
+
+      <p>この記事の内容は理解できましたか？</p>
+
+      <ul>
+        <li><label><input type="radio" name="entry.1914587356" value="できなかった、全然理解できない" />できなかった、全然理解できない</label></li>
+        <li><label><input type="radio" name="entry.1914587356" value="できなかった、途中から理解できない" />できなかった、途中から理解できない</label>
+        </li>
+        <li><label><input type="radio" name="entry.1914587356" value="できた、難しかった" />できた、難しかった</label></li>
+        <li><label><input type="radio" name="entry.1914587356" value="できた、簡単だった" />できた、簡単だった</label></li>
+      </ul>
+
+      <p><label for="question">わからなかった・難しかったところを教えてください（任意）</label><br>
+        <input id="question" type="text" name="entry.1857549962">
+      </p>
+
+      <p>
+        <button type="submit" name="button" value="送信">送信</button>
+      </p>
+
+    </form>
+
+
+    <h2 id="videos">動画</h2>
+
+
+    <p><a href="https://youtu.be/L82ZwuKtOZU" target="_blank" rel="noopener noreferrer">YouTube</a></p>
+
+    <p><a href="https://www.nicovideo.jp/watch/sm25750919" target="_blank" rel="noopener noreferrer">ニコニコ動画</a></p>
 
   </main>
 

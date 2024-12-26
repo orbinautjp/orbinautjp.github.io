@@ -17,269 +17,269 @@
 
   <main>
 
-  <h1>TransXとIMFD</h1>
+    <h1>TransXとIMFD</h1>
 
 
-  <p><strong>TransX</strong>と<strong>IMFD</strong>はOrbiterで軌道計算・マニューバの作成ができるMODです。</p>
+    <p><strong>TransX</strong>と<strong>IMFD</strong>はOrbiterで軌道計算・マニューバの作成ができるMODです。</p>
 
-  <nav>
+    <nav>
+      <ul>
+        <li><a href="#download">ダウンロード・インストール</a></li>
+        <li><a href="#transx">TransXの解説一覧</a>
+          <ul>
+            <li><a href="#transx_basics">TransXの基本操作</a></li>
+            <li><a href="#slingshot">スイングバイの基本</a></li>
+            <li><a href="#offplane">Off-plane transfer</a></li>
+            <li><a href="#transx_misc">その他</a></li>
+          </ul>
+        </li>
+        <li><a href="#imfd">IMFDの操作</a>
+          <ul>
+            <li><a href="#imfd1">地球から火星まで</a></li>
+            <li><a href="#imfd2">月を出発点にする</a></li>
+            <li><a href="#imfd3">Offset機能</a></li>
+          </ul>
+        </li>
+        <li><a href="#difference">TransXとIMFDの違い</a>
+          <ul>
+            <li><a href="#prosandcons">長所と短所</a></li>
+            <li><a href="#optimization">Auto-minとTarget Intercept</a></li>
+            <li><a href="#accuracy">軌道予測の正確さ</a></li>
+            <li><a href="#notation">数字の表し方</a></li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+
+
+    <h2 id="download">ダウンロード・インストール</h2>
+
+
     <ul>
-      <li><a href="#download">ダウンロード・インストール</a></li>
-      <li><a href="#transx">TransXの解説一覧</a>
-        <ul>
-          <li><a href="#transx_basics">TransXの基本操作</a></li>
-          <li><a href="#slingshot">スイングバイの基本</a></li>
-          <li><a href="#offplane">Off-plane transfer</a></li>
-          <li><a href="#transx_misc">その他</a></li>
-        </ul>
-      </li>
-      <li><a href="#imfd">IMFDの操作</a>
-        <ul>
-          <li><a href="#imfd1">地球から火星まで</a></li>
-          <li><a href="#imfd2">月を出発点にする</a></li>
-          <li><a href="#imfd3">Offset機能</a></li>
-        </ul>
-      </li>
-      <li><a href="#difference">TransXとIMFDの違い</a>
-        <ul>
-          <li><a href="#prosandcons">長所と短所</a></li>
-          <li><a href="#optimization">Auto-minとTarget Intercept</a></li>
-          <li><a href="#accuracy">軌道予測の正確さ</a></li>
-          <li><a href="#notation">数字の表し方</a></li>
-        </ul>
-      </li>
+      <li><a href="transxinstall.html">TransXの更新と設定</a></li>
+      <li><a href="imfd-download.html">IMFDのインストールと設定</a></li>
     </ul>
-  </nav>
 
 
-  <h2 id="download">ダウンロード・インストール</h2>
+    <h2 id="transx">TransXの解説一覧</h2>
 
 
-  <ul>
-    <li><a href="transxinstall.html">TransXの更新と設定</a></li>
-    <li><a href="imfd-download.html">IMFDのインストールと設定</a></li>
-  </ul>
+    <h3 id="transx_basics">TransXの基本操作</h3>
 
 
-  <h2 id="transx">TransXの解説一覧</h2>
+    <ul>
+      <li><a href="/tutorial/">Orbiterチュートリアル</a></li>
+      <li><a href="transxbasics.html">TransXの基本</a></li>
+    </ul>
 
 
-  <h3 id="transx_basics">TransXの基本操作</h3>
+    <h3 id="slingshot">スイングバイの基本</h3>
 
 
-  <ul>
-    <li><a href="/tutorial/">Orbiterチュートリアル</a></li>
-    <li><a href="transxbasics.html">TransXの基本</a></li>
-  </ul>
+    <p>ボイジャー2号のグランドツアーを例に、スイングバイの基本的な操作を説明します。</p>
 
+    <ol>
+      <li><a href="transx-slingshot-1.html">プランの作成 (1)</a></li>
+      <li><a href="transx-slingshot-2.html">プランの作成 (2)</a></li>
+      <li><a href="transx-slingshot-3.html">マニューバの実行と軌道修正</a></li>
+    </ol>
 
-  <h3 id="slingshot">スイングバイの基本</h3>
 
+    <h3 id="offplane">Off-plane transfer</h3>
 
-  <p>ボイジャー2号のグランドツアーを例に、スイングバイの基本的な操作を説明します。</p>
 
-  <ol>
-    <li><a href="transx-slingshot-1.html">プランの作成 (1)</a></li>
-    <li><a href="transx-slingshot-2.html">プランの作成 (2)</a></li>
-    <li><a href="transx-slingshot-3.html">マニューバの実行と軌道修正</a></li>
-  </ol>
+    <p>軌道面を変更せずに（<a href="/tutorial/align-planes-mfd.html">Align MFD</a>を使わずに）地球から月まで飛行するテクニックについて説明します。
+    </p>
 
+    <ul>
+      <li><a href="off-plane-transfer.html">地球―月でのOff-plane transfer</a></li>
+      <li><a href="off-plane-explanation.html">Off-plane transferの原理</a></li>
+    </ul>
 
-  <h3 id="offplane">Off-plane transfer</h3>
 
+    <h3 id="transx_misc">その他</h3>
 
-  <p>軌道面を変更せずに（<a href="/tutorial/align-planes-mfd.html" target="_blank">Align MFD</a>を使わずに）地球から月まで飛行するテクニックについて説明します。
-  </p>
 
-  <ul>
-    <li><a href="off-plane-transfer.html">地球―月でのOff-plane transfer</a></li>
-    <li><a href="off-plane-explanation.html">Off-plane transferの原理</a></li>
-  </ul>
+    <ul>
+      <li><a href="transx-functions.html">TransXの機能（中級者向け）</a></li>
+      <li><a href="transx-iss-to-mars.html">ISSから火星まで</a></li>
+      <li><a href="transx-brighton-to-iss.html">月(Brighton Beach)からISSまで</a></li>
+      <li><a href="transx-geostationary.html">静止軌道へ行く方法</a></li>
+      <li><a href="transx-freereturn.html">地球―月の自由帰還軌道を作る</a></li>
+      <li><a href="transx-rendezvous.html">宇宙船とのランデブー</a></li>
+    </ul>
 
 
-  <h3 id="transx_misc">その他</h3>
+    <h2 id="imfd">IMFDの操作</h2>
 
 
-  <ul>
-    <li><a href="transx-functions.html">TransXの機能（中級者向け）</a></li>
-    <li><a href="transx-iss-to-mars.html">ISSから火星まで</a></li>
-    <li><a href="transx-brighton-to-iss.html">月(Brighton Beach)からISSまで</a></li>
-    <li><a href="transx-geostationary.html">静止軌道へ行く方法</a></li>
-    <li><a href="transx-freereturn.html">地球―月の自由帰還軌道を作る</a></li>
-    <li><a href="transx-rendezvous.html">宇宙船とのランデブー</a></li>
-  </ul>
+    <h3 id="imfd1">地球から火星へ</h3>
 
 
-  <h2 id="imfd">IMFDの操作</h2>
+    <p>地球から火星へのフライトを例に、IMFDの基本操作を解説します。</p>
 
+    <ol>
+      <li><a href="imfd-tutorial-1.html">Target Interceptとフライトプランの作成</a></li>
+      <li><a href="imfd-tutorial-2.html">Surface Launchを使った打ち上げ</a></li>
+      <li><a href="imfd-tutorial-3.html">Orbit Ejectを使って地球を離れる</a></li>
+      <li><a href="imfd-tutorial-4.html">Target Interceptによる軌道修正</a></li>
+      <li><a href="imfd-tutorial-5.html">Map Programの基本操作</a></li>
+      <li><a href="imfd-tutorial-6.html">BaseApproachとOrbit Insertで基地上空へ</a></li>
+      <li><a href="imfd-tutorial-7.html">効率のよい軌道を探す</a></li>
+    </ol>
 
-  <h3 id="imfd1">地球から火星へ</h3>
 
+    <h3 id="imfd2">月を出発点にする</h3>
 
-  <p>地球から火星へのフライトを例に、IMFDの基本操作を解説します。</p>
 
-  <ol>
-    <li><a href="imfd-tutorial-1.html">Target Interceptとフライトプランの作成</a></li>
-    <li><a href="imfd-tutorial-2.html">Surface Launchを使った打ち上げ</a></li>
-    <li><a href="imfd-tutorial-3.html">Orbit Ejectを使って地球を離れる</a></li>
-    <li><a href="imfd-tutorial-4.html">Target Interceptによる軌道修正</a></li>
-    <li><a href="imfd-tutorial-5.html">Map Programの基本操作</a></li>
-    <li><a href="imfd-tutorial-6.html">BaseApproachとOrbit Insertで基地上空へ</a></li>
-    <li><a href="imfd-tutorial-7.html">効率のよい軌道を探す</a></li>
-  </ol>
+    <p>月などの衛星を出発点にしたフライトについて解説します。</p>
 
+    <ol start="8">
+      <li><a href="imfd-tutorial-8.html">月を出発点にしたフライトを作る</a></li>
+      <li><a href="imfd-tutorial-9.html">月を出発点にしたフライトを実行する</a></li>
+    </ol>
 
-  <h3 id="imfd2">月を出発点にする</h3>
 
+    <h3 id="imfd3">Offset機能</h3>
 
-  <p>月などの衛星を出発点にしたフライトについて解説します。</p>
 
-  <ol start="8">
-    <li><a href="imfd-tutorial-8.html">月を出発点にしたフライトを作る</a></li>
-    <li><a href="imfd-tutorial-9.html">月を出発点にしたフライトを実行する</a></li>
-  </ol>
+    <p><strong>Offset</strong>機能を使った自由帰還軌道について解説します。<br>
+      <a href="/apollo/#amso">AMSO</a>（アポロ計画のMOD）で必要になるテクニックです。
+    </p>
 
+    <ul>
+      <li><a href="imfd-offset-freereturn.html">Offset機能と自由帰還軌道 (AMSO)</a></li>
+    </ul>
 
-  <h3 id="imfd3">Offset機能</h3>
 
+    <h2 id="difference">TransXとIMFDの違い</h2>
 
-  <p><strong>Offset</strong>機能を使った自由帰還軌道について解説します。<br>
-    <a href="/apollo/#amso" target="_blank">AMSO</a>（アポロ計画のMOD）で必要になるテクニックです。
-  </p>
 
-  <ul>
-    <li><a href="imfd-offset-freereturn.html">Offset機能と自由帰還軌道 (AMSO)</a></li>
-  </ul>
+    <h3 id="prosandcons">長所と短所</h3>
 
 
-  <h2 id="difference">TransXとIMFDの違い</h2>
+    <p>どちらも同じような作業に使えるツールですが、それぞれ長所と短所があります。</p>
 
 
-  <h3 id="prosandcons">長所と短所</h3>
+    <h4>TransXの長所</h4>
 
 
-  <p>どちらも同じような作業に使えるツールですが、それぞれ長所と短所があります。</p>
+    <ul>
+      <li>単純なマニューバやフライトプランを手早く作れる。</li>
+      <li>スイングバイを含むフライトプランの作成が得意。</li>
+      <li>比較的シンプルで理解しやすい。</li>
+      <li><a href="/mods/launchmfd.html">LaunchMFD</a>での自動打ち上げが可能。</li>
+    </ul>
 
 
-  <h4>TransXの長所</h4>
+    <h4>TransXの短所</h4>
 
 
-  <ul>
-    <li>単純なマニューバやフライトプランを手早く作れる。</li>
-    <li>スイングバイを含むフライトプランの作成が得意。</li>
-    <li>比較的シンプルで理解しやすい。</li>
-    <li><a href="/mods/launchmfd.html" target="_blank">LaunchMFD</a>での自動打ち上げが可能。</li>
-  </ul>
+    <ul>
+      <li>手動で微調整しなければいけない場面が多い。</li>
+      <li>予測と実際の結果の誤差が大きい。</li>
+      <li>月を出発点にしたフライトプランを作るのが難しい。</li>
+    </ul>
 
 
-  <h4>TransXの短所</h4>
+    <h4>IMFDの長所</h4>
 
 
-  <ul>
-    <li>手動で微調整しなければいけない場面が多い。</li>
-    <li>予測と実際の結果の誤差が大きい。</li>
-    <li>月を出発点にしたフライトプランを作るのが難しい。</li>
-  </ul>
+    <ul>
+      <li>マニューバをほぼ全自動で実行できる。</li>
+      <li>軌道予測の精度が高い。</li>
+      <li>マニューバの作成だけでなく、さまざまな機能が充実している。</li>
+    </ul>
 
 
-  <h4>IMFDの長所</h4>
+    <h4>IMFDの短所</h4>
 
 
-  <ul>
-    <li>マニューバをほぼ全自動で実行できる。</li>
-    <li>軌道予測の精度が高い。</li>
-    <li>マニューバの作成だけでなく、さまざまな機能が充実している。</li>
-  </ul>
+    <ul>
+      <li>自動化されすぎて何が起きているかわかりにくい。</li>
+      <li>実行不可能なマニューバを作成・実行しようとしてしまうことがある。</li>
+      <li>スイングバイが苦手。</li>
+      <li>自動打ち上げには対応していない。</li>
+    </ul>
 
+    <p>TransXとIMFDはお互いを補完する存在です。<br>
+      状況に応じて両方を使い分けるのがベストですが、TransXの操作を先に覚えることをおすすめします。</p>
+    <p>TransXはIMFDとくらべて機能が限定されており、ひとつひとつの手順を自分で操作する必要があります。<br>
+      そのため、「宇宙船の飛び方」についての基本的な考え方を理解しやすいからです。</p>
+    <p>IMFDはある程度自動でマニューバを作成しますが、実行不可能なこともあります。<br>
+      宇宙船の軌道についての基本的な理解があれば、IMFDが作成したマニューバが適切かどうか判断できるようになるでしょう。</p>
 
-  <h4>IMFDの短所</h4>
 
+    <h3 id="optimization">Auto-minとTarget Intercept</h3>
 
-  <ul>
-    <li>自動化されすぎて何が起きているかわかりにくい。</li>
-    <li>実行不可能なマニューバを作成・実行しようとしてしまうことがある。</li>
-    <li>スイングバイが苦手。</li>
-    <li>自動打ち上げには対応していない。</li>
-  </ul>
 
-  <p>TransXとIMFDはお互いを補完する存在です。<br>
-    状況に応じて両方を使い分けるのがベストですが、TransXの操作を先に覚えることをおすすめします。</p>
-  <p>TransXはIMFDとくらべて機能が限定されており、ひとつひとつの手順を自分で操作する必要があります。<br>
-    そのため、「宇宙船の飛び方」についての基本的な考え方を理解しやすいからです。</p>
-  <p>IMFDはある程度自動でマニューバを作成しますが、実行不可能なこともあります。<br>
-    宇宙船の軌道についての基本的な理解があれば、IMFDが作成したマニューバが適切かどうか判断できるようになるでしょう。</p>
+    <p>TransXの<strong>Auto-min</strong>とIMFDの<strong>Target Intercept</strong>は、どちらも自動で軌道を作成してくれる機能です。<br>
+      ただし計算方法と考え方が異なるため、それぞれの特徴を理解しておくことが重要です。</p>
+    <p>TransXの<strong>Auto-min</strong>は、指定した出発時刻において、必要なデルタVが最小になるような軌道を計算します。<br>
+      到着時刻の指定はできませんが、手っ取り早く効率のよい軌道を探してくれます。</p>
+    <p>IMFDの<strong>Target Intercept</strong>は、出発時刻と到着時刻を指定すると、その条件に合う軌道を自動で作成してくれます。<br>
+      このような計算のことを<a href="/misc/rendezvous-explained.html#imfd">ランベルト問題</a>と呼びます。</p>
+    <p>両者を使い分けたり、組み合わせたりすることで、最適な軌道をすばやく計算することができます。</p>
 
 
-  <h3 id="optimization">Auto-minとTarget Intercept</h3>
+    <h3 id="accuracy">軌道予測の正確さ</h3>
 
 
-  <p>TransXの<strong>Auto-min</strong>とIMFDの<strong>Target Intercept</strong>は、どちらも自動で軌道を作成してくれる機能です。<br>
-    ただし計算方法と考え方が異なるため、それぞれの特徴を理解しておくことが重要です。</p>
-  <p>TransXの<strong>Auto-min</strong>は、指定した出発時刻において、必要なデルタVが最小になるような軌道を計算します。<br>
-    到着時刻の指定はできませんが、手っ取り早く効率のよい軌道を探してくれます。</p>
-  <p>IMFDの<strong>Target Intercept</strong>は、出発時刻と到着時刻を指定すると、その条件に合う軌道を自動で作成してくれます。<br>
-    このような計算のことを<a href="/misc/rendezvous-explained.html#imfd" target="_blank">ランベルト問題</a>と呼びます。</p>
-  <p>両者を使い分けたり、組み合わせたりすることで、最適な軌道をすばやく計算することができます。</p>
+    <p>TransXの軌道予測は比較的単純なモデルに基づいています。<br>
+      別の言い方をすると、TransXの軌道予測は（ある程度）<strong>必ず外れます。</strong><br>
+      <a href="/basic/realismperturbations.html#perturbations_nonspherical">
+        Non spherical gravity</a>にも対応していません。
+    </p>
+    <p>IMFDの<strong>Map program</strong>は、かなり正確に軌道を予測することができます。※<br>
+      また、<a href="/basic/realismperturbations.html#perturbations_nonspherical">
+        Non spherical gravity</a>に対応しています。</p>
+    <p class="note">※Map programの軌道予測にも多少の誤差はあります</p>
+    <p>ただし、<strong>Target Intercept</strong>は別の計算方法を用いているため、<strong>必ず誤差が出ます。</strong><br>
+      正確な軌道を知るためには、Map programと併用する必要があります。</p>
 
 
-  <h3 id="accuracy">軌道予測の正確さ</h3>
+    <h3 id="notation">数字の表し方</h3>
 
 
-  <p>TransXの軌道予測は比較的単純なモデルに基づいています。<br>
-    別の言い方をすると、TransXの軌道予測は（ある程度）<strong>必ず外れます。</strong><br>
-    <a href="/basic/realismperturbations.html#perturbations_nonspherical" target="blank">Non spherical gravity</a>にも対応していません。
-  </p>
-  <p>IMFDの<strong>Map program</strong>は、かなり正確に軌道を予測することができます。※<br>
-    また、<a href="/basic/realismperturbations.html#perturbations_nonspherical" target="blank">Non spherical gravity</a>に対応しています。</p>
-  <p class="note">※Map programの軌道予測にも多少の誤差はあります</p>
-  <p>ただし、<strong>Target Intercept</strong>は別の計算方法を用いているため、<strong>必ず誤差が出ます。</strong><br>
-    正確な軌道を知るためには、Map programと併用する必要があります。</p>
+    <p>桁の大きい数字を表現するとき、TransXとIMFDでは使える方法が異なります。</p>
 
+    <ul>
+      <li><a href="#notation_exponent">TransXと指数表記</a></li>
+      <li><a href="#notation_prefix">IMFDと接頭辞</a></li>
+    </ul>
 
-  <h3 id="notation">数字の表し方</h3>
 
+    <h4 id="notation_exponent">TransXと指数表記</h4>
 
-  <p>桁の大きい数字を表現するとき、TransXとIMFDでは使える方法が異なります。</p>
 
-  <ul>
-    <li><a href="#notation_exponent">TransXと指数表記</a></li>
-    <li><a href="#notation_prefix">IMFDと接頭辞</a></li>
-  </ul>
+    <p>TransXでは、指数表記を用いて桁の大きい数字を入力できます。<br>
+      接頭辞をつけて入力することはできません。</p>
+    <p>ここで扱う指数表記とは、ある数字を<strong>10のn乗との掛け算</strong>で表すことです。<br>
+      1000=10の3乗=<strong>1e3</strong>というように変換します。</p>
+    <p>例えば6571000という数字を指数表記に直すと、6571e3と書くことができます。<br>
+      これは、6571×1000であることを意味しています。<br>
+      6.571e6(6.571×1000000)と書くこともできます。</p>
 
+    <p>
+      <img loading="lazy" src="/images/transximfd/index/002.png" width="220" height="177" />
+    </p>
 
-  <h4 id="notation_exponent">TransXと指数表記</h4>
+    <p>小数点以下の数字を表すときは、1e-3(0.001=1000分の1)というように書きます。</p>
 
 
-  <p>TransXでは、指数表記を用いて桁の大きい数字を入力できます。<br>
-    接頭辞をつけて入力することはできません。</p>
-  <p>ここで扱う指数表記とは、ある数字を<strong>10のn乗との掛け算</strong>で表すことです。<br>
-    1000=10の3乗=<strong>1e3</strong>というように変換します。</p>
-  <p>例えば6571000という数字を指数表記に直すと、6571e3と書くことができます。<br>
-    これは、6571×1000であることを意味しています。<br>
-    6.571e6(6.571×1000000)と書くこともできます。</p>
+    <h4 id="notation_prefix">IMFDと接頭辞</h4>
 
-  <p>
-    <img loading="lazy" src="/images/transximfd/index/002.png"
-        width="220" height="177" />
-  </p>
 
-  <p>小数点以下の数字を表すときは、1e-3(0.001=1000分の1)というように書きます。</p>
+    <p>IMFDでは、指数表記と接頭辞の両方で入力することができます。<br>
+      接頭辞とは、<strong>k</strong>（キロ）、<strong>M</strong>（メガ）、<strong>G</strong>（ギガ）などの記号です。<br>
+      身近な例を挙げると、1000mを1kmで表したりするようなことです。</p>
+    <p>例えば200000という数字なら、接頭辞をつけて200kと書くことができます。<br>
+      200k=200e3=0.2M=200000ということになります。<br>
+      本来であれば、単位としてm（メートル）をくっつけてkmと表記すべきですが、省略して接頭辞だけを入力します。</p>
 
-
-  <h4 id="notation_prefix">IMFDと接頭辞</h4>
-
-
-  <p>IMFDでは、指数表記と接頭辞の両方で入力することができます。<br>
-    接頭辞とは、<strong>k</strong>（キロ）、<strong>M</strong>（メガ）、<strong>G</strong>（ギガ）などの記号です。<br>
-    身近な例を挙げると、1000mを1kmで表したりするようなことです。</p>
-  <p>例えば200000という数字なら、接頭辞をつけて200kと書くことができます。<br>
-    200k=200e3=0.2M=200000ということになります。<br>
-    本来であれば、単位としてm（メートル）をくっつけてkmと表記すべきですが、省略して接頭辞だけを入力します。</p>
-
-  <p>
-    <img loading="lazy" src="/images/transximfd/index/003.png"
-        width="226" height="221" />
-  </p>
+    <p>
+      <img loading="lazy" src="/images/transximfd/index/003.png" width="226" height="221" />
+    </p>
 
   </main>
 

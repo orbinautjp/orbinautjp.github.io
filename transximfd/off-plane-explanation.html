@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 
 <html lang="ja">
+
 <head>
   <script src="/scripts/ga.js"></script>
   <meta charset="UTF-8">
@@ -14,74 +15,86 @@
 
   <main>
 
-  <h1>Off-plane transferの原理</h1>
+    <h1>Off-plane transferの原理</h1>
 
 
-<p>具体的な手順については、以下の記事を参照してください。<br>
-<a href="off-plane-transfer.html" target="_blank">地球―月のOff-plane transfer</a></p>
+    <p>具体的な手順については、以下の記事を参照してください。<br>
+      <a href="off-plane-transfer.html">地球―月のOff-plane transfer</a>
+    </p>
 
-<h2>Off-plane transferとは何か</h2>
+    <h2>Off-plane transferとは何か</h2>
 
-<p>自機とターゲットの軌道面が異なるとき※、軌道上の2つの点において両者が交差することになります。</p>
+    <p>自機とターゲットの軌道面が異なるとき※、軌道上の2つの点において両者が交差することになります。</p>
 
-<p>
-<img loading="lazy" src="/images/transximfd/off-plane-explanation/offplane009.png" width="960" height="540"></p>
-<p class="note">※軌道面が異なる＝<strong>LAN</strong>（昇交点）と<strong>Inc</strong>（軌道傾斜角）が一致しない<br>
-（大ざっぱに言うと、自分と相手の軌道にずれがあるということ）</p>
-<p>この交点に自機とターゲットが同時に到達するようにすれば、ランデブーが可能になります。<br>
-これを<strong>Off-plane transfer</strong>※と呼びます。</p>
-<p class="note">※ざっくり日本語に訳すと「軌道面の外側での遷移軌道」</p>
-<p><strong class="caution">重要</strong>：Off-plane transferでは、Align planes MFDを使って軌道面を一致させる必要はありません。</p>
+    <p>
+      <img loading="lazy" src="/images/transximfd/off-plane-explanation/offplane009.png" width="960" height="540">
+    </p>
+    <p class="note">※軌道面が異なる＝<strong>LAN</strong>（昇交点）と<strong>Inc</strong>（軌道傾斜角）が一致しない<br>
+      （大ざっぱに言うと、自分と相手の軌道にずれがあるということ）</p>
+    <p>この交点に自機とターゲットが同時に到達するようにすれば、ランデブーが可能になります。<br>
+      これを<strong>Off-plane transfer</strong>※と呼びます。</p>
+    <p class="note">※ざっくり日本語に訳すと「軌道面の外側での遷移軌道」</p>
+    <p><strong class="caution">重要</strong>：Off-plane transferでは、Align planes MFDを使って軌道面を一致させる必要はありません。</p>
 
-<h2>地球―月のOff-plane transfer</h2>
+    <h2>地球―月のOff-plane transfer</h2>
 
-<p>地球周回軌道→月軌道のOff-plane transferを図で表すと以下のようになります。※<br>
-外側の円が月の軌道、細長い楕円が宇宙船の軌道（ホーマン軌道）です。</p>
+    <p>地球周回軌道→月軌道のOff-plane transferを図で表すと以下のようになります。※<br>
+      外側の円が月の軌道、細長い楕円が宇宙船の軌道（ホーマン軌道）です。</p>
 
-<p>上（斜め上・真上）から見た場合</p>
+    <p>上（斜め上・真上）から見た場合</p>
 
-<p>
-<img loading="lazy" class="small" src="/images/transximfd/off-plane-explanation/offplane_above002.png" width="1500" height="889">
-<img loading="lazy" class="small" src="/images/transximfd/off-plane-explanation/offplane_above003.png" width="1532" height="1027">
-</p>
-<p>横から見た場合</p>
+    <p>
+      <img loading="lazy" class="small" src="/images/transximfd/off-plane-explanation/offplane_above002.png"
+        width="1500" height="889">
+      <img loading="lazy" class="small" src="/images/transximfd/off-plane-explanation/offplane_above003.png"
+        width="1532" height="1027">
+    </p>
+    <p>横から見た場合</p>
 
-<p>
-<img loading="lazy" class="small" src="/images/transximfd/off-plane-explanation/offplane_side003.png" width="1532" height="1027">
-<img loading="lazy" class="small" src="/images/transximfd/off-plane-explanation/offplane_side004.png" width="1532" height="1027">
-</p>
-<p class="note">※この図における地球の大きさや月までの距離は、正確なものではありません</p>
-<p>高度200kmの地球周回軌道上から月軌道まで宇宙船が移動するには、ホーマン軌道ならおよそ<strong>4日</strong>かかります。</p>
-<p>したがって、「<strong>月が4日後に交点に到達するタイミング</strong>※」に出発すれば、軌道面を変更せずに月とランデブーできます。</p>
-<p class="note">※実際には、遠地点・近地点において、地球から月までの距離と、月の移動速度は変化します。<br>
-ただし、極端にDelta Vに余裕のない機体でなければ、これらを厳密に考慮しなくてもあまり問題ありません。</p>
-<p>TransXでは、2つの交点（2つの軌道面が交差するところ）は白い線で表示されています。</p>
+    <p>
+      <img loading="lazy" class="small" src="/images/transximfd/off-plane-explanation/offplane_side003.png" width="1532"
+        height="1027">
+      <img loading="lazy" class="small" src="/images/transximfd/off-plane-explanation/offplane_side004.png" width="1532"
+        height="1027">
+    </p>
+    <p class="note">※この図における地球の大きさや月までの距離は、正確なものではありません</p>
+    <p>高度200kmの地球周回軌道上から月軌道まで宇宙船が移動するには、ホーマン軌道ならおよそ<strong>4日</strong>かかります。</p>
+    <p>したがって、「<strong>月が4日後に交点に到達するタイミング</strong>※」に出発すれば、軌道面を変更せずに月とランデブーできます。</p>
+    <p class="note">※実際には、遠地点・近地点において、地球から月までの距離と、月の移動速度は変化します。<br>
+      ただし、極端にDelta Vに余裕のない機体でなければ、これらを厳密に考慮しなくてもあまり問題ありません。</p>
+    <p>TransXでは、2つの交点（2つの軌道面が交差するところ）は白い線で表示されています。</p>
 
-<p>
-<img loading="lazy" src="/images/transximfd/off-plane-explanation/offplane007.png" width="578" height="578"></p>
-<p>出発のタイミングが合っていれば、自分の軌道をこの白い線に重ねることで、最小限のDelta Vで月に到達できます。</p>
+    <p>
+      <img loading="lazy" src="/images/transximfd/off-plane-explanation/offplane007.png" width="578" height="578">
+    </p>
+    <p>出発のタイミングが合っていれば、自分の軌道をこの白い線に重ねることで、最小限のDelta Vで月に到達できます。</p>
 
-<h2>Off-plane transferのメリット</h2>
+    <h2>Off-plane transferのメリット</h2>
 
-<p>宇宙での軌道面の変更には、大きなコストが伴います。<br>
-現実的な性能の宇宙船では、軌道面の変更に推進剤を使いすぎて目的地に到達できないということも起こります。</p>
-<p>打ち上げ地点の緯度によっては、ある角度に向かって打ち上げることでターゲットと軌道面を一致させることも可能ですが、バイコヌールのような高緯度地域ではこれは使えません。<br>
-<a href="/basic/launch-azimuth.html" target="_blank">打ち上げ方位（Launch Azimuth）を求める方法</a></p>
-<p>Off-plane transferを使うことで、推進剤に余裕のない機体を高緯度地域から打ち上げる場合でも、月などの目標に到達させることができます。</p>
+    <p>宇宙での軌道面の変更には、大きなコストが伴います。<br>
+      現実的な性能の宇宙船では、軌道面の変更に推進剤を使いすぎて目的地に到達できないということも起こります。</p>
+    <p>打ち上げ地点の緯度によっては、ある角度に向かって打ち上げることでターゲットと軌道面を一致させることも可能ですが、バイコヌールのような高緯度地域ではこれは使えません。<br>
+      <a href="/basic/launch-azimuth.html">打ち上げ方位（Launch Azimuth）を求める方法</a>
+    </p>
+    <p>Off-plane transferを使うことで、推進剤に余裕のない機体を高緯度地域から打ち上げる場合でも、月などの目標に到達させることができます。</p>
 
-<h2>惑星間航行について</h2>
+    <h2>惑星間航行について</h2>
 
-<p>TransXを使って惑星間航行をおこなう場合は、すべてOff-plane transferになります。<br>
-IMFDを使えば、より複雑な軌道を設定することも可能です。<br>
-具体的には、以下のページを参照してください。<br>
-<a href="https://www.orbiterwiki.org/wiki/IMFD_Target_Intercept#Transfer_Types" target="_blank" rel="noopener noreferrer">IMFD Target Intercept - OrbiterWiki</a></p>
+    <p>TransXを使って惑星間航行をおこなう場合は、すべてOff-plane transferになります。<br>
+      IMFDを使えば、より複雑な軌道を設定することも可能です。<br>
+      具体的には、以下のページを参照してください。<br>
+      <a href="https://www.orbiterwiki.org/wiki/IMFD_Target_Intercept#Transfer_Types" target="_blank"
+        rel="noopener noreferrer">IMFD Target Intercept - OrbiterWiki</a>
+    </p>
 
-<h2>ヒント</h2>
+    <h2>ヒント</h2>
 
-<p><strong>Quickstart</strong>シナリオでゲームを開始して、すぐに<strong>90°</strong>（真東）を向いて軌道投入すると、そのままOff-plane transferで月に向かえるようになっています。<br>
-タイミングの取り方がわからない場合は参考にしてください。</p>
+    <p><strong>Quickstart</strong>シナリオでゲームを開始して、すぐに<strong>90°</strong>（真東）を向いて軌道投入すると、そのままOff-plane
+      transferで月に向かえるようになっています。<br>
+      タイミングの取り方がわからない場合は参考にしてください。</p>
 
   </main>
 
 </body>
+
 </html>

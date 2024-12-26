@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 
 <html lang="ja">
+
 <head>
   <script src="/scripts/ga.js"></script>
   <meta charset="UTF-8">
@@ -9,86 +10,88 @@
   <script src="/scripts/template.js" charset="utf-8" defer></script>
   <title>TransX 宇宙船とのランデブー</title>
 </head>
+
 <body>
 
   <main>
 
-  <h1>TransX 宇宙船とのランデブー</h1>
+    <h1>TransX 宇宙船とのランデブー</h1>
 
 
-<p>
-<a href="/transximfd/" target="_blank">TransX</a>を使って、宇宙船・宇宙ステーションとランデブーする手順について解説します。
-</p>
+    <p>
+      <a href="/transximfd/">TransX</a>を使って、宇宙船・宇宙ステーションとランデブーする手順について解説します。
+    </p>
 
-<ul>
-<li><a href="#prep">準備</a></li>
-<li><a href="#target">宇宙船をターゲットする</a></li>
-<li><a href="#manoeuvre">マニューバを作成・実行する</a></li>
-</ul>
-
-
-<h2 id="prep">準備</h2>
+    <ul>
+      <li><a href="#prep">準備</a></li>
+      <li><a href="#target">宇宙船をターゲットする</a></li>
+      <li><a href="#manoeuvre">マニューバを作成・実行する</a></li>
+    </ul>
 
 
-<p>
-打ち上げて、相手より低い高度の円軌道（パーキング軌道）に乗せる。<br>
-<a href="/tutorial/part1.html" target="_blank">Orbiterチュートリアル Part1 打ち上げから軌道投入まで</a>
-</p>
-
-<p>
-<a href="/tutorial/align-planes-mfd.html" target="_blank">Align planes MFD</a>で両者の軌道面を一致させておく。
-</p>
+    <h2 id="prep">準備</h2>
 
 
-<h2 id="target">宇宙船をターゲットする</h2>
+    <p>
+      打ち上げて、相手より低い高度の円軌道（パーキング軌道）に乗せる。<br>
+      <a href="/tutorial/part1.html">Orbiterチュートリアル Part1 打ち上げから軌道投入まで</a>
+    </p>
+
+    <p>
+      <a href="/tutorial/align-planes-mfd.html">Align planes MFD</a>で両者の軌道面を一致させておく。
+    </p>
 
 
-<p>
-TransXを開いて、<strong>View:Setup</strong>を表示する。
-</p>
-<p>
-<strong>Select Target</strong>で<kbd>ADJ</kbd>をクリックして、<strong>Ships</strong>に切り換える。
-</p>
-<p>
-<kbd>++</kbd>をクリックして、ターゲットの名前を入力。<br>
-キーボードの<kbd>Enter</kbd>を押す。
-</p>
-
-<p>
-<img loading="lazy" src="/images/transximfd/transx-rendezvous/001.png" width="735" height="643">
-</p>
-
-<p>
-グラフが見づらいので、<kbd>VAR</kbd>を何度かクリックして<strong>Graph projection</strong>を表示する。<br>
-<kbd>++</kbd>をクリックして<strong>Focus</strong>を選択。
-</p>
-
-<p>
-<img loading="lazy" src="/images/transximfd/transx-rendezvous/002.png" width="722" height="642">
-</p>
+    <h2 id="target">宇宙船をターゲットする</h2>
 
 
-<h2 id="manoeuvre">マニューバを作成・実行する</h2>
+    <p>
+      TransXを開いて、<strong>View:Setup</strong>を表示する。
+    </p>
+    <p>
+      <strong>Select Target</strong>で<kbd>ADJ</kbd>をクリックして、<strong>Ships</strong>に切り換える。
+    </p>
+    <p>
+      <kbd>++</kbd>をクリックして、ターゲットの名前を入力。<br>
+      キーボードの<kbd>Enter</kbd>を押す。
+    </p>
+
+    <p>
+      <img loading="lazy" src="/images/transximfd/transx-rendezvous/001.png" width="735" height="643">
+    </p>
+
+    <p>
+      グラフが見づらいので、<kbd>VAR</kbd>を何度かクリックして<strong>Graph projection</strong>を表示する。<br>
+      <kbd>++</kbd>をクリックして<strong>Focus</strong>を選択。
+    </p>
+
+    <p>
+      <img loading="lazy" src="/images/transximfd/transx-rendezvous/002.png" width="722" height="642">
+    </p>
 
 
-<p>
-マニューバの作成・実行手順は月に向かうときとほぼ同じ。<br>
-<a href="/tutorial/part10.html#manoeuvremode" target="_blank">Orbiterチュートリアル Part10 TransXで地球軌道から月へ(TLI)</a>
-</p>
-<p>
-<strong>Prograde</strong>と<strong>Man.date</strong>を操作して、<strong>CL. App</strong>（最接近時の距離）の数字をできるだけ小さくする。<br>
-この場合、<strong>View:Encounter</strong>は使えない。
-</p>
-<p>
-マニューバを実行したら、<strong>RCS LIN</strong>を使って微調整しつつ接近する。
-</p>
+    <h2 id="manoeuvre">マニューバを作成・実行する</h2>
 
-<p>
-<img loading="lazy" src="/images/transximfd/transx-rendezvous/003.png" width="724" height="639">
-</p>
+
+    <p>
+      マニューバの作成・実行手順は月に向かうときとほぼ同じ。<br>
+      <a href="/tutorial/part10.html#manoeuvremode">Orbiterチュートリアル Part10 TransXで地球軌道から月へ(TLI)</a>
+    </p>
+    <p>
+      <strong>Prograde</strong>と<strong>Man.date</strong>を操作して、<strong>CL. App</strong>（最接近時の距離）の数字をできるだけ小さくする。<br>
+      この場合、<strong>View:Encounter</strong>は使えない。
+    </p>
+    <p>
+      マニューバを実行したら、<strong>RCS LIN</strong>を使って微調整しつつ接近する。
+    </p>
+
+    <p>
+      <img loading="lazy" src="/images/transximfd/transx-rendezvous/003.png" width="724" height="639">
+    </p>
 
 
   </main>
 
 </body>
+
 </html>

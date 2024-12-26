@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 
 <html lang="ja">
+
 <head>
   <script src="/scripts/ga.js"></script>
   <meta charset="UTF-8">
@@ -15,161 +16,172 @@
 
   <main>
 
-  <h1>スイングバイの基本 プランの作成 (1)</h1>
+    <h1>スイングバイの基本 プランの作成 (1)</h1>
 
 
-<p><a href="transxinstall.html" target="_blank">TransX</a>を使って、ボイジャー2号のグランドツアーを再現します。</p>
+    <p><a href="transxinstall.html">TransX</a>を使って、ボイジャー2号のグランドツアーを再現します。</p>
 
-<ol>
-<li><a href="#launch">打ち上げ日時の設定</a></li>
-<li><a href="#stage">ステージの設定</a></li>
-<li><a href="#plan">木星までの遷移軌道を作る</a>
-  <ul>
-  <li><a href="#plan_date">出発時刻を設定する</a></li>
-  <li><a href="#plan_prograde">Progradeを入力する</a></li>
-  <li><a href="#plan_automin">Auto-Minを有効にする</a></li>
-  <li><a href="#plan_noautomin">Auto-Minを解除する</a></li>
-  </ul>
-</li>
-</ol>
+    <ol>
+      <li><a href="#launch">打ち上げ日時の設定</a></li>
+      <li><a href="#stage">ステージの設定</a></li>
+      <li><a href="#plan">木星までの遷移軌道を作る</a>
+        <ul>
+          <li><a href="#plan_date">出発時刻を設定する</a></li>
+          <li><a href="#plan_prograde">Progradeを入力する</a></li>
+          <li><a href="#plan_automin">Auto-Minを有効にする</a></li>
+          <li><a href="#plan_noautomin">Auto-Minを解除する</a></li>
+        </ul>
+      </li>
+    </ol>
 
-<ul>
-<li><a href="#terms">用語</a></li>
-<li><a href="/transximfd/#transx_basics" target="_blank">TransXの基本操作</a></li>
-</ul>
-
-
-<h2 id="launch">打ち上げ日時の設定</h2>
+    <ul>
+      <li><a href="#terms">用語</a></li>
+      <li><a href="/transximfd/#transx_basics">TransXの基本操作</a></li>
+    </ul>
 
 
-<p>Orbiterでは、史実と同じ日時を使って、実在するミッションを再現できる。</p>
-
-<p><strong>Checklists</strong>フォルダの<strong>Quickstart</strong>シナリオでゲームを開始する。</p>
-
-<p>ゲームを起動したら、<a href="/misc/scneditor-date.html">シナリオエディタ</a>を開く。<br>
-<strong>1977</strong>年<strong>8</strong>月<strong>20</strong>日の<strong>0</strong>時<strong>0</strong>分<strong>0</strong>秒（UTC）に移動する。</p>
-
-<p>
-<img loading="lazy" src="/images/transximfd/transx-slingshot-1/grandtour002.png" width="419" height="422">
-</p>
+    <h2 id="launch">打ち上げ日時の設定</h2>
 
 
-<h2 id="stage">ステージの設定</h2>
+    <p>Orbiterでは、史実と同じ日時を使って、実在するミッションを再現できる。</p>
+
+    <p><strong>Checklists</strong>フォルダの<strong>Quickstart</strong>シナリオでゲームを開始する。</p>
+
+    <p>ゲームを起動したら、<a href="/misc/scneditor-date.html">シナリオエディタ</a>を開く。<br>
+      <strong>1977</strong>年<strong>8</strong>月<strong>20</strong>日の<strong>0</strong>時<strong>0</strong>分<strong>0</strong>秒（UTC）に移動する。
+    </p>
+
+    <p>
+      <img loading="lazy" src="/images/transximfd/transx-slingshot-1/grandtour002.png" width="419" height="422">
+    </p>
 
 
-<p><strong>地球</strong>→<strong>木星でのスリングショット</strong>→<strong>土星</strong>までのプランを作成する。<br>
-この時点で天王星・海王星を目指すプランも作れるが、今回は省略する。</p>
-<p>両方のMFDで<strong>TransX</strong>を開く。</p>
-<p><strong>Stage1</strong>の<strong>Select Target</strong>で、<strong>Escape</strong>を選択。</p>
-
-<p>
-<img loading="lazy" src="/images/transximfd/transx-slingshot-1/grandtour003.png" width="571" height="571">
-</p>
-
-<p><kbd>FWD</kbd>をクリックして<strong>Stage2</strong>へ進む。<br>
-<strong>Stage2</strong>の<strong>Select Target</strong>では<strong>Jupiter</strong>を選択。</p>
-
-<p>
-<img loading="lazy" src="/images/transximfd/transx-slingshot-1/grandtour004.png" width="571" height="573">
-</p>
-
-<p><strong>Stage3</strong>では<strong>Escape</strong>を選択。</p>
-<p><strong>Stage4</strong>では<strong>Saturn</strong>を選択。</p>
-<p><strong>Stage5</strong>では<strong>Select Target</strong>の必要はない。<br>
-<kbd>VW</kbd>をクリックして<strong>View:Encounter</strong>に切り換えておく。</p>
+    <h2 id="stage">ステージの設定</h2>
 
 
-<h2 id="plan">木星までの遷移軌道を作る</h2>
+    <p><strong>地球</strong>→<strong>木星でのスリングショット</strong>→<strong>土星</strong>までのプランを作成する。<br>
+      この時点で天王星・海王星を目指すプランも作れるが、今回は省略する。</p>
+    <p>両方のMFDで<strong>TransX</strong>を開く。</p>
+    <p><strong>Stage1</strong>の<strong>Select Target</strong>で、<strong>Escape</strong>を選択。</p>
+
+    <p>
+      <img loading="lazy" src="/images/transximfd/transx-slingshot-1/grandtour003.png" width="571" height="571">
+    </p>
+
+    <p><kbd>FWD</kbd>をクリックして<strong>Stage2</strong>へ進む。<br>
+      <strong>Stage2</strong>の<strong>Select Target</strong>では<strong>Jupiter</strong>を選択。
+    </p>
+
+    <p>
+      <img loading="lazy" src="/images/transximfd/transx-slingshot-1/grandtour004.png" width="571" height="573">
+    </p>
+
+    <p><strong>Stage3</strong>では<strong>Escape</strong>を選択。</p>
+    <p><strong>Stage4</strong>では<strong>Saturn</strong>を選択。</p>
+    <p><strong>Stage5</strong>では<strong>Select Target</strong>の必要はない。<br>
+      <kbd>VW</kbd>をクリックして<strong>View:Encounter</strong>に切り換えておく。
+    </p>
 
 
-<p>ステージの作成が終わったら、<kbd>BCK</kbd>をクリックして<strong>Stage2</strong>まで戻る。<br>
-<kbd>VW</kbd>をクリックして<strong>View:Eject Plan</strong>を選択。</p>
-<p>木星に向かうコースを設定する。<br>
-木星が終着点ではないので、少し通り過ぎるように設定する。</p>
+    <h2 id="plan">木星までの遷移軌道を作る</h2>
 
 
-<h3 id="plan_date">出発時刻を設定する</h3>
+    <p>ステージの作成が終わったら、<kbd>BCK</kbd>をクリックして<strong>Stage2</strong>まで戻る。<br>
+      <kbd>VW</kbd>をクリックして<strong>View:Eject Plan</strong>を選択。
+    </p>
+    <p>木星に向かうコースを設定する。<br>
+      木星が終着点ではないので、少し通り過ぎるように設定する。</p>
 
 
-<p><strong>Eject date</strong>を設定する。<br>
-今回は<strong>43375.5</strong>に設定する。<br>
-<kbd>ENT</kbd>をクリックすると直接入力できる。</p>
-
-<p>
-<img loading="lazy" src="/images/transximfd/transx-slingshot-1/grandtour007.png" width="574" height="572">
-</p>
+    <h3 id="plan_date">出発時刻を設定する</h3>
 
 
-<h3 id="plan_prograde">Progradeを入力する</h3>
+    <p><strong>Eject date</strong>を設定する。<br>
+      今回は<strong>43375.5</strong>に設定する。<br>
+      <kbd>ENT</kbd>をクリックすると直接入力できる。
+    </p>
+
+    <p>
+      <img loading="lazy" src="/images/transximfd/transx-slingshot-1/grandtour007.png" width="574" height="572">
+    </p>
 
 
-<p><kbd>VAR</kbd>をクリックして<strong>Prograde vel.</strong>を選択。<br>
-<strong>木星の軌道を少しはみだすような軌道</strong>を設定する。</p>
-<p><kbd>++</kbd>もしくは<kbd>--</kbd>を長押しクリック。<br>
-<kbd>ADJ</kbd>ないし<kbd>-AJ</kbd>をクリックして微調整する。</p>
-
-<p>
-<img loading="lazy" src="/images/transximfd/transx-slingshot-1/001.png" width="376" height="375">
-</p>
+    <h3 id="plan_prograde">Progradeを入力する</h3>
 
 
-<h3 id="plan_automin">Auto-Minを有効にする</h3>
+    <p><kbd>VAR</kbd>をクリックして<strong>Prograde vel.</strong>を選択。<br>
+      <strong>木星の軌道を少しはみだすような軌道</strong>を設定する。
+    </p>
+    <p><kbd>++</kbd>もしくは<kbd>--</kbd>を長押しクリック。<br>
+      <kbd>ADJ</kbd>ないし<kbd>-AJ</kbd>をクリックして微調整する。
+    </p>
+
+    <p>
+      <img loading="lazy" src="/images/transximfd/transx-slingshot-1/001.png" width="376" height="375">
+    </p>
 
 
-<p><kbd>VAR</kbd>をクリックして<strong>Outward vel.</strong>を選択。<br>
-<kbd>-AJ</kbd>を何度かクリックして、<strong>Auto-Min</strong>にする。</p>
-
-<p>
-<img loading="lazy" src="/images/transximfd/transx-slingshot-1/002.png" width="377" height="376">
-</p>
-
-<p>同様に、<strong>Ch. plane vel.</strong>も<strong>Auto-Minにする。</strong></p>
-
-<p><strong>Eject date</strong>を選択して、<strong>Micro</strong>にする。<br>
-一回だけ<kbd>++</kbd>をクリック（長押し不可）すると、自動的に<strong>Cl. App.</strong>が小さくなる。</p>
-
-<p>
-<img loading="lazy" src="/images/transximfd/transx-slingshot-1/003.png" width="375" height="374">
-</p>
+    <h3 id="plan_automin">Auto-Minを有効にする</h3>
 
 
-<h3 id="plan_noautomin">Auto-Minを解除する</h3>
+    <p><kbd>VAR</kbd>をクリックして<strong>Outward vel.</strong>を選択。<br>
+      <kbd>-AJ</kbd>を何度かクリックして、<strong>Auto-Min</strong>にする。
+    </p>
+
+    <p>
+      <img loading="lazy" src="/images/transximfd/transx-slingshot-1/002.png" width="377" height="376">
+    </p>
+
+    <p>同様に、<strong>Ch. plane vel.</strong>も<strong>Auto-Minにする。</strong></p>
+
+    <p><strong>Eject date</strong>を選択して、<strong>Micro</strong>にする。<br>
+      一回だけ<kbd>++</kbd>をクリック（長押し不可）すると、自動的に<strong>Cl. App.</strong>が小さくなる。</p>
+
+    <p>
+      <img loading="lazy" src="/images/transximfd/transx-slingshot-1/003.png" width="375" height="374">
+    </p>
 
 
-<p><strong>Ch. plane vel.</strong>を選択して、<strong>Auto-Min</strong>を<strong>Micro</strong>にする。<br>
-<strong>Outward vel.</strong>を選択して、<strong>Auto-Min</strong>を<strong>Fine</strong>にする。</p>
-
-<p><strong>Outward vel.</strong>を少し操作して、<strong>Cl. App.</strong>を少し大きくしておく。※</p>
-
-<p class="note">※木星の中心を直撃するようになっていると、この後の操作がやりにくくなるため</p>
-
-<p>
-<img loading="lazy" src="/images/transximfd/transx-slingshot-1/004.png" width="377" height="376">
-</p>
-
-<p><kbd>FWD</kbd>をクリックして、<strong>Stage3</strong>に進む。<br>
-<strong>View:Slingshot</strong>が表示されるようになる。<br>
-表示されない場合は<kbd>VW</kbd>をクリック。</p>
-
-<p>緑の線が惑星の近くに出ていることを確認する。</p>
-
-<p>
-<img loading="lazy" src="/images/transximfd/transx-slingshot-1/005.png" width="375" height="375">
-</p>
-
-<p>次回に続きます。</p>
+    <h3 id="plan_noautomin">Auto-Minを解除する</h3>
 
 
-<h2 id="terms">用語</h2>
+    <p><strong>Ch. plane vel.</strong>を選択して、<strong>Auto-Min</strong>を<strong>Micro</strong>にする。<br>
+      <strong>Outward vel.</strong>を選択して、<strong>Auto-Min</strong>を<strong>Fine</strong>にする。
+    </p>
+
+    <p><strong>Outward vel.</strong>を少し操作して、<strong>Cl. App.</strong>を少し大きくしておく。※</p>
+
+    <p class="note">※木星の中心を直撃するようになっていると、この後の操作がやりにくくなるため</p>
+
+    <p>
+      <img loading="lazy" src="/images/transximfd/transx-slingshot-1/004.png" width="377" height="376">
+    </p>
+
+    <p><kbd>FWD</kbd>をクリックして、<strong>Stage3</strong>に進む。<br>
+      <strong>View:Slingshot</strong>が表示されるようになる。<br>
+      表示されない場合は<kbd>VW</kbd>をクリック。
+    </p>
+
+    <p>緑の線が惑星の近くに出ていることを確認する。</p>
+
+    <p>
+      <img loading="lazy" src="/images/transximfd/transx-slingshot-1/005.png" width="375" height="375">
+    </p>
+
+    <p>次回に続きます。</p>
 
 
-<p><strong>スイングバイ</strong>(swing by)と<strong>スリングショット</strong>(sling shot)は、いわゆる「重力アシスト」を意味する言葉です。<br>
-惑星の重力を利用して軌道を曲げ、惑星から公転速度をもらって加速するテクニックのことです。</p>
+    <h2 id="terms">用語</h2>
 
-<p>日本語ではスイングバイのほうが一般的ですが、Orbiterではスリングショットのほうがよく用いられます。<br>
-混乱を避けるため、この記事では<strong>スリングショット（Slingshot）</strong>と表記します。</p>
+
+    <p><strong>スイングバイ</strong>(swing by)と<strong>スリングショット</strong>(sling shot)は、いわゆる「重力アシスト」を意味する言葉です。<br>
+      惑星の重力を利用して軌道を曲げ、惑星から公転速度をもらって加速するテクニックのことです。</p>
+
+    <p>日本語ではスイングバイのほうが一般的ですが、Orbiterではスリングショットのほうがよく用いられます。<br>
+      混乱を避けるため、この記事では<strong>スリングショット（Slingshot）</strong>と表記します。</p>
 
   </main>
 
 </body>
+
 </html>

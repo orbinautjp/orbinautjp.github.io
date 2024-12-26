@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 
 <html lang="ja">
+
 <head>
   <script src="/scripts/ga.js"></script>
   <meta charset="UTF-8">
@@ -14,175 +15,178 @@
 
   <main>
 
-  <h1>Sync Orbit MFD</h1>
+    <h1>Sync Orbit MFD</h1>
 
 
-<p>
-<strong>Sync Orbit MFD</strong>は、Orbiterで宇宙船をランデブーさせるためのMFDです。
-</p>
+    <p>
+      <strong>Sync Orbit MFD</strong>は、Orbiterで宇宙船をランデブーさせるためのMFDです。
+    </p>
 
-<ul>
-<li><a href="#sync">ランデブーの手順</a>
-  <ol>
-  <li><a href="#sync_align">軌道面を一致させる</a></li>
-  <li><a href="#sync_ap">遠地点を作る</a></li>
-  <li><a href="#sync_dtmin">DTminをゼロにする</a></li>
-  <li><a href="#sync_rendezvous">ランデブー</a></li>
-  </ol>
-</li>
-<li><a href="#caution">注意点</a></li>
-<li><a href="#merit">Sync Orbit MFDの長所</a></li>
-<li><a href="#reference">関連項目</a></li>
-</ul>
-
-
-<h2 id="sync">ランデブーの手順</h2>
+    <ul>
+      <li><a href="#sync">ランデブーの手順</a>
+        <ol>
+          <li><a href="#sync_align">軌道面を一致させる</a></li>
+          <li><a href="#sync_ap">遠地点を作る</a></li>
+          <li><a href="#sync_dtmin">DTminをゼロにする</a></li>
+          <li><a href="#sync_rendezvous">ランデブー</a></li>
+        </ol>
+      </li>
+      <li><a href="#caution">注意点</a></li>
+      <li><a href="#merit">Sync Orbit MFDの長所</a></li>
+      <li><a href="#reference">関連項目</a></li>
+    </ul>
 
 
-<p>
-ターゲットの下からランデブーする場合について説明しています。<br>
-上からランデブーする場合は、<strong>Ap</strong>（Apoapsis = 遠地点）を<strong>Pe</strong>（Periapsis = 近地点）に置き換えてください。
-</p>
+    <h2 id="sync">ランデブーの手順</h2>
 
 
-<h3 id="sync_align">軌道面を一致させる</h3>
+    <p>
+      ターゲットの下からランデブーする場合について説明しています。<br>
+      上からランデブーする場合は、<strong>Ap</strong>（Apoapsis = 遠地点）を<strong>Pe</strong>（Periapsis = 近地点）に置き換えてください。
+    </p>
 
 
-<p><strong>Align planes MFD</strong>を使ってターゲットと軌道面を一致させる。
-<br><a href="align-planes-mfd.html" target="_blank">Align planes MFD</a></p>
+    <h3 id="sync_align">軌道面を一致させる</h3>
 
 
-<h3 id="sync_ap">遠地点を作る</h3>
+    <p><strong>Align planes MFD</strong>を使ってターゲットと軌道面を一致させる。
+      <br><a href="align-planes-mfd.html">Align planes MFD</a>
+    </p>
 
 
-<p>この作業には<strong>Orbit MFD</strong>を使う。</p>
-
-<p>
-
-</p>
-
-<p><strong>Ap</strong>（遠地点＝高度が一番高くなる点）を作る。<br>
-適当な場所で<kbd>Prograde</kbd>オートパイロットで機首を進行方向に向けて加速する。</p>
-
-<p>このApはターゲットの軌道より低くなるようにする。<br>
-<strong>Orbit MFD</strong>の<strong>ApA</strong>の数字が、Apの高度を表している。</p>
-
-<p>自分の<strong>Ap</strong>（中が空の緑の丸）を通る時のターゲットの高度を確認する。</p>
-
-<p>
-<img loading="lazy" src="/images/tutorial/sync-orbit-mfd/syncorbit001.png" width="327" height="406">
-</p>
-
-<p>自分の<strong>Ap</strong>の高度を同じにする。<br>
-<strong>Pe</strong>で<kbd>Prograde</kbd>オートパイロットで機首を進行方向に向けて加速する。</p>
-
-<p>
-<img loading="lazy" src="/images/tutorial/sync-orbit-mfd/syncorbit002.png" width="202" height="41">
-</p>
+    <h3 id="sync_ap">遠地点を作る</h3>
 
 
-<h3 id="sync_dtmin">DTminをゼロにする</h3>
+    <p>この作業には<strong>Orbit MFD</strong>を使う。</p>
+
+    <p><strong>Ap</strong>（遠地点＝高度が一番高くなる点）を作る。<br>
+      適当な場所で<kbd>Prograde</kbd>オートパイロットで機首を進行方向に向けて加速する。</p>
+
+    <p>このApはターゲットの軌道より低くなるようにする。<br>
+      <strong>Orbit MFD</strong>の<strong>ApA</strong>の数字が、Apの高度を表している。
+    </p>
+
+    <p>自分の<strong>Ap</strong>（中が空の緑の丸）を通る時のターゲットの高度を確認する。</p>
+
+    <p>
+      <img loading="lazy" src="/images/tutorial/sync-orbit-mfd/syncorbit001.png" width="327" height="406">
+    </p>
+
+    <p>自分の<strong>Ap</strong>の高度を同じにする。<br>
+      <strong>Pe</strong>で<kbd>Prograde</kbd>オートパイロットで機首を進行方向に向けて加速する。
+    </p>
+
+    <p>
+      <img loading="lazy" src="/images/tutorial/sync-orbit-mfd/syncorbit002.png" width="202" height="41">
+    </p>
 
 
-<p><strong>Sync Orbit MFD</strong>を起動して、<kbd>TGT</kbd>をクリックしてターゲットの名前を入力する。</p>
+    <h3 id="sync_dtmin">DTminをゼロにする</h3>
 
-<p><kbd>MOD</kbd>を何度かクリックして、<strong>Sh apoapsis</strong>にする。<br>
-（Ship apoapsis = 自機の遠地点モード）</p>
 
-<p>
-<img loading="lazy" src="/images/tutorial/sync-orbit-mfd/syncorbit003.png" width="488" height="432">
-</p>
+    <p><strong>Sync Orbit MFD</strong>を起動して、<kbd>TGT</kbd>をクリックしてターゲットの名前を入力する。</p>
 
-<p>自機が<strong>Ap</strong>に移動するのを待つ。<br>
-<strong>Ap</strong>が近づいてきたら、<kbd>Prograde</kbd>オートパイロットで機首を進行方向に向ける。</p>
+    <p><kbd>MOD</kbd>を何度かクリックして、<strong>Sh apoapsis</strong>にする。<br>
+      （Ship apoapsis = 自機の遠地点モード）</p>
 
-<p><strong>Ap</strong>に到着したら、<strong>DTmin</strong>をゼロにする。<br>
-<strong>RCS LIN</strong>（テンキーの<kbd>6</kbd>か<kbd>9</kbd>）で前か後ろのどちらかに加速する。<br>
-どちらかわからないときは、適当に押してみてダメだったら逆を押す。</p>
+    <p>
+      <img loading="lazy" src="/images/tutorial/sync-orbit-mfd/syncorbit003.png" width="488" height="432">
+    </p>
 
-<table>
-    <tr>
+    <p>自機が<strong>Ap</strong>に移動するのを待つ。<br>
+      <strong>Ap</strong>が近づいてきたら、<kbd>Prograde</kbd>オートパイロットで機首を進行方向に向ける。
+    </p>
+
+    <p><strong>Ap</strong>に到着したら、<strong>DTmin</strong>をゼロにする。<br>
+      <strong>RCS LIN</strong>（テンキーの<kbd>6</kbd>か<kbd>9</kbd>）で前か後ろのどちらかに加速する。<br>
+      どちらかわからないときは、適当に押してみてダメだったら逆を押す。
+    </p>
+
+    <table>
+      <tr>
         <td><abbr title="Time of arrival difference">DTmin</abbr></td>
         <td>自機とターゲットのランデブー地点への到着時刻のずれのうち、設定した範囲内※で最小のもの。</td>
-    </tr>
-    <tr>
+      </tr>
+      <tr>
         <td><abbr title="Ship time on reference axis">Sh-ToR</abbr></td>
         <td>自機がランデブー地点に到着するまでの時間。</td>
-    </tr>
-    <tr>
+      </tr>
+      <tr>
         <td><abbr title="Target time on reference axis">Tg-ToR</abbr></td>
         <td>ターゲットがランデブー地点に到着するまでの時間。</td>
-    </tr>
-    <tr>
+      </tr>
+      <tr>
         <td><abbr title="Relative orbit inclination">RInc</abbr></td>
-        <td>自機とターゲットの軌道面のずれ。<a href="align-planes-mfd.html" target="_blank">Align MFD</a>で修正する。</td>
-    </tr>
-</table>
+        <td>自機とターゲットの軌道面のずれ。<a href="align-planes-mfd.html">Align MFD</a>で修正する。</td>
+      </tr>
+    </table>
 
-<p class="note">
-※<kbd>LEN</kbd>ボタンでリストに表示される数を増やすことができる。<br>
-<kbd>LEN</kbd>をクリック→任意の数字（最大で19）を入力→<kbd>Enter</kbd>を押す。<br>
-</p>
-
-
-<h3 id="sync_rendezvous">ランデブー</h3>
+    <p class="note">
+      ※<kbd>LEN</kbd>ボタンでリストに表示される数を増やすことができる。<br>
+      <kbd>LEN</kbd>をクリック→任意の数字（最大で19）を入力→<kbd>Enter</kbd>を押す。<br>
+    </p>
 
 
-<p><strong>Sync Orbit MFD</strong>に黄色で表示されているのが最接近するタイミング。<br>
-これがゼロに近づくのを待つ。</p>
-
-<p>十分接近したら、<a href="part5.html" target="_blank">Docking HUD</a>を使って速度を合わせる。</p>
+    <h3 id="sync_rendezvous">ランデブー</h3>
 
 
-<h2 id="caution">注意点</h2>
+    <p><strong>Sync Orbit MFD</strong>に黄色で表示されているのが最接近するタイミング。<br>
+      これがゼロに近づくのを待つ。</p>
+
+    <p>十分接近したら、<a href="part5.html">Docking HUD</a>を使って速度を合わせる。</p>
 
 
-<p>
-<strong>Sync Orbit MFD</strong>では、「ターゲットと自機の高度のずれ」までは表示されない。
-</p>
-<p>
-<strong>DTmin</strong>がゼロになっていても、<strong>Ap</strong>の高度とターゲットの高度が一致していないとランデブーできないことになる。<br>
-あらかじめ<strong>Orbit MFD</strong>を使って、自分の<strong>Ap</strong>をターゲットの高度と合わせておく。
-</p>
-<p>
-<strong>RInc</strong>（ターゲットとの軌道面のずれ）は左下に表示されている。<br>
-この数字が大きいとランデブーが難しくなる。<br>
-<a href="align-planes-mfd.html" target="_blank">Align planes MFD</a>を使って、できるだけ値を小さくしておく。
-</p>
-<p>
-<a href="/basic/realismperturbations.html#perturbations_nonspherical" target="blank">Non spherical gravity</a>のオプションが有効になっていると、Apの位置と高度が正確に表示されなくなる。<br>
-ランデブーの難易度が大幅に上がるため、無効にすることを勧める。
-</p>
+    <h2 id="caution">注意点</h2>
 
 
-<h2 id="merit">Sync Orbit MFDの長所</h2>
+    <p>
+      <strong>Sync Orbit MFD</strong>では、「ターゲットと自機の高度のずれ」までは表示されない。
+    </p>
+    <p>
+      <strong>DTmin</strong>がゼロになっていても、<strong>Ap</strong>の高度とターゲットの高度が一致していないとランデブーできないことになる。<br>
+      あらかじめ<strong>Orbit MFD</strong>を使って、自分の<strong>Ap</strong>をターゲットの高度と合わせておく。
+    </p>
+    <p>
+      <strong>RInc</strong>（ターゲットとの軌道面のずれ）は左下に表示されている。<br>
+      この数字が大きいとランデブーが難しくなる。<br>
+      <a href="align-planes-mfd.html">Align planes MFD</a>を使って、できるだけ値を小さくしておく。
+    </p>
+    <p>
+      <a href="/basic/realismperturbations.html#perturbations_nonspherical" target="blank">Non spherical
+        gravity</a>のオプションが有効になっていると、Apの位置と高度が正確に表示されなくなる。<br>
+      ランデブーの難易度が大幅に上がるため、無効にすることを勧める。
+    </p>
 
 
-<p>
-Sync Orbit MFDを使えば、ApとPeが離れた軌道でもランデブーできます。
-</p>
-<p>
-ロケットを使って軌道上に宇宙船を打ち上げるとき、ロケットは相反するふたつの目的を同時に達成する必要があります。
-</p>
-<p>
-まず、打ち上げが終わったロケットは大気圏に再突入させて燃やしてしまう必要があります。<br>
-それと同時に、ロケットは積んでいる宇宙船をできるだけ目標軌道の近くまで運ばなくてはなりません。
-</p>
-<p>
-打ち上げが終了した時点で、Peは大気圏内に、Apは目標軌道近くに届くようにすれば、ふたつの目的を満たすことができます。<br>
-このような軌道からそのままランデブーする場合、Sync Orbit MFDが一番適しているということになります。
-</p>
+    <h2 id="merit">Sync Orbit MFDの長所</h2>
 
 
-<h2 id="reference">関連項目</h2>
+    <p>
+      Sync Orbit MFDを使えば、ApとPeが離れた軌道でもランデブーできます。
+    </p>
+    <p>
+      ロケットを使って軌道上に宇宙船を打ち上げるとき、ロケットは相反するふたつの目的を同時に達成する必要があります。
+    </p>
+    <p>
+      まず、打ち上げが終わったロケットは大気圏に再突入させて燃やしてしまう必要があります。<br>
+      それと同時に、ロケットは積んでいる宇宙船をできるだけ目標軌道の近くまで運ばなくてはなりません。
+    </p>
+    <p>
+      打ち上げが終了した時点で、Peは大気圏内に、Apは目標軌道近くに届くようにすれば、ふたつの目的を満たすことができます。<br>
+      このような軌道からそのままランデブーする場合、Sync Orbit MFDが一番適しているということになります。
+    </p>
 
 
-<ul>
-<li><a href="/tutorial/#dg_to_iss" target="_blank">Orbiterチュートリアル - 地上からISSまで</a></li>
-<li><a href="/misc/rendezvous-explained.html" target="_blank">ランデブーの原理</a></li>
-</ul>
+    <h2 id="reference">関連項目</h2>
+
+
+    <ul>
+      <li><a href="/tutorial/#dg_to_iss">Orbiterチュートリアル - 地上からISSまで</a></li>
+      <li><a href="/misc/rendezvous-explained.html">ランデブーの原理</a></li>
+    </ul>
 
   </main>
 
 </body>
+
 </html>

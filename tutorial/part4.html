@@ -16,427 +16,431 @@
 
   <main>
 
-  <h1>Part4 ランデブーの準備</h1>
+    <h1>Part4 ランデブーの準備</h1>
 
 
-  <p>ランデブー地点を設定し、高度とタイミングを一致させます。</p>
-
-  <ul>
-    <li><a href="#warning">注意</a></li>
-  </ul>
-
-  <ol>
-    <li><a href="#closing">ターゲットに接近する</a>
-      <ul>
-        <li><a href="#closing_target">位置を確認する</a></li>
-        <li><a href="#closing_timewarp">時間経過させる</a></li>
-        <li><a href="#closing_dayzone">宇宙の昼と夜</a></li>
-      </ul>
-    </li>
-    <li><a href="#rendezvous">ランデブー地点を設定する</a>
-      <ul>
-        <li><a href="#rendezvous_apoapsis">遠地点を作る</a></li>
-        <li><a href="#rendezvous_apa">高度を一致させる</a></li>
-      </ul>
-    </li>
-    <li><a href="#syncorbit">タイミングを合わせる</a>
-      <ul>
-        <li><a href="#syncmfd">Sync Orbit MFD</a></li>
-        <li><a href="#dtmin">DTminをゼロにする</a></li>
-        <li><a href="#caution">注意点</a></li>
-      </ul>
-    </li>
-    <li><a href="#radio">信号を受信する</a>
-      <ul>
-        <li><a href="#radio_objectinfo">周波数を確認する</a></li>
-        <li><a href="#radio_comnav">COM/NAV MFD</a></li>
-      </ul>
-    </li>
-  </ol>
-
-  <ul>
-    <li><a href="#lowertarget">低い高度の目標とランデブーする</a></li>
-    <li><a href="#reference">関連項目</a></li>
-    <li><a href="#form">アンケート</a></li>
-    <li><a href="#videos">動画</a></li>
-  </ul>
-
-
-  <h2 id="warning">注意</h2>
-
-
-  <p><a href="/basic/realismperturbations.html" target="_blank">Nonspherical gravity sources</a>を<strong>無効</strong>にする。</p>
-
-  <p>上記の設定を有効にすると、MFDの表示が不正確になる。<br>
-    ランデブーの難易度が大幅に上がるため、このチュートリアルでは無効にしておくこと。</p>
-
-
-  <h2 id="closing">ターゲットに接近する</h2>
-
-
-  <p>
-    時間経過させて、宇宙船がISSに接近するのを待つ。
-  </p>
-
-
-  <h3 id="closing_target">位置を確認する</h3>
-
-
-  <p><strong>Orbit MFD</strong>を開いておく。</p>
-
-  <p>緑色の直線が宇宙船、黄色がISSの位置を表す。</p>
-
-  <p>
-    <img loading="lazy" src="/images/tutorial/part4/000.png" width="425" height="425">
-  </p>
-
-  <p>文字が重なって軌道が見づらいときは、<kbd>MOD</kbd>を何回かクリックする。</p>
-
-  <p>
-    <img loading="lazy" src="/images/tutorial/part4/001.png" width="425" height="425">
-  </p>
-
-  <p>現在、ISSは宇宙船に対して先行している。</p>
-
-  <p>宇宙船の軌道高度がISSより低いので、1周するのに必要な時間は宇宙船のほうが短い。<br>
-    したがって、このまま放置していれば、何もしなくても両者の距離は縮まっていく。</p>
-
-  <h3 id="closing_timewarp">時間経過させる</h3>
-
-
-  <p><strong>1000倍</strong>までのタイムワープを使う。<br>
-    <kbd>T</kbd>or<kbd>R</kbd>キーを押す。
-  </p>
-
-  <p>距離が縮まったら、タイムワープを解除する。<br>
-    円軌道の8分の1、45°を目安にする。</p>
-
-  <p>
-    <img loading="lazy" src="/images/tutorial/part4/002.png" width="425" height="425">
-  </p>
-
-
-  <h3 id="closing_dayzone">宇宙の昼と夜</h3>
-
-
-  <p><strong>Map MFD</strong>を開く。</p>
-
-  <p>白っぽい部分が昼側。<br>
-    黒っぽい部分が夜側を表している。</p>
-
-  <p>宇宙船が、夜側の手前に移動するのを待つ。</p>
-
-  <p>
-    <img loading="lazy" src="/images/tutorial/part4/003.png" width="425" height="425">
-  </p>
-
-  <p>宇宙船が夜側に入ってから加速して、昼側に<strong>Ap</strong>を作っておくようにすると、昼側でランデブーできる。<br>
-    夜側でもランデブーできるが、昼側でランデブーするとドッキングしやすくなる。</p>
-
-
-  <h2 id="rendezvous">ランデブー地点を設定する</h2>
-
-
-  <p>
-    新しく<strong>Ap</strong>（遠地点）を作成し、ランデブー地点とする。<br>
-    ランデブー地点での宇宙船とISSの高度を一致させる。
-  </p>
-
-  <p>
-    <strong>Orbit MFD</strong>を開いておく。
-  </p>
-
-
-  <h3 id="rendezvous_apoapsis">遠地点を作る</h3>
-
-
-  <p><kbd>ProGrade</kbd>or<kbd>PRO-G</kbd>をクリック。<br>
-    機体の回転が止まるのを待つ。</p>
-
-  <p>エンジン出力を低く抑えて噴射する。</p>
-
-  <p><kbd>Ctrl</kbd>を押したままにする。<br>
-    テンキー<kbd>+</kbd>を押して少しずつ出力を上げる。</p>
-
-  <p>MFDの左側で、宇宙船の<strong>ApA</strong>を確認する。</p>
-
-  <p><strong>ApA</strong>が<strong>350k</strong>になったら、エンジンを切る。</p>
-
-  <p>ISSの<strong>PeA</strong>は<strong>357.4km</strong>である。<br>
-    これを超えないようにする。</p>
-
-  <p>
-    <img loading="lazy" src="/images/tutorial/part4/004.png" width="425" height="425">
-  </p>
-
-  <p>噴射した地点の反対側に、<strong>Ap</strong>ができる。<br>
-    この<strong>Ap</strong>の位置でランデブーする。</p>
-
-
-  <h3 id="rendezvous_apa">高度を一致させる</h3>
-
-
-  <p>宇宙船の<strong>Ap</strong>における、ISSの高度を確認する。</p>
-
-  <p>黄色の直線が緑の<strong style="font-family:メイリオ; background-color:black; color:#00ff00;">○</strong>と重なるのを待つ。<br>
-    重なったら、ISSの<strong>Alt</strong>の数字を確認する。</p>
-
-  <p>この数字を暗記するか、メモを取っておく。<br>
-    （画像の例では360.9km）</p>
-
-  <p>
-    <img loading="lazy" src="/images/tutorial/part4/005.png" width="425" height="425">
-  </p>
-
-  <p>宇宙船を<strong>Pe</strong>の手前に移動させる。<br>
-    左の<strong>PeT</strong>が<strong>300</strong>になるまで待つ。</p>
-
-  <p>
-    <img loading="lazy" src="/images/tutorial/part4/013.png" width="425" height="425">
-  </p>
-
-  <p><kbd>ProGrade</kbd>or<kbd>PRO-G</kbd>をクリック。</p>
-
-  <p><strong>PeT</strong>が<strong>0</strong>になったら、エンジンを噴射する。<br>
-    <kbd>Ctrl</kbd>を押しながら、少しずつ出力を上げる。
-  </p>
-
-  <p><strong>ApA</strong>を、記憶しておいた数字と同じにする。</p>
-
-  <p>
-    <img loading="lazy" src="/images/tutorial/part4/006.png" width="425" height="425">
-  </p>
-
-  <p><strong>RCS LIN</strong>にして微調整する。<br>
-    テンキー<kbd>6</kbd>or<kbd>9</kbd>を押す。</p>
-
-
-  <h2 id="syncorbit">タイミングを合わせる</h2>
-
-
-  <p>ランデブーのタイミングを一致させる。<br>
-    <strong>Sync Orbit MFD</strong>を使用する。
-  </p>
-
-
-  <h3 id="syncmfd">Sync Orbit MFD</h3>
-
-
-  <p><kbd>SEL</kbd>をクリック。<br>
-    <strong>Sync Orbit</strong>をクリックして開く。
-  </p>
-
-  <p><kbd>TGT</kbd>をクリック。<br>
-    <strong>ISS</strong>をターゲットに指定する。
-  </p>
-
-  <p><kbd>MOD</kbd>を何回かクリック。<br>
-    <strong>Ref: Sh apoapsis</strong>にする。
-  </p>
-
-  <p>宇宙船の<strong>Ap</strong>が、ランデブー地点として設定される。</p>
-
-  <p>
-    <img loading="lazy" src="/images/tutorial/part4/007.png" width="425" height="425">
-  </p>
-
-  <table>
-    <tbody>
-      <tr>
-        <th>Sh-ToR</th>
-        <td>宇宙船がランデブー地点を通るまでの時間</td>
-      </tr>
-      <tr>
-        <th>Tg-ToR</th>
-        <td>ターゲットがランデブー地点を通るまでの時間</td>
-      </tr>
-    </tbody>
-  </table>
-
-  <p>黄色の行が、両者が最接近するタイミング。<br>
-    <strong>DTmin</strong>は到着時刻のずれを示している。
-  </p>
-
-  <p>加速・減速して、<strong>DTmin</strong>をゼロにすればランデブーできる。</p>
-
-
-  <h3 id="dtmin">DTminをゼロにする</h3>
-
-
-  <p><strong>Orbit MFD</strong>と<strong>Sync Orbit MFD</strong>を開く。</p>
-
-  <p>宇宙船を<strong>Ap</strong>の手前に移動させる。<br>
-    左の<strong>ApT</strong>が<strong>300</strong>になるまで待つ。</p>
-
-  <p>
-    <img loading="lazy" src="/images/tutorial/part4/014.png" width="425" height="425">
-  </p>
-
-  <p><kbd>ProGrade</kbd>or<kbd>PRO-G</kbd>をクリック。</p>
-
-  <p><strong>RCS LIN</strong>にする。</p>
-
-  <p><strong>ApT</strong>が<strong>0</strong>になったら、RCSを噴射する。<br>
-    テンキー<kbd>6</kbd>or<kbd>9</kbd>のどちらかを押してみる。</p>
-
-  <p><strong>DTmin</strong>が小さくなるキーを押し続ける。<br>
-    <strong>DTmin</strong>を<strong>0.00</strong>にする。
-  </p>
-
-  <p>
-    <img loading="lazy" src="/images/tutorial/part4/008.png" width="425" height="425">
-  </p>
-
-  <p><kbd>Ctrl</kbd>との同時押しで、RCSの出力を抑えて細かい修正ができる。</p>
-
-  <p>大きく加速・減速する場合はメインエンジンを使う。<br>
-    加速なら<kbd>ProGrade</kbd>、減速なら<kbd>RetroGrade</kbd>オートパイロットを実行する。</p>
-
-
-  <h3 id="caution">注意点</h3>
-
-
-  <p><strong>Ap</strong>以外の場所で加速・減速すると、<strong>Ap</strong>の高度が変わってしまう。<br>
-    <strong>DTmin</strong>をゼロにするときは、宇宙船が<strong>Ap</strong>に到達してからエンジンを噴射する。
-  </p>
-
-  <p><strong>DTmin</strong>をゼロにするとき、<strong>Pe</strong>の高度を下げすぎないようにする。<br>
-    <strong>200km</strong>以下だと大気の影響があるので、できるだけ下回らないようにする。
-  </p>
-
-
-  <h2 id="radio">信号を受信する</h2>
-
-
-  <p>ISSからの信号を受信するため、周波数を設定する。</p>
-
-
-  <h3 id="radio_objectinfo">周波数を確認する</h3>
-
-
-  <p>キーボードで<kbd>Ctrl</kbd>を押しながら<kbd>I</kbd>を押す。<br>
-    <strong>Object info</strong>のダイアログを開く。
-  </p>
-
-  <p>左上のドロップダウンメニューをクリック。<br>
-    <strong>Vessel</strong>を選択して、右で<strong>ISS</strong>を選択。
-  </p>
-
-  <p>
-    <img loading="lazy" class="small" src="/images/tutorial/part4/009.png" width="300" height="300">
-    <img loading="lazy" class="small" src="/images/tutorial/part4/010.png" width="300" height="300">
-    <br>
-    1枚目がOrbiter2010、2枚目が2016
-  </p>
-
-  <p>ISSのトランスポンダー、ドッキングポートの周波数を確認する。</p>
-
-  <table>
-    <tr>
-      <th>Transponder<br>XPDR</th>
-      <td>トランスポンダー</td>
-    </tr>
-    <tr>
-      <th>Docking port</th>
-      <td>ドッキングポート</td>
-    </tr>
-  </table>
-
-
-  <h3 id="radio_comnav">COM/NAV MFD</h3>
-
-
-  <p><kbd>SEL</kbd>をクリック。<br>
-    <strong>COM/NAV</strong>をクリックして開く。
-  </p>
-
-  <p>ISSのトランスポンダー周波数を入力する。<br>
-    <strong>NAV1</strong>を<strong>131.30MHz</strong>に設定する。
-  </p>
-
-  <p>ドッキングポートの周波数を入力する。<br>
-    <strong>NAV2</strong>を<strong>137.40MHz</strong>に設定する。
-  </p>
-
-  <table class="center1col">
-    <tr>
-      <td><kbd>SL-</kbd>or<kbd>SL+</kbd></td>
-      <td>行を切り換える</td>
-    </tr>
-    <tr>
-      <td><kbd>&lt;&lt;</kbd>or<kbd>&gt;&gt;</kbd></td>
-      <td rowspan="2">周波数を変更する</td>
-    </tr>
-    <tr>
-      <td><kbd>&lt;</kbd>or<kbd>&gt;</kbd></td>
-    </tr>
-  </table>
-
-  <p>
-    <img loading="lazy" src="/images/tutorial/part4/011.png" width="470" height="370">
-  </p>
-
-  <p>入力を終えたら、<strong>Sync Orbit MFD</strong>と<strong>Orbit MFD</strong>を開いておく。</p>
-
-  <p>
-    <img loading="lazy" src="/images/tutorial/part4/012.png" width="1594" height="871">
-  </p>
-
-
-  <h2 id="lowertarget">低い高度の目標とランデブーする</h2>
-
-
-  <p>自分のほうがターゲットより高い軌道にいるときは、<strong>Ap</strong>と<strong>Pe</strong>を逆にして考える。</p>
-
-  <ol>
-    <li>時間経過させて、ターゲットの少し前方に出る。</li>
-    <li>ターゲットの<strong>ApA</strong>より上の高度の<strong>PeA</strong>を作る。</li>
-    <li>自分の<strong>PeA</strong>におけるターゲットの高度を確認して、<strong>PeA</strong>の高度を同じにする。</li>
-    <li><strong>Sync Orbit MFD</strong>を<strong>Ref: Sh periapsis</strong>にして、<strong>DTmin</strong>を<strong>0</strong>にする。</li>
-  </ol>
-
-
-  <h2 id="reference">関連項目</h2>
-
-
-  <ul>
-    <li><a href="sync-orbit-mfd.html" target="_blank">Sync Orbit MFD</a></li>
-    <li><a href="/misc/rendezvous-explained.html#sync" target="_blank">ランデブーの原理 - Sync Orbit MFD</a></li>
-  </ul>
-
-
-  <h2 id="form">アンケート</h2>
-
-
-  <form action="https://docs.google.com/forms/d/e/1FAIpQLSfLJKf_SXqovScSnyGRHVAirj6EL51OPlSuB3EojD4ZduoGMQ/formResponse" target="_self" method="POST" id="mG61Hd">
-
-    <p>この記事の内容は理解できましたか？</p>
+    <p>ランデブー地点を設定し、高度とタイミングを一致させます。</p>
 
     <ul>
-      <li><label><input type="radio" name="entry.1914587356" value="できなかった、全然理解できない" />できなかった、全然理解できない</label></li>
-      <li><label><input type="radio" name="entry.1914587356" value="できなかった、途中から理解できない" />できなかった、途中から理解できない</label></li>
-      <li><label><input type="radio" name="entry.1914587356" value="できた、難しかった" />できた、難しかった</label></li>
-      <li><label><input type="radio" name="entry.1914587356" value="できた、簡単だった" />できた、簡単だった</label></li>
+      <li><a href="#warning">注意</a></li>
+    </ul>
+
+    <ol>
+      <li><a href="#closing">ターゲットに接近する</a>
+        <ul>
+          <li><a href="#closing_target">位置を確認する</a></li>
+          <li><a href="#closing_timewarp">時間経過させる</a></li>
+          <li><a href="#closing_dayzone">宇宙の昼と夜</a></li>
+        </ul>
+      </li>
+      <li><a href="#rendezvous">ランデブー地点を設定する</a>
+        <ul>
+          <li><a href="#rendezvous_apoapsis">遠地点を作る</a></li>
+          <li><a href="#rendezvous_apa">高度を一致させる</a></li>
+        </ul>
+      </li>
+      <li><a href="#syncorbit">タイミングを合わせる</a>
+        <ul>
+          <li><a href="#syncmfd">Sync Orbit MFD</a></li>
+          <li><a href="#dtmin">DTminをゼロにする</a></li>
+          <li><a href="#caution">注意点</a></li>
+        </ul>
+      </li>
+      <li><a href="#radio">信号を受信する</a>
+        <ul>
+          <li><a href="#radio_objectinfo">周波数を確認する</a></li>
+          <li><a href="#radio_comnav">COM/NAV MFD</a></li>
+        </ul>
+      </li>
+    </ol>
+
+    <ul>
+      <li><a href="#lowertarget">低い高度の目標とランデブーする</a></li>
+      <li><a href="#reference">関連項目</a></li>
+      <li><a href="#form">アンケート</a></li>
+      <li><a href="#videos">動画</a></li>
     </ul>
 
 
-    <p><label for="question">わからなかった・難しかったところを教えてください（任意）</label><br>
-      <input id="question" type="text" name="entry.1857549962">
+    <h2 id="warning">注意</h2>
+
+
+    <p><a href="/basic/realismperturbations.html">Nonspherical gravity sources</a>を<strong>無効</strong>にする。</p>
+
+    <p>上記の設定を有効にすると、MFDの表示が不正確になる。<br>
+      ランデブーの難易度が大幅に上がるため、このチュートリアルでは無効にしておくこと。</p>
+
+
+    <h2 id="closing">ターゲットに接近する</h2>
+
+
+    <p>
+      時間経過させて、宇宙船がISSに接近するのを待つ。
+    </p>
+
+
+    <h3 id="closing_target">位置を確認する</h3>
+
+
+    <p><strong>Orbit MFD</strong>を開いておく。</p>
+
+    <p>緑色の直線が宇宙船、黄色がISSの位置を表す。</p>
+
+    <p>
+      <img loading="lazy" src="/images/tutorial/part4/000.png" width="425" height="425">
+    </p>
+
+    <p>文字が重なって軌道が見づらいときは、<kbd>MOD</kbd>を何回かクリックする。</p>
+
+    <p>
+      <img loading="lazy" src="/images/tutorial/part4/001.png" width="425" height="425">
+    </p>
+
+    <p>現在、ISSは宇宙船に対して先行している。</p>
+
+    <p>宇宙船の軌道高度がISSより低いので、1周するのに必要な時間は宇宙船のほうが短い。<br>
+      したがって、このまま放置していれば、何もしなくても両者の距離は縮まっていく。</p>
+
+    <h3 id="closing_timewarp">時間経過させる</h3>
+
+
+    <p><strong>1000倍</strong>までのタイムワープを使う。<br>
+      <kbd>T</kbd>or<kbd>R</kbd>キーを押す。
+    </p>
+
+    <p>距離が縮まったら、タイムワープを解除する。<br>
+      円軌道の8分の1、45°を目安にする。</p>
+
+    <p>
+      <img loading="lazy" src="/images/tutorial/part4/002.png" width="425" height="425">
+    </p>
+
+
+    <h3 id="closing_dayzone">宇宙の昼と夜</h3>
+
+
+    <p><strong>Map MFD</strong>を開く。</p>
+
+    <p>白っぽい部分が昼側。<br>
+      黒っぽい部分が夜側を表している。</p>
+
+    <p>宇宙船が、夜側の手前に移動するのを待つ。</p>
+
+    <p>
+      <img loading="lazy" src="/images/tutorial/part4/003.png" width="425" height="425">
+    </p>
+
+    <p>宇宙船が夜側に入ってから加速して、昼側に<strong>Ap</strong>を作っておくようにすると、昼側でランデブーできる。<br>
+      夜側でもランデブーできるが、昼側でランデブーするとドッキングしやすくなる。</p>
+
+
+    <h2 id="rendezvous">ランデブー地点を設定する</h2>
+
+
+    <p>
+      新しく<strong>Ap</strong>（遠地点）を作成し、ランデブー地点とする。<br>
+      ランデブー地点での宇宙船とISSの高度を一致させる。
     </p>
 
     <p>
-      <button type="submit" name="button" value="送信">送信</button>
+      <strong>Orbit MFD</strong>を開いておく。
     </p>
 
-  </form>
+
+    <h3 id="rendezvous_apoapsis">遠地点を作る</h3>
 
 
-  <h2 id="videos">動画</h2>
+    <p><kbd>ProGrade</kbd>or<kbd>PRO-G</kbd>をクリック。<br>
+      機体の回転が止まるのを待つ。</p>
+
+    <p>エンジン出力を低く抑えて噴射する。</p>
+
+    <p><kbd>Ctrl</kbd>を押したままにする。<br>
+      テンキー<kbd>+</kbd>を押して少しずつ出力を上げる。</p>
+
+    <p>MFDの左側で、宇宙船の<strong>ApA</strong>を確認する。</p>
+
+    <p><strong>ApA</strong>が<strong>350k</strong>になったら、エンジンを切る。</p>
+
+    <p>ISSの<strong>PeA</strong>は<strong>357.4km</strong>である。<br>
+      これを超えないようにする。</p>
+
+    <p>
+      <img loading="lazy" src="/images/tutorial/part4/004.png" width="425" height="425">
+    </p>
+
+    <p>噴射した地点の反対側に、<strong>Ap</strong>ができる。<br>
+      この<strong>Ap</strong>の位置でランデブーする。</p>
 
 
-  <p><a href="https://youtu.be/lIUmCiNDT0k" target="_blank" rel="noopener noreferrer">YouTube</a></p>
+    <h3 id="rendezvous_apa">高度を一致させる</h3>
 
-  <p><a href="https://www.nicovideo.jp/watch/sm25482396" target="_blank" rel="noopener noreferrer">ニコニコ動画</a></p>
+
+    <p>宇宙船の<strong>Ap</strong>における、ISSの高度を確認する。</p>
+
+    <p>黄色の直線が緑の<strong style="font-family:メイリオ; background-color:black; color:#00ff00;">○</strong>と重なるのを待つ。<br>
+      重なったら、ISSの<strong>Alt</strong>の数字を確認する。</p>
+
+    <p>この数字を暗記するか、メモを取っておく。<br>
+      （画像の例では360.9km）</p>
+
+    <p>
+      <img loading="lazy" src="/images/tutorial/part4/005.png" width="425" height="425">
+    </p>
+
+    <p>宇宙船を<strong>Pe</strong>の手前に移動させる。<br>
+      左の<strong>PeT</strong>が<strong>300</strong>になるまで待つ。</p>
+
+    <p>
+      <img loading="lazy" src="/images/tutorial/part4/013.png" width="425" height="425">
+    </p>
+
+    <p><kbd>ProGrade</kbd>or<kbd>PRO-G</kbd>をクリック。</p>
+
+    <p><strong>PeT</strong>が<strong>0</strong>になったら、エンジンを噴射する。<br>
+      <kbd>Ctrl</kbd>を押しながら、少しずつ出力を上げる。
+    </p>
+
+    <p><strong>ApA</strong>を、記憶しておいた数字と同じにする。</p>
+
+    <p>
+      <img loading="lazy" src="/images/tutorial/part4/006.png" width="425" height="425">
+    </p>
+
+    <p><strong>RCS LIN</strong>にして微調整する。<br>
+      テンキー<kbd>6</kbd>or<kbd>9</kbd>を押す。</p>
+
+
+    <h2 id="syncorbit">タイミングを合わせる</h2>
+
+
+    <p>ランデブーのタイミングを一致させる。<br>
+      <strong>Sync Orbit MFD</strong>を使用する。
+    </p>
+
+
+    <h3 id="syncmfd">Sync Orbit MFD</h3>
+
+
+    <p><kbd>SEL</kbd>をクリック。<br>
+      <strong>Sync Orbit</strong>をクリックして開く。
+    </p>
+
+    <p><kbd>TGT</kbd>をクリック。<br>
+      <strong>ISS</strong>をターゲットに指定する。
+    </p>
+
+    <p><kbd>MOD</kbd>を何回かクリック。<br>
+      <strong>Ref: Sh apoapsis</strong>にする。
+    </p>
+
+    <p>宇宙船の<strong>Ap</strong>が、ランデブー地点として設定される。</p>
+
+    <p>
+      <img loading="lazy" src="/images/tutorial/part4/007.png" width="425" height="425">
+    </p>
+
+    <table>
+      <tbody>
+        <tr>
+          <th>Sh-ToR</th>
+          <td>宇宙船がランデブー地点を通るまでの時間</td>
+        </tr>
+        <tr>
+          <th>Tg-ToR</th>
+          <td>ターゲットがランデブー地点を通るまでの時間</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <p>黄色の行が、両者が最接近するタイミング。<br>
+      <strong>DTmin</strong>は到着時刻のずれを示している。
+    </p>
+
+    <p>加速・減速して、<strong>DTmin</strong>をゼロにすればランデブーできる。</p>
+
+
+    <h3 id="dtmin">DTminをゼロにする</h3>
+
+
+    <p><strong>Orbit MFD</strong>と<strong>Sync Orbit MFD</strong>を開く。</p>
+
+    <p>宇宙船を<strong>Ap</strong>の手前に移動させる。<br>
+      左の<strong>ApT</strong>が<strong>300</strong>になるまで待つ。</p>
+
+    <p>
+      <img loading="lazy" src="/images/tutorial/part4/014.png" width="425" height="425">
+    </p>
+
+    <p><kbd>ProGrade</kbd>or<kbd>PRO-G</kbd>をクリック。</p>
+
+    <p><strong>RCS LIN</strong>にする。</p>
+
+    <p><strong>ApT</strong>が<strong>0</strong>になったら、RCSを噴射する。<br>
+      テンキー<kbd>6</kbd>or<kbd>9</kbd>のどちらかを押してみる。</p>
+
+    <p><strong>DTmin</strong>が小さくなるキーを押し続ける。<br>
+      <strong>DTmin</strong>を<strong>0.00</strong>にする。
+    </p>
+
+    <p>
+      <img loading="lazy" src="/images/tutorial/part4/008.png" width="425" height="425">
+    </p>
+
+    <p><kbd>Ctrl</kbd>との同時押しで、RCSの出力を抑えて細かい修正ができる。</p>
+
+    <p>大きく加速・減速する場合はメインエンジンを使う。<br>
+      加速なら<kbd>ProGrade</kbd>、減速なら<kbd>RetroGrade</kbd>オートパイロットを実行する。</p>
+
+
+    <h3 id="caution">注意点</h3>
+
+
+    <p><strong>Ap</strong>以外の場所で加速・減速すると、<strong>Ap</strong>の高度が変わってしまう。<br>
+      <strong>DTmin</strong>をゼロにするときは、宇宙船が<strong>Ap</strong>に到達してからエンジンを噴射する。
+    </p>
+
+    <p><strong>DTmin</strong>をゼロにするとき、<strong>Pe</strong>の高度を下げすぎないようにする。<br>
+      <strong>200km</strong>以下だと大気の影響があるので、できるだけ下回らないようにする。
+    </p>
+
+
+    <h2 id="radio">信号を受信する</h2>
+
+
+    <p>ISSからの信号を受信するため、周波数を設定する。</p>
+
+
+    <h3 id="radio_objectinfo">周波数を確認する</h3>
+
+
+    <p>キーボードで<kbd>Ctrl</kbd>を押しながら<kbd>I</kbd>を押す。<br>
+      <strong>Object info</strong>のダイアログを開く。
+    </p>
+
+    <p>左上のドロップダウンメニューをクリック。<br>
+      <strong>Vessel</strong>を選択して、右で<strong>ISS</strong>を選択。
+    </p>
+
+    <p>
+      <img loading="lazy" class="small" src="/images/tutorial/part4/009.png" width="300" height="300">
+      <img loading="lazy" class="small" src="/images/tutorial/part4/010.png" width="300" height="300">
+      <br>
+      1枚目がOrbiter2010、2枚目が2016
+    </p>
+
+    <p>ISSのトランスポンダー、ドッキングポートの周波数を確認する。</p>
+
+    <table>
+      <tr>
+        <th>Transponder<br>XPDR</th>
+        <td>トランスポンダー</td>
+      </tr>
+      <tr>
+        <th>Docking port</th>
+        <td>ドッキングポート</td>
+      </tr>
+    </table>
+
+
+    <h3 id="radio_comnav">COM/NAV MFD</h3>
+
+
+    <p><kbd>SEL</kbd>をクリック。<br>
+      <strong>COM/NAV</strong>をクリックして開く。
+    </p>
+
+    <p>ISSのトランスポンダー周波数を入力する。<br>
+      <strong>NAV1</strong>を<strong>131.30MHz</strong>に設定する。
+    </p>
+
+    <p>ドッキングポートの周波数を入力する。<br>
+      <strong>NAV2</strong>を<strong>137.40MHz</strong>に設定する。
+    </p>
+
+    <table class="center1col">
+      <tr>
+        <td><kbd>SL-</kbd>or<kbd>SL+</kbd></td>
+        <td>行を切り換える</td>
+      </tr>
+      <tr>
+        <td><kbd>&lt;&lt;</kbd>or<kbd>&gt;&gt;</kbd></td>
+        <td rowspan="2">周波数を変更する</td>
+      </tr>
+      <tr>
+        <td><kbd>&lt;</kbd>or<kbd>&gt;</kbd></td>
+      </tr>
+    </table>
+
+    <p>
+      <img loading="lazy" src="/images/tutorial/part4/011.png" width="470" height="370">
+    </p>
+
+    <p>入力を終えたら、<strong>Sync Orbit MFD</strong>と<strong>Orbit MFD</strong>を開いておく。</p>
+
+    <p>
+      <img loading="lazy" src="/images/tutorial/part4/012.png" width="1594" height="871">
+    </p>
+
+
+    <h2 id="lowertarget">低い高度の目標とランデブーする</h2>
+
+
+    <p>自分のほうがターゲットより高い軌道にいるときは、<strong>Ap</strong>と<strong>Pe</strong>を逆にして考える。</p>
+
+    <ol>
+      <li>時間経過させて、ターゲットの少し前方に出る。</li>
+      <li>ターゲットの<strong>ApA</strong>より上の高度の<strong>PeA</strong>を作る。</li>
+      <li>自分の<strong>PeA</strong>におけるターゲットの高度を確認して、<strong>PeA</strong>の高度を同じにする。</li>
+      <li><strong>Sync Orbit MFD</strong>を<strong>Ref: Sh
+          periapsis</strong>にして、<strong>DTmin</strong>を<strong>0</strong>にする。</li>
+    </ol>
+
+
+    <h2 id="reference">関連項目</h2>
+
+
+    <ul>
+      <li><a href="sync-orbit-mfd.html">Sync Orbit MFD</a></li>
+      <li><a href="/misc/rendezvous-explained.html#sync">ランデブーの原理 - Sync Orbit MFD</a></li>
+    </ul>
+
+
+    <h2 id="form">アンケート</h2>
+
+
+    <form
+      action="https://docs.google.com/forms/d/e/1FAIpQLSfLJKf_SXqovScSnyGRHVAirj6EL51OPlSuB3EojD4ZduoGMQ/formResponse"
+      target="_self" method="POST" id="mG61Hd">
+
+      <p>この記事の内容は理解できましたか？</p>
+
+      <ul>
+        <li><label><input type="radio" name="entry.1914587356" value="できなかった、全然理解できない" />できなかった、全然理解できない</label></li>
+        <li><label><input type="radio" name="entry.1914587356" value="できなかった、途中から理解できない" />できなかった、途中から理解できない</label>
+        </li>
+        <li><label><input type="radio" name="entry.1914587356" value="できた、難しかった" />できた、難しかった</label></li>
+        <li><label><input type="radio" name="entry.1914587356" value="できた、簡単だった" />できた、簡単だった</label></li>
+      </ul>
+
+
+      <p><label for="question">わからなかった・難しかったところを教えてください（任意）</label><br>
+        <input id="question" type="text" name="entry.1857549962">
+      </p>
+
+      <p>
+        <button type="submit" name="button" value="送信">送信</button>
+      </p>
+
+    </form>
+
+
+    <h2 id="videos">動画</h2>
+
+
+    <p><a href="https://youtu.be/lIUmCiNDT0k" target="_blank" rel="noopener noreferrer">YouTube</a></p>
+
+    <p><a href="https://www.nicovideo.jp/watch/sm25482396" target="_blank" rel="noopener noreferrer">ニコニコ動画</a></p>
 
   </main>
 

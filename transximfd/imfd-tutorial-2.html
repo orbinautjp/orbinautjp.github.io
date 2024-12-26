@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 
 <html lang="ja">
+
 <head>
   <script src="/scripts/ga.js"></script>
   <meta charset="UTF-8">
@@ -15,139 +16,143 @@
 
   <main>
 
-  <h1>IMFD Part2 Surface Launchを使った打ち上げ</h1>
+    <h1>IMFD Part2 Surface Launchを使った打ち上げ</h1>
 
 
-<ul>
-<li><a href="#launchdate">打ち上げ日に移動する</a></li>
-<li><a href="#share">複数のIMFDでデータを共有する</a></li>
-<li><a href="#surflaunch">Surface Launch</a>
-  <ul>
-  <li><a href="#surflaunch_orbit">パーキング軌道を設定する</a></li>
-  <li><a href="#surflaunch_azimuth">打ち上げ方位とタイミング</a></li>
-  <li><a href="#surflaunch_launch">打ち上げ</a></li>
-  </ul>
-</li>
-<li><a href="#bll">BLL (Best Latitude of Launch)</a></li>
-</ul>
+    <ul>
+      <li><a href="#launchdate">打ち上げ日に移動する</a></li>
+      <li><a href="#share">複数のIMFDでデータを共有する</a></li>
+      <li><a href="#surflaunch">Surface Launch</a>
+        <ul>
+          <li><a href="#surflaunch_orbit">パーキング軌道を設定する</a></li>
+          <li><a href="#surflaunch_azimuth">打ち上げ方位とタイミング</a></li>
+          <li><a href="#surflaunch_launch">打ち上げ</a></li>
+        </ul>
+      </li>
+      <li><a href="#bll">BLL (Best Latitude of Launch)</a></li>
+    </ul>
 
 
-<h2 id="launchdate">打ち上げ日に移動する</h2>
+    <h2 id="launchdate">打ち上げ日に移動する</h2>
 
 
-<p>タイムワープか<a href="/misc/scneditor-date.html" target="_blank">シナリオエディタ</a>を使って、<strong>TEj</strong>の半日前（0.5日前）に移動する。</p>
+    <p>タイムワープか<a href="/misc/scneditor-date.html">シナリオエディタ</a>を使って、<strong>TEj</strong>の半日前（0.5日前）に移動する。</p>
 
-<p>
-<img loading="lazy" src="/images/transximfd/imfd-tutorial-2/002.png" width="369" height="70">
-</p>
-
-
-<h2 id="share">複数のIMFDでデータを共有する</h2>
+    <p>
+      <img loading="lazy" src="/images/transximfd/imfd-tutorial-2/002.png" width="369" height="70">
+    </p>
 
 
-<p>左のMFDでIMFD(Target Intercept)を開いたまま、右のMFDでもIMFDを開く。</p>
-<p><strong>Program Menu</strong>で<kbd>PG</kbd>(OpMode UnShared)をクリック。<br>
-<strong>0</strong>と入力して<kbd>Enter</kbd>キーを押す。</p>
-
-<p>
-<img loading="lazy" src="/images/transximfd/imfd-tutorial-2/003.png" width="256" height="260">
-</p>
-
-<p><strong>Program Menu</strong>の右上にはIDが表示されている。<br>
-この番号を入力することで、複数のMFDで同じデータを共有することができる。※<br>
-この例では、左のMFDが<strong>ID-0</strong>、右が<strong>ID-1</strong>となっている。</p>
-
-<p>
-<img loading="lazy" src="/images/transximfd/imfd-tutorial-2/004.png" width="549" height="87">
-</p>
-
-<p class="note">※TransXでは最初からすべてのMFDで同じデータが共有されているので、このような操作は必要ない</p>
+    <h2 id="share">複数のIMFDでデータを共有する</h2>
 
 
-<h2 id="surflaunch">Surface Launch</h2>
+    <p>左のMFDでIMFD(Target Intercept)を開いたまま、右のMFDでもIMFDを開く。</p>
+    <p><strong>Program Menu</strong>で<kbd>PG</kbd>(OpMode UnShared)をクリック。<br>
+      <strong>0</strong>と入力して<kbd>Enter</kbd>キーを押す。
+    </p>
+
+    <p>
+      <img loading="lazy" src="/images/transximfd/imfd-tutorial-2/003.png" width="256" height="260">
+    </p>
+
+    <p><strong>Program Menu</strong>の右上にはIDが表示されている。<br>
+      この番号を入力することで、複数のMFDで同じデータを共有することができる。※<br>
+      この例では、左のMFDが<strong>ID-0</strong>、右が<strong>ID-1</strong>となっている。</p>
+
+    <p>
+      <img loading="lazy" src="/images/transximfd/imfd-tutorial-2/004.png" width="549" height="87">
+    </p>
+
+    <p class="note">※TransXでは最初からすべてのMFDで同じデータが共有されているので、このような操作は必要ない</p>
 
 
-<p>右のIMFDの<strong>Program Menu</strong>から、左下の<strong>Surface Launch</strong>を選択する。</p>
+    <h2 id="surflaunch">Surface Launch</h2>
 
 
-<h3 id="surflaunch_orbit">パーキング軌道を設定する</h3>
+    <p>右のIMFDの<strong>Program Menu</strong>から、左下の<strong>Surface Launch</strong>を選択する。</p>
 
 
-<p><kbd>Prv</kbd>or<kbd>Nxt</kbd>で<strong>Alt</strong>（パーキング軌道の高度）を選択して<kbd>Set</kbd>をクリック。<br>
-<strong>200k</strong>と入力して<kbd>Enter</kbd>キーを押す。</p>
-
-<p>
-<img loading="lazy" src="/images/transximfd/imfd-tutorial-2/005.png" width="259" height="268">
-</p>
+    <h3 id="surflaunch_orbit">パーキング軌道を設定する</h3>
 
 
-<h3 id="surflaunch_azimuth">打ち上げ方位とタイミング</h3>
+    <p><kbd>Prv</kbd>or<kbd>Nxt</kbd>で<strong>Alt</strong>（パーキング軌道の高度）を選択して<kbd>Set</kbd>をクリック。<br>
+      <strong>200k</strong>と入力して<kbd>Enter</kbd>キーを押す。
+    </p>
+
+    <p>
+      <img loading="lazy" src="/images/transximfd/imfd-tutorial-2/005.png" width="259" height="268">
+    </p>
 
 
-<p>ここで見るべき数字は以下の通り。※</p>
-<p><img loading="lazy" src="/images/transximfd/imfd-tutorial-2/006.png" width="373" height="375">
-</p>
-
-<p class="note">※<strong>BLL</strong>と<strong>Hed</strong>の関係については<a href="#bll">下記</a>を参照</p>
-
-<p>今すぐ打ち上げたい場合は、一番上の<strong>Hed</strong>(Heading)の方角に向かって飛ぶ。</p>
-<p>効率よく打ち上げたい場合は、<strong>Time</strong>がゼロに近づくのを待ってから、そのすぐ上の<strong>Hed</strong>の方角に向かって飛ぶ。<br>
-時間が経つにつれて、上の<strong>Hed</strong>の数字は下の<strong>Hed</strong>の数字に近づいていく。</p>
-<p>今回の例では、<strong>Time</strong>が<strong>300秒</strong>以下になってから、方位<strong>090</strong>（真東）に向かって打ち上げる。</p>
-
-<p>
-<img loading="lazy" src="/images/transximfd/imfd-tutorial-2/007.png" width="185" height="202">
-</p>
+    <h3 id="surflaunch_azimuth">打ち上げ方位とタイミング</h3>
 
 
-<h3 id="surflaunch_launch">打ち上げ</h3>
+    <p>ここで見るべき数字は以下の通り。※</p>
+    <p><img loading="lazy" src="/images/transximfd/imfd-tutorial-2/006.png" width="373" height="375">
+    </p>
+
+    <p class="note">※<strong>BLL</strong>と<strong>Hed</strong>の関係については<a href="#bll">下記</a>を参照</p>
+
+    <p>今すぐ打ち上げたい場合は、一番上の<strong>Hed</strong>(Heading)の方角に向かって飛ぶ。</p>
+    <p>効率よく打ち上げたい場合は、<strong>Time</strong>がゼロに近づくのを待ってから、そのすぐ上の<strong>Hed</strong>の方角に向かって飛ぶ。<br>
+      時間が経つにつれて、上の<strong>Hed</strong>の数字は下の<strong>Hed</strong>の数字に近づいていく。</p>
+    <p>今回の例では、<strong>Time</strong>が<strong>300秒</strong>以下になってから、方位<strong>090</strong>（真東）に向かって打ち上げる。</p>
+
+    <p>
+      <img loading="lazy" src="/images/transximfd/imfd-tutorial-2/007.png" width="185" height="202">
+    </p>
 
 
-<p>機体が<strong>090</strong>（真東）を向いたら、左右に針路を調整しつつ高度を上げる。<br>
-<strong>EIn</strong>（Ejection Inclination=軌道傾斜角のずれ）がゼロになるようにする。<br>
-軌道傾斜角のずれが大きすぎるときは、下に<strong>Bad Plane</strong>の警告が出るようになっている。</p>
-<p><kbd>PRJ</kbd>をクリックして、軌道の表示を<strong>Self</strong>（自機を基準）にする。</p>
-
-<p>
-<img loading="lazy" src="/images/transximfd/imfd-tutorial-2/008.png" width="206" height="99">
-</p>
-
-<p><strong>ApA</strong>が<strong>200km</strong>を超えたら、いったんエンジンを止める。<br>
-Apまで待ってから、通常の手順で円軌道に投入する。</p>
-
-<p>
-<img loading="lazy" src="/images/transximfd/imfd-tutorial-2/009.png" width="208" height="163">
-</p>
+    <h3 id="surflaunch_launch">打ち上げ</h3>
 
 
-<h2 id="bll">BLL (Best Latitude of Launch)</h2>
+    <p>機体が<strong>090</strong>（真東）を向いたら、左右に針路を調整しつつ高度を上げる。<br>
+      <strong>EIn</strong>（Ejection Inclination=軌道傾斜角のずれ）がゼロになるようにする。<br>
+      軌道傾斜角のずれが大きすぎるときは、下に<strong>Bad Plane</strong>の警告が出るようになっている。
+    </p>
+    <p><kbd>PRJ</kbd>をクリックして、軌道の表示を<strong>Self</strong>（自機を基準）にする。</p>
+
+    <p>
+      <img loading="lazy" src="/images/transximfd/imfd-tutorial-2/008.png" width="206" height="99">
+    </p>
+
+    <p><strong>ApA</strong>が<strong>200km</strong>を超えたら、いったんエンジンを止める。<br>
+      Apまで待ってから、通常の手順で円軌道に投入する。</p>
+
+    <p>
+      <img loading="lazy" src="/images/transximfd/imfd-tutorial-2/009.png" width="208" height="163">
+    </p>
 
 
-<p>地球は自転しているため、地上の物体はすべて西から東に移動している。<br>
-緯度が低くなるにつれてこの速度は上がり、赤道直下でもっとも高速になる。<br>
-宇宙船を真東に向かって打ち上げると、この速度を利用することができる。</p>
+    <h2 id="bll">BLL (Best Latitude of Launch)</h2>
 
-<p>しかし惑星間飛行においては、低緯度地域から真東へ向かって打ち上げると、遷移軌道と軌道面を合わせられないことがある。</p>
 
-<p>したがって、</p>
+    <p>地球は自転しているため、地上の物体はすべて西から東に移動している。<br>
+      緯度が低くなるにつれてこの速度は上がり、赤道直下でもっとも高速になる。<br>
+      宇宙船を真東に向かって打ち上げると、この速度を利用することができる。</p>
 
-<ul>
-<li>できるだけ赤道に近い（緯度が低い）</li>
-<li>タイミングが合えば真東に打ち上げることができる</li>
-</ul>
+    <p>しかし惑星間飛行においては、低緯度地域から真東へ向かって打ち上げると、遷移軌道と軌道面を合わせられないことがある。</p>
 
-<p>この2つの条件を満たす緯度が、最適な打ち上げ緯度(<b>B</b>est <b>L</b>atitude of <b>L</b>aunch)になる。</p>
-<p>今回のミッションでは、BLLは20.519度。<br>
-赤道直下からだと、一番いいタイミングでも方位110.51に向かって打ち上げねばならず※、真東（方位090）からは大きくずれている。</p>
-<p class="note">※赤道直下が出発点の場合。BLLは同じだが、Hedが110.51になっている</p>
+    <p>したがって、</p>
 
-<p>
-<img loading="lazy" src="/images/transximfd/imfd-tutorial-2/001.png" width="234" height="128">
-</p>
+    <ul>
+      <li>できるだけ赤道に近い（緯度が低い）</li>
+      <li>タイミングが合えば真東に打ち上げることができる</li>
+    </ul>
 
-<p>このような場合、赤道直下よりも、KSC（北緯28度）や種子島（北緯31度）のほうが打ち上げの効率がよいということになる。</p>
+    <p>この2つの条件を満たす緯度が、最適な打ち上げ緯度(<b>B</b>est <b>L</b>atitude of <b>L</b>aunch)になる。</p>
+    <p>今回のミッションでは、BLLは20.519度。<br>
+      赤道直下からだと、一番いいタイミングでも方位110.51に向かって打ち上げねばならず※、真東（方位090）からは大きくずれている。</p>
+    <p class="note">※赤道直下が出発点の場合。BLLは同じだが、Hedが110.51になっている</p>
+
+    <p>
+      <img loading="lazy" src="/images/transximfd/imfd-tutorial-2/001.png" width="234" height="128">
+    </p>
+
+    <p>このような場合、赤道直下よりも、KSC（北緯28度）や種子島（北緯31度）のほうが打ち上げの効率がよいということになる。</p>
 
   </main>
 
 </body>
+
 </html>
