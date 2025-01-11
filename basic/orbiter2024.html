@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <script src="/scripts/ga.js"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/styles/orbiterjp.css">
+  <script src="/scripts/template.js" charset="utf-8" defer></script>
+  <title>Orbiter2024のダウンロード+インストール</title>
+</head>
+
+<body>
+
+  <main>
+
+    <h1>Orbiter2024のダウンロード+インストール</h1>
+
+
+    <nav>
+      <ul>
+        <li><a href="#download">ダウンロード</a></li>
+        <li><a href="#install">インストール</a>
+          <ul>
+            <li><a href="#install_uninstall">アンインストール</a></li>
+          </ul>
+        </li>
+        <li><a href="#launchpad">起動と設定</a>
+          <ul>
+            <li><a href="#launchpad_exe">Orbiterの起動</a></li>
+            <li><a href="#launchpad_xrsound">XRSoundの有効化</a></li>
+            <li><a href="#launchpad_d3d9">D3D9Clientの有効化</a>
+              <ul>
+                <li><a href="#launchpad_d3d9_cfg">D3D9Clientの設定</a></li>
+                <li><a href="#launchpad_d3d9_dx12">DX12Wrapper</a></li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+        <li><a href="#startup">ゲームの開始</a></li>
+        <li><a href="#save">セーブ+ロード</a></li>
+        <li><a href="#exit">ゲームを終了する</a></li>
+        <li><a href="#hirestextures">高解像度テクスチャ</a>
+          <ul>
+            <li><a href="#hirestextures_no">高解像度テクスチャを持っていない</a></li>
+            <li><a href="#hirestextures_yes">高解像度テクスチャを持っている</a></li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+
+
+    <h2 id="download">ダウンロード</h2>
+
+
+    <p>
+      以下のリンクをクリック。
+    </p>
+
+    <p>
+      <a href="https://www.orbiter-forum.com/resources/orbiter-2024.5634/" target="_blank"
+        rel="noopener noreferrer">Orbiter 2024 | Orbiter Forum</a>
+    </p>
+
+    <p>
+      リンク先ページ右上の<kbd>Go to download</kbd>をクリック。
+    </p>
+
+    <figure>
+      <img loading="lazy" src="/images/basic/orbiter2024/001.png" width="1170" height="781">
+    </figure>
+
+
+    <h2 id="install">インストール</h2>
+
+
+    <p>
+      <strong>Orbiter-2024.zip</strong>を、適当なフォルダ※に置いて解凍する。
+    </p>
+
+    <p class="note">
+      ※インストールフォルダ（及び上位フォルダ）の名前に日本語を入れない（半角英数のみ）
+    </p>
+
+
+    <h3 id="install_uninstall">アンインストール</h3>
+
+
+    <p>
+      Orbiterが入っているフォルダを削除するだけ。
+    </p>
+
+
+    <h2 id="launchpad">起動と設定</h2>
+
+
+    <p>
+      Orbiterを起動して、ゲームを快適に遊ぶための設定をする。
+    </p>
+
+
+    <h3 id="launchpad_exe">Orbiterの起動</h3>
+
+
+    <p>
+      <strong>Orbiter_ng.exe</strong>をダブルクリックする。<br>
+      <a href="orbitercontrol.html#launchpad">Launchpad</a>のウィンドウが開く。
+    </p>
+
+    <figure>
+      <img loading="lazy" src="/images/basic/orbiter2024/002.png" width="602" height="490">
+    </figure>
+
+
+    <h3 id="launchpad_xrsound">XRSoundの有効化</h3>
+
+
+    <p>
+      音声モジュールの<strong>XRSound</strong>を有効にする。<br>
+      この設定をしないと音声が再生されない。
+    </p>
+
+    <p>
+      <kbd>Modules</kbd>をクリック。<br>
+      <strong>XRSound</strong>にチェックを入れる。
+    </p>
+
+    <figure>
+      <img loading="lazy" src="/images/basic/orbiter2024/003.png" width="602" height="490">
+    </figure>
+
+
+    <h3 id="launchpad_d3d9">D3D9Clientの有効化</h3>
+
+
+    <p>
+      描画モジュールの<strong>D3D9Client</strong>を有効にする。
+    </p>
+
+    <p>
+      <kbd>Video</kbd>をクリック。<br>
+      ドロップダウンメニューをクリックして、<strong>D3D9Client</strong>を選択。
+    </p>
+
+    <figure>
+      <img loading="lazy" src="/images/basic/orbiter2024/004.png" width="602" height="490">
+    </figure>
+
+    <p>
+      <kbd>Video</kbd>タブが開けないなどの問題がある場合は、<a href="#launchpad_d3d9_dx12">DX12Wrapper</a>を有効にする。
+    </p>
+
+
+    <h4 id="launchpad_d3d9_cfg">D3D9Clientの設定</h4>
+
+
+    <p>
+      画面サイズ等の設定をしたら、右下の<kbd>Advanced</kbd>をクリック。<br>
+      このウィンドウでは、より高度なグラフィックの設定ができる。
+    </p>
+
+    <figure>
+      <img loading="lazy" src="/images/basic/orbiter2024/005.png" width="602" height="490">
+    </figure>
+
+    <p>
+      ウィンドウ左下の<kbd>Create symbolic links</kbd>をクリック。<br>
+      <kbd>はい</kbd>をクリック。<br>
+      この操作をしないと、一部のMODが使用できない。
+    </p>
+
+    <figure>
+      <img loading="lazy" src="/images/basic/orbiter2024/006.png" width="820" height="646">
+    </figure>
+
+
+    <h4 id="launchpad_d3d9_dx12">DX12Wrapper</h4>
+
+
+    <p>
+      D3D9Clientが使用できない場合は、DX12Wrapperを有効にする。
+    </p>
+
+    <p>
+      Orbiterがインストールされているフォルダを開く。<br>
+      <strong>D3D9Client.cfg</strong>というファイルを探す。
+    </p>
+
+    <p>
+      <strong>D3D9Client.cfg</strong>を右クリックして、メモ帳などのテキストエディタで開く。<br>
+      <strong>EnableDX12Wrapper = 1</strong>に書き換えて上書き保存する。
+    </p>
+
+    <figure>
+      <img loading="lazy" src="/images/basic/orbiter2024/007.png" width="300" height="200">
+    </figure>
+
+
+    <h2 id="startup">ゲームの開始</h2>
+
+
+    <p>
+      <a href="orbitercontrol.html#launchpad">Launchpad</a>で<kbd>Scenarios</kbd>をクリック。
+    </p>
+
+    <p>
+      フォルダのアイコンをダブルクリック。<br>
+      赤い三角のアイコン（シナリオファイル）をダブルクリック。
+    </p>
+
+    <figure>
+      <img loading="lazy" src="/images/basic/orbiter2024/008.png" width="602" height="490">
+    </figure>
+
+
+    <h2 id="save">セーブ+ロード</h2>
+
+
+    <p>
+      マウスカーソルを画面上部に持っていくと、メニューが表示される。
+    </p>
+
+    <figure>
+      <img loading="lazy" src="/images/basic/orbiter2024/009.png" width="600" height="300">
+    </figure>
+
+    <p>
+      <kbd>save</kbd>をクリック。<br>
+      <strong>Quicksave</strong>フォルダにセーブデータが作成される。
+    </p>
+
+    <p>
+      <a
+        href="orbitercontrol.html#launchpad">Launchpad</a>の<kbd>Scenarios</kbd>タブに<strong>Quicksave</strong>フォルダがある。<br>
+      セーブしたシナリオはここに保存される。
+    </p>
+
+
+    <h2 id="exit">ゲームを終了する</h2>
+
+
+    <p>
+      <kbd>Ctrl</kbd>キーを押しながら<kbd>Q</kbd>を押す。<br>
+      もしくは、画面上のメニューで<kbd>exit</kbd>をクリック。
+    </p>
+
+    <p>
+      ゲームを終了すると、<strong>(Current state)</strong>に自動でセーブされる。<br>
+      このファイルからゲームを再開することもできる。
+    </p>
+
+    <p>
+      <kbd>Save current</kbd>をクリックすると、この自動セーブに名前をつけて保存できる。
+    </p>
+
+
+    <h2 id="hirestextures">高解像度テクスチャ</h2>
+
+
+    <p>
+      惑星・月の地表ファイルを高解像度化する。<br>
+      地形や色の詳細な再現ができる。
+    </p>
+
+    <p>
+      Orbiter2016の高解像度テクスチャと同じファイルを使用する。
+    </p>
+
+
+    <h3 id="hirestextures_no">高解像度テクスチャを持っていない</h3>
+
+
+    <p>
+      以下のページを参照して、テクスチャファイルをダウンロードする。<br>
+      インストール手順もOrbiter2016と同じ。
+    </p>
+
+    <p>
+      <a href="orbiter2016.html#hirestextures">Orbiter2016のダウンロード+インストール</a>
+    </p>
+
+
+    <h3 id="hirestextures_yes">高解像度テクスチャを持っている</h3>
+
+
+    <p>
+      Orbiter2016に高解像度テクスチャを導入している場合は、以下のように設定する。
+    </p>
+
+    <p>
+      <a href="orbitercontrol.html#launchpad">Launchpad</a>を一度起動してから終了する。<br>
+      <strong>Orbiter_NG.cfg</strong>というファイルを右クリックして、メモ帳などのテキストエディタで開く。
+    </p>
+
+    <p>
+      <strong>EchoAllParams = FALSE</strong>を<strong>EchoAllParams = TRUE</strong>に書き換える。<br>
+      上書き保存して、もう一度<a href="orbitercontrol.html#launchpad">Launchpad</a>を起動して終了する。
+    </p>
+
+    <figure>
+      <img loading="lazy" src="/images/basic/orbiter2024/010.png" width="360" height="240">
+    </figure>
+
+    <p>
+      <strong>Orbiter_NG.cfg</strong>を開く。<br>
+      <strong>PlanetTexDir</strong>に、Orbiter2016のTexturesフォルダのパスを記述して上書き。
+    </p>
+
+    <figure>
+      <img loading="lazy" src="/images/basic/orbiter2024/011.png" width="360" height="240">
+    </figure>
+
+  </main>
+
+</body>
+
+</html>
