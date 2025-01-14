@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <script src="/scripts/ga.js"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/styles/orbiterjp.css">
+  <script src="/scripts/template.js" charset="utf-8" defer></script>
+  <title>Orbiter2016とOrbiter2024の違い</title>
+</head>
+
+<body>
+
+  <main>
+
+    <h1>Orbiter2016とOrbiter2024の違い</h1>
+
+
+    <p>
+      Orbiter2016からの主な変更についてまとめました。
+    </p>
+
+    <nav>
+      <ul>
+        <li><a href="#requirements">システム要件</a></li>
+        <li><a href="#opensource">オープンソース化</a></li>
+        <li><a href="#xrsound">XRSound</a></li>
+        <li><a href="#d3d9client">D3D9Client</a></li>
+        <li><a href="#draworbits">軌道を表示する</a></li>
+        <li><a href="#transx">TransX</a></li>
+        <li><a href="#tesseralgravity">重力場モデルの変更</a></li>
+        <li><a href="#allchanges">すべての変更を確認する</a></li>
+      </ul>
+    </nav>
+
+
+    <h2 id="requirements">システム要件</h2>
+
+
+    <table>
+      <tr>
+        <th colspan="2">Orbiter2016</th>
+      </tr>
+      <tr>
+        <td>RAM</td>
+        <td>4GB</td>
+      </tr>
+      <tr>
+        <td>Windowsのバージョン</td>
+        <td>XPから10まで</td>
+      </tr>
+      <tr>
+        <td>DirectXのバージョン</td>
+        <td>7.0、9.0c</td>
+      </tr>
+      <tr>
+        <td>HDD(SSD)の容量</td>
+        <td>2GB（高解像度テクスチャを導入するなら80GB）</td>
+      </tr>
+      <tr>
+        <th colspan="2">Orbiter2024<br>
+          （最低限）</th>
+      </tr>
+      <tr>
+        <td>RAM</td>
+        <td>500MB</td>
+      </tr>
+      <tr>
+        <td>Windowsのバージョン</td>
+        <td>10、11</td>
+      </tr>
+      <tr>
+        <td>CPU</td>
+        <td>デュアルコア</td>
+      </tr>
+      <tr>
+        <td>GPU</td>
+        <td>50 GFlops</td>
+      </tr>
+      <tr>
+        <td>HDD(SSD)の容量</td>
+        <td>5GB</td>
+      </tr>
+      <tr>
+        <th colspan="2">Orbiter2024<br>
+          （推奨）</th>
+      </tr>
+      <tr>
+        <td>RAM</td>
+        <td>2GB</td>
+      </tr>
+      <tr>
+        <td>GPU</td>
+        <td>100 GFlops</td>
+      </tr>
+      <tr>
+        <td>HDD(SSD)の容量</td>
+        <td>10GB（高解像度テクスチャを導入するなら80GB）</td>
+      </tr>
+    </table>
+
+    <p>
+      Orbiter2024では有志が動作環境を検証したため、より正確な数字になっています。
+    </p>
+
+
+    <h2 id="opensource">オープンソース化</h2>
+
+
+    <p>
+      2021年7月27日、Orbiterのソースコードが公開されました。
+    </p>
+
+    <p>
+      <a href="https://www.orbiter-forum.com/threads/orbiter-is-now-open-source.40023/" target="_blank"
+        rel="noopener noreferrer">Orbiter is now open source | Orbiter Forum</a>
+    </p>
+
+    <p>
+      Orbiterは<a href="http://www0.cs.ucl.ac.uk/staff/M.Schweiger/" target="_blank" rel="noopener noreferrer">Martin
+        Schweiger</a>氏によって製作されたゲームであり、2000年11月に最初のバージョンが公開されて以来、長らく個人での開発が続いていました。
+    </p>
+
+    <p>
+      とはいえSchweiger氏がすべての要素を開発していたわけではなく、音声を再生する機能、シェーダーが扱える描画エンジン、各種宇宙船の追加などはユーザーに委ねられていました。
+    </p>
+
+    <p>
+      ソースコードが公開され、新しく<a href="https://github.com/orbitersim/orbiter" target="_blank"
+        rel="noopener noreferrer">OpenOrbiter</a>として有志による開発が進められることになり、その最初の安定版としてリリースされたのが<a
+        href="https://www.orbiter-forum.com/resources/orbiter-2024.5634/" target="_blank"
+        rel="noopener noreferrer">Orbiter2024</a>です。<br>
+      オープンソース化に伴って、これまで別々にダウンロードする必要があった音声・描画モジュールが同梱されるようになりました。
+    </p>
+
+    <p>
+      2010→2016のように大きく機能が追加されたわけではないのですが、バグ修正を含め数多くの点で改良されています。
+    </p>
+
+
+    <h2 id="xrsound">XRSound</h2>
+
+
+    <p>
+      <a href="xrsound.html">XRSound</a>はOrbiterで音声（BGMや効果音などの全部）を再生するモジュールです。
+    </p>
+
+    <p>
+      Orbiter2016では別途ダウンロードする必要がありましたが、2024ではパッケージに同梱されています。
+    </p>
+
+
+    <h2 id="d3d9client">D3D9Client</h2>
+
+
+    <p>
+      <a href="d3d9client.html">D3D9Client</a>はDirectX9.0cを使ってゲーム画面を描画するモジュールです。
+    </p>
+
+    <p>
+      Orbiter2016では別途ダウンロードする必要がありましたが、2024ではパッケージに同梱されています。
+    </p>
+
+    <p>
+      また、Orbiter2024ではD3D9on12に対応し、DirectX9.0cに対応していないPCでも動かせるようになりました。
+    </p>
+
+    <p>
+      <a href="orbiter2024.html#launchpad_d3d9_dx12">Orbiter2024のダウンロード+インストール - DX12Wrapper</a>
+    </p>
+
+
+    <h2 id="draworbits">軌道を表示する</h2>
+
+
+    <p>
+      プラネタリウムモード（キーボード<kbd>F9</kbd>）において、宇宙船などの軌道を表示できるようになりました。<br>
+      この機能は<a href="d3d9client.html">D3D9Client</a>でのみ使用できます。
+    </p>
+
+    <p>
+      <a
+        href="orbitercontrol.html#launchpad">Launchpad</a>で<kbd>Modules</kbd>タブを開いて、<strong>DrawOrbits</strong>にチェックを入れてください。
+    </p>
+
+    <figure>
+      <img loading="lazy" src="/images/basic/orbiter2016vs2024/001.jpg" width="1920" height="1080">
+    </figure>
+
+
+    <h2 id="transx">TransX</h2>
+
+
+    <p>
+      Orbiter2016までの<a href="/transximfd/#transx">TransX</a>はいくつかバグを抱えていたのですが、2024では修正されています。<br>
+      ただし<strong>Auto-center</strong>などの最新版の機能は実装されていないため、<a
+        href="/tutorial/#earth_to_moon">Orbiterチュートリアル</a>を利用する場合は注意してください。
+    </p>
+
+
+    <h2 id="tesseralgravity">重力場モデルの変更</h2>
+
+
+    <p>
+      <a href="realismperturbations.html#perturbations_nonspherical">Nonspherical gravity
+        sources</a>（非球対称な重力源）のオプションを有効にしたとき、緯度経度の両方を参照する重力場モデルを利用できるようになりました。
+    </p>
+
+    <p>
+      これによって、月のマスコン（質量集中）による軌道変化を再現できるようになりました。
+    </p>
+
+    <a href="https://www.jaxa.jp/article/special/kaguya/seika01_j.html" target="_blank"
+      rel="noopener noreferrer">JAXA｜「かぐや」のこれまでの主な科学的成果</a>
+
+
+    <h2 id="allchanges">すべての変更を確認する</h2>
+
+
+    <p>
+      <strong>Orbiter User Manual.pdf</strong>（Docフォルダ）の5-9ページに、バグ修正も含めたすべての変更点が掲載されています。
+    </p>
+
+  </main>
+
+</body>
+
+</html>
