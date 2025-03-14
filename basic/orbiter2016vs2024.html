@@ -28,7 +28,13 @@
         <li><a href="#xrsound">XRSound</a></li>
         <li><a href="#d3d9client">D3D9Client</a></li>
         <li><a href="#draworbits">軌道を表示する</a></li>
-        <li><a href="#transx">TransX</a></li>
+        <li><a href="#mods">MODの互換性</a></li>
+        <li><a href="#mfd">MFD</a>
+          <ul>
+            <li><a href="#mfd_align">Align MFD</a></li>
+            <li><a href="#mfd_transx">TransX</a></li>
+          </ul>
+        </li>
         <li><a href="#tesseralgravity">重力場モデルの変更</a></li>
         <li><a href="#allchanges">すべての変更を確認する</a></li>
       </ul>
@@ -189,13 +195,58 @@
     </figure>
 
 
-    <h2 id="transx">TransX</h2>
+    <h2 id="mods">MODの互換性</h2>
+
+
+    <p>
+      Orbiter2010、Orbiter2016のMODについては、使用できるものと使用できないものがあります。
+    </p>
+
+    <ul>
+      <li><a href="/transximfd/imfd-download.html">IMFD</a>と<a
+          href="/transximfd/transxinstall.html">TransX</a>（有志の改良版）、そして<a href="/mods/launchmfd.html">Launch
+          MFD</a>は2016のものがそのまま使える。</li>
+      <li><a href="/iss/ssv-install.html">SSV</a>と<a href="/apollo/nassp-install.html">NASSP</a>は2024で開発が継続されている。SSVは<a
+          href="https://github.com/GLS-SSV/SSV/releases/tag/v1.11" target="_blank"
+          rel="noopener noreferrer">2024対応版</a>が出ている。</li>
+      <li><a href="/ucgo/xr2-install.html">XR2</a>は<a
+          href="https://www.orbiter-forum.com/resources/xr2-official-for-orbiter-2024.5644/" target="_blank"
+          rel="noopener noreferrer">2024対応版</a>が公開されている。</li>
+      <li>着陸関連の仕様が変更されているらしく、一部の機体は正常に着陸できない。</li>
+      <li><a href="/mods/legacytouchdownpoints.html">Legacy Touchdown Points</a>が使えない。</li>
+      <li>HUDを改変するMODは、正常に動作しなかったりゲームが起動しなかったりすることがある。</li>
+      <li><a href="/mods/spacecraft3download.html#multistage">Multistage</a>が使えない。（2024対応版が開発中）</li>
+      <li><a href="/mods/spacecraft3download.html#spacecraft">Spacecraft</a>は2024でも使えるが、正常に着陸できない。</li>
+      <li><a href="/apollo/amso-download-2016.html">AMSO</a>は対応していない。対応する予定もないとのこと。</li>
+      <li><a href="/mods/space-elevator-mod.html">Space Elevator</a>は2024でも動作する。</li>
+    </ul>
+
+
+    <h2 id="mfd">MFD</h2>
+
+
+    <p>
+      デフォルトで同梱されているMFDの一部において、機能が追加されたり表示が改変されています。
+    </p>
+
+
+    <h3 id="mfd_align">Align MFD</h3>
+
+
+    <p>
+      Orbiter2024では<a href="/tutorial/align-planes-mfd.html">Align MFD</a>がアップデートされました。<br>
+      機能に大きな変化はないのですが、各項目の表記が変更されています。
+    </p>
+
+
+    <h3 id="mfd_transx">TransX</h3>
 
 
     <p>
       Orbiter2016までの<a href="/transximfd/#transx">TransX</a>はいくつかバグを抱えていたのですが、2024では修正されています。<br>
-      ただし<strong>Auto-center</strong>などの最新版の機能は実装されていないため、<a
-        href="/tutorial/#earth_to_moon">Orbiterチュートリアル</a>を利用する場合は注意してください。
+      ただし<strong>Auto-center</strong>などの機能は実装されていません。<br>
+      <a href="/tutorial/#earth_to_moon">Orbiterチュートリアル</a>を利用する場合は<a
+        href="/transximfd/transxinstall.html">有志の改良版</a>を導入してください。
     </p>
 
 
