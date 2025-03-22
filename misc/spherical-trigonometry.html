@@ -31,33 +31,46 @@
     </p>
 
     <blockquote>
+      \begin{equation*}
+      打ち上げ方位=\arcsin \left( \frac {\cos (ターゲットの軌道傾斜角)}{\cos (打ち上げ地点の緯度)}\right)
+      \end{equation*}
+    </blockquote>
 
-\begin{equation*}
-打ち上げ方位=\arcsin \left( \frac {\cos (ターゲットの軌道傾斜角)}{\cos (打ち上げ地点の緯度)}\right)
-\end{equation*}
+    <nav>
+      <ul>
+        <li><a href="#drawtriangle">三角形を描く</a></li>
+        <li><a href="#definition">球面三角形の定義</a></li>
+        <li><a href="#formula">直角球面三角形の公式</a></li>
+        <li><a href="#latitude">緯度と軌道傾斜角</a></li>
+        <li><a href="#related">関連項目</a></li>
+        <li><a href="#reference">参考文献</a></li>
+      </ul>
+    </nav>
 
-</blockquote>
 
-    <h2>三角形を描く
-    </h2>
+    <h2 id="drawtriangle">三角形を描く</h2>
+
 
     <ul>
-      <li>打ち上げ地点と赤道を通る垂線（子午線）</li>
+      <li>打ち上げ地点を通り、両極を結ぶ線（子午線）</li>
       <li>赤道</li>
       <li>ターゲットの軌道面</li>
     </ul>
 
-    <p><img loading="lazy" src="/images/misc/spherical-trigonometry/001.png" width="379" height="379">
-    </p>
+    <figure>
+      <img loading="lazy" src="/images/misc/spherical-trigonometry/001.png" width="379" height="379">
+    </figure>
 
     <p>
       青が子午線、赤が赤道、黄色がターゲットの軌道面。<br>
       （緑は自機を真東に打ち上げたときの軌道面だが、今回は無関係）
     </p>
+
     <p>
       これら3つの線が交差するところに、三角形を描くことができる。<br>
       子午線とターゲットの軌道面（青と黄色）がつくる角度が、打ち上げ方位ということになる。
     </p>
+
     <p>
       この三角形について、以下の情報が明らかになっている。
     </p>
@@ -82,131 +95,125 @@ $$ 180^\circ \lt \theta \lt 540^\circ $$
 
 </blockquote>
 
-    <h2>球面三角法
-    </h2>
 
-    <p><img loading="lazy" src="/images/misc/spherical-trigonometry/002.png" width="1438" height="833">
+    <h2 id="definition">球面三角形の定義</h2>
+
+
+    <p>
+      球の中心を通る3つの平面を考える。<br>
+      それぞれの平面が球の表面と交差してできる円を大円と呼ぶ。<br>
+      3つの大円の弧で構成される図形が球面三角形である。
     </p>
+
+    <p>
+      球面三角形の内角は、これら3つの平面のなす角として定義される。<br>
+      例えば軌道傾斜角は、赤道面（もしくは黄道面）と衛星の軌道平面のなす角である。
+    </p>
+
+    <figure>
+      <img loading="lazy" src="/images/misc/spherical-trigonometry/003.png" width="800" height="800">
+    </figure>
+
+
+    <h2 id="formula">直角球面三角形の公式</h2>
+
 
     <p>
       3つの角をA, B, C、各辺をa, b, cとする。
     </p>
+
+    <figure>
+      <img loading="lazy" src="/images/misc/spherical-trigonometry/002.png" width="1438" height="833">
+    </figure>
+
     <p>
-      各辺はそれぞれ、大円（球の中心と円の中心が一致する球面上の円）の弧である。<br>
-      したがって、球面上の三角形では、辺a, b, cの長さを角度で表すことができる。<br>
+      球の半径を1とすると、辺a, b, cの長さを角度で表すことができる。<br>
       例えば、赤道から打ち上げ地点までの子午線の長さは緯度で表すことができる。
     </p>
 
-    <h3>球面三角法の公式
-    </h3>
-
-    <blockquote>
-
-<p>正弦法則</p>
-
-\begin{equation}
-
-\frac {\sin a} {\sin A} = \frac {\sin b} {\sin B} = \frac {\sin c} {\sin C}
-
-\end{equation}
-
-<p>余弦法則</p>
-
-\begin{align}
-
-\cos a &= \cos b \cos c + \sin b \sin c \cos A \notag \\
-
-\cos b &= \cos c \cos a + \sin c \sin a \cos B \notag \\
-
-\cos c &= \cos a \cos b + \sin a \sin b \cos C
-
-\end{align}
-
-<p>二辺とその夾角から第三辺と他の一角を求める公式</p>
-
-\begin{align}
-
-\sin c \cos A &= \cos a \sin b - \sin a \cos b \cos C \notag \\
-
-\sin a \cos B &= \cos b \sin c - \sin b \cos c \cos A \notag \\
-
-\sin b \cos C &= \cos c \sin a - \sin c \cos a \cos B \\
-
-\end{align}
-
-</blockquote>
-
     <p>
-      これらの式の導出については、以下のページを参照してください。<br>
-      <a href="http://astronomy.webcrow.jp/coordinate/spherical_trigonometry.html">Astro Commons - 球面三角法</a>（外部サイト）
+      また、辺bは子午線の一部であるため、角Cが直角であることがわかっている。
     </p>
+
+    <figure>
+      <img loading="lazy" src="/images/misc/spherical-trigonometry/004.png" width="800" height="800">
+    </figure>
+
     <p>
-      今回は内角の1つが直角であることがわかっている。<br>
-      \( \angle C = 90^\circ \) とする。 \( \cos 90^\circ = 0 \) 、 \( \sin 90^\circ = 1 \) なので、式が簡単になる。
+      点AからOCに垂線を下ろし、交点をLとする。<br>
+      点AからOBに垂線を下ろし、交点をMとする。
     </p>
 
     <blockquote>
-
-<p>(1)より
-</p>
-
-\begin{equation}
-
-\sin c = \frac {\sin a} {\sin A}
-
-\end{equation}
-
-<p>(2)より
-</p>
-
-\begin{equation}
-
-\cos c = \cos a \cos b
-
-\end{equation}
-
-<p>(3)より
-</p>
-
-\begin{equation}
-
-\cos c \sin a = \sin c \cos a \cos B
-
-\end{equation}
-
-</blockquote>
+      \begin{align}
+        AL &= \sin b \notag \\
+        AM &= \sin c \notag
+      \end{align}
+    </blockquote>
 
     <p>
-      代入して整理すると、最初に紹介した式のかたちになる。
+      LとMを結ぶ直線を引く。<br>
+      三垂線の定理より、LMはOBに対して垂直であるため、∠AMLはBに等しい。<br>
+      したがって、
     </p>
 
     <blockquote>
+      \begin{align}
+        AM \sin B &= AL \notag \\
+        \sin c \sin B &= \sin b \notag
+      \end{align}
+    </blockquote>
 
-<p>(4)(5)(6)より
-</p>
+    <p>
+      Aおよびaについても同様に、
+    </p>
 
-\begin{equation}
+    <blockquote>
+      \begin{equation}
+        \sin c \sin A = \sin a
+      \end{equation}
+    </blockquote>
 
-\cos a \cos b \sin a = \frac {\sin a} {\sin A} \cos a \cos B
+    <p>
+      また、AMおよびOLと、LMのあいだには以下のような関係がある。
+    </p>
 
-\end{equation} 
+    <blockquote>
+      \begin{align}
+        AM \cos B &= LM \notag \\
+        \sin c \cos B &= LM \notag \\
+        \notag \\
+        OL &= \cos b \notag \\
+        OL \sin a &= LM \notag \\
+        \cos b \sin a &= LM \notag
+      \end{align}
+    </blockquote>
 
-(7)より
+    <p>
+      したがって、
+    </p>
 
-\begin{align}
+    <blockquote>
+      \begin{align}
+        \sin c \cos B &= \cos b \sin a \\
+        \sin c \cos A &= \cos a \sin b \notag
+      \end{align}
+    </blockquote>
 
-\sin A &= \frac {\cos B} {\cos b} \notag \\
+    <p>
+      (1)および(2)より、
+    </p>
 
-A &= \arcsin \left( \frac {\cos B} {\cos b} \right) \notag
+    <blockquote>
+      \begin{align}
+        \sin A &= \frac {\cos B} {\cos b} \notag \\
+        A &= \arcsin \left( \frac {\cos B} {\cos b} \right) \notag
+      \end{align}
+    </blockquote>
 
-\end{align}
 
-</blockquote>
+    <h2 id="latitude">緯度と軌道傾斜角</h2>
 
-    <p>補足： \( a = 90^\circ \) のときは、(5)と(4)より、必ず \( A = 90^\circ \) になる。</p>
-
-    <h2>緯度と軌道傾斜角
-    </h2>
 
     <p> \( \arcsin x \) の定義域は、\( -1 \leqq x \leqq 1 \) である。<br>
       打ち上げ地点の緯度が軌道傾斜角より大きいとき、cos(軌道傾斜角)/cos(緯度)の商は1より大きくなる。<br>
@@ -220,30 +227,26 @@ A &= \arcsin \left( \frac {\cos B} {\cos b} \right) \notag
     </ul>
 
 
-    <h2>別の方法
-    </h2>
+    <h2 id="related">関連項目</h2>
 
-    <p>以下の方法でも、同じ式を導くことができます。<br>
-      詳細は参考文献リストの書籍を読んでください。
+
+    <p>
+      <a href="/basic/launch-azimuth.html">打ち上げ方位を計算する</a>
     </p>
 
-    <ul>
-      <li>最初から直角球面三角形を考えて式を作る</li>
-      <li>極三角形の性質を利用して、余弦定理の式を書き換える</li>
-    </ul>
 
-    <h2>参考文献
-    </h2>
+    <h2 id="reference">参考文献</h2>
+
 
     <p>
       長谷川一郎，1996，『天文計算入門』恒星社厚生閣
     </p>
+
     <p>
       Murray, Daniel A, 1900, <i>Spherical trigonometry, for colleges and secondary schools</i>, New York, London,
       Bombay: Longmans, Green and Co.<br>
-      ダウンロードリンク：<a href="https://archive.org/details/sphericaltrigono00murrrich">Internet Archive</a>
-    </p>
-    <p><a href="http://astronomy.webcrow.jp/">Astro Commons</a>
+      ダウンロードリンク：<a href="https://archive.org/details/sphericaltrigono00murrrich" target="_blank"
+        rel="noopener noreferrer">Internet Archive</a>
     </p>
 
   </main>
