@@ -25,6 +25,7 @@
     <nav>
       <ul>
         <li><a href="#ctd_loading">読み込み中に強制終了する</a></li>
+        <li><a href="#2024_zlib">シナリオ開始時に強制終了する (2024)</a></li>
         <li><a href="#sc3">Spacecraft3.dllで強制終了する</a></li>
         <li><a href="#d3d9">D3D9Clientでゲームを起動できない</a></li>
         <li><a href="#invisible">宇宙船が見えない</a></li>
@@ -120,6 +121,28 @@
     </p>
 
 
+    <h2 id="2024_zlib">シナリオ開始時に強制終了する (2024)</h2>
+
+
+    <h3>症状</h3>
+
+
+    <p>
+      <a href="orbiter2024.html">Orbiter2024</a>において、<a
+        href="orbitercontrol.html#launchpad">Launchpad</a>でシナリオを開くと強制終了する。
+    </p>
+
+
+    <h3>対策</h3>
+
+
+    <p>
+      <strong>Orbiter-2024</strong>フォルダを開いて、<strong>zlib.dll</strong>をコピーする。<br>
+      <strong>Modules</strong>フォルダ→<strong>Server</strong>フォルダを開く。<br>
+      <strong>Server</strong>フォルダに<strong>zlib.dll</strong>をペーストして貼り付ける。
+    </p>
+
+
     <h2 id="sc3">Spacecraft3.dllで強制終了する</h2>
 
 
@@ -167,7 +190,12 @@
 
 
     <p>
-      <strong>Intel Iris Xe</strong>を使用している場合は以下を参照。<br>
+      <strong>Orbiter2024</strong>の場合は以下を参照。<br>
+      <a href="orbiter2024.html#launchpad_d3d9_dx12">Orbiter2024のダウンロード+インストール - DX12Wrapper</a>
+    </p>
+
+    <p>
+      Orbiter2016もしくは2010において、<strong>Intel Iris Xe</strong>を使用している場合は以下を参照。<br>
       <a href="d3d9client.html#caution_inteliris">D3D9Clientのインストールと設定 - Intel Iris Xe</a>
     </p>
 
