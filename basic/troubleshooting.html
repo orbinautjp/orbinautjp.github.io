@@ -151,6 +151,7 @@
         <li><a href="#2022-02-16">2022-02-16</a></li>
         <li><a href="#2022-12-15">2022-12-15</a></li>
         <li><a href="#2025-05-15">2025-05-15</a></li>
+        <li><a href="#2026-05-15">2026-05-15</a></li>
       </ul>
     </nav>
 
@@ -558,6 +559,101 @@
       以下のスレッドで報告されている事象と同じではないかと推測しますが、解決しない場合は<a href="#form">上のフォーム</a>から再度質問してください。<br>
       <a href="https://www.orbiter-forum.com/threads/unable-to-get-off-the-pad-using-orbiter-2024.42067/"
         target="_blank" rel="noopener noreferrer">UNABLE to get off the pad using Orbiter 2024 - ???</a>
+    </p>
+
+
+    <h3 id="2026-05-15">2026-05-15</h3>
+
+
+    <blockquote>
+      Windows10　Orbiter-2024  読み込みはしますが、途中で強制終了します。<br>
+      JSGME及び　NASSP-V8.0-Beta-Orbiter2016-2603
+    </blockquote>
+
+    <p>
+      NASSP V8.0は<strong>Orbiter 2016 Beta</strong>を前提に作られており、Orbiter2024では動作しません。
+    </p>
+
+    <p>
+      <a href="http://" target="_blank" rel="noopener noreferrer">NASSP V9.0</a>
+      がすでに公開されていますが、これは64bit版のOrbiter 2024でのみ動作します。<br>
+      64bit版のOrbiter 2024はまだ開発中であり、現時点では当サイトにて正式に紹介する予定はありません。
+    </p>
+
+
+    <h4>NASSP V9.0のインストール</h4>
+
+
+    <p class="caution">
+      Orbiter 2024 x64およびNASSP V9.0を導入したことにより生じたいかなる損害についても、これらソフトウェアの開発者および<a
+        href="https://orbinautjp.github.io/basic/troubleshooting.html">このウェブページ</a>の作者は一切の責任を負いません。
+    </p>
+
+    <p>
+      以下のリンクをクリック。<br>
+      <strong>Orbiter development build</strong> → <strong>Assets</strong>から<strong>Orbiter-x64.zip</strong>をダウンロード。<br>
+      <a href="https://github.com/orbitersim/orbiter/releases" target="_blank" rel="noopener noreferrer">
+        Releases · orbitersim/orbiter · GitHub</a>
+    </p>
+
+    <p>
+      以下のページを参考にしてインストールする。<br>
+      <a href="orbiter2024.html">Orbiter2024のダウンロード+インストール</a>
+    </p>
+
+    <p>
+      以下のリンクをクリック。<br>
+      <strong>NASSP-V9.0-Orbiter2024-***-x64.zip</strong>をダウンロード。<br>
+      <a href="https://github.com/rcflyinghokie/NASSP/releases" target="_blank" rel="noopener noreferrer">
+        Releases · rcflyinghokie/NASSP</a>
+    </p>
+
+    <p>
+      解凍して、中のファイル・フォルダをコピー。<br>
+      <strong>Orbiter-x64</strong> フォルダにペーストして上書き。
+    </p>
+
+    <p>
+      <a href="orbitercontrol.html#launchpad">Launchpad</a>を開いて、<kbd>Modules</kbd>をクリック。<br>
+      <strong>ExtMFD</strong> <strong>ProjectApolloMFD</strong> <strong>ApolloRTCCMFD</strong>にチェックを入れる。<br>
+      不具合の原因となるため、DX9ExtMFDは使用しないこと。
+    </p>
+
+    <p>
+      <kbd>Options</kbd>をクリック。<br>
+      <strong>Visual settings</strong> で <strong>Local light sources</strong> にチェックを入れる。<br>
+      <strong>Surface elevation, using</strong> を <strong>linear interpolation</strong> にする。<br>
+      <strong>Particle streams</strong> にもチェックを入れておく。
+    </p>
+
+    <p>
+      <kbd>Options</kbd> → <strong>Physics settings</strong>に移動する。<br>
+      <strong>Atmospheric wind effects</strong>以外の項目すべてにチェックを入れる。
+    </p>
+
+    <p>
+      <kbd>Video</kbd>をクリック。<br>
+      <kbd>Advanced</kbd> を開く。
+    </p>
+
+    <p>
+      <strong>Enable absolute animation handling</strong>にチェックを入れる。<br>
+      <strong>Texture mipmaps</strong> を <strong>Load as defined</strong> にする。<br>
+      <strong>Reflection Mode</strong> を <strong>Full Scene</strong> にする。
+    </p>
+
+    <p>
+      <kbd>Extra</kbd> をクリック。<br>
+      <strong>Debugging options</strong> → <strong>Orbiter shutdown options</strong> に移動する。<br>
+      <strong>Terminate Orbiter process</strong> を選択。
+    </p>
+
+    <p>
+      <kbd>Extra</kbd> → <strong>Vessel configuration</strong> → <strong>Project Apollo Configuration</strong>
+      に移動する。<br>
+      <strong>Mesh resolution</strong> を <strong>High resolution</strong> にする。<br>
+      <strong>FDAI</strong> を <strong>Smooth scrolling</strong> にする。<br>
+      <kbd>Miscellaneous</kbd> タブに移動して、<strong>Multi-Threading in time acceleration</strong> にチェックを入れる。
     </p>
 
   </main>
